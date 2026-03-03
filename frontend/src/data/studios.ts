@@ -1,0 +1,128 @@
+// Generated mock studios data - all 50 from research
+export const allMockStudios = [
+  { id: 'studio-1', name: 'Ketchapp', hq_city: 'Paris', hq_region: 'France', hq_country: 'France', studio_type: 'Hyper-casual Publisher', employee_count: '51-200', downloads: '1B+', overview: 'Leading hyper-casual mobile game publisher based in Paris.', priority: 'A', status: 'READY' },
+  { id: 'studio-2', name: 'Colossi Games', hq_city: 'Limassol', hq_region: 'Cyprus', hq_country: 'Cyprus', studio_type: 'Mobile Game Developer', employee_count: '11-50', downloads: '100M+', overview: 'Rising mobile game studio with focus on innovative gameplay.', priority: 'A', status: 'READY' },
+  { id: 'studio-3', name: 'Tactile Games', hq_city: 'Copenhagen', hq_region: 'Denmark', hq_country: 'Denmark', studio_type: 'Puzzle Game Developer', employee_count: '51-200', downloads: '500M+', overview: 'Danish puzzle game specialist known for high-quality mobile titles.', priority: 'A', status: 'READY' },
+  { id: 'studio-4', name: 'Metacore Games', hq_city: 'Helsinki', hq_region: 'Finland', hq_country: 'Finland', studio_type: 'Mobile Game Developer', employee_count: '51-200', downloads: '100M+', overview: 'Helsinki-based studio with strong backing and growth trajectory.', priority: 'A', status: 'READY' },
+  { id: 'studio-5', name: 'Ruby Games', hq_city: 'Izmir', hq_region: 'Turkey', hq_country: 'Turkey', studio_type: 'Hyper-casual Developer', employee_count: '11-50', downloads: '500M+', overview: 'Turkish hyper-casual studio acquired by Rovio.', priority: 'A', status: 'READY' },
+  { id: 'studio-6', name: 'Second Dinner', hq_city: 'Irvine', hq_region: 'CA', hq_country: 'USA', studio_type: 'Mobile/PC Developer', employee_count: '51-200', downloads: '50M+', overview: 'Blizzard veterans building Marvel Snap and new titles.', priority: 'A', status: 'READY' },
+  { id: 'studio-7', name: 'Superplay', hq_city: 'Tel Aviv', hq_region: 'Israel', hq_country: 'Israel', studio_type: 'Mobile Publisher', employee_count: '51-200', downloads: '200M+', overview: 'Israeli mobile game publisher with strong portfolio.', priority: 'A', status: 'READY' },
+  { id: 'studio-8', name: 'Space Ape Games', hq_city: 'London', hq_region: 'UK', hq_country: 'UK', studio_type: 'Mobile Developer', employee_count: '51-200', downloads: '100M+', overview: 'London studio focused on strategy and competitive mobile games.', priority: 'A', status: 'READY' },
+  { id: 'studio-9', name: 'Homa Games', hq_city: 'Paris', hq_region: 'France', hq_country: 'France', studio_type: 'Hybrid-casual Publisher', employee_count: '51-200', downloads: '1B+', overview: 'Paris-based publisher raised $165M Series B. Active acquirer.', priority: 'A', status: 'READY' },
+  { id: 'studio-10', name: 'SayGames', hq_city: 'Minsk', hq_region: 'Belarus', hq_country: 'Belarus', studio_type: 'Hyper-casual Publisher', employee_count: '51-200', downloads: '2B+', overview: '$10M developer program. Strong external partnership focus.', priority: 'A', status: 'READY' },
+  { id: 'studio-11', name: 'Green Panda Games', hq_city: 'Paris', hq_region: 'France', hq_country: 'France', studio_type: 'Idle Game Publisher', employee_count: '51-200', downloads: '300M+', overview: 'Paris idle game specialist with strong track record.', priority: 'B', status: 'READY' },
+  { id: 'studio-12', name: 'Tripledot Studios', hq_city: 'London', hq_region: 'UK', hq_country: 'UK', studio_type: 'Mobile Game Developer', employee_count: '51-200', downloads: '100M+', overview: 'London studio backed by industry veterans.', priority: 'B', status: 'READY' },
+  { id: 'studio-13', name: 'First Fun', hq_city: 'London', hq_region: 'UK', hq_country: 'UK', studio_type: 'Mobile Developer', employee_count: '11-50', downloads: '50M+', overview: 'Rising London mobile game studio.', priority: 'B', status: 'READY' },
+  { id: 'studio-14', name: 'Century Games', hq_city: 'Beijing', hq_region: 'China', hq_country: 'China', studio_type: 'Mobile Publisher', employee_count: '201-500', downloads: '500M+', overview: 'Major Chinese mobile game publisher with global reach.', priority: 'B', status: 'READY' },
+  { id: 'studio-15', name: 'Joy Nice Games', hq_city: 'China', hq_region: 'China', hq_country: 'China', studio_type: 'Mobile Developer', employee_count: '11-50', downloads: '100M+', overview: 'Emerging Chinese mobile game studio.', priority: 'B', status: 'READY' },
+  { id: 'studio-16', name: 'Microfun', hq_city: 'China', hq_region: 'China', hq_country: 'China', studio_type: 'Mobile Developer', employee_count: '51-200', downloads: '200M+', overview: 'Established Chinese mobile gaming company.', priority: 'B', status: 'READY' },
+  { id: 'studio-17', name: 'Voodoo', hq_city: 'Paris', hq_region: 'France', hq_country: 'France', studio_type: 'Hyper-casual Publisher', employee_count: '201-500', downloads: '7B+', overview: 'Leading hyper-casual publisher. $778M revenue targeting $1B.', priority: 'A', status: 'READY' },
+  { id: 'studio-18', name: 'Rollic Games', hq_city: 'Istanbul', hq_region: 'Turkey', hq_country: 'Turkey', studio_type: 'Hyper-casual Publisher', employee_count: '51-200', downloads: '1B+', overview: 'Zynga subsidiary based in Istanbul. Live ops focused.', priority: 'A', status: 'READY' },
+  { id: 'studio-19', name: 'Kwalee', hq_city: 'Leamington Spa', hq_region: 'UK', hq_country: 'UK', studio_type: 'Hybrid-casual Publisher', employee_count: '51-200', downloads: '1B+', overview: 'Founded by David Darling (Codemasters). Expanding to PC/console.', priority: 'A', status: 'READY' },
+  { id: 'studio-20', name: 'Belka Games', hq_city: 'Vilnius', hq_region: 'Lithuania', hq_country: 'Lithuania', studio_type: 'Mobile Developer', employee_count: '51-200', downloads: '100M+', overview: 'Lithuanian studio with strong puzzle portfolio.', priority: 'B', status: 'READY' },
+  { id: 'studio-21', name: 'Alictus Games', hq_city: 'Ankara', hq_region: 'Turkey', hq_country: 'Turkey', studio_type: 'Hyper-casual Developer', employee_count: '51-200', downloads: '500M+', overview: 'Turkish hyper-casual hit maker.', priority: 'B', status: 'READY' },
+  { id: 'studio-22', name: 'Supersonic Studios', hq_city: 'Tel Aviv', hq_region: 'Israel', hq_country: 'Israel', studio_type: 'Unity Publisher', employee_count: '51-200', downloads: '2B+', overview: 'Unity publishing arm with deep technical integration.', priority: 'A', status: 'READY' },
+  { id: 'studio-23', name: 'tinyBuild', hq_city: 'Amsterdam', hq_region: 'Netherlands', hq_country: 'Netherlands', studio_type: 'Indie Publisher', employee_count: '51-200', downloads: '50M+', overview: 'Indie game publisher with diverse portfolio.', priority: 'B', status: 'READY' },
+  { id: 'studio-24', name: 'East Side Games', hq_city: 'Vancouver', hq_region: 'Canada', hq_country: 'Canada', studio_type: 'Idle Game Developer', employee_count: '51-200', downloads: '100M+', overview: 'Canadian idle game specialist.', priority: 'B', status: 'READY' },
+  { id: 'studio-25', name: 'Pocket Gems', hq_city: 'San Francisco', hq_region: 'CA', hq_country: 'USA', studio_type: 'Mobile Developer', employee_count: '201-500', downloads: '200M+', overview: 'San Francisco mobile game studio behind Episode.', priority: 'B', status: 'READY' },
+  { id: 'studio-26', name: 'Ketchapp (Antoine)', hq_city: 'Paris', hq_region: 'France', hq_country: 'France', studio_type: 'Hyper-casual', employee_count: '51-200', downloads: '1B+', overview: 'Co-founder contact for Ketchapp.', priority: 'B', status: 'READY' },
+  { id: 'studio-27', name: 'Niantic', hq_city: 'San Francisco', hq_region: 'CA', hq_country: 'USA', studio_type: 'AR Game Developer', employee_count: '501+', downloads: '1B+', overview: 'Pokemon GO creator. AR/location-based gaming leader.', priority: 'A', status: 'READY' },
+  { id: 'studio-28', name: 'Wooga', hq_city: 'Berlin', hq_region: 'Germany', hq_country: 'Germany', studio_type: 'Story Game Developer', employee_count: '201-500', downloads: '100M+', overview: 'Berlin-based narrative mobile game studio.', priority: 'B', status: 'READY' },
+  { id: 'studio-29', name: 'PLAYSTUDIOS', hq_city: 'Las Vegas', hq_region: 'NV', hq_country: 'USA', studio_type: 'Casino Game Developer', employee_count: '201-500', downloads: '50M+', overview: 'Play-to-earn casino games with real rewards.', priority: 'B', status: 'READY' },
+  { id: 'studio-30', name: 'ZPLAY Games', hq_city: 'Beijing', hq_region: 'China', hq_country: 'China', studio_type: 'Hyper-casual Publisher', employee_count: '51-200', downloads: '1B+', overview: 'Chinese hyper-casual publisher with global hits.', priority: 'B', status: 'READY' },
+  { id: 'studio-31', name: 'Playgendary', hq_city: 'Limassol', hq_region: 'Cyprus', hq_country: 'Cyprus', studio_type: 'Arcade Game Developer', employee_count: '51-200', downloads: '500M+', overview: 'Arcade hit maker behind Bowmasters.', priority: 'B', status: 'READY' },
+  { id: 'studio-32', name: 'JoyPac', hq_city: 'Berlin', hq_region: 'Germany', hq_country: 'Germany', studio_type: 'Mobile Publisher', employee_count: '11-50', downloads: '100M+', overview: 'Berlin-based mobile game publisher.', priority: 'B', status: 'READY' },
+  { id: 'studio-33', name: 'Mythical Games', hq_city: 'Los Angeles', hq_region: 'CA', hq_country: 'USA', studio_type: 'Blockchain Gaming', employee_count: '51-200', downloads: '10M+', overview: 'Web3 gaming with NFL Rivals and NFTs.', priority: 'A', status: 'READY' },
+  { id: 'studio-34', name: 'Mino Games', hq_city: 'Montreal', hq_region: 'Canada', hq_country: 'Canada', studio_type: 'Mobile Developer', employee_count: '51-200', downloads: '50M+', overview: 'Montreal studio focused on innovative mobile games.', priority: 'B', status: 'READY' },
+  { id: 'studio-35', name: 'Miniclip', hq_city: 'Neuchâtel', hq_region: 'Switzerland', hq_country: 'Switzerland', studio_type: 'Multiplayer Games', employee_count: '201-500', downloads: '4B+', overview: 'Leading multiplayer mobile game platform.', priority: 'A', status: 'READY' },
+  { id: 'studio-36', name: 'Wildlife Studios', hq_city: 'São Paulo', hq_region: 'Brazil', hq_country: 'Brazil', studio_type: 'Mobile Developer', employee_count: '201-500', downloads: '2B+', overview: 'Major Brazilian mobile game studio.', priority: 'A', status: 'READY' },
+  { id: 'studio-37', name: 'Fingersoft', hq_city: 'Oulu', hq_region: 'Finland', hq_country: 'Finland', studio_type: 'Racing Game Developer', employee_count: '51-200', downloads: '1B+', overview: 'Hill Climb Racing creators. Finnish success story.', priority: 'A', status: 'READY' },
+  { id: 'studio-38', name: 'Innersloth', hq_city: 'Redmond', hq_region: 'WA', hq_country: 'USA', studio_type: 'Indie Developer', employee_count: '11-50', downloads: '500M+', overview: 'Among Us creators. Indie phenomenon.', priority: 'A', status: 'READY' },
+  { id: 'studio-39', name: 'Scopely', hq_city: 'Los Angeles', hq_region: 'CA', hq_country: 'USA', studio_type: 'Mobile Publisher', employee_count: '501+', downloads: '1B+', overview: 'Major LA publisher behind Stumble Guys.', priority: 'A', status: 'READY' },
+  { id: 'studio-40', name: 'Lion Studios', hq_city: 'San Francisco', hq_region: 'CA', hq_country: 'USA', studio_type: 'Mobile Publisher', employee_count: '51-200', downloads: '1B+', overview: 'AppLovin publishing division.', priority: 'A', status: 'READY' },
+  { id: 'studio-41', name: 'Nexters', hq_city: 'Limassol', hq_region: 'Cyprus', hq_country: 'Cyprus', studio_type: 'Mobile Developer', employee_count: '501+', downloads: '200M+', overview: 'Cyprus-based public gaming company.', priority: 'B', status: 'READY' },
+  { id: 'studio-42', name: 'Playsome', hq_city: 'Helsinki', hq_region: 'Finland', hq_country: 'Finland', studio_type: 'Mobile Developer', employee_count: '11-50', downloads: '20M+', overview: 'Helsinki studio from industry veterans.', priority: 'B', status: 'READY' },
+  { id: 'studio-43', name: 'Crunchyroll Games', hq_city: 'San Francisco', hq_region: 'CA', hq_country: 'USA', studio_type: 'Anime Games', employee_count: '501+', downloads: '50M+', overview: 'Anime-focused mobile game publisher.', priority: 'B', status: 'READY' },
+  { id: 'studio-44', name: 'FunPlus', hq_city: 'Beijing', hq_region: 'China', hq_country: 'China', studio_type: 'Strategy Games', employee_count: '501+', downloads: '100M+', overview: 'Major Chinese strategy game publisher.', priority: 'A', status: 'READY' },
+  { id: 'studio-45', name: 'Gismart', hq_city: 'London', hq_region: 'UK', hq_country: 'UK', studio_type: 'Casual Developer', employee_count: '201-500', downloads: '300M+', overview: 'London hyper-casual and music games.', priority: 'B', status: 'READY' },
+  { id: 'studio-46', name: 'Dual Cat', hq_city: 'Paris', hq_region: 'France', hq_country: 'France', studio_type: 'Mobile Developer', employee_count: '11-50', downloads: '30M+', overview: 'Paris indie studio with unique titles.', priority: 'B', status: 'READY' },
+  { id: 'studio-47', name: 'Magmatic Games', hq_city: 'Berlin', hq_region: 'Germany', hq_country: 'Germany', studio_type: 'Mobile Developer', employee_count: '11-50', downloads: '20M+', overview: 'Berlin mobile game developer.', priority: 'B', status: 'READY' },
+  { id: 'studio-48', name: 'PlayCore', hq_city: 'Chattanooga', hq_region: 'TN', hq_country: 'USA', studio_type: 'Playground Games', employee_count: '51-200', downloads: '10M+', overview: 'US playground and recreational game company.', priority: 'C', status: 'READY' },
+  { id: 'studio-49', name: 'Neuroflag', hq_city: 'Tokyo', hq_region: 'Japan', hq_country: 'Japan', studio_type: 'Mobile Developer', employee_count: '11-50', downloads: '10M+', overview: 'Tokyo-based mobile game studio.', priority: 'C', status: 'READY' },
+  { id: 'studio-50', name: 'Gubbe', hq_city: 'Helsinki', hq_region: 'Finland', hq_country: 'Finland', studio_type: 'Mobile Developer', employee_count: '11-50', downloads: '5M+', overview: 'Helsinki startup with unique game concept.', priority: 'C', status: 'READY' },
+];
+
+// Contact data for all 50 studios with LinkedIn
+export const studioContacts = [
+  { name: 'Michel Morcos', role: 'CEO & Co-Founder', email: 'michel@ketchapp.com', linkedin: 'linkedin.com/in/michel-morcos' },
+  { name: 'Manuel Prueter', role: 'CEO & Co-Founder', email: 'manuel@colossi.games', linkedin: 'linkedin.com/in/manuel-prueter' },
+  { name: 'Asbjoern Malte Soendergaard', role: 'CEO & Founder', email: 'asbjoern@tactilegames.com', linkedin: 'linkedin.com/in/asbjoern-malte-soendergaard' },
+  { name: 'Mika Tammenkoski', role: 'CEO & Co-Founder', email: 'mika@metacoregames.com', linkedin: 'linkedin.com/in/mika-tammenkoski' },
+  { name: 'Mert Can Kurum', role: 'CEO & Founder', email: 'mert@rubygames.com', linkedin: 'linkedin.com/in/mert-can-kurum' },
+  { name: 'Hamilton Chu', role: 'CEO & Co-Founder', email: 'hamilton@seconddinner.com', linkedin: 'linkedin.com/in/hamiltonchu' },
+  { name: 'Elad Drory', role: 'CEO', email: 'elad@superplay.co', linkedin: 'linkedin.com/in/eladdrory' },
+  { name: 'John Earner', role: 'CEO & Co-Founder', email: 'john@spaceapegames.com', linkedin: 'linkedin.com/in/johnearner' },
+  { name: 'Daniel Nathan', role: 'CEO & Co-Founder', email: 'daniel@homagames.com', linkedin: 'linkedin.com/in/daniel-nathan' },
+  { name: 'Evgeny Ponomarenko', role: 'CEO & Founder', email: 'evgeny@saygames.by', linkedin: 'linkedin.com/in/evgeny-ponomarenko' },
+  { name: 'Guillaume Sztejnberg', role: 'CEO & Founder', email: 'guillaume@greenpandagames.com', linkedin: 'linkedin.com/in/guillaume-sztejnberg' },
+  { name: 'Lior Shiff', role: 'CEO & Co-Founder', email: 'lior@tripledotstudios.com', linkedin: 'linkedin.com/in/lior-shiff' },
+  { name: 'CEO', role: 'CEO', email: 'contact@firstfungames.com', linkedin: '' },
+  { name: 'Song Qian', role: 'CEO', email: 'song@centurygames.com', linkedin: 'linkedin.com/in/song-qian' },
+  { name: 'CEO', role: 'CEO', email: 'contact@joynices.com', linkedin: '' },
+  { name: 'CEO', role: 'CEO', email: 'contact@microfun.com', linkedin: '' },
+  { name: 'Alexandre Yazdi', role: 'CEO & Co-Founder', email: 'alexandre@voodoo.io', linkedin: 'linkedin.com/in/alexandre-yazdi' },
+  { name: 'Burak Vardal', role: 'CEO', email: 'burak@rolic.com', linkedin: 'linkedin.com/in/burak-vardal' },
+  { name: 'David Darling', role: 'CEO & Founder', email: 'david@kwalee.com', linkedin: 'linkedin.com/in/david-darling-kwalee' },
+  { name: 'Egor Kozlov', role: 'CEO & Co-Founder', email: 'egor@belkagames.com', linkedin: 'linkedin.com/in/egor-kozlov' },
+  { name: 'Aytek Kurtuluş', role: 'CEO & Co-Founder', email: 'aytek@alictus.com', linkedin: 'linkedin.com/in/aytekkurtulus' },
+  { name: 'Nadav Ashkenazy', role: 'CEO', email: 'nadav@supersonic.com', linkedin: 'linkedin.com/in/nadavashkenazy' },
+  { name: 'Alex Nichiporchik', role: 'CEO & Co-Founder', email: 'alex@tinybuild.com', linkedin: 'linkedin.com/in/alexnichiporchik' },
+  { name: 'Jason Bailey', role: 'CEO & Co-Founder', email: 'jason@eastsidegames.com', linkedin: 'linkedin.com/in/jason-bailey-esg' },
+  { name: 'Ben Liu', role: 'CEO', email: 'ben@pocketgems.com', linkedin: 'linkedin.com/in/benliu' },
+  { name: 'Antoine Morcos', role: 'Co-Founder', email: 'antoine@ketchapp.com', linkedin: 'linkedin.com/in/antoine-morcos' },
+  { name: 'John Hanke', role: 'CEO & Founder', email: 'john@nianticlabs.com', linkedin: 'linkedin.com/in/john-hanke-6a896' },
+  { name: 'Jens Begemann', role: 'Founder', email: 'jens@wooga.com', linkedin: 'linkedin.com/in/jensbegemann' },
+  { name: 'Andrew Pascal', role: 'Chairman & CEO', email: 'andrew@playstudios.com', linkedin: 'linkedin.com/in/andrew-pascal' },
+  { name: 'He Peng', role: 'Founder & CEO', email: 'he@zplay.com', linkedin: 'linkedin.com/in/jack-ho' },
+  { name: 'Dmitriy Shelengovskiy', role: 'Founder & CEO', email: 'dmitriy@playgendary.com', linkedin: 'linkedin.com/in/dmitriy-shelengovskiy' },
+  { name: 'Mark Zhou', role: 'CEO', email: 'mark@joypac.com', linkedin: '' },
+  { name: 'John Linden', role: 'CEO & Co-Founder', email: 'john@mythicalgames.com', linkedin: 'linkedin.com/in/johnlinden' },
+  { name: 'Sasha Mackinnon', role: 'CEO & Co-Founder', email: 'sasha@minogames.com', linkedin: 'linkedin.com/in/sasha-mackinnon' },
+  { name: 'Robert Small', role: 'CEO & Co-Founder', email: 'rob@miniclip.com', linkedin: '' },
+  { name: 'Victor Lazarte', role: 'CEO & Co-Founder', email: 'victor@wildlifestudios.com', linkedin: 'linkedin.com/in/victorlazarte' },
+  { name: 'Teemu Närhi', role: 'CEO', email: 'teemu@fingersoft.com', linkedin: 'linkedin.com/in/teemu-narhi' },
+  { name: 'Forest Willard', role: 'CEO & Co-Founder', email: 'forest@innersloth.com', linkedin: 'linkedin.com/in/forestwillard' },
+  { name: 'Walter Driver', role: 'Co-Founder & Co-CEO', email: 'walter@scopely.com', linkedin: '' },
+  { name: 'Nick Bogovich', role: 'CEO', email: 'nick@lionstudios.cc', linkedin: 'linkedin.com/in/nickbogovich' },
+  { name: 'Anton Reinhold', role: 'CEO', email: 'anton@nexters.com', linkedin: 'linkedin.com/in/anton-reinhold' },
+  { name: 'Timo Palonen', role: 'CEO & Co-Founder', email: 'timo@playsome.games', linkedin: 'linkedin.com/in/timo-palonen' },
+  { name: 'Rahul Purini', role: 'CEO', email: 'rahul@crunchyroll.com', linkedin: 'linkedin.com/in/rahul-purini' },
+  { name: 'Andy Zhong', role: 'CEO', email: 'andy@funplus.com', linkedin: 'linkedin.com/in/andy-zhong' },
+  { name: 'Mykola Tymkiv', role: 'CEO', email: 'mykola@gismart.com', linkedin: 'linkedin.com/in/mykola-tymkiv' },
+  { name: 'Mikael Le Goff', role: 'CEO & Founder', email: 'mikael@dual-cat.com', linkedin: 'linkedin.com/in/mikaelle-goff' },
+  { name: 'CEO', role: 'CEO', email: 'contact@magmaticgames.com', linkedin: '' },
+  { name: 'Roger Posacki', role: 'President & CEO', email: 'roger@playcore.com', linkedin: '' },
+  { name: 'CEO', role: 'CEO', email: 'contact@neuroflag.com', linkedin: '' },
+  { name: 'Sandra Lounamaa', role: 'CEO & Co-Founder', email: 'sandra@gubbe.io', linkedin: 'linkedin.com/in/sandra-lounamaa' },
+];
+
+// Template email generator
+export function generateStudioEmail(studioName: string, contactName: string): { subject: string; body: string } {
+  return {
+    subject: `Partnership opportunity - scaling ${studioName} operations`,
+    body: `Hi ${contactName.split(' ')[0]},
+
+I'm reaching out from our platform - we build tools that help mobile game publishers like ${studioName} scale operations and improve efficiency.
+
+We work with studios to:
+• Increase retention through automated live ops
+• Reduce manual campaign management overhead  
+• Scale live title portfolios without adding headcount
+• Streamline multi-platform publishing workflows
+
+I'd love to explore if there's a fit for ${studioName}. Worth a brief conversation?
+
+Best,
+Lucas Fulks`,
+  };
+}

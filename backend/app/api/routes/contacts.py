@@ -1,0 +1,111 @@
+"""Contact endpoints."""
+from __future__ import annotations
+
+from fastapi import APIRouter, Depends, HTTPException, Query, status
+from sqlalchemy.orm import Session
+
+from app.api.deps import get_db
+from app.schemas.contact import (
+    ContactCreate,
+    ContactListResponse,
+    ContactRead,
+    ContactUpdate,
+)
+from app.services.contact_service import (
+    ContactFilters,
+    create_contact,
+    delete_contact,
+    get_contact,
+    get_contacts_by_fund,
+    list_contacts,
+    update_contact,
+)
+
+router = APIRouter()
+
+
+@router.get("/", response_model=ContactListResponse)
+def list_contacts_endpoint(
+    *,
+    db: Session = Depends(get_db),
+    fund_id: str | None = Query(None, description="Filter by fund ID"),
+    search: str | None = Query(None, description="Search by name, email, or title"),
+    is_primary: bool | None = Query(None, description="Filter by primary status"),
+    limit: int = Query(50, ge=1, le=100),
+    offset: int = Query(0, ge=0),
+    sort_by: str = Query("created_at", description="Field to sort by"),
+    sort_direction: str = Query("desc", description="Sort direction: asc or desc"),
+) -> ContactListResponse:
+    """Return paginated contacts matching filters."""
+
+    filters = ContactFilters(
+        fund_id=fund_id,
+        search=search,
+        is_primary=is_primary,
+        limit=limit,
+        offset=offset,
+        sort_by=sort_by,
+        sort_direction=sort_direction,
+    )
+    items, total = list_contacts(db, filters)
+    payload = [ContactRead.model_validate(item, from_attributes=True) for item in items]
+    return ContactListResponse(total=total, items=payload)
+
+
+@router.post("/", response_model=ContactRead, status_code=status.HTTP_201_CREATED)
+def create_contact_endpoint(*, db: Session = Depends(get_db), payload: ContactCreate) -> ContactRead:
+    """Create a contact record."""
+
+    contact = create_contact(db, payload.model_dump())
+    return ContactRead.model_validate(contact, from_attributes=True)
+
+
+@router.get("/{contact_id}", response_model=ContactRead)
+def get_contact_endpoint(*, db: Session = Depends(get_db), contact_id: str) -> ContactRead:
+    """Retrieve a contact by ID."""
+
+    contact = get_contact(db, contact_id)
+    if not contact:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Contact not found")
+    return ContactRead.model_validate(contact, from_attributes=True)
+
+
+@router.patch("/{contact_id}", response_model=ContactRead)
+def update_contact_endpoint(
+    *,
+    db: Session = Depends(get_db),
+    contact_id: str,
+    payload: ContactUpdate,
+) -> ContactRead:
+    """Update fields on a contact."""
+
+    contact = get_contact(db, contact_id)
+    if not contact:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Contact not found")
+
+    data = payload.model_dump(exclude_unset=True)
+    contact = update_contact(db, contact, data)
+    return ContactRead.model_validate(contact, from_attributes=True)
+
+
+@router.delete("/{contact_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_contact_endpoint(*, db: Session = Depends(get_db), contact_id: str) -> None:
+    """Delete a contact."""
+
+    contact = get_contact(db, contact_id)
+    if not contact:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Contact not found")
+
+    delete_contact(db, contact)
+
+
+@router.get("/fund/{fund_id}", response_model=list[ContactRead])
+def get_contacts_by_fund_endpoint(
+    *,
+    db: Session = Depends(get_db),
+    fund_id: str,
+) -> list[ContactRead]:
+    """Get all contacts for a specific fund."""
+
+    contacts = get_contacts_by_fund(db, fund_id)
+    return [ContactRead.model_validate(item, from_attributes=True) for item in contacts]

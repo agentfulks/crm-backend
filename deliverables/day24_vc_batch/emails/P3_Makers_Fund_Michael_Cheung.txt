@@ -1,0 +1,28 @@
+Subject: Donutbrowser.ai follow-on opportunities
+
+Michael,
+
+Makers' Donutbrowser.ai investment signals clear conviction in AI-powered gaming infrastructure.
+
+Our sourcing engine identified that opportunity 5 months before announcement by tracking:
+- Chrome extension developer momentum in gaming vertical
+- Early publisher conversations for AI-powered discovery
+- GitHub repository star velocity for related open-source projects
+
+The broader pattern: AI is eating gaming distribution and discovery. We're tracking 15+ teams building:
+- AI-native game recommendation engines
+- Generative AI for storefront optimization
+- ML-powered player-community matching
+- Automated content moderation at scale
+
+Most are pre-seed, founder-led by ex-Amazon/Netflix ML engineers who understand recommendation at scale.
+
+Given Makers' Riot DNA and operational expertise in live games, these infrastructure plays align with your portfolio support capabilities.
+
+3 companies in our current pipeline match this thesis exactly. Worth discussing?
+
+[Name]
+[Title]
+[Company]
+
+P.S. - One team is building AI-powered live ops optimization specifically for mid-core mobile games - directly applicable to your portfolio.

@@ -1,0 +1,17 @@
+Subject: Tomb of the Mask + your distributed team setup
+
+Hey {{first_name}},
+
+Tomb of the Mask is still crushing it — 2B+ installs across your portfolio speaks to strong product instincts.
+
+I'm curious about your distributed model — 500 people across 40+ cities is impressive infrastructure. How are you thinking about AI tooling to keep velocity high across that footprint?
+
+We've built some AI infrastructure specifically for mid-tier publishers scaling fast. Might be relevant to your roadmap.
+
+Open to a quick 15-min call?
+
+Best,
+Lucas Fulks
+[CALENDLY_LINK]
+
+P.S. — Kick the Buddy's longevity is underrated. Smart retention mechanics.

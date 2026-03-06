@@ -1,0 +1,75 @@
+================================================================================
+EMAIL PACKET: P7 - Griffin Gaming Partners [PRODUCTION READY]
+================================================================================
+
+TO: peter@griffingp.com
+CC: 
+BCC: 
+
+SUBJECT: Gaming Infrastructure / AI-Powered VC Sourcing - Seed Round
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Peter,
+
+Griffin Gaming Partners' investment in Discord and Overwolf signaled early conviction that gaming infrastructure would become as valuable as the games themselves. We're building on that same thesis.
+
+We're an AI-powered platform that automates VC sourcing, scoring 200+ funds daily and generating investor packets with verified contacts and personalized hooks. Think of us as the picks-and-shovels for the AI-powered capital allocation revolution.
+
+**Why we fit Griffin's portfolio:**
+- **Infrastructure focus:** Like Discord (communication layer) and Overwolf (in-game apps), we're building foundational tech that sits beneath multiple funds' sourcing operations
+- **Stage match:** We're raising a [RAISING AMOUNT] seed round - right in Griffin's sweet spot
+- **Community angle:** Our platform enables multiplayer-style collaboration between fund partners
+
+**Current traction:**
+- 200+ funds in database
+- 4+ partner meetings per week
+- AI-generated investor scoring
+- Team: [ADD TEAM BACKGROUNDS]
+
+**The opportunity:**
+Every major platform shift (mobile, F2P, web3) created new infrastructure categories. AI-powered fund intelligence is next. We're building the sourcing infrastructure that every fund will need.
+
+Would you have 20 minutes for a conversation? I can share our deck and a demo of the platform in action.
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+[PHONE - ADD IF DESIRED]
+[LinkedIn - ADD IF DESIRED]
+
+P.S. - Saw your interview on the GamesBeat podcast about the $1.5B fund. The conviction in gaming infrastructure specifically resonated with our model.
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] One Pager (ADD: [Startup Name]_One_Pager.pdf)
+- [ ] Pitch deck (ADD: [Startup Name]_Deck.pdf)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P7
+Fund: Griffin Gaming Partners
+Contact: Peter Levin
+Sent At: 2026-02-27T01:50:00Z
+Follow-up Day 3: 2026-03-02
+Follow-up Day 7: 2026-03-06
+
+--------------------------------------------------------------------------------
+ACTION ITEMS FOR LUCAS
+--------------------------------------------------------------------------------
+- [ ] Fill in [RAISING AMOUNT]
+- [ ] Add team backgrounds
+- [ ] Add Calendly link
+- [ ] Attach one pager and deck
+- [ ] Add phone/LinkedIn if desired
+- [ ] Sent email
+- [ ] Logged in sent_log.csv
+- [ ] Moved Trello card to "Follow-up"
+
+================================================================================

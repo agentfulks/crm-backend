@@ -1,0 +1,64 @@
+{
+  "batch_name": "Day 8 VC Batch",
+  "created_at": "2025-02-27",
+  "status": "READY_FOR_UPLOAD",
+  "cards": [
+    {
+      "fund_name": "Transcend Fund",
+      "partner_name": "Shanti Bergel",
+      "partner_email": "shanti@transcend.fund",
+      "fit_score": 92,
+      "stage": "Seed to Series A",
+      "check_size": "$500K - $3M",
+      "email_draft_path": "/data/workspace/deliverables/day8_vc_batch/emails/P1_Transcend_ShantiBergel.txt",
+      "trello_status": "READY_FOR_UPLOAD",
+      "tags": ["gaming", "AI", "seed", "series-a"]
+    },
+    {
+      "fund_name": "Konvoy Ventures",
+      "partner_name": "Jason Chapman",
+      "partner_email": "jason@konvoy.vc",
+      "fit_score": 90,
+      "stage": "Seed to Series A",
+      "check_size": "$500K - $2.5M",
+      "email_draft_path": "/data/workspace/deliverables/day8_vc_batch/emails/P2_Konvoy_JasonChapman.txt",
+      "trello_status": "READY_FOR_UPLOAD",
+      "tags": ["gaming", "infrastructure", "seed", "series-a"]
+    },
+    {
+      "fund_name": "Hiro Capital",
+      "partner_name": "Luke Alvarez",
+      "partner_email": "luke@hiro.capital",
+      "fit_score": 88,
+      "stage": "Series A to B",
+      "check_size": "$3M - $10M",
+      "email_draft_path": "/data/workspace/deliverables/day8_vc_batch/emails/P3_Hiro_LukeAlvarez.txt",
+      "trello_status": "READY_FOR_UPLOAD",
+      "tags": ["gaming", "spatial-AI", "series-a", "series-b"]
+    },
+    {
+      "fund_name": "London Venture Partners",
+      "partner_name": "David Lau-Kee",
+      "partner_email": "dlk@londonvp.com",
+      "fit_score": 87,
+      "stage": "Seed",
+      "check_size": "$500K - $2M",
+      "email_draft_path": "/data/workspace/deliverables/day8_vc_batch/emails/P4_LVP_DavidLauKee.txt",
+      "trello_status": "READY_FOR_UPLOAD",
+      "tags": ["gaming", "seed", "AI-infrastructure"]
+    },
+    {
+      "fund_name": "F4 Fund",
+      "partner_name": "David Kaye",
+      "partner_email": "david@f4.fund",
+      "fit_score": 85,
+      "stage": "Seed",
+      "check_size": "$250K - $1M",
+      "email_draft_path": "/data/workspace/deliverables/day8_vc_batch/emails/P5_F4_DavidKaye.txt",
+      "trello_status": "READY_FOR_UPLOAD",
+      "tags": ["gaming", "founder-first", "seed", "gaming-alumni"]
+    }
+  ],
+  "total_cards": 5,
+  "notes": "Email drafts personalized with specific portfolio references and thesis alignment. Ready for enrichment and Trello import."
+}

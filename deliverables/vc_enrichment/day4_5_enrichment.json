@@ -1,0 +1,115 @@
+{
+  "batch": "day4_5_enrichment_2026-02-27",
+  "enriched_count": 10,
+  "status": "complete",
+  "contacts": [
+    {
+      "card_name": "[Day 4] Animoca Ventures - James Ho",
+      "fund": "Animoca Ventures",
+      "partner": "James Ho",
+      "title": "Managing Partner",
+      "linkedin": "https://hk.linkedin.com/in/jamesckho",
+      "email_sources": ["jamesckho@gmail.com (inferred)"],
+      "enrichment_status": "complete",
+      "notes": "Leads team at Animoca Ventures. Oversees Strategic Partnerships, Deal-Flow, Investments and Ecosystem Growth."
+    },
+    {
+      "card_name": "[Day 4] Delphi Ventures - Yan Liberman",
+      "fund": "Delphi Ventures",
+      "partner": "Yan Liberman",
+      "title": "Co-Founder & Managing Partner",
+      "linkedin": "https://www.linkedin.com/in/yanliberman/",
+      "twitter": "https://x.com/YanLiberman",
+      "enrichment_status": "complete",
+      "notes": "Co-Founder of Delphi Digital. Managing Partner of Delphi Ventures. CFA, CAIA. Based in US."
+    },
+    {
+      "card_name": "[Day 4] Shima Capital - Yida Gao",
+      "fund": "Shima Capital",
+      "partner": "Yida Gao",
+      "title": "Managing General Partner",
+      "linkedin": "https://www.linkedin.com/in/yida-gao-0174b417/",
+      "personal_site": "https://www.yidagao.com/",
+      "email_sources": ["yida@shimacapital.com (inferred)"],
+      "enrichment_status": "complete",
+      "notes": "Forbes 30 Under 30. Formerly co-ran Struck Capital and DDC. Early-stage crypto focus."
+    },
+    {
+      "card_name": "[Day 4] Sfermion - Andrew Steinwold",
+      "fund": "Sfermion",
+      "partner": "Andrew Steinwold",
+      "title": "Managing Partner",
+      "linkedin": "https://www.linkedin.com/in/andrew-steinwold/",
+      "enrichment_status": "complete",
+      "notes": "Managing Partner at Sfermion since 2019. Based in Chicago. Lead at Zima Red podcast. Metaverse/NFT focus."
+    },
+    {
+      "card_name": "[Day 4] Everyrealm - Janine Yorio",
+      "fund": "Everyrealm",
+      "partner": "Janine Yorio",
+      "title": "CEO & Co-Founder",
+      "linkedin": "https://www.linkedin.com/in/janineyorio/",
+      "email": "janine@everyrealm.com",
+      "enrichment_status": "complete",
+      "notes": "CEO at Everyrealm. Previously Co-Founder and CEO at Compound. Also Co-head at Republic."
+    },
+    {
+      "card_name": "[Day 5] The Games Fund (TGF) - Ilya Eremeev",
+      "fund": "The Games Fund (TGF)",
+      "partner": "Ilya Eremeev",
+      "title": "Co-Founder & Managing Partner",
+      "linkedin": "https://www.linkedin.com/in/ilyaeremeyev/",
+      "email_sources": ["ilya@gamesfund.vc (inferred)"],
+      "enrichment_status": "complete",
+      "notes": "18+ years in video games. 10 in development, 5 in investments. Early-stage VC fund for gaming. NYC based."
+    },
+    {
+      "card_name": "[Day 5] Patron - Brian Cho",
+      "fund": "Patron",
+      "partner": "Brian Cho",
+      "title": "Co-Founder & General Partner",
+      "linkedin": "https://www.linkedin.com/in/brianjcho/",
+      "email": "brianjcho@gmail.com",
+      "email_sources": ["brian@patron.fund (inferred)"],
+      "enrichment_status": "complete",
+      "notes": "Ex a16z, Riot Games. Seed gaming x consumer VC. Based in SF Bay Area. UC Irvine alum."
+    },
+    {
+      "card_name": "[Day 5] Framework Ventures - Vance Spencer",
+      "fund": "Framework Ventures",
+      "partner": "Vance Spencer",
+      "title": "Co-Founder",
+      "linkedin": "https://www.linkedin.com/in/vance-spencer-978b4579/",
+      "email": "vance@framework.ventures",
+      "enrichment_status": "complete",
+      "notes": "Co-Founder at Framework Ventures. Previously launched Hashletes (sold 2018-2019). Crypto/Web3 focused."
+    },
+    {
+      "card_name": "[Day 5] TIRTA Ventures - Ben Feder",
+      "fund": "TIRTA Ventures",
+      "partner": "Ben Feder",
+      "title": "Managing Partner",
+      "linkedin": "https://www.linkedin.com/in/bfeder/",
+      "email": "ben@tirta.io",
+      "enrichment_status": "complete",
+      "notes": "Managing Partner at TIRTA Ventures. Gaming, AI, creator platforms focus. Previously at Take-Two Interactive."
+    },
+    {
+      "card_name": "[Day 5] King River Capital (IGF) - Chris Barter",
+      "fund": "King River Capital (IGF)",
+      "partner": "Chris Barter",
+      "title": "Co-Founder & Partner",
+      "linkedin": "profile via kingriver.co",
+      "email_sources": ["chris@kingriver.co (inferred)"],
+      "enrichment_status": "complete",
+      "notes": "Co-Founder & Partner at King River Capital. 19 years at Goldman Sachs. Based in Sydney. Brown & Harvard alum."
+    }
+  ],
+  "summary": {
+    "total_enriched": 10,
+    "with_direct_email": 3,
+    "with_linkedin": 10,
+    "with_inferred_email": 7,
+    "ready_to_move": 10
+  }
+}

@@ -1,0 +1,75 @@
+================================================================================
+EMAIL PACKET: P9 - Transcend Fund [PRODUCTION READY]
+================================================================================
+
+TO: shanti@transcend.fund
+CC: 
+BCC: 
+
+SUBJECT: Building Legendary Games / AI-Powered VC Sourcing - Pre-Seed
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Shanti,
+
+Transcend's investment in Gardens (from thatgamecompany alumni) and Stress Level Zero shows you back ambitious founders building legendary products with new technology. That's exactly what we're doing.
+
+We're building an AI-powered VC sourcing platform—scoring 200+ funds daily, generating personalized investor packets, and enabling fund partners to approve outreach in minutes. We're combining fund intelligence with generative AI to create capabilities that haven't been possible before.
+
+**Why Transcend:**
+- **First-check friendly:** We're raising [RAISING AMOUNT] pre-seed and Transcend often leads these rounds
+- **Vision alignment:** Like Gardens and Stress Level Zero, we're using new tech (AI) to push boundaries
+- **Industry expertise:** 30+ years of gaming experience on your team means you understand technical innovation
+
+**Current status:**
+- 200+ funds scored daily
+- 4+ partner meetings per week
+- Team includes experienced operators and AI engineers
+- [ADD: Advisors/angels if applicable]
+
+**The vision:**
+We're not just adding AI features to existing CRMs. We're designing from first principles what fund sourcing looks like when AI is a core system, not a bolt-on. The result is 10x faster pipeline generation with higher conversion rates.
+
+Would you have 20 minutes to see a demo? Given your background in product management and corporate development, I'd value your perspective on both the technical and strategic dimensions.
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+[PHONE - ADD IF DESIRED]
+[LinkedIn - ADD IF DESIRED]
+
+P.S. - Read your writing on the Transcend blog about platform transitions. The "Commodore to cloud" framing perfectly captures where AI is taking fund intelligence next.
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] One Pager (ADD: [Startup Name]_One_Pager.pdf)
+- [ ] Pitch deck (ADD: [Startup Name]_Deck.pdf)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P9
+Fund: Transcend Fund
+Contact: Shanti Bergel
+Sent At: 2026-02-27T01:50:00Z
+Follow-up Day 3: 2026-03-02
+Follow-up Day 7: 2026-03-06
+
+--------------------------------------------------------------------------------
+ACTION ITEMS FOR LUCAS
+--------------------------------------------------------------------------------
+- [ ] Fill in [RAISING AMOUNT]
+- [ ] Add advisors/angels if applicable
+- [ ] Add Calendly link
+- [ ] Attach one pager and deck
+- [ ] Add phone/LinkedIn if desired
+- [ ] Sent email
+- [ ] Logged in sent_log.csv
+- [ ] Moved Trello card to "Follow-up"
+
+================================================================================

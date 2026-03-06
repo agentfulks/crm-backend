@@ -1,0 +1,73 @@
+================================================================================
+EMAIL PACKET: P6 - a16z GAMES [PRODUCTION READY]
+================================================================================
+
+TO: jonathan@a16z.com
+CC: andrew@a16z.com
+BCC: 
+
+SUBJECT: AI x Gaming - AI-Powered VC Sourcing / SPEEDRUN Application
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Jonathan,
+
+I'm reaching out about our AI-powered VC sourcing platform we're building at the intersection of generative AI and fund intelligence.
+
+Given your leadership of a16z SPEEDRUN and the fund's thesis on AI redefining how we socialize and play, I wanted to get in front of you before our formal SPEEDRUN application. We're building infrastructure that enables AI-generated investor scoring, personalized outreach at scale, and persistent CRM intelligence for fund managers.
+
+**Why a16z GAMES specifically:**
+- Your investment in Sky Mavis and focus on virtual economies aligns with our data-driven asset model
+- SPEEDRUN's $1M check size and operational support matches our current stage
+- The fund's infrastructure thesis ("games technologies = Metaverse building blocks") directly maps to what we're building — intelligence infrastructure for capital allocation
+
+**Traction:**
+- 200+ funds scored daily
+- 4+ partner meetings per week
+- AI-powered pipeline management
+- Team includes experienced operators and AI engineers
+
+**The Ask:**
+Would you be open to a 15-minute call to discuss whether we're a fit for SPEEDRUN 3.0? We're targeting a [RAISING AMOUNT] seed round in [TIMELINE] and a16z is our first choice given the operational platform and AI + games focus.
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+[PHONE - ADD IF DESIRED]
+[LinkedIn profile - ADD IF DESIRED]
+
+P.S. - Read your piece on AI x creative tools on Substack. The parallel between what happened to software development with Copilot and what's about to happen to game development is exactly what we're building toward.
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] One Pager (ADD: [Startup Name]_One_Pager.pdf)
+- [ ] Pitch deck (ADD: [Startup Name]_Deck.pdf)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P6
+Fund: a16z GAMES
+Contact: Jonathan Lai, Andrew Chen
+Focus: SPEEDRUN application
+Sent At: 2026-02-27T01:50:00Z
+Follow-up Day 3: 2026-03-02
+Follow-up Day 7: 2026-03-06
+
+--------------------------------------------------------------------------------
+ACTION ITEMS FOR LUCAS
+--------------------------------------------------------------------------------
+- [ ] Fill in [RAISING AMOUNT] and [TIMELINE]
+- [ ] Add Calendly link
+- [ ] Attach one pager and deck
+- [ ] Add phone/LinkedIn if desired
+- [ ] Sent email
+- [ ] Logged in sent_log.csv
+- [ ] Moved Trello card to "Follow-up"
+
+================================================================================

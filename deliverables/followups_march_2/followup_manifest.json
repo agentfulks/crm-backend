@@ -1,0 +1,185 @@
+{
+  "batch_info": {
+    "name": "Day 1 & Day 2 Follow-ups",
+    "follow_up_number": 1,
+    "scheduled_date": "2026-03-02",
+    "day_of_week": "Monday"
+  },
+  "day1_batch": {
+    "original_send_date": "2026-02-27",
+    "original_send_time_utc": "01:45",
+    "funds": [
+      {
+        "fund_name": "BITKRAFT Ventures",
+        "contact_name": "Martin Garcia",
+        "email": "martin@bitkraft.vc",
+        "packet_id": "P1",
+        "original_subject": "AI sourcing engine for gaming/AI funds — 4 partner meetings/week",
+        "follow_up_file": "bitkraft_followup.txt",
+        "follow_up_subject": "Re: AI sourcing engine for gaming/AI funds",
+        "hook_angle": "Synthetic Reality / founder-built infrastructure",
+        "check_size": "$500K-$10M",
+        "stage": "Seed to Series B",
+        "scheduled_send_utc": "2026-03-02T14:00:00Z",
+        "scheduled_send_cst": "2026-03-02T08:00:00",
+        "status": "ready_to_send"
+      },
+      {
+        "fund_name": "Konvoy Ventures",
+        "contact_name": "Taylor Hurst",
+        "email": "taylor@konvoy.vc",
+        "packet_id": "P2",
+        "original_subject": "Infrastructure play: Daily VC scoring engine for gaming funds",
+        "follow_up_file": "konvoy_followup.txt",
+        "follow_up_subject": "Re: Infrastructure play: Daily VC scoring engine",
+        "hook_angle": "Infrastructure play / gaming platform bets",
+        "check_size": "$250K-$5M",
+        "stage": "Pre-seed to Series A",
+        "scheduled_send_utc": "2026-03-02T14:05:00Z",
+        "scheduled_send_cst": "2026-03-02T08:05:00",
+        "status": "ready_to_send"
+      },
+      {
+        "fund_name": "Mechanism Capital",
+        "contact_name": "Steve Cho",
+        "email": "steve@mechanism.capital",
+        "packet_id": "P3",
+        "original_subject": "Crypto-gaming meets AI: Daily investor scoring engine",
+        "follow_up_file": "mechanism_followup.txt",
+        "follow_up_subject": "Re: Crypto-gaming meets AI",
+        "hook_angle": "Crypto-gaming + AI intersection",
+        "check_size": "$500K-$5M",
+        "stage": "Seed to Series A",
+        "scheduled_send_utc": "2026-03-02T14:10:00Z",
+        "scheduled_send_cst": "2026-03-02T08:10:00",
+        "status": "ready_to_send"
+      },
+      {
+        "fund_name": "Collab+Currency",
+        "contact_name": "Derek Edwards",
+        "email": "derek@collabcurrency.com",
+        "packet_id": "P4",
+        "original_subject": "Crypto x culture: Daily investor packets as product",
+        "follow_up_file": "collab_currency_followup.txt",
+        "follow_up_subject": "Re: Crypto x culture: Daily investor packets",
+        "hook_angle": "Crypto x culture intersection",
+        "check_size": "$250K-$2M",
+        "stage": "Pre-seed to Seed",
+        "scheduled_send_utc": "2026-03-02T14:15:00Z",
+        "scheduled_send_cst": "2026-03-02T08:15:00",
+        "status": "ready_to_send"
+      },
+      {
+        "fund_name": "Variant",
+        "contact_name": "Spencer Noon",
+        "email": "spencer@variant.fund",
+        "packet_id": "P5",
+        "original_subject": "User-owned VC sourcing: AI engine + partner approval loop",
+        "follow_up_file": "variant_followup.txt",
+        "follow_up_subject": "Re: User-owned VC sourcing",
+        "hook_angle": "User ownership and alignment",
+        "check_size": "$500K-$5M",
+        "stage": "Seed to Series A",
+        "scheduled_send_utc": "2026-03-02T14:20:00Z",
+        "scheduled_send_cst": "2026-03-02T08:20:00",
+        "status": "ready_to_send"
+      }
+    ]
+  },
+  "day2_batch": {
+    "original_send_date": "2026-02-27",
+    "original_send_time_utc": "01:50",
+    "funds": [
+      {
+        "fund_name": "a16z GAMES",
+        "contact_name": "Jonathan Lai",
+        "email": "jonathan@a16z.com",
+        "packet_id": "P6",
+        "original_subject": "AI x Gaming - [Startup Name] / SPEEDRUN Application",
+        "follow_up_file": "a16z_games_followup.txt",
+        "follow_up_subject": "Re: AI x Gaming / SPEEDRUN Application",
+        "hook_angle": "AI + gaming infrastructure, SPEEDRUN alignment",
+        "check_size": "$1M (SPEEDRUN)",
+        "stage": "Pre-seed to Seed",
+        "scheduled_send_utc": "2026-03-02T14:25:00Z",
+        "scheduled_send_cst": "2026-03-02T08:25:00",
+        "status": "ready_to_send"
+      },
+      {
+        "fund_name": "Griffin Gaming Partners",
+        "contact_name": "Peter Levin",
+        "email": "peter@griffingp.com",
+        "packet_id": "P7",
+        "original_subject": "Gaming Infrastructure / [Startup Name] - Seed Round",
+        "follow_up_file": "griffin_followup.txt",
+        "follow_up_subject": "Re: Gaming Infrastructure / Seed Round",
+        "hook_angle": "Gaming infrastructure, Discord/Overwolf parallel",
+        "check_size": "$1M-$10M",
+        "stage": "Seed to Series B",
+        "scheduled_send_utc": "2026-03-02T14:30:00Z",
+        "scheduled_send_cst": "2026-03-02T08:30:00",
+        "status": "ready_to_send"
+      },
+      {
+        "fund_name": "Makers Fund",
+        "contact_name": "Michael Cheung",
+        "email": "michael@makersfund.com",
+        "packet_id": "P8",
+        "original_subject": "AI + Gaming / [Startup Name] - Following Inworld AI's Path",
+        "follow_up_file": "makers_fund_followup.txt",
+        "follow_up_subject": "Re: AI + Gaming / Following Inworld AI's Path",
+        "hook_angle": "AI + gaming, Inworld AI parallel, global ambitions",
+        "check_size": "$1M-$5M",
+        "stage": "Seed to Series A",
+        "scheduled_send_utc": "2026-03-02T14:35:00Z",
+        "scheduled_send_cst": "2026-03-02T08:35:00",
+        "status": "ready_to_send"
+      },
+      {
+        "fund_name": "Transcend Fund",
+        "contact_name": "Shanti Bergel",
+        "email": "shanti@transcend.fund",
+        "packet_id": "P9",
+        "original_subject": "Building Legendary Games / [Startup Name] - Pre-Seed",
+        "follow_up_file": "transcend_followup.txt",
+        "follow_up_subject": "Re: Building Legendary Games / Pre-Seed",
+        "hook_angle": "Legendary games, AI as core system, Gardens/Stress Level Zero parallel",
+        "check_size": "$250K-$1M",
+        "stage": "Pre-seed to Seed",
+        "scheduled_send_utc": "2026-03-02T14:40:00Z",
+        "scheduled_send_cst": "2026-03-02T08:40:00",
+        "status": "ready_to_send"
+      },
+      {
+        "fund_name": "Galaxy Interactive",
+        "contact_name": "Sam Englebardt",
+        "email": "sam@galaxyinteractive.io",
+        "packet_id": "P10",
+        "original_subject": "Content + Technology / [Startup Name] at the AI Inflection Point",
+        "follow_up_file": "galaxy_followup.txt",
+        "follow_up_subject": "Re: Content + Technology / AI Inflection Point",
+        "hook_angle": "Content + technology intersection, Immutable/Mythical parallel",
+        "check_size": "$500K-$5M",
+        "stage": "Seed to Series A",
+        "scheduled_send_utc": "2026-03-02T14:45:00Z",
+        "scheduled_send_cst": "2026-03-02T08:45:00",
+        "status": "ready_to_send"
+      }
+    ]
+  },
+  "next_follow_up": {
+    "follow_up_number": 2,
+    "scheduled_date": "2026-03-06",
+    "day_of_week": "Friday",
+    "notes": "Day 7 final bump or pass"
+  },
+  "value_add_updates": {
+    "meeting_velocity": "5 partner meetings per week (up from 4)",
+    "traction_highlight": "System compounds as more funds ingested",
+    "new_angle": "Automation-with-human-control approach resonating with crypto-native VCs"
+  },
+  "original_packet_references": {
+    "day1": "deliverables/outreach_assets/ready_to_send/",
+    "day2": "deliverables/vc_packets/day2_5packets/"
+  }
+}

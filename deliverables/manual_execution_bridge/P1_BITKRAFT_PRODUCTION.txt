@@ -1,0 +1,67 @@
+================================================================================
+EMAIL PACKET: P1 - BITKRAFT Ventures [PRODUCTION READY]
+================================================================================
+
+TO: martin@bitkraft.vc
+CC: 
+BCC: 
+
+SUBJECT: AI sourcing engine for gaming/AI funds — 4 partner meetings/week
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Martin,
+
+BITKRAFT's thesis on Synthetic Reality and founder-built infrastructure resonates with what we're building.
+
+We run an AI-assisted sourcing engine that scores 200+ gaming, AI, and devtools funds daily, assembles five investor packets every morning, and logs approvals + meetings directly in Slack and Trello. Partners can green-light sends in under four hours.
+
+The loop is already booking four partner meetings per week and compounds as more funds are ingested.
+
+We focus on Seed-Series B ($500K-$10M checks), which fits BITKRAFT's stage and check size perfectly.
+
+Worth a 15-minute call to see if there's a fit?
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+
+P.S. — Based in [LOCATION]. Happy to work around your schedule.
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] Pitch deck (ADD: outreach_assets/pitch_deck/latest.pdf)
+- [ ] KPI snapshot (ADD: outreach_assets/kpi_snapshot/2026-02-24-kpis.csv)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P1
+Fund: BITKRAFT Ventures
+Contact: Martin Garcia
+Title: CFO & General Partner
+Email: martin@bitkraft.vc
+Check Size: $500K-$10M USD
+Stage Focus: Seed, Series A, Series B
+Priority Score: 84.0 (Rank #1)
+Sent At: 2026-02-27T01:45:00Z
+Follow-up Day 3: 2026-03-02
+Follow-up Day 7: 2026-03-06
+
+--------------------------------------------------------------------------------
+SEND CHECKLIST
+--------------------------------------------------------------------------------
+- [ ] Added Calendly link
+- [ ] Attached pitch deck
+- [ ] Attached KPI snapshot
+- [ ] Updated email signature with location if desired
+- [ ] Sent email
+- [ ] Logged in sent_log.csv
+- [ ] Moved Trello card to "Follow-up"
+
+================================================================================

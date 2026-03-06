@@ -1,0 +1,18 @@
+To: david@f4.fund
+Subject: Series co-investor here → another gaming founder building AI infrastructure
+
+Hi David,
+
+I saw F4 co-invested in Series' $28M round alongside a16z and BITKRAFT. Smart bet on GenAI game development. I'm reaching out because you're missing the other half of that opportunity—the infrastructure layer that makes AI-powered games actually viable in production.
+
+NEXUS AI is built by founders who came from [GAMING BACKGROUND REDACTED], similar to the gaming veterans F4 backs. We experienced firsthand the pain of trying to ship AI-powered multiplayer worlds: inference costs that scale linearly with players, state management nightmares, and the architecture gaps that kill ambitious projects.
+
+So we built the infrastructure layer we wished existed. NEXUS enables persistent AI agents, dynamic world evolution, and real-time inference at unit economics that actually work for live games. Studios are cutting AI runtime costs by 60%+ while shipping features they couldn't build before.
+
+As a former founder yourself (Iron Realms, Meteor Games), you know the difference between demo AI and production AI. I'd love 15 minutes to show you what we're building for the next generation of gaming founders.
+
+[CALENDLY_LINK]
+
+Best,
+[Founder Name]
+NEXUS AI

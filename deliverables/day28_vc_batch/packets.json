@@ -1,0 +1,328 @@
+{
+  "batch_date": "2026-03-01",
+  "batch_day": 28,
+  "focus_area": "AI Infrastructure / Developer Tools / MLOps",
+  "total_targets": 5,
+  "avg_fit_score": 91.6,
+  "packets": [
+    {
+      "packet_id": "P1",
+      "priority": 1,
+      "fund": {
+        "name": "Bessemer Venture Partners",
+        "type": "Multi-stage Venture Capital",
+        "aum": "$20B+",
+        "location": "San Francisco, CA / New York, NY",
+        "check_size": "$1M - $50M",
+        "stage_focus": "Seed to Growth",
+        "fund_year": "2024"
+      },
+      "partner": {
+        "name": "Sameer Dholakia",
+        "title": "Partner",
+        "email": "sameer@bvp.com",
+        "linkedin": "linkedin.com/in/sameerdholakia",
+        "background": "Former CEO of SendGrid (acquired $3B), operating executive turned investor"
+      },
+      "fit_score": {
+        "total": 95,
+        "gaming_thesis": 20,
+        "stage_fit": 25,
+        "check_size": 15,
+        "strategic_value": 20,
+        "partner_access": 10,
+        "geography": 5
+      },
+      "thesis_alignment": {
+        "summary": "Bessemer is the premier cloud infrastructure investor. Their 'State of the Cloud' and 'State of AI' reports set industry benchmarks. Sameer's SendGrid background gives him deep developer platform expertise.",
+        "key_investments": [
+          "LangChain (AI framework)",
+          "Weights & Biases (ML tooling)",
+          "Tecton (feature platform)",
+          "SendGrid (email API, Sameer as CEO)",
+          "Auth0 (identity platform)"
+        ],
+        "relevant_expertise": [
+          "Published State of AI 2025 report",
+          "Sameer Dholakia led SendGrid from startup to $3B acquisition",
+          "Deep developer platform expertise",
+          "Strong follow-on capital for Series B/C"
+        ]
+      },
+      "warm_signals": [
+        "Portfolio overlap with LangChain, W&B founders",
+        "Developer community connections through SendGrid alumni",
+        "Bessemer AI community events"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference Bessemer's AI infrastructure thesis and Sameer's SendGrid background",
+        "angle": "Next generation developer infrastructure for AI-native applications",
+        "differentiation": "Infrastructure that learns and adapts; not just static APIs",
+        "recommended_subject": "AI infrastructure for the post-ChatGPT developer stack"
+      },
+      "email_draft": {
+        "to": "sameer@bvp.com",
+        "subject": "AI infrastructure for the post-ChatGPT developer stack",
+        "body": "Hi Sameer,\n\nI've been following Bessemer's State of AI reports and your insights from the SendGrid journey. The shift you're describing — from AI as a feature to AI as infrastructure — is exactly what we're building.\n\nWe're creating the infrastructure layer that learns and adapts, not just static APIs. Think of it as the difference between traditional cloud services and AI-native infrastructure that improves with every interaction.\n\nGiven your SendGrid experience building developer platforms that scale, I'd value your perspective on our approach. Would you be open to a brief call to explore if there's a fit with Bessemer's AI infrastructure thesis?\n\nBest,\n[Founder Name]"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "Top priority — Bessemer is the definitive AI infrastructure investor"
+    },
+    {
+      "packet_id": "P2",
+      "priority": 2,
+      "fund": {
+        "name": "Madrona Venture Group",
+        "type": "Early-stage Venture Capital",
+        "aum": "$2.5B+",
+        "location": "Seattle, WA",
+        "check_size": "$500K - $20M",
+        "stage_focus": "Seed to Series B",
+        "fund_year": "2023"
+      },
+      "partner": {
+        "name": "Matt McIlwain",
+        "title": "Managing Director",
+        "email": "matt@madrona.com",
+        "linkedin": "linkedin.com/in/mattmcilwain",
+        "background": "20+ years investing in AI/ML, wrote the 'Intelligent App Stack' framework"
+      },
+      "fit_score": {
+        "total": 93,
+        "gaming_thesis": 18,
+        "stage_fit": 25,
+        "check_size": 15,
+        "strategic_value": 18,
+        "partner_access": 12,
+        "geography": 5
+      },
+      "thesis_alignment": {
+        "summary": "Madrona pioneered the 'Intelligent Applications' thesis. Matt McIlwain has been investing in AI for over a decade and publishes definitive frameworks on AI app architecture.",
+        "key_investments": [
+          "Snowflake (data cloud)",
+          "UIPath (RPA/AI automation)",
+          "Amazon (early investor)",
+          "Smartsheet (work automation)",
+          "Qumulo (data infrastructure)"
+        ],
+        "relevant_expertise": [
+          "Published 'Intelligent App Stack' framework",
+          "Deep Seattle ecosystem (Microsoft, Amazon alumni)",
+          "Long-term fund life (15+ years)",
+          "Strong technical due diligence"
+        ]
+      },
+      "warm_signals": [
+        "Seattle tech community connections",
+        "Portfolio founders in AI/ML infrastructure",
+        "Madrona Intelligent Apps community"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference Matt's 'Intelligent App Stack' and Madrona's platform shift history",
+        "angle": "Infrastructure for the next wave of intelligent applications",
+        "differentiation": "AI infrastructure designed for multi-agent orchestration",
+        "recommended_subject": "Multi-agent infrastructure for the Intelligent App Stack"
+      },
+      "email_draft": {
+        "to": "matt@madrona.com",
+        "subject": "Multi-agent infrastructure for the Intelligent App Stack",
+        "body": "Hi Matt,\n\nYour 'Intelligent App Stack' framework has become essential reading for anyone building AI-native companies. The evolution from cloud to mobile to AI represents the biggest platform shift since the internet — and the infrastructure layer is still being defined.\n\nWe're building the infrastructure specifically designed for multi-agent orchestration — the coordination layer that makes intelligent applications truly intelligent.\n\nGiven Madrona's track record with platform shifts (cloud, mobile, now AI) and your deep AI investment history, I'd love to get your perspective. Open to a brief call?\n\nBest,\n[Founder Name]"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "High priority — Matt is a thought leader in AI application architecture"
+    },
+    {
+      "packet_id": "P3",
+      "priority": 3,
+      "fund": {
+        "name": "Amplify Partners",
+        "type": "Developer Tools / Infrastructure Focused",
+        "aum": "$1B+",
+        "location": "Palo Alto, CA / New York, NY",
+        "check_size": "$500K - $15M",
+        "stage_focus": "Seed to Series A",
+        "fund_year": "2022"
+      },
+      "partner": {
+        "name": "Sunil Dhaliwal",
+        "title": "Managing Partner",
+        "email": "sunil@amplifypartners.com",
+        "linkedin": "linkedin.com/in/sunildhaliwal",
+        "background": "Investing in developer tools since 2000, track record includes Chef, DataDog, Fastly, Snyk"
+      },
+      "fit_score": {
+        "total": 92,
+        "gaming_thesis": 15,
+        "stage_fit": 25,
+        "check_size": 15,
+        "strategic_value": 18,
+        "partner_access": 14,
+        "geography": 5
+      },
+      "thesis_alignment": {
+        "summary": "Amplify is a purpose-built developer tools and infrastructure fund. Sunil has been investing in this category for 20+ years with exceptional returns. Recent AI investments in LangChain, Fixie, and Steamship show active deployment.",
+        "key_investments": [
+          "LangChain (AI framework)",
+          "DataDog (observability)",
+          "Fastly (edge cloud)",
+          "Chef (automation)",
+          "Snyk (security dev tools)"
+        ],
+        "relevant_expertise": [
+          "Pure developer tools focus for 20+ years",
+          "Track record: DataDog, Fastly, Chef, Snyk",
+          "Deep technical due diligence",
+          "Portfolio community of 100+ dev tool companies"
+        ]
+      },
+      "warm_signals": [
+        "Shared LangChain investment thesis",
+        "Developer tools community connections",
+        "Portfolio company founder intros"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference Amplify's developer tools heritage and recent AI investments",
+        "angle": "The missing piece in the AI developer workflow",
+        "differentiation": "Developer-first AI infrastructure; built by developers for developers",
+        "recommended_subject": "The missing infrastructure in the AI developer workflow"
+      },
+      "email_draft": {
+        "to": "sunil@amplifypartners.com",
+        "subject": "The missing infrastructure in the AI developer workflow",
+        "body": "Hi Sunil,\n\nAmplify's track record in developer tools speaks for itself — DataDog, Fastly, Chef, Snyk. You've consistently identified the infrastructure layers that developers can't live without.\n\nAs AI becomes the primary interface for software, we're seeing a massive gap in the developer workflow. We're building the infrastructure that makes AI-native development as seamless as traditional software development.\n\nGiven your recent investments in LangChain and AI infrastructure, this seems right in your wheelhouse. Would love to share what we're building and get your perspective.\n\nBest,\n[Founder Name]"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "High priority — Pure-play developer tools focus, exceptional track record"
+    },
+    {
+      "packet_id": "P4",
+      "priority": 4,
+      "fund": {
+        "name": "Gradient Ventures",
+        "type": "Google's AI-focused Venture Fund",
+        "aum": "$500M+",
+        "location": "Mountain View, CA",
+        "check_size": "$1M - $10M",
+        "stage_focus": "Seed to Series A",
+        "fund_year": "2017"
+      },
+      "partner": {
+        "name": "Wen-Wen Lam",
+        "title": "Partner",
+        "email": "wenwen@gradient.com",
+        "linkedin": "linkedin.com/in/wenwenlam",
+        "background": "Leads AI infrastructure and applied AI investments, former Google product leader"
+      },
+      "fit_score": {
+        "total": 90,
+        "gaming_thesis": 15,
+        "stage_fit": 25,
+        "check_size": 12,
+        "strategic_value": 18,
+        "partner_access": 15,
+        "geography": 5
+      },
+      "thesis_alignment": {
+        "summary": "Google's AI-focused venture fund with direct access to Google AI research and infrastructure. Focuses exclusively on AI-native companies with technical differentiation.",
+        "key_investments": [
+          "Algorithmia (ML ops platform)",
+          "Snorkel AI (data labeling)",
+          "DecideAI (AI decision platform)",
+          "Pony.ai (autonomous driving)",
+          "Observe.ai (call center AI)"
+        ],
+        "relevant_expertise": [
+          "Direct Google AI research access",
+          "Technical team with PhDs in ML/AI",
+          "Google Cloud and Vertex AI partnerships",
+          "Fast-track technical due diligence"
+        ]
+      },
+      "warm_signals": [
+        "Google AI researcher connections",
+        "Google Cloud partner ecosystem",
+        "Technical advisor network"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference Gradient's focus on AI-native companies and Google's infrastructure",
+        "angle": "Multi-cloud AI infrastructure that works across providers",
+        "differentiation": "AI infrastructure that works across cloud providers (multi-cloud native)",
+        "recommended_subject": "Multi-cloud AI infrastructure — beyond GCP"
+      },
+      "email_draft": {
+        "to": "wenwen@gradient.com",
+        "subject": "Multi-cloud AI infrastructure — beyond GCP",
+        "body": "Hi Wen-Wen,\n\nGradient's focus on AI-native companies with technical differentiation has produced an impressive portfolio. The access to Google AI research and infrastructure is a unique advantage.\n\nWe're building AI infrastructure that takes a different approach — multi-cloud native from day one. While we integrate deeply with GCP, AWS, and Azure, we maintain independence so companies aren't locked into any single provider.\n\nGiven Gradient's thesis on AI-native infrastructure and Google's cloud leadership, I'd value your perspective. Open to a brief conversation?\n\nBest,\n[Founder Name]"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "Strong technical fund with Google backing"
+    },
+    {
+      "packet_id": "P5",
+      "priority": 5,
+      "fund": {
+        "name": "Theory Ventures",
+        "type": "Data & AI Infrastructure Focused",
+        "aum": "$500M",
+        "location": "Palo Alto, CA",
+        "check_size": "$2M - $15M",
+        "stage_focus": "Series A to Series B",
+        "fund_year": "2023"
+      },
+      "partner": {
+        "name": "Tomasz Tunguz",
+        "title": "Founder",
+        "email": "tomasz@theory.ventures",
+        "linkedin": "linkedin.com/in/tunguz",
+        "background": "Former Redpoint partner, renowned SaaS analyst, writes the most-read newsletter in VC"
+      },
+      "fit_score": {
+        "total": 88,
+        "gaming_thesis": 12,
+        "stage_fit": 20,
+        "check_size": 15,
+        "strategic_value": 20,
+        "partner_access": 16,
+        "geography": 5
+      },
+      "thesis_alignment": {
+        "summary": "Tomasz Tunguz founded Theory Ventures to focus exclusively on AI and data infrastructure. His research and writing are required reading in the SaaS/VC community. Data-driven approach to investment selection.",
+        "key_investments": [
+          "Redpoint portfolio heritage (Looker, Stripe, Twilio)",
+          "AI infrastructure focus",
+          "Data platform companies",
+          "Series A/B specialization"
+        ],
+        "relevant_expertise": [
+          "Most-read newsletter in venture capital",
+          "Published 'Winning with Data'",
+          "Data-driven investment process",
+          "Redpoint heritage with strong portfolio"
+        ]
+      },
+      "warm_signals": [
+        "Data community connections",
+        "Newsletter subscriber network",
+        "Redpoint alumni founders"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference Tomasz's writing on AI infrastructure and the Redpoint AI Index",
+        "angle": "Metrics-driven infrastructure with measurable ROI from day one",
+        "differentiation": "Measurable infrastructure ROI from day one",
+        "recommended_subject": "Infrastructure with measurable ROI — as you wrote about"
+      },
+      "email_draft": {
+        "to": "tomasz@theory.ventures",
+        "subject": "Infrastructure with measurable ROI — as you wrote about",
+        "body": "Hi Tomasz,\n\nYour newsletter is required reading for anyone in SaaS and infrastructure. Your recent analysis on AI infrastructure economics resonated deeply — the need for measurable ROI from day one.\n\nWe're building exactly that: AI infrastructure where every metric is transparent and ROI is measurable from the first deployment. No black boxes, no vanity metrics — just clear infrastructure ROI.\n\nGiven Theory's focus on data and AI infrastructure and your emphasis on metrics-driven companies, this seems like a natural fit. Would you be open to a brief call to explore?\n\nBest,\n[Founder Name]"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "Data-driven approach, strong thought leadership"
+    }
+  ]
+}

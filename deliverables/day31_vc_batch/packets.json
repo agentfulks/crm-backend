@@ -1,0 +1,67 @@
+[
+  {
+    "priority": 1,
+    "fund_name": "Lux Capital",
+    "partner_name": "Brandon Reeves",
+    "partner_title": "Partner",
+    "email": "brandon@luxcapital.com",
+    "fit_score": 94,
+    "check_size": "$1M - $10M",
+    "stage": "Seed to Series B",
+    "thesis_alignment": "Deep tech and AI at the intersection of software, defense, and manufacturing. Lux leads investments in Physical Intelligence (foundation model for robotics) and has a dedicated practice for AI x robotics x industrial automation through Lux Labs.",
+    "hook_angle": "Reference Lux's Physical Intelligence investment and their Q2 2024 thesis on 'AI and biology, manufacturing and space, scientific tools and automation.' Position as enabling the same foundation model approach for industrial robotics applications.",
+    "source_attribution": "luxcapital.com - Physical Intelligence announced 2024; Lux Q2 2024 Report confirms manufacturing/automation thesis focus"
+  },
+  {
+    "priority": 2,
+    "fund_name": "DCVC",
+    "partner_name": "Ali Tamaseb",
+    "partner_title": "General Partner",
+    "email": "ali@dcvc.com",
+    "fit_score": 92,
+    "check_size": "$2M - $20M",
+    "stage": "Series A to C",
+    "thesis_alignment": "Deep tech catalyzing 'American Industrial Renaissance' - DCVC's 2025 Deep Tech Opportunities Report emphasizes AI, robotics, materials, electrification, mining, and construction. Data-driven approach to identifying world-class founders in industrial transformation.",
+    "hook_angle": "Reference DCVC's 2025 Deep Tech Opportunities Report on 'An American Industrial Renaissance' and Ali's book 'Super Founders' research on what differentiates billion-dollar startups. Position as the industrial AI opportunity his data shows is underserved.",
+    "source_attribution": "dcvc.com - 2025 Deep Tech Opportunities Report released June 2025; Ali Tamaseb profile confirms focus on mining, construction, electrification"
+  },
+  {
+    "priority": 3,
+    "fund_name": "Construct Capital",
+    "partner_name": "Dayna Grayson",
+    "partner_title": "Co-Founder & General Partner",
+    "email": "dayna@constructcap.com",
+    "fit_score": 90,
+    "check_size": "$2M - $6M",
+    "stage": "Seed to Series A",
+    "thesis_alignment": "Explicitly focused on 'foundational industries' - manufacturing, logistics, defense, energy. Thesis: 'From manufacturing to logistics and defense to energy, these sectors are the backbone of our GDP but disruptive technologies have not been applied to these spaces.' Portfolio includes Hadrian (space/defense manufacturing), Veho (logistics), AMCA (aerospace).",
+    "hook_angle": "Reference their portfolio company Nexxa.ai building 'AI agents for heavy industries and engineers who design rail networks, factories, construction projects.' Position as complementary infrastructure for the same industrial transformation thesis.",
+    "source_attribution": "constructcap.com - Portfolio page shows Hadrian, Veho, AMCA investments; CB Insights references Nexxa.ai for industrial AI"
+  },
+  {
+    "priority": 4,
+    "fund_name": "Ubiquity Ventures",
+    "partner_name": "Sunil Nagaraj",
+    "partner_title": "Founder & Managing Partner",
+    "email": "sunil@ubiquity.vc",
+    "fit_score": 88,
+    "check_size": "$500K - $3M",
+    "stage": "Pre-seed to Seed",
+    "thesis_alignment": "'Software beyond the screen' - Smart hardware and machine learning for enterprise/industrial applications. $200M AUM across three funds. Portfolio includes Rocket Lab, Loft Orbital, Diligent Robots. Focus on ML applications for industries historically less penetrated by software.",
+    "hook_angle": "Reference his thesis on 'software leaving the screen behind, entering the real world.' Position as the ML infrastructure layer that enables smart hardware to operate effectively in industrial environments.",
+    "source_attribution": "ubiquity.vc - Website confirms $200M AUM, 'software beyond the screen' thesis; RocketReach and Safehub.io confirm sunil@ubiquity.vc email"
+  },
+  {
+    "priority": 5,
+    "fund_name": "Lemnos Labs",
+    "partner_name": "Eric Klein",
+    "partner_title": "Partner",
+    "email": "eric@lemnoslabs.com",
+    "fit_score": 86,
+    "check_size": "$500K - $2M",
+    "stage": "Seed",
+    "thesis_alignment": "Premiere early-stage deeptech venture firm focused on hardware. Portfolio includes Built Robotics (autonomous construction), Path Robotics (autonomous welding), Elroy Air (autonomous cargo), Farmwise (autonomous farming). Explicitly invests when 'every dollar counts, every hour matters' in hardware development.",
+    "hook_angle": "Reference portfolio companies Built Robotics and Path Robotics as examples of the autonomous industrial future Lemnos is building. Position as the AI layer that makes such hardware investments more capital efficient and capable.",
+    "source_attribution": "lemnos.vc - Portfolio page lists Built Robotics, Path Robotics, Elroy Air; ContactOut and RocketReach confirm eric@lemnoslabs.com email"
+  }
+]

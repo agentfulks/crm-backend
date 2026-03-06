@@ -1,0 +1,56 @@
+{
+  "moves_executed": [
+    {
+      "card": "Packet: Collab+Currency",
+      "reason": "Stale approved (6 days) \u2192 Executed",
+      "to": "699d309d2ef034a3ba04deb8"
+    },
+    {
+      "card": "Packet: Variant",
+      "reason": "Stale approved (6 days) \u2192 Executed",
+      "to": "699d309d2ef034a3ba04deb8"
+    },
+    {
+      "card": "P2: Konvoy Ventures - Jason Chapman",
+      "reason": "P1 priority \u2192 Daily Queue",
+      "to": "699d309c1870f04a4b401759"
+    },
+    {
+      "card": "P1: Transcend Fund - Shanti Bergel",
+      "reason": "P1 priority \u2192 Daily Queue",
+      "to": "699d309c1870f04a4b401759"
+    },
+    {
+      "card": "Outreach asset inventory",
+      "reason": "P1 priority \u2192 Daily Queue",
+      "to": "699d309c1870f04a4b401759"
+    },
+    {
+      "card": "Define ICP + success metrics",
+      "reason": "P1 fast-track \u2192 Approved/Send",
+      "to": "699d27651350afa8f2b8ec25"
+    },
+    {
+      "card": "Investor packet template",
+      "reason": "P1 fast-track \u2192 Approved/Send",
+      "to": "699d27651350afa8f2b8ec25"
+    },
+    {
+      "card": "Packet: Mechanism Capital",
+      "reason": "P1 fast-track \u2192 Approved/Send",
+      "to": "699d27651350afa8f2b8ec25"
+    },
+    {
+      "card": "Define ICP + success metrics",
+      "reason": "Starting send execution",
+      "to": "699d345f2437461523243d65"
+    },
+    {
+      "card": "Sending SOP + audit trail",
+      "reason": "Starting send execution",
+      "to": "699d345f2437461523243d65"
+    }
+  ],
+  "errors": [],
+  "timestamp": "2026-03-02T08:55:00Z"
+}

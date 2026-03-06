@@ -1,0 +1,65 @@
+================================================================================
+EMAIL PACKET: D5 - Hiro Capital
+================================================================================
+
+TO: luke@hiro.capital
+CC: 
+BCC: 
+
+SUBJECT: AI sourcing engine for gaming/AI funds — 4 partner meetings/week
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Luke,
+
+Hiro Capital's focus on Games, Esports and Digital Sports at the Series A/B stage is unique in Europe. Your track record with the initial $110M fund speaks for itself.
+
+We run an AI-assisted sourcing engine that scores 200+ gaming, AI, and devtools funds daily, assembles five investor packets every morning, and logs approvals + meetings directly in Slack and Trello. Partners can green-light sends in under four hours.
+
+The loop is already booking four partner meetings per week and compounds as more funds are ingested.
+
+We focus on Seed-Series B ($500K-$10M checks), which fits Hiro Capital's post-seed Series A/B target.
+
+Worth a 15-minute call to see if there's a fit?
+
+[Calendly link - 30 min partner intro]
+
+Best,
+Lucas Fulks
+[Your title]
+[Company name]
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- deliverables/outreach_assets/pitch_deck/latest.pdf
+- deliverables/outreach_assets/kpi_snapshot/2026-02-24-kpis.csv
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: D5
+Fund: Hiro Capital
+Contact: Luke Alvarez
+Title: Founding Managing Partner
+Email: luke@hiro.capital
+Check Size: $1M-$10M USD (Series A/B typical)
+Stage Focus: Series A, Series B
+Priority Score: 74.0 (Rank #5)
+Best Send Time: Tuesday-Thursday, 9-11am GMT
+Follow-up Day 3: 2026-03-01
+Follow-up Day 7: 2026-03-05
+
+--------------------------------------------------------------------------------
+NOTES
+--------------------------------------------------------------------------------
+- Hook angle: European Series A/B gaming/esports specialist
+- Thesis fit: Strong - games, esports, digital sports
+- Check-size overlap: Good - Series A/B focus
+- Contact verified via: Hiro Capital website (high confidence)
+- Fund HQ: London/Luxembourg (Europe focus)
+- Notable: Co-founded by Sir Ian Livingstone (Games Workshop legend)
+
+================================================================================

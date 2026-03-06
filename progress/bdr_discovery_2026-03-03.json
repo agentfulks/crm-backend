@@ -1,0 +1,1427 @@
+{
+  "date": "2026-03-03",
+  "total_studios": 83,
+  "studios": [
+    {
+      "name": "Voodoo",
+      "location": "Paris, France",
+      "employees": "200-500",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Alexandre Yazdi",
+        "title": "CEO & Co-Founder",
+        "email": "alexandre.yazdi@voodoo.io"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer sales cycle; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-driven content generation for hyper-casual development. Voodoo's $1B revenue target for 2026 creates urgency for scalable solutions. \u20ac175M financing secured in 2025."
+    },
+    {
+      "name": "Homa Games",
+      "location": "Paris, France",
+      "employees": "51-200",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Daniel Nathan",
+        "title": "Founder & CEO",
+        "email": "daniel.nathan@homagames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "Homa's aggressive M&A and $165M funding creates need for scalable AI infrastructure to onboard multiple studios efficiently. Homa Lab platform integration opportunity."
+    },
+    {
+      "name": "SayGames",
+      "location": "Limassol, Cyprus / Warsaw, Poland",
+      "employees": "200-10000",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Yegor Vaikhanski",
+        "title": "CEO & Co-Founder",
+        "email": "y.vaikhanski@saygames.by"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P2",
+      "priority_reason": "Enterprise size, complex sales; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "SayGames' massive scale (7B downloads, 200+ employees) requires AI automation for content production at scale. $10M developer program active."
+    },
+    {
+      "name": "Supersonic Studios (Unity)",
+      "location": "Tel Aviv, Israel / San Francisco",
+      "employees": "51-200",
+      "downloads": 0,
+      "contact": {
+        "name": "Nadav Ashkenazy",
+        "title": "CEO",
+        "email": "nadav.ashkenazy@supersonic.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P3",
+      "priority_reason": "Larger org, longer sales cycle",
+      "base_tier": "Tier-1",
+      "outreach_angle": "Unity + AI integration for rapid hyper-casual development - AI infrastructure that lives natively in Unity workflows. White-box approach perfect for AI tools."
+    },
+    {
+      "name": "Rollic (Zynga)",
+      "location": "Istanbul, Turkey",
+      "employees": "0",
+      "downloads": 250000000,
+      "contact": {
+        "name": "Burak Vardal",
+        "title": "Co-Founder & CEO",
+        "email": "burak.vardal@rollicgames.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees)",
+      "priority": "P3",
+      "priority_reason": "Default tier",
+      "base_tier": "Tier-1",
+      "outreach_angle": "Live ops automation - Rollic's Zynga backing means enterprise-grade live ops perfect for AI automation. 8 #1/#2 US App Store hits."
+    },
+    {
+      "name": "Kwalee",
+      "location": "Leamington Spa, UK",
+      "employees": "358",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "David Darling",
+        "title": "Founder & CEO",
+        "email": "d.darling@kwalee.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer sales cycle; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for cross-platform game development pipeline - Kwalee's expansion into PC/console creates opportunity for AI tools that work across platforms. Devolver Digital investment (July 2024)."
+    },
+    {
+      "name": "CrazyLabs",
+      "location": "Tel Aviv, Israel",
+      "employees": "0",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Sagi Schliesser",
+        "title": "CEO & Founder",
+        "email": "sagi@crazylabs.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees)",
+      "priority": "P2",
+      "priority_reason": "Default tier; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for ASMR/satisfying game content generation - CrazyLabs' strength in satisfying/ASMR content (Acrylic Nails, Soap Cutting, Tie Dye) is perfect for AI-generated variations."
+    },
+    {
+      "name": "Lion Studios (AppLovin)",
+      "location": "San Francisco, Berlin, Shanghai",
+      "employees": "0",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Gilberto Marcal",
+        "title": "CEO",
+        "email": "gilberto.marcal@lionstudios.cc"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees)",
+      "priority": "P2",
+      "priority_reason": "Default tier; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-driven UA optimization and creative generation - Lion Studios' UA expertise aligns with AI-generated creative variants for ad testing."
+    },
+    {
+      "name": "Boombit",
+      "location": "Gdansk, Poland",
+      "employees": "200-10000",
+      "downloads": 0,
+      "contact": {
+        "name": "Marcin Olejarz",
+        "title": "Co-CEO & Co-Founder",
+        "email": "marcin.olejarz@boombit.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P4",
+      "priority_reason": "Enterprise size, complex sales",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for midcore game economy balancing - Boombit's midcore focus (Hunting Clash, Fishing Clash, Dino Bash) creates opportunity for AI-powered economy tuning."
+    },
+    {
+      "name": "Amanotes",
+      "location": "Vietnam / Global",
+      "employees": "0",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Bill Vo",
+        "title": "CEO & Co-founder",
+        "email": "bill@amanotes.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees)",
+      "priority": "P2",
+      "priority_reason": "Default tier; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for procedural music generation and dynamic gameplay - unique angle for AI-generated music that adapts to gameplay in real-time. Invested in Reactional Music (7-figure, May 2023)."
+    },
+    {
+      "name": "Scopely",
+      "location": "Los Angeles (HQ), Barcelona, Seoul, Tokyo, Dublin",
+      "employees": "0",
+      "downloads": 0,
+      "contact": {
+        "name": "Bobby Loya",
+        "title": "SVP, Head of Studios BD",
+        "email": "bobby.loya@scopely.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees); Low downloads and small team",
+      "priority": "P3",
+      "priority_reason": "Default tier",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-driven personalization - Scopely's match-3 games have deep economies. AI personalization for difficulty curves and offers could boost retention. Now #1 mobile games company in US."
+    },
+    {
+      "name": "Gismart",
+      "location": "London, UK",
+      "employees": "100-250",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Dmitri Lipnitsky",
+        "title": "CEO & Co-Founder",
+        "email": "dmitri.lipnitsky@gismart.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer sales cycle; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI content generation for rapid prototyping - Gismart's high release velocity (Cool Goal 50M+, Fat 2 Fit 100M+) could benefit from AI-powered level design."
+    },
+    {
+      "name": "TapNation",
+      "location": "Paris, France",
+      "employees": "50-200",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Herv\u00e9 Montoute",
+        "title": "Co-Founder & CEO",
+        "email": "herve.montoute@tap-nation.io"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-powered player segmentation - TapNation acquired UA Hero (Jan 2024) to utilize AI in user acquisition. Expand to AI-driven player segmentation for better monetization."
+    },
+    {
+      "name": "Supercent",
+      "location": "Seoul, South Korea",
+      "employees": "50-200",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Junsik Kong",
+        "title": "CEO & Founder",
+        "email": "junsik.kong@supercent.io"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-powered live ops automation - Supercent won 'AI Innovation Pioneer' award at Google Apps Summit (Nov 2025). Idle arcade hits like Burger Please! need constant content updates."
+    },
+    {
+      "name": "MAG Interactive",
+      "location": "Stockholm, Sweden",
+      "employees": "50-200",
+      "downloads": 300000000,
+      "contact": {
+        "name": "Daniel Hasselberg",
+        "title": "CEO & Co-Founder",
+        "email": "daniel.hasselberg@maginteractive.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-generated puzzle content - MAG's word games (Ruzzle 60M+, QuizDuel 50M+) need fresh content daily. AI can generate puzzles, trivia questions, and word packs at scale."
+    },
+    {
+      "name": "Moonee",
+      "location": "Tel Aviv, Israel",
+      "employees": "50-200",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Erez Mishli",
+        "title": "Co-Founder & Co-CEO",
+        "email": "erez@moonee.io"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-powered creative optimization - Moonee's publishing model relies on rapid creative testing. AI can generate ad creatives and ASO assets at scale."
+    },
+    {
+      "name": "Playrix",
+      "location": "Dublin, Ireland",
+      "employees": "3000-6000",
+      "downloads": 0,
+      "contact": {
+        "name": "Dmitri Bukhman",
+        "title": "Co-Founder & CEO",
+        "email": "dmitri.bukhman@playrix.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Enterprise size; Tier-1 base classification",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-driven personalization - Playrix's match-3 games (Gardenscapes, Homescapes, Fishdom) have deep economies. AI personalization for difficulty curves and offers could boost retention."
+    },
+    {
+      "name": "Ketchapp (Ubisoft)",
+      "location": "Paris, France",
+      "employees": "51-200",
+      "downloads": 0,
+      "contact": {
+        "name": "Michel Morcos",
+        "title": "CEO & Co-Founder",
+        "email": "michel.morcos@ketchapp.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-powered content generation for hyper-casual hits. Hits like 2048 and Stack demonstrate the need for rapid prototyping and AI-assisted hit identification."
+    },
+    {
+      "name": "Gram Games",
+      "location": "Istanbul, Turkey / London, UK",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Mehmet Ecevit",
+        "title": "CEO & Co-Founder",
+        "email": "mehmet.ecevit@gramgames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-powered puzzle generation and content scaling. Active on LinkedIn recruiting for London team - open to partnerships."
+    },
+    {
+      "name": "Belka Games",
+      "location": "Vilnius, Lithuania / Cyprus",
+      "employees": "235-470",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Ivan Gorchakov",
+        "title": "CEO",
+        "email": "ivan.gorchakov@belkagames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer cycle; Tier-1 base classification",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-powered card game content and live ops. New CEO appointment (Oct 2024) creates opportunity for fresh partnerships with data-driven approach."
+    },
+    {
+      "name": "Alictus (SciPlay)",
+      "location": "Ankara, Turkey",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Emre Tas",
+        "title": "CEO & Co-Founder",
+        "email": "emre@alictus.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-powered prototyping at scale - Alictus had 3 #1 App Store hits in 6 months. AI content generation can accelerate their rapid prototyping methodology."
+    },
+    {
+      "name": "Ruby Games (Rovio)",
+      "location": "Izmir, Turkey",
+      "employees": "50-200",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Mert Can Kurum",
+        "title": "Founder & CEO",
+        "email": "mert@rubygames.io"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI level generation for puzzle games - Ruby's puzzle hits (Hunter Assassin 100M+, Water Sort Puzzle 50M+) need thousands of levels. AI can generate and validate level difficulty automatically."
+    },
+    {
+      "name": "N3TWORK Studios",
+      "location": "San Francisco, CA (Remote)",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Neil Young",
+        "title": "Founder & CEO",
+        "email": "neil@n3twork.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Standard priority; Tier-1 base classification",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for blockchain gaming content generation and live ops. Industry veteran (EA, ngmoco) rethinking how games are built, operated, and financed."
+    },
+    {
+      "name": "Tripledot Studios",
+      "location": "London, UK",
+      "employees": "200-400",
+      "downloads": 0,
+      "contact": {
+        "name": "Lior Shiff",
+        "title": "Co-Founder & CEO",
+        "email": "lior.shiff@tripledotstudios.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer cycle; Tier-1 base classification",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-powered card game features and personalization. Military intelligence background suggests data-driven approach. Stanford MBA."
+    },
+    {
+      "name": "PeopleFun",
+      "location": "Dallas, TX",
+      "employees": "100-200",
+      "downloads": 0,
+      "contact": {
+        "name": "John Lee",
+        "title": "CEO",
+        "email": "john.lee@peoplefun.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer cycle; Tier-1 base classification",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-generated word game content and puzzle generation. Engineering and data background. Featured in Dallas 500 most influential business leaders."
+    },
+    {
+      "name": "iKame Games (Zego Studio)",
+      "location": "Hanoi, Vietnam",
+      "employees": "200-500",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Quyet Nguyen (Nguyen Manh Quyet)",
+        "title": "CEO & Founder",
+        "email": "quyet.nguyen@ikame.vn"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer cycle; Tier-1 base classification",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI content for racing games - iKame's portfolio (Car Race 100M+, Moto Rider 50M+) needs constant track/level variety. Procedural AI generation can scale content infinitely."
+    },
+    {
+      "name": "Bravestars Games",
+      "location": "Hanoi, Vietnam",
+      "employees": "100-200",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Le Manh Duc",
+        "title": "CEO",
+        "email": "duc.lm@bravestars.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-powered simulation content - Bravestars' simulation games (Hair Salon 100M+, Prison Empire Tycoon 50M+) need diverse assets and scenarios. New CEO appointment (Sept 2025) creates opportunity."
+    },
+    {
+      "name": "Wildlife Studios",
+      "location": "S\u00e3o Paulo, Brazil / San Mateo, CA",
+      "employees": "200-500",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Victor Lazarte",
+        "title": "Co-Founder & CEO",
+        "email": "victor.lazarte@wildlifestudios.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer cycle; Tier-1 base classification",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for multiplayer game content and live ops. Recent leadership transitions (April 2025) create opportunity for new partnerships."
+    },
+    {
+      "name": "Nexters (GDEV)",
+      "location": "Limassol, Cyprus",
+      "employees": "501-1002",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Anton Reinhold",
+        "title": "CEO (Nexters) & COO (GDEV)",
+        "email": "anton.reinhold@nexters.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Enterprise size; Tier-1 base classification",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for performance marketing and player retention in RPGs. Leading public company through industry challenges. Making performance marketing key to success."
+    },
+    {
+      "name": "Fingersoft",
+      "location": "Oulu, Finland",
+      "employees": "51-200",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Teemu N\u00e4rhi",
+        "title": "CEO",
+        "email": "teemu.narhi@fingersoft.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for racing game content generation and physics-based gameplay. Recently returned CEO (Jan 2025) creates opportunity for fresh partnerships. Hill Climb Racing franchise."
+    },
+    {
+      "name": "Babil Games",
+      "location": "Dubai, UAE / Amman, Jordan",
+      "employees": "51-200",
+      "downloads": 0,
+      "contact": {
+        "name": "MJ Fahmi",
+        "title": "CEO",
+        "email": "mj.fahmi@babilgames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for MENA-specific game content and localization. Unique regional opportunity in Middle East gaming market."
+    },
+    {
+      "name": "Wixel Studios",
+      "location": "Kaslik, Lebanon",
+      "employees": "10-20",
+      "downloads": 0,
+      "contact": {
+        "name": "Ziad Feghali",
+        "title": "CEO",
+        "email": "ziad@wixelstudios.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Low signal",
+      "priority": "P2",
+      "priority_reason": "Standard priority; Tier-1 base classification",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI tools for indie studio efficiency. Small accessible indie studio in Lebanon - affordable AI tools can significantly boost their output."
+    },
+    {
+      "name": "Innersloth",
+      "location": "Redmond, WA, USA",
+      "employees": "11-50",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Forest Willard",
+        "title": "CEO & Co-Founder",
+        "email": "forest@innersloth.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for indie live ops automation - small team managing massive game (Among Us). AI can help with content generation and community management at scale."
+    },
+    {
+      "name": "Space Ape Games",
+      "location": "London, UK",
+      "employees": "51-200",
+      "downloads": 100000000,
+      "contact": {
+        "name": "John Earner",
+        "title": "CEO & Co-Founder",
+        "email": "john.earner@spaceapegames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for music game content and rhythm game generation. Former EA executive. Transformers: Earth Wars and Beatstar development creates AI opportunities."
+    },
+    {
+      "name": "Green Panda Games",
+      "location": "Paris, France",
+      "employees": "51-200",
+      "downloads": 300000000,
+      "contact": {
+        "name": "Guillaume Sztejnberg",
+        "title": "CEO & Founder",
+        "email": "guillaume@greenpandagames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for idle game content and automation. Portfolio includes Bee Factory and Prison Empire - perfect for AI-generated idle game scenarios."
+    },
+    {
+      "name": "Colossi Games",
+      "location": "Limassol, Cyprus",
+      "employees": "11-50",
+      "downloads": 0,
+      "contact": {
+        "name": "Manuel Prueter",
+        "title": "CEO & Co-Founder",
+        "email": "manuel.prueter@colossi.games"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for RPG content generation. Growing Cyprus-based studio with accessible size for partnerships."
+    },
+    {
+      "name": "Dual Cat",
+      "location": "Paris, France",
+      "employees": "11-50",
+      "downloads": 0,
+      "contact": {
+        "name": "Mikael Le Goff",
+        "title": "CEO & Founder",
+        "email": "mikael@dual-cat.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for hyper-casual prototyping. Small accessible team in Paris gaming hub - perfect for AI tool adoption."
+    },
+    {
+      "name": "Flaregames",
+      "location": "Karlsruhe, Germany",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Klaas Kersting",
+        "title": "CEO",
+        "email": "klaas.kersting@flaregames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for strategy game content. German mobile game industry veteran with accessible European studio."
+    },
+    {
+      "name": "Tactile Games",
+      "location": "Copenhagen, Denmark",
+      "employees": "100-200",
+      "downloads": 200000000,
+      "contact": {
+        "name": "Asbjoern Malte Soendergaard",
+        "title": "CEO & Founder",
+        "email": "asbjoern@tactilegames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for merge game content and puzzle generation. Lily's Garden success creates opportunity for AI-powered content scaling."
+    },
+    {
+      "name": "Metacore Games",
+      "location": "Helsinki, Finland",
+      "employees": "51-200",
+      "downloads": 100000000,
+      "contact": {
+        "name": "Mika Tammenkoski",
+        "title": "CEO & Co-Founder",
+        "email": "mika.tammenkoski@metacoregames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for merge game content generation and mystery storytelling. 25+ year gaming veteran. Finnish gaming scene leader."
+    },
+    {
+      "name": "Second Dinner",
+      "location": "Irvine, CA, USA",
+      "employees": "51-200",
+      "downloads": 50000000,
+      "contact": {
+        "name": "Hamilton Chu",
+        "title": "CEO & Co-Founder",
+        "email": "hamilton@seconddinner.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for card game content and meta balancing. 10 years at Blizzard (Hearthstone Senior Producer). Perfect for AI-assisted card design."
+    },
+    {
+      "name": "Superplay",
+      "location": "Tel Aviv, Israel",
+      "employees": "51-200",
+      "downloads": 100000000,
+      "contact": {
+        "name": "Elad Drory",
+        "title": "CEO",
+        "email": "elad.drory@superplay.co"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for puzzle game content generation. Tel Aviv gaming hub with strong puzzle portfolio."
+    },
+    {
+      "name": "East Side Games",
+      "location": "Vancouver, Canada",
+      "employees": "51-200",
+      "downloads": 100000000,
+      "contact": {
+        "name": "Jason Bailey",
+        "title": "CEO & Co-Founder",
+        "email": "jason.bailey@eastsidegames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for idle game narrative content. Trailer Park Boys and licensed IP games create opportunity for AI-generated narrative variations."
+    },
+    {
+      "name": "Pocket Gems",
+      "location": "San Francisco, CA",
+      "employees": "201-500",
+      "downloads": 200000000,
+      "contact": {
+        "name": "Ben Liu",
+        "title": "CEO",
+        "email": "ben.liu@pocketgems.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P3",
+      "priority_reason": "Larger org, longer cycle",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for interactive story generation and Episode content. Story platform perfect for AI-generated narrative branching."
+    },
+    {
+      "name": "ZPLAY Games",
+      "location": "Beijing, China",
+      "employees": "100-200",
+      "downloads": 500000000,
+      "contact": {
+        "name": "He Peng (Jack Ho)",
+        "title": "Founder & CEO",
+        "email": "he.peng@zplay.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for hyper-casual content at scale. Chinese publisher with global reach - opportunity for AI-powered content localization."
+    },
+    {
+      "name": "Playgendary",
+      "location": "Limassol, Cyprus",
+      "employees": "51-200",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Dmitriy Shelengovskiy",
+        "title": "Founder & CEO",
+        "email": "dmitriy@playgendary.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for action game content generation. Cyprus-based publisher with global reach."
+    },
+    {
+      "name": "JoyPac",
+      "location": "Berlin, Germany / Beijing, China",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Mark Zhou",
+        "title": "CEO",
+        "email": "mark.zhou@joypac.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for hyper-casual publishing at scale. Dual-region publisher (Europe + Asia) creates unique localization opportunities."
+    },
+    {
+      "name": "Tilting Point",
+      "location": "New York, NY",
+      "employees": "200-400",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Kevin Segalla",
+        "title": "CEO & Founder",
+        "email": "kevin@tiltingpoint.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P3",
+      "priority_reason": "Larger org, longer cycle",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for UA optimization and creative generation. Major mobile publisher and UA platform - perfect for AI creative tools."
+    },
+    {
+      "name": "Fundamentally Games",
+      "location": "UK / US",
+      "employees": "10-20",
+      "downloads": 0,
+      "contact": {
+        "name": "Oscar Clark",
+        "title": "CEO",
+        "email": "oscar@fundamentally.games"
+      },
+      "qualified": false,
+      "qualification_notes": "Low signal",
+      "priority": "P3",
+      "priority_reason": "Standard priority",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI tools for indie publishing. Industry veteran focused on indie publishing - perfect for affordable AI solutions for indies."
+    },
+    {
+      "name": "Gamejam",
+      "location": "San Francisco, CA",
+      "employees": "20-50",
+      "downloads": 0,
+      "contact": {
+        "name": "Christian Calderon",
+        "title": "CEO & Founder",
+        "email": "christian@gamejam.co"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for hyper-casual prototyping. SF-based publisher with developer network - opportunity for AI-powered rapid development."
+    },
+    {
+      "name": "Blue Wizard Digital",
+      "location": "Canada / US",
+      "employees": "20-50",
+      "downloads": 100000000,
+      "contact": {
+        "name": "Jason Kapalka",
+        "title": "CEO & Founder",
+        "email": "jason@bluewizard.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for puzzle game content generation. Co-founder of PopCap Games (Bejeweled, Peggle) - industry legend with deep puzzle expertise."
+    },
+    {
+      "name": "Firefly Games",
+      "location": "Los Angeles, CA",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Michael Zhang",
+        "title": "CEO",
+        "email": "michael.zhang@fireflygames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for RPG content and live ops. LA-based studio with RPG portfolio - opportunity for AI-powered content scaling."
+    },
+    {
+      "name": "Redemption Games",
+      "location": "San Francisco, CA",
+      "employees": "20-50",
+      "downloads": 0,
+      "contact": {
+        "name": "Daniel Lin",
+        "title": "CEO",
+        "email": "daniel.lin@redemptiongames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for puzzle game content. SF-based puzzle specialist - perfect for AI-powered puzzle generation."
+    },
+    {
+      "name": "A Thinking Ape",
+      "location": "Vancouver, Canada",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Wilkins Chung",
+        "title": "CEO & Co-Founder",
+        "email": "wilkins@athinkingape.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P3",
+      "priority_reason": "Standard priority",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for strategy game content. Vancouver-based studio with strategy and social casino portfolio."
+    },
+    {
+      "name": "Neon Play",
+      "location": "Cirencester, UK",
+      "employees": "10-20",
+      "downloads": 100000000,
+      "contact": {
+        "name": "Oli Christie",
+        "title": "CEO & Founder",
+        "email": "oli@neonplay.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Growth trajectory with hits",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for hyper-casual content. UK-based indie with 100M+ downloads - accessible founder."
+    },
+    {
+      "name": "Outfit7",
+      "location": "Ljubljana, Slovenia",
+      "employees": "200-400",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Xinyu Qian",
+        "title": "CEO",
+        "email": "xinyu.qian@outfit7.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer cycle; Massive scale (1B+)",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for family-friendly content. 15B+ download franchise needs constant content updates - AI can help scale safely."
+    },
+    {
+      "name": "Kokonut Studio / Kokonut Games",
+      "location": "Mexico City, Mexico",
+      "employees": "10-20",
+      "downloads": 0,
+      "contact": {
+        "name": "Gabriel Medina",
+        "title": "CEO & Co-Founder",
+        "email": "gabriel@kokonut.games"
+      },
+      "qualified": false,
+      "qualification_notes": "Low signal",
+      "priority": "P3",
+      "priority_reason": "Standard priority",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for hyper-casual development. Latin American game development leader - opportunity for regional expansion."
+    },
+    {
+      "name": "Magma Mobile",
+      "location": "France",
+      "employees": "10-20",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Nicolas Sorel",
+        "title": "CEO & Founder",
+        "email": "nicolas@magmamobile.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Growth trajectory with hits",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for casual game content. French indie developer with 500M+ downloads - accessible for AI tools."
+    },
+    {
+      "name": "GameRefinery",
+      "location": "Helsinki, Finland",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Markus R\u00e5mark",
+        "title": "CEO",
+        "email": "markus.ramark@gamerefinery.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI + analytics integration. Mobile game analytics leader - opportunity for AI-powered game analysis features."
+    },
+    {
+      "name": "Coda Games",
+      "location": "Cyprus / China",
+      "employees": "20-50",
+      "downloads": 0,
+      "contact": {
+        "name": "Raviv Blechner",
+        "title": "CEO",
+        "email": "raviv@codagames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P3",
+      "priority_reason": "Standard priority",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for hyper-casual publishing. Cyprus-based publisher with China connection - unique positioning."
+    },
+    {
+      "name": "Aka Games",
+      "location": "Singapore",
+      "employees": "10-20",
+      "downloads": 0,
+      "contact": {
+        "name": "Tzu-Yin Cheng",
+        "title": "CEO",
+        "email": "tzuyin.cheng@akagames.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Low signal",
+      "priority": "P3",
+      "priority_reason": "Standard priority",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for SE Asia content. Singapore-based publisher - opportunity for regional content adaptation with AI."
+    },
+    {
+      "name": "Yodo1",
+      "location": "Beijing, China",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Henry Fong",
+        "title": "Co-CEO",
+        "email": "henry@yodo1.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for monetization optimization. Mobile publishing veteran with monetization platform focus."
+    },
+    {
+      "name": "Potato Play",
+      "location": "Singapore",
+      "employees": "20-50",
+      "downloads": 0,
+      "contact": {
+        "name": "Vincent Low",
+        "title": "CEO",
+        "email": "vincent@potatoplay.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-2",
+      "outreach_angle": "AI for strategy game content. SE Asia strategy game publisher - opportunity for AI-powered content generation."
+    },
+    {
+      "name": "Carry1st",
+      "location": "New York, NY / Cape Town, South Africa",
+      "employees": "51-200",
+      "downloads": 0,
+      "contact": {
+        "name": "Cordel Robbin-Coker",
+        "title": "CEO & Co-Founder",
+        "email": "cordel@carry1st.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for African market content localization. Raised $55M for African expansion. Goldman Sachs alum pioneering African mobile gaming."
+    },
+    {
+      "name": "GamePoint",
+      "location": "The Hague, Netherlands",
+      "employees": "50-100",
+      "downloads": 100000000,
+      "contact": {
+        "name": "Daniel Kruidhof",
+        "title": "CEO",
+        "email": "daniel.kruidhof@gamepoint.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for social casino content generation. Dutch social casino leader with established player base."
+    },
+    {
+      "name": "Unico Studio",
+      "location": "Tel Aviv, Israel",
+      "employees": "20-50",
+      "downloads": 100000000,
+      "contact": {
+        "name": "David Fox",
+        "title": "CEO & Founder",
+        "email": "david@unicostudio.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for puzzle and word game generation. Israeli puzzle specialist with 100M+ downloads."
+    },
+    {
+      "name": "Rovio Entertainment",
+      "location": "Espoo, Finland",
+      "employees": "201-500",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Alexandre Pelletier",
+        "title": "CEO",
+        "email": "alexandre.pelletier@rovio.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer cycle; Massive scale (1B+)",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for Angry Birds franchise content and new IP development. 5B+ downloads, major mobile brand."
+    },
+    {
+      "name": "Netmarble",
+      "location": "Seoul, South Korea",
+      "employees": "3000-6000",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Kwon Young-sik",
+        "title": "CEO",
+        "email": "kwon.youngsik@netmarble.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Enterprise size; Massive scale (1B+)",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for IP-based mobile games (Marvel, Star Wars). Korean gaming giant with massive scale."
+    },
+    {
+      "name": "Com2uS",
+      "location": "Seoul, South Korea",
+      "employees": "501-1002",
+      "downloads": 500000000,
+      "contact": {
+        "name": "James Song",
+        "title": "CEO",
+        "email": "james.song@com2us.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P4",
+      "priority_reason": "Enterprise size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for Summoners War franchise content and RPG automation. Korean gaming leader."
+    },
+    {
+      "name": "Bandai Namco Mobile",
+      "location": "Barcelona, Spain",
+      "employees": "100-200",
+      "downloads": 0,
+      "contact": {
+        "name": "Alberto Gonzalez",
+        "title": "CEO",
+        "email": "alberto.gonzalez@bandainamco.eu"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for IP-based mobile games (Pac-Man, Dragon Ball). Major IP publisher needs content automation."
+    },
+    {
+      "name": "Behaviour Interactive",
+      "location": "Montreal, Canada",
+      "employees": "500-1000",
+      "downloads": 100000000,
+      "contact": {
+        "name": "R\u00e9mi Racine",
+        "title": "CEO",
+        "email": "remi.racine@behaviour.net"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P4",
+      "priority_reason": "Enterprise size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for asymmetrical horror games and multiplayer content. Dead by Daylight creator."
+    },
+    {
+      "name": "Gameloft",
+      "location": "Paris, France",
+      "employees": "1000-2000",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "St\u00e9phane Roussel",
+        "title": "CEO",
+        "email": "stephane.roussel@gameloft.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P2",
+      "priority_reason": "Enterprise size; Massive scale (1B+)",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for mobile game content at scale (Disney, DreamWorks IP). Major publisher under Vivendi."
+    },
+    {
+      "name": "Aristocrat Digital",
+      "location": "Sydney, Australia",
+      "employees": "200-400",
+      "downloads": 0,
+      "contact": {
+        "name": "Michele Cash",
+        "title": "CEO",
+        "email": "michele.cash@aristocrat.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P3",
+      "priority_reason": "Larger org, longer cycle",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for social casino content. Heart of Vegas operator under Aristocrat."
+    },
+    {
+      "name": "Huuuge Games",
+      "location": "Warsaw, Poland",
+      "employees": "200-400",
+      "downloads": 100000000,
+      "contact": {
+        "name": "Anton Gauffin",
+        "title": "CEO & Founder",
+        "email": "anton.gauffin@huuugegames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P3",
+      "priority_reason": "Larger org, longer cycle",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for social casino content. Public company led by Finnish-Polish entrepreneur."
+    },
+    {
+      "name": "DoubleU Games",
+      "location": "Seoul, South Korea",
+      "employees": "100-200",
+      "downloads": 100000000,
+      "contact": {
+        "name": "Kim Seung-ho",
+        "title": "CEO",
+        "email": "kim.seungho@doubleugames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for social casino content. Korean public company, DoubleU Casino operator."
+    },
+    {
+      "name": "Product Madness",
+      "location": "London, UK",
+      "employees": "200-400",
+      "downloads": 100000000,
+      "contact": {
+        "name": "Nir Elbaz",
+        "title": "CEO",
+        "email": "nir.elbaz@productmadness.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P3",
+      "priority_reason": "Larger org, longer cycle",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for social casino content. Cashman Casino and Heart of Vegas operator."
+    },
+    {
+      "name": "Murka Games",
+      "location": "Limassol, Cyprus",
+      "employees": "200-400",
+      "downloads": 50000000,
+      "contact": {
+        "name": "Max Tseytnin",
+        "title": "CEO & Founder",
+        "email": "max.tseytnin@murka.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P3",
+      "priority_reason": "Larger org, longer cycle",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for social slots content. Cyprus-based social slots publisher."
+    },
+    {
+      "name": "AppLovin",
+      "location": "Palo Alto, CA",
+      "employees": "1000-2000",
+      "downloads": 0,
+      "contact": {
+        "name": "Adam Foroughi",
+        "title": "CEO & Co-Founder",
+        "email": "adam@applovin.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P4",
+      "priority_reason": "Enterprise size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI integration with AppLovin platform and AXON 2.0. Mobile advertising giant."
+    },
+    {
+      "name": "Adikteev",
+      "location": "Paris, France",
+      "employees": "50-100",
+      "downloads": 0,
+      "contact": {
+        "name": "Xavier Mariani",
+        "title": "CEO",
+        "email": "xavier.mariani@adikteev.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI + churn prediction integration. French mobile marketing leader."
+    },
+    {
+      "name": "Swrve",
+      "location": "San Francisco, CA / Dublin, Ireland",
+      "employees": "100-200",
+      "downloads": 0,
+      "contact": {
+        "name": "Tom Farrell",
+        "title": "CEO",
+        "email": "tom.farrell@swrve.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for marketing automation. Mobile marketing platform for games."
+    },
+    {
+      "name": "Braze",
+      "location": "New York, NY",
+      "employees": "1000-2000",
+      "downloads": 0,
+      "contact": {
+        "name": "Bill Magnuson",
+        "title": "CEO & Co-Founder",
+        "email": "bill.magnuson@braze.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P4",
+      "priority_reason": "Enterprise size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for customer engagement. Public company, engagement platform for gaming."
+    },
+    {
+      "name": "Sensor Tower",
+      "location": "San Francisco, CA",
+      "employees": "200-400",
+      "downloads": 0,
+      "contact": {
+        "name": "Oliver Yeh",
+        "title": "CEO & Co-Founder",
+        "email": "oliver.yeh@sensortower.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P3",
+      "priority_reason": "Larger org, longer cycle",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for market intelligence. Mobile analytics leader for gaming."
+    },
+    {
+      "name": "data.ai",
+      "location": "San Francisco, CA",
+      "employees": "500-1000",
+      "downloads": 0,
+      "contact": {
+        "name": "Krishna Subramanian",
+        "title": "CEO",
+        "email": "krishna.subramanian@data.ai"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP",
+      "priority": "P4",
+      "priority_reason": "Enterprise size",
+      "base_tier": "Tier-3",
+      "outreach_angle": "AI for unified analytics. Formerly App Annie, mobile analytics giant."
+    }
+  ],
+  "summary": {
+    "by_priority": {
+      "P2": 22,
+      "P0": 40,
+      "P3": 15,
+      "P4": 6
+    },
+    "qualified": 74,
+    "disqualified": 9
+  }
+}

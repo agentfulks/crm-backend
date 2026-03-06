@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Investor Packet Card Template",
+  "description": "Template specification for Trello cards created from CRM investor entries",
+  "version": "1.0.0",
+  "card_template": {
+    "name": {
+      "format": "Investor Packet: {investor_name}",
+      "max_length": 256,
+      "required": true,
+      "description": "Card title following 'Investor Packet: [Name]' format"
+    },
+    "description": {
+      "format": "markdown",
+      "template": "## Investor Information\n\n**Name:** {name}\n**Firm:** {firm}\n**Title:** {title}\n**Score:** {score}/100\n\n## Contact Details\n\n- **Email:** {email}\n- **Phone:** {phone}\n- **LinkedIn:** {linkedin_url}\n\n## Investment Focus\n\n{investment_focus}\n\n## Source\n\nCRM Entry ID: {crm_entry_id}\nCreated from Daily Intake Automation\n",
+      "required": true,
+      "description": "Markdown description with investor details"
+    },
+    "labels": {
+      "required": true,
+      "items": [
+        {
+          "name": "Type: Outreach",
+          "color": "blue",
+          "id_ref": "LABEL_TYPE_OUTREACH",
+          "description": "Indicates this is an outreach card"
+        },
+        {
+          "name": "Priority: P1",
+          "color": "red",
+          "id_ref": "LABEL_PRIORITY_P1",
+          "description": "High priority - requires immediate attention"
+        },
+        {
+          "name": "Workstream: Investor",
+          "color": "green",
+          "id_ref": "LABEL_WORKSTREAM_INVESTOR",
+          "description": "Part of investor relations workstream"
+        }
+      ]
+    },
+    "due_date": {
+      "format": "ISO 8601",
+      "calculation": "created_at + 3 business days",
+      "required": false,
+      "description": "Optional due date set to 3 business days from creation"
+    },
+    "checklist": {
+      "name": "Packet Preparation",
+      "items": [
+        "Review investor profile and background",
+        "Prepare pitch deck customization",
+        "Draft personalized outreach message",
+        "Schedule follow-up in calendar",
+        "Mark complete when sent"
+      ]
+    },
+    "position": {
+      "value": "top",
+      "description": "New cards appear at top of list"
+    }
+  },
+  "crm_field_mapping": {
+    "name": "investor_name",
+    "firm": "firm_name",
+    "title": "job_title",
+    "score": "outreach_score",
+    "email": "email_address",
+    "phone": "phone_number",
+    "linkedin_url": "linkedin_profile_url",
+    "investment_focus": "investment_thesis_summary",
+    "crm_entry_id": "id",
+    "created_at": "created_at"
+  },
+  "validation_rules": {
+    "min_score": 0,
+    "max_score": 100,
+    "required_fields": ["name", "firm", "email", "score"],
+    "email_format": "RFC 5322 compliant",
+    "duplicate_detection": {
+      "method": "card name prefix match",
+      "prefix": "Investor Packet: ",
+      "lookup_window": "30 days"
+    }
+  }
+}

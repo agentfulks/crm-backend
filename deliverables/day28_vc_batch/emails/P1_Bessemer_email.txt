@@ -1,0 +1,15 @@
+To: sameer@bvp.com
+Subject: AI infrastructure for the post-ChatGPT developer stack
+
+Hi Sameer,
+
+I've been following Bessemer's State of AI reports and your insights from the SendGrid journey. The shift you're describing — from AI as a feature to AI as infrastructure — is exactly what we're building.
+
+We're creating the infrastructure layer that learns and adapts, not just static APIs. Think of it as the difference between traditional cloud services and AI-native infrastructure that improves with every interaction.
+
+Given your SendGrid experience building developer platforms that scale, I'd value your perspective on our approach. Would you be open to a brief call to explore if there's a fit with Bessemer's AI infrastructure thesis?
+
+Best,
+[Founder Name]
+[Company Name]
+[Phone]

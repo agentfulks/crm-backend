@@ -1,0 +1,238 @@
+{
+  "batch_id": "day19_vc_batch",
+  "batch_date": "2026-02-28",
+  "total_funds": 5,
+  "focus": "Crypto-Native Gaming Infrastructure + AI Intersection",
+  "packets": [
+    {
+      "priority": "P1",
+      "fund_name": "Haun Ventures",
+      "partner_name": "Katie Haun",
+      "partner_title": "Founder & CEO",
+      "email": "katie@haun.co",
+      "fit_score": 95,
+      "fit_breakdown": {
+        "crypto_native_credibility": 20,
+        "gaming_web3_thesis": 19,
+        "institutional_scale": 19,
+        "a16z_coinbase_pedigree": 19,
+        "check_size_alignment": 18
+      },
+      "stage_focus": "Seed to Series A",
+      "check_size_range": "$1M - $10M",
+      "aum": "$1.5B+",
+      "location": "San Francisco, CA",
+      "thesis": "Haun Ventures invests in the next generation of the internet - Web3 companies and crypto-native applications. The firm was designed from the ground up to help founders build internet-native asset classes. Katie Haun previously co-led a16z's three crypto funds and served on Coinbase's board from 2017-2024.",
+      "gaming_ai_alignment": "Haun Ventures explicitly invests at the intersection of crypto, gaming, and digital culture. Their thesis on 'internet-native asset classes' encompasses gaming economies, NFT infrastructure, and Web3 gaming platforms. Katie's experience with Coinbase (first publicly-traded crypto company) provides unmatched regulatory and institutional credibility for gaming projects dealing with tokenized economies.",
+      "hook_angle": "Katie - You helped architect a16z's crypto strategy and stewarded Coinbase through its IPO. Gaming is the Trojan horse for mainstream crypto adoption, and the infrastructure to power on-chain game economies doesn't exist yet. Haun Ventures is positioned to define this category.",
+      "recent_investments": [
+        {
+          "company": "Multiple Web3 gaming infrastructure plays",
+          "round": "Seed/Series A",
+          "date": "2024-2025",
+          "focus": "Crypto gaming platforms"
+        },
+        {
+          "company": "Digital culture platforms",
+          "round": "Various",
+          "date": "2024",
+          "focus": "Internet-native asset classes"
+        },
+        {
+          "company": "DeFi infrastructure",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "Decentralized finance"
+        }
+      ],
+      "notable_portfolio": ["Coinbase (board)", "OpenSea", "NFT infrastructure", "Web3 gaming", "DeFi protocols"],
+      "geographic_focus": "Global (US-based)",
+      "twitter_handle": "@katie_haun",
+      "outreach_notes": "Lead with institutional credibility angle. Reference her Coinbase board experience and a16z crypto pedigree. Haun responds to pitches that acknowledge regulatory complexity of gaming tokens. Emphasize infrastructure over content plays."
+    },
+    {
+      "priority": "P2",
+      "fund_name": "Multicoin Capital",
+      "partner_name": "Tushar Jain",
+      "partner_title": "Co-Founder & Managing Partner",
+      "email": "tushar@multicoin.capital",
+      "fit_score": 92,
+      "fit_breakdown": {
+        "crypto_ai_thesis": 20,
+        "thesis_driven_approach": 19,
+        "token_economics_expertise": 19,
+        "technical_depth": 18,
+        "active_deployment": 16
+      },
+      "stage_focus": "Seed to Series A",
+      "check_size_range": "$2M - $15M",
+      "aum": "$500M+",
+      "location": "Austin, TX",
+      "thesis": "Multicoin Capital is a thesis-driven investment firm that invests in cryptoassets, tokens, and blockchain companies reshaping trillion-dollar markets. They pioneered token economic models and actively invest at the intersection of crypto and AI - specifically horizontal compute marketplaces, trust/identity solutions, and applications.",
+      "gaming_ai_alignment": "Multicoin has an explicit 'A.I. and ML' investment segment focused on the intersection of crypto and AI. They invest in horizontal compute marketplaces and applications that combine decentralized infrastructure with AI. This directly maps to AI-powered gaming infrastructure that requires distributed compute for real-time inference and player behavior modeling.",
+      "hook_angle": "Tushar - Multicoin pioneered DePIN as a category in 2019. AI gaming infrastructure is the next frontier: distributed compute marketplaces for real-time inference, decentralized player identity rails, and tokenized AI agents. Your thesis on crypto x AI convergence is exactly what this category needs.",
+      "recent_investments": [
+        {
+          "company": "AI compute marketplaces",
+          "round": "Seed",
+          "date": "2024",
+          "focus": "Decentralized AI infrastructure"
+        },
+        {
+          "company": "DePIN protocols",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "Decentralized physical infrastructure"
+        },
+        {
+          "company": "Gaming infrastructure",
+          "round": "Seed",
+          "date": "2023-2024",
+          "focus": "Web3 gaming platforms"
+        }
+      ],
+      "notable_portfolio": ["Solana", "Helium", "The Graph", "Livepeer", "Arweave"],
+      "geographic_focus": "Global",
+      "twitter_handle": "@TusharJain_",
+      "outreach_notes": "Lead with thesis alignment on crypto x AI. Reference their pioneering work on DePIN and token economics. Tushar responds to technically deep pitches that demonstrate understanding of distributed systems and cryptoeconomic design."
+    },
+    {
+      "priority": "P3",
+      "fund_name": "Pantera Capital",
+      "partner_name": "Franklin Bi",
+      "partner_title": "Partner",
+      "email": "franklin@panteracapital.com",
+      "fit_score": 90,
+      "fit_breakdown": {
+        "crypto_first_mover": 20,
+        "gaming_portfolio": 18,
+        "institutional_scale": 18,
+        "asia_market_access": 18,
+        "check_size_alignment": 16
+      },
+      "stage_focus": "Seed to Series B",
+      "check_size_range": "$1M - $20M",
+      "aum": "$5B+",
+      "location": "San Francisco, CA / Asia",
+      "thesis": "Pantera launched the first cryptocurrency fund in the U.S. when Bitcoin was at $65 in 2013. The firm focuses exclusively on digital assets and blockchain companies, providing investors with full spectrum exposure to the space. Pantera has deep Asia-Pacific presence and actively invests in gaming, DeFi, and infrastructure.",
+      "gaming_ai_alignment": "Pantera has explicit gaming investments including InfiniGods (Web3 mobile gaming), Helika (on-chain analytics for gaming), and backing of multiple gaming infrastructure plays. Franklin Bi leads their portfolio development team and sits on boards of gaming companies. Their Asia-Pacific presence provides unique distribution access for gaming's largest market.",
+      "hook_angle": "Franklin - Pantera was in crypto before it was called crypto. Gaming is the next vertical to be tokenized at scale, and the infrastructure layer is still wide open. Your investments in InfiniGods and Helika show you understand the data infrastructure gap. Asia is 40% of global gaming revenue - Pantera's regional footprint is a strategic advantage.",
+      "recent_investments": [
+        {
+          "company": "InfiniGods",
+          "round": "Series A",
+          "date": "2023-2024",
+          "focus": "Web3 mobile gaming studio"
+        },
+        {
+          "company": "Helika",
+          "round": "Seed",
+          "date": "2024",
+          "focus": "On-chain gaming analytics"
+        },
+        {
+          "company": "Gaming infrastructure",
+          "round": "Various",
+          "date": "2024",
+          "focus": "Blockchain gaming platforms"
+        }
+      ],
+      "notable_portfolio": ["InfiniGods", "Helika", "Alchemy", "Arbitrum", "Aptos", "Coinbase"],
+      "geographic_focus": "Global (strong Asia presence)",
+      "twitter_handle": "@franklinbi",
+      "outreach_notes": "Lead with first-mover credibility and Asia gaming market access. Reference InfiniGods and Helika investments as validation of gaming thesis. Franklin responds to pitches with clear token utility and regulatory compliance frameworks."
+    },
+    {
+      "priority": "P4",
+      "fund_name": "Electric Capital",
+      "partner_name": "Avichal Garg",
+      "partner_title": "Co-Founder & Managing Partner",
+      "email": "avichal@electriccapital.com",
+      "fit_score": 88,
+      "fit_breakdown": {
+        "engineering_led_approach": 20,
+        "technical_due_diligence": 19,
+        "crypto_native": 18,
+        "gaming_interest": 16,
+        "early_stage_focus": 15
+      },
+      "stage_focus": "Seed to Series A",
+      "check_size_range": "$1M - $10M",
+      "aum": "$1B+",
+      "location": "San Francisco, CA",
+      "thesis": "Electric Capital is an engineering-led crypto asset management firm. They invest in tokens that are 'Programmable Money' and focus on both liquid and illiquid tokens rooted in novel technology. The firm is founded by technology entrepreneurs and engineers (Avichal sold two companies, was Director of Product at Facebook, and worked at Google).",
+      "gaming_ai_alignment": "Electric Capital invests in games as a category and has made multiple gaming infrastructure bets. Their engineering-led approach means they deeply evaluate technical architecture - critical for AI gaming infrastructure requiring distributed systems expertise. Avichal's product background at Facebook/Google aligns with consumer gaming infrastructure needs.",
+      "hook_angle": "Avichal - Electric Capital's engineering-led approach separates signal from noise in crypto. Gaming infrastructure requires the same technical rigor: distributed systems for AI inference, cryptographic proof of game state, and tokenized agent economies. Your product background at Facebook/Google is exactly what's missing from most crypto gaming bets.",
+      "recent_investments": [
+        {
+          "company": "Gaming platforms",
+          "round": "Seed",
+          "date": "2024",
+          "focus": "Web3 gaming infrastructure"
+        },
+        {
+          "company": "DeFi protocols",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "Decentralized finance"
+        },
+        {
+          "company": "Infrastructure plays",
+          "round": "Various",
+          "date": "2023-2024",
+          "focus": "Blockchain tooling"
+        }
+      ],
+      "notable_portfolio": ["NEAR", "dYdX", "Avalanche", "MakerDAO", "Compound"],
+      "geographic_focus": "Global (US-based)",
+      "twitter_handle": "@avichal",
+      "outreach_notes": "Lead with technical depth. Reference engineering-led approach as differentiator. Avichal responds to pitches that demonstrate technical excellence and product thinking. Avoid hype - focus on architecture and systems design."
+    },
+    {
+      "priority": "P5",
+      "fund_name": "Hivemind Capital Partners",
+      "partner_name": "Matt Zhang",
+      "partner_title": "Founder & Managing Partner",
+      "email": "matt@hivemind.capital",
+      "fit_score": 86,
+      "fit_breakdown": {
+        "institutional_crypto": 19,
+        "infrastructure_focus": 18,
+        "asia_presence": 18,
+        "tradfi_bridge": 17,
+        "check_size_alignment": 14
+      },
+      "stage_focus": "Seed to Series B",
+      "check_size_range": "$2M - $15M",
+      "aum": "$1B+",
+      "location": "New York, NY / Asia",
+      "thesis": "Hivemind Capital Partners is a global investment group operating at the intersection of traditional finance and the onchain economy. Founded in 2021, Hivemind allocates institutional capital across diverse strategies and implements technology infrastructure to help assets bridge traditional and decentralized finance.",
+      "gaming_ai_alignment": "Hivemind has explicit infrastructure focus (Head of Infrastructure partner role) and deep Asia-Pacific presence (Head of Asia partner). They invest in Web3 and blockchain technology with institutional-grade risk management. Their focus on bridging TradFi and DeFi aligns with gaming infrastructure that needs to handle real-money economies at scale.",
+      "hook_angle": "Matt - Hivemind was built to institutionalize digital asset investing. Gaming is the next $100B+ onchain economy, but infrastructure isn't ready for institutional capital. Your team's TradFi + crypto-native DNA is exactly what's needed to build the rails that bridge gaming and serious money.",
+      "recent_investments": [
+        {
+          "company": "Blockchain infrastructure",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "Web3 infrastructure"
+        },
+        {
+          "company": "DeFi protocols",
+          "round": "Various",
+          "date": "2024",
+          "focus": "Institutional DeFi"
+        },
+        {
+          "company": "Gaming/metaverse plays",
+          "round": "Seed",
+          "date": "2023-2024",
+          "focus": "On-chain entertainment"
+        }
+      ],
+      "notable_portfolio": ["Institutional DeFi", "Web3 infrastructure", "Digital assets"],
+      "geographic_focus": "Global (NY + Asia focus)",
+      "twitter_handle": "@mattzhang_cap",
+      "outreach_notes": "Lead with institutional capital angle. Reference their TradFi + crypto hybrid approach. Matt responds to pitches that demonstrate institutional readiness and regulatory awareness. Asia gaming market expansion is strong angle."
+    }
+  ]
+}

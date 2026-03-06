@@ -1,0 +1,64 @@
+================================================================================
+EMAIL PACKET: P3 - Mechanism Capital [PRODUCTION READY]
+================================================================================
+
+TO: steve@mechanism.capital
+CC: 
+BCC: 
+
+SUBJECT: Crypto-gaming meets AI: Daily investor scoring engine
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Steve,
+
+Mechanism's focus on blockchain, DeFi, and crypto-gaming aligns with the intersection we're building at.
+
+We've built an AI-assisted sourcing engine that scores 200+ funds daily (including crypto-native VCs), auto-generates investor packets with verified contacts, and logs the full pipeline in Trello + Slack.
+
+The twist: we're applying AI automation to the analog VC sourcing process while keeping human judgment at the center. Partners approve sends in minutes, not days.
+
+We're raising a Seed round ($1-2M range) and booking 4+ partner meetings per week through this engine.
+
+Given Mechanism's crypto-gaming thesis, I think there's a natural fit here. Worth 15 minutes?
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] Pitch deck (ADD: outreach_assets/pitch_deck/latest.pdf)
+- [ ] KPI snapshot (ADD: outreach_assets/kpi_snapshot/2026-02-24-kpis.csv)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P3
+Fund: Mechanism Capital
+Contact: Steve Cho
+Title: Partner - Head of Mech Play
+Email: steve@mechanism.capital
+Check Size: $1M-$2M USD
+Stage Focus: Pre-seed, Seed, Series A
+Priority Score: 53.33 (Rank #3)
+Sent At: 2026-02-27T01:45:00Z
+Follow-up Day 3: 2026-03-02
+Follow-up Day 7: 2026-03-06
+
+--------------------------------------------------------------------------------
+SEND CHECKLIST
+--------------------------------------------------------------------------------
+- [ ] Added Calendly link
+- [ ] Attached pitch deck
+- [ ] Attached KPI snapshot
+- [ ] Sent email
+- [ ] Logged in sent_log.csv
+- [ ] Moved Trello card to "Follow-up"
+
+================================================================================

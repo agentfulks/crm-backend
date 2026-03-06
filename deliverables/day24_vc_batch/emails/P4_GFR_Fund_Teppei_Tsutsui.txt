@@ -1,0 +1,29 @@
+Subject: Mage validation + Square Enix strategic fit
+
+Teppei,
+
+GFR's Mage investment validates what our engine has been tracking: AI content creation is the infrastructure layer for the next decade of gaming.
+
+We surfaced Mage 4 months pre-investment by monitoring:
+- Adobe/Autodesk talent movements into generative AI
+- Early enterprise pilot signals with gaming studios
+- API documentation traffic patterns
+
+The strategic angle for GFR: 12+ similar teams are building AI tools that would directly benefit your LPs (Square Enix, Bandai Namco) portfolio companies. These aren't competitors to Mage - they're adjacent infrastructure plays:
+
+- AI texture/material generation for 3D pipelines
+- Procedural animation from video reference
+- AI voice generation for narrative games
+- Automated localization at scale
+
+All pre-seed/seed. All with technical founders from top AI labs.
+
+Given GFR's unique position bridging Silicon Valley and Tokyo, these teams offer strategic value beyond pure financial returns.
+
+Worth a brief conversation about what we're seeing?
+
+[Name]
+[Title]
+[Company]
+
+P.S. - One founder is ex-Square Enix AI research, now building generative NPC dialogue systems. Strong cultural fit for GFR portfolio.

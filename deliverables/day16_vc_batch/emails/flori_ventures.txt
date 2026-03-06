@@ -1,0 +1,16 @@
+Subject: Chartboost Legacy → Next-Gen Mobile + Blockchain
+
+Hi Maria,
+
+Chartboost changed how mobile games monetized—60,000+ games, 12B sessions/month. You understood distribution before the rest of the market caught up.
+
+I'm building [Company] at the intersection of [mobile gaming + AI/blockchain one-liner]. We're taking the Chartboost playbook—focus on developer tools and distribution—but applying it to the AI-generated game content era.
+
+The parallel is striking: you built ad infrastructure because game devs needed distribution. We're building AI infrastructure because they need content velocity. Same problem (scale), different constraint.
+
+Given your mobile gaming DNA and Flori's Celo focus, I'd love your perspective on whether emerging markets (where Celo has traction) will leapfrog to AI-generated gaming faster than established markets.
+
+20 minutes to compare notes?
+
+Best,
+[Name]

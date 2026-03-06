@@ -1,0 +1,82 @@
+name: Daily Intake Automation
+
+on:
+  schedule:
+    # Run daily at 08:00 UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    # Allow manual trigger with inputs
+    inputs:
+      test_mode:
+        description: 'Run in test mode (no actual API calls)'
+        type: boolean
+        default: false
+      limit:
+        description: 'Number of funds to process'
+        type: number
+        default: 5
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  daily-intake:
+    name: Run Daily Intake Automation
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install dependencies
+        run: |
+          pip install psycopg
+
+      - name: Run Daily Intake Automation
+        id: automation
+        env:
+          MATON_API_KEY: ${{ secrets.MATON_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          cd deliverables
+          if [[ "${{ github.event.inputs.test_mode }}" == "true" ]]; then
+            python3 daily_intake_automation.py --test-mode --limit ${{ github.event.inputs.limit }}
+          else
+            python3 daily_intake_automation.py --limit ${{ github.event.inputs.limit || 5 }}
+          fi
+        continue-on-error: true
+
+      - name: Notify Webhook - Success
+        if: steps.automation.outcome == 'success'
+        run: |
+          curl -X POST "${{ secrets.WEBHOOK_URL || 'https://httpbin.org/post' }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "status": "success",
+              "workflow": "daily-intake",
+              "timestamp": "'"$(date -Iseconds)"'",
+              "run_id": "'"${{ github.run_id }}"'",
+              "message": "Daily intake automation completed successfully"
+            }' || echo "Webhook notification failed (non-critical)"
+
+      - name: Notify Webhook - Failure
+        if: steps.automation.outcome == 'failure'
+        run: |
+          curl -X POST "${{ secrets.WEBHOOK_URL || 'https://httpbin.org/post' }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "status": "failure",
+              "workflow": "daily-intake",
+              "timestamp": "'"$(date -Iseconds)"'",
+              "run_id": "'"${{ github.run_id }}"'",
+              "message": "Daily intake automation failed"
+            }' || echo "Webhook notification failed (non-critical)"
+
+      - name: Fail job if automation failed
+        if: steps.automation.outcome == 'failure'
+        run: exit 1

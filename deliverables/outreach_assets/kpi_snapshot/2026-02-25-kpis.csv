@@ -1,0 +1,13 @@
+metric,value,notes
+report_date,2026-02-25,Generation date (UTC)
+packets_generated,25,Count of funds in daily queue snapshot
+avg_score,41.43,Score range 31.00–84.00
+contact_ready_pct,40.0,10/25 packets have verified contact emails
+missing_contact_funds,Andreessen Horowitz / a16z; Bessemer Venture Partners; Solana Ventures; Serena Capital; 1kx; Zee Prime Capital; The Games Fund; Avocado DAO; Samsung NEXT; Jump Capital; Big Bang Accelerator; Lumikai; Josh Felser; Christiaan Vorkink; Hiro Capital,Funds lacking direct email in snapshot
+packets_with_target_send_today,0,Rows in sent_log matching target send date
+packets_sent,0,Subset with sent_at_utc populated
+follow_ups_due_today,0,Follow-up log entries scheduled for today
+responses_logged,0,Follow-up log entries with outcome=RESPONDED
+meetings_logged,0,Follow-up log entries with outcome=MEETING
+generated_at,2026-02-25T09:29:30.224781+00:00,Timestamp when KPI file created
+daily_queue_source,deliverables/daily_queue/2026-02-25-manifest.json,2026-02-25T05:55:04.006151+00:00

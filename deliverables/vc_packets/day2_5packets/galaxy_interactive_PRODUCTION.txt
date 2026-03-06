@@ -1,0 +1,75 @@
+================================================================================
+EMAIL PACKET: P10 - Galaxy Interactive [PRODUCTION READY]
+================================================================================
+
+TO: sam@galaxyinteractive.io
+CC: 
+BCC: 
+
+SUBJECT: Content + Technology / AI-Powered VC Sourcing at the AI Inflection Point
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Sam,
+
+Galaxy Interactive's thesis on the intersection of content, technology, and social commerce maps directly to what we're building. Your investments in Immutable and Mythical Games showed early conviction in infrastructure for the next generation of gaming. We're building the AI infrastructure layer for fund intelligence.
+
+We're an AI-powered VC sourcing platform—scoring 200+ funds daily, generating investor packets with verified contacts, and enabling fund partners to approve outreach in minutes. We sit at the intersection of content (intelligence) and technology (AI), which is exactly Galaxy's focus area.
+
+**Why Galaxy Interactive:**
+- **Infrastructure thesis:** Like Immutable (blockchain gaming infra), we're building foundational tech for AI-powered fund operations
+- **Stage fit:** We're raising [RAISING AMOUNT] seed - Galaxy writes $1M-$25M checks
+- **Content + tech convergence:** Your background in both media production and tech investing matches our dual nature
+
+**Current traction:**
+- 200+ funds scored daily
+- 4+ partner meetings per week
+- AI-powered pipeline management
+- Team: [ADD TEAM BACKGROUNDS]
+
+**The opportunity:**
+Every major platform shift creates new infrastructure winners. PC gaming had Steam. Mobile had Unity and ad networks. Web3 had Immutable and The Sandbox. AI-powered fund intelligence will have new winners because the existing tools weren't built for this paradigm.
+
+Would you be open to a conversation? I'd love to show you what we've built and get your perspective given your experience financing both traditional and digital businesses at the edge of culture and technology.
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+[PHONE - ADD IF DESIRED]
+[LinkedIn - ADD IF DESIRED]
+
+P.S. - Listened to Mustafa's "Series G" podcast episode on AI in games. The conversation about infrastructure needs for AI-native experiences validated exactly what we're building.
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] One Pager (ADD: [Startup Name]_One_Pager.pdf)
+- [ ] Pitch deck (ADD: [Startup Name]_Deck.pdf)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P10
+Fund: Galaxy Interactive
+Contact: Sam Englebardt
+Sent At: 2026-02-27T01:50:00Z
+Follow-up Day 3: 2026-03-02
+Follow-up Day 7: 2026-03-06
+
+--------------------------------------------------------------------------------
+ACTION ITEMS FOR LUCAS
+--------------------------------------------------------------------------------
+- [ ] Fill in [RAISING AMOUNT]
+- [ ] Add team backgrounds
+- [ ] Add Calendly link
+- [ ] Attach one pager and deck
+- [ ] Add phone/LinkedIn if desired
+- [ ] Sent email
+- [ ] Logged in sent_log.csv
+- [ ] Moved Trello card to "Follow-up"
+
+================================================================================

@@ -1,0 +1,15 @@
+To: chris@a16zcrypto.com
+Subject: Infrastructure for the ownership economy
+
+Hi Chris,
+
+Your "Read Write Own" thesis reframed how I think about on-chain networks—and it points directly to what we're building.
+
+We've created an AI-assisted investor sourcing engine that gives founders ownership of their fundraising process. Human-controlled but AI-augmented: founders retain agency while the infrastructure surfaces the right investors at the right time. It's aligned incentives in a system designed for the ownership economy.
+
+Given your focus on AI + crypto intersections and permissionless infrastructure, I think there's a strategic fit. The engine is already identifying pre-seed projects that align with the a16z crypto thesis.
+
+Worth a 15-minute call to explore how this could plug into your deal flow? Or happy to continue via email if that's your preference.
+
+Best,
+Lucas

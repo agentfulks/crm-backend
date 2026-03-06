@@ -1,0 +1,44 @@
+To: peter@griffingp.com
+Subject: GDC AI urgency + AI-generated content loops for live-service games
+Priority: P3 | Fund: Griffin Gaming Partners | Score: 90/100
+Check Size: $1M-$15M | Stage: Seed to Growth
+
+---
+EMAIL BODY
+---
+Hi Peter,
+
+Your GDC 2025 commentary on AI urgency in gaming stuck with me—especially coming from the fund behind Marvel Snap.
+
+We're building AI infrastructure that generates emergent gameplay through LLM-driven NPCs. Studios deploy intelligent characters without ML teams, reducing dev costs 60% while creating infinite content loops for live-service games.
+
+Griffin's $1B+ AUM and pure gaming focus means you understand this better than generalist funds. The Chamo Games studio launch shows you're already thinking about AI-native development.
+
+I'd welcome the chance to show you what we've built.
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+[TITLE]
+[COMPANY]
+
+---
+ATTACHMENTS
+---
+1. deliverables/outreach_assets/pitch_deck/latest.pdf
+2. deliverables/outreach_assets/kpi_snapshot/latest.csv
+
+---
+FOLLOW-UP SCHEDULE
+---
+Day 3: February 28, 2026 — Share AI character demo video
+Day 7: March 4, 2026 — Final bump or pass
+
+---
+PERSONALIZATION NOTES
+---
+- Hook: GDC AI urgency commentary, Marvel Snap success, Chamo Games
+- Recent context: Founded Chamo Games (2024), GDC 2025 AI commentary
+- Send window: Tuesday-Thursday, 9-11am PST
+- Warm intro path: Phil Sanderson (led Discord investment) or Nick Tuosto

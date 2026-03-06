@@ -1,0 +1,32 @@
+{
+  "execution_id": "trello-loop-2026-03-03-2321",
+  "timestamp": "2026-03-03T23:21:00Z",
+  "executor": "VANTAGE",
+  "agents_spawned": [
+    {
+      "agent": "bdr_strategist",
+      "session_key": "agent:bdr_strategist:subagent:28876991-3b75-4f0f-b787-8f9b3f83ec2e",
+      "task": "VC outreach pipeline - approval briefs and send-ready drafts",
+      "status": "running"
+    },
+    {
+      "agent": "bdr_strategist",
+      "session_key": "agent:bdr_strategist:subagent:fd36c12d-d06b-4ced-8223-8b0f8c4e2fc4",
+      "task": "Game studio pipeline - contact fixes and tier audit",
+      "status": "running"
+    }
+  ],
+  "critical_issues": [
+    "16 cards 7+ days overdue in Awaiting Approval (VC)",
+    "41 approved VC messages ready to send",
+    "55 game studio messages in Ready for Review",
+    "Magic Tavern and Ruby Games contact blockers"
+  ],
+  "expected_outputs": [
+    "Top 5 VC approval briefs (decision-ready)",
+    "41 send-ready message drafts",
+    "Magic Tavern & Ruby Games contact research",
+    "Game studio tier breakdown (A/B/C)",
+    "Top 10 send queue with timing"
+  ]
+}

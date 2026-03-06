@@ -1,0 +1,18 @@
+To: peter@griffingp.com
+Subject: Discord + Overwolf portfolio → the next gaming infrastructure play
+
+Hi Peter,
+
+Griffin's track record speaks for itself—Discord, Overwolf, Scopely, Second Dinner. You've consistently identified infrastructure and platform plays that reshape how gamers connect, create, and play. Your Lionsgate/Nerdist background gives you unique insight into where content and technology converge.
+
+NEXUS AI is building the infrastructure layer for the next generation of gaming platforms. While Overwolf enables creators to build on top of existing games and Discord connects gaming communities, we're creating the runtime architecture for AI-powered persistent worlds—where NPCs have memory, environments evolve based on player behavior, and procedural content generation scales to millions of concurrent users.
+
+The multi-stage flexibility Griffin offers is perfect for our roadmap: seed entry to prove the platform, Series A follow-on to scale with studios already piloting NEXUS. We're seeing 10x efficiency gains for developers building AI-powered multiplayer experiences—exactly the kind of infrastructure play that fits Griffin's thesis on gaming's technological evolution.
+
+Would you have 15 minutes next week to discuss how NEXUS fits Griffin's vision for gaming infrastructure?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

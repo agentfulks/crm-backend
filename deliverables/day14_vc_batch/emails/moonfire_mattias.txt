@@ -1,0 +1,16 @@
+Subject: AI Infrastructure for Cloud-Native Game Economies
+
+Hi Mattias,
+
+Moonfire's operating DNA from Epic combined with your AI-gaming thesis puts you in a unique position to evaluate what we're building.
+
+We've spent the last year developing infrastructure for AI-driven game economies—think Scenario meets on-chain market infrastructure. The core insight: as AI generates infinite content, you need economic systems that can absorb and price that content dynamically. Static game economies break under AI-generated volume.
+
+Our stack enables autonomous agents to create, trade, and evolve in-game assets with minimal developer overhead. It's middleware for the coming wave of AI-native games—built by founders who've shipped at scale.
+
+Given Moonfire's investments in both AI content generation (Scenario, Inworld) and cloud-native gaming infrastructure, this feels squarely in your strike zone.
+
+Worth a brief call to see if the fit is as strong as it appears?
+
+Best,
+Lucas

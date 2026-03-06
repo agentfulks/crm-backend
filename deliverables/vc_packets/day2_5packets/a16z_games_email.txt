@@ -1,0 +1,35 @@
+To: jonathan@a16z.com
+Cc: andrew@a16z.com
+Subject: AI x Gaming - [Startup Name] / SPEEDRUN Application
+
+Hi Jonathan,
+
+I'm reaching out about [Startup Name], an AI-powered gaming platform we're building at the intersection of generative AI and multiplayer experiences.
+
+Given your leadership of a16z SPEEDRUN and the fund's thesis on AI redefining how we socialize and play, I wanted to get in front of you before our formal SPEEDRUN application. We're building infrastructure that enables [brief description - e.g., "AI-generated NPCs with persistent memory" / "procedural world generation for multiplayer games" / "AI-powered content tools for game developers"].
+
+**Why a16z GAMES specifically:**
+- Your investment in Sky Mavis and focus on virtual economies aligns with our player-owned asset model
+- SPEEDRUN's $1M check size and operational support matches our current stage
+- The fund's infrastructure thesis ("games technologies = Metaverse building blocks") directly maps to what we're building
+
+**Traction:**
+- [X] users / [Y] growth metric
+- Partnership with [relevant game studio/platform]
+- Team includes [relevant gaming/AI backgrounds]
+
+**The Ask:**
+Would you be open to a 15-minute call to discuss whether we're a fit for SPEEDRUN 3.0? We're targeting a [amount] seed round in [timeline] and a16z is our first choice given the operational platform and AI + games focus.
+
+Best,
+Lucas Fulks
+[Startup Name]
+[Phone]
+[LinkedIn profile]
+
+P.S. - Read your piece on AI x creative tools on Substack. The parallel between what happened to software development with Copilot and what's about to happen to game development is exactly what we're building toward.
+
+---
+**ATTACHMENTS:**
+- [Startup Name]_One_Pager.pdf
+- [Startup Name]_Deck.pdf

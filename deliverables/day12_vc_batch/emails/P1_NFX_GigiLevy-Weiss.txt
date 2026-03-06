@@ -1,0 +1,18 @@
+To: gigi@nfx.com
+Subject: "AI Games Are Coming" → what happens after the content layer
+
+Hi Gigi,
+
+Building Playtika into a $4.4B gaming company gives you a perspective few VCs have: you know what separates demo AI from production AI that actually ships at scale. Your recent publication "AI Games Are Coming" nails the thesis—AI isn't just optimizing existing workflows, it's enabling entirely new game genres that weren't economically viable before.
+
+But there's a gap between the AI content layer and what studios can actually deploy in production. NFX portfolio companies building AI-native games need runtime infrastructure that handles persistent agents, evolving world states, and procedural systems without crushing unit economics. That's exactly what we're building at NEXUS AI.
+
+We're seeing 10x efficiency gains with early partners who are shipping AI features they couldn't build before. Given NFX's conviction on AI games and your Signal platform's focus on founder-network effects, I'd love to show you how NEXUS enables the infrastructure layer for the next generation of portfolio companies.
+
+Worth 15 minutes to explore the fit?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

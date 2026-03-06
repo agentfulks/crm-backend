@@ -1,0 +1,22 @@
+To: lior@cyberstarts.com
+Subject: AI that thinks like Unit 8200 — for enterprise defense
+
+Hi Lior,
+
+Cyberstarts' track record speaks for itself — Wiz, Claroty, Fireblocks. You've backed the companies that define modern cybersecurity.
+
+I'm reaching out because we're building AI-native security infrastructure that thinks like an attacker. Not rule-based detection, but systems that learn adversarial patterns in real-time and adapt defenses before attacks execute.
+
+Given your Unit 8200 background and Cyberstarts' thesis on AI-driven threat detection, I'd value your perspective on our approach. We're particularly focused on defending against AI-generated attacks — the next wave that traditional security simply won't catch.
+
+Would you be open to a brief call to explore if this fits Cyberstarts' focus on category-defining security companies?
+
+Best,
+[Founder Name]
+
+---
+FUND: Cyberstarts
+PARTNER: Lior Simon
+SIGNAL SCORE: 94/100
+CHECK SIZE: $1M - $15M
+FOCUS: AI-Native Cybersecurity / Seed-Series A

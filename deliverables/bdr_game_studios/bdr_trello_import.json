@@ -1,0 +1,84 @@
+{
+  "batch_name": "BDR Game Studios Batch - Trello Import",
+  "created_at": "2026-02-27",
+  "target_board": "BDR - Game Studios Outreach",
+  "target_list": "Daily Queue",
+  "total_cards": 10,
+  "cards": [
+    {
+      "name": "[P1] Voodoo - Alexandre Yazdi (CEO)",
+      "description": "**Studio:** Voodoo\n**Contact:** Alexandre Yazdi\n**Title:** CEO\n**Priority:** 1 (Highest)\n**Focus:** Hyper-casual games, mobile publishing\n**Notable Titles:** Paper.io, Helix Jump, Snake VS Block\n\n**Outreach Angle:**\nAI-driven content generation for hyper-casual development. Voodoo's dominance in hyper-casual (Paper.io, Helix Jump) makes them the ideal partner for AI-powered dynamic content that scales without proportional headcount growth.\n\n**LinkedIn:** https://www.linkedin.com/in/alexandreyazdi/\n\n---\n\n**EMAIL DRAFT:**\n\nSubject: AI for scaling hyper-casual hits like Paper.io\n\nHi Alexandre,\n\nPaper.io and Helix Jump set the standard for hyper-casual dominance — but maintaining that velocity at scale is the real challenge.\n\nI'm Lucas, founder of NEXUS AI. We're building AI infrastructure that generates dynamic, personalized game worlds for hyper-casual titles. Imagine Paper.io arenas that adapt to player behavior in real-time, or AI-generated levels that maintain quality while reducing design iteration time by 60%.\n\nWe help studios like Voodoo scale content production without scaling headcount proportionally.\n\nWorth a brief conversation? Happy to share what we're seeing work with other top publishers.\n\n[CALENDLY_LINK]\n\nBest,\nLucas Fulks\nFounder, NEXUS AI\n\n---\n\n**Status:** Ready to send\n**Due Date:** 2026-02-28",
+      "labels": ["BDR", "Priority-1", "Hyper-Casual", "Ready"],
+      "due": "2026-02-28T17:00:00.000Z"
+    },
+    {
+      "name": "[P1] Homa Games - Daniel Nathan (CEO)",
+      "description": "**Studio:** Homa Games\n**Contact:** Daniel Nathan\n**Title:** CEO\n**Priority:** 1 (Highest)\n**Focus:** Hyper-casual publishing, Homa Lab platform\n**Notable Titles:** Sky Roller, Nerf Epic Pranks, Aquarium Land\n\n**Outreach Angle:**\nAI tools for rapid prototyping and market testing. Homa Lab has compressed prototype-to-hit time. AI-generated content is the next frontier for player engagement without live ops overhead.\n\n**LinkedIn:** https://www.linkedin.com/in/danielnathan/\n\n---\n\n**EMAIL DRAFT:**\n\nSubject: AI + Homa Lab = faster hits?\n\nHi Daniel,\n\nHoma Lab has already compressed the time from prototype to hit. The next frontier is AI-generated content that keeps players engaged longer without manual live ops overhead.\n\nI'm Lucas, founder of NEXUS AI. We build AI infrastructure for dynamic game worlds — think Sky Roller tracks that evolve based on player skill, or Nerf Epic Pranks scenarios that regenerate automatically to maintain freshness.\n\nThe studios we're working with are seeing 40%+ increases in session length from AI-driven content variation.\n\nCurious if this fits Homa's roadmap. Open to a 15-min call next week?\n\n[CALENDLY_LINK]\n\nBest,\nLucas Fulks\nFounder, NEXUS AI\n\n---\n\n**Status:** Ready to send\n**Due Date:** 2026-02-28",
+      "labels": ["BDR", "Priority-1", "Hyper-Casual", "Ready"],
+      "due": "2026-02-28T17:00:00.000Z"
+    },
+    {
+      "name": "[P1] Supersonic (Unity) - Developer Partnerships",
+      "description": "**Studio:** Supersonic (Unity)\n**Contact:** Developer Partnerships Team\n**Title:** Developer Partnerships\n**Priority:** 1 (Highest)\n**Focus:** Hyper-casual publishing, Unity ecosystem\n**Notable Titles:** Bridge Race, Sort It 3D, Join Clash\n\n**Outreach Angle:**\nUnity + AI integration for rapid hyper-casual development. Direct Unity integration opportunity — AI infrastructure that lives natively in Unity workflows for Supersonic's developer network.\n\n**Note:** No specific LinkedIn available — use general partnerships contact\n\n---\n\n**EMAIL DRAFT:**\n\nSubject: Unity + AI integration for Supersonic developers\n\nHi there,\n\nSupersonic has built the strongest hyper-casual publishing platform inside Unity's ecosystem. The next unlock is AI infrastructure that lives natively in Unity — dynamic worlds that adapt without backend complexity.\n\nI'm Lucas, founder of NEXUS AI. We're building AI-powered game world generation that integrates directly into Unity workflows. Bridge Race levels that self-balance difficulty. Sort It 3D puzzles that regenerate infinitely. All running client-side with zero backend overhead.\n\nThis could be a compelling offering for Supersonic's developer network.\n\nOpen to a 15-min conversation about partnership possibilities?\n\n[CALENDLY_LINK]\n\nBest,\nLucas Fulks\nFounder, NEXUS AI\n\n---\n\n**Status:** Ready to send\n**Due Date:** 2026-03-01",
+      "labels": ["BDR", "Priority-1", "Unity", "Ready"],
+      "due": "2026-03-01T17:00:00.000Z"
+    },
+    {
+      "name": "[P2] SayGames - Egor Vaihanski (CEO)",
+      "description": "**Studio:** SayGames\n**Contact:** Egor Vaihanski\n**Title:** CEO\n**Priority:** 2\n**Focus:** Hyper-casual, hybrid-casual mobile games\n**Notable Titles:** Onnect, Sand Balls, Fidget Toys\n\n**Outreach Angle:**\nLive ops automation and AI-powered player segmentation. SayGames' hybrid-casual focus makes them ideal for AI-driven content variation and player retention tools.\n\n**LinkedIn:** https://www.linkedin.com/in/egorvaihanski/\n\n---\n\n**Status:** Email draft ready in deliverables/bdr_game_studios/email_drafts/P4_SayGames_EgorVaihanski.txt\n**Due Date:** 2026-03-01",
+      "labels": ["BDR", "Priority-2", "Hybrid-Casual", "Ready"],
+      "due": "2026-03-01T17:00:00.000Z"
+    },
+    {
+      "name": "[P2] Kwalee - David Darling (CEO)",
+      "description": "**Studio:** Kwalee\n**Contact:** David Darling\n**Title:** CEO\n**Priority:** 2\n**Focus:** Mobile games, PC/console, publishing\n**Notable Titles:** Jetpack Jump, Draw It, Shootout 3D\n\n**Outreach Angle:**\nAI for cross-platform game development pipeline. Kwalee's expansion into PC/console creates opportunity for AI tools that work across platforms.\n\n**LinkedIn:** https://www.linkedin.com/in/daviddarling/\n\n---\n\n**Status:** Email draft ready in deliverables/bdr_game_studios/email_drafts/P6_Kwalee_DavidDarling.txt\n**Due Date:** 2026-03-01",
+      "labels": ["BDR", "Priority-2", "Cross-Platform", "Ready"],
+      "due": "2026-03-01T17:00:00.000Z"
+    },
+    {
+      "name": "[P2] Amanotes - Bill Vo (CEO)",
+      "description": "**Studio:** Amanotes\n**Contact:** Bill Vo\n**Title:** CEO\n**Priority:** 2\n**Focus:** Music games, rhythm games\n**Notable Titles:** Magic Tiles 3, Tiles Hop, Piano Pop Tiles\n\n**Outreach Angle:**\nAI for procedural music generation and dynamic gameplay. Unique angle for AI-generated music that adapts to gameplay in real-time.\n\n**LinkedIn:** https://www.linkedin.com/in/billvo/\n\n---\n\n**Status:** Email draft ready in deliverables/bdr_game_studios/email_drafts/P5_Amanotes_BillVo.txt\n**Due Date:** 2026-03-02",
+      "labels": ["BDR", "Priority-2", "Music-Games", "Ready"],
+      "due": "2026-03-02T17:00:00.000Z"
+    },
+    {
+      "name": "[P2] CrazyLabs - Sagi Schliesser (CEO)",
+      "description": "**Studio:** CrazyLabs\n**Contact:** Sagi Schliesser\n**Title:** CEO\n**Priority:** 2\n**Focus:** Hyper-casual, simulation games\n**Notable Titles:** Acrylic Nails, Soap Cutting, Tie Dye\n\n**Outreach Angle:**\nAI for ASMR/satisfying game content generation. CrazyLabs' strength in satisfying/ASMR content is perfect for AI-generated variations.\n\n**LinkedIn:** https://www.linkedin.com/in/sagischliesser/\n\n---\n\n**Status:** Email draft ready in deliverables/bdr_game_studios/email_drafts/P7_CrazyLabs_SagiSchliesser.txt\n**Due Date:** 2026-03-02",
+      "labels": ["BDR", "Priority-2", "ASMR", "Ready"],
+      "due": "2026-03-02T17:00:00.000Z"
+    },
+    {
+      "name": "[P3] Lion Studios (AppLovin) - Rafael Vivas (President)",
+      "description": "**Studio:** Lion Studios (AppLovin)\n**Contact:** Rafael Vivas\n**Title:** President\n**Priority:** 3\n**Focus:** Mobile game publishing, user acquisition\n**Notable Titles:** Merge Inn, Merge Gems, Coin Trip\n\n**Outreach Angle:**\nAI-driven UA optimization and creative generation. Lion Studios' UA expertise aligns with AI-generated creative variants for ad testing.\n\n**LinkedIn:** https://www.linkedin.com/in/rafaelvivas/\n\n---\n\n**Status:** Email draft ready in deliverables/bdr_game_studios/email_drafts/P8_LionStudios_RafaelVivas.txt\n**Due Date:** 2026-03-02",
+      "labels": ["BDR", "Priority-3", "Publishing", "Ready"],
+      "due": "2026-03-02T17:00:00.000Z"
+    },
+    {
+      "name": "[P3] Rollic (Zynga) - Live Ops Partnerships",
+      "description": "**Studio:** Rollic (Zynga)\n**Contact:** Partnerships Team\n**Title:** Live Ops Partnerships\n**Priority:** 3\n**Focus:** Hyper-casual, live ops, Zynga portfolio\n**Notable Titles:** Tangle Master 3D, High Heels, Blob Runner\n\n**Outreach Angle:**\nLive ops automation and real-time content personalization. Rollic's Zynga backing means enterprise-grade live ops — perfect for AI automation.\n\n**Note:** No specific LinkedIn available — use general partnerships contact\n\n---\n\n**Status:** Email draft ready in deliverables/bdr_game_studios/email_drafts/P9_Rollic_ZyngaPartnerships.txt\n**Due Date:** 2026-03-03",
+      "labels": ["BDR", "Priority-3", "Live-Ops", "Ready"],
+      "due": "2026-03-03T17:00:00.000Z"
+    },
+    {
+      "name": "[P3] Boombit - Marcin Olejarz (CEO)",
+      "description": "**Studio:** Boombit\n**Contact:** Marcin Olejarz\n**Title:** CEO\n**Priority:** 3\n**Focus:** Mobile games, midcore, strategy\n**Notable Titles:** Hunting Clash, Fishing Clash, Dino Bash\n\n**Outreach Angle:**\nAI for midcore game economy balancing. Boombit's midcore focus (Hunting Clash, Fishing Clash) creates opportunity for AI-powered economy tuning.\n\n**LinkedIn:** https://www.linkedin.com/in/marcinolejarz/\n\n---\n\n**Status:** Email draft ready in deliverables/bdr_game_studios/email_drafts/P10_Boombit_MarcinOlejarz.txt\n**Due Date:** 2026-03-03",
+      "labels": ["BDR", "Priority-3", "Midcore", "Ready"],
+      "due": "2026-03-03T17:00:00.000Z"
+    }
+  ],
+  "import_notes": [
+    "All 10 cards ready for Trello import",
+    "Target list: Daily Queue (BDR board)",
+    "Due dates staggered across Feb 28 - Mar 3",
+    "Labels follow format: BDR, Priority-X, Category, Ready",
+    "Top 3 priorities: Voodoo, Homa Games, Supersonic"
+  ],
+  "summary": {
+    "total_cards": 10,
+    "priority_1": 3,
+    "priority_2": 4,
+    "priority_3": 3,
+    "verified_contacts": 8,
+    "missing_contacts": 2
+  }
+}

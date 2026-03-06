@@ -1,0 +1,45 @@
+To: stephen@collabcurrency.com
+Subject: Crypto x culture: Daily investor packets as product
+Priority: P4 | Fund: Collab+Currency
+Check Size: $100K-$3M | Stage: Pre-seed to Series A
+
+---
+EMAIL BODY
+---
+Hi Stephen,
+
+Collab+Currency's focus on the intersection of crypto and culture maps to what we're building—a daily investor packet culture that compounds.
+
+We run an AI-assisted sourcing engine scoring 200+ funds daily, assembling five investor packets every morning with verified contacts, KPI snapshots, and personalized hooks. The whole loop runs in Slack and Trello so partners can approve sends in minutes.
+
+Four partner meetings per week, increasing as the fund database grows. It's part infrastructure, part cultural system for VC outreach.
+
+We're raising Seed ($100K-$3M range) and given your crypto-cultural thesis, I think there's a natural alignment.
+
+Worth a 15-minute conversation?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+[TITLE]
+[COMPANY]
+
+---
+ATTACHMENTS
+---
+1. deliverables/outreach_assets/pitch_deck/latest.pdf
+2. deliverables/outreach_assets/kpi_snapshot/2026-02-25-kpis.csv
+
+---
+FOLLOW-UP SCHEDULE
+---
+Day 3: February 28, 2026 — Value-add follow-up
+Day 7: March 4, 2026 — Final bump or pass
+
+---
+NOTES
+---
+Stephen is Managing Partner at Collab+Currency. Primary hook: crypto 
+culture, consumer crypto, cultural systems. Emphasize daily packet 
+culture and compounding engine.

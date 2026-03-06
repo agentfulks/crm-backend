@@ -1,0 +1,20 @@
+To: amy.wu@lsvp.com
+Subject: The AI infrastructure gap in interactive entertainment
+
+Hi Amy,
+
+Your work building FTX Ventures' gaming practice gave you a unique view into what Web3 gaming needed — and what it was missing. I think the same infrastructure gap exists for AI in gaming.
+
+I'm building the AI infrastructure layer for interactive entertainment:
+• Cross-platform AI that works in traditional, mobile, and Web3 games
+• Developer tools that make AI accessible to studios of all sizes
+• Infrastructure that scales from indie projects to Epic Games-level productions
+
+Lightspeed's Epic investment and your crypto/gaming crossover expertise put you in a unique position to understand this opportunity. The next generation of games won't just use AI as a feature — they'll be built on AI-native infrastructure from day one.
+
+Would love to get your take on where the infrastructure opportunities are in gaming AI.
+
+15 minutes this week?
+
+Best,
+[Your name]

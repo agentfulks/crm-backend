@@ -1,0 +1,26 @@
+SUBJECT: Crypto-native gaming infrastructure — seed round
+
+Piers,
+
+Delphi's thesis on on-chain gaming aligns with what we're building at [Company].
+
+The problem: Current crypto games prioritize token speculation over gameplay. Players churn when incentives dry up.
+
+Our approach: [2-sentence product description with gaming + crypto angle]
+
+Traction: [X] beta signups, [Y]% D7 retention, [Z] organic community growth
+
+Raising: $[Amount] seed to [specific milestone]
+
+Delphi's portfolio in [relevant games] signals strong conviction in this space. I'd love to share more about our vision for sustainable on-chain economies.
+
+Worth a 15-min call?
+
+[Name]
+[Title]
+[Company]
+[Link to deck]
+
+---
+Contact: piers@delphiventures.io
+Warm Signal: Previously at BITKRAFT, co-investor overlap

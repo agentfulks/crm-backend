@@ -1,0 +1,254 @@
+{
+  "vc_research_packets": [
+    {
+      "firm_name": "Makers Fund",
+      "location": "Singapore (Global)",
+      "stage_focus": "Seed to Series A",
+      "check_size": "$500K - $40M (median $5-10M)",
+      "fund_size": "$500M Fund III (2022)",
+      "primary_partner": {
+        "name": "Michael Cheung",
+        "title": "Founding General Partner",
+        "linkedin_url": "https://www.linkedin.com/in/michaelkcheung/",
+        "verified": true
+      },
+      "secondary_partner": {
+        "name": "Jay Chi",
+        "title": "Founding Partner",
+        "linkedin_url": "https://www.linkedin.com/in/jay-chi/",
+        "verified": true
+      },
+      "gaming_portfolio_companies": [
+        "Dream Games (Mobile)",
+        "Manticore Games (UGC Platform)",
+        "Voldex (Roblox Studio - acquired Brookhaven)",
+        "Second Dinner (Marvel Snap)",
+        "Sandbox VR (Location-based VR)"
+      ],
+      "recent_investments": [
+        {
+          "company": "BIT ODD",
+          "round": "€17M Seed",
+          "date": "November 2024",
+          "co_investors": "Griffin Gaming Partners, Index Ventures"
+        },
+        {
+          "company": "Human Computer",
+          "round": "$5.7M",
+          "date": "March 2025",
+          "co_investors": "Andreessen Horowitz"
+        },
+        {
+          "company": "Loco",
+          "round": "Acquired by Redwood Technologies",
+          "date": "September 2024",
+          "value": "$65M"
+        }
+      ],
+      "gaming_thesis": "Global interactive entertainment with deep Asia expertise. Partners are former Tencent, McKinsey, and gaming operators. Focus on studios, platforms, and infrastructure.",
+      "fit_score": 94,
+      "fit_rationale": "Pure-play gaming fund with $1.5B AUM. Active seed-stage lead with strong Asian market connections. Recent BIT ODD and Human Computer investments show appetite for AI-enabled gaming. Strong co-investor relationships with a16z and Griffin.",
+      "outreach_hook": "Reference their investment in Human Computer alongside a16z - mention AI-driven character generation and how it aligns with their thesis on the golden age of interactive entertainment.",
+      "priority": "P0",
+      "source": "Web research, TechCrunch, Tracxn"
+    },
+    {
+      "firm_name": "Transcend Fund",
+      "location": "Global (Zug, London, SF)",
+      "stage_focus": "Seed to Series A",
+      "check_size": "$500K - $5M",
+      "fund_size": "~$100M+ estimated",
+      "primary_partner": {
+        "name": "Shanti Bergel",
+        "title": "Managing Director & Founding Partner",
+        "linkedin_url": "https://www.linkedin.com/in/shanti/",
+        "verified": true
+      },
+      "secondary_partner": {
+        "name": "Andrew Sheppard",
+        "title": "Managing Director",
+        "linkedin_url": "https://www.linkedin.com/in/andrewsheppard/",
+        "verified": true
+      },
+      "gaming_portfolio_companies": [
+        "thatgamecompany (Sky - 260M+ downloads)",
+        "Singularity 6 (Palia)",
+        "Mountaintop Studios",
+        "Nifty Games",
+        "Klang Games (Seed)"
+      ],
+      "recent_investments": [
+        {
+          "company": "Layer AI",
+          "round": "Game Changers 2025 Award Winner",
+          "date": "2025",
+          "notes": "AI-powered game art tools"
+        },
+        {
+          "company": "Singularity 6",
+          "round": "Follow-on",
+          "date": "2024-2025",
+          "notes": "Community-focused MMO Palia"
+        }
+      ],
+      "gaming_thesis": "Partners with 'craftspeople at the top of their game' - deep product strategy and market validation support. Partners have 30+ years combined gaming experience across EA, Kabam, GREE, Rakuten Games.",
+      "fit_score": 91,
+      "fit_rationale": "Gaming-native partners with operating experience. Portfolio includes thatgamecompany (artistic/AI-ready) and Singularity 6. Shanti Bergel recognized on Techcrunch List. Strong thesis on AI changing distribution and products.",
+      "outreach_hook": "Congratulate them on Layer AI's Game Changers Award - position as AI-native game studio that could be the next thatgamecompany in their portfolio.",
+      "priority": "P0",
+      "source": "Web research, Transcend.fund, LinkedIn"
+    },
+    {
+      "firm_name": "Courtside Ventures",
+      "location": "New York, NY",
+      "stage_focus": "Seed to Series A",
+      "check_size": "$250K - $5M",
+      "fund_size": "$100M Fund III (2024)",
+      "primary_partner": {
+        "name": "Deepen Parikh",
+        "title": "Partner",
+        "linkedin_url": "https://www.linkedin.com/in/deepenparikh/",
+        "verified": true
+      },
+      "secondary_partner": {
+        "name": "Kai Bond",
+        "title": "Partner",
+        "linkedin_url": "https://www.linkedin.com/in/kaibond/",
+        "verified": true
+      },
+      "gaming_portfolio_companies": [
+        "Jump (Sports gaming platform)",
+        "Vault (Exited July 2024)",
+        "Agora (Gaming/eSports)",
+        "Buzzer (Sports streaming)",
+        "Overtime (Sports media/gaming)"
+      ],
+      "recent_investments": [
+        {
+          "company": "Jump",
+          "round": "$23M Series A",
+          "date": "August 2025",
+          "notes": "Sports gaming platform"
+        },
+        {
+          "company": "Vault",
+          "round": "Exit",
+          "date": "July 2024",
+          "notes": "Portfolio exit - 11 total exits"
+        }
+      ],
+      "gaming_thesis": "Leading early-stage fund focused on Sports, Lifestyle, and Gaming intersection. Partnered with Michael Jordan for Fund III. Deep domain knowledge in sports/entertainment networks.",
+      "fit_score": 87,
+      "fit_rationale": "Strong recent activity with Jump's $23M Series A. Sports-gaming intersection thesis is highly relevant. Partners Deepen Parikh and Kai Bond are actively investing. 11 portfolio exits show execution capability. Gaming + Sports convergence is a growing market.",
+      "outreach_hook": "Reference their recent Jump investment and the sports-gaming convergence - mention how AI is creating new interaction paradigms in sports simulation and gaming.",
+      "priority": "P1",
+      "source": "Web research, Sports Business Journal, Sportico"
+    },
+    {
+      "firm_name": "a16z GAMES (Andreessen Horowitz)",
+      "location": "Menlo Park, CA",
+      "stage_focus": "Seed to Series A (SPEEDRUN accelerator)",
+      "check_size": "$500K - $5M seed, up to $600M fund",
+      "fund_size": "$600M GAMES FUND ONE",
+      "primary_partner": {
+        "name": "Jonathan Lai",
+        "title": "General Partner (leads SPEEDRUN)",
+        "linkedin_url": "https://www.linkedin.com/in/jlai84/",
+        "verified": true
+      },
+      "secondary_partner": {
+        "name": "Andrew Chen",
+        "title": "General Partner",
+        "linkedin_url": "https://www.linkedin.com/in/andrewchen/",
+        "verified": true
+      },
+      "gaming_portfolio_companies": [
+        "Kaedim (AI-powered 3D)",
+        "Moonlake AI (world models)",
+        "Riot Games (early)",
+        "Discord (early)",
+        "Roblox (early)"
+      ],
+      "recent_investments": [
+        {
+          "company": "Kaedim",
+          "round": "Seed/Series A",
+          "date": "March 2024",
+          "notes": "AI-powered 3D asset generation"
+        },
+        {
+          "company": "Human Computer",
+          "round": "$5.7M",
+          "date": "March 2025",
+          "notes": "AI characters, co-invested with Makers Fund"
+        }
+      ],
+      "gaming_thesis": "AI x Creative - investing in teams building tomorrow's AI x creative landscape. SPEEDRUN accelerator for AI startups. Focus on developer tools, 3D simulations, vertical agents, novel storytelling.",
+      "fit_score": 96,
+      "fit_rationale": "Perfect fit for AI-gaming intersection. Jonathan Lai specifically focuses on AI x creative via SPEEDRUN. Recent Kaedim and Human Computer investments prove thesis alignment. Most active gaming fund with strongest network effects. Jack Soslow focuses on AI, AR/VR infrastructure.",
+      "outreach_hook": "Mention their investment in Kaedim and the vision for AI-powered game creation - position as the next logical portfolio company in their AI x gaming thesis.",
+      "priority": "P0",
+      "source": "Web research, a16z.com, Jonathan Lai blog"
+    },
+    {
+      "firm_name": "Galaxy Interactive",
+      "location": "New York (Global)",
+      "stage_focus": "Seed to Series B",
+      "check_size": "$1M - $20M",
+      "fund_size": "$325M Fund II (2021)",
+      "primary_partner": {
+        "name": "Sam Englebardt",
+        "title": "Founding General Partner",
+        "linkedin_url": "https://www.linkedin.com/in/sam-englebardt/",
+        "verified": true
+      },
+      "secondary_partner": {
+        "name": "Richard Kim",
+        "title": "Founding General Partner",
+        "linkedin_url": "https://www.linkedin.com/in/richard-kim/",
+        "verified": true
+      },
+      "gaming_portfolio_companies": [
+        "The Sandbox (Metaverse)",
+        "Immutable (Gaming blockchain)",
+        "Republic (Investment platform)",
+        "Epic Games (co-investor)",
+        "Mythical Games"
+      ],
+      "recent_investments": [
+        {
+          "company": "Sonic",
+          "round": "$12M",
+          "date": "June 2024",
+          "notes": "Gaming-focused L2 chain on Solana"
+        },
+        {
+          "company": "E-Pal",
+          "round": "Seed",
+          "date": "2024",
+          "notes": "Gaming companion platform"
+        },
+        {
+          "company": "DMM Group partnership",
+          "round": "Strategic",
+          "date": "April 2024",
+          "notes": "Japanese gaming market entry"
+        }
+      ],
+      "gaming_thesis": "Invests at intersection of content, technology and social commerce with emphasis on video games and infrastructure powering immersive virtual worlds. Part of Galaxy Digital (crypto native).",
+      "fit_score": 88,
+      "fit_rationale": "Strong track record with 7 unicorns and 2 IPOs. Gaming + blockchain infrastructure focus aligns with emerging AI-world models. Recent Sonic investment shows appetite for gaming infrastructure. 2024 Japan expansion with DMM shows active market development.",
+      "outreach_hook": "Reference their Sonic investment and the thesis on infrastructure powering virtual worlds - position AI-generated content as the next infrastructure layer for gaming.",
+      "priority": "P1",
+      "source": "Web research, CB Insights, Tracxn"
+    }
+  ],
+  "metadata": {
+    "created_date": "2026-03-04",
+    "batch_id": "march04_vc_batch",
+    "target_stage": "Seed to Series A",
+    "sector": "Gaming / AI-Gaming intersection",
+    "queue_replenishment_count": 5,
+    "quality_verified": true
+  }
+}

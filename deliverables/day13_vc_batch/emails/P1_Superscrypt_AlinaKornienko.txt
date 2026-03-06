@@ -1,0 +1,19 @@
+Subject: AI NPC infrastructure - seeing similar patterns to Altered State Machine
+
+Hi Alina,
+
+I saw Superscrypt's recent research on AI NPCs in gaming—really aligned with what we're building.
+
+We're developing infrastructure that lets any game studio deploy intelligent NPCs with persistent memory, emotional state, and contextual awareness without building ML teams from scratch. Think "Stripe for game AI."
+
+After seeing your investment in Altered State Machine and your thesis on AI-native gaming infrastructure, I think there's a strong fit. We're pre-launch but have LOIs from 3 mid-size studios and a pilot with a top-10 mobile publisher.
+
+Would you be open to a brief call next week? Happy to share our technical architecture and early traction.
+
+Best,
+[Name]
+[Title]
+[Company]
+[LinkedIn]
+
+P.S. Your piece on the economic model for AI NPCs was spot-on—we're seeing the same demand from studios trying to reduce liveops costs.

@@ -1,0 +1,20 @@
+To: mattias@moonfire.com
+Subject: AI-native VC + MokN → the infrastructure layer gap
+
+Hi Mattias,
+
+Building an AI-native VC that uses its own LLMs for sourcing puts Moonfire in a unique position—you understand technical infrastructure plays better than traditional VCs because you're running one yourself. Your investment in MokN shows you see where gaming infrastructure is heading.
+
+Your "golden triangle" framework (access + efficiency + service-quality) perfectly describes what AI infrastructure needs to deliver for game developers. But there's a gap in the stack that keeps surfacing: the runtime layer for persistent AI agents in multiplayer worlds. Studios can generate AI content, but they can't affordably deploy AI that evolves, learns, and maintains state at production scale.
+
+NEXUS AI bridges that gap. We're the engine that enables dynamic environments and persistent agents without the compute costs that kill margins—cutting AI runtime expenses by 60% while shipping features studios couldn't build before.
+
+With Fund II actively deploying and your AI-native approach to evaluation, I'd love to show you what we're building for the next wave of gaming founders.
+
+15 minutes next week?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

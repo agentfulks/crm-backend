@@ -1,0 +1,81 @@
+{
+  "campaign": "Day 3 Follow-ups",
+  "original_send_date": "2026-02-25",
+  "followup_send_date": "2026-02-28",
+  "followups": [
+    {
+      "priority": 1,
+      "fund": "BITKRAFT Ventures",
+      "contact_name": "Martin Garcia",
+      "email": "martin@bitkraft.vc",
+      "title": "CFO & General Partner",
+      "original_subject": "AI sourcing engine for gaming/AI funds — 4 partner meetings/week",
+      "followup_subject": "Re: AI sourcing engine for gaming/AI funds",
+      "thesis_angle": "Synthetic Reality and founder-built infrastructure",
+      "file_path": "/data/workspace/deliverables/outreach_assets/day3_followups/P1_BITKRAFT_day3.txt",
+      "priority_score": 84.0,
+      "timezone": "EST",
+      "best_send_time": "9-11am EST"
+    },
+    {
+      "priority": 2,
+      "fund": "Konvoy Ventures",
+      "contact_name": "Taylor Hurst",
+      "email": "taylor@konvoy.vc",
+      "title": "Principal",
+      "original_subject": "Infrastructure play: Daily VC scoring engine for gaming funds",
+      "followup_subject": "Re: Infrastructure play: Daily VC scoring engine",
+      "thesis_angle": "Gaming infrastructure and platform bets",
+      "file_path": "/data/workspace/deliverables/outreach_assets/day3_followups/P2_Konvoy_day3.txt",
+      "priority_score": 59.33,
+      "timezone": "MST",
+      "best_send_time": "8-10am MST"
+    },
+    {
+      "priority": 3,
+      "fund": "Mechanism Capital",
+      "contact_name": "Steve Cho",
+      "email": "steve@mechanism.capital",
+      "title": "Partner - Head of Mech Play",
+      "original_subject": "Crypto-gaming meets AI: Daily investor scoring engine",
+      "followup_subject": "Re: Crypto-gaming meets AI",
+      "thesis_angle": "Blockchain, DeFi, and crypto-gaming",
+      "file_path": "/data/workspace/deliverables/outreach_assets/day3_followups/P3_Mechanism_day3.txt",
+      "priority_score": 53.33,
+      "timezone": "EST",
+      "best_send_time": "9-11am EST"
+    },
+    {
+      "priority": 4,
+      "fund": "Collab+Currency",
+      "contact_name": "Derek Edwards",
+      "email": "derek@collabcurrency.com",
+      "title": "Managing Partner",
+      "original_subject": "Crypto x culture: Daily investor packets as product",
+      "followup_subject": "Re: Crypto x culture: Daily investor packets",
+      "thesis_angle": "Crypto and culture intersection",
+      "file_path": "/data/workspace/deliverables/outreach_assets/day3_followups/P4_CollabCurrency_day3.txt",
+      "priority_score": 51.33,
+      "timezone": "PST",
+      "best_send_time": "9-11am PST"
+    },
+    {
+      "priority": 5,
+      "fund": "Variant",
+      "contact_name": "Spencer Noon",
+      "email": "spencer@variant.fund",
+      "title": "Co-Founder & General Partner",
+      "original_subject": "User-owned VC sourcing: AI engine + partner approval loop",
+      "followup_subject": "Re: User-owned VC sourcing",
+      "thesis_angle": "User ownership and crypto infrastructure",
+      "file_path": "/data/workspace/deliverables/outreach_assets/day3_followups/P5_Variant_day3.txt",
+      "priority_score": 48.33,
+      "timezone": "EST",
+      "best_send_time": "9-11am EST"
+    }
+  ],
+  "notes": {
+    "customization_required": "Add specific traction update in [bracketed] sections before sending",
+    "day7_followups_scheduled": "2026-03-04"
+  }
+}

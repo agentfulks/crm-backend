@@ -1,0 +1,18 @@
+To: sam@galaxyinteractive.io
+Subject: "Interactive is eating the world" → the infrastructure thesis behind it
+
+Hi Sam,
+
+Galaxy Interactive's thesis that "Interactive is eating the world" perfectly captures what's happening as gaming-born technology—GPUs, real-time engines, user-driven systems—now powers AI, blockchain, and spatial computing. Your portfolio at Mythical Games and Immutable X demonstrates conviction that the next computing platforms will emerge from gaming infrastructure.
+
+NEXUS AI is building that exact infrastructure layer. We enable game developers to create persistent, AI-powered worlds where autonomous agents generate content, modify environments in real-time, and create emergent gameplay that scales beyond manual design constraints. While your portfolio companies build the platforms and experiences players engage with, we provide the runtime architecture that makes AI-generated content viable in production multiplayer environments.
+
+The convergence of immersive technology, AI, and interactive entertainment is creating new categories of experiences that weren't possible before. We're already working with studios that are cutting AI runtime costs by 60% while shipping features—persistent AI NPCs, evolving world states, procedural narrative systems—that were previously cost-prohibitive.
+
+I'd love 15 minutes to show you the infrastructure layer making "Interactive is eating the world" a technical reality. When works for you?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

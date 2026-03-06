@@ -1,0 +1,21 @@
+Subject: Player segmentation AI for TapNation's next phase
+
+Hi Hervé,
+
+Congratulations on the €15M raise and French Tech 120 recognition. TapNation's growth from 5 people to 1B+ downloads in 4 years is remarkable.
+
+I noticed you mentioned using AI for prototyping. We're seeing the next frontier for publishers like TapNation: AI-powered player segmentation.
+
+For games like Blob Runner 3D with massive scale:
+- Real-time cohort segmentation based on play patterns
+- AI-generated personalized offers and ad pacing
+- Predictive LTV models for better UA targeting
+
+Given your data-first approach, this could drive 15-20% revenue uplift.
+
+Open to exploring?
+
+Best,
+[Your name]
+
+P.S. - Ice Cream Inc.'s simulation mechanics have rich data signals perfect for ML segmentation.

@@ -1,0 +1,23 @@
+Subject: Engineering-led gaming infrastructure (not hype)
+
+Avichal,
+
+Electric Capital's engineering-led approach separates signal from noise in crypto. You evaluate technical architecture, token economic design, and product-market fit—not whitepapers and hype.
+
+Gaming infrastructure requires the same rigor: distributed systems for real-time AI inference, cryptographic proof of game state, and tokenized agent economies that don't collapse under load. Most crypto gaming pitches you see are content plays with token veneers. This is different.
+
+Your product background at Facebook and Google is exactly what's missing from most crypto gaming infrastructure. Distributed systems expertise (your team's strength) plus consumer product intuition (your experience) is the combination this category needs.
+
+We're building the infrastructure layer that makes AI-native gaming economies work: verifiable game state, player-owned AI agents, and real-time settlement rails. No hype—just architecture.
+
+15 minutes to walk through the technical design?
+
+Best,
+Lucas
+
+---
+Sent: Day 19 VC Batch (Feb 28, 2026)
+Fund: Electric Capital
+Partner: Avichal Garg
+Email: avichal@electriccapital.com
+Fit Score: 88/100

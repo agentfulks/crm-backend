@@ -1,0 +1,18 @@
+To: olaf@polychain.capital
+Subject: AI Agents + On-Chain Game Economies
+
+Hi Olaf,
+
+Your thesis on "game-theoretic equilibrium" in blockchain systems is prescient. As AI agents become autonomous economic actors in virtual worlds, that intersection becomes critical infrastructure.
+
+Polychain's track record in gaming infrastructure—Dapper Labs, Immutable X, on-chain game protocols—shows you understand that Web3 gaming requires fundamental tech, not just tokenomics. NEXUS AI is building that foundation: an AI-native engine for procedural world generation where autonomous agents can own assets, transact, and participate in on-chain economies.
+
+The convergence of AI and crypto in gaming isn't just about NPCs with wallets. It's about persistent, player-owned worlds that evolve through AI-generated content and on-chain state. Your experience as Coinbase's first employee gives you unique insight into both platform scaling and crypto infrastructure.
+
+I'd love to explore how NEXUS AI fits Polychain's AI-crypto intersection thesis. Would you have 15 minutes for an intro call?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

@@ -1,0 +1,27 @@
+Subject: Jam & Tea signal validation + next wave
+
+David,
+
+Congratulations on the Jam & Tea investment. When LVP makes an AI-native gaming move, the industry pays attention.
+
+Our engine actually surfaced Jam & Tea 8 months before their raise based on:
+- Team formation signals (ex-Riot + AI researchers)
+- Early art pipeline experiments with generative tools
+- Closed Discord community growth patterns
+
+The pattern is clear: AI-native game studios are forming at 3x the rate of 2023. We're tracking 40+ teams at similar stages - many in stealth, most not yet on investor radar.
+
+Recent finds:
+- 3 teams building AI-assisted level design tools for Unity/Unreal
+- 2 narrative AI studios applying LLMs to procedural storytelling
+- 4 "AI-first" mobile studios rethinking F2P with dynamic personalization
+
+All pre-seed/seed stage. All founder-led by ex-AAA talent.
+
+Your Supercell/Unity pattern recognition would find this pipeline interesting. 15 minutes this week?
+
+[Name]
+[Title]
+[Company]
+
+P.S. - Matt Bilbey's EA Partners experience is particularly relevant for one studio we're tracking that's building AI tooling for publisher greenlight decisions.

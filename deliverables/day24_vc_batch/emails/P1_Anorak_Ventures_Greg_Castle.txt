@@ -1,0 +1,22 @@
+Subject: Pre-launch AI gaming teams - Anorak thesis fit
+
+Greg,
+
+Your early Oculus bet and Rec Room investment show you understand platform shifts before they become obvious.
+
+Our AI sourcing engine just identified the next wave: 40+ pre-launch teams building AI-native spatial experiences. These aren't "AI features bolted onto games" - they're fundamentally new interaction paradigms enabled by generative models.
+
+Specific signals we're tracking:
+- Talent migrations from OpenAI, Anthropic, and Character AI into gaming applications
+- GitHub patterns for procedural content generation at scale
+- Discord community formation velocity for AI-native game genres
+
+Three companies in our current pipeline match Anorak's thesis on transformative immersive tech. All are pre-public, pre-YC, pre-seed stage.
+
+Worth a brief call to discuss what we're seeing in the AI x spatial computing intersection?
+
+[Name]
+[Title]
+[Company]
+
+P.S. - Hidden Door's narrative AI approach aligns with one team we're tracking building AI character behavior engines for multiplayer experiences.

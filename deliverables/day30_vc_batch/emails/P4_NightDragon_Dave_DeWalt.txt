@@ -1,0 +1,22 @@
+To: dave@nightdragon.com
+Subject: The AI security wave after FireEye — operator's perspective
+
+Hi Dave,
+
+Few people understand the cybersecurity landscape like you do — building McAfee and leading FireEye through IPO and the Mandiant acquisition. You've seen every major threat evolution.
+
+We're entering a new phase. AI isn't just helping defenders — it's arming attackers with capabilities that render traditional security obsolete. The same way FireEye disrupted signature-based antivirus, AI-native security is disrupting the current generation.
+
+NightDragon's Datavisor investment shows you see this wave coming. We're building the infrastructure layer that makes AI defense practical for enterprises — not just theoretical, but deployed, measurable, and effective.
+
+Given your operator perspective and NightDragon's focus on growth-stage security companies, I'd value your take on where AI security is heading. Open to a brief call?
+
+Best,
+[Founder Name]
+
+---
+FUND: NightDragon
+PARTNER: Dave DeWalt
+SIGNAL SCORE: 88/100
+CHECK SIZE: $10M - $100M
+FOCUS: AI-Native Cybersecurity / Growth Stage

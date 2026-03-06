@@ -1,0 +1,15 @@
+To: matt@madrona.com
+Subject: Multi-agent infrastructure for the Intelligent App Stack
+
+Hi Matt,
+
+Your 'Intelligent App Stack' framework has become essential reading for anyone building AI-native companies. The evolution from cloud to mobile to AI represents the biggest platform shift since the internet — and the infrastructure layer is still being defined.
+
+We're building the infrastructure specifically designed for multi-agent orchestration — the coordination layer that makes intelligent applications truly intelligent.
+
+Given Madrona's track record with platform shifts (cloud, mobile, now AI) and your deep AI investment history, I'd love to get your perspective. Open to a brief call?
+
+Best,
+[Founder Name]
+[Company Name]
+[Phone]

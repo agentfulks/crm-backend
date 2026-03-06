@@ -1,0 +1,54 @@
+{
+  "list_ids": {
+    "Foundation": "699d2728fd2ae8c35d1f7a46",
+    "Pipeline Build": "699d2728fd2ae8c35d1f7a47",
+    "Daily Queue": "699d309c1870f04a4b401759",
+    "In Progress": "699d345f2437461523243d65",
+    "Awaiting Approval": "699d2728fd2ae8c35d1f7a48",
+    "Approved / Send": "699d27651350afa8f2b8ec25",
+    "Follow-up": "699d309d2ef034a3ba04deb8",
+    "Insights & Metrics": "699d309ee719309d39b554da"
+  },
+  "day1_packets": [
+    {
+      "id": "69a1f0b931576fe1825a7f76",
+      "name": "P2: Konvoy Ventures - Jason Chapman"
+    },
+    {
+      "id": "699f1f47ecced948130f290c",
+      "name": "Packet: Galaxy Interactive"
+    },
+    {
+      "id": "699f1f485f4be68925e964c7",
+      "name": "Packet: Hiro Capital"
+    },
+    {
+      "id": "699f1f4843ec5899e52e0ad3",
+      "name": "Packet: Makers Fund"
+    },
+    {
+      "id": "699f1f49b0573bb0edf462f2",
+      "name": "Packet: Play Ventures"
+    },
+    {
+      "id": "699f1f490db3409d91d90e4c",
+      "name": "Packet: Transcend Fund"
+    },
+    {
+      "id": "699d624efca4d3709cef25d5",
+      "name": "Packet: Mechanism Capital"
+    },
+    {
+      "id": "699d624cdd614a5e0a62b5e3",
+      "name": "Packet: Konvoy Ventures"
+    },
+    {
+      "id": "699d62440c53022f56dc42b1",
+      "name": "Packet: BITKRAFT Ventures"
+    }
+  ],
+  "approved_list_id": "699d27651350afa8f2b8ec25",
+  "daily_queue_id": "699d309c1870f04a4b401759",
+  "follow_up_id": "699d309d2ef034a3ba04deb8",
+  "in_progress_id": "699d345f2437461523243d65"
+}

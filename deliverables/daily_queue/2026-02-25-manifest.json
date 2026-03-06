@@ -1,0 +1,1587 @@
+{
+  "generated_at": "2026-02-25T05:55:04.006151+00:00",
+  "source_csv": "/data/workspace/data/raw/gaming_vc_list.csv",
+  "count": 25,
+  "funds": [
+    {
+      "rank": 1,
+      "name": "BITKRAFT Ventures",
+      "firm_type": "VC",
+      "score": {
+        "total": 84.0,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 15.0,
+          "geo": 6.0,
+          "sector": 24.0,
+          "warmth": 10.0,
+          "contact": 10.0,
+          "penalty": 0.0
+        }
+      },
+      "hq": {
+        "city": "Los Angeles",
+        "region": "California",
+        "country": "United States"
+      },
+      "stage_focus": [
+        "Seed",
+        "Series A",
+        "Series B"
+      ],
+      "check_size": {
+        "min": 500000.0,
+        "max": 10000000.0,
+        "currency": "USD",
+        "formatted": "$500K\u2013$10.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "pitch@bitkraft.vc"
+      },
+      "urls": {
+        "website": "https://bitkraft.vc/",
+        "linkedin": "https://www.linkedin.com/company/bitkraftvc/",
+        "twitter": "https://x.com/BitkraftVC/"
+      },
+      "thesis": {
+        "overview": "Built by founders for founders, BITKRAFT is a global early- and mid-stage investment platform for gaming, esports, and interactive media. We focus on Seed, Series A, and Series B investments in game studios, interactive platforms, and immersive technology.",
+        "requirements": "Vision of Synthetic Reality (https://www.bitkraft.vc/vision/)\u2014the increasing convergence of the physical and digital worlds"
+      },
+      "keywords_hit": [
+        "synthetic reality",
+        "gaming",
+        "esports",
+        "immersive",
+        "game",
+        "interactive"
+      ],
+      "overlap_ratio": 1.0,
+      "notes": [
+        "HQ: Los Angeles California United States",
+        "Check-size overlap 100% of target band",
+        "Sector keywords: synthetic reality, gaming, esports, immersive, game, interactive",
+        "Contact channel: pitch@bitkraft.vc",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 2,
+      "name": "Konvoy Ventures",
+      "firm_type": "VC",
+      "score": {
+        "total": 59.33,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 8.33,
+          "geo": 8.0,
+          "sector": 12.0,
+          "warmth": 8.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": "Denver",
+        "region": "Colorado",
+        "country": "United States"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": 500000.0,
+        "max": 3000000.0,
+        "currency": "USD",
+        "formatted": "$500K\u2013$3.0M USD"
+      },
+      "target_countries": [
+        "Albania",
+        "Andorra",
+        "Argentina",
+        "Armenia",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Bahamas",
+        "USA",
+        "France",
+        "China",
+        "Germany",
+        "Georgia",
+        "Qatar",
+        "Kuwait",
+        "New Zealand",
+        "Norway",
+        "Sweden",
+        "Switzerland",
+        "Taiwan",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Eritrea",
+        "Estonia",
+        "Belarus",
+        "Belgium",
+        "Cabo Verde",
+        "Czech Republic",
+        "Chile",
+        "Denmark",
+        "Israel",
+        "Finland",
+        "Romania",
+        "Russia",
+        "Brazil",
+        "Cyprus",
+        "Croatia",
+        "Thailand",
+        "Turkey",
+        "Italy",
+        "Hungary",
+        "Seychelles",
+        "UAE",
+        "UK",
+        "Ukraine",
+        "Uzbekistan",
+        "Bulgaria",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Ireland",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Saudi Arabia",
+        "Singapore",
+        "Slovakia",
+        "Slovenia",
+        "Serbia",
+        "South Africa",
+        "South Korea",
+        "Spain",
+        "Greece",
+        "Hong Kong",
+        "Japan",
+        "Jordan",
+        "Latvia",
+        "Liechtenstein",
+        "Luxembourg",
+        "Mexico",
+        "Cambodia",
+        "Colombia",
+        "Costa Rica",
+        "Venezuela",
+        "Vietnam",
+        "Maldives",
+        "Bahrain",
+        "Netherlands",
+        "Madagascar",
+        "Malaysia",
+        "Montenegro"
+      ],
+      "contact": {
+        "email": "info@konvoy.vc",
+        "name": "Investment Team",
+        "title": "Partner",
+        "source": "website",
+        "enriched_at": "2026-02-25T09:30:00Z"
+      },
+      "urls": {
+        "website": "https://www.konvoy.vc/",
+        "linkedin": "https://www.linkedin.com/company/konvoy/about/",
+        "twitter": null
+      },
+      "thesis": {
+        "overview": "Konvoy Ventures is a venture capital fund dedicated to esports & video gaming",
+        "requirements": "We invest in the infrastructure technology, tools, and platforms of tomorrow\u2019s video gaming industry"
+      },
+      "keywords_hit": [
+        "gaming",
+        "infrastructure",
+        "esports"
+      ],
+      "overlap_ratio": 0.556,
+      "notes": [
+        "HQ: Denver Colorado United States",
+        "Check-size overlap 56% of target band",
+        "Sector keywords: gaming, infrastructure, esports",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 3,
+      "name": "Mechanism Capital",
+      "firm_type": "VC",
+      "score": {
+        "total": 53.33,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 3.33,
+          "geo": 0.0,
+          "sector": 8.0,
+          "warmth": 8.0,
+          "contact": 10.0,
+          "penalty": 1.0
+        }
+      },
+      "hq": {
+        "city": null,
+        "region": null,
+        "country": null
+      },
+      "stage_focus": [
+        "Pre-seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": 1000000.0,
+        "max": 2000000.0,
+        "currency": "USD",
+        "formatted": "$1.0M\u2013$2.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "contact@mechanism.capital"
+      },
+      "urls": {
+        "website": "https://www.mechanism.capital",
+        "linkedin": "https://www.linkedin.com/company/mechanism-capital/",
+        "twitter": "https://twitter.com/MechanismCap"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Focus on blockchain, decentralized finance (DeFi), and crypto-gaming projects. The firm invests in both equity and liquid tokens (SAFTs)."
+      },
+      "keywords_hit": [
+        "gaming",
+        "ai"
+      ],
+      "overlap_ratio": 0.222,
+      "notes": [
+        "Check-size overlap 22% of target band",
+        "Sector keywords: gaming, ai",
+        "Contact channel: contact@mechanism.capital",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 4,
+      "name": "Collab+Currency",
+      "firm_type": "VC",
+      "score": {
+        "total": 51.33,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 8.33,
+          "geo": 6.0,
+          "sector": 0.0,
+          "warmth": 8.0,
+          "contact": 10.0,
+          "penalty": 0.0
+        }
+      },
+      "hq": {
+        "city": "Eugene",
+        "region": "Oregon",
+        "country": "USA"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed"
+      ],
+      "check_size": {
+        "min": 100000.0,
+        "max": 3000000.0,
+        "currency": "USD",
+        "formatted": "$100K\u2013$3.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "info@collabcurrency.com"
+      },
+      "urls": {
+        "website": "https://collabcurrency.com",
+        "linkedin": "https://www.linkedin.com/company/collab-currency",
+        "twitter": "https://twitter.com/Collab_Currency"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Projects at the intersection of crypto and culture."
+      },
+      "keywords_hit": [],
+      "overlap_ratio": 0.556,
+      "notes": [
+        "HQ: Eugene Oregon USA",
+        "Check-size overlap 56% of target band",
+        "Contact channel: info@collabcurrency.com",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 5,
+      "name": "Variant",
+      "firm_type": "VC",
+      "score": {
+        "total": 48.33,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 13.33,
+          "geo": 0.0,
+          "sector": 0.0,
+          "warmth": 12.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": "New York",
+        "region": "NY",
+        "country": "USA / Distributed"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": 1000000.0,
+        "max": 5000000.0,
+        "currency": "USD",
+        "formatted": "$1.0M\u2013$5.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "hello@variant.fund",
+        "name": "Team",
+        "title": "Partner",
+        "source": "website",
+        "enriched_at": "2026-02-25T09:30:00Z"
+      },
+      "urls": {
+        "website": "https://variant.fund",
+        "linkedin": null,
+        "twitter": "https://twitter.com/variantfund"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Focus on user ownership and alignment."
+      },
+      "keywords_hit": [],
+      "overlap_ratio": 0.889,
+      "notes": [
+        "HQ: New York NY USA / Distributed",
+        "Check-size overlap 89% of target band",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 6,
+      "name": "Velo Partners",
+      "firm_type": "VC",
+      "score": {
+        "total": 45.0,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 0.0,
+          "geo": 6.0,
+          "sector": 4.0,
+          "warmth": 0.0,
+          "contact": 10.0,
+          "penalty": 0.0
+        }
+      },
+      "hq": {
+        "city": "London",
+        "region": "England",
+        "country": "United Kingdom"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "info@velopartners.co.uk"
+      },
+      "urls": {
+        "website": "https://www.velopartners.co.uk/",
+        "linkedin": "https://www.linkedin.com/company/velo-partners/about/",
+        "twitter": null
+      },
+      "thesis": {
+        "overview": "Velo Partners invests and manages a portfolio spanning the global gaming and gambling industry across mobile, online, land-based, real-money, social, B2B, and B2C assets.",
+        "requirements": "Velo typically invests in Series A or early growth stage rounds. Our ideal investment candidates demonstrate strong early traction and a clear understanding of their unit economics and growth trajectory. We also work in association with a gaming accelerator called RNG FOUNDRY for earlier stage investment opportunities. Once invested, we typically follow our rights for later investment rounds and work with management to define good corporate governance and reporting. We will opportunistically evaluate later stage investments on an ad-hoc basis."
+      },
+      "keywords_hit": [
+        "gaming"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ: London England United Kingdom",
+        "Sector keywords: gaming",
+        "Contact channel: info@velopartners.co.uk"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 7,
+      "name": "Andreessen Horowitz / a16z",
+      "firm_type": "VC",
+      "score": {
+        "total": 43.33,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 13.33,
+          "geo": 6.0,
+          "sector": 4.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 5.0
+        }
+      },
+      "hq": {
+        "city": "Menlo Park",
+        "region": "California",
+        "country": "United States"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A",
+        "Series B",
+        "Growth"
+      ],
+      "check_size": {
+        "min": 1000000.0,
+        "max": 200000000.0,
+        "currency": "USD",
+        "formatted": "$1.0M\u2013$200.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://a16z.com/",
+        "linkedin": "https://www.linkedin.com/company/a16z/",
+        "twitter": "https://x.com/a16z"
+      },
+      "thesis": {
+        "overview": "Andreessen Horowitz was established in June 2009 by entrepreneurs and engineers Marc Andreessen and Ben Horowitz, based on their vision for a new, modern VC firm designed to support today\u2019s entrepreneurs. Andreessen and Horowitz have a track record of investing in, building and scaling highly successful businesses.",
+        "requirements": "Historically, new models of computing have tended to emerge every 10\u201315 years: mainframes in the 60s, PCs in the late 70s, the internet in the early 90s, and smartphones in the late 2000s. Each computing model enabled new classes of applications that built on the unique strengths of the platform. For example, smartphones were the first truly personal computers with built-in sensors like GPS and high-resolution cameras. Applications like Instagram, Snapchat, and Uber/Lyft took advantage of these unique capabilities and are now used by billions of people."
+      },
+      "keywords_hit": [
+        "ai"
+      ],
+      "overlap_ratio": 0.889,
+      "notes": [
+        "HQ: Menlo Park California United States",
+        "Check-size overlap 89% of target band",
+        "Sector keywords: ai"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 8,
+      "name": "Bessemer Venture Partners",
+      "firm_type": "VC",
+      "score": {
+        "total": 43.0,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 15.0,
+          "geo": 8.0,
+          "sector": 0.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 5.0
+        }
+      },
+      "hq": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A",
+        "Series B",
+        "Growth"
+      ],
+      "check_size": {
+        "min": 100000.0,
+        "max": 50000000.0,
+        "currency": "USD",
+        "formatted": "$100K\u2013$50.0M USD"
+      },
+      "target_countries": [
+        "United States",
+        "Bay Area (US)"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://www.bvp.com/",
+        "linkedin": "https://www.linkedin.com/company/bessemer-venture-partners/",
+        "twitter": "https://x.com/bessemervp"
+      },
+      "thesis": {
+        "overview": "Bessemer Venture Partners is the world\u2019s most experienced early-stage venture capital firm. With a portfolio of more than 200 companies, Bessemer helps visionary entrepreneurs lay strong foundations to create companies that matter, and supports them through every stage of their growth. The firm has backed more than 120 IPOs, including Shopify, Yelp, LinkedIn, Skype, LifeLock, Twilio, SendGrid, DocuSign, Fiverr, Wix, and MindBody. Bessemer\u2019s 16 investing partners operate from offices in Silicon Valley, San Francisco, New York City, Boston, Israel, and India. Follow @BessemerVP and learn more at bvp.com.",
+        "requirements": "Bessemer Venture Partners is the world\u2019s most experienced early-stage venture capital firm. With a portfolio of more than 200 companies, Bessemer helps visionary entrepreneurs lay strong foundations to create companies that matter, and supports them through every stage of their growth. The firm has backed more than 120 IPOs, including Shopify, Yelp, LinkedIn, Skype, LifeLock, Twilio, SendGrid, DocuSign, Fiverr, Wix, and MindBody. Bessemer\u2019s 16 investing partners operate from offices in Silicon Valley, San Francisco, New York City, Boston, Israel, and India. Follow @BessemerVP and learn more at bvp.com."
+      },
+      "keywords_hit": [],
+      "overlap_ratio": 1.0,
+      "notes": [
+        "HQ: San Francisco California United States",
+        "Check-size overlap 100% of target band"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 9,
+      "name": "Solana Ventures",
+      "firm_type": "Corporate VC",
+      "score": {
+        "total": 41.0,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 0.0,
+          "geo": 6.0,
+          "sector": 12.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": "San Francisco",
+        "region": null,
+        "country": "USA"
+      },
+      "stage_focus": [
+        "Pre-seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://solana.ventures",
+        "linkedin": "https://www.linkedin.com/company/solana/",
+        "twitter": "https://twitter.com/solana"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Projects building applications, protocols, and infrastructure on the Solana blockchain. Focus on decentralized finance (DeFi), Web3, gaming, and NFTs."
+      },
+      "keywords_hit": [
+        "gaming",
+        "infrastructure",
+        "ai"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ: San Francisco  USA",
+        "Sector keywords: gaming, infrastructure, ai"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 10,
+      "name": "Andover Ventures",
+      "firm_type": "VC",
+      "score": {
+        "total": 39.0,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 0.0,
+          "geo": 6.0,
+          "sector": 0.0,
+          "warmth": 0.0,
+          "contact": 8.0,
+          "penalty": 0.0
+        }
+      },
+      "hq": {
+        "city": null,
+        "region": null,
+        "country": "United States"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": 50000.0,
+        "max": 500000.0,
+        "currency": "USD",
+        "formatted": "$50K\u2013$500K USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "user@domain.com"
+      },
+      "urls": {
+        "website": "https://www.andovervc.com/",
+        "linkedin": "https://www.linkedin.com/company/andover-ventures/",
+        "twitter": null
+      },
+      "thesis": {
+        "overview": "Andover is a venture fund investing in early stage software-enabled start-ups ranging from Pre-seed to Series A. We are sector agnostic; however, our team has a background in software development and financial technology. We make co-investments alongside larger funds, angel groups, and other family offices.",
+        "requirements": "Andover is a venture fund investing in early stage software-enabled start-ups ranging from Pre-seed to Series A. We are sector agnostic; however, our team has a background in software development and financial technology. We make co-investments alongside larger funds, angel groups, and other family offices."
+      },
+      "keywords_hit": [],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ:   United States",
+        "Contact channel: user@domain.com"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 11,
+      "name": "Magnus Capital",
+      "firm_type": "VC",
+      "score": {
+        "total": 39.0,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 0.0,
+          "geo": 6.0,
+          "sector": 4.0,
+          "warmth": 0.0,
+          "contact": 10.0,
+          "penalty": 0.0
+        }
+      },
+      "hq": {
+        "city": "New York",
+        "region": null,
+        "country": "USA"
+      },
+      "stage_focus": [
+        "Pre-seed",
+        "Seed"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "hello@magnuscapital.com"
+      },
+      "urls": {
+        "website": "https://magnuscapital.com",
+        "linkedin": null,
+        "twitter": "https://twitter.com/magnus_capital"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Investment focus is exclusively on the digital assets and blockchain market, particularly early-stage projects."
+      },
+      "keywords_hit": [
+        "ai"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ: New York  USA",
+        "Sector keywords: ai",
+        "Contact channel: hello@magnuscapital.com"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 12,
+      "name": "Serena Capital",
+      "firm_type": "VC",
+      "score": {
+        "total": 38.75,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 15.0,
+          "geo": 4.0,
+          "sector": 4.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 3.25
+        }
+      },
+      "hq": {
+        "city": "Paris",
+        "region": "Ile-de-France",
+        "country": "France"
+      },
+      "stage_focus": [
+        "Seed",
+        "Series A",
+        "Series B"
+      ],
+      "check_size": {
+        "min": 100000.0,
+        "max": 15000000.0,
+        "currency": "USD",
+        "formatted": "$100K\u2013$15.0M USD"
+      },
+      "target_countries": [
+        "Europe"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://www.serena.vc/",
+        "linkedin": "https://www.linkedin.com/company/serenavc/about/",
+        "twitter": "https://x.com/serenavc"
+      },
+      "thesis": {
+        "overview": "Serena Capital caters to technology companies with seed, early, and later stage venture investments. Investment strategy: We handpick on average four to five teams per year and focus on helping them reach their maximum potential. We are not looking for early exits. We back Europe-based entrepreneurs willing to build continental or worldwide category leaders. We strongly prefer to lead or co-lead rounds.",
+        "requirements": "Serena was founded by entrepreneurs on the belief that your VC should work for you and not the way around. We are not industry-specific as long as your business model is scalable and your product is digital. We have a special affection for DeepTech, enterprise software, marketplaces, and entertainment."
+      },
+      "keywords_hit": [
+        "ai"
+      ],
+      "overlap_ratio": 1.0,
+      "notes": [
+        "HQ: Paris Ile-de-France France",
+        "Check-size overlap 100% of target band",
+        "Sector keywords: ai"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 13,
+      "name": "1kx",
+      "firm_type": "VC",
+      "score": {
+        "total": 38.0,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 15.0,
+          "geo": 0.0,
+          "sector": 0.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": null,
+        "region": null,
+        "country": "Distributed"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": 250000.0,
+        "max": 5000000.0,
+        "currency": "USD",
+        "formatted": "$250K\u2013$5.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://1kx.network",
+        "linkedin": "https://www.linkedin.com/company/1kxnetwork",
+        "twitter": "https://twitter.com/1kxnetwork"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Token networks, community-first projects."
+      },
+      "keywords_hit": [],
+      "overlap_ratio": 1.0,
+      "notes": [
+        "HQ:   Distributed",
+        "Check-size overlap 100% of target band"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 14,
+      "name": "Zee Prime Capital",
+      "firm_type": "VC",
+      "score": {
+        "total": 37.67,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 6.67,
+          "geo": 0.0,
+          "sector": 8.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": "Bratislava",
+        "region": null,
+        "country": "Slovakia"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A",
+        "Series B"
+      ],
+      "check_size": {
+        "min": 1500000.0,
+        "max": 3500000.0,
+        "currency": "USD",
+        "formatted": "$1.5M\u2013$3.5M USD"
+      },
+      "target_countries": [
+        "Global (EU focus)"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://zeeprime.capital",
+        "linkedin": "https://www.linkedin.com/company/zee-prime-capital",
+        "twitter": "https://twitter.com/ZeePrimeCap"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Programmable assets, gaming, infrastructure."
+      },
+      "keywords_hit": [
+        "gaming",
+        "infrastructure"
+      ],
+      "overlap_ratio": 0.444,
+      "notes": [
+        "HQ: Bratislava  Slovakia",
+        "Check-size overlap 44% of target band",
+        "Sector keywords: gaming, infrastructure"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 15,
+      "name": "Pantera Capital",
+      "firm_type": "VC",
+      "score": {
+        "total": 37.33,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 13.33,
+          "geo": 6.0,
+          "sector": 4.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 5.0
+        }
+      },
+      "hq": {
+        "city": "Menlo Park",
+        "region": "CA",
+        "country": "USA"
+      },
+      "stage_focus": [
+        "Seed",
+        "Series A",
+        "Series B"
+      ],
+      "check_size": {
+        "min": 1000000.0,
+        "max": 40000000.0,
+        "currency": "USD",
+        "formatted": "$1.0M\u2013$40.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "invest@panteracapital.com",
+        "name": "Investment Team",
+        "title": "Partner",
+        "source": "website",
+        "enriched_at": "2026-02-25T09:30:00Z"
+      },
+      "urls": {
+        "website": "https://panteracapital.com",
+        "linkedin": "https://www.linkedin.com/company/pantera-capital",
+        "twitter": "https://twitter.com/PanteraCapital"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Leading blockchain investment firm since 2013. First US Bitcoin fund, deep research, industry network."
+      },
+      "keywords_hit": [
+        "ai"
+      ],
+      "overlap_ratio": 0.889,
+      "notes": [
+        "HQ: Menlo Park CA USA",
+        "Check-size overlap 89% of target band",
+        "Sector keywords: ai"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 16,
+      "name": "dweb3 capital",
+      "firm_type": "VC",
+      "score": {
+        "total": 37.0,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 0.0,
+          "geo": 0.0,
+          "sector": 4.0,
+          "warmth": 0.0,
+          "contact": 8.0,
+          "penalty": 0.0
+        }
+      },
+      "hq": {
+        "city": "Singapore",
+        "region": null,
+        "country": "Singapore"
+      },
+      "stage_focus": [
+        "Pre-seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "name@example.com"
+      },
+      "urls": {
+        "website": "https://dweb3.io",
+        "linkedin": "https://www.linkedin.com/company/dweb3-capital/",
+        "twitter": "https://twitter.com/dWeb3Capital"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Investment focus is on Web3 projects, particularly in decentralized infrastructure, Metaverse, NFTs, and decentralized identity."
+      },
+      "keywords_hit": [
+        "infrastructure"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ: Singapore  Singapore",
+        "Sector keywords: infrastructure",
+        "Contact channel: name@example.com"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 17,
+      "name": "The Games Fund",
+      "firm_type": "VC",
+      "score": {
+        "total": 35.0,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 0.0,
+          "geo": 6.0,
+          "sector": 12.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": "Los Angeles",
+        "region": "California",
+        "country": "United States"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://gamesfund.vc/",
+        "linkedin": "https://www.linkedin.com/company/thegamesfund/",
+        "twitter": null
+      },
+      "thesis": {
+        "overview": "TGF is an early-stage VC fund founded by video game industry veterans.\n\nWe invest in future leaders: game developers, gaming technologies, and services.\n\nWe share best practices and offer our experience and personal touch.",
+        "requirements": "TGF is an early-stage VC fund founded by video game industry veterans.\n\nWe invest in future leaders: game developers, gaming technologies, and services.\n\nWe share best practices and offer our experience and personal touch."
+      },
+      "keywords_hit": [
+        "developer",
+        "gaming",
+        "game"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ: Los Angeles California United States",
+        "Sector keywords: developer, gaming, game"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 18,
+      "name": "Avocado DAO",
+      "firm_type": "VC",
+      "score": {
+        "total": 35.0,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 0.0,
+          "geo": 0.0,
+          "sector": 12.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": "Singapore",
+        "region": null,
+        "country": "Singapore"
+      },
+      "stage_focus": [
+        "Pre-seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": null,
+        "linkedin": "https://www.linkedin.com/company/avocadodao/",
+        "twitter": null
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Focus on early-stage Web3, GameFi, and Play-to-Earn (P2E) blockchain gaming projects."
+      },
+      "keywords_hit": [
+        "gaming",
+        "game",
+        "ai"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ: Singapore  Singapore",
+        "Sector keywords: gaming, game, ai"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 19,
+      "name": "Samsung NEXT",
+      "firm_type": "Corporate VC",
+      "score": {
+        "total": 35.0,
+        "breakdown": {
+          "stage": 23.0,
+          "check_size": 0.0,
+          "geo": 6.0,
+          "sector": 8.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": "Mountain View",
+        "region": null,
+        "country": "United States"
+      },
+      "stage_focus": [
+        "Pre-seed",
+        "Seed",
+        "Series B"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://www.samsungnext.com/",
+        "linkedin": null,
+        "twitter": "https://twitter.com/samsungnext"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Invests in AI, Blockchain, Fintech, Healthtech, Infrastructure, and Mediatech sectors. Looks for founders with bold vision and deep domain expertise, with a preference for companies who are ready to partner strategically with the Samsung ecosystem."
+      },
+      "keywords_hit": [
+        "infrastructure",
+        "ai"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ: Mountain View  United States",
+        "Sector keywords: infrastructure, ai"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 20,
+      "name": "Jump Capital",
+      "firm_type": "VC",
+      "score": {
+        "total": 34.0,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 10.0,
+          "geo": 6.0,
+          "sector": 4.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 5.0
+        }
+      },
+      "hq": {
+        "city": "Chicago",
+        "region": null,
+        "country": "USA"
+      },
+      "stage_focus": [
+        "Seed",
+        "Series A",
+        "Series B",
+        "Growth"
+      ],
+      "check_size": {
+        "min": 2000000.0,
+        "max": 20000000.0,
+        "currency": "USD",
+        "formatted": "$2.0M\u2013$20.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://jumpcap.com",
+        "linkedin": "https://www.linkedin.com/company/jump-capital/",
+        "twitter": "https://twitter.com/jumpcapital"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Thesis-driven firm focusing on FinTech, B2B SaaS, IT & Data Infrastructure, and Digital Health. Partners with ambitious founders building companies with capital-efficient models and asymmetric risk/reward profiles."
+      },
+      "keywords_hit": [
+        "infrastructure"
+      ],
+      "overlap_ratio": 0.667,
+      "notes": [
+        "HQ: Chicago  USA",
+        "Check-size overlap 67% of target band",
+        "Sector keywords: infrastructure"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 21,
+      "name": "Big Bang Accelerator",
+      "firm_type": "VC",
+      "score": {
+        "total": 34.0,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 0.0,
+          "geo": 0.0,
+          "sector": 12.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 3.0
+        }
+      },
+      "hq": {
+        "city": null,
+        "region": null,
+        "country": null
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://www.bbx.games",
+        "linkedin": "https://www.linkedin.com/company/107775445/",
+        "twitter": null
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Current focus is on AI-powered / AI-enhanced game and content creators.  Previously invested in Lunacy Games and L*****Game\u2019s ******.ai."
+      },
+      "keywords_hit": [
+        "games",
+        "game",
+        "ai"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "Sector keywords: games, game, ai"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 22,
+      "name": "Lumikai",
+      "firm_type": "VC",
+      "score": {
+        "total": 33.0,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 0.0,
+          "geo": 0.0,
+          "sector": 16.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": null,
+        "region": null,
+        "country": "India"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [
+        "India"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://www.lumikai.com/",
+        "linkedin": "https://www.linkedin.com/company/lumikai/",
+        "twitter": "https://x.com/Lumikai"
+      },
+      "thesis": {
+        "overview": "We are India\u2019s first gaming & interactive entertainment venture fund. We catalyse game-changing, early stage founders building the future of gaming and interactive media.",
+        "requirements": "We are curating and supporting a select tribe of India\u2019s most forward thinking, creative and talented founders. Our vision is to find and fund game-changing early stage founders with a bold vision for the future and to help them achieve outlier success. We bring decades of sector strategic experience and knowledge, while leveraging our all-star local and global networks to help propel our founders to success."
+      },
+      "keywords_hit": [
+        "gaming",
+        "game",
+        "interactive",
+        "ai"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ:   India",
+        "Sector keywords: gaming, game, interactive, ai"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 23,
+      "name": "Josh Felser",
+      "firm_type": "Investor at ClimacticVC",
+      "score": {
+        "total": 32.0,
+        "breakdown": {
+          "stage": 9.0,
+          "check_size": 10.0,
+          "geo": 0.0,
+          "sector": 16.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 3.0
+        }
+      },
+      "hq": {
+        "city": null,
+        "region": null,
+        "country": null
+      },
+      "stage_focus": [
+        "Seed"
+      ],
+      "check_size": {
+        "min": 1000000.0,
+        "max": 4000000.0,
+        "currency": "USD",
+        "formatted": "$1.0M\u2013$4.0M USD"
+      },
+      "target_countries": [
+        "Francisco",
+        "California"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://climactic.vc/",
+        "linkedin": "https://www.linkedin.com/in/joshfelser/",
+        "twitter": "https://www.twitter.com/Joshmedia"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Local Services (Seed); Fashion (Seed); Sales & CRM (Seed); Games (Seed); Social Commerce (Seed); Advertising (Seed); Payments (Seed); Entertainment & Sports (Seed); Developer Tools (Seed); Analytics (Seed); ClimateTech/CleanTech (Seed); San Francisco Bay Area; Angel, Scout, and Solo-Capitalists"
+      },
+      "keywords_hit": [
+        "developer",
+        "games",
+        "game",
+        "ai"
+      ],
+      "overlap_ratio": 0.667,
+      "notes": [
+        "Check-size overlap 67% of target band",
+        "Sector keywords: developer, games, game, ai"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 24,
+      "name": "Christiaan Vorkink",
+      "firm_type": "Vice President at True Ventures",
+      "score": {
+        "total": 31.33,
+        "breakdown": {
+          "stage": 15.0,
+          "check_size": 13.33,
+          "geo": 0.0,
+          "sector": 8.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 5.0
+        }
+      },
+      "hq": {
+        "city": null,
+        "region": null,
+        "country": null
+      },
+      "stage_focus": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": 1000000.0,
+        "max": 50000000.0,
+        "currency": "USD",
+        "formatted": "$1.0M\u2013$50.0M USD"
+      },
+      "target_countries": [
+        "Francisco",
+        "California"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://about.me/cpv",
+        "linkedin": "https://www.linkedin.com/in/cvorkink/",
+        "twitter": "https://www.twitter.com/cvorkink"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Games (Seed); SMB Software (Seed); Data Services (Seed); Games (Series A); Social Networks (Seed); IoT (Seed); Data Services (Series A); IoT (Series A); SMB Software (Series A); Health IT (Series A); Consumer Internet (Seed); Health & Hospital Services (Series A); San Francisco Bay Area; Social Networks (Series A); SaaS (Series A); Consumer Internet (Series A); Health IT (Seed); Health & Hospital Services (Seed); SaaS (Seed)"
+      },
+      "keywords_hit": [
+        "games",
+        "game"
+      ],
+      "overlap_ratio": 0.889,
+      "notes": [
+        "Check-size overlap 89% of target band",
+        "Sector keywords: games, game"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 25,
+      "name": "Hiro Capital",
+      "firm_type": "VC",
+      "score": {
+        "total": 31.0,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 0.0,
+          "geo": 2.0,
+          "sector": 12.0,
+          "warmth": 0.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": null,
+        "region": null,
+        "country": "Luxembourg"
+      },
+      "stage_focus": [
+        "Seed",
+        "Series A",
+        "Series B"
+      ],
+      "check_size": {
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "formatted": "N/A"
+      },
+      "target_countries": [
+        "United Kingdom",
+        "Europe",
+        "North America"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://hiro.capital/",
+        "linkedin": "https://www.linkedin.com/company/hirocapital/",
+        "twitter": "https://x.com/hirocapital"
+      },
+      "thesis": {
+        "overview": "Hiro Capital invests in UK, European and North American innovators in Videogames, Esports, Streaming and Digital Sports. We invest in Metaverse technology founders and Game creators who are building the future. We believe that Games and Games technologies will be at the heart of next generation human societies. For us, play is deep. We are battle-scarred entrepreneurs who back next generation entrepreneurs. We have founded games and technology disruptors worth billions of dollars. We have led companies from startups to IPO in London and New York. We are gamers and sports nerds. We love games, stories, characters and deep tech.",
+        "requirements": "We Invest in the innovators building the future of Games, Esports, Digital Sports"
+      },
+      "keywords_hit": [
+        "games",
+        "esports",
+        "game"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ:   Luxembourg",
+        "Sector keywords: games, esports, game"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    }
+  ]
+}

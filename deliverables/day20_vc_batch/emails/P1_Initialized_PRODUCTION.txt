@@ -1,0 +1,68 @@
+================================================================================
+EMAIL PACKET: P1 - Initialized Capital [PRODUCTION READY]
+================================================================================
+
+TO: garry@initialized.com
+CC: 
+BCC: 
+
+SUBJECT: AI sourcing engine for VCs — 4 partner meetings/week
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Garry,
+
+Initialized backed Coinbase when crypto infrastructure was still being built. AI infrastructure for investor sourcing is the next frontier.
+
+We run an AI-assisted sourcing engine that scores 200+ gaming, AI, and devtools funds daily, assembles five investor packets every morning, and logs approvals + meetings directly in Slack and Trello. Partners can green-light sends in under four hours.
+
+The loop is already booking four partner meetings per week and compounds as more funds are ingested.
+
+We focus on Seed-Series B ($500K-$10M checks), which fits Initialized's stage and thesis perfectly.
+
+Worth a 15-minute call to see if there's a fit?
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+
+P.S. — Based in [LOCATION]. Happy to work around your schedule.
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] Pitch deck (ADD: outreach_assets/pitch_deck/latest.pdf)
+- [ ] KPI snapshot (ADD: outreach_assets/kpi_snapshot/2026-03-01-kpis.csv)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P1
+Fund: Initialized Capital
+Contact: Garry Tan
+Title: President & CEO
+Email: garry@initialized.com
+Check Size: $500K-$5M USD
+Stage Focus: Seed, Series A
+Location: San Francisco, CA
+Twitter: @garrytan
+Fit Score: 93/100
+
+--------------------------------------------------------------------------------
+TRELLO CARD ACTIONS
+--------------------------------------------------------------------------------
+1. Create card in "Daily Queue" list
+2. Add label: "P1-URGENT"
+3. Add checklist:
+   - [ ] Review packet materials
+   - [ ] Move to Awaiting Approval
+   - [ ] Lucas approval
+   - [ ] Move to Approved/Send
+   - [ ] Execute send
+   - [ ] Log in sent_log.csv
+
+--------------------------------------------------------------------------------

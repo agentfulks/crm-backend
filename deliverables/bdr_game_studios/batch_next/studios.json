@@ -1,0 +1,349 @@
+{
+  "batch_id": "next",
+  "date_created": "2026-02-28",
+  "studios": [
+    {
+      "id": "gismart",
+      "name": "Gismart",
+      "website": "https://gismart.com",
+      "location": "London, UK",
+      "founded": 2015,
+      "employees": "100-250",
+      "status": "Independent",
+      "games": ["Cool Goal", "Fat 2 Fit", "Fidget Toys Trading"],
+      "notable_games": [
+        {
+          "name": "Cool Goal",
+          "downloads": "50M+",
+          "category": "Sports Hyper-casual"
+        },
+        {
+          "name": "Fat 2 Fit",
+          "downloads": "100M+",
+          "category": "Runner Hyper-casual"
+        }
+      ],
+      "total_downloads": "1B+",
+      "focus": "Casual & Hyper-casual",
+      "contact": {
+        "decision_maker": "Dmitri Lipnitsky",
+        "title": "CEO & Co-founder",
+        "linkedin": "https://linkedin.com/in/dmitri-lipnitsky",
+        "email": "dmitri.lipnitsky@gismart.com",
+        "email_confidence": "high"
+      },
+      "outreach_angle": "AI content generation for rapid prototyping - Gismart's high release velocity could benefit from AI-powered level design and content variation for games like Fat 2 Fit",
+      "priority": "high",
+      "reason": "High release velocity, 1B+ downloads, strong publishing arm, London-based for timezone alignment"
+    },
+    {
+      "id": "tapnation",
+      "name": "TapNation",
+      "website": "https://tap-nation.io",
+      "location": "Paris, France",
+      "founded": 2019,
+      "employees": "50-150",
+      "status": "Independent - Series B",
+      "games": ["Ice Cream Inc.", "Blob Runner 3D", "ASMR Studio 3D"],
+      "notable_games": [
+        {
+          "name": "Blob Runner 3D",
+          "downloads": "100M+",
+          "category": "Runner Hyper-casual"
+        },
+        {
+          "name": "Ice Cream Inc.",
+          "downloads": "50M+",
+          "category": "Simulation Hyper-casual"
+        }
+      ],
+      "total_downloads": "1B+",
+      "focus": "Hyper-casual Publishing",
+      "contact": {
+        "decision_maker": "Hervé Montoute",
+        "title": "Co-founder & CEO",
+        "linkedin": "https://linkedin.com/in/herve-montoute",
+        "email": "herve.montoute@tap-nation.io",
+        "email_confidence": "high"
+      },
+      "outreach_angle": "AI-powered player segmentation - TapNation already uses AI for prototyping. Expand to AI-driven player segmentation for better monetization and retention in games like Blob Runner 3D",
+      "priority": "high",
+      "reason": "€15M raised in 2023, French Tech 120, explicitly mentions AI in tech stack, rapid growth"
+    },
+    {
+      "id": "supercent",
+      "name": "Supercent",
+      "website": "https://supercent.io",
+      "location": "Seoul, South Korea",
+      "founded": 2021,
+      "employees": "100-200",
+      "status": "Independent",
+      "games": ["Burger Please!", "Pizza Ready!", "Coffee Stack"],
+      "notable_games": [
+        {
+          "name": "Burger Please!",
+          "downloads": "100M+",
+          "category": "Idle Arcade Hybrid-casual"
+        },
+        {
+          "name": "Pizza Ready!",
+          "downloads": "50M+",
+          "category": "Idle Arcade Hybrid-casual"
+        }
+      ],
+      "total_downloads": "500M+",
+      "focus": "Idle Arcade / Hybrid-casual",
+      "contact": {
+        "decision_maker": "Junsik Kong",
+        "title": "CEO & Founder",
+        "linkedin": "https://linkedin.com/in/junsik-kong",
+        "email": "junsik.kong@supercent.io",
+        "email_confidence": "medium"
+      },
+      "outreach_angle": "AI-powered live ops automation - Supercent's idle arcade hits like Burger Please! require constant content updates. AI can automate event generation and economy balancing",
+      "priority": "high",
+      "reason": "First Korean company to break global top 10 publishers, integrating AI into pipeline, 50B KRW revenue, rapid ascent"
+    },
+    {
+      "id": "mag_interactive",
+      "name": "MAG Interactive",
+      "website": "https://maginteractive.com",
+      "location": "Stockholm, Sweden",
+      "founded": 2010,
+      "employees": "100-200",
+      "status": "Public (Nasdaq OMX Nordic: MAG)",
+      "games": ["Ruzzle", "QuizDuel", "Wordzee", "Word Mansion"],
+      "notable_games": [
+        {
+          "name": "Ruzzle",
+          "downloads": "60M+",
+          "category": "Word Casual"
+        },
+        {
+          "name": "QuizDuel",
+          "downloads": "50M+",
+          "category": "Trivia Casual"
+        }
+      ],
+      "total_downloads": "300M+",
+      "focus": "Word & Trivia Casual",
+      "contact": {
+        "decision_maker": "Daniel Hasselberg",
+        "title": "CEO & Co-founder",
+        "linkedin": "https://linkedin.com/in/daniel-hasselberg",
+        "email": "daniel.hasselberg@maginteractive.com",
+        "email_confidence": "high"
+      },
+      "outreach_angle": "AI-generated puzzle content - MAG's word games need fresh content daily. AI can generate puzzles, trivia questions, and word packs at scale for Ruzzle and QuizDuel",
+      "priority": "medium",
+      "reason": "Public company, strong in casual rather than hyper-casual, but proven acquisition strategy"
+    },
+    {
+      "id": "moonee",
+      "name": "Moonee",
+      "website": "https://moonee.io",
+      "location": "Tel Aviv, Israel",
+      "founded": 2018,
+      "employees": "50-100",
+      "status": "Independent - Seed funded",
+      "games": ["Bridge Race", "Stacky Dash", "Hit & Run"],
+      "notable_games": [
+        {
+          "name": "Bridge Race",
+          "downloads": "100M+",
+          "category": "Racing Hyper-casual"
+        },
+        {
+          "name": "Stacky Dash",
+          "downloads": "50M+",
+          "category": "Arcade Hyper-casual"
+        }
+      ],
+      "total_downloads": "500M+",
+      "focus": "Hyper-casual & Hybrid-casual Publishing",
+      "contact": {
+        "decision_maker": "Erez Mishli",
+        "title": "Co-Founder & Co-CEO",
+        "linkedin": "https://linkedin.com/in/erez-mishli",
+        "email": "erez@moonee.io",
+        "email_confidence": "medium"
+      },
+      "outreach_angle": "AI-powered creative optimization - Moonee's publishing model relies on rapid creative testing. AI can generate ad creatives and ASO assets at scale for games like Bridge Race",
+      "priority": "high",
+      "reason": "Data-driven publisher, $12M revenue, strong focus on hyper-casual, rapid creative testing"
+    },
+    {
+      "id": "playrix",
+      "name": "Playrix",
+      "website": "https://playrix.com",
+      "location": "Dublin, Ireland (founded in Russia)",
+      "founded": 2004,
+      "employees": "3000+",
+      "status": "Private - Bootstrapped",
+      "games": ["Homescapes", "Gardenscapes", "Fishdom", "Township"],
+      "notable_games": [
+        {
+          "name": "Homescapes",
+          "downloads": "100M+",
+          "revenue": "$1B+ lifetime",
+          "category": "Match-3 Hybrid-casual"
+        },
+        {
+          "name": "Gardenscapes",
+          "downloads": "100M+",
+          "revenue": "$1B+ lifetime",
+          "category": "Match-3 Hybrid-casual"
+        }
+      ],
+      "total_downloads": "500M+",
+      "focus": "Match-3 & Simulation Hybrid-casual",
+      "contact": {
+        "decision_maker": "Dmitri Bukhman",
+        "title": "Co-Founder & CEO",
+        "linkedin": "https://linkedin.com/in/dmitri-bukhman",
+        "email": "dmitri.bukhman@playrix.com",
+        "email_confidence": "medium"
+      },
+      "outreach_angle": "AI-driven personalization - Playrix's match-3 games have deep economies. AI personalization for difficulty curves and offers could boost retention in Homescapes/Gardenscapes",
+      "priority": "medium",
+      "reason": "Huge scale but more traditional casual. Co-founder CEO reachable, massive live ops needs"
+    },
+    {
+      "id": "ikame",
+      "name": "iKame Games",
+      "website": "https://zegostudio.com",
+      "location": "Hanoi, Vietnam",
+      "founded": 2014,
+      "employees": "200-500",
+      "status": "Independent",
+      "games": ["Car Race", "Moto Rider", "Bike Race", "Car Stunt Master"],
+      "notable_games": [
+        {
+          "name": "Car Race",
+          "downloads": "100M+",
+          "category": "Racing Hyper-casual"
+        },
+        {
+          "name": "Moto Rider",
+          "downloads": "50M+",
+          "category": "Racing Hyper-casual"
+        }
+      ],
+      "total_downloads": "500M+",
+      "focus": "Racing & Hyper-casual",
+      "contact": {
+        "decision_maker": "Quyet Nguyen (Nguyen Manh Quyet)",
+        "title": "CEO & Founder",
+        "linkedin": "https://linkedin.com/in/quyet-nguyen",
+        "email": "quyet.nguyen@ikame.vn",
+        "email_confidence": "medium"
+      },
+      "outreach_angle": "AI content for racing games - iKame's portfolio of racing games (Car Race, Moto Rider) needs constant track/level variety. Procedural AI generation can scale content infinitely",
+      "priority": "high",
+      "reason": "Top 25 global publisher by downloads, Vietnam gaming leader, high release velocity, racing genre expertise"
+    },
+    {
+      "id": "bravestars",
+      "name": "Bravestars Games",
+      "website": "https://bravestars.com",
+      "location": "Hanoi, Vietnam",
+      "founded": 2013,
+      "employees": "100-200",
+      "status": "Independent",
+      "games": ["Hair Salon", "Wood Block Puzzle", "Idle Gym", "Prison Empire"],
+      "notable_games": [
+        {
+          "name": "Hair Salon: Beauty Salon Game",
+          "downloads": "100M+",
+          "category": "Simulation Hyper-casual"
+        },
+        {
+          "name": "Prison Empire Tycoon",
+          "downloads": "50M+",
+          "category": "Idle Simulation Hybrid-casual"
+        }
+      ],
+      "total_downloads": "1B+",
+      "focus": "Simulation & Idle Hybrid-casual",
+      "contact": {
+        "decision_maker": "Lê Mạnh Đức",
+        "title": "CEO",
+        "linkedin": "https://linkedin.com/in/duc-le-manh",
+        "email": "duc.lm@bravestars.com",
+        "email_confidence": "medium"
+      },
+      "outreach_angle": "AI-powered simulation content - Bravestars' simulation games (Hair Salon, Prison Empire) need diverse assets and scenarios. AI can generate characters, scenarios, and salon designs",
+      "priority": "medium",
+      "reason": "1B+ downloads, Vietnamese leader in simulation, recently appointed new CEO (Sept 2025)",
+      "notes": "New CEO appointed Sept 2025 - opportunity for fresh partnerships"
+    },
+    {
+      "id": "ruby_games",
+      "name": "Ruby Games",
+      "website": "https://rubygames.io",
+      "location": "Izmir, Turkey",
+      "founded": 2018,
+      "employees": "20-50",
+      "status": "Acquired by Rovio (2021) - Operates independently",
+      "games": ["Hunter Assassin", "Handyman 3D!", "Press Inc.", "Water Sort Puzzle"],
+      "notable_games": [
+        {
+          "name": "Hunter Assassin",
+          "downloads": "100M+",
+          "category": "Action Hyper-casual"
+        },
+        {
+          "name": "Water Sort Puzzle",
+          "downloads": "50M+",
+          "category": "Puzzle Hyper-casual"
+        }
+      ],
+      "total_downloads": "500M+",
+      "focus": "Action & Puzzle Hyper-casual",
+      "contact": {
+        "decision_maker": "Mert Can Kurum",
+        "title": "Founder & CEO",
+        "linkedin": "https://linkedin.com/in/mert-can-kurum",
+        "email": "mert@rubygames.io",
+        "email_confidence": "high"
+      },
+      "outreach_angle": "AI level generation for puzzle games - Ruby's puzzle hits like Water Sort and Hunter Assassin need thousands of levels. AI can generate and validate level difficulty automatically",
+      "priority": "high",
+      "reason": "Fast-growing Turkish studio, operates independently post-acquisition, founder still CEO, puzzle/action expertise"
+    },
+    {
+      "id": "alictus",
+      "name": "Alictus",
+      "website": "https://alictus.com",
+      "location": "Ankara, Turkey",
+      "founded": 2018,
+      "employees": "50-100",
+      "status": "Acquired by SciPlay (2022) - Operates independently",
+      "games": ["Rob Master 3D", "Deep Clean Inc.", "Money Buster", "Collect Cubes"],
+      "notable_games": [
+        {
+          "name": "Rob Master 3D",
+          "downloads": "50M+",
+          "category": "Action Hyper-casual"
+        },
+        {
+          "name": "Deep Clean Inc.",
+          "downloads": "50M+",
+          "category": "Simulation Hyper-casual"
+        }
+      ],
+      "total_downloads": "300M+",
+      "focus": "Simulation & Action Hyper-casual",
+      "contact": {
+        "decision_maker": "Emre Taş",
+        "title": "CEO & Co-Founder",
+        "linkedin": "https://linkedin.com/in/emre-tas",
+        "email": "emre@alictus.com",
+        "email_confidence": "high"
+      },
+      "outreach_angle": "AI-powered prototyping at scale - Alictus had 3 #1 iOS games in 6 months. AI content generation can accelerate their already rapid prototyping process for simulation games",
+      "priority": "high",
+      "reason": "$100M acquisition by SciPlay, 3 #1 App Store hits in 6 months, operates independently, Turkish studio"
+    }
+  ]
+}

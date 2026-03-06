@@ -1,0 +1,18 @@
+Subject: Bitcoin L2 Gaming Infrastructure + Contrarian Tokenomics
+
+Hi Joe,
+
+I've been following your takes on Bitcoin L2s and the contrarian infrastructure thesis. You cut through the noise better than anyone in the space.
+
+[Company] is building [one-liner on gaming infrastructure]. Our angle: most GameFi tokenomics are broken because they're designed by finance people, not game designers. We've inverted the model—players earn based on skill contribution to the network, not just time spent.
+
+We're chain-agnostic but heavily invested in Bitcoin L2s for settlement. The security guarantees matter when you're building persistent game worlds that players actually own.
+
+I'd love to pressure-test our tokenomics design with someone who's seen the full cycle. Your perspective on what actually survives the next bear market would be invaluable.
+
+15 minutes to rip it apart?
+
+Best,
+[Name]
+
+P.S. — Saw your take on [recent tweet topic]. [One-sentence reaction showing you read it]

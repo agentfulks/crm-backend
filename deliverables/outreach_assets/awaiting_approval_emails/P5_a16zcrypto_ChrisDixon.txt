@@ -1,0 +1,45 @@
+To: chris@a16zcrypto.com
+Subject: AI agents as economic actors in player-owned game economies
+Priority: P5 | Fund: a16z crypto | Score: 94/100 (Highest Priority)
+Check Size: $1M-$50M+ | Stage: Seed to Growth
+
+---
+EMAIL BODY
+---
+Hi Chris,
+
+Your thesis on AI agents breaking the human-scale internet—and blockchains as community-owned services—maps directly to what we're building.
+
+We create AI NPCs as economic actors in player-owned game economies. These aren't scripted characters; they're LLM-driven agents that generate emergent gameplay, create economic value, and operate in decentralized environments.
+
+a16z's $7.6B crypto AUM, Speedrun accelerator, and recent Balance Games investment show you're serious about the AI+crypto+gaming intersection. Our platform enables the "Read Write Own" vision at the infrastructure layer.
+
+Parallel path: We're also applying to Speedrun. Either way, I'd welcome your perspective on AI agents in game economies.
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+[TITLE]
+[COMPANY]
+
+---
+ATTACHMENTS
+---
+1. deliverables/outreach_assets/pitch_deck/latest.pdf
+2. deliverables/outreach_assets/kpi_snapshot/latest.csv
+
+---
+FOLLOW-UP SCHEDULE
+---
+Day 3: February 28, 2026 — Share technical architecture overview
+Day 7: March 4, 2026 — Final bump or pass
+
+---
+PERSONALIZATION NOTES
+---
+- Hook: AI agents thesis, "Read Write Own" alignment, ownership economy
+- Recent context: $7.6B AUM, Speedrun accelerator, Balance Games investment
+- Send window: Tuesday-Thursday, 9-11am PST
+- Parallel path: Apply to Speedrun program as additional entry point
+- Backup contact: Arianna Simpson (GP, gaming/crypto overlap)

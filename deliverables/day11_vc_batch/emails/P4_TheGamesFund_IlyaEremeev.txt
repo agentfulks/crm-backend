@@ -1,0 +1,18 @@
+To: ilya@thegames.fund
+Subject: Most active gaming VC 2024 → Layer AI and the infrastructure thesis
+
+Hi Ilya,
+
+Being named the most active early-stage gaming VC in 2024 isn't just a badge—it's proof that TGF's finger is on the pulse of where the industry is heading. Your investment in Layer AI ($6.5M seed) shows you see what I'm seeing: AI isn't just changing content creation, it's fundamentally changing what's possible in game worlds.
+
+Layer enables smarter game art workflows. But studios still struggle with the runtime infrastructure to actually deploy AI at scale in production multiplayer environments. That's the gap NEXUS AI fills—we're the engine that enables persistent AI agents, evolving world states, and procedural systems without crushing unit economics.
+
+Your background at MGVC (MY.GAMES corporate venture arm) and the fund's outsized raise ($48M vs $30M target) signal LP conviction in your gaming thesis. With Sergey Titov's technical expertise and your team's operational depth, you understand better than most that every content revolution needs a corresponding infrastructure layer.
+
+We're already seeing 10x efficiency gains with early studio partners. Worth a 15-minute conversation to explore how NEXUS fits TGF's infrastructure thesis?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

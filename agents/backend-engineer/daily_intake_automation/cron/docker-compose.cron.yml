@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  daily-intake:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: vc-daily-intake
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - TRELLO_API_KEY=${TRELLO_API_KEY}
+      - TRELLO_TOKEN=${TRELLO_TOKEN}
+      - TRELLO_BOARD_ID=${TRELLO_BOARD_ID}
+      - TRELLO_LIST_ID=${TRELLO_LIST_ID}
+      - LABEL_TYPE_OUTREACH=${LABEL_TYPE_OUTREACH}
+      - LABEL_PRIORITY_P1=${LABEL_PRIORITY_P1}
+      - LABEL_WORKSTREAM_INVESTOR=${LABEL_WORKSTREAM_INVESTOR}
+      - LOG_LEVEL=INFO
+    volumes:
+      - ../logs:/app/logs
+    command: python scripts/daily_intake.py
+    restart: "no"
+  
+  scheduler:
+    image: mcuadros/ofelia:latest
+    container_name: vc-daily-intake-scheduler
+    depends_on:
+      - daily-intake
+    command: daemon --docker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      ofelia.job-run.daily-intake.schedule: "0 8 * * *"
+      ofelia.job-run.daily-intake.container: "vc-daily-intake"

@@ -1,0 +1,210 @@
+{
+  "batch_id": "day4_vc_batch",
+  "batch_date": "2026-02-26",
+  "total_funds": 5,
+  "focus": "gaming/crypto",
+  "packets": [
+    {
+      "fund_id": "animoca-ventures",
+      "fund_name": "Animoca Ventures",
+      "fund_type": "Corporate VC (Animoca Brands)",
+      "aum": "$100M (Fund I)",
+      "stage_focus": ["Seed", "Series A"],
+      "check_size": {
+        "min_usd": 500000,
+        "max_usd": 3000000,
+        "currency": "USD"
+      },
+      "thesis": "Web3 gaming, digital property rights, NFT infrastructure",
+      "portfolio_count": 155,
+      "countries_invested": 26,
+      "notable_investments": [
+        "Yield Guild Games",
+        "Opensea",
+        "Magic Eden",
+        "Polygon (Matic)",
+        "Immutable X"
+      ],
+      "location": "Hong Kong",
+      "website": "https://animoca.ventures",
+      "priority_rank": 1,
+      "score": 95,
+      "target_partner": {
+        "name": "James Ho",
+        "title": "Managing Partner",
+        "email": "james@animocabrands.com",
+        "linkedin": "https://www.linkedin.com/in/james-ho-animoca",
+        "twitter": null,
+        "background": "Serial entrepreneur, joined Animoca 2018, 100+ deals, originated investments in YGG, Opensea, Magic Eden",
+        "accessibility": "High - active on LinkedIn"
+      },
+      "secondary_contact": {
+        "name": "Yat Siu",
+        "title": "Co-founder & Chairman",
+        "email": "yat@animocabrands.com",
+        "linkedin": "https://www.linkedin.com/in/yatsiu",
+        "note": "High-profile founder, better for warm intros"
+      },
+      "outreach_angle": "Reference portfolio companies as proof points. Emphasize digital property rights narrative. Position as ecosystem play with network effects.",
+      "key_triggers": [
+        "Web3 gaming traction",
+        "NFT/digital asset innovation",
+        "Asia market expansion",
+        "Strategic partnership potential"
+      ]
+    },
+    {
+      "fund_id": "delphi-ventures",
+      "fund_name": "Delphi Ventures",
+      "fund_type": "Independent VC",
+      "aum": "Undisclosed",
+      "stage_focus": ["Seed", "Series A"],
+      "check_size": {
+        "min_usd": 500000,
+        "max_usd": 5000000,
+        "currency": "USD"
+      },
+      "thesis": "Crypto infrastructure, DeFi, AI x Crypto, gaming, deep tech",
+      "portfolio_count": null,
+      "ecosystem": "Delphi Digital (research + ventures + labs)",
+      "notable_approach": "Thesis-driven, high-conviction, research-backed",
+      "location": "New York, NY",
+      "website": "https://delphiventures.io",
+      "priority_rank": 2,
+      "score": 92,
+      "target_partner": {
+        "name": "Yan Liberman",
+        "title": "Managing Partner, Co-Founder",
+        "email": "yan@delphidigital.io",
+        "linkedin": "https://www.linkedin.com/in/yanliberman",
+        "twitter": "@YanLiberman",
+        "background": "Former Bloomberg equity research, Deutsche Bank. CFA, CAIA. Co-founded Delphi Digital.",
+        "accessibility": "High - active on Twitter/X and LinkedIn"
+      },
+      "secondary_contact": {
+        "name": "Kevin Kelly",
+        "title": "Co-Founder",
+        "email": "kevin@delphidigital.io",
+        "linkedin": "https://www.linkedin.com/in/kevinkelly",
+        "note": "Also CFA, research-focused approach"
+      },
+      "outreach_angle": "Lead with technical depth and novel mechanism design. Reference Delphi Research content. Emphasize analytical rigor and contrarian insights.",
+      "key_triggers": [
+        "Technical innovation",
+        "Novel tokenomics",
+        "Infrastructure plays",
+        "Research-worthy thesis"
+      ]
+    },
+    {
+      "fund_id": "shima-capital",
+      "fund_name": "Shima Capital",
+      "fund_type": "Independent VC",
+      "aum": "$200M+",
+      "stage_focus": ["Pre-seed", "Seed", "Series A"],
+      "check_size": {
+        "min_usd": 500000,
+        "max_usd": 2000000,
+        "currency": "USD"
+      },
+      "thesis": "Web3, gaming, DeFi, infrastructure",
+      "portfolio_count": 365,
+      "investment_style": "High-velocity, thesis-driven",
+      "location": "San Francisco, CA",
+      "website": "https://shima.capital",
+      "priority_rank": 3,
+      "score": 88,
+      "target_partner": {
+        "name": "Yida Gao",
+        "title": "Managing General Partner, Founder",
+        "email": "yida@shimacapital.com",
+        "linkedin": "https://www.linkedin.com/in/yida-gao",
+        "twitter": "@yidagao",
+        "background": "Forbes 30 Under 30. Former Struck Capital, Divergence Digital Currency.",
+        "accessibility": "High - very active on Twitter/X"
+      },
+      "outreach_angle": "Lead with traction metrics. Bold, ambitious vision resonates. Reference DeFi/gaming intersection. Speed and conviction matter.",
+      "key_triggers": [
+        "Strong traction metrics",
+        "Ambitious vision",
+        "DeFi + gaming intersection",
+        "Velocity and execution speed"
+      ]
+    },
+    {
+      "fund_id": "sfermion",
+      "fund_name": "Sfermion",
+      "fund_type": "Multi-strategy investment firm",
+      "aum": "Undisclosed",
+      "stage_focus": ["Seed", "Series A"],
+      "check_size": {
+        "min_usd": 250000,
+        "max_usd": 2000000,
+        "currency": "USD"
+      },
+      "thesis": "Immersive internet, metaverse, NFTs, gaming",
+      "strategy": "Multi-strategy: direct NFT + venture equity",
+      "notable_distinction": "Launched one of first NFT funds for outside investors",
+      "location": "Chicago, IL",
+      "website": "https://www.sfermion.io",
+      "priority_rank": 4,
+      "score": 85,
+      "target_partner": {
+        "name": "Andrew Steinwold",
+        "title": "Managing Partner",
+        "email": "andrew@sfermion.io",
+        "linkedin": "https://www.linkedin.com/in/andrew-steinwold",
+        "twitter": "@AndrewSteinwold",
+        "background": "Pioneer in NFT/metaverse investing. Hosts Zima Red podcast. Deep metaverse asset thesis.",
+        "accessibility": "Very High - podcast host, thought leader"
+      },
+      "outreach_angle": "Reference Zima Red podcast content. Lead with metaverse/immersive internet angle. Demonstrate deep thesis understanding.",
+      "key_triggers": [
+        "Metaverse/immersive internet",
+        "NFT innovation",
+        "Digital asset thesis",
+        "Thought leadership alignment"
+      ]
+    },
+    {
+      "fund_id": "everyrealm",
+      "fund_name": "Everyrealm",
+      "fund_type": "Operating company + venture",
+      "total_raised": "$102M (Series A: $60M)",
+      "stage_focus": ["Seed", "Series A"],
+      "check_size": {
+        "min_usd": 100000,
+        "max_usd": 1000000,
+        "currency": "USD"
+      },
+      "thesis": "Metaverse real estate, gaming, virtual world infrastructure",
+      "product": "Hometopia (Web3 home design/building game)",
+      "investors": ["Lightspeed", "a16z", "Republic", "Prosus"],
+      "location": "New York, NY",
+      "website": "https://www.everyrealm.com",
+      "priority_rank": 5,
+      "score": 82,
+      "target_partner": {
+        "name": "Janine Yorio",
+        "title": "CEO & Co-Founder",
+        "email": "janine@everyrealm.com",
+        "linkedin": "https://www.linkedin.com/in/janineyorio",
+        "twitter": null,
+        "background": "Former Republic Co-head, Compound founder. Operator-first approach.",
+        "accessibility": "Very High - directly accessible"
+      },
+      "secondary_contact": {
+        "name": "Jesse Stein",
+        "title": "Co-Founder",
+        "linkedin": "https://www.linkedin.com/in/jessestein"
+      },
+      "outreach_angle": "Lead with product/demo angle. Reference Hometopia/metaverse real estate. Position as strategic partner, not just capital. Operator background means product-first pitch.",
+      "key_triggers": [
+        "Product/demo ready",
+        "Metaverse real estate",
+        "Strategic partnership",
+        "Distribution opportunities"
+      ]
+    }
+  ]
+}

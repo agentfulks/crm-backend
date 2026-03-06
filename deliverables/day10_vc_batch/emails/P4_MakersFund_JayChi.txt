@@ -1,0 +1,18 @@
+To: jay@makersfund.com
+Subject: Inworld AI + the runtime infrastructure powering AI-native gaming
+
+Hi Jay,
+
+Makers Fund's exclusive focus on interactive entertainment and your investment in Inworld AI show clear conviction that AI is fundamentally changing what's possible in gaming. But while Inworld enables smarter NPCs through natural language, studios still struggle to run AI at scale in production multiplayer environments—NEXUS AI solves that runtime infrastructure gap.
+
+We're building the engine that enables persistent AI agents, dynamic world evolution, and real-time inference at unit economics that work for live games. Your portfolio companies like Scopely (congrats on the $4.9B exit), Voodoo, and Lila Games understand the difference between demo AI and production AI. The studios we're piloting with have cut AI runtime costs by 60% while shipping persistent multiplayer features they couldn't build before.
+
+Makers Fund's hands-on approach and global network across Tokyo, London, San Francisco, and Singapore aligns perfectly with our stage. We need strategic guidance navigating the complex gaming landscape as much as we need capital—and your founding vision of supporting visionary gaming entrepreneurs resonates deeply with our mission.
+
+Worth a 15-minute conversation to explore how NEXUS AI fits Makers Fund's AI infrastructure thesis?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

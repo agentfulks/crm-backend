@@ -1,0 +1,353 @@
+{
+  "generated_at": "2026-02-24T21:02:20.944279+00:00",
+  "source_csv": "/data/workspace/data/raw/gaming_vc_list.csv",
+  "top_funds": [
+    {
+      "rank": 1,
+      "name": "BITKRAFT Ventures",
+      "score": 84.0,
+      "breakdown": {
+        "stage": 19.0,
+        "check_size": 15.0,
+        "geo": 6.0,
+        "sector": 24.0,
+        "warmth": 10.0,
+        "contact": 10.0,
+        "penalty": 0.0
+      },
+      "firm_type": "VC",
+      "hq_city": "Los Angeles",
+      "hq_region": "California",
+      "hq_country": "United States",
+      "stage_focus": [
+        "Seed",
+        "Series A",
+        "Series B"
+      ],
+      "check_size": "$500K\u2013$10.0M USD",
+      "contact_email": "pitch@bitkraft.vc",
+      "keywords_hit": [
+        "interactive",
+        "esports",
+        "immersive",
+        "synthetic reality",
+        "gaming",
+        "game"
+      ],
+      "overlap_ratio": 1.0,
+      "notes": [
+        "HQ: Los Angeles California United States",
+        "Check-size overlap 100% of target band",
+        "Sector keywords: interactive, esports, immersive, synthetic reality, gaming, game",
+        "Contact channel: pitch@bitkraft.vc",
+        "Manual strategic boost applied"
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "Konvoy Ventures",
+      "score": 59.33,
+      "breakdown": {
+        "stage": 25.0,
+        "check_size": 8.33,
+        "geo": 8.0,
+        "sector": 12.0,
+        "warmth": 8.0,
+        "contact": 0.0,
+        "penalty": 2.0
+      },
+      "firm_type": "VC",
+      "hq_city": "Denver",
+      "hq_region": "Colorado",
+      "hq_country": "United States",
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": "$500K\u2013$3.0M USD",
+      "contact_email": null,
+      "keywords_hit": [
+        "infrastructure",
+        "esports",
+        "gaming"
+      ],
+      "overlap_ratio": 0.556,
+      "notes": [
+        "HQ: Denver Colorado United States",
+        "Check-size overlap 56% of target band",
+        "Sector keywords: infrastructure, esports, gaming",
+        "Manual strategic boost applied"
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Mechanism Capital",
+      "score": 53.33,
+      "breakdown": {
+        "stage": 25.0,
+        "check_size": 3.33,
+        "geo": 0.0,
+        "sector": 8.0,
+        "warmth": 8.0,
+        "contact": 10.0,
+        "penalty": 1.0
+      },
+      "firm_type": "VC",
+      "hq_city": null,
+      "hq_region": null,
+      "hq_country": null,
+      "stage_focus": [
+        "Pre-seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": "$1.0M\u2013$2.0M USD",
+      "contact_email": "contact@mechanism.capital",
+      "keywords_hit": [
+        "ai",
+        "gaming"
+      ],
+      "overlap_ratio": 0.222,
+      "notes": [
+        "Check-size overlap 22% of target band",
+        "Sector keywords: ai, gaming",
+        "Contact channel: contact@mechanism.capital",
+        "Manual strategic boost applied"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Collab+Currency",
+      "score": 51.33,
+      "breakdown": {
+        "stage": 19.0,
+        "check_size": 8.33,
+        "geo": 6.0,
+        "sector": 0.0,
+        "warmth": 8.0,
+        "contact": 10.0,
+        "penalty": 0.0
+      },
+      "firm_type": "VC",
+      "hq_city": "Eugene",
+      "hq_region": "Oregon",
+      "hq_country": "USA",
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed"
+      ],
+      "check_size": "$100K\u2013$3.0M USD",
+      "contact_email": "info@collabcurrency.com",
+      "keywords_hit": [],
+      "overlap_ratio": 0.556,
+      "notes": [
+        "HQ: Eugene Oregon USA",
+        "Check-size overlap 56% of target band",
+        "Contact channel: info@collabcurrency.com",
+        "Manual strategic boost applied"
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "Variant",
+      "score": 48.33,
+      "breakdown": {
+        "stage": 25.0,
+        "check_size": 13.33,
+        "geo": 0.0,
+        "sector": 0.0,
+        "warmth": 12.0,
+        "contact": 0.0,
+        "penalty": 2.0
+      },
+      "firm_type": "VC",
+      "hq_city": "New York",
+      "hq_region": "NY",
+      "hq_country": "USA / Distributed",
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": "$1.0M\u2013$5.0M USD",
+      "contact_email": null,
+      "keywords_hit": [],
+      "overlap_ratio": 0.889,
+      "notes": [
+        "HQ: New York NY USA / Distributed",
+        "Check-size overlap 89% of target band",
+        "Manual strategic boost applied"
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "Velo Partners",
+      "score": 45.0,
+      "breakdown": {
+        "stage": 25.0,
+        "check_size": 0.0,
+        "geo": 6.0,
+        "sector": 4.0,
+        "warmth": 0.0,
+        "contact": 10.0,
+        "penalty": 0.0
+      },
+      "firm_type": "VC",
+      "hq_city": "London",
+      "hq_region": "England",
+      "hq_country": "United Kingdom",
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": "N/A",
+      "contact_email": "info@velopartners.co.uk",
+      "keywords_hit": [
+        "gaming"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ: London England United Kingdom",
+        "Sector keywords: gaming",
+        "Contact channel: info@velopartners.co.uk"
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "Andreessen Horowitz / a16z",
+      "score": 43.33,
+      "breakdown": {
+        "stage": 25.0,
+        "check_size": 13.33,
+        "geo": 6.0,
+        "sector": 4.0,
+        "warmth": 0.0,
+        "contact": 0.0,
+        "penalty": 5.0
+      },
+      "firm_type": "VC",
+      "hq_city": "Menlo Park",
+      "hq_region": "California",
+      "hq_country": "United States",
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A",
+        "Series B",
+        "Growth"
+      ],
+      "check_size": "$1.0M\u2013$200.0M USD",
+      "contact_email": null,
+      "keywords_hit": [
+        "ai"
+      ],
+      "overlap_ratio": 0.889,
+      "notes": [
+        "HQ: Menlo Park California United States",
+        "Check-size overlap 89% of target band",
+        "Sector keywords: ai"
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Bessemer Venture Partners",
+      "score": 43.0,
+      "breakdown": {
+        "stage": 25.0,
+        "check_size": 15.0,
+        "geo": 8.0,
+        "sector": 0.0,
+        "warmth": 0.0,
+        "contact": 0.0,
+        "penalty": 5.0
+      },
+      "firm_type": "VC",
+      "hq_city": "San Francisco",
+      "hq_region": "California",
+      "hq_country": "United States",
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A",
+        "Series B",
+        "Growth"
+      ],
+      "check_size": "$100K\u2013$50.0M USD",
+      "contact_email": null,
+      "keywords_hit": [],
+      "overlap_ratio": 1.0,
+      "notes": [
+        "HQ: San Francisco California United States",
+        "Check-size overlap 100% of target band"
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "Solana Ventures",
+      "score": 41.0,
+      "breakdown": {
+        "stage": 25.0,
+        "check_size": 0.0,
+        "geo": 6.0,
+        "sector": 12.0,
+        "warmth": 0.0,
+        "contact": 0.0,
+        "penalty": 2.0
+      },
+      "firm_type": "Corporate VC",
+      "hq_city": "San Francisco",
+      "hq_region": null,
+      "hq_country": "USA",
+      "stage_focus": [
+        "Pre-seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": "N/A",
+      "contact_email": null,
+      "keywords_hit": [
+        "ai",
+        "infrastructure",
+        "gaming"
+      ],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ: San Francisco  USA",
+        "Sector keywords: ai, infrastructure, gaming"
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "Andover Ventures",
+      "score": 39.0,
+      "breakdown": {
+        "stage": 25.0,
+        "check_size": 0.0,
+        "geo": 6.0,
+        "sector": 0.0,
+        "warmth": 0.0,
+        "contact": 8.0,
+        "penalty": 0.0
+      },
+      "firm_type": "VC",
+      "hq_city": null,
+      "hq_region": null,
+      "hq_country": "United States",
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": "$50K\u2013$500K USD",
+      "contact_email": "user@domain.com",
+      "keywords_hit": [],
+      "overlap_ratio": 0.0,
+      "notes": [
+        "HQ:   United States",
+        "Contact channel: user@domain.com"
+      ]
+    }
+  ]
+}

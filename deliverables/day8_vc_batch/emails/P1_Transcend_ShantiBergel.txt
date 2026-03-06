@@ -1,0 +1,18 @@
+To: shanti@transcend.fund
+Subject: Ruckus Games + Live Aware Labs portfolio → AI infrastructure for dynamic worlds
+
+Hi Shanti,
+
+Transcend's back-to-back investments in Ruckus Games' $19M Series A and Live Aware Labs' AI-powered game dev platform caught my attention. You're clearly betting on AI as the foundational layer for next-gen multiplayer experiences.
+
+I'm reaching out because NEXUS AI is building the infrastructure layer that makes dynamic, AI-powered game worlds actually scalable. While Live Aware is revolutionizing QA and development workflows, NEXUS handles the runtime architecture—enabling persistent AI agents, procedural narrative systems, and worlds that evolve based on player behavior without ballooning compute costs.
+
+The founders come from [REDACTED - add relevant background]. We're seeing 10x efficiency gains for studios building persistent multiplayer environments, which feels aligned with where Transcend's portfolio is heading.
+
+Worth a 15-minute conversation? I'd love to share what we're seeing from AAA studios already piloting the platform.
+
+[CALENDLY_LINK]
+
+Best,
+[Founder Name]
+NEXUS AI

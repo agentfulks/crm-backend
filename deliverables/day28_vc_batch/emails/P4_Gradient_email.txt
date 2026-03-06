@@ -1,0 +1,15 @@
+To: wenwen@gradient.com
+Subject: Multi-cloud AI infrastructure — beyond GCP
+
+Hi Wen-Wen,
+
+Gradient's focus on AI-native companies with technical differentiation has produced an impressive portfolio. The access to Google AI research and infrastructure is a unique advantage.
+
+We're building AI infrastructure that takes a different approach — multi-cloud native from day one. While we integrate deeply with GCP, AWS, and Azure, we maintain independence so companies aren't locked into any single provider.
+
+Given Gradient's thesis on AI-native infrastructure and Google's cloud leadership, I'd value your perspective. Open to a brief conversation?
+
+Best,
+[Founder Name]
+[Company Name]
+[Phone]

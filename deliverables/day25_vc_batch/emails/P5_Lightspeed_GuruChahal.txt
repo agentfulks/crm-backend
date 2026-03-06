@@ -1,0 +1,25 @@
+Subject: Enterprise AI infrastructure / [Company]
+
+Hi Guru,
+
+Your background building Avi Networks and your focus at Lightspeed on cloud infrastructure and DevOps gives you a unique perspective on what separates infrastructure that gets adopted from infrastructure that doesn't.
+
+We're building [Company] to solve [specific AI infrastructure problem for enterprises]. Having seen the transition from traditional networking to SDN firsthand, we believe AI infrastructure is at a similar inflection point where legacy approaches fundamentally break down.
+
+Our team combines deep expertise in [technical domain] with experience building [relevant prior work]. We're seeing strong pull from [target customer segment] who are struggling with [specific pain point].
+
+Lightspeed's investments in Snorkel AI, Anyscale, and Moveworks show your conviction on AI infrastructure for the enterprise. We'd love to explore how [Company] fits into that thesis.
+
+We're raising [round] to [use of funds]. Do you have time for a conversation next week?
+
+Best,
+[Name]
+[Title]
+[Company]
+[LinkedIn profile]
+
+---
+FOLLOW-UP SCHEDULE:
+- Day 3: Follow-up with enterprise customer case study or pilot results
+- Day 7: Follow-up with relevant infrastructure trend or insight
+- Day 14: Final follow-up, offer warm intro through mutual connection if available

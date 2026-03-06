@@ -1,0 +1,38 @@
+{
+  "batch_id": "day16_vc_batch",
+  "import_date": "2026-02-28",
+  "target_board": "VC Outreach Pipeline",
+  "target_list": "To Do",
+  "cards": [
+    {
+      "name": "Day 16: Foresight Ventures - Tony Cheng",
+      "desc": "**Score:** 92/100  \n**Fund:** Foresight Ventures  \n**Partner:** Tony Cheng (Managing Partner)  \n**Email:** tony@foresightventures.com  \n**Stage:** Seed to Series B  \n**Check:** $500K–$5M  \n**Location:** New York / Singapore  \n\n**Thesis:** Connecting Eastern and Western crypto ecosystems. Web3 gaming + AI. Research-driven with owned media network (The Block, Foresight News).  \n\n**Outreach Angle:** East-West bridge narrative. AI + Web3 intersection. Bitget ecosystem potential.  \n\n**Key Triggers:**\n- Web3 gaming traction\n- AI integration with blockchain\n- Cross-border expansion (Asia/US)\n- Media amplification via The Block  \n\n**Background:** Former Sequoia Capital China investor, Head of Corporate Development at Bitget Exchange. Active on Twitter/X @TonyCheng1992.  \n\n**Email Draft:** /deliverables/day16_vc_batch/emails/foresight_ventures.txt",
+      "labels": ["day16", "priority-1", "gaming", "ai", "crypto"],
+      "due": "2026-03-03T10:00:00.000Z"
+    },
+    {
+      "name": "Day 16: Venture Reality Fund - Tipatat Chennavasin",
+      "desc": "**Score:** 90/100  \n**Fund:** The Venture Reality Fund (VRF)  \n**Partner:** Tipatat Chennavasin (Co-Founder & GP)  \n**Email:** tipatat@thevrfund.com  \n**Stage:** Pre-seed to Series A  \n**Check:** $100K–$500K  \n**Location:** Redwood City, CA  \n\n**Thesis:** AI & Spatial Computing. VR/AR/MR investments across gaming, media, entertainment. Multiple Meta exits.  \n\n**Outreach Angle:** Spatial gaming innovation. AI-generated immersive content. Reference Meta portfolio exits (Beat Games, Supernatural).  \n\n**Key Triggers:**\n- VR/AR gaming innovation\n- Spatial computing applications\n- AI-generated immersive content\n- Metaverse infrastructure plays  \n\n**Background:** Stanford grad, pioneer in VR/AR investing. Thought leader, active on Twitter @tipatat.  \n\n**Email Draft:** /deliverables/day16_vc_batch/emails/venture_reality_fund.txt",
+      "labels": ["day16", "priority-2", "gaming", "ai", "spatial"],
+      "due": "2026-03-04T10:00:00.000Z"
+    },
+    {
+      "name": "Day 16: Asymmetric - Joe McCann",
+      "desc": "**Score:** 88/100  \n**Fund:** Asymmetric  \n**Partner:** Joe McCann (Founder, CEO, CIO)  \n**Email:** joe@asymmetric.financial  \n**Stage:** Pre-seed to Series A  \n**Check:** $10K–$1M  \n**Location:** Miami, FL  \n\n**Thesis:** Blockchain-agnostic Web3/crypto across DeFi, mobile, gaming. Bitcoin L2 vertical fund + hedge fund strategies.  \n\n**Outreach Angle:** Technical depth and contrarian thesis. Bold tokenomics. Bitcoin L2 gaming infrastructure.  \n\n**Key Triggers:**\n- Bitcoin L2 infrastructure\n- DeFi gaming mechanics\n- Novel tokenomics design\n- Technical innovation  \n\n**Background:** 24+ years tech/hedge fund/crypto experience. Former Microsoft, quant trader. Extremely active on Twitter @joemccann.  \n\n**Email Draft:** /deliverables/day16_vc_batch/emails/asymmetric.txt",
+      "labels": ["day16", "priority-3", "gaming", "crypto", "bitcoin"],
+      "due": "2026-03-05T10:00:00.000Z"
+    },
+    {
+      "name": "Day 16: Flori Ventures - Maria Alegre",
+      "desc": "**Score:** 87/100  \n**Fund:** Flori Ventures  \n**Partner:** Maria Alegre (Co-Founder & Managing Partner)  \n**Email:** maria@floriventures.com  \n**Stage:** Pre-seed, Seed  \n**Check:** $100K–$500K  \n**Location:** San Francisco, CA  \n\n**Thesis:** Celo ecosystem seed fund. Financial inclusion through Web3. Gaming-native team.  \n\n**Outreach Angle:** Gaming operator to gaming founder. Chartboost legacy reference. Mobile + blockchain convergence.  \n\n**Key Triggers:**\n- Mobile gaming + blockchain\n- Financial inclusion through games\n- Celo ecosystem alignment\n- Emerging markets focus  \n\n**Background:** Co-founded Chartboost (60K+ games, 12B sessions/month). Forbes 30 Under 30. Ex-Tapulous (acquired by Disney).  \n\n**Email Draft:** /deliverables/day16_vc_batch/emails/flori_ventures.txt",
+      "labels": ["day16", "priority-4", "gaming", "mobile", "web3"],
+      "due": "2026-03-06T10:00:00.000Z"
+    },
+    {
+      "name": "Day 16: CMT Digital - Charlie Sandor",
+      "desc": "**Score:** 85/100  \n**Fund:** CMT Digital  \n**Partner:** Charlie Sandor (Investment Partner)  \n**Email:** csandor@cmt.digital  \n**Stage:** Seed to Series B  \n**Check:** $500K–$5M  \n**Location:** Chicago / New York  \n\n**Thesis:** Early blockchain infrastructure. One of earliest crypto allocators. Just raised $136M Fund IV (Nov 2025).  \n\n**Outreach Angle:** Infrastructure-first. Institutional adoption narrative. Recent fund close means active deployment.  \n\n**Key Triggers:**\n- Blockchain infrastructure\n- Institutional adoption\n- Regulatory-compliant design\n- Trading/gaming convergence  \n\n**Background:** Harvard grad. Investment team member focused on early-stage crypto infrastructure. Part of 25+ world-class team.  \n\n**Email Draft:** /deliverables/day16_vc_batch/emails/cmt_digital.txt",
+      "labels": ["day16", "priority-5", "gaming", "infrastructure", "institutional"],
+      "due": "2026-03-07T10:00:00.000Z"
+    }
+  ]
+}

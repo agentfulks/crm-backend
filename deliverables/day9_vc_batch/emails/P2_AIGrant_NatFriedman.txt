@@ -1,0 +1,18 @@
+To: nat@aigrant.com
+Subject: Andromeda Cluster + AI Gaming Infrastructure
+
+Hi Nat,
+
+AI Grant's Andromeda Cluster with 4,000+ H100s is a massive strategic advantage for AI-native companies. NEXUS AI is building something that could put those GPUs to serious work.
+
+We're creating an AI-native game engine for procedural world generation and autonomous agents in persistent multiplayer environments. Training foundation models for real-time world synthesis requires serious compute—exactly what the Andromeda Cluster provides.
+
+Your background at GitHub and appreciation for developer tools resonates here. We're essentially building the "GitHub Copilot for game worlds"—AI infrastructure that amplifies what game developers can create. The grant-first approach fits perfectly for proving out our core models before scaling.
+
+Given AI Grant's thesis on fundamental AI research applied to real-world problems, I'd love to explore whether NEXUS AI fits the portfolio. Would you have 15 minutes for a conversation?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

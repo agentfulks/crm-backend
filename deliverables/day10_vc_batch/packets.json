@@ -1,0 +1,161 @@
+[
+  {
+    "fund_name": "Griffin Gaming Partners",
+    "aum": "$1.5B",
+    "stage": "Seed to Series A (Multi-stage)",
+    "partner": {
+      "name": "Peter Levin",
+      "title": "Managing Director & Co-Founder",
+      "email": "peter@griffingp.com"
+    },
+    "check_size_range": "$500K - $5M+",
+    "gaming_ai_thesis": "Griffin Gaming Partners is one of the world's leading venture funds focused exclusively on gaming, with $1.5 billion under management. Founded in 2019 by Peter Levin, Phil Sanderson, and Nick Tuosto, they invest at the intersection of content, social platforms, and software infrastructure. Their thesis centers on backing visionary founders who are reinventing gaming through emerging technologies. They have a strong conviction in AI-driven game development, next-generation gaming infrastructure, and platforms that enable immersive, dynamic experiences. Griffin emphasizes being 'founder-friendly' and brings decades of investment, advisory, and operational experience to every partnership.",
+    "fit_score": 90,
+    "fit_breakdown": {
+      "gaming_native_fund": 20,
+      "ai_infrastructure_focus": 18,
+      "deep_operational_expertise": 18,
+      "strategic_portfolio_alignment": 17,
+      "check_size_flexibility": 17
+    },
+    "geographic_focus": "Global (Santa Monica-based)",
+    "notable_gaming_investments": [
+      "Discord (gaming communication platform, $15B+ valuation)",
+      "Scopely (mobile gaming, acquired by Savvy Games for $4.9B)",
+      "AppLovin (mobile marketing, IPO)",
+      "Overwolf (gaming platform/infrastructure)",
+      "Second Dinner (Marvel Snap, $100M+ funding)",
+      "Spyke Games (mobile gaming, $55M Series A)",
+      "WinZO (social gaming platform, India)"
+    ],
+    "recent_fund": "Fund II - $750M (March 2022)",
+    "outreach_angle": "Griffin's portfolio of Discord, Overwolf, and Second Dinner demonstrates deep commitment to gaming infrastructure and social platforms—exactly the ecosystem NEXUS AI serves. Peter Levin's background as President of Interactive Ventures at Lionsgate and co-founder of Nerdist Industries provides unique perspective on content-tech convergence. Their multi-stage approach offers flexibility for seed entry with Series A follow-on potential."
+  },
+  {
+    "fund_name": "Galaxy Interactive",
+    "aum": "$325M+ (Fund II)",
+    "stage": "Seed to Series A",
+    "partner": {
+      "name": "Sam Englebardt",
+      "title": "Co-Founder and General Partner",
+      "email": "sam@galaxyinteractive.io"
+    },
+    "check_size_range": "$500K - $3M",
+    "gaming_ai_thesis": "Galaxy Interactive invests at the intersection of content, technology, and social commerce with an emphasis on video games and the infrastructure powering immersive virtual worlds. As part of Galaxy Ventures, they focus on next-generation infrastructure and human creativity—where immersive technology, AI, spatial computing, and blockchain converge. Their thesis centers on 'Interactive is eating the world,' recognizing that gaming-born technology (GPUs, real-time engines, user-driven systems) now fuels AI, blockchain, quantum, and spatial computing. They back founders building the future of interactive entertainment across gaming, metaverse infrastructure, and AI-powered experiences.",
+    "fit_score": 88,
+    "fit_breakdown": {
+      "gaming_intersection_focus": 20,
+      "ai_infrastructure_thesis": 18,
+      "strategic_platform_vision": 17,
+      "portfolio_synergies": 17,
+      "check_size_alignment": 16
+    },
+    "geographic_focus": "Global (Santa Monica-based, part of Galaxy Digital)",
+    "notable_gaming_investments": [
+      "Mythical Games (blockchain gaming, NFL Rivals)",
+      "1047 Games (Splitgate, $100M+ raised)",
+      "Immutable X (Layer 2 gaming blockchain)",
+      "Genvid (interactive streaming technology)",
+      "GreenPark Sports (virtual fan experiences)",
+      "Republic (investment platform, gaming exposure)",
+      "StockX (sneaker marketplace, gaming crossover)"
+    ],
+    "recent_fund": "Fund II - $325M (October 2021)",
+    "outreach_angle": "Galaxy Interactive's explicit thesis on gaming-born technology fueling AI and spatial computing directly aligns with NEXUS AI's infrastructure play. Sam Englebardt's background in media and technology investing provides unique perspective on platform shifts. Their portfolio including Mythical Games and Immutable X shows active deployment in AI-gaming intersections. The 'Interactive is eating the world' framing perfectly captures the NEXUS AI opportunity."
+  },
+  {
+    "fund_name": "a16z Games",
+    "aum": "$1.2B+ (Games Fund One $600M + Games Fund Two $600M)",
+    "stage": "Pre-seed to Series A",
+    "partner": {
+      "name": "Andrew Chen",
+      "title": "General Partner, a16z Games",
+      "email": "andrew@a16z.com"
+    },
+    "check_size_range": "$500K - $1M (Speedrun) - $5M+ (direct)",
+    "gaming_ai_thesis": "a16z Games believes games will play a pivotal role in defining how we socialize, create, and experience digital worlds. Their thesis centers on games as the next-generation social platform, AI-driven creative tools, and the infrastructure enabling immersive experiences. The Speedrun accelerator program ($750K-$1M investments) specifically targets tech, entertainment, and AI startups. Andrew Chen leads investments with focus on network effects, platform shifts, and AI applications in gaming. They view gaming as the frontier for testing and scaling new technologies—from GPUs to AI models to virtual economies—that eventually reshape broader society.",
+    "fit_score": 92,
+    "fit_breakdown": {
+      "gaming_as_platform_thesis": 20,
+      "ai_creative_tools_focus": 19,
+      "speedrun_accelerator_fit": 18,
+      "andreessen_network_effects": 18,
+      "check_size_flexibility": 17
+    },
+    "geographic_focus": "Global (Menlo Park-based)",
+    "notable_gaming_investments": [
+      "Riot Games (League of Legends)",
+      "Discord (gaming communication)",
+      "Roblox (user-generated content platform)",
+      "Sky Mavis/Axie Infinity (blockchain gaming)",
+      "Singularity 6 (Paleo Pines)",
+      "Series (AI game development platform)",
+      "40+ AI startups through Speedrun"
+    ],
+    "recent_fund": "Games Fund Two - $600M (June 2025)",
+    "outreach_angle": "a16z Games' newly raised $600M Fund Two (June 2025) is actively deploying in AI-gaming intersections. Andrew Chen's expertise in network effects and platform growth is legendary—his essays on cold start problems are required reading. The Speedrun accelerator provides a perfect entry point for NEXUS AI's stage. Their thesis that 'games are the next social platforms' directly supports AI infrastructure for dynamic game worlds."
+  },
+  {
+    "fund_name": "Makers Fund",
+    "aum": "$500M (Fund III, 2022)",
+    "stage": "Seed to Series A",
+    "partner": {
+      "name": "Jay Chi",
+      "title": "Founding Partner",
+      "email": "jay@makersfund.com"
+    },
+    "check_size_range": "$1M - $5M+",
+    "gaming_ai_thesis": "Makers Fund is a venture capital firm dedicated exclusively to supporting founders and companies in the interactive entertainment industry. Founded in 2017, they invest across the gaming ecosystem from studios to platforms to infrastructure. Their thesis centers on the next generation of gaming technology—AI-powered development tools, cloud gaming infrastructure, and new platforms that enable creators. They bring together investors, engineers, creatives, and data scientists who are passionate about gaming. Makers Fund takes a hands-on approach, providing strategic guidance and operational support to help portfolio companies navigate the complex gaming landscape.",
+    "fit_score": 87,
+    "fit_breakdown": {
+      "gaming_exclusive_focus": 20,
+      "ai_infrastructure_interest": 18,
+      "hands_on_operational_support": 17,
+      "check_size_alignment": 16,
+      "global_gaming_network": 16
+    },
+    "geographic_focus": "Global (Tokyo, London, San Francisco, Singapore)",
+    "notable_gaming_investments": [
+      "Scopely (mobile gaming, $4.9B exit)",
+      "Voodoo (hyper-casual mobile games)",
+      "FundamentalVR (VR surgical training)",
+      "Lila Games (mobile FPS)",
+      "Kepler Interactive (publisher collective)",
+      "Inworld AI (AI NPC platform)",
+      "Portkey Games (WB Games, Hogwarts Legacy)"
+    ],
+    "recent_fund": "Fund III - $500M (March 2022)",
+    "outreach_angle": "Makers Fund's exclusive focus on interactive entertainment makes them ideal partners for NEXUS AI. Their investment in Inworld AI (AI NPC platform) demonstrates active interest in AI-gaming intersections. Jay Chi's founding vision of supporting visionary gaming entrepreneurs aligns with NEXUS AI's mission. Their multi-office global presence provides access to gaming markets worldwide. The fund's hands-on approach offers operational value beyond capital."
+  },
+  {
+    "fund_name": "GFR Fund",
+    "aum": "$100M+ (estimated)",
+    "stage": "Seed to Series A",
+    "partner": {
+      "name": "Yasushi Komori",
+      "title": "General Partner",
+      "email": "yasushi@gfrfund.com"
+    },
+    "check_size_range": "$100K - $5M",
+    "gaming_ai_thesis": "GFR Fund is a San Francisco-based, globally-oriented venture capital fund backing founders pioneering in consumer technology, with deep expertise in gaming, generative AI, the creator economy, and digital entertainment. They invest in founders who are ahead of social trends, understand their audience, and creatively combine existing technologies to offer new experiences. Their thesis centers on the convergence of gaming, AI, and digital communities—backing platforms that enable creators and reshape how users engage with interactive content. GFR takes a collaborative approach, working closely with founders to navigate the Asian and Western markets.",
+    "fit_score": 85,
+    "fit_breakdown": {
+      "gaming_ai_convergence_focus": 19,
+      "consumer_entertainment_expertise": 17,
+      "check_size_flexibility": 17,
+      "global_market_access": 16,
+      "founder_collaborative_approach": 16
+    },
+    "geographic_focus": "Global (San Francisco-based, strong Asia network)",
+    "notable_gaming_investments": [
+      "GEEIQ (gaming/metaverse data platform)",
+      "Omeda Studios (Predecessor game)",
+      "Alinea Invest (community-first investing)",
+      "Magma (gaming community platform)",
+      "Multiple stealth AI gaming companies",
+      "Creator economy platforms with gaming applications"
+    ],
+    "recent_fund": "Fund II - deploying (2023-2024)",
+    "outreach_angle": "GFR Fund's explicit focus on gaming and generative AI convergence aligns perfectly with NEXUS AI's positioning. Yasushi Komori's Gamescom 2025 presence and thought leadership on AI-gaming trends demonstrate active engagement. Their portfolio company GEEIQ provides data infrastructure for brands entering gaming—synergistic with NEXUS AI's infrastructure play. Strong Asia network offers geographic expansion potential."
+  }
+]

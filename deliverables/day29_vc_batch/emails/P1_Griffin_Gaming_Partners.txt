@@ -1,0 +1,20 @@
+To: nick@griffingamingpartners.com
+Subject: AI-native infrastructure for the next generation of gaming
+
+Hi Nick,
+
+Griffin's track record with Scopely and Mythical shows you understand where gaming is heading — toward AI-driven experiences that adapt to each player.
+
+I'm building the infrastructure layer specifically for AI-native game development:
+• Procedural content generation that maintains creative direction
+• AI NPCs with persistent memory and emotional depth  
+• Live ops automation that responds to player behavior in real-time
+
+Unlike general-purpose AI tools, this is built from the ground up for game developers — integrating with Unity, Unreal, and custom engines while respecting the artistic vision that makes games great.
+
+Given your experience at Goldman and LionTree, then backing Scopely to a $5.8B exit, I'd value your perspective on how AI infrastructure should evolve for the gaming industry.
+
+Worth a 15-minute conversation?
+
+Best,
+[Your name]

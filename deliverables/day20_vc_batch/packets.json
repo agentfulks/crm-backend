@@ -1,0 +1,208 @@
+{
+  "batch_id": "day20_vc_batch",
+  "batch_date": "2026-03-01",
+  "total_funds": 5,
+  "focus": "AI-Native Infrastructure + Developer Tools",
+  "packets": [
+    {
+      "priority": "P1",
+      "fund_name": "Initialized Capital",
+      "partner_name": "Garry Tan",
+      "partner_title": "President & CEO",
+      "email": "garry@initialized.com",
+      "fit_score": 93,
+      "fit_breakdown": {
+        "dev_tools_thesis": 20,
+        "ai_native_focus": 19,
+        "YC_pedigree": 19,
+        "technical_founders": 18,
+        "seed_series_a_focus": 17
+      },
+      "stage_focus": "Seed to Series A",
+      "check_size_range": "$500K - $5M",
+      "aum": "$3.5B+",
+      "location": "San Francisco, CA",
+      "thesis": "Initialized Capital invests in daring founders building the future through software. Founded by Garry Tan (YC Partner, Coinbase first check), Initialized has backed over 100 companies including Coinbase, Instacart, Cruise, and Algolia. They specialize in developer tools, AI infrastructure, and developer-first products.",
+      "gaming_ai_alignment": "Initialized has a strong thesis on AI-native developer tools and infrastructure. Their portfolio includes numerous AI companies and they actively seek technical founders building foundational infrastructure. The AI sourcing engine aligns perfectly with their developer-tools focus and AI infrastructure investments.",
+      "hook_angle": "Garry - Initialized backed Coinbase when crypto infrastructure was still being built. AI infrastructure for investor sourcing is the next frontier. Your thesis on daring founders building foundational tools fits exactly what we're building: infrastructure that compounds as more data is ingested.",
+      "recent_investments": [
+        {
+          "company": "Multiple AI infrastructure companies",
+          "round": "Seed/Series A",
+          "date": "2024-2025",
+          "focus": "AI-native tooling"
+        },
+        {
+          "company": "Developer productivity tools",
+          "round": "Seed",
+          "date": "2024",
+          "focus": "Engineering efficiency"
+        }
+      ],
+      "notable_portfolio": ["Coinbase", "Instacart", "Cruise", "Algolia", "Rippling"],
+      "geographic_focus": "Global (SF-based)",
+      "twitter_handle": "@garrytan",
+      "outreach_notes": "Lead with developer tools angle. Reference Coinbase as proof of infrastructure thesis. Garry responds to technically ambitious founders."
+    },
+    {
+      "priority": "P2",
+      "fund_name": "NFX",
+      "partner_name": "James Currier",
+      "partner_title": "Managing Partner",
+      "email": "james@nfx.com",
+      "fit_score": 90,
+      "fit_breakdown": {
+        "network_effects_thesis": 20,
+        "marketplace_expertise": 19,
+        "platform_infrastructure": 18,
+        "ai_data_networks": 18,
+        "marketplace_vc": 15
+      },
+      "stage_focus": "Seed to Series A",
+      "check_size_range": "$1M - $5M",
+      "aum": "$1B+",
+      "location": "Palo Alto, CA",
+      "thesis": "NFX is a venture firm focused on network effects and marketplace businesses. Founded by experienced operators (James Currier built 4 network effect companies), NFX invests in companies that get better as they grow. Their AI practice focuses on data network effects and AI-native platforms.",
+      "gaming_ai_alignment": "NFX's thesis on network effects directly applies to AI sourcing engines - the product gets better as more funds and data are added. They explicitly invest in AI companies with data network effects and understand the compounding value of platform infrastructure.",
+      "hook_angle": "James - NFX defined the playbook for network effects investing. Our AI sourcing engine is a classic data network effect business: every new fund ingested improves the model for everyone. This is exactly the type of compounding platform NFX was built to back.",
+      "recent_investments": [
+        {
+          "company": "AI marketplace platforms",
+          "round": "Seed",
+          "date": "2024-2025",
+          "focus": "Network effect AI"
+        },
+        {
+          "company": "Data network effect companies",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "Platform infrastructure"
+        }
+      ],
+      "notable_portfolio": ["Lyft", "DoorDash", "Turo", "Poshmark"],
+      "geographic_focus": "Global",
+      "twitter_handle": "@jamescurrier",
+      "outreach_notes": "Lead with network effects and data moats. Reference their marketplace expertise. James responds to pitches that demonstrate understanding of network effect dynamics."
+    },
+    {
+      "priority": "P3",
+      "fund_name": "First Round Capital",
+      "partner_name": "Bill Trenchard",
+      "partner_title": "Partner",
+      "email": "bill@firstround.com",
+      "fit_score": 88,
+      "fit_breakdown": {
+        "platform_dna": 20,
+        "operator_founder_focus": 18,
+        "seed_stage_expertise": 18,
+        "founder_services": 17,
+        "product_first": 15
+      },
+      "stage_focus": "Seed",
+      "check_size_range": "$500K - $3M",
+      "aum": "$1B+",
+      "location": "San Francisco, CA",
+      "thesis": "First Round is the seed-stage specialist firm. They pioneered the 'platform' VC model with extensive founder services, community, and resources. They exclusively focus on seed-stage companies and have backed companies like Uber, Roblox, and Square at the earliest stages.",
+      "gaming_ai_alignment": "First Round's platform approach to VC (tools, community, services for founders) mirrors what an AI sourcing engine does for investors. They understand the value of infrastructure that makes operators more effective and have backed numerous dev tools and AI companies.",
+      "hook_angle": "Bill - First Round built the platform VC model. We're building the platform for the other side of the table: infrastructure that makes investors more effective. Same philosophy, different customer. Seed-stage investors need better sourcing tools more than anyone.",
+      "recent_investments": [
+        {
+          "company": "Developer tools",
+          "round": "Seed",
+          "date": "2024",
+          "focus": "Engineering productivity"
+        },
+        {
+          "company": "AI applications",
+          "round": "Seed",
+          "date": "2024-2025",
+          "focus": "AI-native products"
+        }
+      ],
+      "notable_portfolio": ["Uber", "Roblox", "Square", "Notion", "Superhuman"],
+      "geographic_focus": "Global (US-heavy)",
+      "twitter_handle": "@btrenchard",
+      "outreach_notes": "Lead with platform/infrastructure angle. Reference their founder services model. Bill responds to operator-founders building tools for other operators."
+    },
+    {
+      "priority": "P4",
+      "fund_name": "Quiet Capital",
+      "partner_name": "Amber Atherton",
+      "partner_title": "General Partner",
+      "email": "amber@quietcapital.com",
+      "fit_score": 86,
+      "fit_breakdown": {
+        "technical_founders": 19,
+        "ai_ml_focus": 19,
+        "infrastructure_thesis": 17,
+        "operator_backed": 16,
+        "founder_quality": 15
+      },
+      "stage_focus": "Seed to Series A",
+      "check_size_range": "$500K - $3M",
+      "aum": "$300M+",
+      "location": "San Francisco, CA",
+      "thesis": "Quiet Capital is a founder-focused fund backing technical teams building the future of infrastructure and AI. They take a collaborative approach, working closely with founders on strategy, hiring, and go-to-market. Their portfolio includes numerous AI/ML and infrastructure companies.",
+      "gaming_ai_alignment": "Quiet Capital explicitly focuses on AI/ML infrastructure and developer tools. Their thesis on technical founders building foundational technology aligns perfectly with an AI sourcing engine that requires both technical depth and infrastructure expertise.",
+      "hook_angle": "Amber - Quiet Capital backs technical founders building AI infrastructure. We're building the data infrastructure for investor sourcing - an underserved but critical market. Your portfolio of AI/ML companies gives you unique insight into what good technical teams look like.",
+      "recent_investments": [
+        {
+          "company": "AI infrastructure",
+          "round": "Seed",
+          "date": "2024",
+          "focus": "ML tooling"
+        },
+        {
+          "company": "Developer infrastructure",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "Platform tools"
+        }
+      ],
+      "notable_portfolio": ["AI infrastructure companies", "Dev tools", "ML platforms"],
+      "geographic_focus": "Global",
+      "twitter_handle": "@amberatherton",
+      "outreach_notes": "Lead with technical infrastructure angle. Reference AI/ML focus. Amber responds to technically deep founders building infrastructure."
+    },
+    {
+      "priority": "P5",
+      "fund_name": "Elad Gil Ventures",
+      "partner_name": "Elad Gil",
+      "partner_title": "Founder",
+      "email": "elad@eladgil.com",
+      "fit_score": 87,
+      "fit_breakdown": {
+        "hypergrowth_expertise": 20,
+        "scalable_infrastructure": 19,
+        "technical_operator": 18,
+        "network_access": 16,
+        "growth_playbook": 14
+      },
+      "stage_focus": "Seed to Series B",
+      "check_size_range": "$500K - $10M",
+      "aum": "$1B+",
+      "location": "San Francisco, CA",
+      "thesis": "Elad Gil is a solo GP who has backed some of the most iconic companies of the last decade including Airbnb, Coinbase, Stripe, and Square. He focuses on scalable infrastructure, developer tools, and companies with network effects. He's known for his operational expertise and growth playbooks.",
+      "gaming_ai_alignment": "Elad has backed multiple AI infrastructure companies and understands the value of scalable data infrastructure. His focus on developer productivity and infrastructure tools aligns with an AI sourcing engine that improves investor efficiency at scale.",
+      "hook_angle": "Elad - You've backed the infrastructure layers of every major platform shift (Stripe for payments, Coinbase for crypto). AI infrastructure for investor sourcing is the next frontier. Your playbook for scaling infrastructure companies is exactly what we need.",
+      "recent_investments": [
+        {
+          "company": "AI infrastructure",
+          "round": "Seed/Series A",
+          "date": "2024",
+          "focus": "ML infrastructure"
+        },
+        {
+          "company": "Developer tools",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "Productivity platforms"
+        }
+      ],
+      "notable_portfolio": ["Airbnb", "Coinbase", "Stripe", "Square", "Pinterest"],
+      "geographic_focus": "Global",
+      "twitter_handle": "@eladgil",
+      "outreach_notes": "Lead with infrastructure scalability. Reference his track record with infrastructure bets. Elad responds to founders with clear growth strategies and infrastructure moats."
+    }
+  ]
+}

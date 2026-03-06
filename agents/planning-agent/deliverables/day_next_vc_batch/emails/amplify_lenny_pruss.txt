@@ -1,0 +1,22 @@
+Subject: Developer tools for game dev / Technical founders
+
+Hi Lenny,
+
+Amplify's track record with developer tools (dbt, Temporal) and AI infrastructure (Runway, Modal, Luma) is exactly why I'm reaching out.
+
+We're building the AI infrastructure layer for game development—a market that's been underserved by traditional dev tools. Our product sits between game engines (Unity/Unreal) and AI models, abstracting away the complexity of integrating LLMs, diffusion models, and procedural generation into production pipelines.
+
+Technical details:
+- API-first architecture (developers love us)
+- Built by former Epic Games infrastructure engineers
+- Already integrated by 3 studios in closed beta
+- Solving real pain: content pipelines, NPC behavior, world generation
+
+This fits Amplify's sweet spot: technical founders, infrastructure play, developer tools, and the AI/ML layer. We're raising $2M pre-seed.
+
+Given your expertise in developer tooling, I'd value your feedback on our product approach.
+
+Open to a conversation?
+
+Best,
+[Founder Name]

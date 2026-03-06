@@ -1,0 +1,77 @@
+[
+  {
+    "fund_name": "The Venture Reality Fund (VRF)",
+    "aum": "$50M-$100M (estimated)",
+    "partner": {
+      "name": "Tipatat Chennavasin",
+      "title": "General Partner & Co-Founder",
+      "email": "tipatat@thevrfund.com"
+    },
+    "check_size_range": "$100K - $500K (Seed to Series A)",
+    "gaming_ai_thesis": "Leading early-stage investor in AI & Spatial Computing for gaming and enterprise. Focuses on VR/AR/MR technologies, metaverse infrastructure, and AI-powered interactive entertainment. Portfolio includes gaming studios building next-generation immersive experiences.",
+    "fit_score": 88,
+    "geographic_focus": "US (Redwood City, CA) - Global opportunistic",
+    "stage": "Seed, Series A",
+    "notable_gaming_investments": ["Resolution Games", "AstroBeam", "Eggscape Entertainment"]
+  },
+  {
+    "fund_name": "NFX",
+    "aum": "$2.3B+ (total AUM)",
+    "partner": {
+      "name": "Gigi Levy-Weiss",
+      "title": "General Partner & Co-Founder",
+      "email": "gigi@nfx.com"
+    },
+    "check_size_range": "$1M - $5M (pre-seed & seed)",
+    "gaming_ai_thesis": "Invests in network-effect businesses across gaming, AI, and web3/crypto. Explicitly focuses on AI applications in gaming and next-generation interactive entertainment. Recently announced gaming and web3/crypto as core verticals with dedicated FAST program.",
+    "fit_score": 85,
+    "geographic_focus": "Global (SF Bay Area, Israel, Europe, LATAM)",
+    "stage": "Pre-seed, Seed",
+    "notable_gaming_investments": ["Octoplay Games", "Multiple stealth gaming/AI startups"]
+  },
+  {
+    "fund_name": "359 Capital",
+    "aum": "$300M",
+    "partner": {
+      "name": "Michael Spirito",
+      "title": "Managing Partner & Co-Founder",
+      "email": "michael@359capital.com"
+    },
+    "check_size_range": "$2M - $10M (Series A/B)",
+    "gaming_ai_thesis": "Formerly Sapphire Sport, spun out November 2025. Invests at intersection of technology and culture—gaming, media, entertainment, and AI. Recently backed Jabali ($5M seed) building AI-powered game engine. Strong LP base includes major sports/entertainment brands providing portfolio value-add.",
+    "fit_score": 90,
+    "geographic_focus": "US (Austin, San Francisco)",
+    "stage": "Series A, Series B",
+    "notable_gaming_investments": ["Jabali (AI game engine)", "Fanatics", "Overtime"]
+  },
+  {
+    "fund_name": "Outlier Ventures",
+    "aum": "$350M+ (portfolio capital raised)",
+    "partner": {
+      "name": "Jamie Burke",
+      "title": "Founder & Executive Chairman",
+      "email": "jamie@outlierventures.io"
+    },
+    "check_size_range": "$100K - $500K (accelerator + seed)",
+    "gaming_ai_thesis": "World's #1 Web3 accelerator by volume. Base Camp program backs 200+ founders/year in Web3 gaming, AI, DeFi, and infrastructure. Convergence thesis on AI + blockchain for next-gen gaming experiences. Portfolio includes Brave Browser, Fetch.ai, Ocean Protocol.",
+    "fit_score": 82,
+    "geographic_focus": "Europe (London) - Global",
+    "stage": "Pre-seed, Seed, Accelerator",
+    "notable_gaming_investments": ["Multiple Web3 gaming studios", "Metaverse infrastructure"]
+  },
+  {
+    "fund_name": "Dragonfly",
+    "aum": "$4B",
+    "partner": {
+      "name": "Haseeb Qureshi",
+      "title": "Managing Partner",
+      "email": "haseeb@dragonfly.xyz"
+    },
+    "check_size_range": "$100K - $10M (seed to growth)",
+    "gaming_ai_thesis": "Global crypto-native fund with significant gaming/Web3 portfolio. Backed Dapper Labs, Polymarket, Ethena. Invests in blockchain gaming infrastructure, on-chain game mechanics, and AI-crypto convergence. Recently closed $650M Fund IV (Feb 2026). Strong Asia-US cross-border capabilities.",
+    "fit_score": 87,
+    "geographic_focus": "Global (San Francisco, Asia-focused)",
+    "stage": "Seed, Series A, Series B",
+    "notable_gaming_investments": ["Dapper Labs (NBA Top Shot)", "Polymarket", "Axie Infinity (secondary)"]
+  }
+]

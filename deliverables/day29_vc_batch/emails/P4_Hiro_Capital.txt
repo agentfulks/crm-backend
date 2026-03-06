@@ -1,0 +1,20 @@
+To: luke@hiro.capital
+Subject: AI infrastructure for spatial and immersive gaming
+
+Hi Luke,
+
+Hiro's investments in Everywhere and Kayak VR show you're betting on the next computing platform. I think the missing piece is AI infrastructure for creating those immersive worlds at scale.
+
+I'm building AI infrastructure for spatial and immersive gaming:
+• Procedural 3D environment generation with quality control
+• AI-driven NPCs that inhabit persistent virtual worlds
+• Tools for player-created content enhanced by AI
+
+The metaverse won't be built by hand — it needs AI infrastructure that can generate, populate, and maintain immersive environments. Hiro's European base and focus on sports/simulation gaming puts you at the intersection of these trends.
+
+Given your public company background and focus on the next generation of interactive entertainment, I'd appreciate your view on where AI infrastructure fits into the spatial computing roadmap.
+
+15 minutes this week?
+
+Best,
+[Your name]

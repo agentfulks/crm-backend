@@ -1,0 +1,30 @@
+Subject: AI-enabled indie teams - Kepler model fit
+
+Alexis,
+
+Kepler Interactive proved that curated indie studios can scale with the right support model. Kowloon Nights is positioned to catch the next wave: AI-enabled indie teams achieving AAA production values with <10 people.
+
+Our engine is tracking 20+ pre-launch teams using AI for:
+- Procedural environment generation (artists focusing on direction, not asset production)
+- AI-assisted animation (mocap without suits, style transfer for consistency)
+- Generative audio pipelines (dynamic soundscapes, adaptive music)
+- Automated QA and balance testing
+
+The pattern: ex-AAA developers leaving Ubisoft/EA to build ambitious indie projects with AI as force multiplier. These aren't "AI slop" generators - they're experienced craftspeople using new tools.
+
+Signal quality indicators:
+- Artstation portfolios showing AI-assisted workflows
+- GitHub contributions to Stable Diffusion/ComfyUI gaming extensions
+- Private Discord server formation for AI gamedev communities
+
+All pre-seed stage. All seeking partners who understand artistic vision + technical capability.
+
+Your Ubisoft/Xbox background + Kepler success makes Kowloon Nights the ideal partner for this wave.
+
+3 teams in our current pipeline match this profile exactly. Worth discussing?
+
+[Name]
+[Title]
+[Company]
+
+P.S. - One team is led by ex-Asobo (Flight Simulator) engineers building an AI-generated open world. Ambition level fits Kepler portfolio perfectly.

@@ -1,0 +1,16 @@
+Subject: AI Infrastructure for Player-Owned Economies
+
+Hi Gigi,
+
+NFX's thesis on network effects in gaming platforms has always resonated—particularly how you've described UGC economies as the next frontier of defensible value creation.
+
+We're building infrastructure that enables AI-generated game economies at scale. The intersection: autonomous NPCs that generate on-chain assets, player-trained AI agents that trade in open markets, and economies that grow exponentially through user contribution rather than developer content pipelines.
+
+The network effects here are multi-sided—players train models, models create value, value attracts more players. It's a flywheel that compounds like the best marketplace businesses in your portfolio, but with the capital efficiency of crypto rails.
+
+Given NFX's recent investments in AI infrastructure and your position on gaming as a social platform, I'd welcome the chance to share what we're seeing in the AI-gaming convergence. 15 minutes would be enough to gauge whether this fits your current thesis.
+
+Worth a conversation?
+
+Best,
+Lucas

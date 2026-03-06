@@ -1,0 +1,65 @@
+================================================================================
+EMAIL PACKET: P4 - Collab+Currency
+================================================================================
+
+TO: derek@collabcurrency.com
+CC: 
+BCC: 
+
+SUBJECT: Crypto x culture: Daily investor packets as product
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Derek,
+
+Collab+Currency's focus on the intersection of crypto and culture maps to what we're building—a daily investor packet culture that compounds.
+
+We run an AI-assisted sourcing engine scoring 200+ funds daily, assembling five investor packets every morning with verified contacts, KPI snapshots, and personalized hooks. The whole loop runs in Slack and Trello so partners can approve sends in minutes.
+
+Four partner meetings per week, increasing as the fund database grows. It's part infrastructure, part cultural system for VC outreach.
+
+We're raising Seed ($100K-$3M range) and given your crypto-cultural thesis, I think there's a natural alignment.
+
+Worth a 15-minute conversation?
+
+[Calendly link - 30 min partner intro]
+
+Best,
+Lucas Fulks
+[Your title]
+[Company name]
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- deliverables/outreach_assets/pitch_deck/latest.pdf
+- deliverables/outreach_assets/kpi_snapshot/2026-02-24-kpis.csv
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P4
+Fund: Collab+Currency
+Contact: Derek Edwards
+Title: Managing Partner
+Email: derek@collabcurrency.com
+Check Size: $100K-$3M USD
+Stage Focus: Pre-Seed, Seed
+Priority Score: 51.33 (Rank #4)
+Best Send Time: Tuesday-Thursday, 9-11am PST
+Follow-up Day 3: 2026-02-28
+Follow-up Day 7: 2026-03-04
+
+--------------------------------------------------------------------------------
+NOTES
+--------------------------------------------------------------------------------
+- Hook angle: Crypto x culture intersection
+- Thesis fit: Moderate - crypto and culture focus
+- Check-size overlap: 56% of target band
+- Contact verified via: Twitter (medium confidence)
+- Fund HQ: Eugene, Oregon, USA
+- Special note: Derek is former attorney and startup founder
+
+================================================================================

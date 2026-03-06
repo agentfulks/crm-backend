@@ -1,0 +1,211 @@
+{
+  "batch": 1,
+  "studios_processed": 12,
+  "studios": [
+    {
+      "name": "Voodoo",
+      "location": "Paris, France",
+      "employees": "200-500",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Alexandre Yazdi",
+        "title": "CEO & Co-Founder",
+        "email": "alexandre.yazdi@voodoo.io"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer sales cycle; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-driven content generation for hyper-casual development. Voodoo's $1B revenue target for 2026 creates urgency for scalable solutions. \u20ac175M financing secured in 2025."
+    },
+    {
+      "name": "Homa Games",
+      "location": "Paris, France",
+      "employees": "51-200",
+      "downloads": 500000000,
+      "contact": {
+        "name": "Daniel Nathan",
+        "title": "Founder & CEO",
+        "email": "daniel.nathan@homagames.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P0",
+      "priority_reason": "Recent funding + sweet spot size",
+      "base_tier": "Tier-1",
+      "outreach_angle": "Homa's aggressive M&A and $165M funding creates need for scalable AI infrastructure to onboard multiple studios efficiently. Homa Lab platform integration opportunity."
+    },
+    {
+      "name": "SayGames",
+      "location": "Limassol, Cyprus / Warsaw, Poland",
+      "employees": "200-10000",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Yegor Vaikhanski",
+        "title": "CEO & Co-Founder",
+        "email": "y.vaikhanski@saygames.by"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P2",
+      "priority_reason": "Enterprise size, complex sales; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "SayGames' massive scale (7B downloads, 200+ employees) requires AI automation for content production at scale. $10M developer program active."
+    },
+    {
+      "name": "Supersonic Studios (Unity)",
+      "location": "Tel Aviv, Israel / San Francisco",
+      "employees": "51-200",
+      "downloads": 0,
+      "contact": {
+        "name": "Nadav Ashkenazy",
+        "title": "CEO",
+        "email": "nadav.ashkenazy@supersonic.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P3",
+      "priority_reason": "Larger org, longer sales cycle",
+      "base_tier": "Tier-1",
+      "outreach_angle": "Unity + AI integration for rapid hyper-casual development - AI infrastructure that lives natively in Unity workflows. White-box approach perfect for AI tools."
+    },
+    {
+      "name": "Rollic (Zynga)",
+      "location": "Istanbul, Turkey",
+      "employees": "0",
+      "downloads": 250000000,
+      "contact": {
+        "name": "Burak Vardal",
+        "title": "Co-Founder & CEO",
+        "email": "burak.vardal@rollicgames.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees)",
+      "priority": "P3",
+      "priority_reason": "Default tier",
+      "base_tier": "Tier-1",
+      "outreach_angle": "Live ops automation - Rollic's Zynga backing means enterprise-grade live ops perfect for AI automation. 8 #1/#2 US App Store hits."
+    },
+    {
+      "name": "Kwalee",
+      "location": "Leamington Spa, UK",
+      "employees": "358",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "David Darling",
+        "title": "Founder & CEO",
+        "email": "d.darling@kwalee.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer sales cycle; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for cross-platform game development pipeline - Kwalee's expansion into PC/console creates opportunity for AI tools that work across platforms. Devolver Digital investment (July 2024)."
+    },
+    {
+      "name": "CrazyLabs",
+      "location": "Tel Aviv, Israel",
+      "employees": "0",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Sagi Schliesser",
+        "title": "CEO & Founder",
+        "email": "sagi@crazylabs.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees)",
+      "priority": "P2",
+      "priority_reason": "Default tier; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for ASMR/satisfying game content generation - CrazyLabs' strength in satisfying/ASMR content (Acrylic Nails, Soap Cutting, Tie Dye) is perfect for AI-generated variations."
+    },
+    {
+      "name": "Lion Studios (AppLovin)",
+      "location": "San Francisco, Berlin, Shanghai",
+      "employees": "0",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Gilberto Marcal",
+        "title": "CEO",
+        "email": "gilberto.marcal@lionstudios.cc"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees)",
+      "priority": "P2",
+      "priority_reason": "Default tier; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-driven UA optimization and creative generation - Lion Studios' UA expertise aligns with AI-generated creative variants for ad testing."
+    },
+    {
+      "name": "Boombit",
+      "location": "Gdansk, Poland",
+      "employees": "200-10000",
+      "downloads": 0,
+      "contact": {
+        "name": "Marcin Olejarz",
+        "title": "Co-CEO & Co-Founder",
+        "email": "marcin.olejarz@boombit.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P4",
+      "priority_reason": "Enterprise size, complex sales",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for midcore game economy balancing - Boombit's midcore focus (Hunting Clash, Fishing Clash, Dino Bash) creates opportunity for AI-powered economy tuning."
+    },
+    {
+      "name": "Amanotes",
+      "location": "Vietnam / Global",
+      "employees": "0",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Bill Vo",
+        "title": "CEO & Co-founder",
+        "email": "bill@amanotes.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees)",
+      "priority": "P2",
+      "priority_reason": "Default tier; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI for procedural music generation and dynamic gameplay - unique angle for AI-generated music that adapts to gameplay in real-time. Invested in Reactional Music (7-figure, May 2023)."
+    },
+    {
+      "name": "Scopely",
+      "location": "Los Angeles (HQ), Barcelona, Seoul, Tokyo, Dublin",
+      "employees": "0",
+      "downloads": 0,
+      "contact": {
+        "name": "Bobby Loya",
+        "title": "SVP, Head of Studios BD",
+        "email": "bobby.loya@scopely.com"
+      },
+      "qualified": false,
+      "qualification_notes": "Too small (<10 employees); Low downloads and small team",
+      "priority": "P3",
+      "priority_reason": "Default tier",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI-driven personalization - Scopely's match-3 games have deep economies. AI personalization for difficulty curves and offers could boost retention. Now #1 mobile games company in US."
+    },
+    {
+      "name": "Gismart",
+      "location": "London, UK",
+      "employees": "100-250",
+      "downloads": 1000000000,
+      "contact": {
+        "name": "Dmitri Lipnitsky",
+        "title": "CEO & Co-Founder",
+        "email": "dmitri.lipnitsky@gismart.com"
+      },
+      "qualified": true,
+      "qualification_notes": "Meets ICP criteria",
+      "priority": "P2",
+      "priority_reason": "Larger org, longer sales cycle; Massive scale (1B+ downloads)",
+      "base_tier": "Tier-1",
+      "outreach_angle": "AI content generation for rapid prototyping - Gismart's high release velocity (Cool Goal 50M+, Fat 2 Fit 100M+) could benefit from AI-powered level design."
+    }
+  ],
+  "timestamp": "2026-03-03T17:25:18.762547"
+}

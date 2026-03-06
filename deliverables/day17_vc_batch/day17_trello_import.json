@@ -1,0 +1,36 @@
+{
+  "board_id": "INVESTOR_OUTREACH_BOARD",
+  "list_name": "To Do",
+  "cards": [
+    {
+      "name": "P1: BITKRAFT Ventures - Jens Hilgers",
+      "desc": "**Priority:** P1 (Highest)\n**Fund:** BITKRAFT Ventures\n**AUM:** $1.05B+ across 6 funds\n**Stage:** Seed to Series B\n**Check Size:** $2M-$5M\n\n**Contact:**\n- Name: Jens Hilgers\n- Title: Founding General Partner\n- Email: jens@bitkraft.vc\n- LinkedIn: linkedin.com/in/jenshilgers\n\n**Background:** Founded ESL (esports) 2000, Co-founded G2 Esports, widely considered 'godfather of esports'\n\n**Thesis Fit Score:** 95/100\nPerfect alignment - gaming + AI infrastructure + Web3 core to mandate\n\n**Focus Areas:** Gaming content & IP, AI infrastructure, Web3/blockchain gaming, Immersive technology (VR/AR)\n\n**Recent Investments:**\n- Cartridge: $7.5M Series A (Web3 infrastructure, Dojo engine)\n- NPC Labs: $18M seed (Web3 gaming infrastructure)\n- Pixion: $3M (Power Protocol for blockchain games)\n\n**Portfolio Notables:** Immutable, Forte, Aleph.im, Mythical Games, The Sandbox\n\n**Outreach Hook:** Following BITKRAFT's thesis on 'Synthetic Reality' - the convergence of gaming, AI, and immersive tech. Recent Cartridge/NPC Labs investments show conviction in AI-powered onchain infrastructure.\n\n**Email Draft:** emails/bitkraft_jens_hilgers.md",
+      "labels": ["P1", "Gaming", "AI", "Web3", "Global"],
+      "due_date": null
+    },
+    {
+      "name": "P2: Konvoy Ventures - Jackson Vaughan",
+      "desc": "**Priority:** P2\n**Fund:** Konvoy Ventures\n**AUM:** $150M (Fund III, 2024)\n**Stage:** Seed to Series A\n**Check Size:** $500K-$3M\n\n**Contact:**\n- Name: Jackson Vaughan\n- Title: Managing Partner & Co-Founder\n- Email: jackson@konvoy.vc\n- LinkedIn: linkedin.com/in/jacksonvaughan\n\n**Background:** NYU Stern, previously Whim CEO, board member at Carry1st and StageZero\n\n**Thesis Fit Score:** 92/100\nStrong alignment - thesis explicitly covers AR/VR, crypto, esports, and gaming platforms\n\n**Focus Areas:** Gaming platforms & technology, AR/VR immersive tech, Crypto/Web3 gaming, Esports infrastructure\n\n**Recent Investments:**\n- Edgegap: Series A (AI-powered game server orchestration)\n- Gamefam: Growth (Roblox gaming platform)\n- Carry1st: Series A extension (Mobile gaming publisher - Africa)\n\n**Portfolio Notables:** Sky Mavis (Axie Infinity), Overwolf, Pandascore, Nodwin Gaming\n\n**Outreach Hook:** Konvoy's thesis on 'frontier of gaming' directly aligns with AI infrastructure play. Edgegap investment shows conviction in AI-powered gaming backend infrastructure.\n\n**Email Draft:** emails/konvoy_jackson_vaughan.md",
+      "labels": ["P2", "Gaming", "AI", "AR/VR", "Thesis-Driven"],
+      "due_date": null
+    },
+    {
+      "name": "P3: a16z Speedrun - Troy Kirwin",
+      "desc": "**Priority:** P3\n**Fund:** a16z Speedrun (Accelerator + Seed)\n**AUM:** $180M+ deployed\n**Stage:** Pre-seed to Seed\n**Check Size:** $750K-$1M\n\n**Contact:**\n- Name: Troy Kirwin\n- Title: Partner & Cohort Lead\n- Email: troy@a16z.com\n- LinkedIn: linkedin.com/in/troykirwin\n\n**Background:** Ex-Unity, leads a16z speedrun cohorts, focuses on B2B AI and creative tech\n\n**Thesis Fit Score:** 90/100\nVery strong - explicitly invests at intersection of TECH x GAMES (AI/infra, 3D tools, VR/AR, web3 games)\n\n**Focus Areas:** AI x Games infrastructure, 3D tools & simulations, VR/AR/XR, Web3 gaming, Creative tech\n\n**Recent Investments:**\n- k-ID: Seed (AI-powered gaming compliance)\n- Backflip: Seed (AI game development tools)\n- 150+ startups across 3 cohorts (2023-2025)\n\n**Program:** SR006 applications open, SF-based Jan-Apr 2026\n\n**Outreach Hook:** SR006 applications just opened but we're raising now. Explicit mandate is 'TECH x GAMES' - AI/infra, 3D tools, VR/AR, web3 games.\n\n**Email Draft:** emails/a16z_speedrun_troy_kirwin.md",
+      "labels": ["P3", "Gaming", "AI", "Accelerator", "a16z"],
+      "due_date": null
+    },
+    {
+      "name": "P4: London Venture Partners - David Lau-Kee",
+      "desc": "**Priority:** P4\n**Fund:** London Venture Partners (LVP)\n**AUM:** $140M+\n**Stage:** Seed\n**Check Size:** $500K-$2M\n\n**Contact:**\n- Name: David Lau-Kee\n- Title: Co-Founder & General Partner\n- Email: dlk@londonvp.com\n- LinkedIn: linkedin.com/in/davidlaukee\n\n**Background:** Founded Criterion Software (RenderWare engine, Burnout), early investor in Supercell and Unity, 25+ years gaming industry\n\n**Thesis Fit Score:** 88/100\nStrong - exclusively invests in gaming ecosystem including tech/platforms/infrastructure\n\n**Focus Areas:** Game studios & content, Gaming technology platforms, Gaming infrastructure, Interactive entertainment\n\n**Recent Investments:**\n- Rule: £800K pre-seed (Save-to-win mobile game - fintech x gaming)\n- Various gaming infrastructure seed deals (2024-2025)\n\n**Portfolio Notables:** Supercell (early), Unity (early), Super Evil Megacorp, Wargaming\n\n**Outreach Hook:** LVP was early to Supercell and Unity - understand gaming infrastructure before others. Building the AI infrastructure layer that every game studio will need.\n\n**Email Draft:** emails/lvp_david_lau_kee.md",
+      "labels": ["P4", "Gaming", "Seed", "Europe", "Legendary Track Record"],
+      "due_date": null
+    },
+    {
+      "name": "P5: The Venture Reality Fund - Tipatat Chennavasin",
+      "desc": "**Priority:** P5\n**Fund:** The Venture Reality Fund (VRF)\n**AUM:** ~$50M+\n**Stage:** Seed to Series A\n**Check Size:** $100K-$500K\n\n**Contact:**\n- Name: Tipatat Chennavasin\n- Title: Co-Founder & General Partner\n- Email: tipatat@thevrfund.com\n- LinkedIn: linkedin.com/in/tipatat\n\n**Background:** Stanford BS, created VR/AR content, became convinced of VR power after curing fear of heights while developing in VR\n\n**Thesis Fit Score:** 85/100\nGood - specializes in AI & Spatial Computing, VR/AR, and immersive tech for gaming/enterprise\n\n**Focus Areas:** AI & Spatial Computing, VR/AR/MR, Immersive gaming, Metaverse/Web3, Intelligent computing\n\n**Recent Investments:**\n- Oasiz: $2.5M seed (TikTok meets Roblox)\n- Little Umbrella: Seed (Death by AI social game)\n- Gracia AI: $1.2M (Photorealistic volumetric spatial videos)\n\n**Portfolio Notables:** Spatial, Littlstar, 8th Wall (acquired by Niantic)\n\n**Outreach Hook:** VRF's focus on 'AI & Spatial Computing' for immersive gaming aligns with our vision. Gracia AI investment shows conviction in AI-generated spatial content.\n\n**Email Draft:** emails/vrf_tipatat_chennavasin.md",
+      "labels": ["P5", "Spatial Computing", "AI", "VR/AR", "Early Stage"],
+      "due_date": null
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "batch_id": "day_next_vc_batch",
+  "generated_date": "2026-03-03",
+  "target_profile": {
+    "focus": "Gaming-focused VCs or AI infrastructure funds",
+    "stage": "Seed to Series A",
+    "check_size": "$500K-$5M",
+    "geography": "US, Europe, Israel"
+  },
+  "packets": [
+    {
+      "packet_id": 1,
+      "fund": {
+        "name": "BITKRAFT Ventures",
+        "website": "https://www.bitkraft.vc",
+        "location": "Berlin, Germany / Los Angeles, USA",
+        "fund_type": "Gaming & Interactive Media",
+        "aum": "$800M+",
+        "stage_focus": "Seed, Series A, Series B",
+        "check_size": "$500K - $10M",
+        "thesis": "Global early- and mid-stage investment platform for gaming, esports, and interactive media"
+      },
+      "partners": [
+        {
+          "name": "Jens Hilgers",
+          "title": "Founding General Partner",
+          "linkedin_url": "https://www.linkedin.com/in/jenshilgers",
+          "background": "Serial entrepreneur, founded ESL (acquired), G2 Esports. Pioneer of esports industry.",
+          "thesis_fit": "Deep gaming operator background, values game design and player experience"
+        },
+        {
+          "name": "Piers Kicks",
+          "title": "Venture Partner",
+          "linkedin_url": "https://www.linkedin.com/in/pierskicks",
+          "background": "Founding Partner at Delphi Digital, crypto x gaming specialist since 2021",
+          "thesis_fit": "Blockchain gaming, Web3 infrastructure, metaverse technologies"
+        }
+      ],
+      "fit_score": 95,
+      "fit_rationale": "Perfect stage and check size match. Deep gaming expertise with operator DNA. Strong global presence. Active in AI + gaming convergence.",
+      "recent_investments": ["Frost Giant Studios", "Overload Studios", "GOALS"],
+      "outreach_angle": "ESL founder pedigree - they understand competitive gaming and AI's role in next-gen experiences"
+    },
+    {
+      "packet_id": 2,
+      "fund": {
+        "name": "Griffin Gaming Partners",
+        "website": "https://griffingp.com",
+        "location": "Santa Monica, California, USA",
+        "fund_type": "Gaming-Focused VC",
+        "aum": "$750M+",
+        "stage_focus": "Early to Late Stage",
+        "check_size": "$1M - $50M",
+        "thesis": "Premier investment vehicle singularly focused on the video game sector"
+      },
+      "partners": [
+        {
+          "name": "Phil Sanderson",
+          "title": "Managing Director & Co-Founder",
+          "linkedin_url": "https://www.linkedin.com/in/phil-sanderson-32b600231",
+          "background": "28 years in VC, previously at Walden, IDG Ventures/Ridge Ventures",
+          "thesis_fit": "Longest-tenured gaming VC, deep network, understands game monetization"
+        },
+        {
+          "name": "Peter Levin",
+          "title": "Managing Director & Co-Founder",
+          "linkedin_url": "https://www.linkedin.com/in/peter-y-levin-8109a811",
+          "background": "Former President of Interactive Ventures at Lionsgate, co-founder of Nerdist Industries",
+          "thesis_fit": "Media + gaming convergence, platform strategy, content IP"
+        }
+      ],
+      "fit_score": 92,
+      "fit_rationale": "Largest dedicated gaming fund. Perfect stage match. LA-based (gaming hub). Deep industry relationships. High-conviction bets.",
+      "recent_investments": ["Discord", "Scopely", "Frost Giant Studios"],
+      "outreach_angle": "Industry veteran fund - focus on how AI transforms game development economics"
+    },
+    {
+      "packet_id": 3,
+      "fund": {
+        "name": "Hetz Ventures",
+        "website": "https://www.hetz.vc",
+        "location": "Tel Aviv, Israel / London, UK",
+        "fund_type": "Deep Tech & AI Infrastructure",
+        "aum": "$140M (Fund II)",
+        "stage_focus": "Seed to Series B",
+        "check_size": "$500K - $5M",
+        "thesis": "Early-stage investor in Israeli startups specializing in data and AI infrastructure, cybersecurity and enterprise software"
+      },
+      "partners": [
+        {
+          "name": "Judah Taub",
+          "title": "Managing Partner & Co-Founder",
+          "linkedin_url": "https://www.linkedin.com/in/judah-taub-3773247b",
+          "background": "Former Head of Data at Lansdowne Partners ($20B hedge fund), Harvard Business School",
+          "thesis_fit": "Data-driven investor, deep technical expertise, Forbes 30 Under 30"
+        },
+        {
+          "name": "Pavel Livshiz",
+          "title": "Partner",
+          "linkedin_url": "https://www.linkedin.com/in/pavel-livshiz-68b3183a",
+          "background": "Tech and data-driven investor with hands-on operational support",
+          "thesis_fit": "Active portfolio support, European LP network for expansion"
+        }
+      ],
+      "fit_score": 88,
+      "fit_rationale": "Perfect check size match. Strong AI infrastructure thesis. Israel = gaming tech talent hub. Data-driven approach aligns with AI tooling. European network for expansion.",
+      "recent_investments": ["Fundamental AI", "Anima", "Blink"],
+      "outreach_angle": "Data + AI thesis alignment - focus on AI infrastructure for game development"
+    },
+    {
+      "packet_id": 4,
+      "fund": {
+        "name": "Amplify Partners",
+        "website": "https://www.amplifypartners.com",
+        "location": "Palo Alto, California, USA",
+        "fund_type": "AI & ML Infrastructure",
+        "aum": "$400M+",
+        "stage_focus": "Pre-seed to Series A",
+        "check_size": "$500K - $5M",
+        "thesis": "Early-stage investor for technical founders building developer tools, AI/ML, data infrastructure, and cybersecurity"
+      },
+      "partners": [
+        {
+          "name": "Lenny Pruss",
+          "title": "General Partner",
+          "linkedin_url": "https://www.linkedin.com/in/lennypruss",
+          "background": "8+ years working with technical founders. Led investments in dbt Labs, Temporal, Runway",
+          "thesis_fit": "Developer tools specialist, ML infrastructure, technical founder advocate"
+        },
+        {
+          "name": "Mike Dauber",
+          "title": "General Partner",
+          "linkedin_url": "https://www.linkedin.com/in/dauber",
+          "background": "Co-runs Amplify with Sunil Dhaliwal. Former Battery Ventures. Long-term firm builder.",
+          "thesis_fit": "Enterprise infrastructure, cloud computing, hands-on board member"
+        }
+      ],
+      "fit_score": 85,
+      "fit_rationale": "Perfect stage and check size for seed. Leading AI infrastructure investor. Technical founder focus. Strong portfolio (Runway, Modal, Luma). Developer tools thesis fits AI game tooling.",
+      "recent_investments": ["Runway", "Modal", "Luma AI", "Temporal"],
+      "outreach_angle": "AI infrastructure leader - emphasize technical founding team and dev tools for games"
+    },
+    {
+      "packet_id": 5,
+      "fund": {
+        "name": "Konvoy Ventures",
+        "website": "https://www.konvoy.vc",
+        "location": "Denver, Colorado, USA",
+        "fund_type": "Gaming-Focused VC",
+        "aum": "$150M+",
+        "stage_focus": "Seed to Series A",
+        "check_size": "$500K - $3M",
+        "thesis": "Thesis-driven venture capital firm investing in platforms and technologies shaping the future of gaming"
+      },
+      "partners": [
+        {
+          "name": "Jason Chapman",
+          "title": "Managing Partner & Co-Founder",
+          "linkedin_url": "https://www.linkedin.com/in/jasondchapman",
+          "background": "Former BlackRock product analyst, gaming enthusiast. CSGO, Halo, AoE player.",
+          "thesis_fit": "True gamer DNA, understands game mechanics deeply, data-driven approach"
+        },
+        {
+          "name": "Josh Chapman",
+          "title": "Managing Partner & Co-Founder",
+          "linkedin_url": "https://www.linkedin.com/in/joshchapmanb",
+          "background": "Former banking analyst, BlackRock. Deep gaming industry expertise.",
+          "thesis_fit": "Web3 gaming thesis, blockchain + gaming convergence, platform investments"
+        }
+      ],
+      "fit_score": 90,
+      "fit_rationale": "Perfect stage and check size match. Founded by gamers for gaming. Strong Web3 + AI gaming thesis. Active seed investor. Portfolio includes Solsten (AI player analytics).",
+      "recent_investments": ["Solsten", "Bramble", "eFuse", "GameSquare"],
+      "outreach_angle": "Gamer-first fund - emphasize player experience transformation via AI"
+    }
+  ],
+  "summary_stats": {
+    "total_packets": 5,
+    "avg_fit_score": 90,
+    "gaming_focused": 3,
+    "ai_infrastructure": 2,
+    "geographic_coverage": ["US", "Germany", "Israel", "UK"],
+    "total_partners": 10
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "batch": "bdr_game_studios_2026-02-27",
+  "studio_count": 10,
+  "status": "ready_for_review",
+  "studios": [
+    {
+      "name": "Voodoo",
+      "contact": "Alexandre Yazdi",
+      "title": "CEO",
+      "focus": "Hyper-casual games, mobile publishing",
+      "notable_titles": "Paper.io, Helix Jump, Snake VS Block",
+      "angle": "AI-driven content generation for hyper-casual development",
+      "priority": 1,
+      "linkedin": "https://www.linkedin.com/in/alexandreyazdi/"
+    },
+    {
+      "name": "SayGames",
+      "contact": "Egor Vaihanski",
+      "title": "CEO",
+      "focus": "Hyper-casual, hybrid-casual mobile games",
+      "notable_titles": "Onnect, Sand Balls, Fidget Toys",
+      "angle": "Live ops automation and AI-powered player segmentation",
+      "priority": 2,
+      "linkedin": "https://www.linkedin.com/in/egorvaihanski/"
+    },
+    {
+      "name": "Homa Games",
+      "contact": "Daniel Nathan",
+      "title": "CEO",
+      "focus": "Hyper-casual publishing, Homa Lab platform",
+      "notable_titles": "Sky Roller, Nerf Epic Pranks, Aquarium Land",
+      "angle": "AI tools for rapid prototyping and market testing",
+      "priority": 1,
+      "linkedin": "https://www.linkedin.com/in/danielnathan/"
+    },
+    {
+      "name": "Lion Studios (AppLovin)",
+      "contact": "Rafael Vivas",
+      "title": "President",
+      "focus": "Mobile game publishing, user acquisition",
+      "notable_titles": "Merge Inn, Merge Gems, Coin Trip",
+      "angle": "AI-driven UA optimization and creative generation",
+      "priority": 3,
+      "linkedin": "https://www.linkedin.com/in/rafaelvivas/"
+    },
+    {
+      "name": "Kwalee",
+      "contact": "David Darling",
+      "title": "CEO",
+      "focus": "Mobile games, PC/console, publishing",
+      "notable_titles": "Jetpack Jump, Draw It, Shootout 3D",
+      "angle": "AI for cross-platform game development pipeline",
+      "priority": 2,
+      "linkedin": "https://www.linkedin.com/in/daviddarling/"
+    },
+    {
+      "name": "Rollic (Zynga)",
+      "contact": "Partnerships Team",
+      "title": "Live Ops Partnerships",
+      "focus": "Hyper-casual, live ops, Zynga portfolio",
+      "notable_titles": "Tangle Master 3D, High Heels, Blob Runner",
+      "angle": "Live ops automation and real-time content personalization",
+      "priority": 3
+    },
+    {
+      "name": "CrazyLabs",
+      "contact": "Sagi Schliesser",
+      "title": "CEO",
+      "focus": "Hyper-casual, simulation games",
+      "notable_titles": "Acrylic Nails, Soap Cutting, Tie Dye",
+      "angle": "AI for ASMR/satisfying game content generation",
+      "priority": 2,
+      "linkedin": "https://www.linkedin.com/in/sagischliesser/"
+    },
+    {
+      "name": "Boombit",
+      "contact": "Marcin Olejarz",
+      "title": "CEO",
+      "focus": "Mobile games, midcore, strategy",
+      "notable_titles": "Hunting Clash, Fishing Clash, Dino Bash",
+      "angle": "AI for midcore game economy balancing",
+      "priority": 3,
+      "linkedin": "https://www.linkedin.com/in/marcinolejarz/"
+    },
+    {
+      "name": "Supersonic (Unity)",
+      "contact": "Developer Partnerships",
+      "title": "Developer Partnerships",
+      "focus": "Hyper-casual publishing, Unity ecosystem",
+      "notable_titles": "Bridge Race, Sort It 3D, Join Clash",
+      "angle": "Unity + AI integration for rapid hyper-casual development",
+      "priority": 1
+    },
+    {
+      "name": "Amanotes",
+      "contact": "Bill Vo",
+      "title": "CEO",
+      "focus": "Music games, rhythm games",
+      "notable_titles": "Magic Tiles 3, Tiles Hop, Piano Pop Tiles",
+      "angle": "AI for procedural music generation and dynamic gameplay",
+      "priority": 2,
+      "linkedin": "https://www.linkedin.com/in/billvo/"
+    }
+  ],
+  "top3_priorities": [
+    "Voodoo - Hyper-casual leader, strong AI angle",
+    "Homa Games - Fastest growing, Homa Lab platform",
+    "Supersonic (Unity) - Direct Unity integration opportunity"
+  ],
+  "summary": {
+    "total_ready": 10,
+    "verified_contacts": 8,
+    "priority_1": 3,
+    "priority_2": 3,
+    "priority_3": 4,
+    "status": "Ready for Lucas review"
+  }
+}

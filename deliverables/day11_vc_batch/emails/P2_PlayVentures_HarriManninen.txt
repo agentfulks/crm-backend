@@ -1,0 +1,18 @@
+To: harri@playventures.vc
+Subject: Fund II deployment + Scenario → AI infrastructure for the next wave
+
+Hi Harri,
+
+Congratulations on the $140M Fund II close in December. Deploying fresh capital into AI-enhanced gaming tools while other funds are retreating to safer bets shows real conviction—and your portfolio proves it wasn't just talk.
+
+Scenario's AI asset generation, Metica's AI gaming infrastructure, Appcharge's payments platform—you're building the tooling layer that enables the next generation of studios to compete. But there's a gap in that stack that keeps coming up in my conversations with gaming founders: the runtime layer for AI-powered worlds.
+
+NEXUS AI is that infrastructure. We enable persistent AI agents, procedural narrative systems, and dynamic world evolution in multiplayer environments—without the compute costs that kill margins. Studios using our platform are cutting AI runtime expenses by 60% while shipping features they couldn't build before.
+
+Your background founding Rocket Pack (acquired by Disney) and Matchmade gives you the operational empathy most VCs lack. You know the difference between demo AI and production AI that actually ships. I'd love 15 minutes to show you what we're building for the founders in your next cohort.
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

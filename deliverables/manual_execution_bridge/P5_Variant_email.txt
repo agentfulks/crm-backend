@@ -1,0 +1,65 @@
+================================================================================
+EMAIL PACKET: P5 - Variant
+================================================================================
+
+TO: spencer@variant.fund
+CC: 
+BCC: 
+
+SUBJECT: User-owned VC sourcing: AI engine + partner approval loop
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Spencer,
+
+Variant's thesis on user ownership and alignment resonates with our approach to VC sourcing.
+
+We built an AI-assisted engine that scores 200+ gaming/AI/devtools funds daily and generates investor packets every morning. But here's the key: partners retain full control. The AI does the research, scoring, and assembly—but humans approve every send.
+
+It's alignment between automation and judgment. Partners can green-light outreach in under four hours, and we're booking four partner meetings per week.
+
+We're raising Seed ($1-5M range) and given Variant's focus on user ownership and crypto, I think there's a strong thesis fit.
+
+Open to a brief intro?
+
+[Calendly link - 30 min partner intro]
+
+Best,
+Lucas Fulks
+[Your title]
+[Company name]
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- deliverables/outreach_assets/pitch_deck/latest.pdf
+- deliverables/outreach_assets/kpi_snapshot/2026-02-24-kpis.csv
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P5
+Fund: Variant
+Contact: Spencer Noon
+Title: Co-Founder & General Partner
+Email: spencer@variant.fund
+Check Size: $1M-$5M USD
+Stage Focus: Pre-Seed, Seed, Series A
+Priority Score: 48.33 (Rank #5)
+Best Send Time: Tuesday-Thursday, 9-11am EST
+Follow-up Day 3: 2026-02-28
+Follow-up Day 7: 2026-03-04
+
+--------------------------------------------------------------------------------
+NOTES
+--------------------------------------------------------------------------------
+- Hook angle: User ownership and alignment
+- Thesis fit: Strong - user ownership focus
+- Check-size overlap: 89% of target band
+- Contact verified via: Twitter (medium confidence)
+- Fund HQ: New York, NY, USA / Distributed
+- Special note: Spencer runs OurNetwork newsletter, DeFi/Crypto focus
+
+================================================================================

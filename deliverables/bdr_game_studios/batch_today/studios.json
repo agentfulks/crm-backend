@@ -1,0 +1,72 @@
+[
+  {
+    "id": "GS1",
+    "studio_name": "Voodoo",
+    "contact_name": "Alex Shea",
+    "contact_title": "VP Publishing",
+    "email": "alex.shea@voodoo.io",
+    "studio_website": "https://www.voodoo.io",
+    "studio_description": "Leading hyper-casual mobile game publisher with 6B+ downloads",
+    "location": "Paris, France",
+    "fit_score": 90,
+    "fit_rationale": "Voodoo is the largest hyper-casual publisher. Strong live ops infrastructure. Partnership potential for distribution.",
+    "recent_games": ["Mob Control", "Collect Em All", "Bridge Race"],
+    "target_type": "Publishing Partnership"
+  },
+  {
+    "id": "GS2",
+    "studio_name": "SayGames",
+    "contact_name": "Yegor Vaikhanski",
+    "contact_title": "CEO & Co-Founder",
+    "email": "yegor@say.games",
+    "studio_website": "https://say.games",
+    "studio_description": "Fast-growing hyper-casual publisher with 4B+ downloads",
+    "location": "Minsk, Belarus",
+    "fit_score": 88,
+    "fit_rationale": "Top 5 hyper-casual publisher. Strong performance marketing. Good fit for UA expertise exchange.",
+    "recent_games": ["My Perfect Hotel", "Dirty Revolver", "Drive Ahead"],
+    "target_type": "Publishing Partnership"
+  },
+  {
+    "id": "GS3",
+    "studio_name": "Supersonic Studios",
+    "contact_name": "Niv Yemini",
+    "contact_title": "General Manager",
+    "email": "niv.yemini@supersonic.com",
+    "studio_website": "https://supersonic.com",
+    "studio_description": "IronSource's game publishing division, top 3 hyper-casual publisher",
+    "location": "Tel Aviv, Israel",
+    "fit_score": 87,
+    "fit_rationale": "IronSource publishing arm with deep UA capabilities. Strong SDK integration potential.",
+    "recent_games": ["Bridge Race", "Sort It 3D", "Going Balls"],
+    "target_type": "Publishing Partnership"
+  },
+  {
+    "id": "GS4",
+    "studio_name": "Rollic",
+    "contact_name": "Burak Vardal",
+    "contact_title": "Head of Publishing",
+    "email": "burak.vardal@rollicgames.com",
+    "studio_website": "https://rollicgames.com",
+    "studio_description": "Zynga's hyper-casual studio, 1B+ downloads",
+    "location": "Istanbul, Turkey",
+    "fit_score": 86,
+    "fit_rationale": "Zynga-owned publisher with access to large-scale UA resources. Good strategic fit.",
+    "recent_games": ["Hair Challenge", "High Heels", "Blob Runner"],
+    "target_type": "Publishing Partnership"
+  },
+  {
+    "id": "GS5",
+    "studio_name": "Lion Studios",
+    "contact_name": "Lion Studios Team",
+    "contact_title": "Publishing Team",
+    "email": "publish@lionstudios.cc",
+    "studio_website": "https://lionstudios.cc",
+    "studio_description": "AppLovin's publishing division, 3B+ downloads",
+    "location": "Palo Alto, CA",
+    "fit_score": 85,
+    "fit_rationale": "AppLovin publishing with massive ad network. Partnership could unlock significant UA.",
+    "recent_games": ["Happy Glass", "Love Rescue", "Flip Trickster"],
+    "target_type": "Publishing Partnership"
+  }
+]

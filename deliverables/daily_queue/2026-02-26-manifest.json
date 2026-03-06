@@ -1,0 +1,129 @@
+{
+  "date": "2026-02-26",
+  "batch_id": "daily-queue-001",
+  "packets_generated": 5,
+  "notes": "Fresh batch for Daily Queue refill. Board was cleared in last execution.",
+  "packets": [
+    {
+      "id": "P1",
+      "fund_name": "BITKRAFT Ventures",
+      "contact": {
+        "name": "Jamie Wallace",
+        "role": "Associate (Web3 & Gaming)",
+        "email": "jamie@bitkraft.vc",
+        "email_confidence": "high (standard format)",
+        "linkedin": "https://www.linkedin.com/in/jmewallace/"
+      },
+      "check_size": "$500K - $5M",
+      "stage": "Seed, Series A, Series B",
+      "geography": "Global (Berlin, LA, SF, NY, London, Singapore)",
+      "thesis_alignment": "Leader in gaming + Web3/crypto crossover. Active token fund. Recent investments in AI-powered gaming infrastructure.",
+      "recent_activity": "Invested in Pixion's Power Protocol ($3M). Multiple blockchain gaming deals in Q4 2024.",
+      "warm_intro_path": "Jens Hilgers (Founding GP) is widely connected via ESL/Turtle Beach network. Consider reaching through gaming conference circuit.",
+      "hook": "BITKRAFT's thesis on AI-native game economies aligns with our agentic NPC infrastructure—our platform generates emergent gameplay through LLM-driven characters.",
+      "score": 92,
+      "priority": "high",
+      "status": "ready_for_outreach"
+    },
+    {
+      "id": "P2",
+      "fund_name": "Konvoy Ventures",
+      "contact": {
+        "name": "Josh Chapman",
+        "role": "Co-Founder & Managing Partner",
+        "email": "josh@konvoy.co",
+        "email_confidence": "high (verified via multiple sources)",
+        "linkedin": "https://www.linkedin.com/in/joshchapmanb/"
+      },
+      "check_size": "$250K - $5M",
+      "stage": "Pre-seed, Seed, Series A",
+      "geography": "US-based, global investments (Denver HQ)",
+      "thesis_alignment": "Thesis-driven gaming fund. Fund III ($150M) launched 2022. Deep focus on gaming platforms and frontier tech.",
+      "recent_activity": "Active in blockchain gaming (9 deals in Q3 2024). Recent investments in Root & Magic, Potion Games.",
+      "warm_intro_path": "Jackson Vaughan (Co-Founder) has NYC/LatAm connections via previous Aberdeen work. Taylor Hurst (Partner) is accessible via gaming events.",
+      "hook": "Konvoy's thesis on 'platforms shaping the future of gaming' matches our AI character infrastructure that enables any studio to deploy intelligent NPCs without ML teams.",
+      "score": 88,
+      "priority": "high",
+      "status": "ready_for_outreach"
+    },
+    {
+      "id": "P3",
+      "fund_name": "Griffin Gaming Partners",
+      "contact": {
+        "name": "Peter Levin",
+        "role": "Co-Founder & Managing Director",
+        "email": "peter@griffingp.com",
+        "email_confidence": "high (standard format)",
+        "linkedin": "https://www.linkedin.com/in/peter-y-levin-8109a811/"
+      },
+      "check_size": "$1M - $15M",
+      "stage": "Seed to Growth",
+      "geography": "Global (Santa Monica HQ, Mexico City, London)",
+      "thesis_alignment": "Largest pure-gaming VC ($1B+ AUM). Recently discussed AI urgency at GDC 2025. Portfolio includes Marvel Snap, Discord, Phoenix Labs.",
+      "recent_activity": "Founded Chamo Games studio (2024). Active AI commentary suggests appetite for AI-native gaming plays.",
+      "warm_intro_path": "Phil Sanderson (Senior Partner) has 23 years gaming VC experience and led Discord investment. Nick Tuosto (Managing Director) advised Tencent/Supercell deals.",
+      "hook": "Griffin's GDC commentary on AI urgency + your Marvel Snap success = we bring AI-generated infinite content loops to live-service games, reducing dev costs 60%.",
+      "score": 90,
+      "priority": "high",
+      "status": "ready_for_outreach"
+    },
+    {
+      "id": "P4",
+      "fund_name": "Makers Fund",
+      "contact": {
+        "name": "Jay Chi",
+        "role": "Founding Partner",
+        "email": "jay@makersfund.com",
+        "email_confidence": "medium-high (standard format)",
+        "linkedin": "https://www.linkedin.com/in/jay-chi/"
+      },
+      "check_size": "$500K - $10M",
+      "stage": "Seed, Series A, Series B",
+      "geography": "Global (SF, London, Tokyo, Singapore, Reykjavik)",
+      "thesis_alignment": "Interactive entertainment-focused. Fund III closed at $500M (2022). Strong Asia network and strategic guidance for gaming founders.",
+      "recent_activity": "Led multiple gaming infrastructure deals. Portfolio includes Inworld AI, Singularity 6, Scopely-adjacent companies.",
+      "warm_intro_path": "Ryann Lai (Partner) leads gaming deals and is active on LinkedIn. Lia Zhang (Partner) focuses on Asia investments. Michael Cheung (Partner) ex-Tencent.",
+      "hook": "Makers Fund's Asia expansion thesis + our AI character platform = immediate GTM advantage for Asian RPG/Anime studios desperate for dynamic NPCs.",
+      "score": 85,
+      "priority": "high",
+      "status": "ready_for_outreach"
+    },
+    {
+      "id": "P5",
+      "fund_name": "a16z crypto",
+      "contact": {
+        "name": "Chris Dixon",
+        "role": "Founding General Partner",
+        "email": "chris@a16zcrypto.com",
+        "email_confidence": "medium (likely forwarded to team)",
+        "linkedin": "https://www.linkedin.com/in/cdixon/"
+      },
+      "check_size": "$1M - $50M+",
+      "stage": "Seed to Growth",
+      "geography": "Global (Menlo Park HQ)",
+      "thesis_alignment": "$7.6B+ AUM across 4 crypto funds. Active in AI+Web3 convergence. Recent Speedrun accelerator ($1M checks for gaming/tech startups).",
+      "recent_activity": "Invested in Balance Games (P2O gaming model). Heavy focus on AI agents and agentic systems. Gaming + crypto intersection is priority.",
+      "warm_intro_path": "Speedrun program is best entry point. Portfolio founder intros preferred. Arianna Simpson (GP) covers gaming/crypto overlap.",
+      "hook": "a16z's thesis on AI agents breaking human-scale internet matches our vision: AI NPCs as economic agents creating emergent, player-owned game economies.",
+      "score": 94,
+      "priority": "highest",
+      "status": "ready_for_outreach",
+      "notes": "Consider Speedrun application as parallel path to direct outreach"
+    }
+  ],
+  "summary": {
+    "avg_fit_score": 89.8,
+    "high_priority": 5,
+    "contact_enrichment_needed": 0,
+    "total_funds": "$850M+ aggregated AUM represented",
+    "geographic_coverage": ["North America", "Europe", "Asia"],
+    "thematic_focus": ["Gaming", "Web3", "AI", "Crypto", "Interactive Entertainment"]
+  },
+  "next_steps": [
+    "Prioritize a16z crypto via Speedrun program application",
+    "Warm intro to Griffin via gaming industry events (GDC alumni network)",
+    "BITKRAFT outreach timed with their next Web3 gaming summit",
+    "Konvoy can be direct cold outreach - high responsiveness historically",
+    "Makers Fund best approached through Asia gaming ecosystem connections"
+  ]
+}

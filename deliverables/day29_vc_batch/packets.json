@@ -1,0 +1,304 @@
+{
+  "batch_date": "2026-03-02",
+  "batch_day": 29,
+  "focus_area": "Vertical AI for Gaming / Interactive Entertainment",
+  "total_targets": 5,
+  "avg_fit_score": 90.2,
+  "packets": [
+    {
+      "packet_id": "P1",
+      "priority": 1,
+      "fund": {
+        "name": "Griffin Gaming Partners",
+        "type": "Gaming-Focused Venture Capital",
+        "aum": "$1B+",
+        "location": "Los Angeles, CA / London, UK",
+        "check_size": "$5M - $50M",
+        "stage_focus": "Series A to Growth",
+        "fund_year": "2023"
+      },
+      "partner": {
+        "name": "Nick Tuosto",
+        "title": "Co-Founder & Managing Partner",
+        "email": "nick@griffingamingpartners.com",
+        "linkedin": "linkedin.com/in/nicktuosto",
+        "background": "Former Goldman Sachs TMT, co-founded LionTree's gaming practice"
+      },
+      "fit_score": {
+        "total": 93,
+        "gaming_thesis": 25,
+        "stage_fit": 20,
+        "check_size": 15,
+        "strategic_value": 18,
+        "partner_access": 10,
+        "geography": 5
+      },
+      "thesis_alignment": {
+        "summary": "Griffin is the largest VC fund dedicated exclusively to gaming. They understand that AI is transforming game development, player engagement, and live ops. Nick Tuosto's Goldman/LionTree background brings serious financial firepower to gaming bets.",
+        "key_investments": [
+          "Scopely ($5.8B acquisition)",
+          "Mythical Games",
+          "Fortis",
+          "GamerGoo",
+          "Edgegap"
+        ],
+        "relevant_expertise": [
+          "Pure-play gaming focus — no distractions",
+          "Deep LP network including major game publishers",
+          "Understanding of AI in game development pipelines",
+          "Series A/Growth expertise for scaling game companies"
+        ]
+      },
+      "outreach_strategy": {
+        "angle": "AI-native game development infrastructure",
+        "hook": "Griffin understands gaming better than any other fund. Position as the AI infrastructure layer specifically built for game developers — procedural content, AI NPCs, live ops automation.",
+        "key_talking_points": [
+          "Reference Scopely's AI-driven live ops success",
+          "Mention Mythical's blockchain + AI intersection",
+          "Emphasize developer-first approach to AI tooling"
+        ],
+        "warm_paths": [
+          "Walter Driver (Scopely CEO)",
+          "John Linden (Mythical CEO)",
+          "Gaming conference circuit (GDC, Gamescom)"
+        ]
+      }
+    },
+    {
+      "packet_id": "P2",
+      "priority": 2,
+      "fund": {
+        "name": "Lightspeed Venture Partners (Gaming)",
+        "type": "Multi-Stage Venture Capital",
+        "aum": "$25B+ AUM",
+        "location": "Menlo Park, CA / San Francisco, CA",
+        "check_size": "$5M - $100M",
+        "stage_focus": "Seed to Growth",
+        "fund_year": "2024"
+      },
+      "partner": {
+        "name": "Amy Wu",
+        "title": "Partner, Gaming & Consumer",
+        "email": "amy.wu@lsvp.com",
+        "linkedin": "linkedin.com/in/amy-wu-2990a86",
+        "background": "Former FTX Ventures, led $2B gaming fund, extensive crypto/gaming crossover experience"
+      },
+      "fit_score": {
+        "total": 91,
+        "gaming_thesis": 23,
+        "stage_fit": 20,
+        "check_size": 15,
+        "strategic_value": 18,
+        "partner_access": 10,
+        "geography": 5
+      },
+      "thesis_alignment": {
+        "summary": "Amy Wu built FTX Ventures' $2B gaming practice before returning to Lightspeed. She understands the intersection of gaming, crypto, and AI better than almost any investor. Lightspeed's gaming portfolio spans traditional and Web3 gaming.",
+        "key_investments": [
+          "Epic Games",
+          "Tripledot Studios",
+          "Playco",
+          "Faraway",
+          "Galaxy Fight Club"
+        ],
+        "relevant_expertise": [
+          "Deep expertise in gaming + crypto + AI convergence",
+          "Former head of FTX Ventures $2B gaming fund",
+          "Lightspeed's Epic Games investment shows big-ticket capability",
+          "Strong Asia gaming network (China, Korea, Japan)"
+        ]
+      },
+      "outreach_strategy": {
+        "angle": "AI infrastructure for the next generation of interactive entertainment",
+        "hook": "Amy's experience at FTX Ventures gave her unique insight into Web3 gaming's infrastructure gaps. Position as solving the AI infrastructure problem for both traditional and Web3 game developers.",
+        "key_talking_points": [
+          "Reference Epic Games' Unreal Engine + AI trajectory",
+          "Mention understanding of Web3 gaming infrastructure needs",
+          "Emphasize cross-platform AI capabilities"
+        ],
+        "warm_paths": [
+          "Tim Sweeney (Epic CEO)",
+          "Web3 gaming founders in Lightspeed portfolio",
+          "Gaming Twitter/X community"
+        ]
+      }
+    },
+    {
+      "packet_id": "P3",
+      "priority": 3,
+      "fund": {
+        "name": "Transcend Fund",
+        "type": "Gaming-Focused Venture Capital",
+        "aum": "$500M+",
+        "location": "San Francisco, CA",
+        "check_size": "$2M - $15M",
+        "stage_focus": "Seed to Series B",
+        "fund_year": "2023"
+      },
+      "partner": {
+        "name": "Shanti Bergel",
+        "title": "Managing Director",
+        "email": "shanti@transcend.fund",
+        "linkedin": "linkedin.com/in/shantibergel",
+        "background": "Former COO of Tilting Point, 15+ years in gaming operations and investment"
+      },
+      "fit_score": {
+        "total": 89,
+        "gaming_thesis": 25,
+        "stage_fit": 20,
+        "check_size": 12,
+        "strategic_value": 17,
+        "partner_access": 10,
+        "geography": 5
+      },
+      "thesis_alignment": {
+        "summary": "Transcend is purpose-built for gaming — operators who became investors. Shanti Bergel's Tilting Point background means deep understanding of game publishing, user acquisition, and live ops. They get the operational side of gaming AI.",
+        "key_investments": [
+          "Playable Worlds",
+          "Nifty Island",
+          "Ice Storm",
+          "Flying Wild Hog",
+          "Stardust"
+        ],
+        "relevant_expertise": [
+          "Operators-first approach — all partners built game companies",
+          "Deep live ops and UA expertise from Tilting Point",
+          "Understanding of AI for player retention and monetization",
+          "Strong indie developer network"
+        ]
+      },
+      "outreach_strategy": {
+        "angle": "AI for game operations and player engagement",
+        "hook": "Transcend's operator background means they understand that AI isn't just about content generation — it's about running better live ops, smarter UA, and more engaging player experiences.",
+        "key_talking_points": [
+          "Reference Tilting Point's data-driven publishing model",
+          "Mention AI for player segmentation and personalization",
+          "Emphasize operational AI vs. creative AI distinction"
+        ],
+        "warm_paths": [
+          "Tilting Point alumni network",
+          "GDC operational track sessions",
+          "Mobile gaming UA community"
+        ]
+      }
+    },
+    {
+      "packet_id": "P4",
+      "priority": 4,
+      "fund": {
+        "name": "Hiro Capital",
+        "type": "Games, Metaverse & Esports VC",
+        "aum": "$300M+",
+        "location": "London, UK / Los Angeles, CA",
+        "check_size": "$1M - $10M",
+        "stage_focus": "Seed to Series A",
+        "fund_year": "2023"
+      },
+      "partner": {
+        "name": "Luke Alvarez",
+        "title": "Managing Partner & Founder",
+        "email": "luke@hiro.capital",
+        "linkedin": "linkedin.com/in/lukealvarez",
+        "background": "Former CEO of Inspired Gaming Group (IPO), founded Innovate Gaming, 20+ years gaming entrepreneurship"
+      },
+      "fit_score": {
+        "total": 87,
+        "gaming_thesis": 24,
+        "stage_fit": 18,
+        "check_size": 12,
+        "strategic_value": 16,
+        "partner_access": 10,
+        "geography": 7
+      },
+      "thesis_alignment": {
+        "summary": "Hiro Capital focuses on games, metaverse, and esports with a European base and global reach. Luke Alvarez's public company background brings institutional discipline to gaming bets. Strong emphasis on sports, racing, and simulation games.",
+        "key_investments": [
+          "Flavourworks",
+          "Kayak VR",
+          "Everywhere",
+          "FRVR",
+          "Edge"
+        ],
+        "relevant_expertise": [
+          "European gaming network with US presence",
+          "Sports/esports specialization",
+          "Public markets experience (IPO, M&A)",
+          "Metaverse and spatial computing thesis"
+        ]
+      },
+      "outreach_strategy": {
+        "angle": "AI for immersive and spatial gaming experiences",
+        "hook": "Hiro's focus on metaverse and spatial computing aligns with AI-generated immersive environments. Position as infrastructure for the next generation of 3D/social gaming.",
+        "key_talking_points": [
+          "Reference Everywhere's ambition for player-created worlds",
+          "Mention AI for procedural 3D environment generation",
+          "Emphasize European market expansion capabilities"
+        ],
+        "warm_paths": [
+          "Leslie Benzies (Everywhere, former Rockstar)",
+          "European gaming conference circuit",
+          "VR/AR gaming community"
+        ]
+      }
+    },
+    {
+      "packet_id": "P5",
+      "priority": 5,
+      "fund": {
+        "name": "Aonic",
+        "type": "Gaming Ecosystem Investment",
+        "aum": "$200M+",
+        "location": "Copenhagen, Denmark / London, UK",
+        "check_size": "$500K - $5M",
+        "stage_focus": "Seed to Series A",
+        "fund_year": "2024"
+      },
+      "partner": {
+        "name": "Paul Leydon",
+        "title": "Investment Partner",
+        "email": "paul@aonic.com",
+        "linkedin": "linkedin.com/in/paulleydon",
+        "background": "Former CPO at Scopely, led product for games generating $1B+ revenue, deep mobile F2P expertise"
+      },
+      "fit_score": {
+        "total": 85,
+        "gaming_thesis": 23,
+        "stage_fit": 18,
+        "check_size": 10,
+        "strategic_value": 15,
+        "partner_access": 10,
+        "geography": 9
+      },
+      "thesis_alignment": {
+        "summary": "Aonic is the new gaming fund from ex-Scopely executives who scaled mobile games to billions. Paul Leydon's CPO experience means deep understanding of product-market fit, monetization, and retention. They understand AI for F2P game operations intimately.",
+        "key_investments": [
+          "MentorcliQ",
+          "Fracture Labs",
+          "GamerGoo",
+          "Tactile Games",
+          "Savage Game Studios"
+        ],
+        "relevant_expertise": [
+          "Ex-Scopely product leadership ($1B+ game experience)",
+          "Deep mobile F2P and live ops expertise",
+          "Understanding of AI for monetization optimization",
+          "Nordic/European gaming ecosystem access"
+        ]
+      },
+      "outreach_strategy": {
+        "angle": "AI for mobile F2P game operations and monetization",
+        "hook": "Paul's Scopely background means he knows exactly how AI can transform live ops, player segmentation, and monetization in mobile games. Position as the operational AI layer for F2P gaming.",
+        "key_talking_points": [
+          "Reference Scopely's data-driven live ops success",
+          "Mention AI for offer personalization and player LTV optimization",
+          "Emphasize mobile-first AI architecture"
+        ],
+        "warm_paths": [
+          "Scopely alumni network",
+          "Mobile gaming monetization community",
+          "Nordic gaming ecosystem (Supercell, King, etc.)"
+        ]
+      }
+    }
+  ]
+}

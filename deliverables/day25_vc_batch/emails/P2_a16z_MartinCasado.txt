@@ -1,0 +1,25 @@
+Subject: Infrastructure thesis alignment / [Company]
+
+Hi Martin,
+
+I've been following your work on AI infrastructure value accrual — particularly your podcast episodes with Sarah on where the infrastructure layer is heading. Your thesis on the "full stack" approach resonates strongly with what we're building.
+
+We're tackling [specific infrastructure problem] with a fundamentally different architecture that [key technical differentiation]. Our team has deep experience in [relevant background] and we're seeing strong early signals from [customer type/validation].
+
+Given a16z's infrastructure practice and your leadership in this space, I'd value your perspective on:
+- How you see the infrastructure layer evolving over the next 18 months
+- Whether our approach to [specific technical aspect] aligns with where you believe the market is heading
+
+We're raising [round size] to [use of funds in one sentence]. Would you have 20 minutes for a conversation?
+
+Best,
+[Name]
+[Title]
+[Company]
+[LinkedIn profile]
+
+---
+FOLLOW-UP SCHEDULE:
+- Day 3: Follow-up with technical deep-dive or architecture overview
+- Day 7: Follow-up referencing recent a16z infrastructure content
+- Day 14: Final follow-up, mention portfolio company connection if applicable

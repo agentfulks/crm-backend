@@ -1,0 +1,16 @@
+Subject: Infrastructure for Autonomous On-Chain Game Economies
+
+Hi Lasse,
+
+1kx's thesis on autonomous worlds and crypto-native gaming infrastructure resonates with the problem we're solving.
+
+We're building runtime infrastructure for AI agents in on-chain game economies. The technical angle: a WASM-based execution environment that enables autonomous agents to generate assets, execute trades, and evolve strategies—all with verifiable on-chain state.
+
+The convergence you and Peter have described—AI agents using crypto rails for coordination—is exactly what we're building. Not a game. Not a content play. Pure infrastructure for the next generation of on-chain economies where AI is a first-class participant.
+
+Given 1kx's investments in Bittensor and Ritual, and your specific interest in autonomous worlds infrastructure, this aligns with your portfolio thesis. We're technical founders, pre-seed, and focused on protocol-level primitives rather than application-layer content.
+
+Worth exploring whether this fits the 1kx mandate?
+
+Best,
+Lucas

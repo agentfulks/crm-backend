@@ -1,0 +1,16 @@
+Subject: Complementary Infrastructure for the Foundational Industries Thesis
+
+Hi Dayna,
+
+Construct Capital's focus on manufacturing, logistics, and defense resonates—particularly the portfolio alignment with Hadrian, Veho, and the recent Nexxa.ai investment for industrial AI agents.
+
+I'm building the infrastructure layer that makes such industrial AI deployments actually work in production environments. Not the application layer, but the connective tissue: data ingestion from legacy systems, real-time processing pipelines, and model serving infrastructure that doesn't buckle under industrial workloads.
+
+Your thesis is that the best tech founders are turning toward foundational industries. Ours is that these industries need better infrastructure before the applications can scale.
+
+Seems like a natural complement to the companies you're backing. Worth a conversation?
+
+Best,
+[Name]
+[Company]
+[LinkedIn/Twitter]

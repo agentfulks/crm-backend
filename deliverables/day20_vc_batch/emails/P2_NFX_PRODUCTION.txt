@@ -1,0 +1,68 @@
+================================================================================
+EMAIL PACKET: P2 - NFX [PRODUCTION READY]
+================================================================================
+
+TO: james@nfx.com
+CC: 
+BCC: 
+
+SUBJECT: Data network effects for VC sourcing — 4 meetings/week
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi James,
+
+NFX defined the playbook for network effects investing. Our AI sourcing engine is a classic data network effect business: every new fund ingested improves the model for everyone.
+
+We run an AI-assisted sourcing engine that scores 200+ gaming, AI, and devtools funds daily, assembles five investor packets every morning, and logs approvals + meetings directly in Slack and Trello. Partners can green-light sends in under four hours.
+
+The loop is already booking four partner meetings per week and compounds as more funds are ingested.
+
+We focus on Seed-Series B ($500K-$10M checks), which fits NFX's stage and thesis perfectly.
+
+Worth a 15-minute call to see if there's a fit?
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+
+P.S. — Based in [LOCATION]. Happy to work around your schedule.
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] Pitch deck (ADD: outreach_assets/pitch_deck/latest.pdf)
+- [ ] KPI snapshot (ADD: outreach_assets/kpi_snapshot/2026-03-01-kpis.csv)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P2
+Fund: NFX
+Contact: James Currier
+Title: Managing Partner
+Email: james@nfx.com
+Check Size: $1M-$5M USD
+Stage Focus: Seed, Series A
+Location: Palo Alto, CA
+Twitter: @jamescurrier
+Fit Score: 90/100
+
+--------------------------------------------------------------------------------
+TRELLO CARD ACTIONS
+--------------------------------------------------------------------------------
+1. Create card in "Daily Queue" list
+2. Add label: "P2-HIGH"
+3. Add checklist:
+   - [ ] Review packet materials
+   - [ ] Move to Awaiting Approval
+   - [ ] Lucas approval
+   - [ ] Move to Approved/Send
+   - [ ] Execute send
+   - [ ] Log in sent_log.csv
+
+--------------------------------------------------------------------------------

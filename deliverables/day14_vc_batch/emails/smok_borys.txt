@@ -1,0 +1,16 @@
+Subject: AI Gaming Infrastructure - Technical Pre-Seed
+
+Hi Borys,
+
+Smok's focus on B2B infrastructure and technical founding teams in the CEE region aligns well with what we're building.
+
+We're developing middleware that enables AI agents to participate in game economies—creating, trading, and evolving assets on-chain. The problem: current infrastructure treats AI and blockchain as separate layers. We're unifying them into a single runtime for autonomous game economies.
+
+Technical stack: Rust core, WASM runtime, EVM-compatible. Built for the post-AI game development paradigm where content is generated, not authored.
+
+Given Smok's thesis on B2B gaming tools and your interest in crypto infrastructure over speculation, this fits the mold of infrastructure plays you've backed. We're pre-seed, have working prototypes, and are looking for partners who understand both gaming and crypto-native architecture.
+
+Open to a conversation?
+
+Best,
+Lucas

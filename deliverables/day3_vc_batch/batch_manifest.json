@@ -1,0 +1,80 @@
+{
+  "batch_id": "day3_vc_batch_2026-02-26",
+  "created_at": "2026-02-26T14:55:00Z",
+  "created_by": "vantage",
+  "target_list": "Daily Queue",
+  "funds": [
+    {
+      "packet_id": "D1",
+      "fund": "Play Ventures",
+      "contact": "Henric Suuronen",
+      "title": "Founding Partner",
+      "email": "henric@playventures.vc",
+      "check_size": "$200K-$5M",
+      "stage": "Pre-seed, Seed, Series A",
+      "location": "Singapore",
+      "score": 82.0,
+      "email_file": "D1_PlayVentures_email.txt"
+    },
+    {
+      "packet_id": "D2",
+      "fund": "GFR Fund",
+      "contact": "Yasushi Komori",
+      "title": "Partner",
+      "email": "yasushi@gfrfund.com",
+      "check_size": "$100K-$5M",
+      "stage": "Seed, Series A",
+      "location": "San Francisco, CA",
+      "score": 78.0,
+      "email_file": "D2_GFRFund_email.txt"
+    },
+    {
+      "packet_id": "D3",
+      "fund": "Makers Fund",
+      "contact": "Michael Cheung",
+      "title": "Founding General Partner",
+      "email": "mike@makersfund.com",
+      "check_size": "$500K-$40M",
+      "stage": "Seed, Series A, Series B",
+      "location": "United Kingdom",
+      "score": 80.0,
+      "email_file": "D3_MakersFund_email.txt"
+    },
+    {
+      "packet_id": "D4",
+      "fund": "London Venture Partners (LVP)",
+      "contact": "David Lau-Kee",
+      "title": "General Partner",
+      "email": "david@londonvp.com",
+      "check_size": "$100K-$2M",
+      "stage": "Seed, Series A",
+      "location": "London, UK",
+      "score": 76.0,
+      "email_file": "D4_LVP_email.txt"
+    },
+    {
+      "packet_id": "D5",
+      "fund": "Hiro Capital",
+      "contact": "Luke Alvarez",
+      "title": "Founding Managing Partner",
+      "email": "luke@hiro.capital",
+      "check_size": "$1M-$10M",
+      "stage": "Series A, Series B",
+      "location": "London/Luxembourg",
+      "score": 74.0,
+      "email_file": "D5_HiroCapital_email.txt"
+    }
+  ],
+  "status": "uploaded_to_trello",
+  "uploaded_at": "2026-02-27T01:47:00Z",
+  "trello_board": "VC Outreach Engine",
+  "trello_list": "Awaiting Approval",
+  "cards_created": [
+    {"fund": "Play Ventures", "url": "https://trello.com/c/RMDfsVPa"},
+    {"fund": "GFR Fund", "url": "https://trello.com/c/DGHkjE3y"},
+    {"fund": "Makers Fund", "url": "https://trello.com/c/Pr6130Db"},
+    {"fund": "London Venture Partners (LVP)", "url": "https://trello.com/c/v4fGeJP4"},
+    {"fund": "Hiro Capital", "url": "https://trello.com/c/z3hrXWck"}
+  ],
+  "notes": "5 new VC packets uploaded to Trello. All cards in Awaiting Approval list with complete contact info, fit scores, and personalized email drafts."
+}

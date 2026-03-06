@@ -1,0 +1,333 @@
+{
+  "batch_id": "day25_vc_batch",
+  "batch_theme": "AI Infrastructure & LLM Tooling - Tier 1 Targets",
+  "generated_at": "2026-03-01",
+  "batch_size": 5,
+  "vc_targets": [
+    {
+      "id": "day25_001",
+      "fund_name": "Menlo Ventures",
+      "fund_type": "Multi-Stage Venture Capital",
+      "location": "San Francisco, CA / Menlo Park, CA",
+      "aum": "$5B+ (active funds)",
+      "check_size": {
+        "min_usd": 500000,
+        "max_usd": 50000000,
+        "range": "$500K - $50M"
+      },
+      "stages": ["Seed", "Series A", "Series B", "Growth"],
+      "investment_thesis": "Leading AI infrastructure investor with dedicated focus on DevOps, data stack, middleware, and API platforms. Deep technical expertise from team including former Splunk CTO. Proven track record in infrastructure companies from DevOps to cloud security.",
+      "notable_investments": ["Anthropic", "Abnormal Security", "Harness", "AppDynamics", "BitSight", "Clumio", "Dusty Robotics"],
+      "ai_infrastructure_thesis": "Actively deploying capital across the AI stack with particular focus on infrastructure layer. Led significant rounds in foundation models and AI tooling. Strong conviction on AI-native DevOps, data infrastructure for LLMs, and developer tools that accelerate AI adoption.",
+      "recent_investments": [
+        {
+          "company": "Anthropic",
+          "round": "Series C/D",
+          "date": "2023-2024",
+          "focus": "AI safety and large language models"
+        },
+        {
+          "company": "Cleanlab",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "AI data quality and error detection"
+        },
+        {
+          "company": "Grit",
+          "round": "Seed",
+          "date": "2024",
+          "focus": "AI-powered code migration and refactoring"
+        }
+      ],
+      "primary_contact": {
+        "name": "Matt Murphy",
+        "title": "Partner",
+        "email": "mmurphy@menlovc.com",
+        "linkedin": "https://www.linkedin.com/in/matt-murphy-0415543/",
+        "twitter": "@mmurph",
+        "background": "Partner at Menlo Ventures investing multi-stage across AI infrastructure (DevOps, data stack, middleware, API platforms), AI-first SaaS, and robotics. Previously 15+ years at Kleiner Perkins where he co-led the pioneering iFund and backed DocuSign and AppDynamics."
+      },
+      "alternative_contact": {
+        "name": "Tim Tully",
+        "title": "Partner",
+        "email": "ttully@menlovc.com",
+        "background": "Former CTO at Splunk. Deep technical expertise in cloud infrastructure, data systems, and AI/ML platforms."
+      },
+      "signal_score": 94,
+      "signal_breakdown": {
+        "strategic_fit": 95,
+        "timing": 93,
+        "accessibility": 94,
+        "check_size_match": 93
+      },
+      "warm_intro_path": [
+        "Portfolio founders in AI infrastructure space",
+        "Menlo-sponsored AI events and summits",
+        "Mutual connections through AppDynamics/Harness networks"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "day25_002",
+      "fund_name": "Andreessen Horowitz (a16z)",
+      "fund_type": "Multi-Stage Venture Capital",
+      "location": "Menlo Park, CA / San Francisco, CA / New York, NY",
+      "aum": "$35B+ (total AUM across funds)",
+      "check_size": {
+        "min_usd": 1000000,
+        "max_usd": 100000000,
+        "range": "$1M - $100M+"
+      },
+      "stages": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+      "investment_thesis": "Leading technology venture firm with dedicated $1.25B+ AI infrastructure fund. Deep conviction on AI infrastructure layer with significant investments across foundation models, compute, and developer tools. Central voice in AI policy and infrastructure debates.",
+      "notable_investments": ["OpenAI", "Anthropic", "Anysphere", "Codeium", "Baseten", "Databricks", "Fivetran", "Gatsby", "GitHub"],
+      "ai_infrastructure_thesis": "Major AI infrastructure investor with dedicated infrastructure practice. Led $1.25B fund specifically for AI infrastructure bets. Active in foundation models, AI-native infrastructure, and developer tooling. Strong thesis on value accrual in AI infrastructure layer.",
+      "recent_investments": [
+        {
+          "company": "Anysphere",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "AI-native code editor (Cursor)"
+        },
+        {
+          "company": "Codeium",
+          "round": "Series C",
+          "date": "2024",
+          "focus": "AI code completion and developer tools"
+        },
+        {
+          "company": "Baseten",
+          "round": "Series B",
+          "date": "2024",
+          "focus": "ML model infrastructure and serving"
+        }
+      ],
+      "primary_contact": {
+        "name": "Martin Casado",
+        "title": "General Partner",
+        "email": "mcasado@a16z.com",
+        "linkedin": "https://www.linkedin.com/in/martin-casado-7883/",
+        "twitter": "@martin_casado",
+        "background": "General Partner at Andreessen Horowitz leading the firm's infrastructure practice. Previously founded Nicira (acquired by VMware for $1.26B). PhD in Computer Science from Stanford. Central voice in AI infrastructure and policy debates."
+      },
+      "alternative_contact": {
+        "name": "Sarah Wang",
+        "title": "General Partner",
+        "email": "swang@a16z.com",
+        "background": "GP on Growth and Infrastructure teams. Deep expertise in infrastructure economics and AI value accrual."
+      },
+      "signal_score": 96,
+      "signal_breakdown": {
+        "strategic_fit": 97,
+        "timing": 95,
+        "accessibility": 92,
+        "check_size_match": 98
+      },
+      "warm_intro_path": [
+        "Portfolio company founders (particularly AI infrastructure)",
+        "a16z technical community and events",
+        "Shared Stanford CS networks"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "day25_003",
+      "fund_name": "Khosla Ventures",
+      "fund_type": "Multi-Stage Venture Capital",
+      "location": "Menlo Park, CA",
+      "aum": "$15B+ (total AUM)",
+      "check_size": {
+        "min_usd": 500000,
+        "max_usd": 50000000,
+        "range": "$500K - $50M"
+      },
+      "stages": ["Seed", "Series A", "Series B", "Growth"],
+      "investment_thesis": "Founded by Vinod Khosla (co-founder Sun Microsystems). Deep conviction on AI as transformative technology with significant thesis on AI infrastructure, foundation models, and enterprise AI adoption. Willing to take big bets on unconventional ideas.",
+      "notable_investments": ["OpenAI", "Anthropic", "Databricks", "Square", "Affirm", "Impossible Foods", "Carbon Health", "Oscar Health"],
+      "ai_infrastructure_thesis": "Early and major investor in OpenAI. Strong thesis on AI infrastructure as the foundation for the next industrial revolution. Active across foundation models, AI chips, and developer tooling. Vinod Khosla is a vocal advocate for AI infrastructure investment.",
+      "recent_investments": [
+        {
+          "company": "OpenAI",
+          "round": "Multiple",
+          "date": "2019-2024",
+          "focus": "Foundation models and AGI research"
+        },
+        {
+          "company": "Databricks",
+          "round": "Series H",
+          "date": "2021",
+          "focus": "Data and AI platform"
+        },
+        {
+          "company": "Varda Space Industries",
+          "round": "Series C",
+          "date": "2025",
+          "focus": "Space manufacturing and AI"
+        }
+      ],
+      "primary_contact": {
+        "name": "Vinod Khosla",
+        "title": "Founder & Managing Director",
+        "email": "vinod@khoslaventures.com",
+        "linkedin": "https://www.linkedin.com/in/vinod-khosla-65387416/",
+        "twitter": "@vkhosla",
+        "background": "Founder of Khosla Ventures. Previously co-founded Sun Microsystems and was a General Partner at Kleiner Perkins. Renowned technology investor with deep conviction on AI's transformative potential. Author of 'Reinventing Societal Infrastructure.'"
+      },
+      "alternative_contact": {
+        "name": "Team",
+        "title": "Investment Team",
+        "email": "kv@khoslaventures.com"
+      },
+      "signal_score": 92,
+      "signal_breakdown": {
+        "strategic_fit": 95,
+        "timing": 90,
+        "accessibility": 85,
+        "check_size_match": 98
+      },
+      "warm_intro_path": [
+        "OpenAI/Anthropic alumni networks",
+        "Stanford entrepreneurship communities",
+        "Khosla portfolio company founders"
+      ],
+      "priority": "P2"
+    },
+    {
+      "id": "day25_004",
+      "fund_name": "Lux Capital",
+      "fund_type": "Multi-Stage Venture Capital",
+      "location": "New York, NY / Menlo Park, CA",
+      "aum": "$5B+ (total AUM)",
+      "check_size": {
+        "min_usd": 500000,
+        "max_usd": 50000000,
+        "range": "$500K - $50M"
+      },
+      "stages": ["Seed", "Series A", "Series B", "Growth"],
+      "investment_thesis": "Invests in emerging technologies and contrarian ideas in science and tech. Deep focus on AI, robotics, space, and frontier technologies. Counter-conventional approach to solving vexing puzzles of our time.",
+      "notable_investments": ["Anduril", "Hades", "Chronosphere", "Aera Therapeutics", "Hadrian", "Varda Space Industries", "Mythic AI"],
+      "ai_infrastructure_thesis": "Active investor in AI infrastructure with focus on unconventional approaches. Investments span AI chips, autonomous systems, and AI-native infrastructure. Strong thesis on AI in physical world and edge computing.",
+      "recent_investments": [
+        {
+          "company": "Hadrian",
+          "round": "Series B",
+          "date": "2024",
+          "focus": "Autonomous factories for space/defense"
+        },
+        {
+          "company": "Chronosphere",
+          "round": "Series C",
+          "date": "2022-2023",
+          "focus": "Cloud-native observability infrastructure"
+        },
+        {
+          "company": "Aera Therapeutics",
+          "round": "Series A",
+          "date": "2023",
+          "focus": "AI-powered genetic medicines"
+        }
+      ],
+      "primary_contact": {
+        "name": "Brandon Reeves",
+        "title": "Partner",
+        "email": "brandon@luxcapital.com",
+        "linkedin": "https://www.linkedin.com/in/brandonreeves/",
+        "twitter": "@brandonreeves",
+        "background": "Partner at Lux Capital focusing on AI, infrastructure, and developer tools. Led investments in Hadrian, Chronosphere, and other AI infrastructure companies. Deep technical background in computer science and engineering."
+      },
+      "alternative_contact": {
+        "name": "Josh Wolfe",
+        "title": "Co-Founder & Managing Partner",
+        "email": "josh@luxcapital.com",
+        "background": "Co-founder of Lux Capital. Leading voice in emerging technology investing."
+      },
+      "signal_score": 90,
+      "signal_breakdown": {
+        "strategic_fit": 92,
+        "timing": 88,
+        "accessibility": 90,
+        "check_size_match": 90
+      },
+      "warm_intro_path": [
+        "Anduril/Hadrian portfolio networks",
+        "Lux portfolio founders in AI space",
+        "Technical conferences and research communities"
+      ],
+      "priority": "P3"
+    },
+    {
+      "id": "day25_005",
+      "fund_name": "Lightspeed Venture Partners",
+      "fund_type": "Multi-Stage Venture Capital",
+      "location": "Menlo Park, CA / San Francisco, CA / Tel Aviv / India",
+      "aum": "$25B+ (total AUM)",
+      "check_size": {
+        "min_usd": 1000000,
+        "max_usd": 100000000,
+        "range": "$1M - $100M"
+      },
+      "stages": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+      "investment_thesis": "Major force in AI infrastructure and enterprise software. Significant investments across cloud infrastructure, security, DevOps, and AI tooling. Strong enterprise SaaS and infrastructure track record with multiple IPOs.",
+      "notable_investments": ["Snorkel AI", "Anyscale", "Moveworks", "Netskope", "Rubrik", "HashiCorp", "MuleSoft", "AppDynamics"],
+      "ai_infrastructure_thesis": "Active investor in AI infrastructure and tooling with focus on enterprise adoption. Investments span AI data platforms, ML infrastructure, and AI-native applications. Strong conviction on AI transforming enterprise workflows.",
+      "recent_investments": [
+        {
+          "company": "Snorkel AI",
+          "round": "Series C",
+          "date": "2021-2023",
+          "focus": "AI data labeling and development platform"
+        },
+        {
+          "company": "Anyscale",
+          "round": "Series C",
+          "date": "2022",
+          "focus": "Distributed computing for AI/ML"
+        },
+        {
+          "company": "Moveworks",
+          "round": "Series C",
+          "date": "2021-2023",
+          "focus": "AI-powered IT automation"
+        }
+      ],
+      "primary_contact": {
+        "name": "Guru Chahal",
+        "title": "Partner",
+        "email": "gchahal@lsvp.com",
+        "linkedin": "https://www.linkedin.com/in/guruchahal/",
+        "background": "Partner at Lightspeed Venture Partners focusing on early-stage enterprise startups in cloud, security, DevOps, observability and AI infrastructure. Former founder with exit to Cisco. Deep technical expertise in networking and infrastructure."
+      },
+      "alternative_contact": {
+        "name": "Enterprise Team",
+        "title": "Investment Team",
+        "email": "enterprise@lsvp.com"
+      },
+      "signal_score": 91,
+      "signal_breakdown": {
+        "strategic_fit": 92,
+        "timing": 90,
+        "accessibility": 91,
+        "check_size_match": 91
+      },
+      "warm_intro_path": [
+        "Lightspeed portfolio founders (AI/security)",
+        "Purdue Engineering networks",
+        "Enterprise infrastructure founder communities"
+      ],
+      "priority": "P4"
+    }
+  ],
+  "summary": {
+    "total_targets": 5,
+    "average_signal_score": 92.6,
+    "signal_score_range": "90-96",
+    "primary_focus": "AI Infrastructure, LLM Tooling, Developer Tools",
+    "batch_characteristics": [
+      "100% tier-1 funds with dedicated AI infrastructure practice",
+      "Average signal score 92.6/100 (all 90+)",
+      "Strong mix of multi-stage funds with appropriate check sizes",
+      "All partners have direct AI infrastructure investment experience",
+      "Multiple warm intro paths through portfolio networks"
+    ]
+  }
+}

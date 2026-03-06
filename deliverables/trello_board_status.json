@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-02-27T17:17:00Z",
+  "board_url": "https://trello.com/b/tPkRdYjg/vc-outreach-engine",
+  "summary": {
+    "total_cards": 26,
+    "cards_by_list": {
+      "Daily Queue": 7,
+      "Awaiting Approval": 3,
+      "Approved / Send": 1,
+      "Follow-up": 1,
+      "In Progress": 1,
+      "Foundation": 3,
+      "Pipeline Build": 6,
+      "Insights & Metrics": 1
+    }
+  },
+  "critical_issues": [
+    {
+      "severity": "HIGH",
+      "issue": "Day 1 sends 72h+ overdue",
+      "affected_cards": [
+        "699d62440c53022f56dc42b1",
+        "699d62471bee2f60a50aab9a",
+        "699d6249d5248492eefc000e",
+        "699d624cdd614a5e0a62b5e3",
+        "699d624efca4d3709cef25d5"
+      ],
+      "action": "Move to Approved/Send and execute immediately"
+    }
+  ],
+  "ready_to_execute": {
+    "day1_sends": 5,
+    "day8_batch": 5,
+    "emails_drafted": 5
+  },
+  "infrastructure": {
+    "backend_api": "95% complete",
+    "postgres_crm": "50% complete - provisioning needed",
+    "trello_automation": "blocked - credentials needed"
+  }
+}

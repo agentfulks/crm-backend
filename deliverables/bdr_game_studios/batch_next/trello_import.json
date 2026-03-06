@@ -1,0 +1,121 @@
+{
+  "board_name": "BDR Game Studios - Outreach Pipeline",
+  "lists": [
+    {
+      "name": "To Contact",
+      "cards": [
+        {
+          "name": "Gismart - Dmitri Lipnitsky",
+          "desc": "**Studio:** Gismart\n**Location:** London, UK\n**Downloads:** 1B+\n**Status:** Independent\n\n**Decision Maker:** Dmitri Lipnitsky, CEO & Co-founder\n**Email:** dmitri.lipnitsky@gismart.com\n**LinkedIn:** https://linkedin.com/in/dmitri-lipnitsky\n\n**Notable Games:**\n- Fat 2 Fit (100M+)\n- Cool Goal (50M+)\n\n**Outreach Angle:** AI content generation for rapid prototyping - Gismart's high release velocity could benefit from AI-powered level design and content variation\n\n**Priority:** HIGH\n\n**Email File:** 01_gismart_dmitri_lipnitsky.txt",
+          "labels": ["high-priority", "independent", "uk", "hyper-casual"],
+          "due": null
+        },
+        {
+          "name": "TapNation - Hervé Montoute",
+          "desc": "**Studio:** TapNation\n**Location:** Paris, France\n**Downloads:** 1B+\n**Status:** Independent - Series B\n\n**Decision Maker:** Hervé Montoute, Co-founder & CEO\n**Email:** herve.montoute@tap-nation.io\n**LinkedIn:** https://linkedin.com/in/herve-montoute\n\n**Notable Games:**\n- Blob Runner 3D (100M+)\n- Ice Cream Inc. (50M+)\n\n**Outreach Angle:** AI-powered player segmentation - TapNation already uses AI for prototyping. Expand to AI-driven player segmentation for better monetization\n\n**Priority:** HIGH\n**Notes:** €15M raised Nov 2023, French Tech 120\n\n**Email File:** 02_tapnation_herve_montoute.txt",
+          "labels": ["high-priority", "series-b", "france", "hyper-casual", "ai-forward"],
+          "due": null
+        },
+        {
+          "name": "Supercent - Junsik Kong",
+          "desc": "**Studio:** Supercent\n**Location:** Seoul, South Korea\n**Downloads:** 500M+\n**Status:** Independent\n\n**Decision Maker:** Junsik Kong (Gong Jun-sik), CEO & Founder\n**Email:** junsik.kong@supercent.io\n**LinkedIn:** https://linkedin.com/in/junsik-kong\n\n**Notable Games:**\n- Burger Please! (100M+)\n- Pizza Ready! (50M+)\n\n**Outreach Angle:** AI-powered live ops automation - Supercent's idle arcade hits require constant content updates. AI can automate event generation and economy balancing\n\n**Priority:** HIGH\n**Notes:** First Korean top 10 global publisher, Ministerial Award Dec 2024, AI integration in pipeline\n\n**Email File:** 03_supercent_junsik_kong.txt",
+          "labels": ["high-priority", "independent", "south-korea", "idle-arcade", "ai-forward"],
+          "due": null
+        },
+        {
+          "name": "Moonee - Erez Mishli",
+          "desc": "**Studio:** Moonee\n**Location:** Tel Aviv, Israel\n**Downloads:** 500M+\n**Status:** Independent - Seed\n\n**Decision Maker:** Erez Mishli, Co-Founder & Co-CEO\n**Email:** erez@moonee.io\n**LinkedIn:** https://linkedin.com/in/erez-mishli\n\n**Notable Games:**\n- Bridge Race (100M+)\n- Stacky Dash (50M+)\n\n**Outreach Angle:** AI-powered creative optimization - Moonee's publishing model relies on rapid creative testing. AI can generate ad creatives and ASO assets at scale\n\n**Priority:** HIGH\n**Notes:** $12M revenue, data-driven publisher, rapid creative testing\n\n**Email File:** 05_moonee_erez_mishli.txt",
+          "labels": ["high-priority", "seed", "israel", "hyper-casual", "data-driven"],
+          "due": null
+        },
+        {
+          "name": "iKame Games - Quyet Nguyen",
+          "desc": "**Studio:** iKame Games\n**Location:** Hanoi, Vietnam\n**Downloads:** 500M+\n**Status:** Independent\n\n**Decision Maker:** Quyet Nguyen (Nguyen Manh Quyet), CEO & Founder\n**Email:** quyet.nguyen@ikame.vn\n**LinkedIn:** https://linkedin.com/in/quyet-nguyen\n\n**Notable Games:**\n- Car Race (100M+)\n- Moto Rider (50M+)\n\n**Outreach Angle:** AI content for racing games - iKame's portfolio needs constant track/level variety. Procedural AI generation can scale content infinitely\n\n**Priority:** HIGH\n**Notes:** Top 25 global publisher by downloads, Vietnam Gaming Association Chairman, racing genre expertise\n\n**Email File:** 07_ikame_quyet_nguyen.txt",
+          "labels": ["high-priority", "independent", "vietnam", "racing"],
+          "due": null
+        },
+        {
+          "name": "Ruby Games - Mert Can Kurum",
+          "desc": "**Studio:** Ruby Games\n**Location:** Izmir, Turkey\n**Downloads:** 500M+\n**Status:** Acquired by Rovio (2021) - Operates Independently\n\n**Decision Maker:** Mert Can Kurum, Founder & CEO\n**Email:** mert@rubygames.io\n**LinkedIn:** https://linkedin.com/in/mert-can-kurum\n\n**Notable Games:**\n- Hunter Assassin (100M+)\n- Water Sort Puzzle (50M+)\n\n**Outreach Angle:** AI level generation for puzzle games - Ruby's puzzle hits need thousands of levels. AI can generate and validate level difficulty automatically\n\n**Priority:** HIGH\n**Notes:** Rovio-backed, operates independently, founder still CEO, puzzle/action expertise\n\n**Email File:** 09_ruby_games_mert_kurum.txt",
+          "labels": ["high-priority", "acquired-rovio", "turkey", "puzzle", "action"],
+          "due": null
+        },
+        {
+          "name": "Alictus - Emre Taş",
+          "desc": "**Studio:** Alictus\n**Location:** Ankara, Turkey\n**Downloads:** 300M+\n**Status:** Acquired by SciPlay (2022) - Operates Independently\n\n**Decision Maker:** Emre Taş, CEO & Co-Founder\n**Email:** emre@alictus.com\n**LinkedIn:** https://linkedin.com/in/emre-tas\n\n**Notable Games:**\n- Rob Master 3D (50M+)\n- Deep Clean Inc. (50M+)\n\n**Outreach Angle:** AI-powered prototyping at scale - Alictus had 3 #1 iOS games in 6 months. AI content generation can accelerate their already rapid prototyping process\n\n**Priority:** HIGH\n**Notes:** $100M acquisition by SciPlay, 3 #1 App Store hits in 6 months, operates independently\n\n**Email File:** 10_alictus_emre_tas.txt",
+          "labels": ["high-priority", "acquired-sciplay", "turkey", "hyper-casual", "high-velocity"],
+          "due": null
+        },
+        {
+          "name": "MAG Interactive - Daniel Hasselberg",
+          "desc": "**Studio:** MAG Interactive\n**Location:** Stockholm, Sweden\n**Downloads:** 300M+\n**Status:** Public (Nasdaq OMX Nordic: MAG)\n\n**Decision Maker:** Daniel Hasselberg, CEO & Co-founder\n**Email:** daniel.hasselberg@maginteractive.com\n**LinkedIn:** https://linkedin.com/in/daniel-hasselberg\n\n**Notable Games:**\n- Ruzzle (60M+)\n- QuizDuel (50M+)\n\n**Outreach Angle:** AI-generated puzzle content - MAG's word games need fresh content daily. AI can generate puzzles, trivia questions, and word packs at scale\n\n**Priority:** MEDIUM\n**Notes:** Public company, word/trivia focus, proven acquisition strategy\n\n**Email File:** 04_mag_interactive_daniel_hasselberg.txt",
+          "labels": ["medium-priority", "public", "sweden", "word-games", "trivia"],
+          "due": null
+        },
+        {
+          "name": "Playrix - Dmitri Bukhman",
+          "desc": "**Studio:** Playrix\n**Location:** Dublin, Ireland\n**Downloads:** 500M+\n**Revenue:** $1B+ per title\n**Status:** Private - Bootstrapped\n\n**Decision Maker:** Dmitri Bukhman, Co-Founder & CEO\n**Email:** dmitri.bukhman@playrix.com\n**LinkedIn:** https://linkedin.com/in/dmitri-bukhman\n\n**Notable Games:**\n- Homescapes ($1B+ revenue, 100M+)\n- Gardenscapes ($1B+ revenue, 100M+)\n\n**Outreach Angle:** AI-driven personalization - Playrix's match-3 games have deep economies. AI personalization for difficulty curves and offers could boost retention\n\n**Priority:** MEDIUM\n**Notes:** Huge scale but more traditional casual. Co-founder CEO reachable, massive live ops needs\n\n**Email File:** 06_playrix_dmitri_bukhman.txt",
+          "labels": ["medium-priority", "private", "ireland", "match-3", "massive-scale"],
+          "due": null
+        },
+        {
+          "name": "Bravestars Games - Lê Mạnh Đức",
+          "desc": "**Studio:** Bravestars Games\n**Location:** Hanoi, Vietnam\n**Downloads:** 1B+\n**Status:** Independent\n\n**Decision Maker:** Lê Mạnh Đức, CEO (appointed Sept 2025)\n**Email:** duc.lm@bravestars.com\n**LinkedIn:** https://linkedin.com/in/duc-le-manh\n\n**Notable Games:**\n- Hair Salon (100M+)\n- Prison Empire Tycoon (50M+)\n\n**Outreach Angle:** AI-powered simulation content - Bravestars' simulation games need diverse assets and scenarios. AI can generate characters, scenarios, and salon designs\n\n**Priority:** MEDIUM\n**Notes:** 1B+ downloads, Vietnamese leader in simulation, new CEO appointment (Sept 2025) = opportunity\n\n**Email File:** 08_bravestars_duc_le.txt",
+          "labels": ["medium-priority", "independent", "vietnam", "simulation", "new-ceo"],
+          "due": null
+        }
+      ]
+    },
+    {
+      "name": "Contacted - Awaiting Response",
+      "cards": []
+    },
+    {
+      "name": "Responded - In Conversation",
+      "cards": []
+    },
+    {
+      "name": "Meeting Scheduled",
+      "cards": []
+    },
+    {
+      "name": "Closed - Not Interested",
+      "cards": []
+    },
+    {
+      "name": "Closed - Partnership",
+      "cards": []
+    }
+  ],
+  "labels": [
+    {"name": "high-priority", "color": "red"},
+    {"name": "medium-priority", "color": "yellow"},
+    {"name": "independent", "color": "green"},
+    {"name": "public", "color": "blue"},
+    {"name": "acquired-rovio", "color": "purple"},
+    {"name": "acquired-sciplay", "color": "purple"},
+    {"name": "seed", "color": "sky"},
+    {"name": "series-b", "color": "sky"},
+    {"name": "uk", "color": "lime"},
+    {"name": "france", "color": "lime"},
+    {"name": "south-korea", "color": "lime"},
+    {"name": "sweden", "color": "lime"},
+    {"name": "israel", "color": "lime"},
+    {"name": "ireland", "color": "lime"},
+    {"name": "vietnam", "color": "lime"},
+    {"name": "turkey", "color": "lime"},
+    {"name": "hyper-casual", "color": "pink"},
+    {"name": "idle-arcade", "color": "pink"},
+    {"name": "match-3", "color": "pink"},
+    {"name": "puzzle", "color": "pink"},
+    {"name": "racing", "color": "pink"},
+    {"name": "simulation", "color": "pink"},
+    {"name": "word-games", "color": "pink"},
+    {"name": "action", "color": "pink"},
+    {"name": "ai-forward", "color": "black"},
+    {"name": "data-driven", "color": "black"},
+    {"name": "new-ceo", "color": "orange"},
+    {"name": "high-velocity", "color": "orange"},
+    {"name": "massive-scale", "color": "orange"}
+  ]
+}

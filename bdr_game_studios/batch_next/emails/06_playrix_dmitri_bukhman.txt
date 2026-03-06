@@ -1,0 +1,20 @@
+Subject: Personalization at scale for Playrix's match-3 empire
+
+Hi Dmitri,
+
+Playrix has built one of the most impressive casual gaming businesses globally. Homescapes and Gardenscapes crossing $1B lifetime revenue each is remarkable.
+
+At this scale, even small improvements in retention or monetization drive massive value. We're seeing AI-driven personalization deliver exactly that:
+
+- Dynamic difficulty adjustment per player segment
+- AI-optimized offer timing and pricing
+- Personalized level sequences based on player behavior
+
+For games with Homescapes' depth, personalization could drive 10-15% D7 retention improvement.
+
+Worth exploring if this fits Playrix's roadmap?
+
+Best,
+[Your name]
+
+P.S. - Fishdom's economy complexity suggests you already have the data infrastructure for ML personalization.

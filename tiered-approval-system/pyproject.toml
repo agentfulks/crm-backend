@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tiered-approval-system"
+version = "0.1.0"
+description = "Lightweight tiered approval system to reduce card review burden"
+authors = ["Lucas Fulks"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+pytest-cov = "^4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

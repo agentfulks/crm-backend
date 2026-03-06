@@ -1,0 +1,22 @@
+To: alex@tenelevenventures.com
+Subject: Beyond Deep Instinct — the next wave of AI security
+
+Hi Alex,
+
+Ten Eleven's investment in Deep Instinct showed early conviction that AI would transform endpoint security. That bet has played out — Deep Instinct proved that deep learning could catch threats signature-based systems miss.
+
+We're building what comes next: AI security that doesn't just detect — it predicts. Systems that understand attack patterns before they're weaponized, anticipating the next wave of AI-generated threats that haven't been seen in the wild yet.
+
+Your 15+ years of pure cybersecurity investing and the FireEye/Carbon Black exits give you pattern recognition for what works. This feels like the next logical evolution of the thesis you backed with Deep Instinct.
+
+Would you be open to a brief call to explore if this fits Ten Eleven's focus on AI-driven security infrastructure?
+
+Best,
+[Founder Name]
+
+---
+FUND: Ten Eleven Ventures
+PARTNER: Alex Doll
+SIGNAL SCORE: 90/100
+CHECK SIZE: $5M - $50M
+FOCUS: AI-Native Cybersecurity / Series A-Growth

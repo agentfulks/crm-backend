@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-02-26T12:53:22.727425",
+  "board_id": "699d2728fd2ae8c35d1f7a24",
+  "list_id": "699d309c1870f04a4b401759",
+  "due_date": "2026-02-26",
+  "total_packets": 5,
+  "successful_creations": 5,
+  "failed_creations": 0,
+  "cards": [
+    {
+      "success": true,
+      "card_id": "69a0423fa38eb186bb1126e9",
+      "card_url": "https://trello.com/c/fS9elzx3",
+      "name": "[Day 2] a16z GAMES - Jonathan Lai",
+      "status": "created",
+      "fund_name": "a16z GAMES",
+      "contact_name": "Jonathan Lai"
+    },
+    {
+      "success": true,
+      "card_id": "69a042409ed6d73cc0c89e87",
+      "card_url": "https://trello.com/c/WC3W8srN",
+      "name": "[Day 2] Griffin Gaming Partners - Peter Levin",
+      "status": "created",
+      "fund_name": "Griffin Gaming Partners",
+      "contact_name": "Peter Levin"
+    },
+    {
+      "success": true,
+      "card_id": "69a0424040fbcbb5d7416137",
+      "card_url": "https://trello.com/c/efILcHCH",
+      "name": "[Day 2] Makers Fund - Michael Cheung",
+      "status": "created",
+      "fund_name": "Makers Fund",
+      "contact_name": "Michael Cheung"
+    },
+    {
+      "success": true,
+      "card_id": "69a0424158c2036cc5118e36",
+      "card_url": "https://trello.com/c/8Jpk22fG",
+      "name": "[Day 2] Transcend Fund - Shanti Bergel",
+      "status": "created",
+      "fund_name": "Transcend Fund",
+      "contact_name": "Shanti Bergel"
+    },
+    {
+      "success": true,
+      "card_id": "69a0424262d31d563e793ca9",
+      "card_url": "https://trello.com/c/hpKPLSo8",
+      "name": "[Day 2] Galaxy Interactive - Sam Englebardt",
+      "status": "created",
+      "fund_name": "Galaxy Interactive",
+      "contact_name": "Sam Englebardt"
+    }
+  ]
+}

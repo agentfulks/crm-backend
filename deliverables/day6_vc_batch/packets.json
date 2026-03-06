@@ -1,0 +1,326 @@
+{
+  "batch_id": "day6_vc_batch",
+  "batch_date": "2026-02-26",
+  "target_sector": "gaming/AI gaming",
+  "target_check_size": "$500K-$10M",
+  "funds": [
+    {
+      "fund_id": "vgames_001",
+      "fund_name": "VGames",
+      "aum": "$344M+ (3 funds, $142M Fund III raised Dec 2024)",
+      "stage_focus": ["Pre-seed", "Seed", "Series A"],
+      "check_size_range": "$500K - $5M",
+      "geography": "Tel Aviv, Israel (global investments)",
+      "thesis": "Pure-play gaming fund investing in game developers, gaming technologies, and gamification. One of the most active gaming VCs globally with 67+ investments.",
+      "notable_portfolio": [
+        {
+          "company": "InnPlay Labs",
+          "description": "Mobile gaming studio acquired by Playtika for up to $300M (2024)",
+          "relevance": "Successful exit validating fund's mobile gaming thesis"
+        },
+        {
+          "company": "SuperPlay",
+          "description": "Mobile gaming studio acquired by Playtika for up to $1.95B (2024)",
+          "relevance": "Largest gaming exit in Israeli history"
+        },
+        {
+          "company": "1047 Games",
+          "description": "Game studio behind Splitgate Arena Warfare"
+        },
+        {
+          "company": "Candivore",
+          "description": "Match 3 mobile game, top 10 grossing globally"
+        },
+        {
+          "company": "GOAT",
+          "description": "Game studio founded by former Plarium founders"
+        }
+      ],
+      "target_partner": {
+        "name": "Eitan Reisel",
+        "title": "Founder & Managing Partner",
+        "email": "eitan@vgames.vc",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/eitan-reisel-b1934318/",
+        "background": "Former Google executive (Strategic Partnerships), angel investor, founded Israel's first gaming-dedicated VC fund in 2020"
+      },
+      "alternative_partner": {
+        "name": "Daniel Mironov",
+        "title": "Partner",
+        "linkedin": "https://www.linkedin.com/in/daniel-mironov/",
+        "background": "Former gaming operator and investor"
+      },
+      "outreach_angle": "VGames' Fund III (December 2024) is freshly raised and actively deploying in AI-gaming intersections. Their recent $1.95B SuperPlay exit proves thesis execution. Eitan's Google background and focus on gaming infrastructure creates alignment with our AI-driven gaming platform. The fund's operator-heavy approach values technical differentiation.",
+      "fit_score": 91,
+      "fit_breakdown": {
+        "gaming_native_fund": 20,
+        "fresh_capital_2024": 20,
+        "ai_gaming_alignment": 18,
+        "mobile_gaming_expertise": 18,
+        "check_size_alignment": 15
+      },
+      "investment_pace": "12-15 deals/year",
+      "recent_deals_2024": ["InnPlay Labs acquisition", "SuperPlay acquisition", "Fund III $142M raise"],
+      "last_fund_raise": "December 2024 ($142M Fund III)",
+      "strategic_value": "Israel's #1 gaming VC, fresh capital, strong exit track record, operator DNA"
+    },
+    {
+      "fund_id": "1up_001",
+      "fund_name": "1Up Ventures",
+      "aum": "$23.9M",
+      "stage_focus": ["Pre-seed", "Seed"],
+      "check_size_range": "$500K (standardized)",
+      "geography": "Kirkland, Washington (Seattle area)",
+      "thesis": "Community of independent game developers. ~50 standardized $500K investments creating a curated global peer community where management fees fund shared services.",
+      "notable_portfolio": [
+        {
+          "company": "Dead Astronauts Games",
+          "description": "ARPG developer, raised $4M+ December 2024",
+          "relevance": "Recent investment with Moon Beast and 1AM Gaming"
+        },
+        {
+          "company": "Stratosphere Games",
+          "description": "Mobile and PC game developer",
+          "relevance": "1Up portfolio company raising follow-on"
+        },
+        {
+          "company": "Moon Beast Productions",
+          "description": "Co-investor with 1Up in recent deals",
+          "relevance": "Shows active deal flow participation"
+        }
+      ],
+      "target_partner": {
+        "name": "Ed Fries",
+        "title": "Founder & General Partner",
+        "email": "ed@1upfund.com",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/edfries/",
+        "background": "Former Microsoft VP, co-creator of Xbox, led Microsoft Game Studios through Xbox launch. Board member/advisor for dozens of gaming companies. Also known for unlocking Nintendo PlayStation prototype."
+      },
+      "alternative_partner": {
+        "name": "Kelly Wallick",
+        "title": "Partner & Community Builder",
+        "linkedin": "https://www.linkedin.com/in/kellywallick/",
+        "background": "Founder of Indie MEGABOOTH, former IGF Chairperson"
+      },
+      "outreach_angle": "Ed Fries literally created the Xbox - there is no better operator credential in console gaming. 1Up's community model of 50+ indie studios creates unique distribution and feedback opportunities. Our AI gaming platform would benefit from their indie developer network for both talent and early user acquisition. Ed's technical background ensures appreciation for our infrastructure approach.",
+      "fit_score": 88,
+      "fit_breakdown": {
+        "gaming_native_fund": 20,
+        "elite_founder_credibility": 20,
+        "community_model": 17,
+        "technical_alignment": 16,
+        "check_size_alignment": 15
+      },
+      "investment_pace": "8-12 deals/year",
+      "recent_deals_2024": ["Dead Astronauts Games", "Multiple indie studio investments"],
+      "last_fund_raise": "Ongoing (community fund model)",
+      "strategic_value": "Xbox co-creator pedigree, 80+ investments, indie developer community access"
+    },
+    {
+      "fund_id": "lightspeed_001",
+      "fund_name": "Lightspeed Venture Partners (Gaming Practice)",
+      "aum": "$43B+ total, $6.5B+ gaming/interactive media pool",
+      "stage_focus": ["Seed", "Series A", "Series B", "Growth"],
+      "check_size_range": "$1M - $100M+ (multi-stage)",
+      "geography": "Global (US HQ, offices in 13 countries)",
+      "thesis": "Gaming and interactive media practice managing largest dedicated gaming fund pool. Investing in game studios, platforms, and AI applications for gaming including foundation models for spatiotemporal reasoning.",
+      "notable_portfolio": [
+        {
+          "company": "Epic Games",
+          "description": "Fortnite, Unreal Engine creator",
+          "relevance": "Major gaming infrastructure investment"
+        },
+        {
+          "company": "Tripledot Studios",
+          "description": "Mobile game studio with hit titles",
+          "relevance": "Active gaming portfolio company"
+        },
+        {
+          "company": "Stability AI",
+          "description": "Generative AI platform",
+          "relevance": "AI x gaming intersection investment"
+        },
+        {
+          "company": "Kongregate",
+          "description": "Browser and mobile gaming platform",
+          "relevance": "Early Lightspeed gaming success"
+        },
+        {
+          "company": "Playdom",
+          "description": "Social games (acquired by Disney)",
+          "relevance": "Successful exit"
+        }
+      ],
+      "target_partner": {
+        "name": "Moritz Baier-Lentz",
+        "title": "Senior Partner & Head of Gaming & Interactive Media",
+        "email": "moritz@lsvp.com",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/moritzbaierlentz/",
+        "background": "Former professional gamer (Diablo II), ex-BITKRAFT partner who scaled firm to #1 gaming VC 2020-2022. Stanford lecturer on gaming and AI. Led investments in Fortnite, Call of Duty, League of Legends creators."
+      },
+      "alternative_partner": {
+        "name": "Amy Wu",
+        "title": "Partner",
+        "linkedin": "https://www.linkedin.com/in/amycwu/",
+        "background": "Former FTX Ventures, leads gaming and consumer investments"
+      },
+      "outreach_angle": "Moritz is a former pro gamer turned BITKRAFT partner who joined Lightspeed to build the largest gaming practice in VC. His recent focus on 'foundation models for spatiotemporal reasoning' directly aligns with our AI gaming infrastructure. The fund's Epic Games and Stability AI investments show commitment to both gaming platforms and AI - exactly our intersection.",
+      "fit_score": 93,
+      "fit_breakdown": {
+        "gaming_dedicated_practice": 20,
+        "massive_capital_pool": 20,
+        "ai_gaming_leadership": 20,
+        "pro_gamer_dna": 18,
+        "check_size_alignment": 15
+      },
+      "investment_pace": "30+ gaming deals/year",
+      "recent_deals_2024": ["Continued Epic Games support", "AI gaming infrastructure deals"],
+      "last_fund_raise": "$7.1B+ raised 2022",
+      "strategic_value": "Largest gaming VC practice, $43B AUM, pro gamer DNA at partner level, AI gaming focus"
+    },
+    {
+      "fund_id": "1am_001",
+      "fund_name": "1AM Gaming",
+      "aum": "$120M estimated",
+      "stage_focus": ["Seed", "Series A"],
+      "check_size_range": "$500K - $3M",
+      "geography": "Los Angeles, CA",
+      "thesis": "Game industry-leading content, platforms, and technology. Founded by former March Gaming team with operator experience at Google, Riot Games, Deloitte, Warner, and more.",
+      "notable_portfolio": [
+        {
+          "company": "Operative Games",
+          "description": "Emerging from stealth March 2025",
+          "relevance": "Recent investment with Samsung NEXT"
+        },
+        {
+          "company": "Moon Beast Productions",
+          "description": "ARPG developer, raised $4.5M December 2024",
+          "relevance": "Active recent investment"
+        },
+        {
+          "company": "TreesPlease Games",
+          "description": "Longleaf Valley - Apple Game of the Day",
+          "relevance": "Portfolio success story"
+        },
+        {
+          "company": "Dead Astronauts Games",
+          "description": "Co-investment with 1Up Ventures",
+          "relevance": "Syndicate relationships"
+        }
+      ],
+      "target_partner": {
+        "name": "Gregory Milken",
+        "title": "Co-Founder & Managing Director",
+        "email": "gregory@1am-gaming.com",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/gregorymilken/",
+        "background": "Former Co-Founder & Managing Partner at March Capital, Managing Partner of March Gaming. Led investments in Genvid Technologies, Dojo Madness, nWay, Wavedash. Avid lifelong gamer."
+      },
+      "alternative_partner": {
+        "name": "Frank Liquido",
+        "title": "Partner",
+        "linkedin": "https://www.linkedin.com/in/frankliquido/",
+        "background": "Former Riot Games, Google"
+      },
+      "outreach_angle": "Gregory built March Gaming into a leading gaming fund and now has fresh capital with 1AM Gaming. His portfolio includes game mastery platforms (Dojo Madness) and interactive broadcasting (Genvid) - showing appetite for gaming infrastructure. 1AM's operator team from Riot, Google, and Warner brings valuable distribution partnerships.",
+      "fit_score": 87,
+      "fit_breakdown": {
+        "gaming_native_fund": 20,
+        "experienced_gaming_investor": 19,
+        "fresh_capital_2024": 18,
+        "operator_team": 15,
+        "check_size_alignment": 15
+      },
+      "investment_pace": "6-10 deals/year",
+      "recent_deals_2024": ["Operative Games", "Moon Beast Productions $4.5M", "TreesPlease Games"],
+      "last_fund_raise": "2024 (estimated $120M)",
+      "strategic_value": "Fresh fund from experienced gaming investor, Riot/Google/Warner operator network, LA gaming hub access"
+    },
+    {
+      "fund_id": "initial_001",
+      "fund_name": "Initial Capital",
+      "aum": "$50-100M estimated (not traditional fund structure)",
+      "stage_focus": ["Seed", "Early Stage"],
+      "check_size_range": "$250K - $2M",
+      "geography": "London, UK / Global",
+      "thesis": "Seed and early-stage technology companies with strong focus on gaming, consumer products, and Bitcoin ecosystem. Group of serial entrepreneurs investing own money and actively partnering with founders.",
+      "notable_portfolio": [
+        {
+          "company": "Supercell",
+          "description": "Clash of Clans, Clash Royale creator - #1 iOS game company",
+          "relevance": "Led seed round, legendary investment"
+        },
+        {
+          "company": "LOVEFiLM",
+          "description": "European streaming pioneer (acquired by Amazon)",
+          "relevance": "Successful exit to Amazon"
+        },
+        {
+          "company": "Deadastronauts Games",
+          "description": "Game studio invested Feb 2025",
+          "relevance": "Recent gaming investment"
+        },
+        {
+          "company": "Playfish",
+          "description": "Social games (acquired by EA for $300M+)",
+          "relevance": "Co-founded by Kristian"
+        }
+      ],
+      "target_partner": {
+        "name": "Kristian Segerstrale",
+        "title": "Co-Founder & Partner",
+        "email": "kristian@initialcapital.com",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/kristiansegerstrale/",
+        "background": "Co-founded Glu Mobile and Playfish (acquired by EA for $300M+). EVP Digital at Electronic Arts. Executive Chairman at Super Evil Megacorp. Led seed investment in Supercell."
+      },
+      "alternative_partner": {
+        "name": "Hjalmar Winbladh",
+        "title": "Co-Founder",
+        "linkedin": "https://www.linkedin.com/in/hjalmar-winbladh/",
+        "background": "Serial entrepreneur, multiple exits"
+      },
+      "outreach_angle": "Kristian led the seed round in Supercell - arguably the most successful gaming investment of the last decade. His co-founding of Playfish and Glu Mobile plus EVP role at EA gives him unmatched mobile gaming expertise. Initial Capital led Supercell's seed when others passed - they have a proven pattern of identifying category-defining gaming companies early.",
+      "fit_score": 90,
+      "fit_breakdown": {
+        "legendary_track_record": 20,
+        "mobile_gaming_dna": 20,
+        "entrepreneur_friendly": 18,
+        "supercell_network": 17,
+        "check_size_alignment": 15
+      },
+      "investment_pace": "3-5 deals/year",
+      "recent_deals_2024": ["Deadastronauts Games Feb 2025", "Ongoing Supercell board role"],
+      "last_fund_raise": "Evergreen (partner capital)",
+      "strategic_value": "Supercell seed investor, legendary gaming track record, EA/Glu/Playfish DNA, Super Evil Megacorp network"
+    }
+  ],
+  "batch_summary": {
+    "total_funds": 5,
+    "average_fit_score": 89.8,
+    "geographic_distribution": {
+      "us_west": 2,
+      "israel": 1,
+      "uk": 1,
+      "global": 1
+    },
+    "gaming_focus": {
+      "pure_gaming": 4,
+      "gaming_ai": 5
+    },
+    "check_size_breakdown": {
+      "under_1m": 2,
+      "1m_to_5m": 4,
+      "over_5m": 1
+    },
+    "founder_pedigree": {
+      "xbox_co_creator": 1,
+      "supercell_investor": 1,
+      "google_executive": 1,
+      "pro_gamer": 1,
+      "goldman_sachs": 0
+    }
+  }
+}

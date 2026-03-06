@@ -1,0 +1,237 @@
+{
+  "batch_id": "day16_vc_batch",
+  "batch_date": "2026-02-28",
+  "total_funds": 5,
+  "focus": "gaming/AI/crypto infrastructure",
+  "packets": [
+    {
+      "fund_id": "foresight-ventures",
+      "fund_name": "Foresight Ventures",
+      "fund_type": "Crypto/Web3 Native VC",
+      "aum": "$400M+ (AUM increased from $80M to $400M in 2022)",
+      "stage_focus": ["Seed", "Series A", "Series B"],
+      "check_size": {
+        "min_usd": 500000,
+        "max_usd": 5000000,
+        "currency": "USD"
+      },
+      "thesis": "Connecting Eastern and Western crypto ecosystems. Web3, gaming, DeFi, infrastructure. Research-driven approach with strong media network (The Block, Foresight News, BlockTempo, Coinness).",
+      "portfolio_count": "80+",
+      "notable_investments": [
+        "Bitget",
+        "The Block",
+        "Seedify",
+        "Space ID",
+        "NFPrompt"
+      ],
+      "location": "New York, NY / Singapore",
+      "website": "https://www.foresightventures.com",
+      "priority_rank": 1,
+      "score": 92,
+      "target_partner": {
+        "name": "Tony Cheng",
+        "title": "Managing Partner",
+        "email": "tony@foresightventures.com",
+        "linkedin": "https://www.linkedin.com/in/tony-wenji-cheng",
+        "twitter": "@TonyCheng1992",
+        "background": "Former Sequoia Capital China investor, Head of Corporate Development at Bitget Exchange. Deep experience in both traditional and crypto VC.",
+        "accessibility": "High - active on Twitter/X, speaks at crypto conferences"
+      },
+      "secondary_contact": {
+        "name": "Forest Bai",
+        "title": "General Partner",
+        "email": "forest@foresightventures.com",
+        "linkedin": "https://www.linkedin.com/in/forest-bai",
+        "note": "Former tech operator, focuses on gaming and consumer Web3"
+      },
+      "outreach_angle": "Reference their gaming investments and East-West bridge thesis. Emphasize AI + Web3 intersection. Position for Bitget ecosystem integration.",
+      "key_triggers": [
+        "Web3 gaming traction",
+        "AI integration with blockchain",
+        "Cross-border expansion (Asia/US)",
+        "Media amplification via The Block"
+      ]
+    },
+    {
+      "fund_id": "venture-reality-fund",
+      "fund_name": "The Venture Reality Fund (VRF)",
+      "fund_type": "Spatial Computing / VR/AR Native VC",
+      "aum": "$50M+ (Fund I)",
+      "stage_focus": ["Pre-seed", "Seed", "Series A"],
+      "check_size": {
+        "min_usd": 100000,
+        "max_usd": 500000,
+        "currency": "USD"
+      },
+      "thesis": "AI & Spatial Computing - VR, AR, MR investments across gaming, media, entertainment, and enterprise applications. Leading early-stage investor in immersive technologies.",
+      "portfolio_count": 50+,
+      "notable_investments": [
+        "Beat Games (acquired by Meta)",
+        "Supernatural (acquired by Meta)",
+        "Osso VR",
+        "Pixvana",
+        "Wave"
+      ],
+      "location": "Redwood City, CA",
+      "website": "https://www.thevrfund.com",
+      "priority_rank": 2,
+      "score": 90,
+      "target_partner": {
+        "name": "Tipatat Chennavasin",
+        "title": "Co-Founder & General Partner",
+        "email": "tipatat@thevrfund.com",
+        "linkedin": "https://www.linkedin.com/in/tipatat",
+        "twitter": "@tipatat",
+        "background": "Stanford grad, pioneer in VR/AR investing. Thought leader in spatial computing. Early investor in multiple Meta-acquired companies.",
+        "accessibility": "Very High - active thought leader, speaker, accessible via Twitter"
+      },
+      "secondary_contact": {
+        "name": "Marco DeMiroz",
+        "title": "Co-Founder & General Partner",
+        "linkedin": "https://www.linkedin.com/in/marco-demiroz",
+        "note": "Former TPG Growth Managing Director, deep operational experience"
+      },
+      "outreach_angle": "Lead with spatial gaming and immersive entertainment. Reference their portfolio exits to Meta. Emphasize AI-powered spatial experiences and next-gen gaming interfaces.",
+      "key_triggers": [
+        "VR/AR gaming innovation",
+        "Spatial computing applications",
+        "AI-generated immersive content",
+        "Metaverse infrastructure plays"
+      ]
+    },
+    {
+      "fund_id": "asymmetric",
+      "fund_name": "Asymmetric",
+      "fund_type": "Crypto/Blockchain VC + Hedge Fund",
+      "aum": "$100M+ across strategies",
+      "stage_focus": ["Pre-seed", "Seed", "Series A"],
+      "check_size": {
+        "min_usd": 10000,
+        "max_usd": 1000000,
+        "currency": "USD"
+      },
+      "thesis": "Blockchain-agnostic venture capital investing across Web3, crypto, DeFi, mobile, and gaming. Also runs Bitcoin DeFi vertical fund and hedge fund strategies.",
+      "portfolio_count": 40+,
+      "notable_investments": [
+        "Eclipse",
+        "Movement Labs",
+        "Maverick Protocol",
+        "Shardeum",
+        "Osmosis"
+      ],
+      "location": "Miami, FL",
+      "website": "https://asymmetric.financial",
+      "priority_rank": 3,
+      "score": 88,
+      "target_partner": {
+        "name": "Joe McCann",
+        "title": "Founder, CEO, CIO & Managing GP",
+        "email": "joe@asymmetric.financial",
+        "linkedin": "https://www.linkedin.com/in/amazing-opportunity",
+        "twitter": "@joemccann",
+        "background": "24+ years experience in technology, hedge funds, and crypto. Former Microsoft, quant trader. Creative technologist and hacker background.",
+        "accessibility": "Very High - extremely active on Twitter/X, podcast appearances, thought leader"
+      },
+      "outreach_angle": "Lead with technical depth and contrarian crypto thesis. Reference their Bitcoin L2 and DeFi focus. Joe responds to bold, technically-sound pitches with strong tokenomics.",
+      "key_triggers": [
+        "Bitcoin L2 infrastructure",
+        "DeFi gaming mechanics",
+        "Novel tokenomics design",
+        "Technical innovation"
+      ]
+    },
+    {
+      "fund_id": "flori-ventures",
+      "fund_name": "Flori Ventures",
+      "fund_type": "Seed-Stage Web3 / Celo Ecosystem VC",
+      "aum": "$20M+ (seed fund)",
+      "stage_focus": ["Pre-seed", "Seed"],
+      "check_size": {
+        "min_usd": 100000,
+        "max_usd": 500000,
+        "currency": "USD"
+      },
+      "thesis": "Seed-stage venture fund in the Celo.org ecosystem. Founders-first approach focused on financial inclusion, Web3 infrastructure, and regenerative finance.",
+      "portfolio_count": 70+,
+      "notable_investments": [
+        "Moola",
+        "Ube",
+        "Ponto",
+        "Kresko",
+        "impactMarket"
+      ],
+      "location": "San Francisco, CA",
+      "website": "https://www.floriventures.com",
+      "priority_rank": 4,
+      "score": 87,
+      "target_partner": {
+        "name": "Maria Alegre",
+        "title": "Co-Founder & Managing Partner",
+        "email": "maria@floriventures.com",
+        "linkedin": "https://www.linkedin.com/in/marialegre",
+        "twitter": null,
+        "background": "Co-founded Chartboost (mobile game advertising platform serving 60,000+ games, 12B+ sessions/month). Forbes 30 Under 30. Ex-Tapulous (acquired by Disney). Deep gaming and mobile background.",
+        "accessibility": "High - operator background, responds to gaming founders"
+      },
+      "secondary_contact": {
+        "name": "Tomer Bariach",
+        "title": "General Partner",
+        "note": "Deep expertise in token economics"
+      },
+      "outreach_angle": "Lead with gaming background - she built Chartboost. Reference Celo ecosystem and financial inclusion angle. Operator-founder perspective means product-first pitch matters.",
+      "key_triggers": [
+        "Mobile gaming + blockchain",
+        "Financial inclusion through games",
+        "Celo ecosystem alignment",
+        "Emerging markets focus"
+      ]
+    },
+    {
+      "fund_id": "cmt-digital",
+      "fund_name": "CMT Digital",
+      "fund_type": "Crypto/Blockchain Venture Capital",
+      "aum": "$400M+ (4 funds)",
+      "stage_focus": ["Seed", "Series A", "Series B"],
+      "check_size": {
+        "min_usd": 500000,
+        "max_usd": 5000000,
+        "currency": "USD"
+      },
+      "thesis": "Early-stage investments accelerating blockchain technology adoption. One of the earliest allocators to digital assets. Trading, venture, and policy expertise.",
+      "portfolio_count": 80+,
+      "notable_investments": [
+        "Blockdaemon",
+        "Talos",
+        "TRM Labs",
+        "Amberdata",
+        "Coin Metrics"
+      ],
+      "location": "Chicago, IL / New York, NY",
+      "website": "https://cmt.digital",
+      "priority_rank": 5,
+      "score": 85,
+      "target_partner": {
+        "name": "Charlie Sandor",
+        "title": "Investment Partner",
+        "email": "csandor@cmt.digital",
+        "linkedin": "https://www.linkedin.com/in/charles-sandor",
+        "twitter": null,
+        "background": "Harvard grad. Investment team member focused on early-stage crypto and blockchain infrastructure. Part of 25+ world-class team.",
+        "accessibility": "Medium-High - institutional approach, part of active investment team"
+      },
+      "secondary_contact": {
+        "name": "Augie Ilag",
+        "title": "Investment Partner",
+        "email": "ailag@cmt.digital",
+        "note": "Former energy trader, now crypto investor"
+      },
+      "outreach_angle": "Lead with infrastructure and institutional-grade approach. Reference their recent $136M Fund IV close. Emphasize regulatory compliance and long-term institutional adoption.",
+      "key_triggers": [
+        "Blockchain infrastructure",
+        "Institutional adoption",
+        "Regulatory-compliant design",
+        "Trading/gaming convergence"
+      ]
+    }
+  ]
+}

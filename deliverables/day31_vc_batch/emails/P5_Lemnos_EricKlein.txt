@@ -1,0 +1,16 @@
+Subject: Making Hardware Investments More Capital Efficient—The AI Infrastructure Layer
+
+Hi Eric,
+
+Lemnos has an exceptional track record in industrial hardware—Built Robotics, Path Robotics, Elroy Air. The pattern is clear: autonomous systems for physical industries.
+
+What I've noticed across these portfolios: the AI infrastructure stack is often the hardest and most expensive part to build. Every team reinvents the same data pipelines, model serving infrastructure, and edge deployment systems. That's capital that could go toward core IP.
+
+We're productizing that infrastructure layer. The "boring" middleware that lets hardware teams focus on what makes their robot different, not how to get data from the factory floor to the model and back.
+
+Given Lemnos's focus on helping founders "anticipate problems and leverage their assets," this seems aligned with your platform approach. Worth discussing?
+
+Best,
+[Name]
+[Company]
+[LinkedIn/Twitter]

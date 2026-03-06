@@ -1,0 +1,21 @@
+Subject: AI UA infrastructure - scaling what worked for Gamelight
+
+Hi Yanev,
+
+Congrats on Gamelight's growth to $10M ARR—that's impressive validation of AI-powered UA.
+
+We're building complementary infrastructure: AI systems that optimize the entire player journey post-acquisition (onboarding, engagement, monetization, churn prevention). Essentially "AI UA for retention."
+
+Having been in the trenches at Gameloft and Peak, you know that acquisition is only half the battle. Our platform uses the same ML techniques Gamelight applies to UA, but for liveops and player lifecycle management.
+
+Given Pixeldust's focus on gaming AI and your portfolio's success with Gamelight, I think there's a natural fit. We're pre-launch with LOIs from studios spending $500K+/month on UA who need better retention tooling.
+
+Open to a brief call? Would value the perspective of someone who's scaled games and now invests in the infrastructure layer.
+
+Best,
+[Name]
+[Title]
+[Company]
+[LinkedIn]
+
+P.S. The convergence of AI UA and AI liveops is happening fast— we're building the infrastructure to bridge that gap.

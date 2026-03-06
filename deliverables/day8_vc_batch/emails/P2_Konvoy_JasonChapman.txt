@@ -1,0 +1,18 @@
+To: jason@konvoy.vc
+Subject: Post-Ready Player Me → infrastructure for the next gaming frontier
+
+Hi Jason,
+
+Congratulations on the Ready Player Me exit—that was a textbook Konvoy bet on infrastructure over content. Your thesis on gaming platforms and frontier tech has always resonated with me, especially as the industry shifts from static worlds to dynamic, AI-generated experiences.
+
+NEXUS AI is building the infrastructure layer that enables exactly that transition. We're creating the runtime environment for persistent AI agents in multiplayer game worlds—think NPCs with memory, evolving world states, and procedural narrative systems that don't require massive AI compute budgets per player.
+
+Given Konvoy's focus on infrastructure and your investments in Battle Road (planet-scale simulations) and metaverse-enabling tech, NEXUS feels like a natural fit for the portfolio. We're already working with [STUDIO NAME REDACTED] to reduce their AI runtime costs by 60% while enabling persistent world states they couldn't build before.
+
+Would you have 15 minutes next week to discuss how AI infrastructure is becoming the new middleware layer for gaming?
+
+[CALENDLY_LINK]
+
+Best,
+[Founder Name]
+NEXUS AI

@@ -1,0 +1,18 @@
+To: andrew@a16z.com
+Subject: Speedrun + the infrastructure layer for AI-powered social gaming
+
+Hi Andrew,
+
+a16z Games' $600M Fund Two close in June and the continued momentum of Speedrun signal serious conviction that games are becoming the next-generation social platform. With 40+ AI startups already in the portfolio, you're seeing firsthand what happens when creative tools meet interactive entertainment.
+
+NEXUS AI is building the infrastructure layer that makes those AI-powered social experiences actually scalable. While Speedrun companies push the boundaries of generative content and player-driven creation, we handle the runtime architecture—enabling persistent AI agents, dynamic world states, and procedural narrative systems that don't explode compute costs as communities grow.
+
+Your essays on cold start problems and network effects are required reading for a reason. They explain why the next wave of gaming platforms will be defined by their ability to generate engaging content algorithmically. We're already piloting with studios that have cut AI runtime costs by 60% while shipping persistent multiplayer features they couldn't build before.
+
+Worth a 15-minute conversation? I'd love to share how NEXUS enables the AI-powered social gaming experiences that Speedrun is betting on.
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

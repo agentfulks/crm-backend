@@ -1,0 +1,22 @@
+Subject: Xbox Legacy Meets AI Gaming Infrastructure
+
+Hi Ed,
+
+Building the Xbox from the ground up gives you a rare perspective on what it takes to create gaming platforms that reshape the industry. I'm reaching out because we're working on something that I believe could be equally transformative for the next era of gaming.
+
+[Company Name] is building AI-native infrastructure for game developers - procedural content generation, adaptive NPCs, and dynamic world-building tools that run at the platform level.
+
+Your work with 1Up Ventures shows you understand the power of developer communities. We believe AI infrastructure should be accessible to indie studios, not just AAA teams with massive ML budgets. Our platform democratizes access to the same AI capabilities that big studios are building internally.
+
+The indie developer community you've built at 1Up (80+ studios) represents exactly the type of early adopters who could benefit from - and help shape - our platform. We're raising $2M seed to scale the infrastructure and onboard our first wave of studio partners.
+
+Given your technical background and appreciation for platform-level plays, I'd love to get your perspective. Would you have 20 minutes for a conversation?
+
+Best,
+[Name]
+[Title]
+[Company Name]
+[Phone]
+[LinkedIn]
+
+P.S. - Your history of spotting platform shifts (Xbox launch, indie megabooth) suggests you have a sense for when technology creates new possibilities for developers. The AI gaming infrastructure wave feels similar to the transition from packaged goods to digital that you helped navigate at Microsoft.

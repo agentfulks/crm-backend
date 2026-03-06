@@ -1,0 +1,16 @@
+Subject: The Industrial AI Opportunity Your Data Might Be Missing
+
+Hi Ali,
+
+I've been following DCVC's Deep Tech Opportunities Report and your research on what differentiates billion-dollar startups. One gap I'm seeing in the "American Industrial Renaissance" thesis: the infrastructure layer that actually makes industrial AI deployable at scale.
+
+Your portfolio spans materials, electrification, mining, and construction—all sectors where AI has promise but faces a deployment cliff. The models exist. The data doesn't flow. The integration points aren't there.
+
+We're solving that. The hard, unsexy middleware that lets industrial AI graduate from pilot to production.
+
+Given your data-driven approach to identifying outliers, I think this fits a pattern you track. Worth exploring?
+
+Best,
+[Name]
+[Company]
+[LinkedIn/Twitter]

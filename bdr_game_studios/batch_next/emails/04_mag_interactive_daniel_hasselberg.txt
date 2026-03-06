@@ -1,0 +1,21 @@
+Subject: Scaling puzzle content for Ruzzle and QuizDuel
+
+Hi Daniel,
+
+MAG Interactive has built something rare in mobile: sustainable word game franchises. Ruzzle and QuizDuel have remained relevant for years, which speaks to your product discipline.
+
+The challenge with word and trivia games: content production costs scale linearly with player demand.
+
+We're working with casual publishers on AI content generation:
+- AI-generated word puzzles that match Ruzzle's difficulty distribution
+- Trivia question generation for QuizDuel's 50M+ player base
+- Automated localization across your 10+ language markets
+
+With 115 employees managing multiple franchises, automation could free your team for higher-leverage work.
+
+Worth discussing?
+
+Best,
+[Your name]
+
+P.S. - Word Mansion's narrative elements open interesting possibilities for AI-generated story content.

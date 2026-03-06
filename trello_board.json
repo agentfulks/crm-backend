@@ -1,0 +1,4566 @@
+{
+  "id": "699d2728fd2ae8c35d1f7a24",
+  "name": "VC Outreach Engine",
+  "desc": "",
+  "descData": null,
+  "closed": false,
+  "idOrganization": "699d2726e413dca2c9014883",
+  "idEnterprise": null,
+  "pinned": false,
+  "url": "https://trello.com/b/tPkRdYjg/vc-outreach-engine",
+  "shortUrl": "https://trello.com/b/tPkRdYjg",
+  "prefs": {
+    "permissionLevel": "org",
+    "hideVotes": false,
+    "voting": "disabled",
+    "comments": "members",
+    "invitations": "members",
+    "selfJoin": true,
+    "cardCovers": true,
+    "showCompleteStatus": true,
+    "cardCounts": false,
+    "isTemplate": false,
+    "cardAging": "regular",
+    "calendarFeedEnabled": false,
+    "hiddenPluginBoardButtons": [],
+    "switcherViews": [
+      {
+        "viewType": "Board",
+        "enabled": true
+      },
+      {
+        "viewType": "Table",
+        "enabled": true
+      },
+      {
+        "viewType": "Calendar",
+        "enabled": false
+      },
+      {
+        "viewType": "Dashboard",
+        "enabled": false
+      },
+      {
+        "viewType": "Timeline",
+        "enabled": false
+      },
+      {
+        "viewType": "Map",
+        "enabled": false
+      }
+    ],
+    "autoArchive": null,
+    "background": "gradient-rainbow",
+    "backgroundColor": "#A869C1",
+    "backgroundDarkColor": null,
+    "backgroundImage": "https://d2k1ftgv7pobq7.cloudfront.net/images/backgrounds/gradients/rainbow.svg",
+    "backgroundDarkImage": null,
+    "backgroundImageScaled": null,
+    "backgroundTile": false,
+    "backgroundBrightness": "dark",
+    "sharedSourceUrl": null,
+    "backgroundBottomColor": "#E774BB",
+    "backgroundTopColor": "#6E5DC6",
+    "canBePublic": false,
+    "canBeEnterprise": false,
+    "canBeOrg": false,
+    "canBePrivate": false,
+    "canInvite": true
+  },
+  "labelNames": {
+    "green": "Type: Feature",
+    "yellow": "Type: Bug",
+    "orange": "Type: Tech Debt",
+    "red": "Priority: P0",
+    "purple": "Type: Research",
+    "blue": "Type: Ops",
+    "sky": "Effort: L",
+    "lime": "Effort: S",
+    "pink": "Type: Outreach",
+    "black": "Workstream: Engineering",
+    "green_dark": "",
+    "yellow_dark": "",
+    "orange_dark": "",
+    "red_dark": "",
+    "purple_dark": "",
+    "blue_dark": "",
+    "sky_dark": "",
+    "lime_dark": "",
+    "pink_dark": "",
+    "black_dark": "",
+    "green_light": "Workstream: BDR",
+    "yellow_light": "Priority: P3",
+    "orange_light": "Priority: P2",
+    "red_light": "Priority: P1",
+    "purple_light": "Workstream: Marketing",
+    "blue_light": "Workstream: Investor",
+    "sky_light": "Effort: XL",
+    "lime_light": "Effort: M",
+    "pink_light": "Workstream: Ops",
+    "black_light": "Workstream: Product"
+  },
+  "cards": [
+    {
+      "id": "699d299cd1deaca4a5e7f204",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 0,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:12.843Z",
+      "desc": "Define ICP, build target list, craft multi-touch outbound system.",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [],
+      "idList": "699d2728fd2ae8c35d1f7a46",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 7,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cd9",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Research",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd9",
+          "color": "purple",
+          "uses": 4
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab745995de1a630f07",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: L",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab745995de1a630f07",
+          "color": "sky",
+          "uses": 6
+        },
+        {
+          "id": "699d61ac8c3fa53087ca955f",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Product",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ac8c3fa53087ca955f",
+          "color": "black_light",
+          "uses": 4
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cd9",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab745995de1a630f07",
+        "699d61ac8c3fa53087ca955f"
+      ],
+      "manualCoverAttachment": false,
+      "name": "VC outreach campaign setup",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d299cd1deaca4a5e7f204",
+      "pinned": false,
+      "pos": 140737488355328,
+      "shortLink": "7nJkr10H",
+      "shortUrl": "https://trello.com/c/7nJkr10H",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/7nJkr10H/7-vc-outreach-campaign-setup",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30cfa968ba373c1263ee",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:15.113Z",
+      "desc": "Assemble blurb, deck, success metrics, case studies, calendly link.\n\nOwner: Ops Lead\nDefinition of Done: Central folder with verified-up-to-date assets",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30d0860e82672efe7ca6"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a46",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 9,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cda",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cda",
+          "color": "blue",
+          "uses": 8
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ae37e944412c6d54ef",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ae37e944412c6d54ef",
+          "color": "pink_light",
+          "uses": 8
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cda",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ae37e944412c6d54ef"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Outreach asset inventory",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30cfa968ba373c1263ee",
+      "pinned": false,
+      "pos": 140737488388096,
+      "shortLink": "z48V3bTu",
+      "shortUrl": "https://trello.com/c/z48V3bTu",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/z48V3bTu/9-outreach-asset-inventory",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30d0860e82672efe7ca6",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30cfa968ba373c1263ee",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30d0488cc1034c53ca33",
+              "name": "Collect latest deck + blurb",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d0860e82672efe7ca6"
+            },
+            {
+              "id": "699d30d037431f241130c193",
+              "name": "Verify success metrics accuracy",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d0860e82672efe7ca6"
+            },
+            {
+              "id": "699d30d1df2f2e58bec91a8c",
+              "name": "Upload/share folder link",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d0860e82672efe7ca6"
+            },
+            {
+              "id": "699d30d1c2b839436db838c0",
+              "name": "Note owner for each asset",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d0860e82672efe7ca6"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30d2cdc8c20dfc3efbf5",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:17.196Z",
+      "desc": "Define how Lucas reviews daily packets + reminder cadence (no auto-sending).\n\nOwner: Ops Lead\nDefinition of Done: Written SOP + Trello/Slack reminder automation enabled",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30d2355750d0164fe5c6"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a46",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 10,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cda",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cda",
+          "color": "blue",
+          "uses": 8
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ae37e944412c6d54ef",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ae37e944412c6d54ef",
+          "color": "pink_light",
+          "uses": 8
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cda",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ae37e944412c6d54ef"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Approval workflow SOP",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30d2cdc8c20dfc3efbf5",
+      "pinned": false,
+      "pos": 140737488404480,
+      "shortLink": "fGYD2lRM",
+      "shortUrl": "https://trello.com/c/fGYD2lRM",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/fGYD2lRM/10-approval-workflow-sop",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30d2355750d0164fe5c6",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30d2cdc8c20dfc3efbf5",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30d3dc453def793c74b9",
+              "name": "Draft review steps & timing",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d2355750d0164fe5c6"
+            },
+            {
+              "id": "699d30d3d3d45d86a24bf11b",
+              "name": "Confirm with Lucas",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d2355750d0164fe5c6"
+            },
+            {
+              "id": "699d30d4748143e643f3d512",
+              "name": "Configure reminder (Butler/Slack)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d2355750d0164fe5c6"
+            },
+            {
+              "id": "699d30d58f9e04d16eb47d1c",
+              "name": "Attach SOP link here",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d2355750d0164fe5c6"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30d8cf61ae9c1d204f8b",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:19.751Z",
+      "desc": "Build backend service to read/write CRM (FastAPI) for sourcing + frontend use.\n\nOwner: Backend Engineer\nDefinition of Done: FastAPI service with CRUD + auth, tested",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30d9f811820090425f57"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a47",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 12,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cd5",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Feature",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd5",
+          "color": "green",
+          "uses": 2
+        },
+        {
+          "id": "699d272afd2ae8c35d1f7cd8",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P0",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd8",
+          "color": "red",
+          "uses": 3
+        },
+        {
+          "id": "699d61ac3866f6ff644ce5d9",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: XL",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ac3866f6ff644ce5d9",
+          "color": "sky_light",
+          "uses": 2
+        },
+        {
+          "id": "699d61acf4e4ea6f7c7bf986",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Engineering",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61acf4e4ea6f7c7bf986",
+          "color": "black",
+          "uses": 3
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cd5",
+        "699d272afd2ae8c35d1f7cd8",
+        "699d61ac3866f6ff644ce5d9",
+        "699d61acf4e4ea6f7c7bf986"
+      ],
+      "manualCoverAttachment": false,
+      "name": "API/ingestion service",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30d8cf61ae9c1d204f8b",
+      "pinned": false,
+      "pos": 140737488371712,
+      "shortLink": "j0iyvrX8",
+      "shortUrl": "https://trello.com/c/j0iyvrX8",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/j0iyvrX8/12-api-ingestion-service",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30d9f811820090425f57",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30d8cf61ae9c1d204f8b",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30d9030b43f696aaf2f9",
+              "name": "Define Pydantic models",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d9f811820090425f57"
+            },
+            {
+              "id": "699d30da7dc4f93d3430c291",
+              "name": "Implement CRUD endpoints",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d9f811820090425f57"
+            },
+            {
+              "id": "699d30dacbbc111caa8b5680",
+              "name": "Add tests + CI script",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d9f811820090425f57"
+            },
+            {
+              "id": "699d30db86457a3fa85658b9",
+              "name": "Deploy locally (docker-compose)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d9f811820090425f57"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30db3fbcf416bc4fac35",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:22.061Z",
+      "desc": "Implement scripts/APIs to pull seed-stage gaming/AI/devtools VCs into CRM daily.\n\nOwner: Research Ops\nDefinition of Done: Automation delivers \u226520 qualified records/day into CRM",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30dc182b5b7ff850a4fc"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a47",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 13,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d61a9030ed21b87cd55f0",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Outreach",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a9030ed21b87cd55f0",
+          "color": "pink",
+          "uses": 7
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab745995de1a630f07",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: L",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab745995de1a630f07",
+          "color": "sky",
+          "uses": 6
+        },
+        {
+          "id": "699d61ad93ad9412a056191f",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: BDR",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ad93ad9412a056191f",
+          "color": "green_light",
+          "uses": 2
+        }
+      ],
+      "idLabels": [
+        "699d61a9030ed21b87cd55f0",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab745995de1a630f07",
+        "699d61ad93ad9412a056191f"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Source automation v1",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30db3fbcf416bc4fac35",
+      "pinned": false,
+      "pos": 140737488388096,
+      "shortLink": "w6dW0t6S",
+      "shortUrl": "https://trello.com/c/w6dW0t6S",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/w6dW0t6S/13-source-automation-v1",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30dc182b5b7ff850a4fc",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30db3fbcf416bc4fac35",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30dc561f5c1cc7cbf270",
+              "name": "Select data sources (Crunchbase etc.)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "complete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30dc182b5b7ff850a4fc"
+            },
+            {
+              "id": "699d30dd89ac1bfd9c5d24bb",
+              "name": "Implement pull + dedupe logic",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30dc182b5b7ff850a4fc"
+            },
+            {
+              "id": "699d30dd8c3120df386f0a27",
+              "name": "Schedule daily run",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30dc182b5b7ff850a4fc"
+            },
+            {
+              "id": "699d30dea08964c4fdbd5766",
+              "name": "QA sample of 20 entries",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30dc182b5b7ff850a4fc"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30decdd9a9fcf0d56254",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:24.070Z",
+      "desc": "Append partner names, email, thesis notes for each VC entry.\n\nOwner: Research Ops\nDefinition of Done: Each CRM record has validated contact + context snippet",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30dfa848358e03197a2d"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a47",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 14,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d61a9030ed21b87cd55f0",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Outreach",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a9030ed21b87cd55f0",
+          "color": "pink",
+          "uses": 7
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab745995de1a630f07",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: L",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab745995de1a630f07",
+          "color": "sky",
+          "uses": 6
+        },
+        {
+          "id": "699d61ad93ad9412a056191f",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: BDR",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ad93ad9412a056191f",
+          "color": "green_light",
+          "uses": 2
+        }
+      ],
+      "idLabels": [
+        "699d61a9030ed21b87cd55f0",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab745995de1a630f07",
+        "699d61ad93ad9412a056191f"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Contact enrichment workflow",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30decdd9a9fcf0d56254",
+      "pinned": false,
+      "pos": 140737488404480,
+      "shortLink": "muaxIC8I",
+      "shortUrl": "https://trello.com/c/muaxIC8I",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/muaxIC8I/14-contact-enrichment-workflow",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30dfa848358e03197a2d",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30decdd9a9fcf0d56254",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30df227c1ab2e6ab0abb",
+              "name": "Choose enrichment tools/APIs",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30dfa848358e03197a2d"
+            },
+            {
+              "id": "699d30e0a9d84eabff1379c0",
+              "name": "Implement enrichment script",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30dfa848358e03197a2d"
+            },
+            {
+              "id": "699d30e081e0b8fc9db37497",
+              "name": "Verify email deliverability",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30dfa848358e03197a2d"
+            },
+            {
+              "id": "699d30e1d3e6454c6b8e741b",
+              "name": "Add context fields (portfolio notes)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30dfa848358e03197a2d"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30e16a9de3cf1c7a0ce3",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:26.134Z",
+      "desc": "Score VCs on sector fit, check size, network ties to sort daily queue.\n\nOwner: Planning Lead\nDefinition of Done: Score column auto-updated; docs explain weighting",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30e29dafb6c56cae97bd"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a47",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 15,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cd9",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Research",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd9",
+          "color": "purple",
+          "uses": 4
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ac8c3fa53087ca955f",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Product",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ac8c3fa53087ca955f",
+          "color": "black_light",
+          "uses": 4
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cd9",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ac8c3fa53087ca955f"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Scoring + prioritization model",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30e16a9de3cf1c7a0ce3",
+      "pinned": false,
+      "pos": 140737488420864,
+      "shortLink": "cqBVW8Ki",
+      "shortUrl": "https://trello.com/c/cqBVW8Ki",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/cqBVW8Ki/15-scoring-prioritization-model",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30e29dafb6c56cae97bd",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30e16a9de3cf1c7a0ce3",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30e2ae6784e55e12677e",
+              "name": "Define scoring factors",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e29dafb6c56cae97bd"
+            },
+            {
+              "id": "699d30e32405168601e51a85",
+              "name": "Implement calculation (DB or service)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e29dafb6c56cae97bd"
+            },
+            {
+              "id": "699d30e4c83b86105c27e544",
+              "name": "Backfill existing records",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e29dafb6c56cae97bd"
+            },
+            {
+              "id": "699d30e5cd71610bd5e30c3a",
+              "name": "Document interpretation",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e29dafb6c56cae97bd"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30e59c2a595f3e0ffdb8",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:28.625Z",
+      "desc": "Next.js UI for reviewing queue, editing drafts, and pushing to Trello.\n\nOwner: Frontend Engineer\nDefinition of Done: Next.js app hooked to API with auth + tests",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30e6202320f46ecaef18"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a47",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 16,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cd5",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Feature",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd5",
+          "color": "green",
+          "uses": 2
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ac3866f6ff644ce5d9",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: XL",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ac3866f6ff644ce5d9",
+          "color": "sky_light",
+          "uses": 2
+        },
+        {
+          "id": "699d61acf4e4ea6f7c7bf986",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Engineering",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61acf4e4ea6f7c7bf986",
+          "color": "black",
+          "uses": 3
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cd5",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ac3866f6ff644ce5d9",
+        "699d61acf4e4ea6f7c7bf986"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Frontend approvals dashboard",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30e59c2a595f3e0ffdb8",
+      "pinned": false,
+      "pos": 140737488437248,
+      "shortLink": "pzaSq5BH",
+      "shortUrl": "https://trello.com/c/pzaSq5BH",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/pzaSq5BH/16-frontend-approvals-dashboard",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30e6202320f46ecaef18",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30e59c2a595f3e0ffdb8",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30e78cd610a2b4b7e87c",
+              "name": "Design UX (list, detail view)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e6202320f46ecaef18"
+            },
+            {
+              "id": "699d30e784eef0955f21bd36",
+              "name": "Implement data fetching (server components)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e6202320f46ecaef18"
+            },
+            {
+              "id": "699d30e8903dc99e64e07d2f",
+              "name": "Add edit/save + validation",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e6202320f46ecaef18"
+            },
+            {
+              "id": "699d30e8663f9b0bc979bd67",
+              "name": "Write Vitest/Playwright coverage",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e6202320f46ecaef18"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30e992a45f203a2f93e8",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:30.871Z",
+      "desc": "Daily snapshot of outreach volume, approvals, meetings booked.\n\nOwner: Analytics Lead\nDefinition of Done: Automated metrics table feeding dashboards",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30e95169080b129b84d3"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a47",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 17,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cda",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cda",
+          "color": "blue",
+          "uses": 8
+        },
+        {
+          "id": "699d61a9a1088f2d29d56412",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P2",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a9a1088f2d29d56412",
+          "color": "orange_light",
+          "uses": 2
+        },
+        {
+          "id": "699d61ab745995de1a630f07",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: L",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab745995de1a630f07",
+          "color": "sky",
+          "uses": 6
+        },
+        {
+          "id": "699d61ae37e944412c6d54ef",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ae37e944412c6d54ef",
+          "color": "pink_light",
+          "uses": 8
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cda",
+        "699d61a9a1088f2d29d56412",
+        "699d61ab745995de1a630f07",
+        "699d61ae37e944412c6d54ef"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Analytics + metrics pipeline",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30e992a45f203a2f93e8",
+      "pinned": false,
+      "pos": 140737488453632,
+      "shortLink": "d4Rl96Nb",
+      "shortUrl": "https://trello.com/c/d4Rl96Nb",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/d4Rl96Nb/17-analytics-metrics-pipeline",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30e95169080b129b84d3",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30e992a45f203a2f93e8",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30ea00bc46e526b5940e",
+              "name": "Define metrics + SQL queries",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e95169080b129b84d3"
+            },
+            {
+              "id": "699d30ea5e5959dcd9b251b6",
+              "name": "Implement scheduled ETL",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e95169080b129b84d3"
+            },
+            {
+              "id": "699d30eb414cc56ead6c32dd",
+              "name": "Expose dashboard (Metabase/Looker)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e95169080b129b84d3"
+            },
+            {
+              "id": "699d30ec8cc75549a97d7144",
+              "name": "Validate numbers weekly",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30e95169080b129b84d3"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30ec21f4e2916322c73d",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:32.993Z",
+      "desc": "Auto-create \u201cInvestor packet\u201d cards from CRM top 5 scored entries each morning.\n\nOwner: Ops Lead\nDefinition of Done: Every morning \u22655 cards created with CRM link",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30ed28bc2c6591c78ce9"
+      ],
+      "idList": "699d309c1870f04a4b401759",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 18,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cda",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cda",
+          "color": "blue",
+          "uses": 8
+        },
+        {
+          "id": "699d272afd2ae8c35d1f7cd8",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P0",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd8",
+          "color": "red",
+          "uses": 3
+        },
+        {
+          "id": "699d61ab745995de1a630f07",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: L",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab745995de1a630f07",
+          "color": "sky",
+          "uses": 6
+        },
+        {
+          "id": "699d61ae37e944412c6d54ef",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ae37e944412c6d54ef",
+          "color": "pink_light",
+          "uses": 8
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cda",
+        "699d272afd2ae8c35d1f7cd8",
+        "699d61ab745995de1a630f07",
+        "699d61ae37e944412c6d54ef"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Daily intake automation",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30ec21f4e2916322c73d",
+      "pinned": false,
+      "pos": 140737488355328,
+      "shortLink": "hLojuaIQ",
+      "shortUrl": "https://trello.com/c/hLojuaIQ",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/hLojuaIQ/18-daily-intake-automation",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30ed28bc2c6591c78ce9",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30ec21f4e2916322c73d",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30edde1ecbe55ea6a255",
+              "name": "Integrate Trello API with CRM",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30ed28bc2c6591c78ce9"
+            },
+            {
+              "id": "699d30ee1e13c69f36c4a49f",
+              "name": "Format card template",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30ed28bc2c6591c78ce9"
+            },
+            {
+              "id": "699d30ee4dcd2b5e53bbdfb3",
+              "name": "Test with dry run",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30ed28bc2c6591c78ce9"
+            },
+            {
+              "id": "699d30ef928dcc665140f144",
+              "name": "Schedule 8am job",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30ed28bc2c6591c78ce9"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d62440c53022f56dc42b1",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 10,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": "2026-02-24T18:00:00.000Z",
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:33:10.926Z",
+      "desc": "## Snapshot\n- Fund: BITKRAFT Ventures\n- HQ: Los Angeles, California, United States\n- Stage focus: Seed, Series A, Series B\n- Check size: $500K - $10M\n- ICP Tier: Priority A (score 3/4)\n- Geo coverage: Global\n- Contact(s): pitch@bitkraft.vc\n- CRM Record: Pending remote DB (need to attach once live)\n\n## Personalization & Why Now\nBuilt by founders for founders, BITKRAFT is a global early- and mid-stage investment platform for gaming, esports, and interactive media. We focus on Seed, Series A, and Series B investments in game studios, interactive platforms, and immersive technology.\nVision of Synthetic Reality (https://www.bitkraft.vc/vision/)\u2014the increasing convergence of the physical and digital worlds\nMap our AI-enabled sourcing + daily packet engine to their stated interest in gaming/interactive platforms.\n\n## Outreach Plan\n- Opening: Noticed BITKRAFT Ventures leaning into Seed deals\u2014our latest gaming/AI pipeline fits your check sizes ($500K - $10M).\n- CTA: Offer to send investor packet now + line up 30-min partner call next week.\n- Owner: Ops (packet build) / Lucas (approval)\n- Send target: 24 Feb 2026 12:00 CST\n\n## Attachments & Proof\n- Deck: Upload latest deck link once finalized\n- Metrics: Insert February KPI snapshot\n- Case Study: Highlight strongest gaming/AI proof point\n\n## Follow-up\n- Day 3 reminder: 27 Feb 2026 via Slack ping\n- Day 7 reminder: 03 Mar 2026 + bump email\n- Notes: Update with replies / meetings\n",
+      "descData": {
+        "emoji": {}
+      },
+      "due": "2026-02-24T18:00:00.000Z",
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d62450c53022f56dc42f2",
+        "699d62450c53022f56dc42fe"
+      ],
+      "idList": "699d309c1870f04a4b401759",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 39,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d61a9030ed21b87cd55f0",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Outreach",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a9030ed21b87cd55f0",
+          "color": "pink",
+          "uses": 7
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ad8b85a16de2cfab43",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Investor",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ad8b85a16de2cfab43",
+          "color": "blue_light",
+          "uses": 5
+        }
+      ],
+      "idLabels": [
+        "699d61a9030ed21b87cd55f0",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ad8b85a16de2cfab43"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Packet: BITKRAFT Ventures",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d62440c53022f56dc42b1",
+      "pinned": false,
+      "pos": 140737488371712,
+      "shortLink": "cHMMzlmv",
+      "shortUrl": "https://trello.com/c/cHMMzlmv",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/cHMMzlmv/39-packet-bitkraft-ventures",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d62450c53022f56dc42f2",
+          "name": "Packet Build",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d62440c53022f56dc42b1",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d62450c53022f56dc42f3",
+              "name": "Confirm fund HQ, stage focus, check size, and ICP tier",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42f2"
+            },
+            {
+              "id": "699d62450c53022f56dc42f4",
+              "name": "Draft 2-3 sentence Why Now blurb referencing recent signal",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42f2"
+            },
+            {
+              "id": "699d62450c53022f56dc42f5",
+              "name": "Capture partner/contact info with direct email + social proof",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42f2"
+            },
+            {
+              "id": "699d62450c53022f56dc42f6",
+              "name": "Attach deck + metrics doc + case study/press links",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42f2"
+            },
+            {
+              "id": "699d62450c53022f56dc42f7",
+              "name": "Write approval-ready outbound snippet (email or DM)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42f2"
+            }
+          ]
+        },
+        {
+          "id": "699d62450c53022f56dc42fe",
+          "name": "Approval & Follow-up",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d62440c53022f56dc42b1",
+          "pos": 140737488371712,
+          "checkItems": [
+            {
+              "id": "699d62450c53022f56dc42ff",
+              "name": "Link CRM record + status in description",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42fe"
+            },
+            {
+              "id": "699d62450c53022f56dc4300",
+              "name": "Assign owner + due date for send once approved",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42fe"
+            },
+            {
+              "id": "699d62450c53022f56dc4301",
+              "name": "Schedule Day 3 and Day 7 reminders (Follow-up list)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42fe"
+            },
+            {
+              "id": "699d62450c53022f56dc4302",
+              "name": "Log Lucas approval decision + timestamp",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42fe"
+            },
+            {
+              "id": "699d62450c53022f56dc4303",
+              "name": "Record reply / meeting outcome in comments",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62450c53022f56dc42fe"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d62471bee2f60a50aab9a",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 10,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": "2026-02-24T18:00:00.000Z",
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:33:13.286Z",
+      "desc": "## Snapshot\n- Fund: Variant\n- HQ: New York, NY, USA / Distributed\n- Stage focus: Pre-Seed, Seed, Series A\n- Check size: $1M - $5M\n- ICP Tier: Priority A (score 3/4)\n- Geo coverage: Global\n- Contact(s): Need enrichment\n- CRM Record: Pending remote DB (need to attach once live)\n\n## Personalization & Why Now\nThesis notes missing; pull from site.\nFocus on user ownership and alignment.\nMap our AI-enabled sourcing + daily packet engine to their stated interest in gaming/interactive platforms.\n\n## Outreach Plan\n- Opening: Noticed Variant leaning into Pre-Seed deals\u2014our latest gaming/AI pipeline fits your check sizes ($1M - $5M).\n- CTA: Offer to send investor packet now + line up 30-min partner call next week.\n- Owner: Ops (packet build) / Lucas (approval)\n- Send target: 24 Feb 2026 12:00 CST\n\n## Attachments & Proof\n- Deck: Upload latest deck link once finalized\n- Metrics: Insert February KPI snapshot\n- Case Study: Highlight strongest gaming/AI proof point\n\n## Follow-up\n- Day 3 reminder: 27 Feb 2026 via Slack ping\n- Day 7 reminder: 03 Mar 2026 + bump email\n- Notes: Update with replies / meetings\n",
+      "descData": {
+        "emoji": {}
+      },
+      "due": "2026-02-24T18:00:00.000Z",
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d62471bee2f60a50aabdb",
+        "699d62471bee2f60a50aabe7"
+      ],
+      "idList": "699d309c1870f04a4b401759",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 40,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d61a9030ed21b87cd55f0",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Outreach",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a9030ed21b87cd55f0",
+          "color": "pink",
+          "uses": 7
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ad8b85a16de2cfab43",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Investor",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ad8b85a16de2cfab43",
+          "color": "blue_light",
+          "uses": 5
+        }
+      ],
+      "idLabels": [
+        "699d61a9030ed21b87cd55f0",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ad8b85a16de2cfab43"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Packet: Variant",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d62471bee2f60a50aab9a",
+      "pinned": false,
+      "pos": 140737488388096,
+      "shortLink": "vq6WACss",
+      "shortUrl": "https://trello.com/c/vq6WACss",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/vq6WACss/40-packet-variant",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d62471bee2f60a50aabdb",
+          "name": "Packet Build",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d62471bee2f60a50aab9a",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d62471bee2f60a50aabdc",
+              "name": "Confirm fund HQ, stage focus, check size, and ICP tier",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabdb"
+            },
+            {
+              "id": "699d62471bee2f60a50aabdd",
+              "name": "Draft 2-3 sentence Why Now blurb referencing recent signal",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabdb"
+            },
+            {
+              "id": "699d62471bee2f60a50aabde",
+              "name": "Capture partner/contact info with direct email + social proof",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabdb"
+            },
+            {
+              "id": "699d62471bee2f60a50aabdf",
+              "name": "Attach deck + metrics doc + case study/press links",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabdb"
+            },
+            {
+              "id": "699d62471bee2f60a50aabe0",
+              "name": "Write approval-ready outbound snippet (email or DM)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabdb"
+            }
+          ]
+        },
+        {
+          "id": "699d62471bee2f60a50aabe7",
+          "name": "Approval & Follow-up",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d62471bee2f60a50aab9a",
+          "pos": 140737488371712,
+          "checkItems": [
+            {
+              "id": "699d62471bee2f60a50aabe8",
+              "name": "Link CRM record + status in description",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabe7"
+            },
+            {
+              "id": "699d62471bee2f60a50aabe9",
+              "name": "Assign owner + due date for send once approved",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabe7"
+            },
+            {
+              "id": "699d62471bee2f60a50aabea",
+              "name": "Schedule Day 3 and Day 7 reminders (Follow-up list)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabe7"
+            },
+            {
+              "id": "699d62471bee2f60a50aabeb",
+              "name": "Log Lucas approval decision + timestamp",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabe7"
+            },
+            {
+              "id": "699d62471bee2f60a50aabec",
+              "name": "Record reply / meeting outcome in comments",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62471bee2f60a50aabe7"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d6249d5248492eefc000e",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 10,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": "2026-02-24T18:00:00.000Z",
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:33:15.600Z",
+      "desc": "## Snapshot\n- Fund: Collab+Currency\n- HQ: Eugene, Oregon, USA\n- Stage focus: Pre-Seed, Seed\n- Check size: $100k - $3M\n- ICP Tier: Priority A (score 3/4)\n- Geo coverage: Global\n- Contact(s): info@collabcurrency.com\n- CRM Record: Pending remote DB (need to attach once live)\n\n## Personalization & Why Now\nThesis notes missing; pull from site.\nProjects at the intersection of crypto and culture.\nMap our AI-enabled sourcing + daily packet engine to their stated interest in gaming/interactive platforms.\n\n## Outreach Plan\n- Opening: Noticed Collab+Currency leaning into Pre-Seed deals\u2014our latest gaming/AI pipeline fits your check sizes ($100k - $3M).\n- CTA: Offer to send investor packet now + line up 30-min partner call next week.\n- Owner: Ops (packet build) / Lucas (approval)\n- Send target: 24 Feb 2026 12:00 CST\n\n## Attachments & Proof\n- Deck: Upload latest deck link once finalized\n- Metrics: Insert February KPI snapshot\n- Case Study: Highlight strongest gaming/AI proof point\n\n## Follow-up\n- Day 3 reminder: 27 Feb 2026 via Slack ping\n- Day 7 reminder: 03 Mar 2026 + bump email\n- Notes: Update with replies / meetings\n",
+      "descData": {
+        "emoji": {}
+      },
+      "due": "2026-02-24T18:00:00.000Z",
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d6249d5248492eefc004f",
+        "699d6249d5248492eefc005b"
+      ],
+      "idList": "699d309c1870f04a4b401759",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 41,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d61a9030ed21b87cd55f0",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Outreach",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a9030ed21b87cd55f0",
+          "color": "pink",
+          "uses": 7
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ad8b85a16de2cfab43",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Investor",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ad8b85a16de2cfab43",
+          "color": "blue_light",
+          "uses": 5
+        }
+      ],
+      "idLabels": [
+        "699d61a9030ed21b87cd55f0",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ad8b85a16de2cfab43"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Packet: Collab+Currency",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d6249d5248492eefc000e",
+      "pinned": false,
+      "pos": 140737488404480,
+      "shortLink": "iABKVRXp",
+      "shortUrl": "https://trello.com/c/iABKVRXp",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/iABKVRXp/41-packet-collabcurrency",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d6249d5248492eefc004f",
+          "name": "Packet Build",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d6249d5248492eefc000e",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d6249d5248492eefc0050",
+              "name": "Confirm fund HQ, stage focus, check size, and ICP tier",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc004f"
+            },
+            {
+              "id": "699d6249d5248492eefc0051",
+              "name": "Draft 2-3 sentence Why Now blurb referencing recent signal",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc004f"
+            },
+            {
+              "id": "699d6249d5248492eefc0052",
+              "name": "Capture partner/contact info with direct email + social proof",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc004f"
+            },
+            {
+              "id": "699d6249d5248492eefc0053",
+              "name": "Attach deck + metrics doc + case study/press links",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc004f"
+            },
+            {
+              "id": "699d6249d5248492eefc0054",
+              "name": "Write approval-ready outbound snippet (email or DM)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc004f"
+            }
+          ]
+        },
+        {
+          "id": "699d6249d5248492eefc005b",
+          "name": "Approval & Follow-up",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d6249d5248492eefc000e",
+          "pos": 140737488371712,
+          "checkItems": [
+            {
+              "id": "699d6249d5248492eefc005c",
+              "name": "Link CRM record + status in description",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc005b"
+            },
+            {
+              "id": "699d6249d5248492eefc005d",
+              "name": "Assign owner + due date for send once approved",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc005b"
+            },
+            {
+              "id": "699d6249d5248492eefc005e",
+              "name": "Schedule Day 3 and Day 7 reminders (Follow-up list)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc005b"
+            },
+            {
+              "id": "699d6249d5248492eefc005f",
+              "name": "Log Lucas approval decision + timestamp",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc005b"
+            },
+            {
+              "id": "699d6249d5248492eefc0060",
+              "name": "Record reply / meeting outcome in comments",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d6249d5248492eefc005b"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d624cdd614a5e0a62b5e3",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 10,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": "2026-02-24T18:00:00.000Z",
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:33:18.086Z",
+      "desc": "## Snapshot\n- Fund: Konvoy Ventures\n- HQ: Denver, Colorado, United States\n- Stage focus: Pre-Seed, Seed, Series A\n- Check size: $500K - $3M\n- ICP Tier: Priority A (score 3/4)\n- Geo coverage: Albania, Andorra, Argentina, Armenia, Australia\n- Contact(s): Need enrichment\n- CRM Record: Pending remote DB (need to attach once live)\n\n## Personalization & Why Now\nKonvoy Ventures is a venture capital fund dedicated to esports & video gaming\nWe invest in the infrastructure technology, tools, and platforms of tomorrow\u2019s video gaming industry\nMap our AI-enabled sourcing + daily packet engine to their stated interest in gaming/interactive platforms.\n\n## Outreach Plan\n- Opening: Noticed Konvoy Ventures leaning into Pre-Seed deals\u2014our latest gaming/AI pipeline fits your check sizes ($500K - $3M).\n- CTA: Offer to send investor packet now + line up 30-min partner call next week.\n- Owner: Ops (packet build) / Lucas (approval)\n- Send target: 24 Feb 2026 12:00 CST\n\n## Attachments & Proof\n- Deck: Upload latest deck link once finalized\n- Metrics: Insert February KPI snapshot\n- Case Study: Highlight strongest gaming/AI proof point\n\n## Follow-up\n- Day 3 reminder: 27 Feb 2026 via Slack ping\n- Day 7 reminder: 03 Mar 2026 + bump email\n- Notes: Update with replies / meetings\n",
+      "descData": {
+        "emoji": {}
+      },
+      "due": "2026-02-24T18:00:00.000Z",
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d624cdd614a5e0a62b624",
+        "699d624cdd614a5e0a62b630"
+      ],
+      "idList": "699d309c1870f04a4b401759",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 42,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d61a9030ed21b87cd55f0",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Outreach",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a9030ed21b87cd55f0",
+          "color": "pink",
+          "uses": 7
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ad8b85a16de2cfab43",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Investor",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ad8b85a16de2cfab43",
+          "color": "blue_light",
+          "uses": 5
+        }
+      ],
+      "idLabels": [
+        "699d61a9030ed21b87cd55f0",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ad8b85a16de2cfab43"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Packet: Konvoy Ventures",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d624cdd614a5e0a62b5e3",
+      "pinned": false,
+      "pos": 140737488420864,
+      "shortLink": "WvLz3UwM",
+      "shortUrl": "https://trello.com/c/WvLz3UwM",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/WvLz3UwM/42-packet-konvoy-ventures",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d624cdd614a5e0a62b624",
+          "name": "Packet Build",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d624cdd614a5e0a62b5e3",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d624cdd614a5e0a62b625",
+              "name": "Confirm fund HQ, stage focus, check size, and ICP tier",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b624"
+            },
+            {
+              "id": "699d624cdd614a5e0a62b626",
+              "name": "Draft 2-3 sentence Why Now blurb referencing recent signal",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b624"
+            },
+            {
+              "id": "699d624cdd614a5e0a62b627",
+              "name": "Capture partner/contact info with direct email + social proof",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b624"
+            },
+            {
+              "id": "699d624cdd614a5e0a62b628",
+              "name": "Attach deck + metrics doc + case study/press links",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b624"
+            },
+            {
+              "id": "699d624cdd614a5e0a62b629",
+              "name": "Write approval-ready outbound snippet (email or DM)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b624"
+            }
+          ]
+        },
+        {
+          "id": "699d624cdd614a5e0a62b630",
+          "name": "Approval & Follow-up",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d624cdd614a5e0a62b5e3",
+          "pos": 140737488371712,
+          "checkItems": [
+            {
+              "id": "699d624cdd614a5e0a62b631",
+              "name": "Link CRM record + status in description",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b630"
+            },
+            {
+              "id": "699d624cdd614a5e0a62b632",
+              "name": "Assign owner + due date for send once approved",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b630"
+            },
+            {
+              "id": "699d624cdd614a5e0a62b633",
+              "name": "Schedule Day 3 and Day 7 reminders (Follow-up list)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b630"
+            },
+            {
+              "id": "699d624cdd614a5e0a62b634",
+              "name": "Log Lucas approval decision + timestamp",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b630"
+            },
+            {
+              "id": "699d624cdd614a5e0a62b635",
+              "name": "Record reply / meeting outcome in comments",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624cdd614a5e0a62b630"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d624efca4d3709cef25d5",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 10,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": "2026-02-24T18:00:00.000Z",
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:33:20.428Z",
+      "desc": "## Snapshot\n- Fund: Mechanism Capital\n- HQ: Unknown\n- Stage focus: Pre-seed , Seed , Series A \n- Check size: n/a\n- ICP Tier: Priority A (score 3/4)\n- Geo coverage: Global\n- Contact(s): contact@mechanism.capital\n- CRM Record: Pending remote DB (need to attach once live)\n\n## Personalization & Why Now\nThesis notes missing; pull from site.\nFocus on blockchain, decentralized finance (DeFi), and crypto-gaming projects. The firm invests in both equity and liquid tokens (SAFTs).\nMap our AI-enabled sourcing + daily packet engine to their stated interest in gaming/interactive platforms.\n\n## Outreach Plan\n- Opening: Noticed Mechanism Capital leaning into Pre-seed deals\u2014our latest gaming/AI pipeline fits your check sizes (n/a).\n- CTA: Offer to send investor packet now + line up 30-min partner call next week.\n- Owner: Ops (packet build) / Lucas (approval)\n- Send target: 24 Feb 2026 12:00 CST\n\n## Attachments & Proof\n- Deck: Upload latest deck link once finalized\n- Metrics: Insert February KPI snapshot\n- Case Study: Highlight strongest gaming/AI proof point\n\n## Follow-up\n- Day 3 reminder: 27 Feb 2026 via Slack ping\n- Day 7 reminder: 03 Mar 2026 + bump email\n- Notes: Update with replies / meetings\n",
+      "descData": {
+        "emoji": {}
+      },
+      "due": "2026-02-24T18:00:00.000Z",
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d624efca4d3709cef2616",
+        "699d624efca4d3709cef2622"
+      ],
+      "idList": "699d309c1870f04a4b401759",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 43,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d61a9030ed21b87cd55f0",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Outreach",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a9030ed21b87cd55f0",
+          "color": "pink",
+          "uses": 7
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ad8b85a16de2cfab43",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Investor",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ad8b85a16de2cfab43",
+          "color": "blue_light",
+          "uses": 5
+        }
+      ],
+      "idLabels": [
+        "699d61a9030ed21b87cd55f0",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ad8b85a16de2cfab43"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Packet: Mechanism Capital",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d624efca4d3709cef25d5",
+      "pinned": false,
+      "pos": 140737488437248,
+      "shortLink": "1kkRQv2F",
+      "shortUrl": "https://trello.com/c/1kkRQv2F",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/1kkRQv2F/43-packet-mechanism-capital",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d624efca4d3709cef2616",
+          "name": "Packet Build",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d624efca4d3709cef25d5",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d624efca4d3709cef2617",
+              "name": "Confirm fund HQ, stage focus, check size, and ICP tier",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2616"
+            },
+            {
+              "id": "699d624efca4d3709cef2618",
+              "name": "Draft 2-3 sentence Why Now blurb referencing recent signal",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2616"
+            },
+            {
+              "id": "699d624efca4d3709cef2619",
+              "name": "Capture partner/contact info with direct email + social proof",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2616"
+            },
+            {
+              "id": "699d624efca4d3709cef261a",
+              "name": "Attach deck + metrics doc + case study/press links",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2616"
+            },
+            {
+              "id": "699d624efca4d3709cef261b",
+              "name": "Write approval-ready outbound snippet (email or DM)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2616"
+            }
+          ]
+        },
+        {
+          "id": "699d624efca4d3709cef2622",
+          "name": "Approval & Follow-up",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d624efca4d3709cef25d5",
+          "pos": 140737488371712,
+          "checkItems": [
+            {
+              "id": "699d624efca4d3709cef2623",
+              "name": "Link CRM record + status in description",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2622"
+            },
+            {
+              "id": "699d624efca4d3709cef2624",
+              "name": "Assign owner + due date for send once approved",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2622"
+            },
+            {
+              "id": "699d624efca4d3709cef2625",
+              "name": "Schedule Day 3 and Day 7 reminders (Follow-up list)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2622"
+            },
+            {
+              "id": "699d624efca4d3709cef2626",
+              "name": "Log Lucas approval decision + timestamp",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2622"
+            },
+            {
+              "id": "699d624efca4d3709cef2627",
+              "name": "Record reply / meeting outcome in comments",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d624efca4d3709cef2622"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30d569421a60335dbdb9",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 2,
+        "checkItemsEarliestDue": null,
+        "comments": 2,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [
+        {
+          "idCheckItem": "699d30d68dc12524ab5ddb23",
+          "state": "complete"
+        },
+        {
+          "idCheckItem": "699d30d7bfa85c3773bc169f",
+          "state": "complete"
+        }
+      ],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:35.111Z",
+      "desc": "Design DB schema (firms, contacts, outreach_attempts, notes) and provision Postgres instance.\n\nOwner: Backend Engineer\nDefinition of Done: DB running with migrations + ERD documented",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30d696ca9ecf512c20b7"
+      ],
+      "idList": "699d345f2437461523243d65",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 11,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cd7",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Tech Debt",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd7",
+          "color": "orange",
+          "uses": 1
+        },
+        {
+          "id": "699d272afd2ae8c35d1f7cd8",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P0",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd8",
+          "color": "red",
+          "uses": 3
+        },
+        {
+          "id": "699d61ab745995de1a630f07",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: L",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab745995de1a630f07",
+          "color": "sky",
+          "uses": 6
+        },
+        {
+          "id": "699d61acf4e4ea6f7c7bf986",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Engineering",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61acf4e4ea6f7c7bf986",
+          "color": "black",
+          "uses": 3
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cd7",
+        "699d272afd2ae8c35d1f7cd8",
+        "699d61ab745995de1a630f07",
+        "699d61acf4e4ea6f7c7bf986"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Postgres CRM schema + infra",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30d569421a60335dbdb9",
+      "pinned": false,
+      "pos": 140737488355328,
+      "shortLink": "yBe7rpkC",
+      "shortUrl": "https://trello.com/c/yBe7rpkC",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/yBe7rpkC/11-postgres-crm-schema-infra",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30d696ca9ecf512c20b7",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30d569421a60335dbdb9",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30d68dc12524ab5ddb23",
+              "name": "Design ERD + constraints",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "complete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d696ca9ecf512c20b7"
+            },
+            {
+              "id": "699d30d7bfa85c3773bc169f",
+              "name": "Create Alembic migrations",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "complete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d696ca9ecf512c20b7"
+            },
+            {
+              "id": "699d30d7d7012c8bbd1d26de",
+              "name": "Provision Postgres + credentials",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d696ca9ecf512c20b7"
+            },
+            {
+              "id": "699d30d8f991bb469bfa49c9",
+              "name": "Document connection details",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30d696ca9ecf512c20b7"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30cb1870f04a4b40c18e",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 4,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:37.178Z",
+      "desc": "### ICP & Success Metrics (24 Feb 2026)\n- Target: independent Seed\u2013Series A gaming / AI / devtools funds in US/UK/Canada/EU with $0.5\u2013$5M checks and active deployment in last 36 months.\n- Scorecard: sector fit, stage/check, geo overlap, fund velocity, access warmth, strategic edge (weights documented in deliverable).\n- Disqualifiers: megafunds w/ $10M+ minimums, corporates with exclusivity, dormant funds, entries missing human contact data.\n- Metrics: coverage +35 funds/week, \u22655 investor packets/day, Lucas approval SLA <4h, \u226530% reply, 4 partner meetings/week.\n- Instrumentation: CRM tables, Trello automation hooks, Slack notifier, nightly metrics query.\n\nFull doc: `deliverables/vc-icp-success-metrics.md`\n\nOwner: Planning Lead\nDefinition of Done: ICP + KPI doc shared and approved by Lucas",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30ccb0fd5a2992413d0c"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a48",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 8,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cd9",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Research",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd9",
+          "color": "purple",
+          "uses": 4
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ac8c3fa53087ca955f",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Product",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ac8c3fa53087ca955f",
+          "color": "black_light",
+          "uses": 4
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cd9",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ac8c3fa53087ca955f"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Define ICP + success metrics",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30cb1870f04a4b40c18e",
+      "pinned": false,
+      "pos": 140737488338944,
+      "shortLink": "kcqVXtF2",
+      "shortUrl": "https://trello.com/c/kcqVXtF2",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/kcqVXtF2/8-define-icp-success-metrics",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30ccb0fd5a2992413d0c",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30cb1870f04a4b40c18e",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30cd3d2e3f43fd4a8c0f",
+              "name": "Review past investor conversations",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30ccb0fd5a2992413d0c"
+            },
+            {
+              "id": "699d30cd77151e6a061f932a",
+              "name": "Document inclusion/exclusion filters",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30ccb0fd5a2992413d0c"
+            },
+            {
+              "id": "699d30ce0baae88727f13f4e",
+              "name": "Set meeting/booked-call targets",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30ccb0fd5a2992413d0c"
+            },
+            {
+              "id": "699d30cecbb081289dbbea13",
+              "name": "Store doc link in Trello card",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30ccb0fd5a2992413d0c"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d3141db11edb5795f2fbd",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 0,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 1,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:39.313Z",
+      "desc": "### ICP & Success Metrics (24 Feb 2026)\n- Target funds: independent Seed\u2013Series A gaming / AI / devtools specialists in US/UK/Canada/EU with $0.5\u20135M checks and active deployments \u226436 months ago.\n- Scorecard fields: sector alignment, stage/check fit, geo overlap, fund velocity, access warmth, strategic edge (weights included).\n- Disqualifiers: megafunds w/ $10M+ minimums, dormant funds, corporates demanding exclusivity, missing contacts.\n- Metrics: coverage +35 funds/week, \u22655 investor packets/day, approvals <4h, \u226530% reply, 4 partner mtgs/week, instrumentation plan in CRM + Trello + Slack.\n- Data quality guardrails + next actions for CRM load, scoring, Slack automation.\n\nFull doc: `deliverables/vc-icp-success-metrics.md` in repo.\n",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [],
+      "idList": "699d2728fd2ae8c35d1f7a48",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 38,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cd9",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Research",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cd9",
+          "color": "purple",
+          "uses": 4
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ac8c3fa53087ca955f",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Product",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ac8c3fa53087ca955f",
+          "color": "black_light",
+          "uses": 4
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cd9",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ac8c3fa53087ca955f"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Define ICP + success metrics",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d3141db11edb5795f2fbd",
+      "pinned": false,
+      "pos": 140737488355328,
+      "shortLink": "oCF4ZBxN",
+      "shortUrl": "https://trello.com/c/oCF4ZBxN",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/oCF4ZBxN/38-define-icp-success-metrics",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d313479762c071b6dc86a",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 10,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:32:08.302Z",
+      "desc": "## Investor Packet Template\n\nEach cloned card must capture the following sections before moving to **Awaiting Approval**:\n\n### 1. Snapshot\n- Fund name + HQ + check size range\n- ICP tier (Priority A/B) and score (0-3)\n- Current stage focus + geo coverage\n\n### 2. Personalization & Why Now\n- 2\u000530 sentence narrative tying portfolio/their thesis to our product\n- Explicitly reference recent deal, blog post, or public thesis signal\n- Spell out why we are a fit **now** (timing, traction, wedge)\n\n### 3. Outreach Plan\n- Draft email opening (2 sentences max)\n- CTA (partner intro, async review, meeting ask)\n- Owner + due date for hitting send once approved\n\n### 4. Attachments & Proof\n- Latest deck + metrics doc link\n- Any case study / press pull-quote\n- CRM record URL + contact email(s)\n\n### 5. Follow-up\n- Day 3 and Day 7 reminder notes\n- Status log for replies / meetings\n\nFill these sections in the card description before tagging Lucas. Keep bullets concise.\n",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d62035ced832b88f92358",
+        "699d620590ccb95fd99592fa"
+      ],
+      "idList": "699d2728fd2ae8c35d1f7a48",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 34,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cda",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cda",
+          "color": "blue",
+          "uses": 8
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ae37e944412c6d54ef",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ae37e944412c6d54ef",
+          "color": "pink_light",
+          "uses": 8
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cda",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ae37e944412c6d54ef"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Investor packet template",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d313479762c071b6dc86a",
+      "pinned": false,
+      "pos": 140737488371712,
+      "shortLink": "R3iAEylI",
+      "shortUrl": "https://trello.com/c/R3iAEylI",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/R3iAEylI/34-investor-packet-template",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d62035ced832b88f92358",
+          "name": "Packet Build",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d313479762c071b6dc86a",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d62037fdffcef1983e507",
+              "name": "Confirm fund HQ, stage focus, check size, and ICP tier",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62035ced832b88f92358"
+            },
+            {
+              "id": "699d6204eb072e71207b3e52",
+              "name": "Draft 2-3 sentence Why Now blurb referencing recent signal",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62035ced832b88f92358"
+            },
+            {
+              "id": "699d6204b0b2c00240819b1b",
+              "name": "Capture partner/contact info with direct email + social proof",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62035ced832b88f92358"
+            },
+            {
+              "id": "699d6205202675107f2705d9",
+              "name": "Attach deck + metrics doc + case study/press links",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62035ced832b88f92358"
+            },
+            {
+              "id": "699d620590a7d8fd08b96a55",
+              "name": "Write approval-ready outbound snippet (email or DM)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d62035ced832b88f92358"
+            }
+          ]
+        },
+        {
+          "id": "699d620590ccb95fd99592fa",
+          "name": "Approval & Follow-up",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d313479762c071b6dc86a",
+          "pos": 140737488371712,
+          "checkItems": [
+            {
+              "id": "699d6206132f5d22dc7d66df",
+              "name": "Link CRM record + status in description",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d620590ccb95fd99592fa"
+            },
+            {
+              "id": "699d6206d214f28ccc29ab3f",
+              "name": "Assign owner + due date for send once approved",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d620590ccb95fd99592fa"
+            },
+            {
+              "id": "699d620752dd3532afd1bf61",
+              "name": "Schedule Day 3 and Day 7 reminders (Follow-up list)",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d620590ccb95fd99592fa"
+            },
+            {
+              "id": "699d6207986b0d52883f1b61",
+              "name": "Log Lucas approval decision + timestamp",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488404480,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d620590ccb95fd99592fa"
+            },
+            {
+              "id": "699d62087b2e25bfceea228e",
+              "name": "Record reply / meeting outcome in comments",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488420864,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d620590ccb95fd99592fa"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30f2bb289bb7f56b7bad",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 3,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:43.562Z",
+      "desc": "Process for Lucas to approve/send and log outcomes.\n\nOwner: Lucas\nDefinition of Done: Checkboxes for \u201capproved\u201d, \u201csent\u201d, \u201clogged\u201d on every card",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30f389c579143f4f53f7"
+      ],
+      "idList": "699d27651350afa8f2b8ec25",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 20,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cda",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cda",
+          "color": "blue",
+          "uses": 8
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ae37e944412c6d54ef",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ae37e944412c6d54ef",
+          "color": "pink_light",
+          "uses": 8
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cda",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ae37e944412c6d54ef"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Sending SOP + audit trail",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30f2bb289bb7f56b7bad",
+      "pinned": false,
+      "pos": 140737488355328,
+      "shortLink": "PeFElD2P",
+      "shortUrl": "https://trello.com/c/PeFElD2P",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/PeFElD2P/20-sending-sop-audit-trail",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30f389c579143f4f53f7",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30f2bb289bb7f56b7bad",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30f4952ed126ec5559fd",
+              "name": "Define approval acknowledgement",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30f389c579143f4f53f7"
+            },
+            {
+              "id": "699d30f438c07d76e7d27d15",
+              "name": "Add CRM logging step",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30f389c579143f4f53f7"
+            },
+            {
+              "id": "699d30f541bb815aafd25940",
+              "name": "Create template comment for sent status",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30f389c579143f4f53f7"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30f52beaef2303bfbd68",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 3,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:45.740Z",
+      "desc": "Rules + reminders for replies, nudges, scheduling.\n\nOwner: Ops Lead\nDefinition of Done: Follow-up checklist applied to each responding VC",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30f61a77df7dcefb2c7b"
+      ],
+      "idList": "699d309d2ef034a3ba04deb8",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 21,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cda",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cda",
+          "color": "blue",
+          "uses": 8
+        },
+        {
+          "id": "699d61a983ac3df2ba519d9a",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P1",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a983ac3df2ba519d9a",
+          "color": "red_light",
+          "uses": 17
+        },
+        {
+          "id": "699d61ab9b245142d5d1f708",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: M",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ab9b245142d5d1f708",
+          "color": "lime_light",
+          "uses": 13
+        },
+        {
+          "id": "699d61ae37e944412c6d54ef",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ae37e944412c6d54ef",
+          "color": "pink_light",
+          "uses": 8
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cda",
+        "699d61a983ac3df2ba519d9a",
+        "699d61ab9b245142d5d1f708",
+        "699d61ae37e944412c6d54ef"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Follow-up cadence system",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30f52beaef2303bfbd68",
+      "pinned": false,
+      "pos": 140737488355328,
+      "shortLink": "sjCQAyB3",
+      "shortUrl": "https://trello.com/c/sjCQAyB3",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/sjCQAyB3/21-follow-up-cadence-system",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30f61a77df7dcefb2c7b",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30f52beaef2303bfbd68",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30f60a5eed1f7300f265",
+              "name": "Define Day 3/7 reminders",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30f61a77df7dcefb2c7b"
+            },
+            {
+              "id": "699d30f606ab294baf029559",
+              "name": "Add meeting scheduling workflow",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488371712,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30f61a77df7dcefb2c7b"
+            },
+            {
+              "id": "699d30f7335ece448d0c4fac",
+              "name": "Note when to close out record",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488388096,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30f61a77df7dcefb2c7b"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    },
+    {
+      "id": "699d30f780558fc6eb304d47",
+      "agent": {
+        "name": null,
+        "conversationId": null
+      },
+      "badges": {
+        "attachments": 0,
+        "fogbugz": "",
+        "checkItems": 1,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "lastUpdatedByAi": false,
+        "start": null,
+        "externalSource": null,
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "maliciousAttachments": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false
+      },
+      "checkItemStates": [],
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2026-02-24T08:31:47.725Z",
+      "desc": "Compile stats + insights for Lucas every Friday.\n\nOwner: Analytics Lead\nDefinition of Done: Card updated weekly with meetings booked + learnings",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "idChecklists": [
+        "699d30f864936246dec9225f"
+      ],
+      "idList": "699d309ee719309d39b554da",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 22,
+      "idAttachmentCover": null,
+      "labels": [
+        {
+          "id": "699d272afd2ae8c35d1f7cda",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Type: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d272afd2ae8c35d1f7cda",
+          "color": "blue",
+          "uses": 8
+        },
+        {
+          "id": "699d61a9a1088f2d29d56412",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Priority: P2",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61a9a1088f2d29d56412",
+          "color": "orange_light",
+          "uses": 2
+        },
+        {
+          "id": "699d61aa9c9d4071e1cae6e1",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Effort: S",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61aa9c9d4071e1cae6e1",
+          "color": "lime",
+          "uses": 1
+        },
+        {
+          "id": "699d61ae37e944412c6d54ef",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idOrganization": "699d2726e413dca2c9014883",
+          "name": "Workstream: Ops",
+          "nodeId": "ari:cloud:trello::label/workspace/699d2726e413dca2c9014883/699d61ae37e944412c6d54ef",
+          "color": "pink_light",
+          "uses": 8
+        }
+      ],
+      "idLabels": [
+        "699d272afd2ae8c35d1f7cda",
+        "699d61a9a1088f2d29d56412",
+        "699d61aa9c9d4071e1cae6e1",
+        "699d61ae37e944412c6d54ef"
+      ],
+      "manualCoverAttachment": false,
+      "name": "Weekly metrics + updates",
+      "nodeId": "ari:cloud:trello::card/workspace/699d2726e413dca2c9014883/699d30f780558fc6eb304d47",
+      "pinned": false,
+      "pos": 140737488355328,
+      "shortLink": "0yLpd3Qi",
+      "shortUrl": "https://trello.com/c/0yLpd3Qi",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/0yLpd3Qi/22-weekly-metrics-updates",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "yPosition": 0.5,
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null,
+      "mirrorSourceId": null,
+      "checklists": [
+        {
+          "id": "699d30f864936246dec9225f",
+          "name": "Checklist",
+          "idBoard": "699d2728fd2ae8c35d1f7a24",
+          "idCard": "699d30f780558fc6eb304d47",
+          "pos": 140737488355328,
+          "checkItems": [
+            {
+              "id": "699d30f91640b6bf1e1bf4f9",
+              "name": "Pull data from analytics pipeline",
+              "nameData": {
+                "emoji": {}
+              },
+              "pos": 140737488355328,
+              "state": "incomplete",
+              "due": null,
+              "dueReminder": null,
+              "idMember": null,
+              "idChecklist": "699d30f864936246dec9225f"
+            }
+          ]
+        }
+      ],
+      "customFieldItems": []
+    }
+  ],
+  "lists": [
+    {
+      "id": "699d2728fd2ae8c35d1f7a46",
+      "name": "Foundation",
+      "closed": false,
+      "color": "yellow",
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "pos": 1,
+      "subscribed": false,
+      "softLimit": null,
+      "type": null,
+      "datasource": {
+        "filter": false
+      }
+    },
+    {
+      "id": "699d2728fd2ae8c35d1f7a47",
+      "name": "Pipeline Build",
+      "closed": false,
+      "color": "green",
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "pos": 2,
+      "subscribed": false,
+      "softLimit": null,
+      "type": null,
+      "datasource": {
+        "filter": false
+      }
+    },
+    {
+      "id": "699d309c1870f04a4b401759",
+      "name": "Daily Queue",
+      "closed": false,
+      "color": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "pos": 3,
+      "subscribed": false,
+      "softLimit": null,
+      "type": null,
+      "datasource": {
+        "filter": false
+      }
+    },
+    {
+      "id": "699d345f2437461523243d65",
+      "name": "In Progress",
+      "closed": false,
+      "color": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "pos": 4.5,
+      "subscribed": false,
+      "softLimit": null,
+      "type": null,
+      "datasource": {
+        "filter": false
+      }
+    },
+    {
+      "id": "699d2728fd2ae8c35d1f7a48",
+      "name": "Awaiting Approval",
+      "closed": false,
+      "color": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "pos": 5,
+      "subscribed": false,
+      "softLimit": null,
+      "type": null,
+      "datasource": {
+        "filter": false
+      }
+    },
+    {
+      "id": "699d27651350afa8f2b8ec25",
+      "name": "Approved / Send",
+      "closed": false,
+      "color": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "pos": 6,
+      "subscribed": false,
+      "softLimit": null,
+      "type": null,
+      "datasource": {
+        "filter": false
+      }
+    },
+    {
+      "id": "699d309d2ef034a3ba04deb8",
+      "name": "Follow-up",
+      "closed": false,
+      "color": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "pos": 7,
+      "subscribed": false,
+      "softLimit": null,
+      "type": null,
+      "datasource": {
+        "filter": false
+      }
+    },
+    {
+      "id": "699d309ee719309d39b554da",
+      "name": "Insights & Metrics",
+      "closed": false,
+      "color": null,
+      "idBoard": "699d2728fd2ae8c35d1f7a24",
+      "pos": 8,
+      "subscribed": false,
+      "softLimit": null,
+      "type": null,
+      "datasource": {
+        "filter": false
+      }
+    }
+  ]
+}

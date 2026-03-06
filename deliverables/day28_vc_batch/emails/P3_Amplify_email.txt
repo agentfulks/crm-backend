@@ -1,0 +1,15 @@
+To: sunil@amplifypartners.com
+Subject: The missing infrastructure in the AI developer workflow
+
+Hi Sunil,
+
+Amplify's track record in developer tools speaks for itself — DataDog, Fastly, Chef, Snyk. You've consistently identified the infrastructure layers that developers can't live without.
+
+As AI becomes the primary interface for software, we're seeing a massive gap in the developer workflow. We're building the infrastructure that makes AI-native development as seamless as traditional software development.
+
+Given your recent investments in LangChain and AI infrastructure, this seems right in your wheelhouse. Would love to share what we're building and get your perspective.
+
+Best,
+[Founder Name]
+[Company Name]
+[Phone]

@@ -1,0 +1,21 @@
+Subject: AI liveops - extending the Pinion model beyond matchmaking
+
+Hi Mateusz,
+
+Initial Capital's focus on AI-powered liveops caught my attention—especially your investment in Pinion's matchmaking tech.
+
+We're building infrastructure that goes deeper: AI systems that personalize live events, predict churn, and auto-balance economies in real-time. Think of it as "AI co-pilot for game liveops teams."
+
+Coming from CD Projekt and seeing the complexity of liveops at scale, you understand the challenge. Our early pilots show 15-20% improvement in D30 retention and 25% reduction in liveops staffing needs.
+
+With your new Singapore office and SEA expansion, the timing feels right—mobile publishers in that region are desperate for better liveops tooling.
+
+Worth a brief conversation? We're raising our seed now and would value the perspective of someone who's both built games and invested at the earliest stages.
+
+Best,
+[Name]
+[Title]
+[Company]
+[LinkedIn]
+
+P.S. Your first-check approach resonates— we'd rather have an operator like you at the table early than chase brand-name VCs who don't understand game dev.

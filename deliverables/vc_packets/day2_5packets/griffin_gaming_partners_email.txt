@@ -1,0 +1,37 @@
+To: peter@griffingp.com
+Subject: Gaming Infrastructure / [Startup Name] - Seed Round
+
+Hi Peter,
+
+Griffin Gaming Partners' investment in Discord and Overwolf signaled early conviction that gaming infrastructure would become as valuable as the games themselves. We're building on that same thesis.
+
+[Startup Name] is [one-line description - e.g., "an AI-powered platform that lets any game studio deploy intelligent NPCs with persistent memory and emotional depth" / "infrastructure for procedurally generated multiplayer worlds"]. Think of us as the picks-and-shovels for the AI gaming revolution.
+
+**Why we fit Griffin's portfolio:**
+- **Infrastructure focus:** Like Discord (communication layer) and Overwolf (in-game apps), we're building foundational tech that sits beneath multiple games
+- **Stage match:** We're raising a [amount] seed round - right in Griffin's sweet spot
+- **Community angle:** Our platform enables [social feature], similar to the multiplayer/social focus in your portfolio
+
+**Current traction:**
+- [X] game studios in private beta
+- [Y] MAU across integrated games
+- [Z] revenue / growth rate
+- Team: [Former Riot/Blizzard/AI lab backgrounds]
+
+**The opportunity:**
+Every major platform shift (mobile, F2P, web3) created new infrastructure categories. AI gaming is next. We're building the [specific infrastructure layer] that every game studio will need in 3 years.
+
+Would you have 20 minutes for a conversation? I can share our deck and a demo of the platform in action.
+
+Best,
+Lucas Fulks
+[Startup Name]
+[Phone]
+[LinkedIn]
+
+P.S. - Saw your interview on the GamesBeat podcast about the $1.5B fund. The conviction in gaming infrastructure specifically resonated with our model.
+
+---
+**ATTACHMENTS:**
+- [Startup Name]_One_Pager.pdf
+- [Startup Name]_Deck.pdf

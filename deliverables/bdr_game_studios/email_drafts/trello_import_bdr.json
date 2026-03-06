@@ -1,0 +1,72 @@
+{
+  "board": "BDR Outreach",
+  "list": "To Do",
+  "cards": [
+    {
+      "name": "BDR: Ketchapp - Michel Morcos",
+      "desc": "**Studio:** Ketchapp\n**Contact:** Michel Morcos, CEO & Co-Founder\n**Location:** Paris, France\n**Size:** 51-200 employees\n**LinkedIn:** linkedin.com/in/michel-morcos\n**Focus:** Hyper-casual publisher (2048, Stack)\n\n**Email File:** ketchapp_email.txt\n**Priority:** High\n\n**Rationale:** Leading hyper-casual publisher with proven hits and Ubisoft backing\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "high-priority", "hyper-casual"]
+    },
+    {
+      "name": "BDR: Homa Games - Daniel Nathan",
+      "desc": "**Studio:** Homa Games\n**Contact:** Daniel Nathan, CEO & Co-Founder\n**Location:** Paris, France\n**Size:** 51-200 employees\n**LinkedIn:** linkedin.com/in/daniel-nathan\n**Focus:** Hyper-casual publisher (Arcade Hole, Attack Hole)\n\n**Email File:** homa_games_email.txt\n**Priority:** High\n\n**Rationale:** Top hyper-casual publisher with data-driven hit identification\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "high-priority", "hyper-casual"]
+    },
+    {
+      "name": "BDR: SayGames - Evgeny Ponomarenko",
+      "desc": "**Studio:** SayGames\n**Contact:** Evgeny Ponomarenko, CEO & Founder\n**Location:** Minsk, Belarus\n**Size:** 51-200 employees\n**LinkedIn:** linkedin.com/in/evgeny-ponomarenko\n**Focus:** Hyper-casual portfolio (My Little Universe, Sand Balls)\n\n**Email File:** saygames_email.txt\n**Priority:** High\n\n**Rationale:** Strong portfolio with proven retention and engagement\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "high-priority", "hyper-casual"]
+    },
+    {
+      "name": "BDR: Rollic Games - Burak Vardal",
+      "desc": "**Studio:** Rollic Games\n**Contact:** Burak Vardal, CEO\n**Location:** Istanbul, Turkey\n**Size:** 51-200 employees\n**LinkedIn:** linkedin.com/in/burak-vardal\n**Focus:** Zynga's hyper-casual arm (High Heels, Hair Challenge)\n\n**Email File:** rollic_games_email.txt\n**Priority:** High\n\n**Rationale:** Zynga backing provides resources and credibility\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "high-priority", "hyper-casual"]
+    },
+    {
+      "name": "BDR: Supersonic Studios - Nadav Ashkenazy",
+      "desc": "**Studio:** Supersonic Studios\n**Contact:** Nadav Ashkenazy, CEO\n**Location:** Tel Aviv, Israel\n**Size:** 51-200 employees\n**LinkedIn:** linkedin.com/in/nadavashkenazy\n**Focus:** Hyper-casual publisher with IronSource integration\n\n**Email File:** supersonic_studios_email.txt\n**Priority:** High\n\n**Rationale:** IronSource tech + publishing creates unique positioning\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "high-priority", "hyper-casual"]
+    },
+    {
+      "name": "BDR: Ruby Games - Mert Can Kurum",
+      "desc": "**Studio:** Ruby Games\n**Contact:** Mert Can Kurum, CEO & Founder\n**Location:** Izmir, Turkey\n**Size:** 11-50 employees\n**LinkedIn:** linkedin.com/in/mert-can-kurum\n**Focus:** Hyper-casual, acquired by Rovio\n\n**Email File:** ruby_games_email.txt\n**Priority:** Medium-High\n\n**Rationale:** Smaller team with Rovio backing, highly accessible\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "medium-priority", "hyper-casual", "rovio"]
+    },
+    {
+      "name": "BDR: Alictus Games - Aytek Kurtuluş",
+      "desc": "**Studio:** Alictus Games\n**Contact:** Aytek Kurtuluş, CEO & Co-Founder\n**Location:** Ankara, Turkey\n**Size:** 51-200 employees\n**LinkedIn:** linkedin.com/in/aytekkurtulus\n**Focus:** Hyper-casual (Money Buster!, Deep Clean Inc.)\n\n**Email File:** alictus_games_email.txt\n**Priority:** Medium-High\n\n**Rationale:** Consistent hit-maker with strong Turkish market presence\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "medium-priority", "hyper-casual"]
+    },
+    {
+      "name": "BDR: Green Panda Games - Guillaume Sztejnberg",
+      "desc": "**Studio:** Green Panda Games\n**Contact:** Guillaume Sztejnberg, CEO & Founder\n**Location:** Paris, France\n**Size:** 51-200 employees\n**LinkedIn:** linkedin.com/in/guillaume-sztejnberg\n**Focus:** Casual/idle games (Bee Factory, Prison Empire)\n\n**Email File:** green_panda_games_email.txt\n**Priority:** Medium\n\n**Rationale:** Casual/idle focus with loyal player base\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "medium-priority", "casual-idle"]
+    },
+    {
+      "name": "BDR: Dual Cat - Mikael Le Goff",
+      "desc": "**Studio:** Dual Cat\n**Contact:** Mikael Le Goff, CEO & Founder\n**Location:** Paris, France\n**Size:** 11-50 employees\n**LinkedIn:** linkedin.com/in/mikaelle-goff\n**Focus:** Mobile game studio\n\n**Email File:** dual_cat_email.txt\n**Priority:** Medium\n\n**Rationale:** Smaller, accessible team in Paris gaming hub\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "medium-priority", "indie"]
+    },
+    {
+      "name": "BDR: Colossi Games - Manuel Prueter",
+      "desc": "**Studio:** Colossi Games\n**Contact:** Manuel Prueter, CEO & Co-Founder\n**Location:** Limassol, Cyprus\n**Size:** 11-50 employees\n**LinkedIn:** linkedin.com/in/manuel-prueter\n**Focus:** Mobile game development\n\n**Email File:** colossi_games_email.txt\n**Priority:** Medium\n\n**Rationale:** Growing studio with Cyprus base, accessible size\n\n**Status:** Ready to send",
+      "labels": ["bdr-outreach", "medium-priority", "growing-studio"]
+    }
+  ],
+  "campaign_metadata": {
+    "name": "Game Studios BDR Outreach - February 2026",
+    "created": "2026-02-26",
+    "source_file": "/data/workspace/deliverables/bdr_game_studios/research_50_studios.md",
+    "total_cards": 10,
+    "high_priority": 5,
+    "medium_priority": 5,
+    "geographic_focus": ["Paris", "Turkey", "Tel Aviv", "Minsk", "Cyprus"],
+    "recommended_workflow": [
+      "Import cards to BDR board 'To Do' column",
+      "Move first 5 high-priority cards to 'Active' when sending",
+      "Track responses in card comments",
+      "Move to 'In Review' when follow-up needed",
+      "Move to 'Complete' when call booked or passed"
+    ]
+  }
+}

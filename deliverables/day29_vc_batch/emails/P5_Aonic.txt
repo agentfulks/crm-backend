@@ -1,0 +1,21 @@
+To: paul@aonic.com
+Subject: AI for F2P mobile game operations — from Scopely's playbook
+
+Hi Paul,
+
+Having scaled Scopely's games to $1B+ in revenue, you know that success in F2P mobile is all about operational excellence. I believe AI is the next frontier for game operations.
+
+I'm building AI infrastructure specifically for F2P mobile game operators:
+• Real-time player segmentation for personalized experiences
+• Predictive models for churn prevention and reactivation
+• Automated offer optimization that balances revenue and retention
+• UA spend allocation based on predicted LTV, not just early signals
+
+This is the operational AI layer that extends what Scopely pioneered — using data at scale to run better games. Built by people who understand that F2P success comes from operations, not just great content.
+
+Given your Scopely experience and Aonic's focus on the gaming ecosystem, I'd value your perspective on where AI can transform mobile game operations.
+
+Worth a conversation?
+
+Best,
+[Your name]

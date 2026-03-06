@@ -1,0 +1,68 @@
+================================================================================
+EMAIL PACKET: P3 - First Round Capital [PRODUCTION READY]
+================================================================================
+
+TO: bill@firstround.com
+CC: 
+BCC: 
+
+SUBJECT: Platform infrastructure for investors — 4 meetings/week
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Bill,
+
+First Round built the platform VC model. We're building the platform for the other side of the table: infrastructure that makes investors more effective. Same philosophy, different customer.
+
+We run an AI-assisted sourcing engine that scores 200+ gaming, AI, and devtools funds daily, assembles five investor packets every morning, and logs approvals + meetings directly in Slack and Trello. Partners can green-light sends in under four hours.
+
+The loop is already booking four partner meetings per week and compounds as more funds are ingested.
+
+We focus on Seed-Series B ($500K-$10M checks), which fits First Round's stage and thesis perfectly.
+
+Worth a 15-minute call to see if there's a fit?
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+
+P.S. — Based in [LOCATION]. Happy to work around your schedule.
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] Pitch deck (ADD: outreach_assets/pitch_deck/latest.pdf)
+- [ ] KPI snapshot (ADD: outreach_assets/kpi_snapshot/2026-03-01-kpis.csv)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P3
+Fund: First Round Capital
+Contact: Bill Trenchard
+Title: Partner
+Email: bill@firstround.com
+Check Size: $500K-$3M USD
+Stage Focus: Seed
+Location: San Francisco, CA
+Twitter: @btrenchard
+Fit Score: 88/100
+
+--------------------------------------------------------------------------------
+TRELLO CARD ACTIONS
+--------------------------------------------------------------------------------
+1. Create card in "Daily Queue" list
+2. Add label: "P3-HIGH"
+3. Add checklist:
+   - [ ] Review packet materials
+   - [ ] Move to Awaiting Approval
+   - [ ] Lucas approval
+   - [ ] Move to Approved/Send
+   - [ ] Execute send
+   - [ ] Log in sent_log.csv
+
+--------------------------------------------------------------------------------

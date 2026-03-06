@@ -1,0 +1,19 @@
+Subject: AI Game Stack infrastructure - building the middleware layer you mapped
+
+Hi Joe,
+
+Your "AI Game Stack" research was excellent—best market map I've seen on where infrastructure value is accruing.
+
+We're building exactly the middleware layer you highlighted: infrastructure that lets studios plug in AI capabilities (NPCs, content generation, liveops) without rebuilding their stack. Positioned between the foundation models and the game engines.
+
+Given your background at Riot and Blizzard, you know that studios want to focus on gameplay, not infrastructure. We're abstracting away the complexity of integrating AI—similar to what Unity did for 3D, but for AI capabilities.
+
+I'd love to get your take on our architecture. You understand both the technical requirements (having shipped League and Destiny) and the market opportunity (having mapped it). Would you have 20 minutes for a call next week?
+
+Best,
+[Name]
+[Title]
+[Company]
+[LinkedIn]
+
+P.S. Your point about "AI-native vs AI-augmented" games was sharp—we're enabling the latter at scale.

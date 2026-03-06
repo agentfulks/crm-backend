@@ -1,0 +1,29 @@
+[Unit]
+Description=Daily Intake Automation - Create Trello cards from CRM investor entries
+Documentation=https://github.com/your-org/vc-outreach-engine
+After=network.target
+
+[Service]
+Type=oneshot
+User=openclaw
+WorkingDirectory=/data/workspace/agents/backend-engineer/daily_intake_automation
+ExecStart=/usr/bin/python3 scripts/daily_intake.py
+Environment="PYTHONPATH=/data/workspace/agents/backend-engineer/daily_intake_automation"
+Environment="LOG_LEVEL=INFO"
+
+# Optional: Load environment from file
+# EnvironmentFile=/etc/default/daily-intake
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=daily-intake
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/log
+
+[Install]
+WantedBy=multi-user.target

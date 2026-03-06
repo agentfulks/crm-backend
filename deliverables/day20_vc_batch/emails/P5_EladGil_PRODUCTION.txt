@@ -1,0 +1,68 @@
+================================================================================
+EMAIL PACKET: P5 - Elad Gil Ventures [PRODUCTION READY]
+================================================================================
+
+TO: elad@eladgil.com
+CC: 
+BCC: 
+
+SUBJECT: Infrastructure for the next platform shift — 4 meetings/week
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Elad,
+
+You've backed the infrastructure layers of every major platform shift (Stripe for payments, Coinbase for crypto). AI infrastructure for investor sourcing is the next frontier.
+
+We run an AI-assisted sourcing engine that scores 200+ gaming, AI, and devtools funds daily, assembles five investor packets every morning, and logs approvals + meetings directly in Slack and Trello. Partners can green-light sends in under four hours.
+
+The loop is already booking four partner meetings per week and compounds as more funds are ingested.
+
+We focus on Seed-Series B ($500K-$10M checks), which fits your stage and thesis perfectly.
+
+Worth a 15-minute call to see if there's a fit?
+
+[INSERT CALENDLY LINK HERE]
+
+Best,
+Lucas Fulks
+Founder
+
+P.S. — Based in [LOCATION]. Happy to work around your schedule.
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- [ ] Pitch deck (ADD: outreach_assets/pitch_deck/latest.pdf)
+- [ ] KPI snapshot (ADD: outreach_assets/kpi_snapshot/2026-03-01-kpis.csv)
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P5
+Fund: Elad Gil Ventures
+Contact: Elad Gil
+Title: Founder
+Email: elad@eladgil.com
+Check Size: $500K-$10M USD
+Stage Focus: Seed, Series A, Series B
+Location: San Francisco, CA
+Twitter: @eladgil
+Fit Score: 87/100
+
+--------------------------------------------------------------------------------
+TRELLO CARD ACTIONS
+--------------------------------------------------------------------------------
+1. Create card in "Daily Queue" list
+2. Add label: "P5-HIGH"
+3. Add checklist:
+   - [ ] Review packet materials
+   - [ ] Move to Awaiting Approval
+   - [ ] Lucas approval
+   - [ ] Move to Approved/Send
+   - [ ] Execute send
+   - [ ] Log in sent_log.csv
+
+--------------------------------------------------------------------------------

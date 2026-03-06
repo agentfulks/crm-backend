@@ -1,0 +1,279 @@
+{
+  "process_setup": [
+    {
+      "id": "699d30cfa968ba373c1263ee",
+      "name": "Outreach asset inventory",
+      "desc": "Canonical sources live inside `deliverables/outreach_assets/`. Mirror this summary every time assets change so packet cards stay accurate."
+    },
+    {
+      "id": "699d30cb1870f04a4b40c18e",
+      "name": "Define ICP + success metrics",
+      "desc": "Target: independent Seed-Series A gaming/AI/devtools funds in US/UK/Canada/EU with $0.5-$5M checks and active deployment in last 36 months."
+    },
+    {
+      "id": "699d30d569421a60335dbdb9",
+      "name": "Postgres CRM schema + infra",
+      "desc": "Design DB schema (firms, contacts, outreach_attempts, notes) and provision Postgres instance."
+    }
+  ],
+  "investor_packets": [
+    {
+      "id": "699f2e29234e164a0bcd26f6",
+      "name": "Packet: Andreessen Horowitz (a16z) Gaming",
+      "desc": "**Fund:** Andreessen Horowitz (a16z) Gaming | **HQ:** Menlo Park, CA | **Stage:** Seed, Series A, Series B | **Check size:** $500K - $50M | **Score:** 4/4 (Priority A) | a16z has one of the largest gaming investment teams. Recent $600M Games Fund One. Thesis: 'Games are becoming the new social networks.' Map our AI-enabled sourcing engine to their infrastructure thesis.",
+      "score": 95,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2e2a1fff1b08b542bc2b",
+      "name": "Packet: Lightspeed Venture Partners",
+      "desc": "**Fund:** Lightspeed Venture Partners | **HQ:** Menlo Park, CA / Global | **Stage:** Seed, Series A, Series B | **Check size:** $1M - $50M | **Score:** 4/4 (Priority A) | Lightspeed has been aggressively deploying into gaming and interactive media. 'Frontier' thesis emphasizes AI-first companies. Our AI-enabled sourcing engine directly maps to their investment thesis.",
+      "score": 92,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699eb148736656420850f61a",
+      "name": "[PACKET] Griffin Gaming Partners - Gaming VC",
+      "desc": "**Focus:** Gaming VC | **HQ:** Los Angeles, CA | **Check Size:** $1M-$5M | **Stage:** Seed to Series A | **Contact:** Peter Levin (peter@griffingp.com) | Former NBC Universal VP. Led investments in Discord, Roblox, Scopely.",
+      "score": 88.5,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2f2de0e903d780f2fa81",
+      "name": "Packet: Griffin Gaming Partners",
+      "desc": "**Fund:** Griffin Gaming Partners | **HQ:** Santa Monica, CA | **Stage:** Multi-stage | **Check size:** $500K - $15M | **Score:** 88.5/100 (Priority A) | Griffin is the largest VC fund dedicated solely to gaming ($1B+ AUM). Multi-stage approach. High sector alignment with gaming/AI thesis. Contact: Phil Sanderson (needs enrichment).",
+      "score": 88.5,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2f2d8cc01cf16b94081b",
+      "name": "Packet: The Games Fund",
+      "desc": "**Fund:** The Games Fund (TGF) | **HQ:** Los Angeles, CA | **Stage:** Pre-Seed, Seed | **Check size:** $250K - $2M | **Score:** 86.0/100 (Priority A) | Specialist gaming VC focused on early-stage studios and interactive entertainment. LA-based with EU presence. Contact: Maria Kochmola (needs enrichment).",
+      "score": 86,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2f2e10a170fb85f10c18",
+      "name": "Packet: Makers Fund",
+      "desc": "**Fund:** Makers Fund | **HQ:** Global (London, Singapore, San Francisco) | **Stage:** Series A | **Check size:** $2M - $10M | **Score:** 85.5/100 (Priority A) | Global gaming and interactive entertainment investor. Multi-office presence enables global deal flow. Contact: Jay Chi (needs enrichment).",
+      "score": 85.5,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f1f4843ec5899e52e0ad3",
+      "name": "Packet: Makers Fund",
+      "desc": "**Fund:** Makers Fund | **HQ:** San Francisco, CA | **Stage:** Seed, Series A, Series B, Growth | **Check size:** $500K - $40M | **AUM:** $500M+ | Focus: Gaming, Interactive Entertainment, Game Technology, Infrastructure. Contact: Michael Cheung (michael@makersfund.com), Jay Chi (jay@makersfund.com).",
+      "score": 85.5,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2e2be997c5f0d2e19395",
+      "name": "Packet: Griffin Gaming Partners",
+      "desc": "**Fund:** Griffin Gaming Partners | **HQ:** Santa Monica, CA / London | **Stage:** Seed, Series A, Series B | **Check size:** $500K - $15M | **Score:** 3/4 (Priority A) | Griffin is the largest VC fund dedicated solely to gaming ($1B+ AUM). Multi-stage approach allows flexible entry points. High sector alignment with gaming/AI thesis.",
+      "score": 85,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2f2fab92a33d8e4ee713",
+      "name": "Packet: Hiro Capital",
+      "desc": "**Fund:** Hiro Capital | **HQ:** London, UK | **Stage:** Seed to Series B | **Check size:** $500K - $5M | **Score:** 84.5/100 (Priority B) | Focuses on games, esports, and digital sports. European base with US investments. Contact: Luke Alvarez (needs enrichment).",
+      "score": 84.5,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699f1f485f4be68925e964c7",
+      "name": "Packet: Hiro Capital",
+      "desc": "**Fund:** Hiro Capital | **HQ:** London, UK | **Stage:** Seed, Series A, Series B | **Check size:** $500K - $10M | **AUM:** $450M+ | Focus: Games, Esports, Digital Sports, Metaverse technologies, Space/Defence. Contact: Luke Alvarez (luke@hiro.capital), Ian Livingstone (ian@hiro.capital) - Co-founder of Games Workshop & Eidos.",
+      "score": 84.5,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699f2f3015e86bffaebdeaf0",
+      "name": "Packet: Transcend Fund",
+      "desc": "**Fund:** Transcend Fund | **HQ:** San Francisco, CA | **Stage:** Seed, Series A | **Check size:** $1M - $5M | **Score:** 83.0/100 (Priority B) | Invests in gaming, interactive entertainment, and digital media. SF-based with strong Bay Area network. Contact: Shanti Bergel (needs enrichment).",
+      "score": 83,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699f1f490db3409d91d90e4c",
+      "name": "Packet: Transcend Fund",
+      "desc": "**Fund:** Transcend Fund | **HQ:** San Francisco, CA | **Stage:** Pre-seed, Seed, Series A | **Check size:** $250K - $5M | **AUM:** $100M+ | Focus: Games, Digital Entertainment, Interactive Media, Next-gen Social Gaming. Contact: Shanti Bergel (shanti@transcend.fund), Andrew Sheppard (andrew@transcend.fund).",
+      "score": 83,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699eb149c796d9a6995eac02",
+      "name": "[PACKET] 2048 Ventures - AI/Devtools VC",
+      "desc": "**Focus:** AI/Devtools VC | **HQ:** New York, NY | **Check Size:** $500K-$2M | **Stage:** Pre-seed to Seed | **Contact:** Alex Iskold (alex@2048.vc) | Engineer-founder focused on developer tools, AI infrastructure. Former Techstars NYC MD.",
+      "score": 82,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699f2e2ccb97f5cb286ed2fa",
+      "name": "Packet: Galaxy Interactive",
+      "desc": "**Fund:** Galaxy Interactive | **HQ:** New York, NY | **Stage:** Series A, Series B | **Check size:** $2M - $20M | **Score:** 3/4 (Priority A) | Galaxy Interactive is the gaming and interactive media arm of Galaxy Digital. They invest at the intersection of gaming, blockchain, and immersive experiences. Focus on the 'metaverse economy.'",
+      "score": 80,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f1f47ecced948130f290c",
+      "name": "Packet: Galaxy Interactive",
+      "desc": "**Fund:** Galaxy Interactive | **HQ:** New York / Los Angeles | **Stage:** Series A, B, Growth | **Check size:** $1M - $50M | **AUM:** $975M+ | Focus: Interactive entertainment, gaming, virtual worlds, Web3/metaverse infrastructure. Contact: Sam Englebardt (sam@galaxy.com), Richard Kim (richard@galaxy.com).",
+      "score": 80,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2e2cf8ab00d19b23c73a",
+      "name": "Packet: 1UP Ventures",
+      "desc": "**Fund:** 1UP Ventures | **HQ:** Seattle, WA | **Stage:** Pre-Seed, Seed | **Check size:** $100K - $2M | **Score:** 3/4 (Priority A) | 1UP is focused exclusively on independent game developers. Provides capital + collaborative community of 100+ indie studios. Founded by game industry veterans.",
+      "score": 78,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f1f49b0573bb0edf462f2",
+      "name": "Packet: Play Ventures",
+      "desc": "**Fund:** Play Ventures | **HQ:** Singapore / Helsinki | **Stage:** Pre-seed, Seed, Series A | **Check size:** $100K - $5M | **AUM:** $200M+ | Focus: Gaming, Games-inspired Consumer Products, Gaming Infrastructure. Contact: Henric Suuronen (henric@playventures.vc), Harri Manninen (harri@playventures.vc).",
+      "score": 77,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699d313479762c071b6dc86a",
+      "name": "Investor packet template",
+      "desc": "Template for investor packets with Snapshot, Personalization, Outreach Plan, Attachments, Follow-up sections.",
+      "score": 0,
+      "tier": "Unknown"
+    }
+  ],
+  "p1": [
+    {
+      "id": "699f2e29234e164a0bcd26f6",
+      "name": "Packet: Andreessen Horowitz (a16z) Gaming",
+      "desc": "**Fund:** Andreessen Horowitz (a16z) Gaming | **HQ:** Menlo Park, CA | **Stage:** Seed, Series A, Series B | **Check size:** $500K - $50M | **Score:** 4/4 (Priority A) | a16z has one of the largest gaming investment teams. Recent $600M Games Fund One. Thesis: 'Games are becoming the new social networks.' Map our AI-enabled sourcing engine to their infrastructure thesis.",
+      "score": 95,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2e2a1fff1b08b542bc2b",
+      "name": "Packet: Lightspeed Venture Partners",
+      "desc": "**Fund:** Lightspeed Venture Partners | **HQ:** Menlo Park, CA / Global | **Stage:** Seed, Series A, Series B | **Check size:** $1M - $50M | **Score:** 4/4 (Priority A) | Lightspeed has been aggressively deploying into gaming and interactive media. 'Frontier' thesis emphasizes AI-first companies. Our AI-enabled sourcing engine directly maps to their investment thesis.",
+      "score": 92,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699eb148736656420850f61a",
+      "name": "[PACKET] Griffin Gaming Partners - Gaming VC",
+      "desc": "**Focus:** Gaming VC | **HQ:** Los Angeles, CA | **Check Size:** $1M-$5M | **Stage:** Seed to Series A | **Contact:** Peter Levin (peter@griffingp.com) | Former NBC Universal VP. Led investments in Discord, Roblox, Scopely.",
+      "score": 88.5,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2f2de0e903d780f2fa81",
+      "name": "Packet: Griffin Gaming Partners",
+      "desc": "**Fund:** Griffin Gaming Partners | **HQ:** Santa Monica, CA | **Stage:** Multi-stage | **Check size:** $500K - $15M | **Score:** 88.5/100 (Priority A) | Griffin is the largest VC fund dedicated solely to gaming ($1B+ AUM). Multi-stage approach. High sector alignment with gaming/AI thesis. Contact: Phil Sanderson (needs enrichment).",
+      "score": 88.5,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2f2d8cc01cf16b94081b",
+      "name": "Packet: The Games Fund",
+      "desc": "**Fund:** The Games Fund (TGF) | **HQ:** Los Angeles, CA | **Stage:** Pre-Seed, Seed | **Check size:** $250K - $2M | **Score:** 86.0/100 (Priority A) | Specialist gaming VC focused on early-stage studios and interactive entertainment. LA-based with EU presence. Contact: Maria Kochmola (needs enrichment).",
+      "score": 86,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2f2e10a170fb85f10c18",
+      "name": "Packet: Makers Fund",
+      "desc": "**Fund:** Makers Fund | **HQ:** Global (London, Singapore, San Francisco) | **Stage:** Series A | **Check size:** $2M - $10M | **Score:** 85.5/100 (Priority A) | Global gaming and interactive entertainment investor. Multi-office presence enables global deal flow. Contact: Jay Chi (needs enrichment).",
+      "score": 85.5,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f1f4843ec5899e52e0ad3",
+      "name": "Packet: Makers Fund",
+      "desc": "**Fund:** Makers Fund | **HQ:** San Francisco, CA | **Stage:** Seed, Series A, Series B, Growth | **Check size:** $500K - $40M | **AUM:** $500M+ | Focus: Gaming, Interactive Entertainment, Game Technology, Infrastructure. Contact: Michael Cheung (michael@makersfund.com), Jay Chi (jay@makersfund.com).",
+      "score": 85.5,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f2e2be997c5f0d2e19395",
+      "name": "Packet: Griffin Gaming Partners",
+      "desc": "**Fund:** Griffin Gaming Partners | **HQ:** Santa Monica, CA / London | **Stage:** Seed, Series A, Series B | **Check size:** $500K - $15M | **Score:** 3/4 (Priority A) | Griffin is the largest VC fund dedicated solely to gaming ($1B+ AUM). Multi-stage approach allows flexible entry points. High sector alignment with gaming/AI thesis.",
+      "score": 85,
+      "tier": "Priority A"
+    }
+  ],
+  "p2": [
+    {
+      "id": "699f2f2fab92a33d8e4ee713",
+      "name": "Packet: Hiro Capital",
+      "desc": "**Fund:** Hiro Capital | **HQ:** London, UK | **Stage:** Seed to Series B | **Check size:** $500K - $5M | **Score:** 84.5/100 (Priority B) | Focuses on games, esports, and digital sports. European base with US investments. Contact: Luke Alvarez (needs enrichment).",
+      "score": 84.5,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699f1f485f4be68925e964c7",
+      "name": "Packet: Hiro Capital",
+      "desc": "**Fund:** Hiro Capital | **HQ:** London, UK | **Stage:** Seed, Series A, Series B | **Check size:** $500K - $10M | **AUM:** $450M+ | Focus: Games, Esports, Digital Sports, Metaverse technologies, Space/Defence. Contact: Luke Alvarez (luke@hiro.capital), Ian Livingstone (ian@hiro.capital) - Co-founder of Games Workshop & Eidos.",
+      "score": 84.5,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699f2f3015e86bffaebdeaf0",
+      "name": "Packet: Transcend Fund",
+      "desc": "**Fund:** Transcend Fund | **HQ:** San Francisco, CA | **Stage:** Seed, Series A | **Check size:** $1M - $5M | **Score:** 83.0/100 (Priority B) | Invests in gaming, interactive entertainment, and digital media. SF-based with strong Bay Area network. Contact: Shanti Bergel (needs enrichment).",
+      "score": 83,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699f1f490db3409d91d90e4c",
+      "name": "Packet: Transcend Fund",
+      "desc": "**Fund:** Transcend Fund | **HQ:** San Francisco, CA | **Stage:** Pre-seed, Seed, Series A | **Check size:** $250K - $5M | **AUM:** $100M+ | Focus: Games, Digital Entertainment, Interactive Media, Next-gen Social Gaming. Contact: Shanti Bergel (shanti@transcend.fund), Andrew Sheppard (andrew@transcend.fund).",
+      "score": 83,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699eb149c796d9a6995eac02",
+      "name": "[PACKET] 2048 Ventures - AI/Devtools VC",
+      "desc": "**Focus:** AI/Devtools VC | **HQ:** New York, NY | **Check Size:** $500K-$2M | **Stage:** Pre-seed to Seed | **Contact:** Alex Iskold (alex@2048.vc) | Engineer-founder focused on developer tools, AI infrastructure. Former Techstars NYC MD.",
+      "score": 82,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699f2e2ccb97f5cb286ed2fa",
+      "name": "Packet: Galaxy Interactive",
+      "desc": "**Fund:** Galaxy Interactive | **HQ:** New York, NY | **Stage:** Series A, Series B | **Check size:** $2M - $20M | **Score:** 3/4 (Priority A) | Galaxy Interactive is the gaming and interactive media arm of Galaxy Digital. They invest at the intersection of gaming, blockchain, and immersive experiences. Focus on the 'metaverse economy.'",
+      "score": 80,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f1f47ecced948130f290c",
+      "name": "Packet: Galaxy Interactive",
+      "desc": "**Fund:** Galaxy Interactive | **HQ:** New York / Los Angeles | **Stage:** Series A, B, Growth | **Check size:** $1M - $50M | **AUM:** $975M+ | Focus: Interactive entertainment, gaming, virtual worlds, Web3/metaverse infrastructure. Contact: Sam Englebardt (sam@galaxy.com), Richard Kim (richard@galaxy.com).",
+      "score": 80,
+      "tier": "Priority A"
+    }
+  ],
+  "p3": [
+    {
+      "id": "699f2e2cf8ab00d19b23c73a",
+      "name": "Packet: 1UP Ventures",
+      "desc": "**Fund:** 1UP Ventures | **HQ:** Seattle, WA | **Stage:** Pre-Seed, Seed | **Check size:** $100K - $2M | **Score:** 3/4 (Priority A) | 1UP is focused exclusively on independent game developers. Provides capital + collaborative community of 100+ indie studios. Founded by game industry veterans.",
+      "score": 78,
+      "tier": "Priority A"
+    },
+    {
+      "id": "699f1f49b0573bb0edf462f2",
+      "name": "Packet: Play Ventures",
+      "desc": "**Fund:** Play Ventures | **HQ:** Singapore / Helsinki | **Stage:** Pre-seed, Seed, Series A | **Check size:** $100K - $5M | **AUM:** $200M+ | Focus: Gaming, Games-inspired Consumer Products, Gaming Infrastructure. Contact: Henric Suuronen (henric@playventures.vc), Harri Manninen (harri@playventures.vc).",
+      "score": 77,
+      "tier": "Priority B"
+    },
+    {
+      "id": "699d313479762c071b6dc86a",
+      "name": "Investor packet template",
+      "desc": "Template for investor packets with Snapshot, Personalization, Outreach Plan, Attachments, Follow-up sections.",
+      "score": 0,
+      "tier": "Unknown"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+SUBJECT: AI infrastructure for scaling hyper-casual content at Voodoo
+
+Alex,
+
+Voodoo's 6B+ downloads prove you understand hyper-casual at scale. The studios we're working with face the same challenge you solved: maintaining content velocity as player expectations rise.
+
+I'm Lucas, founder of NEXUS AI. We build AI infrastructure that generates dynamic game worlds for hyper-casual titles. Imagine Mob Control levels that adapt to player behavior in real-time, or Bridge Race arenas that self-balance difficulty based on engagement patterns.
+
+The result: 40%+ increases in session length without proportional headcount growth.
+
+Worth a brief conversation about how AI content generation could fit Voodoo's live ops strategy?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI
+
+---
+Contact: alex.shea@voodoo.io
+LinkedIn: https://www.linkedin.com/in/alex-shea-8b2b9b2/

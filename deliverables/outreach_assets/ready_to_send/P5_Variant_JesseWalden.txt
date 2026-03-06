@@ -1,0 +1,45 @@
+To: jesse@variant.fund
+Subject: User-owned VC sourcing: AI engine + partner approval loop
+Priority: P5 | Fund: Variant
+Check Size: $1M-$5M | Stage: Seed to Series A
+
+---
+EMAIL BODY
+---
+Hi Jesse,
+
+Variant's thesis on user ownership and alignment resonates with our approach to VC sourcing.
+
+We built an AI-assisted engine that scores 200+ gaming/AI/devtools funds daily and generates investor packets every morning. But here's the key: partners retain full control. The AI does the research, scoring, and assembly—but humans approve every send.
+
+It's alignment between automation and judgment. Partners can green-light outreach in under four hours, and we're booking four partner meetings per week.
+
+We're raising Seed ($1-5M range) and given Variant's focus on user ownership and crypto, I think there's a strong thesis fit.
+
+Open to a brief intro?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+[TITLE]
+[COMPANY]
+
+---
+ATTACHMENTS
+---
+1. deliverables/outreach_assets/pitch_deck/latest.pdf
+2. deliverables/outreach_assets/kpi_snapshot/2026-02-25-kpis.csv
+
+---
+FOLLOW-UP SCHEDULE
+---
+Day 3: February 28, 2026 — Value-add follow-up
+Day 7: March 4, 2026 — Final bump or pass
+
+---
+NOTES
+---
+Jesse is Co-Founder & Managing Partner at Variant. Primary hook: user 
+ownership, aligned incentives, crypto/consumer. Emphasize human-in-the-loop 
+approval and alignment between automation and judgment.

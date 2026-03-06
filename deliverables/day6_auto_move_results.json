@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-02-27T10:33:12.876135",
+  "moved": 6,
+  "blocked": 2,
+  "details": [
+    {
+      "card": "[Day 6] a16z crypto - Chris Dixon",
+      "action": "moved",
+      "status": "awaiting_approval"
+    },
+    {
+      "card": "[Day 6] Y Combinator - Unknown Contact",
+      "action": "blocked",
+      "reason": "missing_email"
+    },
+    {
+      "card": "[Day 6] Paradigm - Matt Huang",
+      "action": "blocked",
+      "reason": "missing_email"
+    },
+    {
+      "card": "[Day 6] VGames - Eitan Reisel",
+      "action": "moved",
+      "status": "awaiting_approval"
+    },
+    {
+      "card": "[Day 6] 1Up Ventures - Ed Fries",
+      "action": "moved",
+      "status": "awaiting_approval"
+    },
+    {
+      "card": "[Day 6] Lightspeed Venture Partners - Moritz Baier-Lentz",
+      "action": "moved",
+      "status": "awaiting_approval"
+    },
+    {
+      "card": "[Day 6] 1AM Gaming - Gregory Milken",
+      "action": "moved",
+      "status": "awaiting_approval"
+    },
+    {
+      "card": "[Day 6] Initial Capital - Kristian Segerstrale",
+      "action": "moved",
+      "status": "awaiting_approval"
+    }
+  ]
+}

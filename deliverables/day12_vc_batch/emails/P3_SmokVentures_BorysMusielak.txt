@@ -1,0 +1,18 @@
+To: borys@smok.vc
+Subject: Exit Plan Games + CEE talent → the infrastructure opportunity
+
+Hi Borys,
+
+Investing in Exit Plan Games (founded by ex-CD Projekt/Witcher 3 leads) shows Smok understands something the market is still waking up to: Central & Eastern Europe has become a gaming powerhouse, and the talent that shipped Cyberpunk, Dying Light, and The Witcher is now building the next generation of studios.
+
+Your explicit focus on gaming, AR/VR, and AI creates strong alignment with what we're building at NEXUS AI. CEE studios have the technical depth to push AI-native gameplay, but they need infrastructure that makes deploying persistent AI agents economically viable. The region's engineering culture—built on ambitious, technically complex games—positions them perfectly for AI-native experiences.
+
+We're building the runtime layer that enables dynamic AI-powered worlds without crushing unit economics. For CEE studios already thinking in systems and procedural complexity, NEXUS is the infrastructure layer that unlocks what they want to build.
+
+You respond to every quality founder email. Here's mine—worth 15 minutes to explore how NEXUS fits Smok's thesis?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

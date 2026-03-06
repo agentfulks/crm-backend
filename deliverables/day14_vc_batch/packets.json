@@ -1,0 +1,167 @@
+{
+  "batch_id": "day14_crypto_gaming_vc_batch",
+  "theme": "Crypto-Native Gaming + AI Infrastructure",
+  "created_date": "2026-02-28",
+  "funds": [
+    {
+      "fund": "NFX",
+      "partner": "Gigi Levy-Weiss",
+      "email": "gigi@nfx.com",
+      "fit_score": 91,
+      "stage": "Pre-seed to Series A",
+      "check_size": "$1M - $3M",
+      "aum": "$1B+",
+      "location": "San Francisco / Tel Aviv",
+      "thesis_summary": "Network effects platform investing. NFX focuses on defensible businesses with network effects, marketplaces, and platforms. Strong thesis on gaming as a social platform and crypto-enabled economies.",
+      "recent_gaming_investments": [
+        "Voldex (Roblox/UEFN game studio)",
+        "Elodie Games (cross-platform social gaming)",
+        "Playable Worlds (sandbox MMO)",
+        "Mainframe Industries (cloud-native MMO)"
+      ],
+      "recent_ai_investments": [
+        "Cresta (AI for contact centers)",
+        "Moveworks (AI IT automation)",
+        "Poolside (AI for software development)",
+        "Glean (AI workplace search)"
+      ],
+      "strategic_positioning_notes": [
+        "NFX has a dedicated gaming practice and understands UGC/moderated economies",
+        "Strong network effects thesis aligns with AI-generated content ecosystems",
+        "Gigi Levy-Weiss specifically interested in frontier tech at intersection of crypto and gaming",
+        "They lead rounds and move fast on conviction - ideal for pre-seed/seed stage",
+        "Portfolio includes several successful gaming exits (exit to Epic, etc.)"
+      ],
+      "warm_path": null,
+      "priority": "Tier 1 - Immediate Outreach"
+    },
+    {
+      "fund": "Moonfire Ventures",
+      "partner": "Mattias Ljungman",
+      "email": "mattias@moonfire.com",
+      "fit_score": 88,
+      "stage": "Seed to Series A",
+      "check_size": "$500K - $2M",
+      "aum": "$200M+",
+      "location": "London",
+      "thesis_summary": "European seed-stage focused on gaming, AI, and frontier tech. Founded by ex-Epic Games/Atomico team. Deep operational expertise in game development and live service operations.",
+      "recent_gaming_investments": [
+        "HypeHype (mobile UGC platform)",
+        "Mainframe Industries (cloud-native MMO)",
+        "Playable Worlds (sandbox MMO)",
+        "Klang Games (AI-driven virtual world - Seed)"
+      ],
+      "recent_ai_investments": [
+        "Synthesis (AI tutoring/learning)",
+        " Scenario (AI-generated game assets)",
+        "Inworld AI (AI NPCs for games)",
+        "Charisma Entertainment (AI storytelling)"
+      ],
+      "strategic_positioning_notes": [
+        "Founded by ex-Epic Games execs - deep game industry DNA",
+        "Strong European gaming network (Supercell, King, etc. alumni)",
+        "Specific interest in AI-generated content and AI NPCs",
+        "Leading investor in AI-gaming convergence thesis",
+        "Mattias Ljungman has specific interest in infrastructure plays over pure content"
+      ],
+      "warm_path": null,
+      "priority": "Tier 1 - Immediate Outreach"
+    },
+    {
+      "fund": "Smok Ventures",
+      "partner": "Borys Musielak",
+      "email": "borys@smok.vc",
+      "fit_score": 85,
+      "stage": "Pre-seed to Seed",
+      "check_size": "$100K - $500K",
+      "aum": "$50M+",
+      "location": "Warsaw / European focus",
+      "thesis_summary": "Polish/European seed fund focused on gaming, AI, and crypto. Strong thesis on Eastern European technical talent and emerging markets. B2B infrastructure preferred over B2C content plays.",
+      "recent_gaming_investments": [
+        "Exit Plan Games (co-op action)",
+        "Starward Industries (narrative sci-fi)",
+        "GGP (gaming infrastructure)",
+        " numerous Polish indie studios"
+      ],
+      "recent_ai_investments": [
+        "Moly (AI video generation)",
+        "Segram (AI voice tech)",
+        "Several undisclosed AI infra plays",
+        "AI tooling for developers"
+      ],
+      "strategic_positioning_notes": [
+        "Deep network in Eastern European dev talent (Poland, Ukraine, Baltics)",
+        "Borys specifically interested in crypto-gaming infrastructure over speculation",
+        "Strong focus on B2B tools and middleware",
+        "Smaller check sizes but willing to lead pre-seed rounds",
+        "Good for validation and early traction funding"
+      ],
+      "warm_path": null,
+      "priority": "Tier 2 - High Priority"
+    },
+    {
+      "fund": "Remagine Ventures",
+      "partner": "Kevin Brown",
+      "email": "kevin@remagineventures.com",
+      "fit_score": 87,
+      "stage": "Seed to Series A",
+      "check_size": "$500K - $2M",
+      "aum": "$150M+",
+      "location": "Tel Aviv / Berlin",
+      "thesis_summary": "Gaming and entertainment-focused fund with strong crypto thesis. Remagine specifically targets the intersection of gaming, web3, and AI. Deep network in Israeli tech and European gaming.",
+      "recent_gaming_investments": [
+        "Stardust (web3 gaming infrastructure)",
+        "Oasys (gaming blockchain)",
+        "MetalCore (web3 mech shooter)",
+        "Numerous web3 gaming studios"
+      ],
+      "recent_ai_investments": [
+        "D-ID (AI-generated video avatars)",
+        "Hour One (AI video generation)",
+        "AI21 Labs (generative AI)",
+        "Several AI content generation tools"
+      ],
+      "strategic_positioning_notes": [
+        "One of the few funds with explicit crypto-gaming thesis",
+        "Kevin Brown has been vocal about AI + blockchain convergence",
+        "Portfolio includes multiple infrastructure plays (Stardust, Oasys)",
+        "Strong Israeli network - relevant for technical hiring",
+        "Understands regulatory landscape for crypto gaming"
+      ],
+      "warm_path": null,
+      "priority": "Tier 1 - Immediate Outreach"
+    },
+    {
+      "fund": "1kx",
+      "partner": "Lasse Clausen",
+      "email": "lasse@1kx.capital",
+      "fit_score": 84,
+      "stage": "Seed to Series A",
+      "check_size": "$250K - $2M",
+      "aum": "$100M+",
+      "location": "Berlin / Global",
+      "thesis_summary": "Crypto-native fund focused on web3 infrastructure and applications. 1kx has a strong gaming thesis viewing blockchain as essential infrastructure for player-owned economies and open gaming ecosystems.",
+      "recent_gaming_investments": [
+        "TreasureDAO (gaming ecosystem on Arbitrum)",
+        "Yield Guild Games (gaming guild/P2E)",
+        "Merit Circle (gaming DAO)",
+        "Several undisclosed web3 gaming studios"
+      ],
+      "recent_ai_investments": [
+        "Bittensor (decentralized AI)",
+        "Ritual (decentralized AI infrastructure)",
+        "Several AI x crypto convergence plays",
+        "AI agent infrastructure"
+      ],
+      "strategic_positioning_notes": [
+        "Pure crypto-native fund - no fiat/gaming VC equivocation",
+        "Lasse Clausen specifically interested in autonomous worlds and on-chain games",
+        "Thesis: AI agents will need crypto rails for coordination and value exchange",
+        "Strong technical team that evaluates protocol design deeply",
+        "Good fit for infrastructure-heavy plays with token components"
+      ],
+      "warm_path": null,
+      "priority": "Tier 2 - High Priority"
+    }
+  ]
+}

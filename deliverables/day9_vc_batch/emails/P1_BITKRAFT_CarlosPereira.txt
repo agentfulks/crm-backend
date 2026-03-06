@@ -1,0 +1,18 @@
+To: carlos@bitkraft.vc
+Subject: AI Agents for Procedural World Generation - NEXUS AI
+
+Hi Carlos,
+
+Congratulations on the $275M Fund 3 close in June. BITKRAFT's "Agents of Change" thesis on AI in gaming is exactly the intersection we're building at NEXUS AI.
+
+I noticed BITKRAFT's recent investments in Liminal Experiences and GameRamp—these signal serious conviction in AI-native gaming infrastructure. Like Higgsfield (which you backed), we're tackling generative content creation, but specifically for persistent, multiplayer game worlds powered by autonomous AI agents.
+
+NEXUS AI is building the engine for AI-powered procedural world generation. We enable game developers to create dynamic, evolving environments where AI agents generate content, modify worlds in real-time, and create emergent gameplay that scales beyond manual design constraints.
+
+Given BITKRAFT's esports DNA and focus on synthetic reality, I'd love to show you what we're building. Would you have 15 minutes next week for a quick intro call?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

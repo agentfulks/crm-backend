@@ -1,0 +1,20 @@
+To: moritz@lsvp.com
+Subject: From Diablo II #1 to Inworld AI → the AI-native gaming thesis continues
+
+Hi Moritz,
+
+Your journey from Diablo II world #1 to building Lightspeed's Gaming & Interactive Media practice is exactly the kind of founder-backstory that signals genuine conviction. When someone trades virtual items for college tuition, they don't just understand gaming—they understand the economic and behavioral layers that make virtual worlds work.
+
+Lightspeed's thesis on AI at the intersection of spatiotemporal reasoning and gaming infrastructure is playing out across your portfolio. Inworld AI's character engine, Stability AI's generative foundation, Theorycraft's AI-powered studio—you're systematically betting on intelligence as the next core game system. NEXUS AI fits squarely in that thesis.
+
+We're building the runtime infrastructure that enables persistent AI agents in multiplayer worlds—think world models that evolve, action policies that learn from player behavior, and dynamic environments that maintain coherence at scale. The technology gaming has been promising for years but couldn't deliver because inference costs and state management made it economically impossible.
+
+Your 'Gaming x AI Market Map' research shows you're thinking three moves ahead. I'd love to show you how NEXUS enables the next wave of portfolio companies to ship AI-native experiences without the infrastructure headaches.
+
+Worth 15 minutes to explore the fit?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

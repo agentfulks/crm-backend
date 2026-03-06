@@ -1,0 +1,231 @@
+{
+  "batch_id": "day17",
+  "date_researched": "2025-02-28",
+  "target_profile": {
+    "stage": "Seed to Series A",
+    "check_size": "$500K-$5M",
+    "thesis": "Gaming + AI infrastructure, Web3 gaming, spatial computing",
+    "geography": "Global (US, EU, Asia)"
+  },
+  "funds": [
+    {
+      "rank": "P1",
+      "fund_name": "BITKRAFT Ventures",
+      "fund_type": "Multi-stage gaming VC",
+      "aum": "$1.05B+ across 6 funds",
+      "stage_focus": "Seed, Series A, Series B",
+      "check_size": "$2M-$5M (sweet spot: $3.5M)",
+      "geography": "Global (Berlin, LA, SF, NYC, London, Singapore, Barcelona)",
+      "primary_contact": {
+        "name": "Jens Hilgers",
+        "title": "Founding General Partner",
+        "email": "jens@bitkraft.vc",
+        "linkedin": "linkedin.com/in/jenshilgers",
+        "background": "Founded ESL (esports) 2000, Co-founded G2 Esports, widely considered 'godfather of esports'"
+      },
+      "thesis_fit": {
+        "score": 95,
+        "alignment": "Perfect alignment - gaming + AI infrastructure + Web3 core to mandate",
+        "focus_areas": ["Gaming content & IP", "AI infrastructure", "Web3/blockchain gaming", "Immersive technology (VR/AR)"]
+      },
+      "recent_investments": [
+        {
+          "company": "Cartridge",
+          "round": "$7.5M Series A",
+          "date": "2025",
+          "focus": "Web3 infrastructure, Dojo engine for onchain games"
+        },
+        {
+          "company": "NPC Labs",
+          "round": "$18M seed",
+          "date": "2025",
+          "focus": "Web3 gaming infrastructure"
+        },
+        {
+          "company": "Pixion",
+          "round": "$3M",
+          "date": "2025",
+          "focus": "Power Protocol for blockchain games"
+        }
+      ],
+      "portfolio_notables": ["Immutable", "Forte", "Aleph.im", "Mythical Games", "The Sandbox"],
+      "outreach_hook": "Following BITKRAFT's thesis on 'Synthetic Reality' - the convergence of gaming, AI, and immersive tech. Your recent Cartridge/NPC Labs investments show conviction in AI-powered onchain infrastructure.",
+      "warm_intro_paths": ["Portfolio companies in AI gaming infrastructure", "Gaming conferences (GDC, Gamescom)", "Shared Web3 gaming ecosystem contacts"],
+      "trello_card_title": "P1: BITKRAFT Ventures - Jens Hilgers"
+    },
+    {
+      "rank": "P2",
+      "fund_name": "Konvoy Ventures",
+      "fund_type": "Thesis-driven early-stage VC",
+      "aum": "$150M (Fund III, 2024)",
+      "stage_focus": "Seed to Series A",
+      "check_size": "$500K-$3M",
+      "geography": "Global (Denver-based, thesis-driven)",
+      "primary_contact": {
+        "name": "Jackson Vaughan",
+        "title": "Managing Partner & Co-Founder",
+        "email": "jackson@konvoy.vc",
+        "linkedin": "linkedin.com/in/jacksonvaughan",
+        "background": "NYU Stern, previously Whim CEO, board member at Carry1st and StageZero"
+      },
+      "thesis_fit": {
+        "score": 92,
+        "alignment": "Strong alignment - thesis explicitly covers AR/VR, crypto, esports, and gaming platforms",
+        "focus_areas": ["Gaming platforms & technology", "AR/VR immersive tech", "Crypto/Web3 gaming", "Esports infrastructure"]
+      },
+      "recent_investments": [
+        {
+          "company": "Edgegap",
+          "round": "Series A",
+          "date": "2024",
+          "focus": "AI-powered game server orchestration"
+        },
+        {
+          "company": "Gamefam",
+          "round": "Growth",
+          "date": "2024",
+          "focus": "Roblox gaming platform"
+        },
+        {
+          "company": "Carry1st",
+          "round": "Series A extension",
+          "date": "2024",
+          "focus": "Mobile gaming publisher (Africa)"
+        }
+      ],
+      "portfolio_notables": ["Sky Mavis (Axie Infinity)", "Overwolf", "Pandascore", "Nodwin Gaming"],
+      "outreach_hook": "Konvoy's thesis on 'frontier of gaming' directly aligns with our AI infrastructure play. Your Edgegap investment shows conviction in AI-powered gaming backend infrastructure - exactly our space.",
+      "warm_intro_paths": ["Carry1st network (Africa gaming)", "Sky Mavis ecosystem", "Gaming infrastructure founders"],
+      "trello_card_title": "P2: Konvoy Ventures - Jackson Vaughan"
+    },
+    {
+      "rank": "P3",
+      "fund_name": "a16z Speedrun",
+      "fund_type": "Accelerator + Seed fund (Gaming x Tech)",
+      "aum": "$180M+ deployed",
+      "stage_focus": "Pre-seed to Seed",
+      "check_size": "$750K-$1M",
+      "geography": "Global (SF-based, visa support for international founders)",
+      "primary_contact": {
+        "name": "Troy Kirwin",
+        "title": "Partner & Cohort Lead",
+        "email": "troy@a16z.com",
+        "linkedin": "linkedin.com/in/troykirwin",
+        "background": "Ex-Unity, leads a16z speedrun cohorts, focuses on B2B AI and creative tech"
+      },
+      "thesis_fit": {
+        "score": 90,
+        "alignment": "Very strong - explicitly invests at intersection of TECH x GAMES (AI/infra, 3D tools, VR/AR, web3 games)",
+        "focus_areas": ["AI x Games infrastructure", "3D tools & simulations", "VR/AR/XR", "Web3 gaming", "Creative tech"]
+      },
+      "recent_investments": [
+        {
+          "company": "k-ID",
+          "round": "Seed",
+          "date": "2024",
+          "focus": "AI-powered gaming compliance"
+        },
+        {
+          "company": "Backflip",
+          "round": "Seed",
+          "date": "2024",
+          "focus": "AI game development tools"
+        },
+        {
+          "company": "150+ startups",
+          "round": "Pre-seed/Seed",
+          "date": "2023-2025",
+          "focus": "AI, games, creative tech"
+        }
+      ],
+      "portfolio_notables": ["Nilo (AI gaming)", "Various AI x gaming infrastructure startups"],
+      "outreach_hook": "a16z Speedrun's explicit mandate is 'TECH x GAMES' - AI/infra, 3D tools, VR/AR, web3 games. SR006 applications just opened - but we're raising now and fit your thesis perfectly.",
+      "warm_intro_paths": ["Speedrun portfolio founders", "a16z network effects", "GDC demo day alumni"],
+      "trello_card_title": "P3: a16z Speedrun - Troy Kirwin"
+    },
+    {
+      "rank": "P4",
+      "fund_name": "London Venture Partners (LVP)",
+      "fund_type": "Specialized gaming seed fund",
+      "aum": "$140M+",
+      "stage_focus": "Seed",
+      "check_size": "$500K-$2M",
+      "geography": "Global (London-based, invests worldwide)",
+      "primary_contact": {
+        "name": "David Lau-Kee",
+        "title": "Co-Founder & General Partner",
+        "email": "dlk@londonvp.com",
+        "linkedin": "linkedin.com/in/davidlaukee",
+        "background": "Founded Criterion Software (RenderWare engine, Burnout), early investor in Supercell and Unity, 25+ years gaming industry"
+      },
+      "thesis_fit": {
+        "score": 88,
+        "alignment": "Strong - exclusively invests in gaming ecosystem including tech/platforms/infrastructure",
+        "focus_areas": ["Game studios & content", "Gaming technology platforms", "Gaming infrastructure", "Interactive entertainment"]
+      },
+      "recent_investments": [
+        {
+          "company": "Rule",
+          "round": "£800K pre-seed",
+          "date": "Feb 2025",
+          "focus": "Save-to-win mobile game (fintech x gaming)"
+        },
+        {
+          "company": "Various gaming infrastructure",
+          "round": "Seed",
+          "date": "2024-2025",
+          "focus": "Gaming platforms & tools"
+        }
+      ],
+      "portfolio_notables": ["Supercell (early)", "Unity (early)", "Super Evil Megacorp", "Wargaming"],
+      "outreach_hook": "LVP was early to Supercell and Unity - you understand gaming infrastructure before others. We're building the AI infrastructure layer that every game studio will need.",
+      "warm_intro_paths": ["Supercell alumni network", "Unity ecosystem", "European gaming founders"],
+      "trello_card_title": "P4: London Venture Partners - David Lau-Kee"
+    },
+    {
+      "rank": "P5",
+      "fund_name": "The Venture Reality Fund (VRF)",
+      "fund_type": "Early-stage spatial computing VC",
+      "aum": "~$50M+",
+      "stage_focus": "Seed to Series A",
+      "check_size": "$100K-$500K",
+      "geography": "Global (Bay Area-based)",
+      "primary_contact": {
+        "name": "Tipatat Chennavasin",
+        "title": "Co-Founder & General Partner",
+        "email": "tipatat@thevrfund.com",
+        "linkedin": "linkedin.com/in/tipatat",
+        "background": "Stanford BS, created VR/AR content, became convinced of VR power after curing his fear of heights while developing in VR"
+      },
+      "thesis_fit": {
+        "score": 85,
+        "alignment": "Good - specializes in AI & Spatial Computing, VR/AR, and immersive tech for gaming/enterprise",
+        "focus_areas": ["AI & Spatial Computing", "VR/AR/MR", "Immersive gaming", "Metaverse/Web3", "Intelligent computing"]
+      },
+      "recent_investments": [
+        {
+          "company": "Oasiz",
+          "round": "$2.5M seed",
+          "date": "Oct 2025",
+          "focus": "TikTok meets Roblox"
+        },
+        {
+          "company": "Little Umbrella",
+          "round": "Seed",
+          "date": "Jan 2025",
+          "focus": "Death by AI social game"
+        },
+        {
+          "company": "Gracia AI",
+          "round": "$1.2M",
+          "date": "Jun 2024",
+          "focus": "Photorealistic volumetric spatial videos"
+        }
+      ],
+      "portfolio_notables": ["Spatial", "Littlstar", "8th Wall (acquired by Niantic)"],
+      "outreach_hook": "VRF's focus on 'AI & Spatial Computing' for immersive gaming aligns with our vision. Your Gracia AI investment shows conviction in AI-generated spatial content - our infrastructure enables exactly this.",
+      "warm_intro_paths": ["Spatial computing ecosystem", "VR/AR developer networks", "AWE (Augmented World Expo) network"],
+      "trello_card_title": "P5: The Venture Reality Fund - Tipatat Chennavasin"
+    }
+  ]
+}

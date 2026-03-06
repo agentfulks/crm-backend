@@ -1,0 +1,13 @@
+metric,value,notes
+report_date,2026-02-24,Generation date (UTC)
+packets_generated,5,Count of funds in daily queue snapshot
+avg_score,59.26,Score range 48.33–84.00
+contact_ready_pct,60.0,3/5 packets have verified contact emails
+missing_contact_funds,Konvoy Ventures; Variant,Funds lacking direct email in snapshot
+packets_with_target_send_today,0,Rows in sent_log matching target send date
+packets_sent,0,Subset with sent_at_utc populated
+follow_ups_due_today,0,Follow-up log entries scheduled for today
+responses_logged,0,Follow-up log entries with outcome=RESPONDED
+meetings_logged,0,Follow-up log entries with outcome=MEETING
+generated_at,2026-02-24T23:18:20.551993+00:00,Timestamp when KPI file created
+daily_queue_source,deliverables/daily_queue/2026-02-24-manifest.json,2026-02-24T23:01:47.098004+00:00

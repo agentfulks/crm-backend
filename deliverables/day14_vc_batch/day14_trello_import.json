@@ -1,0 +1,34 @@
+{
+  "cards": [
+    {
+      "name": "NFX - Gigi Levy-Weiss",
+      "desc": "**Fund:** NFX\\n**Partner:** Gigi Levy-Weiss\\n**Email:** gigi@nfx.com\\n**Fit Score:** 91/100\\n**Stage:** Pre-seed to Series A\\n**Check Size:** $1M - $3M\\n**AUM:** $1B+\\n**Location:** San Francisco / Tel Aviv\\n\\n**Thesis:** Network effects platform investing. Strong gaming practice with UGC/economies focus.\\n\\n**Recent Gaming:** Voldex, Elodie Games, Playable Worlds, Mainframe Industries\\n**Recent AI:** Cresta, Moveworks, Poolside, Glean\\n\\n**Strategic Notes:**\\n- Network effects thesis aligns with AI content ecosystems\\n- Gigi specifically interested in frontier tech at crypto/gaming intersection\\n- Lead rounds, move fast on conviction\\n\\n**Priority:** Tier 1 - Immediate Outreach\\n**Status:** To Do\\n**List:** VC Outreach",
+      "labels": ["vc-outreach", "tier-1", "gaming", "ai", "crypto"],
+      "due": null
+    },
+    {
+      "name": "Moonfire Ventures - Mattias Ljungman",
+      "desc": "**Fund:** Moonfire Ventures\\n**Partner:** Mattias Ljungman\\n**Email:** mattias@moonfire.com\\n**Fit Score:** 88/100\\n**Stage:** Seed to Series A\\n**Check Size:** $500K - $2M\\n**AUM:** $200M+\\n**Location:** London\\n\\n**Thesis:** European seed-stage gaming/AI/frontier tech. Ex-Epic Games team.\\n\\n**Recent Gaming:** HypeHype, Mainframe Industries, Playable Worlds, Klang Games\\n**Recent AI:** Synthesis, Scenario, Inworld AI, Charisma Entertainment\\n\\n**Strategic Notes:**\\n- Ex-Epic operating DNA\\n- Leading AI-gaming convergence investor\\n- Mattias prefers infrastructure over pure content\\n\\n**Priority:** Tier 1 - Immediate Outreach\\n**Status:** To Do\\n**List:** VC Outreach",
+      "labels": ["vc-outreach", "tier-1", "gaming", "ai", "europe"],
+      "due": null
+    },
+    {
+      "name": "Smok Ventures - Borys Musielak",
+      "desc": "**Fund:** Smok Ventures\\n**Partner:** Borys Musielak\\n**Email:** borys@smok.vc\\n**Fit Score:** 85/100\\n**Stage:** Pre-seed to Seed\\n**Check Size:** $100K - $500K\\n**AUM:** $50M+\\n**Location:** Warsaw / European focus\\n\\n**Thesis:** CEE seed fund. Gaming/AI/crypto. B2B infrastructure preferred.\\n\\n**Recent Gaming:** Exit Plan Games, Starward Industries, GGP\\n**Recent AI:** Moly, Segram, AI tooling\\n\\n**Strategic Notes:**\\n- Deep CEE dev talent network\\n- Borys prefers crypto-gaming infrastructure over speculation\\n- B2B tools/middleware focus\\n\\n**Priority:** Tier 2 - High Priority\\n**Status:** To Do\\n**List:** VC Outreach",
+      "labels": ["vc-outreach", "tier-2", "gaming", "crypto", "cee"],
+      "due": null
+    },
+    {
+      "name": "Remagine Ventures - Kevin Brown",
+      "desc": "**Fund:** Remagine Ventures\\n**Partner:** Kevin Brown\\n**Email:** kevin@remagineventures.com\\n**Fit Score:** 87/100\\n**Stage:** Seed to Series A\\n**Check Size:** $500K - $2M\\n**AUM:** $150M+\\n**Location:** Tel Aviv / Berlin\\n\\n**Thesis:** Gaming/entertainment with strong crypto thesis. AI + web3 convergence.\\n\\n**Recent Gaming:** Stardust, Oasys, MetalCore, web3 studios\\n**Recent AI:** D-ID, Hour One, AI21 Labs\\n\\n**Strategic Notes:**\\n- Explicit crypto-gaming thesis\\n- Kevin vocal on AI + blockchain convergence\\n- Multiple infrastructure plays in portfolio\\n\\n**Priority:** Tier 1 - Immediate Outreach\\n**Status:** To Do\\n**List:** VC Outreach",
+      "labels": ["vc-outreach", "tier-1", "gaming", "ai", "crypto"],
+      "due": null
+    },
+    {
+      "name": "1kx - Lasse Clausen",
+      "desc": "**Fund:** 1kx\\n**Partner:** Lasse Clausen\\n**Email:** lasse@1kx.capital\\n**Fit Score:** 84/100\\n**Stage:** Seed to Series A\\n**Check Size:** $250K - $2M\\n**AUM:** $100M+\\n**Location:** Berlin / Global\\n\\n**Thesis:** Crypto-native. Web3 infrastructure and applications. Gaming + AI.\\n\\n**Recent Gaming:** TreasureDAO, Yield Guild Games, Merit Circle\\n**Recent AI:** Bittensor, Ritual, AI agents\\n\\n**Strategic Notes:**\\n- Pure crypto-native fund\\n- Lasse interested in autonomous worlds/on-chain games\\n- Thesis: AI agents need crypto rails for coordination\\n\\n**Priority:** Tier 2 - High Priority\\n**Status:** To Do\\n**List:** VC Outreach",
+      "labels": ["vc-outreach", "tier-2", "crypto", "gaming", "ai"],
+      "due": null
+    }
+  ]
+}

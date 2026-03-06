@@ -1,0 +1,38 @@
+To: sam@galaxyinteractive.io
+Subject: Content + Technology / [Startup Name] at the AI Inflection Point
+
+Hi Sam,
+
+Galaxy Interactive's thesis on the intersection of content, technology, and social commerce maps directly to what we're building. Your investments in Immutable and Mythical Games showed early conviction in infrastructure for the next generation of gaming. We're building the AI infrastructure layer.
+
+[Startup Name] is [one-line description - e.g., "the infrastructure that lets any game studio deploy AI-generated content at scale" / "a platform for AI-powered virtual economies"]. We sit at the intersection of [content + technology angle], which is exactly Galaxy's focus area.
+
+**Why Galaxy Interactive:**
+- **Infrastructure thesis:** Like Immutable (blockchain gaming infra), we're building foundational tech for AI-powered games
+- **Stage fit:** We're raising [amount] seed - Galaxy writes $1M-$25M checks
+- **Content + tech convergence:** Your background in both media production and tech investing matches our dual nature
+- **Metaverse positioning:** Our platform enables persistent, evolving virtual worlds
+
+**Current traction:**
+- [X] game developers signed
+- [Y] players interacting with our AI systems daily
+- [Z] revenue / revenue growth
+- Team: [AI research + AAA game development backgrounds]
+
+**The opportunity:**
+Every major platform shift creates new infrastructure winners. PC gaming had Steam. Mobile had Unity and ad networks. Web3 had Immutable and The Sandbox. AI gaming will have [Startup Name] because [specific technical moat].
+
+Would you be open to a conversation? I'd love to show you what we've built and get your perspective given your experience financing both traditional and digital businesses at the edge of culture and technology.
+
+Best,
+Lucas Fulks
+[Startup Name]
+[Phone]
+[LinkedIn]
+
+P.S. - Listened to Mustafa's "Series G" podcast episode on AI in games. The conversation about infrastructure needs for AI-native games validated exactly what we're building.
+
+---
+**ATTACHMENTS:**
+- [Startup Name]_One_Pager.pdf
+- [Startup Name]_Deck.pdf

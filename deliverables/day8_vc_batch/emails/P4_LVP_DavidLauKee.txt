@@ -1,0 +1,18 @@
+To: dlk@londonvp.com
+Subject: From Unity/Supercell to Bitpart.AI → the infrastructure thesis continues
+
+Hi David,
+
+LVP's track record speaks for itself—early checks into Unity and Supercell defined the last decade of gaming. Your recent Bitpart.AI investment ($3.3M seed) shows you're seeing what I'm seeing: AI isn't just changing content creation, it's fundamentally changing what's possible in game worlds.
+
+But here's the gap no one's addressing yet: infrastructure. Bitpart enables smarter NPCs, but studios still struggle to run AI at scale in production multiplayer environments. NEXUS AI is building that runtime layer—enabling persistent AI agents, evolving world states, and procedural systems without the compute costs that kill margins.
+
+Given your Criterion/RenderWare heritage, you understand better than most that every content revolution needs a corresponding infrastructure layer. We're already piloting with [STUDIO NAMES REDACTED] and seeing 10x efficiency gains on AI-powered features.
+
+Worth a 15-minute conversation? I think NEXUS belongs in the same conversation as Bitpart for the next generation of gaming infrastructure.
+
+[CALENDLY_LINK]
+
+Best,
+[Founder Name]
+NEXUS AI

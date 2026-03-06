@@ -1,0 +1,110 @@
+[
+  {
+    "fund_name": "Transcend Fund",
+    "aum": "$150M",
+    "partner": {
+      "name": "Shanti Bergel",
+      "title": "Founding Managing Director",
+      "email": "shanti@transcend.fund"
+    },
+    "check_size_range": "$500K - $3M",
+    "gaming_ai_thesis": "Transcend Fund is an early-stage VC firm exclusively focused on games and digital entertainment. They invest in AI-driven gaming experiences, next-gen social gaming, cloud gaming infrastructure, and interactive entertainment platforms. Their thesis centers on backing visionary founders who are reinventing how players create, share, and experience games through emerging technologies including AI-generated content and dynamic world-building.",
+    "fit_score": 92,
+    "geographic_focus": "Global (US-based, San Francisco)",
+    "stage": "Seed to Series A",
+    "notable_gaming_investments": [
+      "Ruckus Games ($19M Series A, 2024)",
+      "Live Aware Labs (2024)",
+      "Eggscape Entertainment ($4.25M, 2024)",
+      "thatgamecompany (Sky - 260M+ downloads)",
+      "Stress Level Zero (VR gaming)",
+      "Midsummer Studios"
+    ]
+  },
+  {
+    "fund_name": "Konvoy Ventures",
+    "aum": "$270M",
+    "partner": {
+      "name": "Jason Chapman",
+      "title": "Managing Partner & Co-Founder",
+      "email": "jason@konvoy.vc"
+    },
+    "check_size_range": "$500K - $2.5M",
+    "gaming_ai_thesis": "Konvoy is a thesis-driven investment firm focused exclusively on gaming platforms and technologies at the frontier of the industry. They invest in gaming infrastructure, AI-powered game development tools, deep tech applications for interactive entertainment, and platforms enabling the metaverse. Their infrastructure-first approach makes them highly strategic for AI infrastructure targeting dynamic game worlds.",
+    "fit_score": 90,
+    "geographic_focus": "Global (Denver-based)",
+    "stage": "Seed to Series A",
+    "notable_gaming_investments": [
+      "Ready Player Me (cross-game avatar platform, exited 2025)",
+      "Axie Infinity (blockchain gaming)",
+      "Battle Road (planet-scale simulations)",
+      "Gamefam (Roblox gaming)",
+      "Carry1st (mobile gaming, Africa)",
+      "Nerd Street (esports infrastructure, $6M 2024)"
+    ]
+  },
+  {
+    "fund_name": "Hiro Capital",
+    "aum": "$450M",
+    "partner": {
+      "name": "Luke Alvarez",
+      "title": "Founder & Managing General Partner",
+      "email": "luke@hiro.capital"
+    },
+    "check_size_range": "$3M - $10M",
+    "gaming_ai_thesis": "Hiro Capital invests in European and UK innovators in Games, Esports, Digital Sports, and the Metaverse. They back creative AI platforms, spatial computing, and deep tech applications of AI, AR/VR, and cloud technologies within gaming. Their recent focus on Spatial AI and creative AI platforms makes them ideal partners for AI infrastructure powering dynamic game worlds.",
+    "fit_score": 88,
+    "geographic_focus": "UK/Europe (London/Luxembourg)",
+    "stage": "Series A to B",
+    "notable_gaming_investments": [
+      "Sidero Labs ($4M with Sony Innovation Fund, 2024)",
+      "FRVR (€11.45M AI game development, 2024)",
+      "GAIM.FUN (AI gaming)",
+      "Creative AI platforms",
+      "Spatial computing companies",
+      "Hiro III fund launched 2025 with Sir Nick Clegg as GP"
+    ]
+  },
+  {
+    "fund_name": "London Venture Partners (LVP)",
+    "aum": "$80M+ (Fund III)",
+    "partner": {
+      "name": "David Lau-Kee",
+      "title": "General Partner & Co-Founder",
+      "email": "dlk@londonvp.com"
+    },
+    "check_size_range": "$500K - $2M",
+    "gaming_ai_thesis": "LVP is a specialized seed fund that exclusively invests in the games ecosystem. Founded by gaming industry veterans, they back early-stage companies innovating in gaming technology, content creation, and AI-powered game development. Their track record includes backing sector-defining companies at the earliest stages, making them ideal for AI infrastructure plays targeting game developers.",
+    "fit_score": 87,
+    "geographic_focus": "Global (UK-based)",
+    "stage": "Seed",
+    "notable_gaming_investments": [
+      "Supercell (early investor)",
+      "Unity (early investor, non-exec Chairman 2009-2010)",
+      "Bitpart.AI ($3.3M seed, AI NPC platform 2024)",
+      "MOCO (AI-driven multiplayer games)",
+      "Rendered game engine expertise (Criterion/RenderWare legacy)"
+    ]
+  },
+  {
+    "fund_name": "F4 Fund",
+    "aum": "$10M",
+    "partner": {
+      "name": "David Kaye",
+      "title": "General Partner & Co-Founder",
+      "email": "david@f4.fund"
+    },
+    "check_size_range": "$250K - $1M",
+    "gaming_ai_thesis": "F4 Fund follows veteran founders from the video games industry into their new ventures in AI, SaaS, social, and consumer applications. They believe the video game business is a source of world-changing technology and exceptional founders. This founder-first approach to gaming alumni building AI companies creates unique alignment for AI infrastructure serving game worlds.",
+    "fit_score": 85,
+    "geographic_focus": "Global (Los Angeles-based)",
+    "stage": "Seed",
+    "notable_gaming_investments": [
+      "Omada (gaming/entertainment)",
+      "Ada Health (AI healthcare, gaming founder background)",
+      "Series (AI game dev platform, co-invested with a16z, BITKRAFT)",
+      "Multiple AI companies founded by gaming industry veterans",
+      "Focus on gaming alumni building in AI/SaaS"
+    ]
+  }
+]

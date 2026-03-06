@@ -1,0 +1,18 @@
+To: shahin@luxcapital.com
+Subject: Riskgaming Meets AI-Native World Generation
+
+Hi Shahin,
+
+Lux's "Riskgaming" initiative and your Q4 2024 analysis on Moravec's Paradox caught my attention. You're thinking deeply about AI systems for complex simulation and strategic decision-making—exactly the foundation NEXUS AI is built on.
+
+Your investments in W4 Games (Godot Engine) and Runway AI show conviction in both gaming infrastructure and generative media. NEXUS AI sits at that intersection: we're building the engine for AI-powered procedural world generation, enabling autonomous agents to create and modify persistent game worlds in real-time.
+
+With the fresh $1.5B Fund IX, Lux has the capital to back ambitious infrastructure bets. We're applying deep tech AI to the hardest problem in gaming—scalable content generation that maintains coherence and quality. This isn't just a gaming tool; it's foundational infrastructure for simulation, training environments, and synthetic reality.
+
+I'd welcome the opportunity to walk you through what we're building and explore fit with Lux's AI infrastructure thesis. Would you have 15 minutes next week?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

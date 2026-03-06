@@ -1,0 +1,18 @@
+To: luke@hiro.capital
+Subject: FRVR + Sidero Labs → the missing runtime layer for Spatial AI
+
+Hi Luke,
+
+Between FRVR's GenAI game creation platform and your recent Sidero Labs investment (plus Sir Nick Clegg joining for Spatial AI), Hiro Capital is clearly positioning at the intersection of AI, infrastructure, and spatial computing. I think there's a critical piece of that stack you haven't seen yet.
+
+NEXUS AI is building the runtime infrastructure that makes Spatial AI actually viable at scale. While FRVR empowers creators with AI tools and Sidero optimizes container orchestration, NEXUS handles the hard problem: running persistent AI agents, dynamic world states, and real-time inference in multiplayer environments without crushing unit economics.
+
+Our platform is already enabling European game studios to ship AI-powered worlds that were previously cost-prohibitive. With Hiro III deploying capital into this exact thesis, I'd love to show you what we're building.
+
+Do you have 15 minutes for a quick call? I think NEXUS fits squarely in the infrastructure gap you're targeting.
+
+[CALENDLY_LINK]
+
+Best,
+[Founder Name]
+NEXUS AI

@@ -1,0 +1,138 @@
+{
+  "batch_id": "trello-import-march04-2026",
+  "generated_at": "2026-03-04T02:45:00Z",
+  "generated_by": "VANTAGE",
+  "status": "ready_for_import",
+  "note": "No Trello API configured - manual import required",
+  "output_location": "/data/workspace/output/trello-import-ready/",
+  "vc_outreach": {
+    "count": 5,
+    "p0_count": 3,
+    "p1_count": 2,
+    "avg_fit_score": 91.2,
+    "target_list": "Daily Queue",
+    "cards": [
+      {
+        "priority": "P0",
+        "firm": "a16z GAMES",
+        "partner": "Jonathan Lai",
+        "location": "Menlo Park, CA",
+        "fund_size": "$600M GAMES FUND ONE",
+        "fit_score": 96,
+        "linkedin": "https://www.linkedin.com/in/jlai84/",
+        "hook": "Reference Kaedim investment and AI x gaming thesis"
+      },
+      {
+        "priority": "P0",
+        "firm": "Makers Fund",
+        "partner": "Michael Cheung",
+        "location": "Singapore",
+        "fund_size": "$500M Fund III",
+        "fit_score": 94,
+        "linkedin": "https://www.linkedin.com/in/michaelkcheung/",
+        "hook": "Reference Human Computer co-investment with a16z"
+      },
+      {
+        "priority": "P0",
+        "firm": "Transcend Fund",
+        "partner": "Shanti Bergel",
+        "location": "Global",
+        "fund_size": "~$100M+",
+        "fit_score": 91,
+        "linkedin": "https://www.linkedin.com/in/shanti/",
+        "hook": "Congratulate on Layer AI Game Changers Award"
+      },
+      {
+        "priority": "P1",
+        "firm": "Galaxy Interactive",
+        "partner": "Sam Englebardt",
+        "location": "New York",
+        "fund_size": "$325M Fund II",
+        "fit_score": 88,
+        "linkedin": "https://www.linkedin.com/in/sam-englebardt/",
+        "hook": "Reference Sonic investment and infrastructure thesis"
+      },
+      {
+        "priority": "P1",
+        "firm": "Courtside Ventures",
+        "partner": "Deepen Parikh",
+        "location": "New York",
+        "fund_size": "$100M Fund III",
+        "fit_score": 87,
+        "linkedin": "https://www.linkedin.com/in/deepenparikh/",
+        "hook": "Reference Jump $23M Series A and sports-gaming convergence"
+      }
+    ]
+  },
+  "bdr_game_studios": {
+    "count": 5,
+    "p0_count": 3,
+    "p1_count": 2,
+    "total_downloads": "32.5B+",
+    "target_list": "Ready for Review",
+    "cards": [
+      {
+        "priority": "P0",
+        "studio": "SayGames",
+        "ceo": "Yegor Vaikhanski",
+        "downloads": "6B+",
+        "employees": "~182",
+        "linkedin": "https://www.linkedin.com/in/yegor-vaikhanski-9922a526/",
+        "key_signal": "$300M idle arcade revenue (April 2025)",
+        "angle": "Live ops for hybridcasual pivot"
+      },
+      {
+        "priority": "P0",
+        "studio": "Voodoo",
+        "ceo": "Alexandre Yazdi",
+        "downloads": "8B+",
+        "employees": "~600",
+        "linkedin": "https://www.linkedin.com/in/alexandre-yazdi-21a9813a",
+        "key_signal": "€623M revenue, acquired BeReal €500M",
+        "angle": "Live ops for diversification"
+      },
+      {
+        "priority": "P0",
+        "studio": "Azur Games",
+        "ceo": "Dmitry Yaminsky",
+        "downloads": "10B+",
+        "employees": "~271",
+        "linkedin": "https://www.linkedin.com/in/dmitry-yaminsky-337bab3b/",
+        "key_signal": "#1 global downloads 2024 (Sensor Tower)",
+        "angle": "Monetize massive scale"
+      },
+      {
+        "priority": "P1",
+        "studio": "Homa Games",
+        "ceo": "Daniel Nathan",
+        "downloads": "1.5B+",
+        "employees": "100-250",
+        "linkedin": "https://www.linkedin.com/in/danielelinathan",
+        "key_signal": "$165M raised, 30-game initiative",
+        "angle": "Tooling for expansion"
+      },
+      {
+        "priority": "P1",
+        "studio": "CrazyLabs",
+        "ceo": "Sagi Schliesser",
+        "downloads": "7B+",
+        "employees": "300+",
+        "linkedin": "https://www.linkedin.com/in/sagis/",
+        "key_signal": "7B milestone Dec 2024, Firescore acquisition",
+        "angle": "Portfolio scaling"
+      }
+    ]
+  },
+  "next_actions": [
+    "Lucas to import 5 VC cards to Daily Queue",
+    "Lucas to import 5 BDR cards to Ready for Review",
+    "Configure Trello API for automated imports (optional)",
+    "Execute 41 approved VC sends in Approved/Send list",
+    "Review 55-68 BDR cards in Ready for Review"
+  ],
+  "blockers": [
+    "No Trello API configured - manual import required",
+    "41 approved VC sends awaiting Lucas execution",
+    "55-68 BDR cards pending Lucas review"
+  ]
+}

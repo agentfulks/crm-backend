@@ -1,0 +1,32 @@
+[
+  {
+    "name": "CloudTree Ventures - Michael O'Donnell",
+    "desc": "**Fit Score:** 89/100\n**Fund:** CloudTree Ventures\n**Partner:** Michael P. O'Donnell (Managing Partner)\n**Email:** michael@cloudtree.vc\n**Stage:** Series A / Early Growth\n**Check Size:** $100K - $5M\n**AUM:** $50M+\n**Location:** Miami, FL\n\n**Thesis:** Interactive entertainment infrastructure - gaming, esports, AR/VR, XR technologies.\n\n**Gaming/AI Focus:** Edge computing, machine learning, XR, avatars, blockchain for interactive entertainment.\n\n**Notable Investments:**\n- Arcturus Studios ($11M with Autodesk/Epic Games)\n- Gaming/esports infrastructure\n\n**Why They Fit:**\n- Invested alongside Epic Games - strong infrastructure validation\n- Explicit ML/AI focus for gaming\n- Miami base = LATAM market access\n\n**Outreach Angle:** Reference Epic Games co-investment and ML infrastructure thesis\n\n---\n**Status:** To Do\n**Priority:** P1\n**Labels:** day15,gaming-ai,series-a,miami,infrastructure",
+    "labels": ["day15", "gaming-ai", "series-a", "p1"],
+    "due": null
+  },
+  {
+    "name": "Ludus Ventures - Ismet Gökşen",
+    "desc": "**Fit Score:** 88/100\n**Fund:** Ludus Ventures\n**Partner:** Ismet Gökşen (Managing Partner)\n**Email:** ismet@ludus.vc\n**Stage:** Pre-seed / Seed\n**Check Size:** $200K - $2M\n**AUM:** $60M (2 funds)\n**Location:** Istanbul / Luxembourg\n\n**Thesis:** Gaming-first fund with 'first check mindset' - pure-play gaming and game tech.\n\n**Gaming/AI Focus:** Game tech, AI-powered game development, globally scalable gaming.\n\n**Notable Investments:**\n- Midas Games ($1M seed led, Feb 2025)\n- Chaos Games, TaleMonster Games, Tark Games\n- Monetizr ($4M round)\n- Paxie Games & Gleam Games (acquired)\n\n**Why They Fit:**\n- $200M+ exits from 15 portfolio companies\n- Led Midas Games seed Feb 2025 - actively deploying\n- Turkish gaming ecosystem access\n\n**Outreach Angle:** Reference Midas Games investment, emphasize global scalability\n\n---\n**Status:** To Do\n**Priority:** P1\n**Labels:** day15,gaming-ai,pre-seed,turkey,pure-gaming",
+    "labels": ["day15", "gaming-ai", "pre-seed", "p1"],
+    "due": null
+  },
+  {
+    "name": "Pressplay Capital - Viniit Mehta",
+    "desc": "**Fit Score:** 87/100\n**Fund:** Pressplay Capital\n**Partner:** Viniit Mehta (General Partner)\n**Email:** viniitmehta@pressplaycapital.com\n**Stage:** Seed / Early Growth\n**Check Size:** $100K - $500K\n**AUM:** $10M (maiden fund)\n**Location:** Dubai, UAE\n\n**Thesis:** First media-tech VC in MENA - Sports Tech, Streaming, Gaming, AI-powered media.\n\n**Gaming/AI Focus:** AI-driven, distribution-focused social & immersive gaming. AI monetization.\n\n**Notable Investments:**\n- Eloelo (India's largest interactive entertainment platform)\n- Metashot (gaming hardware)\n- Sensara.tv (AI-driven video discovery)\n\n**Why They Fit:**\n- Explicit AI-gaming thesis\n- MENA/India market access\n- Streaming/ad-tech expertise\n\n**Outreach Angle:** AI-driven immersive gaming for MENA/India markets\n\n---\n**Status:** To Do\n**Priority:** P2\n**Labels:** day15,gaming-ai,seed,mena,ai-media",
+    "labels": ["day15", "gaming-ai", "seed", "p2"],
+    "due": null
+  },
+  {
+    "name": "Night Ventures - Reed Duchscher",
+    "desc": "**Fit Score:** 86/100\n**Fund:** Night Ventures\n**Partner:** Reed Duchscher (General Partner)\n**Email:** reed@nightventures.com\n**Stage:** Pre-seed / Seed\n**Check Size:** $250K - $500K\n**AUM:** $25M+\n**Location:** Austin, TX\n\n**Thesis:** Early-stage consumer fund with top creator LPs. New customer acquisition models.\n\n**Gaming/AI Focus:** Interactive games, gamified fintech, creator monetization, social fiction.\n\n**Notable Investments:**\n- Interactive games (2022)\n- Gamified fintech (2022)\n- NFT marketplace (2022)\n- Creator monetization platforms\n\n**Why They Fit:**\n- Creator-LP network = distribution advantage\n- Active gaming investments\n- Content + community expertise\n\n**Outreach Angle:** Interactive AI gaming with creator distribution\n\n---\n**Status:** To Do\n**Priority:** P2\n**Labels:** day15,gaming-ai,pre-seed,creator-economy,austin",
+    "labels": ["day15", "gaming-ai", "pre-seed", "p2"],
+    "due": null
+  },
+  {
+    "name": "Boost Capital Partners - Shana Dao",
+    "desc": "**Fit Score:** 85/100\n**Fund:** Boost Capital Partners\n**Partner:** Shana Dao (Founding Partner)\n**Email:** shana@boostcp.vc\n**Stage:** Pre-seed / Seed\n**Check Size:** $100K - $750K\n**AUM:** $15M+\n**Location:** London, UK\n\n**Thesis:** Gaming-founded seed VC applying game mechanics to real-world problems.\n\n**Gaming/AI Focus:** Game mechanics for real-world problems, gaming infrastructure, media.\n\n**Why They Fit:**\n- Gaming industry foundation\n- 20+ years UA/engagement expertise\n- London = European market access\n- Strong UX focus\n\n**Outreach Angle:** Gaming infrastructure with UX/engagement expertise\n\n---\n**Status:** To Do\n**Priority:** P2\n**Labels:** day15,gaming-ai,pre-seed,london,ux",
+    "labels": ["day15", "gaming-ai", "pre-seed", "p2"],
+    "due": null
+  }
+]

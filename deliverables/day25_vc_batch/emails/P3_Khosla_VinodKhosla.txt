@@ -1,0 +1,27 @@
+Subject: AI infrastructure transformation / [Company]
+
+Hi Vinod,
+
+Your conviction on AI as the foundation for reinventing societal infrastructure has been a north star for how we think about building [Company]. When you wrote that AI would transform everything from education to healthcare to transportation, it validated what we're seeing in [specific market].
+
+We're building infrastructure for [specific AI tooling/infrastructure problem] because we believe the current stack is fundamentally insufficient for the scale of AI adoption that's coming. Our approach:
+
+- [Technical insight #1]
+- [Technical insight #2]
+- [Market insight]
+
+Khosla Ventures' early and continued investment in OpenAI shows your willingness to back transformative infrastructure before the market consensus forms. That's the type of partner we want as we build this company.
+
+We're currently [stage] with [traction if any]. I'd welcome the opportunity to share our vision and get your perspective.
+
+Best,
+[Name]
+[Title]
+[Company]
+[LinkedIn profile]
+
+---
+FOLLOW-UP SCHEDULE:
+- Day 5: Follow-up with expanded vision document or technical overview
+- Day 10: Follow-up with relevant industry development or milestone
+- Day 21: Final follow-up, reference Khosla portfolio company if connected

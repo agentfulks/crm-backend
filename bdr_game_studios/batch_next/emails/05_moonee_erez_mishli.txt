@@ -1,0 +1,21 @@
+Subject: Creative optimization AI for Moonee's publishing engine
+
+Hi Erez,
+
+Moonee's $12M revenue run rate from hyper-casual publishing is impressive. Bridge Race's 100M+ downloads show you understand creative-market fit.
+
+Your data-driven approach aligns with what we're building: AI-powered creative optimization.
+
+Specifically for hyper-casual publishers:
+- AI-generated ad creatives that adapt to platform algorithms
+- Automated ASO asset generation and testing
+- Predictive creative performance before UA spend
+
+Given Moonee's rapid creative testing cycles, AI could 10x your testing velocity without 10x'ing team size.
+
+Open to a conversation?
+
+Best,
+[Your name]
+
+P.S. - Stacky Dash's simple mechanics make it ideal for AI-driven level variation testing.

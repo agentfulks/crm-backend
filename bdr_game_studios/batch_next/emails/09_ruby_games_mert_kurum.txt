@@ -1,0 +1,21 @@
+Subject: AI level generation for Water Sort and Hunter Assassin
+
+Hi Mert,
+
+Ruby Games joining Rovio while maintaining independent operation was a smart move. Hunter Assassin's 100M+ downloads and Water Sort Puzzle's viral success prove your instinct for hit mechanics.
+
+The challenge with puzzle hits: level design bottlenecks. Players want thousands of levels, but manual design doesn't scale.
+
+We're working with puzzle publishers on:
+- AI-generated levels with validated difficulty curves
+- Automated solvability checking for logic puzzles
+- Difficulty progression optimization based on player data
+
+For Water Sort Puzzle specifically, AI could generate infinite levels while maintaining the "just right" difficulty that made it a hit.
+
+Interested in exploring?
+
+Best,
+[Your name]
+
+P.S. - Handyman 3D!'s repair scenarios are perfect for AI-generated variation.

@@ -1,0 +1,20 @@
+To: shanti@transcend.fund
+Subject: Operational AI for game live ops — beyond content generation
+
+Hi Shanti,
+
+Most AI gaming conversations focus on generating assets. Having been in the trenches at Tilting Point, I imagine you see the bigger opportunity: AI for running better live ops.
+
+I'm building operational AI specifically for game publishers:
+• Player segmentation that updates in real-time based on behavior
+• Automated offer optimization for retention and monetization
+• Predictive analytics for UA spend allocation
+
+This isn't about replacing artists with AI — it's about giving operators like you the same data superpowers that helped Tilting Point scale. The same AI techniques that optimize ad spend can optimize player experiences.
+
+Given Transcend's operator-first approach and your live ops background, I'd value your perspective on where AI can actually move the needle for game operations.
+
+Worth a brief conversation?
+
+Best,
+[Your name]

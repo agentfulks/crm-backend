@@ -1,0 +1,36 @@
+{
+  "batch": "day13",
+  "target_list": "Daily Queue",
+  "cards": [
+    {
+      "name": "P1 | Superscrypt | Alina Kornienko | Fit: 90",
+      "desc": "**Fund:** Superscrypt\n**Partner:** Alina Kornienko (Partner)\n**Email:** alina@superscrypt.xyz\n**Stage:** Seed / Series A\n**Check Size:** $500K - $3M\n**AUM:** $250M+ (Fund II deploying)\n**Location:** Singapore / San Francisco\n**Focus:** Global (APAC, US, Europe)\n**Thesis:** Web3 infrastructure + AI-native applications\n\n**Fit Score:** 90/100\n**Rationale:** Active AI gaming investor with infrastructure focus. Published research on AI NPCs. Portfolio includes multiple gaming AI companies.\n\n**Notable Investments:**\n- Altered State Machine (AI NPCs)\n- Yield Guild Games\n- Shrapnel\n- DeFi Kingdoms\n- Aradena\n\n**Partner Background:**\nFormer gaming M&A at Tencent, ex-BCG. Led deals at Superscrypt for 3 years.\n\n**Recent News:** Published 'The Future of AI NPCs in Gaming' research report (Jan 2026)\n\n**Outreach Angle:** AI NPC infrastructure - reference Altered State Machine portfolio\n\n**Email Draft:** `deliverables/day13_vc_batch/emails/P1_Superscrypt_AlinaKornienko.txt`\n\n**LinkedIn:** https://linkedin.com/in/alinakornienko",
+      "labels": ["Day-13", "High-Priority", "AI-Infrastructure"],
+      "due": "2026-02-28T09:00:00Z"
+    },
+    {
+      "name": "P2 | Sisu Game Ventures | Samuli Seppala | Fit: 89",
+      "desc": "**Fund:** Sisu Game Ventures\n**Partner:** Samuli Seppala (Managing Partner)\n**Email:** samuli@sisu.vc\n**Stage:** Pre-seed / Seed\n**Check Size:** $100K - $1M\n**AUM:** $60M (Fund II raised Jan 2026)\n**Location:** Helsinki, Finland\n**Focus:** Nordics + Global\n**Thesis:** Cloud-native games and next-generation game infrastructure\n\n**Fit Score:** 89/100\n**Rationale:** Ex-Supercell operators investing in cloud-native gaming. Just raised Fund II. Cloud-native thesis aligns with infrastructure focus.\n\n**Notable Investments:**\n- Mainframe Industries (cloud-native MMO)\n- Neon Giant\n- Fallen Leaf Studios\n- Dazzle Rocks\n- Playable Worlds\n\n**Partner Background:**\nFormer Supercell (lead producer on Hay Day), ex-Remedy. 15+ years in game development.\n\n**Recent News:** Closed $60M Fund II in January 2026, focused on cloud-native gaming\n\n**Outreach Angle:** Cloud-native infrastructure - reference Mainframe Industries portfolio\n\n**Email Draft:** `deliverables/day13_vc_batch/emails/P2_Sisu_SamuliSeppala.txt`\n\n**LinkedIn:** https://linkedin.com/in/samuliseppala",
+      "labels": ["Day-13", "High-Priority", "Gaming-Native"],
+      "due": "2026-02-28T09:00:00Z"
+    },
+    {
+      "name": "P3 | Initial Capital | Mateusz Drozd | Fit: 87",
+      "desc": "**Fund:** Initial Capital\n**Partner:** Mateusz Drozd (General Partner)\n**Email:** mateusz@initial.capital\n**Stage:** Pre-seed / Seed\n**Check Size:** $250K - $2M\n**AUM:** $75M\n**Location:** Warsaw / Singapore\n**Focus:** Europe + Southeast Asia\n**Thesis:** Gaming infrastructure and AI-powered liveops\n\n**Fit Score:** 87/100\n**Rationale:** First-check specialist with AI liveops focus. European base with SEA expansion. Leads 60% of pre-seed deals.\n\n**Notable Investments:**\n- TechTree (gaming talent platform)\n- Pinion (AI matchmaking)\n- Omeda Studios\n- Mountaintop Studios\n- Snickerdoodle\n\n**Partner Background:**\nFormer CD Projekt Red (product lead), ex-Playco. Built and exited 2 gaming startups.\n\n**Recent News:** Opened Singapore office in Q4 2025 to expand SEA gaming investments\n\n**Outreach Angle:** AI liveops infrastructure - reference Pinion portfolio\n\n**Email Draft:** `deliverables/day13_vc_batch/emails/P3_Initial_MateuszDrozd.txt`\n\n**LinkedIn:** https://linkedin.com/in/mateuszdrozd",
+      "labels": ["Day-13", "First-Check", "AI-Liveops"],
+      "due": "2026-02-28T09:00:00Z"
+    },
+    {
+      "name": "P4 | Theorycraft Ventures | Joe Hsu | Fit: 86",
+      "desc": "**Fund:** Theorycraft Ventures\n**Partner:** Joe Hsu (Partner)\n**Email:** joe@theorycraftgames.com\n**Stage:** Seed\n**Check Size:** $500K - $5M\n**AUM:** $150M\n**Location:** Los Angeles / San Francisco\n**Focus:** United States\n**Thesis:** Deep tech gaming and AI-native game development\n\n**Fit Score:** 86/100\n**Rationale:** Founded by ex-Riot/Blizzard/Bungie operators. Published AI Game Stack research. Technical validation for infrastructure plays.\n\n**Notable Investments:**\n- Frost Giant Studios\n- Singularity 6\n- Lightforge Games\n- Avalon\n- Theorycraft Games\n\n**Partner Background:**\nFormer Riot Games (executive producer, League of Legends), ex-Blizzard. Built games with 100M+ players.\n\n**Recent News:** Published comprehensive 'AI Game Stack' market map (Feb 2026)\n\n**Outreach Angle:** AI Game Stack infrastructure - reference their published research\n\n**Email Draft:** `deliverables/day13_vc_batch/emails/P4_Theorycraft_JoeHsu.txt`\n\n**LinkedIn:** https://linkedin.com/in/joehsu",
+      "labels": ["Day-13", "Operator-Led", "Deep-Tech"],
+      "due": "2026-02-28T09:00:00Z"
+    },
+    {
+      "name": "P5 | Pixeldust Ventures | Yanev Stoimenov | Fit: 85",
+      "desc": "**Fund:** Pixeldust Ventures\n**Partner:** Yanev Stoimenov (Managing Partner)\n**Email:** yanev@pixeldust.vc\n**Stage:** Pre-seed / Seed\n**Check Size:** $100K - $1.5M\n**AUM:** $35M\n**Location:** Sofia / Dubai\n**Focus:** Eastern Europe + MENA\n**Thesis:** Gaming AI and user acquisition automation\n\n**Fit Score:** 85/100\n**Rationale:** Specialized in gaming AI/UA. Portfolio includes Gamelight (AI UA platform). Undervalued emerging manager access.\n\n**Notable Investments:**\n- Gamelight (AI UA platform)\n- Gameopedia\n- Ondori\n- Bloxmith\n- GamerGains\n\n**Partner Background:**\nFormer Gameloft (product director), ex-Peak Games. Built mobile games with 50M+ downloads.\n\n**Recent News:** Gamelight (portfolio company) reached $10M ARR in 2025 using AI UA platform\n\n**Outreach Angle:** AI UA infrastructure - reference Gamelight portfolio success\n\n**Email Draft:** `deliverables/day13_vc_batch/emails/P5_Pixeldust_YanevStoimenov.txt`\n\n**LinkedIn:** https://linkedin.com/in/yanevstoimenov",
+      "labels": ["Day-13", "Emerging-Manager", "AI-UA"],
+      "due": "2026-02-28T09:00:00Z"
+    }
+  ]
+}

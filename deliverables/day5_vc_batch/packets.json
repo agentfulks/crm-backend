@@ -1,0 +1,315 @@
+{
+  "batch_id": "day5_vc_batch",
+  "batch_date": "2026-02-26",
+  "target_sector": "gaming/crypto AI",
+  "target_check_size": "$500K-$10M",
+  "funds": [
+    {
+      "fund_id": "tgf_001",
+      "fund_name": "The Games Fund (TGF)",
+      "aum": "$50M",
+      "stage_focus": ["Pre-seed", "Seed", "Series A"],
+      "check_size_range": "$250K - $2M",
+      "geography": "EU/Cyprus (primary), Miami/US",
+      "thesis": "Early-stage gaming: game developers, gaming technologies, and services. Ranked #1 early-stage gaming investor in 2024.",
+      "notable_portfolio": [
+        {
+          "company": "Layer.AI",
+          "description": "AI-powered asset generation for game studios",
+          "relevance": "AI gaming infrastructure"
+        },
+        {
+          "company": "Dark Passenger",
+          "description": "AA game studio with innovative mechanics"
+        },
+        {
+          "company": "Zakazane",
+          "description": "Narrative-driven game studio"
+        },
+        {
+          "company": "Jarvi Games",
+          "description": "Vice Online - open-world mobile hit"
+        }
+      ],
+      "target_partner": {
+        "name": "Ilya Eremeev",
+        "title": "Managing Partner",
+        "email": "ilya@gamesfund.vc",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/ilya-eremeev/",
+        "background": "Former MGVC lead, invested in 35+ studios with 6 acquisitions"
+      },
+      "alternative_partner": {
+        "name": "Maria Kochmola",
+        "title": "Managing Partner",
+        "email": "maria@gamesfund.vc",
+        "linkedin": "https://www.linkedin.com/in/mariakochmola/",
+        "background": "Former MGVC, led European gaming investments"
+      },
+      "outreach_angle": "TGF's recent investments in AI-powered gaming infrastructure (Layer.AI) show clear thesis alignment with AI-native gaming. Our focus on AI-driven game mechanics and procedural content generation fits their pattern of backing studios leveraging new technology paradigms. The fund's operator-heavy team appreciates technical differentiation in game development.",
+      "fit_score": 92,
+      "fit_breakdown": {
+        "gaming_native_fund": 20,
+        "early_stage_active": 20,
+        "ai_thesis_alignment": 18,
+        "geographic_fit": 17,
+        "check_size_alignment": 17
+      },
+      "investment_pace": "4-6 deals/year",
+      "recent_deals_2024": ["Layer.AI", "Dark Passenger", "Zakazane"],
+      "last_fund_raise": "2023 (Fund I extension)",
+      "strategic_value": "Top early-stage gaming VC with strong EU presence and operator DNA"
+    },
+    {
+      "fund_id": "patron_001",
+      "fund_name": "Patron",
+      "aum": "$100M+ (Fund II)",
+      "stage_focus": ["Pre-seed", "Seed"],
+      "check_size_range": "$100K - $1M",
+      "geography": "Santa Monica, CA",
+      "thesis": "Spectrum of Play - convergence of games and consumer startups, gaming mechanics applied beyond entertainment",
+      "notable_portfolio": [
+        {
+          "company": "Raid Base",
+          "description": "Sandbox gaming studio from VALORANT creators",
+          "relevance": "a16z co-investor"
+        },
+        {
+          "company": "Flint",
+          "description": "AI platform for personalized education",
+          "relevance": "AI x consumer precedent"
+        },
+        {
+          "company": "Board",
+          "description": "Fuses board games and video games"
+        },
+        {
+          "company": "Sweatpals",
+          "description": "Fitness community monetization"
+        }
+      ],
+      "target_partner": {
+        "name": "Brian Cho",
+        "title": "Co-Founder & General Partner",
+        "email": "brian@patron.fund",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/brianjcho/",
+        "background": "Former a16z Partner (Oculus, Lyft, Slack), led Riot Games investments (20+ deals), Forbes 30 Under 30"
+      },
+      "alternative_partner": {
+        "name": "Jason Yeh",
+        "title": "Co-Founder & General Partner",
+        "linkedin": "https://www.linkedin.com/in/jason-yeh-5a2b9b1/",
+        "background": "Ex-Riot Games strategy"
+      },
+      "outreach_angle": "Patron's 'Spectrum of Play' thesis explicitly seeks gaming mechanics applied beyond entertainment. Our AI-native gaming platform applies game loops and reward systems to skill acquisition and content generation - exactly the type of consumer-meets-gaming intersection Patron targets. Brian's experience with Oculus and immersive tech makes him an ideal partner for spatial AI gaming applications.",
+      "fit_score": 90,
+      "fit_breakdown": {
+        "gaming_consumer_convergence": 20,
+        "active_fund_ii_deployment": 20,
+        "ai_education_precedent": 18,
+        "elite_network_access": 18,
+        "check_size_alignment": 14
+      },
+      "investment_pace": "8-12 deals/year",
+      "recent_deals_2024": ["Fund II first closes", "Raid Base follow-on"],
+      "last_fund_raise": "Sept 2024 ($100M Fund II)",
+      "lp_base": ["Marc Andreessen", "Garry Tan", "Ron Conway", "Fred Wilson", "Horsley Bridge"],
+      "strategic_value": "Elite LP base, consumer-gaming convergence thesis, recent Fund II with fresh capital"
+    },
+    {
+      "fund_id": "framework_001",
+      "fund_name": "Framework Ventures",
+      "aum": "$1.4B+",
+      "stage_focus": ["Seed", "Series A", "Series B"],
+      "check_size_range": "$250K - $40M",
+      "geography": "San Francisco, CA",
+      "thesis": "Crypto-native DeFi, stablecoins, AI, blockchain gaming. 50% of Fund III ($200M) dedicated to blockchain gaming.",
+      "notable_portfolio": [
+        {
+          "company": "Illuvium",
+          "description": "AAA blockchain game with AI elements"
+        },
+        {
+          "company": "Yield Guild Games",
+          "description": "Gaming guild with AI asset management"
+        },
+        {
+          "company": "Merit Circle",
+          "description": "Gaming DAO with 20+ portfolio companies"
+        },
+        {
+          "company": "Chilliz",
+          "description": "Sports/gaming tokenization platform"
+        }
+      ],
+      "target_partner": {
+        "name": "Vance Spencer",
+        "title": "Co-Founder",
+        "email": "vance@framework.ventures",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/vance-spencer-978b4579/",
+        "background": "Ex-Netflix (Japan business relaunch), Monitor Deloitte"
+      },
+      "alternative_partner": {
+        "name": "Michael Anderson",
+        "title": "Co-Founder",
+        "linkedin": "https://www.linkedin.com/in/michael-anderson-b6003117/",
+        "background": "Ex-Snapchat, one of first crypto-native VCs"
+      },
+      "outreach_angle": "Framework's $200M gaming commitment and 50% Fund III allocation shows institutional conviction in blockchain gaming. Our AI-driven procedural content generation and dynamic NPC systems align with their infrastructure + gaming thesis. Framework Labs' ability to support token economics and governance design provides unique value-add for a gaming platform with crypto integration potential.",
+      "fit_score": 88,
+      "fit_breakdown": {
+        "blockchain_gaming_leader": 20,
+        "massive_gaming_allocation": 20,
+        "ai_infrastructure_interest": 16,
+        "geographic_concentration": 16,
+        "check_size_alignment": 16
+      },
+      "investment_pace": "25-30 deals/year",
+      "recent_deals_2024": ["27 investments in 2024", "Plasma ($24M)"],
+      "last_fund_raise": "2022 ($400M Fund III)",
+      "strategic_value": "Largest crypto-native VC, $200M gaming allocation, Framework Labs provides portfolio services"
+    },
+    {
+      "fund_id": "kingriver_001",
+      "fund_name": "King River Capital (Inevitable Games Fund)",
+      "aum": "$350M+ total, $100M IGF",
+      "stage_focus": ["Seed", "Series A"],
+      "check_size_range": "$500K - $5M",
+      "geography": "Sydney (AU) / San Francisco (US)",
+      "thesis": "Web3 gaming, game infrastructure, AI + gaming through Inevitable Games Fund. Platform-agnostic blockchain gaming.",
+      "notable_portfolio": [
+        {
+          "company": "Immutable",
+          "description": "Layer 2 gaming blockchain (partner/strategic)"
+        },
+        {
+          "company": "Polygon Labs",
+          "description": "Gaming scaling solution (partner/strategic)"
+        },
+        {
+          "company": "Replit",
+          "description": "AI-powered coding platform"
+        },
+        {
+          "company": "Futureverse",
+          "description": "AI + metaverse platform"
+        }
+      ],
+      "target_partner": {
+        "name": "Chris Barter",
+        "title": "Co-Founder & Partner",
+        "email": "chris@kingriver.co",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/chris-barter-8b0050/",
+        "background": "19 years at Goldman Sachs (Partner), led European FIG, ex-CKA Capital. Brown/Harvard Physics."
+      },
+      "alternative_partner": {
+        "name": "Zebediah Rice",
+        "title": "Co-Founder & Partner",
+        "linkedin": "https://www.linkedin.com/in/zebediahrice/",
+        "background": "Serial entrepreneur, wellness tech investor"
+      },
+      "outreach_angle": "The Inevitable Games Fund's partnership with Immutable and Polygon Labs positions them as the premier web3 gaming infrastructure investors. Our AI-driven gaming platform with potential blockchain asset integration fits perfectly with IGF's mandate. The fund's Australian base provides valuable Asia-Pacific market access for global gaming distribution.",
+      "fit_score": 86,
+      "fit_breakdown": {
+        "dedicated_gaming_fund": 20,
+        "immutable_polygon_partnership": 18,
+        "web3_ai_alignment": 18,
+        "asia_pacific_presence": 15,
+        "check_size_alignment": 15
+      },
+      "investment_pace": "IGF: 6-8 gaming deals/year",
+      "recent_deals_2024": ["IGF Launch March 2024", "AI fund raise March 2025"],
+      "last_fund_raise": "2024 ($100M IGF), 2025 ($157M AI fund)",
+      "strategic_partners": ["Immutable", "Polygon Labs"],
+      "strategic_value": "Dedicated web3 gaming fund with strategic partners, Asia-Pacific presence"
+    },
+    {
+      "fund_id": "tirta_001",
+      "fund_name": "TIRTA Ventures",
+      "aum": "$30-50M estimated",
+      "stage_focus": ["Pre-seed", "Seed"],
+      "check_size_range": "$250K - $2M",
+      "geography": "New York, NY",
+      "thesis": "Interactive entertainment, AI x gaming, gaming infrastructure, spatial computing. Founded by ex-Take-Two CEO.",
+      "notable_portfolio": [
+        {
+          "company": "Nunu.ai",
+          "description": "AI agents for game testing and robotics",
+          "relevance": "AI gaming - co-invested a16z Speedrun, YC"
+        },
+        {
+          "company": "Leonardo AI",
+          "description": "Generative content platform for visual assets",
+          "relevance": "Generative AI for gaming"
+        },
+        {
+          "company": "Voldex",
+          "description": "UGC gaming platform"
+        },
+        {
+          "company": "Cartwheel",
+          "description": "AI-powered game development tools",
+          "relevance": "AI game dev tools"
+        },
+        {
+          "company": "Gardens",
+          "description": "Multiplayer games around meaningful connection"
+        }
+      ],
+      "target_partner": {
+        "name": "Ben Feder",
+        "title": "Managing Partner & Founder",
+        "email": "ben@tirta.io",
+        "email_confidence": "high",
+        "linkedin": "https://www.linkedin.com/in/bfeder/",
+        "background": "Former CEO Take-Two Interactive (GTA, Red Dead), President International Partnerships Tencent Games, Harvard Business School"
+      },
+      "alternative_partner": {
+        "name": "Justin Yuan",
+        "title": "Partner",
+        "linkedin": "https://www.linkedin.com/in/justin-yuan-8b8b8b8/",
+        "background": "Epic Games, Bad Robot Games, Glu Mobile"
+      },
+      "outreach_angle": "Ben Feder's experience leading Take-Two and Tencent Games international partnerships brings unmatched gaming industry credibility. TIRTA's recent Nunu.ai investment (AI agents for game testing) demonstrates clear thesis alignment with AI-native gaming infrastructure. The fund's focus on 'interactive entertainment' broadly defined fits our AI-driven gaming platform that blends content generation with gameplay.",
+      "fit_score": 91,
+      "fit_breakdown": {
+        "elite_founder_pedigree": 20,
+        "ai_gaming_investments": 20,
+        "tencent_asia_expertise": 18,
+        "active_early_stage": 18,
+        "check_size_alignment": 15
+      },
+      "investment_pace": "4-6 deals/year",
+      "recent_deals_2024": ["Nunu.ai", "Cartwheel", "Leonardo AI"],
+      "last_fund_raise": "2022",
+      "strategic_value": "Elite founder pedigree (Take-Two), Tencent Asia access, active AI gaming investor"
+    }
+  ],
+  "batch_summary": {
+    "total_funds": 5,
+    "average_fit_score": 89.4,
+    "geographic_distribution": {
+      "us_west": 3,
+      "eu": 1,
+      "us_east": 1,
+      "asia_pacific_access": 2
+    },
+    "gaming_focus": {
+      "pure_gaming": 2,
+      "gaming_crypto": 2,
+      "gaming_consumer": 1
+    },
+    "ai_thesis": {
+      "ai_gaming_investments": 5,
+      "ai_fund_dedicated": 1
+    },
+    "check_size_breakdown": {
+      "under_1m": 2,
+      "1m_to_5m": 3,
+      "over_5m": 2
+    }
+  }
+}

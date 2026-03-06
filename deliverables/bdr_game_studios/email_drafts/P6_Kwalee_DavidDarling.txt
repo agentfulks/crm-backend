@@ -1,0 +1,17 @@
+Subject: AI for cross-platform game pipelines
+
+Hi David,
+
+From Jetpack Jump to Draw It, Kwalee has proven the ability to ship hits across mobile, PC, and console. The next efficiency gain is AI infrastructure that generates content once and adapts it across all platforms automatically.
+
+I'm Lucas, founder of NEXUS AI. We build AI-powered dynamic worlds that scale across platforms — difficulty that adjusts per device, content that regenerates for endless replayability, and live ops that run without manual intervention.
+
+Given Kwalee's publishing velocity, this could significantly reduce per-title development overhead.
+
+Open to a 15-minute conversation about what we're building?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+Founder, NEXUS AI

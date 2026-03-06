@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Daily Intake Automation every day at 8:00 AM
+Documentation=https://github.com/your-org/vc-outreach-engine
+
+[Timer]
+# Run daily at 8:00 AM
+OnCalendar=*-*-* 08:00:00
+
+# Run immediately if we missed the last execution time
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,64 @@
+================================================================================
+EMAIL PACKET: P2 - Konvoy Ventures
+================================================================================
+
+TO: taylor@konvoy.vc
+CC: 
+BCC: 
+
+SUBJECT: Infrastructure play: Daily VC scoring engine for gaming funds
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Taylor,
+
+Konvoy's focus on gaming infrastructure and platform bets caught my attention—our product is exactly that.
+
+We built a daily VC outreach engine that ingests every gaming/AI/devtools fund in our CRM, scores them on stage/check-size/sector fit, and auto-generates five investor packets every morning. Each packet contains verified contact data, a KPI snapshot, and a personalized hook.
+
+The infrastructure compounds: more funds ingested = better scoring = higher meeting conversion. We're at four partner meetings per week and climbing.
+
+Given Konvoy's $500K-$3M seed/Series A focus, we'd be a natural fit for your portfolio.
+
+Open to a quick intro call?
+
+[Calendly link - 30 min partner intro]
+
+Best,
+Lucas Fulks
+[Your title]
+[Company name]
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- deliverables/outreach_assets/pitch_deck/latest.pdf
+- deliverables/outreach_assets/kpi_snapshot/2026-02-24-kpis.csv
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P2
+Fund: Konvoy Ventures
+Contact: Taylor Hurst
+Title: Principal
+Email: taylor@konvoy.vc
+Check Size: $500K-$3M USD
+Stage Focus: Pre-Seed, Seed, Series A
+Priority Score: 59.33 (Rank #2)
+Best Send Time: Tuesday-Thursday, 8-10am MST
+Follow-up Day 3: 2026-02-28
+Follow-up Day 7: 2026-03-04
+
+--------------------------------------------------------------------------------
+NOTES
+--------------------------------------------------------------------------------
+- Hook angle: Infrastructure play / gaming platform bets
+- Thesis fit: Strong - gaming infrastructure and esports focus
+- Check-size overlap: 56% of target band
+- Contact verified via: LinkedIn (medium confidence)
+- Fund HQ: Denver, Colorado, United States
+
+================================================================================

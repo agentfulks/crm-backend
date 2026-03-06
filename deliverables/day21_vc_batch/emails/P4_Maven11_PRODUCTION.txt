@@ -1,0 +1,23 @@
+SUBJECT: On-chain gaming — seed round (European/Gaming focus)
+
+Balder,
+
+Maven 11's thesis on redefining ownership through crypto networks aligns with our gaming infrastructure play at [Company].
+
+The problem: Traditional gaming economies extract value from players. Crypto gaming can flip this — but current implementations fail on UX and sustainability.
+
+Our approach: [2-sentence product description emphasizing ownership and sustainable economies]
+
+Traction: [X] MAU, [Y] token holders, $[Z] monthly volume
+
+Raising: $[Amount] seed to [specific milestone]
+
+Maven's European presence and crypto-native approach would be valuable as we expand internationally. Worth a conversation?
+
+[Name]
+[Title]
+[Company]
+[Link to deck]
+
+---
+Contact: balder@maven11.com

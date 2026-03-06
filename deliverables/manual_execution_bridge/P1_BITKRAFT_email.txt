@@ -1,0 +1,64 @@
+================================================================================
+EMAIL PACKET: P1 - BITKRAFT Ventures
+================================================================================
+
+TO: martin@bitkraft.vc
+CC: 
+BCC: 
+
+SUBJECT: AI sourcing engine for gaming/AI funds — 4 partner meetings/week
+
+--------------------------------------------------------------------------------
+EMAIL BODY (Copy everything below this line)
+--------------------------------------------------------------------------------
+
+Hi Martin,
+
+BITKRAFT's thesis on Synthetic Reality and founder-built infrastructure resonates with what we're building.
+
+We run an AI-assisted sourcing engine that scores 200+ gaming, AI, and devtools funds daily, assembles five investor packets every morning, and logs approvals + meetings directly in Slack and Trello. Partners can green-light sends in under four hours.
+
+The loop is already booking four partner meetings per week and compounds as more funds are ingested.
+
+We focus on Seed-Series B ($500K-$10M checks), which fits BITKRAFT's stage and check size perfectly.
+
+Worth a 15-minute call to see if there's a fit?
+
+[Calendly link - 30 min partner intro]
+
+Best,
+Lucas Fulks
+[Your title]
+[Company name]
+
+--------------------------------------------------------------------------------
+ATTACHMENTS (Attach these files)
+--------------------------------------------------------------------------------
+- deliverables/outreach_assets/pitch_deck/latest.pdf
+- deliverables/outreach_assets/kpi_snapshot/2026-02-24-kpis.csv
+
+--------------------------------------------------------------------------------
+METADATA
+--------------------------------------------------------------------------------
+Packet ID: P1
+Fund: BITKRAFT Ventures
+Contact: Martin Garcia
+Title: CFO & General Partner
+Email: martin@bitkraft.vc
+Check Size: $500K-$10M USD
+Stage Focus: Seed, Series A, Series B
+Priority Score: 84.0 (Rank #1)
+Best Send Time: Tuesday-Thursday, 9-11am EST
+Follow-up Day 3: 2026-02-28
+Follow-up Day 7: 2026-03-04
+
+--------------------------------------------------------------------------------
+NOTES
+--------------------------------------------------------------------------------
+- Hook angle: Synthetic reality / founder-built infrastructure
+- Thesis fit: Strong - gaming, esports, immersive technology focus
+- Check-size overlap: 100% of target band
+- Contact verified via: ZoomInfo (medium confidence)
+- Fund HQ: Los Angeles, California, United States
+
+================================================================================

@@ -1,0 +1,19 @@
+Subject: AI + Crypto Infrastructure for Player-Owned Economies
+
+Hi Kevin,
+
+Remagine has been ahead of the curve on crypto-gaming infrastructure—from Stardust to Oasys, you've consistently backed the picks-and-shovels plays over the content casino.
+
+We're building the infrastructure layer for AI-native game economies. The thesis: as AI generates infinite game content, you need economic primitives that can handle dynamic asset creation, autonomous agent trading, and player-owned model training. Current infrastructure was built for static content authored by humans.
+
+Our runtime enables:
+- AI-generated assets with on-chain provenance
+- Autonomous agent economies that operate 24/7
+- Player-trained models that retain value across games
+
+Given your investments at the intersection of AI (D-ID, Hour One) and crypto gaming infrastructure, and your public commentary on the convergence of these two vectors, this feels like a natural fit for Remagine's portfolio.
+
+15 minutes to see if the thesis alignment is as strong as it appears?
+
+Best,
+Lucas

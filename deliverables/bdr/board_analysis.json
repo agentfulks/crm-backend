@@ -1,0 +1,222 @@
+{
+  "generated_at": "2026-03-02T08:50:48.376732",
+  "summary": {
+    "total_cards": 104,
+    "approved_send_count": 42,
+    "stale_approved_count": 2,
+    "ready_to_send_count": 40,
+    "awaiting_approval_count": 33,
+    "daily_queue_count": 2,
+    "follow_up_count": 17
+  },
+  "top_priority_sends": [
+    {
+      "id": "69a1f15f0e64b6cc66d741f1",
+      "name": "P1: BITKRAFT Ventures - Carlos Pereira",
+      "due": "2026-03-01T17:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "vc-outreach",
+        "day-batch",
+        "Day-9"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "69a1f162f73d8351e7a95c4d",
+      "name": "P2: AI Grant - Nat Friedman",
+      "due": "2026-03-01T17:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "vc-outreach",
+        "day-batch",
+        "Day-9"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "699f2e2cf8ab00d19b23c73a",
+      "name": "Packet: 1UP Ventures",
+      "due": "2026-02-26T18:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "Effort: M",
+        "Type: Outreach",
+        "Workstream: Investor"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "699f2e29234e164a0bcd26f6",
+      "name": "Packet: Andreessen Horowitz (a16z) Gaming",
+      "due": "2026-02-26T18:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "Effort: M",
+        "Type: Outreach",
+        "Workstream: Investor"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "699f2f2de0e903d780f2fa81",
+      "name": "Packet: Griffin Gaming Partners",
+      "due": "2026-02-26T18:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "Effort: M",
+        "Type: Outreach",
+        "Workstream: Investor"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "699f2e2a1fff1b08b542bc2b",
+      "name": "Packet: Lightspeed Venture Partners",
+      "due": "2026-02-26T18:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "Effort: M",
+        "Type: Outreach",
+        "Workstream: Investor"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "699f2f2d8cc01cf16b94081b",
+      "name": "Packet: The Games Fund",
+      "due": "2026-02-26T18:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "Effort: M",
+        "Type: Outreach",
+        "Workstream: Investor"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "699d30f2bb289bb7f56b7bad",
+      "name": "Sending SOP + audit trail",
+      "due": null,
+      "labels": [
+        "Type: Ops",
+        "Priority: P1",
+        "Effort: M",
+        "Workstream: Ops"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "69a1f1f8b1a71f50c5ab4e79",
+      "name": "VC Outreach: 359 Capital - Michael Spirito",
+      "due": "2026-03-07T17:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "vc-outreach",
+        "Gaming VC",
+        "AI Infrastructure"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "69a1f1f714ff69ab963f9d02",
+      "name": "VC Outreach: Lightspeed Gaming - Moritz Baier-Lentz",
+      "due": "2026-03-06T17:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "vc-outreach",
+        "Gaming VC",
+        "AI Infrastructure"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "69a1f1f8e5936d6c5d53e93a",
+      "name": "VC Outreach: Play Ventures - Harri Manninen",
+      "due": "2026-03-08T17:00:00.000Z",
+      "labels": [
+        "Priority: P1",
+        "vc-outreach",
+        "Gaming VC",
+        "AI Infrastructure"
+      ],
+      "is_p1": true
+    },
+    {
+      "id": "699d30ec21f4e2916322c73d",
+      "name": "Daily intake automation",
+      "due": null,
+      "labels": [
+        "Type: Ops",
+        "Priority: P0",
+        "Effort: L",
+        "Workstream: Ops"
+      ],
+      "is_p1": false
+    },
+    {
+      "id": "69a1f164c7c078d19f7aa12d",
+      "name": "P3: Lux Capital - Shahin Farshchi",
+      "due": "2026-03-01T17:00:00.000Z",
+      "labels": [
+        "vc-outreach",
+        "day-batch",
+        "Priority: P2",
+        "Day-9"
+      ],
+      "is_p1": false
+    },
+    {
+      "id": "69a1f1673ed171c215f4ab0f",
+      "name": "P4: Polychain Capital - Olaf Carlson-Wee",
+      "due": "2026-03-01T17:00:00.000Z",
+      "labels": [
+        "vc-outreach",
+        "day-batch",
+        "Day-9",
+        "Priority: P3"
+      ],
+      "is_p1": false
+    },
+    {
+      "id": "69a1f14a68e2aaf9b6b5283b",
+      "name": "P5: F4 Fund - David Kaye",
+      "due": "2026-02-28T17:00:00.000Z",
+      "labels": [
+        "Day-8",
+        "Priority: P2",
+        "vc-outreach",
+        "day-batch"
+      ],
+      "is_p1": false
+    }
+  ],
+  "stale_approved_cards": [
+    {
+      "id": "699d6249d5248492eefc000e",
+      "name": "Packet: Collab+Currency",
+      "due": "2026-02-24T18:00:00.000Z",
+      "labels": [
+        "Type: Outreach",
+        "Priority: P1",
+        "Effort: M",
+        "Workstream: Investor"
+      ],
+      "is_p1": true,
+      "days_overdue": 5
+    },
+    {
+      "id": "699d62471bee2f60a50aab9a",
+      "name": "Packet: Variant",
+      "due": "2026-02-24T18:00:00.000Z",
+      "labels": [
+        "Type: Outreach",
+        "Priority: P1",
+        "Effort: M",
+        "Workstream: Investor"
+      ],
+      "is_p1": true,
+      "days_overdue": 5
+    }
+  ]
+}

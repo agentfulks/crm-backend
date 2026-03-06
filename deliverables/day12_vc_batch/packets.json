@@ -1,0 +1,153 @@
+[
+  {
+    "fund_name": "NFX",
+    "aum": "$1B+ (multi-fund platform)",
+    "stage": "Pre-seed to Seed",
+    "partner": {
+      "name": "Gigi Levy-Weiss",
+      "title": "General Partner & Co-Founder",
+      "email": "gigi@nfx.com"
+    },
+    "check_size_range": "$500K - $5M",
+    "gaming_ai_thesis": "NFX is a seed-stage venture firm that believes AI games represent the next major platform shift in interactive entertainment. Co-founded by Gigi Levy-Weiss (former CEO of Playtika, sold for $4.4B) and James Currier, NFX brings deep operational gaming expertise combined with AI infrastructure conviction. Their explicit thesis, articulated in 'AI Games Are Coming' and 'The Next Era of Gaming and AI' publications, centers on generative AI enabling entirely new game genres, dynamic content generation, and AI-native gameplay mechanics. They invest in gaming infrastructure, AI-powered game development tools, and studios building the next generation of interactive experiences.",
+    "fit_score": 91,
+    "fit_breakdown": {
+      "gaming_native_fund": 20,
+      "ai_gaming_thesis": 20,
+      "operational_expertise_playtika": 18,
+      "recent_ai_gaming_thought_leadership": 18,
+      "check_size_flexibility": 15
+    },
+    "geographic_focus": "Global (San Francisco HQ, Israel, Europe, LatAm)",
+    "notable_gaming_investments": [
+      "Playtika (Gigi founded, $4.4B exit to Chinese consortium)",
+      "Plarium (mobile gaming, acquired for $500M+)",
+      "Moon Active (Coin Master, $2.5B valuation)",
+      "Papaya Gaming (mobile gaming)",
+      "Superplay (mobile gaming studio)",
+      "Oriel Bachar (transforming single-player games into multiplayer tournaments)"
+    ],
+    "recent_fund": "Fund IV and Guild accelerator (active deployment)",
+    "outreach_angle": "Gigi Levy-Weiss literally built Playtika into a $4.4B gaming company—he understands gaming at scale better than almost any VC. NFX's recent publications 'AI Games Are Coming' and 'The Next Era of Gaming and AI' explicitly call out AI-native game infrastructure as a core investment theme. Gigi's quote 'First, we love games' demonstrates genuine passion, not just financial interest. NFX's Signal platform for founder-network effects aligns with AI infrastructure plays that leverage data network effects."
+  },
+  {
+    "fund_name": "Moonfire Ventures",
+    "aum": "$115M Fund II (May 2023)",
+    "stage": "Pre-seed to Seed",
+    "partner": {
+      "name": "Mattias Ljungman",
+      "title": "Founder & Managing Partner",
+      "email": "mattias@moonfire.com"
+    },
+    "check_size_range": "$100K - $2M",
+    "gaming_ai_thesis": "Moonfire is an AI-native VC firm that uses proprietary LLMs and ML-powered sourcing to identify breakthrough companies. Founded by Mattias Ljungman (co-founder of Atomico), they explicitly invest in gaming as one of five core sectors. Their 'golden triangle' framework seeks companies providing greater access, efficiency, and service-quality—all while leveraging data. For gaming, they focus on AI-powered development tools, infrastructure enabling dynamic game worlds, and platforms that democratize game creation. Their AI-first approach to venture itself demonstrates technical depth in the infrastructure they back.",
+    "fit_score": 88,
+    "fit_breakdown": {
+      "ai_native_vc_fund": 20,
+      "gaming_sector_focus": 18,
+      "technical_ai_expertise": 18,
+      "atomico_pedigree": 17,
+      "check_size_alignment": 15
+    },
+    "geographic_focus": "Europe (UK, Nordics, Germany, France) + US",
+    "notable_gaming_investments": [
+      "MokN (gaming infrastructure)",
+      "Filigran (cybersecurity with gaming applications)",
+      "Faculty (AI platform with gaming use cases)",
+      "Multiple stealth gaming AI companies (per portfolio)",
+      "90+ total investments across gaming, work, security, finance"
+    ],
+    "recent_fund": "Fund II - $115M (May 2023, actively deploying)",
+    "outreach_angle": "Moonfire is literally an AI-native VC—they built their own LLMs for sourcing and evaluation. Mike Arpaia (Partner) is a computer scientist who emphasizes combining AI and VC. Mattias co-founded Atomico (one of Europe's top VCs), bringing massive platform experience. Their 'golden triangle' framework (access + efficiency + service-quality) perfectly describes AI infrastructure for gaming. Being AI-native themselves means they understand technical infrastructure plays better than traditional VCs."
+  },
+  {
+    "fund_name": "Smok Ventures",
+    "aum": "$10M+ (Seed fund)",
+    "stage": "Pre-seed to Seed",
+    "partner": {
+      "name": "Borys Musielak",
+      "title": "Founding Partner",
+      "email": "borys@smok.vc"
+    },
+    "check_size_range": "$100K - $1M",
+    "gaming_ai_thesis": "Smok Ventures is a Polish/US venture capital fund explicitly focused on gaming, AR/VR, and AI in Central & Eastern Europe. They bridge Silicon Valley expertise to the CEE region, investing in game-dev studios and AI-powered gaming infrastructure. Their thesis centers on the CEE region's technical talent (CD Projekt, Techland heritage) applied to next-generation gaming experiences. They've backed multiple game studios including Exit Plan Games (founded by ex-CD Projekt leads) and Nibble Games. Their focus on 'software development tools and AI' for gaming creates strong alignment with AI infrastructure plays.",
+    "fit_score": 85,
+    "fit_breakdown": {
+      "gaming_ai_explicit_focus": 19,
+      "cee_gaming_talent_access": 18,
+      "operational_founder_friendly": 17,
+      "ex_cd_projekt_network": 16,
+      "check_size_alignment": 15
+    },
+    "geographic_focus": "Central & Eastern Europe (Poland, Baltics, CEE region)",
+    "notable_gaming_investments": [
+      "Exit Plan Games (Bang-On Balls, ex-CD Projekt/Witcher 3 leads)",
+      "Nibble Games (game dev studio)",
+      "Gaminate (gaming peripherals/D2C)",
+      "inSTREAMLY (gaming influencer platform)",
+      "HiPets (gaming-adjacent marketplace)"
+    ],
+    "recent_fund": "Fund I (actively deploying, 12+ investments in year one)",
+    "outreach_angle": "Smok explicitly lists gaming, AR/VR, and AI as their three primary focus areas. Borys Musielak founded Filmaster (acquired) before becoming a VC—he's an operator who understands founder challenges. Their investment in Exit Plan Games (founded by ex-CD Projekt leads who shipped Witcher 3 and Dying Light 2) demonstrates access to elite gaming talent. The CEE region has become a gaming powerhouse (Cyberpunk 2077, Dying Light, Witcher)—Smok has direct access to this talent pool. They 'respond to every quality email from a founder' per their website."
+  },
+  {
+    "fund_name": "Remagine Ventures",
+    "aum": "$35M+ (Fund II $25M raised Nov 2025)",
+    "stage": "Pre-seed to Seed",
+    "partner": {
+      "name": "Kevin Brown",
+      "title": "Founder & Managing Partner",
+      "email": "kevin@remagineventures.com"
+    },
+    "check_size_range": "$250K - $1.5M",
+    "gaming_ai_thesis": "Remagine Ventures is a seed and pre-seed firm investing in how consumers spend time and money online, with a spotlight on Israel. Since 2018, they've focused on being first-check investors in ambitious founders building the future of gaming, Metaverse, and AI. Their portfolio spans 'AI agents and applications—from gaming and media to financial operations' as well as the infrastructure powering them. They don't do healthcare, cyber, or defense—instead focusing where AI meets the digital economy. Their recent investments include Troup AI (AI infrastructure) and Keewano.com (gaming analytics agent), demonstrating active AI-gaming thesis.",
+    "fit_score": 87,
+    "fit_breakdown": {
+      "gaming_ai_metaverse_focus": 19,
+      "israeli_ai_ecosystem_access": 18,
+      "first_check_investor_approach": 17,
+      "recent_ai_gaming_investments": 18,
+      "check_size_alignment": 15
+    },
+    "geographic_focus": "Israel + UK (Tel Aviv and London offices)",
+    "notable_gaming_investments": [
+      "Keewano.com (gaming analytics agent)",
+      "Troup AI (AI infrastructure)",
+      "Multiple gaming/metaverse companies (per portfolio)",
+      "Previous fund: 20+ companies in gaming, metaverse, AI",
+      "Companies backed by Bessemer, NFX, a16z in follow-on"
+    ],
+    "recent_fund": "Fund II - $25M (November 2025, raised during conflict)",
+       "outreach_angle": "Remagine explicitly rebranded to 'Remagine AI Ventures' and focuses on 'founders at the forefront of the AI revolution.' Kevin Brown led ProSiebenSat.1's Israel investment office before founding Remagine, giving him unique media/gaming corporate connections. Their recent $25M Fund II raise during the conflict shows LP conviction. Portfolio companies have attracted follow-on from Bessemer, NFX, and a16z—validation of their picking ability. Their gaming analytics agent investment (Keewano) shows explicit AI-gaming infrastructure conviction."
+  },
+  {
+    "fund_name": "1kx",
+    "aum": "$150M+ (estimated)",
+    "stage": "Pre-seed to Seed",
+    "partner": {
+      "name": "Lasse Clausen",
+      "title": "Founding Partner",
+      "email": "lasse@1kx.capital"
+    },
+    "check_size_range": "$250K - $5M",
+    "gaming_ai_thesis": "1kx is an early-stage fund that helps founders bootstrap token networks, with a strong focus on Web3 gaming infrastructure and AI-crypto convergence. Their thesis centers on 'architecting network success'—building tokenized ecosystems where gaming, AI, and decentralized infrastructure intersect. They invest in gaming platforms, on-chain game mechanics, and AI agents operating in virtual economies. Their portfolio includes Gunzilla Games (Web3 gaming with AI elements), demonstrating active deployment in AI-gaming infrastructure. The firm's research arm produces deep technical analysis on AI x Crypto thesis, including how crypto adds value to AI products and services.",
+    "fit_score": 84,
+    "fit_breakdown": {
+      "web3_gaming_infrastructure": 19,
+      "ai_crypto_intersection_thesis": 18,
+      "token_network_expertise": 17,
+      "technical_research_depth": 15,
+      "check_size_alignment": 15
+    },
+    "geographic_focus": "Global (distributed team)",
+    "notable_gaming_investments": [
+      "Gunzilla Games (Web3 gaming, AI-powered infrastructure)",
+      "Bluff Media (gaming/entertainment)",
+      "Superstate (tokenized assets with gaming applications)",
+      "Multiple Web3 gaming infrastructure projects",
+      "Portfolio companies building on-chain game economies"
+    ],
+    "recent_fund": "Ongoing deployment (actively investing in 2024-2025)",
+    "outreach_angle": "1kx's 'AI x Crypto' thesis explicitly calls out how crypto adds value to AI products—relevant for AI infrastructure with tokenized incentive mechanisms. Lasse Clausen is a 2x technology founder turned blockchain investor—he understands both technical infrastructure and founder challenges. Their investment in Gunzilla Games (AI-powered Web3 gaming) demonstrates active AI-gaming deployment. The firm's research-first approach (Nichanan Kesonpat leads research) means they deeply understand technical infrastructure before investing. 'Architecting network success' is their tagline—they specialize in infrastructure plays."
+  }
+]

@@ -1,0 +1,16 @@
+Subject: Industrial AI - The Infrastructure Layer Behind Physical Intelligence
+
+Hi Brandon,
+
+I'm reaching out given Lux's leadership in robotics and industrial AI—particularly your investment in Physical Intelligence and the work coming out of Lux Labs at the intersection of AI, manufacturing, and automation.
+
+We're building the infrastructure layer that enables foundation models for robotics to actually work in industrial environments. Not the models themselves, but the systems that let them perceive, plan, and execute reliably in physical spaces.
+
+The thesis aligns with what you outlined in Lux's Q2 2024 report: the convergence of AI, manufacturing, and scientific automation. We've seen what happens when software eats the world. Now we're building what lets AI touch it.
+
+Worth a 15-minute conversation?
+
+Best,
+[Name]
+[Company]
+[LinkedIn/Twitter]

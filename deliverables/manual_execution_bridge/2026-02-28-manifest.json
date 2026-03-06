@@ -1,0 +1,85 @@
+{
+  "manifestId": "2026-02-28",
+  "createdAt": "2026-02-28T09:22:00Z",
+  "batchName": "VC Outreach - Feb 26 Enrichment",
+  "sourceReport": "/data/workspace/deliverables/daily_queue/2026-02-26-enrichment-report.md",
+  "packets": [
+    {
+      "id": "P1",
+      "fund": "BITKRAFT Ventures",
+      "contact": "Jamie Wallace",
+      "email": "jamie@bitkraft.vc",
+      "role": "Associate (Web3 & Gaming)",
+      "score": 92,
+      "checkSize": "$500K-$5M",
+      "hookAngle": "Synthetic Reality Thesis",
+      "hookSummary": "Position AI sourcing engine as infrastructure that compounds as gaming ecosystem grows—aligned with BITKRAFT's Web3 gaming focus and $275M fund",
+      "bestSendWindow": "Tuesday-Thursday, 9-11am EST",
+      "filePath": "/data/workspace/deliverables/manual_execution_bridge/BITKRAFT_PRODUCTION_Feb26.txt",
+      "status": "PENDING_APPROVAL"
+    },
+    {
+      "id": "P2",
+      "fund": "Konvoy Ventures",
+      "contact": "Josh Chapman",
+      "email": "josh@konvoy.co",
+      "role": "Co-Founder & Managing Partner",
+      "score": 88,
+      "checkSize": "$250K-$5M",
+      "hookAngle": "Infrastructure Play",
+      "hookSummary": "Infrastructure-on-infrastructure positioning—AI engine compounds value (more data = better scoring) matching Konvoy's gaming infrastructure focus",
+      "bestSendWindow": "Tuesday-Thursday, 8-10am MST",
+      "filePath": "/data/workspace/deliverables/manual_execution_bridge/KONVOY_PRODUCTION_Feb26.txt",
+      "status": "PENDING_APPROVAL"
+    },
+    {
+      "id": "P3",
+      "fund": "Griffin Gaming Partners",
+      "contact": "Peter Levin",
+      "email": "peter@griffingp.com",
+      "role": "Co-Founder & Managing Director",
+      "score": 90,
+      "checkSize": "$1M-$15M",
+      "hookAngle": "Gaming-Only Portfolio Value",
+      "hookSummary": "Emphasize portfolio value for premier gaming fund—AI sourcing gives better early access = better ownership terms for gaming-only thesis",
+      "bestSendWindow": "Tuesday-Thursday, 9-11am PST",
+      "filePath": "/data/workspace/deliverables/manual_execution_bridge/GRIFFIN_PRODUCTION_Feb26.txt",
+      "status": "PENDING_APPROVAL"
+    },
+    {
+      "id": "P4",
+      "fund": "Makers Fund",
+      "contact": "Jay Chi",
+      "email": "jay@makersfund.com",
+      "role": "Founding Partner",
+      "score": 85,
+      "checkSize": "$500K-$10M",
+      "hookAngle": "Asia/Gaming Network Amplification",
+      "hookSummary": "Makers Fund's Asia network + AI engine = global deal flow amplification—strategic value beyond just sourcing",
+      "bestSendWindow": "Tuesday-Thursday, 9-11am PST",
+      "filePath": "/data/workspace/deliverables/manual_execution_bridge/MAKERS_PRODUCTION_Feb26.txt",
+      "status": "PENDING_APPROVAL"
+    },
+    {
+      "id": "P5",
+      "fund": "a16z crypto",
+      "contact": "Chris Dixon",
+      "email": "chris@a16zcrypto.com",
+      "role": "Founding General Partner",
+      "score": 94,
+      "checkSize": "$1M-$50M+",
+      "hookAngle": "Ownership Economy Infrastructure",
+      "hookSummary": "Align with Dixon's 'Read Write Own' thesis—AI engine gives founders ownership of fundraising process, aligned incentives for ownership economy",
+      "bestSendWindow": "Tuesday-Thursday, 9-11am PST",
+      "filePath": "/data/workspace/deliverables/manual_execution_bridge/A16ZCRYPTO_PRODUCTION_Feb26.txt",
+      "status": "PENDING_APPROVAL"
+    }
+  ],
+  "totalPackets": 5,
+  "averageScore": 89.8,
+  "nextSteps": [
+    "Review and approve packets",
+    "Schedule sends during optimal windows",
+    "Set Day 3 and Day 7 follow-up reminders"
+  ]
+}

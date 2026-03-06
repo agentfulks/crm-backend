@@ -1,0 +1,309 @@
+{
+  "batch_date": "2026-03-02",
+  "batch_day": 30,
+  "focus_area": "AI for Cybersecurity / AI-Native Security Infrastructure",
+  "total_targets": 5,
+  "avg_fit_score": 90.4,
+  "packets": [
+    {
+      "packet_id": "P1",
+      "priority": 1,
+      "fund": {
+        "name": "Cyberstarts",
+        "type": "Cybersecurity-Focused Venture Capital",
+        "aum": "$800M+",
+        "location": "Tel Aviv, Israel / Palo Alto, CA",
+        "check_size": "$1M - $15M",
+        "stage_focus": "Seed to Series A",
+        "fund_year": "2024"
+      },
+      "partner": {
+        "name": "Lior Simon",
+        "title": "Managing Partner & Co-Founder",
+        "email": "lior@cyberstarts.com",
+        "linkedin": "linkedin.com/in/liorsimon",
+        "background": "Former CISO of Israeli Defense Intelligence Unit 8200, built cybersecurity for nation's most sensitive systems"
+      },
+      "fit_score": {
+        "total": 94,
+        "cybersecurity_thesis": 25,
+        "stage_fit": 25,
+        "check_size": 14,
+        "strategic_value": 18,
+        "partner_access": 8,
+        "geography": 4
+      },
+      "thesis_alignment": {
+        "summary": "Cyberstarts is the premier cybersecurity-focused VC, founded by former Unit 8200 elite cyber operators. They understand that AI is both the greatest threat and the greatest defense in cybersecurity. Lior Simon's background building defensive systems for Israeli intelligence gives him unique insight into AI-driven attack vectors.",
+        "key_investments": [
+          "Wiz ($10B valuation, cloud security)",
+          "Claroty (industrial cybersecurity)",
+          "Hibob (HR security)",
+          "Fireblocks (crypto security)",
+          "Noname Security (API security)"
+        ],
+        "relevant_expertise": [
+          "Elite Unit 8200 cybersecurity expertise",
+          "Deep understanding of nation-state attack patterns",
+          "AI-driven threat detection portfolio companies",
+          "First-check investor in category-defining security companies"
+        ]
+      },
+      "warm_signals": [
+        "Unit 8200 alumni network connections",
+        "Wiz founders (Assaf Rappaport) network",
+        "Cyberstarts Village community of CISOs",
+        "Israeli cybersecurity ecosystem relationships"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference Cyberstarts' Wiz investment and AI-driven threat landscape thesis",
+        "angle": "AI-native security infrastructure that thinks like an attacker",
+        "differentiation": "Security systems that learn and adapt to AI-generated attacks in real-time",
+        "recommended_subject": "AI that thinks like Unit 8200 — for enterprise defense"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "Top priority — Cyberstarts is THE cybersecurity VC with unmatched operator expertise"
+    },
+    {
+      "packet_id": "P2",
+      "priority": 2,
+      "fund": {
+        "name": "Team8",
+        "type": "Cybersecurity Venture Group + Foundry",
+        "aum": "$1B+",
+        "location": "Tel Aviv, Israel / New York, NY",
+        "check_size": "$2M - $20M",
+        "stage_focus": "Seed to Series B",
+        "fund_year": "2023"
+      },
+      "partner": {
+        "name": "Nadav Zafrir",
+        "title": "CEO & Managing Partner",
+        "email": "nadav@team8.vc",
+        "linkedin": "linkedin.com/in/nadavzafrir",
+        "background": "Former Commander of Israeli Defense Intelligence Unit 8200, led nation's cyber defense operations"
+      },
+      "fit_score": {
+        "total": 92,
+        "cybersecurity_thesis": 25,
+        "stage_fit": 22,
+        "check_size": 13,
+        "strategic_value": 18,
+        "partner_access": 10,
+        "geography": 4
+      },
+      "thesis_alignment": {
+        "summary": "Team8 is a unique cybersecurity venture group that combines a venture fund with a company foundry. Nadav Zafrir commanded Unit 8200 and understands that AI is fundamentally changing the attack surface. Their foundry model creates deep technical validation before investing.",
+        "key_investments": [
+          "Claroty (industrial cybersecurity, $1B+ valuation)",
+          "Hysolate (endpoint isolation)",
+          "ArmorCode (AppSec orchestration)",
+          "Dig Security (cloud data security, acquired by Palo Alto)",
+          "Talonic (AI data analytics)"
+        ],
+        "relevant_expertise": [
+          "Unit 8200 command-level cybersecurity expertise",
+          "Foundry model with deep technical validation",
+          "CISO community of 100+ Fortune 500 security leaders",
+          "Palo Alto Networks partnership and acquisition track record"
+        ]
+      },
+      "warm_signals": [
+        "Unit 8200 alumni network (shared with Cyberstarts)",
+        "Claroty founder network (Benny Porat)",
+        "Team8 CISO community connections",
+        "Palo Alto Networks ecosystem"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference Nadav's Unit 8200 leadership and Team8's CISO community approach",
+        "angle": "AI security that learns from nation-state tactics",
+        "differentiation": "Proactive AI defense validated by elite offensive security experts",
+        "recommended_subject": "From Unit 8200 offense to AI defense — for enterprises"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "Elite cybersecurity fund with unique foundry model and CISO network"
+    },
+    {
+      "packet_id": "P3",
+      "priority": 3,
+      "fund": {
+        "name": "Ten Eleven Ventures",
+        "type": "Cybersecurity-Focused Venture Capital",
+        "aum": "$1.3B+",
+        "location": "Boston, MA / San Francisco, CA",
+        "check_size": "$5M - $50M",
+        "stage_focus": "Series A to Growth",
+        "fund_year": "2024"
+      },
+      "partner": {
+        "name": "Alex Doll",
+        "title": "Managing General Partner & Founder",
+        "email": "alex@tenelevenventures.com",
+        "linkedin": "linkedin.com/in/alexdoll",
+        "background": "Former venture partner at Foundation Capital, 15+ years cybersecurity investing, led investments in FireEye and Carbon Black"
+      },
+      "fit_score": {
+        "total": 90,
+        "cybersecurity_thesis": 24,
+        "stage_fit": 18,
+        "check_size": 15,
+        "strategic_value": 17,
+        "partner_access": 12,
+        "geography": 4
+      },
+      "thesis_alignment": {
+        "summary": "Ten Eleven is the largest dedicated cybersecurity VC in the US. Alex Doll has been investing exclusively in cybersecurity for 15+ years with exits including FireEye and Carbon Black. They understand that AI-generated attacks require AI-native defenses and are actively deploying into this thesis.",
+        "key_investments": [
+          "KnowBe4 (security awareness, $3B+ exit)",
+          "Deep Instinct (AI-driven endpoint security)",
+          "Axis Security (zero trust)",
+          "iBoss (cloud security)",
+          "Bishop Fox (offensive security)"
+        ],
+        "relevant_expertise": [
+          "15+ years pure cybersecurity investing",
+          "FireEye and Carbon Black exits",
+          "Deep Instinct investment shows AI security thesis",
+          "Largest cybersecurity-focused LP network in US"
+        ]
+      },
+      "warm_signals": [
+        "Deep Instinct founder network (Guy Caspi)",
+        "KnowBe4 alumni network (Stu Sjouwerman)",
+        "FireEye/Carbon Black alumni",
+        "RSA Conference network"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference Ten Eleven's Deep Instinct investment and AI security thesis",
+        "angle": "Next-generation AI defense beyond traditional endpoint security",
+        "differentiation": "AI security that predicts attacks before they happen, not just detects",
+        "recommended_subject": "Beyond Deep Instinct — the next wave of AI security"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "Largest US cybersecurity fund with proven AI security investment track record"
+    },
+    {
+      "packet_id": "P4",
+      "priority": 4,
+      "fund": {
+        "name": "NightDragon",
+        "type": "Cybersecurity Growth Equity",
+        "aum": "$1B+",
+        "location": "San Francisco, CA / New York, NY",
+        "check_size": "$10M - $100M",
+        "stage_focus": "Growth to Late Stage",
+        "fund_year": "2023"
+      },
+      "partner": {
+        "name": "Dave DeWalt",
+        "title": "Founder & Managing Director",
+        "email": "dave@nightdragon.com",
+        "linkedin": "linkedin.com/in/davedewalt",
+        "background": "Former CEO of McAfee and FireEye, led FireEye through IPO and Mandiant acquisition, legendary cybersecurity operator"
+      },
+      "fit_score": {
+        "total": 88,
+        "cybersecurity_thesis": 25,
+        "stage_fit": 15,
+        "check_size": 14,
+        "strategic_value": 18,
+        "partner_access": 12,
+        "geography": 4
+      },
+      "thesis_alignment": {
+        "summary": "NightDragon was founded by Dave DeWalt, one of the most accomplished cybersecurity CEOs in history (McAfee, FireEye). They focus on growth-stage cybersecurity companies and understand that AI is creating a new category of security infrastructure. Dave's operator perspective brings unique value to portfolio companies.",
+        "key_investments": [
+          "Datavisor (AI fraud detection)",
+          "Cybereason (endpoint protection)",
+          "ExtraHop (network detection)",
+          "Dragos (industrial security)",
+          "Armis (IoT security, $4B exit)"
+        ],
+        "relevant_expertise": [
+          "CEO-level operator expertise from McAfee and FireEye",
+          "Led FireEye through IPO and $1B+ Mandiant acquisition",
+          "Datavisor investment shows AI fraud detection thesis",
+          "Unmatched CISO and buyer relationships"
+        ]
+      },
+      "warm_signals": [
+        "FireEye/McAfee alumni network",
+        "CISO advisory board connections",
+        "Mandiant alumni network",
+        "RSAC and Black Hat conference network"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference Dave's FireEye/McAfee leadership and NightDragon's Datavisor investment",
+        "angle": "AI security infrastructure for the next generation of threats",
+        "differentiation": "AI defense built by operators who've seen every attack vector",
+        "recommended_subject": "The AI security wave after FireEye — operator's perspective"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "Legendary operator-led fund with unmatched enterprise security relationships"
+    },
+    {
+      "packet_id": "P5",
+      "priority": 5,
+      "fund": {
+        "name": "YL Ventures",
+        "type": "Israeli Cybersecurity Seed Fund",
+        "aum": "$400M+",
+        "location": "Tel Aviv, Israel / San Francisco, CA",
+        "check_size": "$500K - $5M",
+        "stage_focus": "Seed to Series A",
+        "fund_year": "2024"
+      },
+      "partner": {
+        "name": "Yoav Leitersdorf",
+        "title": "Managing Partner",
+        "email": "yoav@ylventures.com",
+        "linkedin": "linkedin.com/in/yoavleitersdorf",
+        "background": "Founded YL Ventures in 2007, exclusively focused on Israeli cybersecurity, portfolio includes 50+ security companies with 20+ exits"
+      },
+      "fit_score": {
+        "total": 86,
+        "cybersecurity_thesis": 25,
+        "stage_fit": 20,
+        "check_size": 10,
+        "strategic_value": 15,
+        "partner_access": 12,
+        "geography": 4
+      },
+      "thesis_alignment": {
+        "summary": "YL Ventures is the longest-running Israeli cybersecurity seed fund. Yoav Leitersdorf has been backing Israeli security founders since 2007 with an exceptional track record. They focus exclusively on seed-stage cybersecurity and understand that AI is creating new attack surfaces that require novel defenses.",
+        "key_investments": [
+          "Orca Security (cloud security, $2B+ valuation)",
+          "Claroty (industrial security)",
+          "Enso (AI security agents)",
+          "Mobb (AI-powered vulnerability remediation)",
+          "Piiano (data privacy)"
+        ],
+        "relevant_expertise": [
+          "17+ years exclusively Israeli cybersecurity",
+          "50+ security investments, 20+ exits",
+          "Orca Security success shows cloud security thesis",
+          "Recent Enso and Mobb investments show AI security focus"
+        ]
+      },
+      "warm_signals": [
+        "Orca Security founder network (Avi Shua)",
+        "Israeli cybersecurity founder community",
+        "YL portfolio company founder intros",
+        "Enso AI agent security connections"
+      ],
+      "outreach_strategy": {
+        "hook": "Reference YL's Enso and Mobb investments and Israeli security founder track record",
+        "angle": "AI security from the country that invented modern cyber defense",
+        "differentiation": "Israeli-grade AI security for global enterprises",
+        "recommended_subject": "Israeli AI security expertise for the enterprise"
+      },
+      "status": "QUEUED",
+      "trello_card_id": null,
+      "notes": "Premier Israeli cybersecurity seed fund with recent AI security investments"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+To: josh@konvoy.co
+Subject: Infrastructure play: Daily VC scoring engine for gaming funds
+Priority: P2 | Fund: Konvoy Ventures
+Check Size: $250K-$5M | Stage: Pre-seed to Series A
+
+---
+EMAIL BODY
+---
+Hi Josh,
+
+Konvoy's focus on gaming infrastructure and platform bets caught my attention—our product is exactly that.
+
+We built a daily VC outreach engine that ingests every gaming/AI/devtools fund in our CRM, scores them on stage/check-size/sector fit, and auto-generates five investor packets every morning. Each packet contains verified contact data, a KPI snapshot, and a personalized hook.
+
+The infrastructure compounds: more funds ingested = better scoring = higher meeting conversion. We're at four partner meetings per week and climbing.
+
+Given Konvoy's $250K-$5M seed/Series A focus, we'd be a natural fit for your portfolio.
+
+Open to a quick intro call?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+[TITLE]
+[COMPANY]
+
+---
+ATTACHMENTS
+---
+1. deliverables/outreach_assets/pitch_deck/latest.pdf
+2. deliverables/outreach_assets/kpi_snapshot/2026-02-25-kpis.csv
+
+---
+FOLLOW-UP SCHEDULE
+---
+Day 3: February 28, 2026 — Value-add follow-up
+Day 7: March 4, 2026 — Final bump or pass
+
+---
+NOTES
+---
+Josh is Co-Founder & Managing Partner at Konvoy. Primary hook: gaming 
+infrastructure, platform bets, seed-stage focus. Emphasize infrastructure 
+compounding and meeting velocity.

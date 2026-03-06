@@ -1,0 +1,237 @@
+[
+  {
+    "vc_firm": "Andreessen Horowitz (a16z) - Bio + Health",
+    "fund_metadata": {
+      "aum": "$35B+",
+      "fund_stage": "Seed to Series C",
+      "check_size": "$1M - $50M",
+      "headquarters": "Menlo Park, CA",
+      "primary_sectors": ["Healthcare AI", "Digital Health", "Bioinformatics", "HealthTech", "AI in Drug Discovery"]
+    },
+    "partner": {
+      "name": "Julie Yoo",
+      "title": "General Partner",
+      "focus_areas": ["Healthcare Technology", "AI in Healthcare", "Digital Health Infrastructure", "Health Systems Innovation"],
+      "investment_thesis": "Deeply understands both software and healthcare systems. Focuses on healthcare technology investments that leverage AI to transform care delivery, reduce costs, and improve patient outcomes.",
+      "notable_investments": ["Hippocratic AI", "Maven Clinic", "Olive AI", "BenevolentAI", "Cardinal Analytx"],
+      "boards": ["Hippocratic AI", "Knownwell", "Other portfolio healthcare companies"],
+      "email": "julie.yoo@a16z.com",
+      "email_verification": {
+        "pattern": "first.last@a16z.com",
+        "confidence": "high",
+        "sources": ["a16z website", "Email format databases", "Podcast interviews"]
+      },
+      "linkedin": "https://www.linkedin.com/in/juliekyoo",
+      "bio_excerpt": "Julie Yoo is a General Partner at Andreessen Horowitz where she focuses on healthcare technology investments. She brings deep expertise in both software engineering and healthcare systems."
+    },
+    "signal_score": 96,
+    "strategic_fit": {
+      "thesis_alignment": "a16z Bio + Health is at the forefront of AI-driven healthcare transformation. Their investment in Hippocratic AI ($500M valuation) demonstrates conviction in healthcare AI agents. They actively seek companies building AI-native healthcare infrastructure.",
+      "recent_activity": [
+        "Led Hippocratic AI funding - AI healthcare agents platform",
+        "Published 'AI in Bio + Health' thesis papers (2024-2025)",
+        "Launched a16z Health Builders community",
+        "Active in AI drug discovery and clinical trial automation"
+      ],
+      "warm_path_potential": "Very High - Julie Yoo's focus on healthcare technology and AI-driven care delivery creates strong alignment with AI agents for healthcare workflows"
+    },
+    "outreach_context": {
+      "recommended_angle": "AI agents for healthcare administrative and clinical workflows",
+      "key_talking_points": [
+        "Reference Hippocratic AI investment and healthcare AI agent thesis",
+        "Highlight cost reduction in healthcare administration through AI automation",
+        "Emphasize HIPAA-compliant AI agent infrastructure",
+        "Connect to Julie's focus on healthcare system inefficiencies"
+      ],
+      "priority": "Tier 1 - Top Target"
+    }
+  },
+  {
+    "vc_firm": "Ribbit Capital",
+    "fund_metadata": {
+      "aum": "$2B+",
+      "fund_stage": "Seed to Series B",
+      "check_size": "$2M - $25M",
+      "headquarters": "Palo Alto, CA",
+      "primary_sectors": ["FinTech", "InsurTech", "Financial Infrastructure", "AI in Finance", "Banking Technology"]
+    },
+    "partner": {
+      "name": "Nick Shalek",
+      "title": "General Partner",
+      "focus_areas": ["Financial Services", "Insurance Technology", "AI in Finance", "Capital Markets", "Banking Infrastructure"],
+      "investment_thesis": "Backs founders building disruptive financial brands. Focuses on AI-powered financial infrastructure and next-generation insurance platforms that challenge legacy systems.",
+      "notable_investments": ["Robinhood", "Next Insurance", "Root Insurance", "Kavak", "Rapyd"],
+      "boards": ["Multiple FinTech portfolio companies"],
+      "email": "nick@ribbitcap.com",
+      "email_verification": {
+        "pattern": "first@ribbitcap.com",
+        "confidence": "high",
+        "sources": ["Ribbit Capital website", "Crunchbase", "Contact databases"]
+      },
+      "linkedin": "https://www.linkedin.com/in/nickshalek/",
+      "bio_excerpt": "Nick Shalek is a General Partner at Ribbit Capital where he focuses on investments in financial services, insurance technology, and AI-powered financial infrastructure."
+    },
+    "signal_score": 94,
+    "strategic_fit": {
+      "thesis_alignment": "Ribbit Capital is the premier FinTech-focused venture firm. They have deep conviction in AI-powered financial services and recently raised a $300M opportunistic fund specifically for AI-driven financial technology investments.",
+      "recent_activity": [
+        "Raised $300M Leapfrog Capital fund for AI FinTech (2025)",
+        "Portfolio includes leading InsurTech companies: Next, Root",
+        "Active investor in AI-powered underwriting and claims",
+        "Focus on financial infrastructure modernization"
+      ],
+      "warm_path_potential": "High - Ribbit's pure FinTech focus and Nick's expertise in insurance AI creates ideal conditions for AI agent automation in financial services"
+    },
+    "outreach_context": {
+      "recommended_angle": "AI agents for insurance underwriting and claims automation",
+      "key_talking_points": [
+        "Reference Ribbit's InsurTech portfolio (Next, Root)",
+        "Highlight AI agent ROI in claims processing efficiency",
+        "Connect to financial infrastructure modernization thesis",
+        "Emphasize regulatory compliance automation"
+      ],
+      "priority": "Tier 1 - High Priority"
+    }
+  },
+  {
+    "vc_firm": "General Catalyst",
+    "fund_metadata": {
+      "aum": "$25B+",
+      "fund_stage": "Seed to Growth",
+      "check_size": "$5M - $100M",
+      "headquarters": "Boston, MA / San Francisco, CA",
+      "primary_sectors": ["Applied AI", "LegalTech", "Compliance", "Enterprise Software", "Healthcare"]
+    },
+    "partner": {
+      "name": "Hemant Taneja",
+      "title": "CEO & Managing Partner",
+      "focus_areas": ["Applied AI", "Legal Technology", "Compliance Automation", "Enterprise Transformation", "Systemic Change"],
+      "investment_thesis": "Leading the charge on 'applied AI' transforming critical institutions. Author of 'The Transformation' (2025 bestseller) on building resilient, abundant systems through AI. Focuses on AI-native platforms modernizing legacy industries.",
+      "notable_investments": ["Eudia", "Stripe", "Snap", "Airbnb", "Guild Education"],
+      "boards": ["Stripe", "Snap", "Multiple portfolio companies"],
+      "email": "hemant.taneja@generalcatalyst.com",
+      "email_verification": {
+        "pattern": "first.last@generalcatalyst.com",
+        "confidence": "high",
+        "sources": ["General Catalyst website", "RocketReach", "Published interviews"]
+      },
+      "linkedin": "https://www.linkedin.com/in/hemanttaneja/",
+      "bio_excerpt": "Hemant Taneja is the CEO of General Catalyst and a Managing Partner. He is the author of the national bestseller 'The Transformation' and leads GC's applied AI thesis for transforming critical institutions."
+    },
+    "signal_score": 95,
+    "strategic_fit": {
+      "thesis_alignment": "General Catalyst is explicitly focused on 'applied AI' as the engine for abundance and resilience. They led Eudia's $105M Series A (Feb 2025) for AI-powered legal operations — the largest legal AI round in history — demonstrating serious conviction in legal AI.",
+      "recent_activity": [
+        "Led Eudia $105M Series A (largest legal AI round ever)",
+        "Published 'The Transformation' (2025) - bestseller on applied AI",
+        "Launching 'Company Buying' model with AI transformation",
+        "Invested in Legora (legal AI) and other compliance automation"
+      ],
+      "warm_path_potential": "Very High - Hemant's 'applied AI' thesis and GC's massive legal AI investments create perfect alignment for AI agents in compliance and legal workflows"
+    },
+    "outreach_context": {
+      "recommended_angle": "AI agents for enterprise compliance and legal operations",
+      "key_talking_points": [
+        "Reference 'The Transformation' and applied AI thesis",
+        "Connect to Eudia investment and legal AI conviction",
+        "Highlight AI agents for regulatory compliance automation",
+        "Emphasize transforming legacy legal operations"
+      ],
+      "priority": "Tier 1 - Top Target"
+    }
+  },
+  {
+    "vc_firm": "Khosla Ventures",
+    "fund_metadata": {
+      "aum": "$15B+",
+      "fund_stage": "Seed to Series B",
+      "check_size": "$500K - $50M",
+      "headquarters": "Menlo Park, CA",
+      "primary_sectors": ["AI/ML", "Robotics", "Manufacturing", "Industrial Automation", "Deep Tech"]
+    },
+    "partner": {
+      "name": "Samir Kaul",
+      "title": "Founding Partner & Managing Director",
+      "focus_areas": ["AI Applications", "Advanced Manufacturing", "Robotics", "Sustainability", "Deep Tech"],
+      "investment_thesis": "Invests in AI, advanced technology, health, and sustainability. Pioneering 'AI-infused roll-ups' - acquiring traditional businesses and transforming them with AI. Led Khosla's industrial robotics and manufacturing AI investments.",
+      "notable_investments": ["Genesis AI", "Voxeljet", "ExOne", "Commonwealth Fusion", "QuantumScape"],
+      "boards": ["Multiple portfolio manufacturing and AI companies"],
+      "email": "samir@khoslaventures.com",
+      "email_verification": {
+        "pattern": "first@khoslaventures.com",
+        "confidence": "high",
+        "sources": ["Khosla Ventures website", "RocketReach", "Published interviews"]
+      },
+      "linkedin": "https://www.linkedin.com/in/samir-kaul-9227b64/",
+      "bio_excerpt": "Samir Kaul is a Founding Partner and Managing Director at Khosla Ventures. His interests lie in AI, advanced technology, health, sustainability, and industrial transformation."
+    },
+    "signal_score": 93,
+    "strategic_fit": {
+      "thesis_alignment": "Khosla Ventures is pioneering 'AI-infused roll-ups' of traditional industries. Samir co-led Genesis AI's $105M seed (July 2025) for general-purpose robotics and manufacturing automation. Deep conviction in industrial AI transformation.",
+      "recent_activity": [
+        "Co-led Genesis AI $105M seed for industrial robotics",
+        "Acquired ExOne and Voxeljet for 3D printing consolidation",
+        "Pioneering AI-infused business transformation model",
+        "Strong focus on manufacturing and industrial automation"
+      ],
+      "warm_path_potential": "Very High - Samir's focus on industrial AI and 'AI-infused roll-ups' creates strong alignment with AI agents for manufacturing and supply chain automation"
+    },
+    "outreach_context": {
+      "recommended_angle": "AI agents for manufacturing and supply chain automation",
+      "key_talking_points": [
+        "Reference Genesis AI investment and industrial AI thesis",
+        "Connect to 'AI-infused roll-up' model",
+        "Highlight supply chain and manufacturing workflow automation",
+        "Emphasize production efficiency and quality control"
+      ],
+      "priority": "Tier 1 - High Priority"
+    }
+  },
+  {
+    "vc_firm": "Energy Impact Partners (EIP)",
+    "fund_metadata": {
+      "aum": "$4B+",
+      "fund_stage": "Seed to Growth",
+      "check_size": "$5M - $50M",
+      "headquarters": "New York, NY",
+      "primary_sectors": ["Climate Tech", "Energy AI", "Clean Technology", "Grid Infrastructure", "Industrial Decarbonization"]
+    },
+    "partner": {
+      "name": "Sameer Reddy",
+      "title": "Managing Partner",
+      "focus_areas": ["Climate Technology", "Energy Transition", "AI in Energy", "Grid Modernization", "Sustainability"],
+      "investment_thesis": "Leads global energy technology investment with a proprietary model designed to drive innovation. Focuses on companies optimizing energy consumption and accelerating sustainable energy generation through AI and advanced technology.",
+      "notable_investments": ["Boston Metal", "AtmosZero", "Arcadia", "OhmConnect", "Smart Wires"],
+      "boards": ["Multiple energy tech portfolio companies"],
+      "email": "sameer.reddy@energyimpactpartners.com",
+      "email_verification": {
+        "pattern": "first.last@energyimpactpartners.com",
+        "confidence": "high",
+        "sources": ["Energy Impact Partners website", "RocketReach", "Published interviews"]
+      },
+      "linkedin": "https://www.linkedin.com/in/sameer-reddy-85ba99b/",
+      "bio_excerpt": "Sameer Reddy is a Managing Partner at Energy Impact Partners (EIP), a global energy technology investor with a proprietary model designed to drive climate innovation."
+    },
+    "signal_score": 91,
+    "strategic_fit": {
+      "thesis_alignment": "EIP focuses on AI-powered climate and energy solutions. They invest in companies using AI to optimize energy consumption, modernize grid infrastructure, and accelerate industrial decarbonization. Strong thesis on 'energy convergence' and AI-driven efficiency.",
+      "recent_activity": [
+        "$4B+ AUM across venture, growth, and credit strategies",
+        "Invested in AI-powered grid optimization companies",
+        "Focus on industrial decarbonization and energy efficiency",
+        "Strong corporate partnerships with major utilities"
+      ],
+      "warm_path_potential": "High - EIP's focus on AI for energy optimization and Sameer's climate tech expertise creates strong alignment with AI agents for energy and sustainability workflows"
+    },
+    "outreach_context": {
+      "recommended_angle": "AI agents for energy optimization and sustainability operations",
+      "key_talking_points": [
+        "Reference EIP's focus on energy convergence and AI",
+        "Highlight AI agents for grid optimization and demand response",
+        "Connect to industrial decarbonization thesis",
+        "Emphasize measurable carbon reduction and ROI"
+      ],
+      "priority": "Tier 1 - High Priority"
+    }
+  }
+]

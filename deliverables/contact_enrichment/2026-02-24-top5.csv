@@ -1,0 +1,6 @@
+fund_name,priority,contact_name,title,email,source_url,verification_status,notes
+BITKRAFT Ventures,Priority A,"—","Startup pitches inbox",pitch@bitkraft.vc,https://www.bitkraft.vc/contact,pending_smtp_check,"Contact page directs founders to email pitch@bitkraft.vc for startup materials."
+Konvoy Ventures,Priority A,"Dhinuka Perera","Media / Platform contact",dhinuka@konvoy.vc,https://www.konvoy.vc/press-kit,pending_smtp_check,"Press kit lists dhinuka@konvoy.vc for media inquiries; use as initial warm path until partner email is enriched."
+Variant,Priority A,"—","General submissions",info@variant.fund,https://variant.fund/contact,pending_smtp_check,"Contact page instructs founders to email info@variant.fund with pitch details."
+Collab+Currency,Priority A,"—","General inbox",info@collabcurrency.com,https://www.collabcurrency.com/,pending_smtp_check,"Site header lists info@collabcurrency.com alongside @collab_currency handle."
+Mechanism Capital,Priority A,"—","General inbox",contact@mechanism.capital,https://www.mechanism.capital/contact,pending_smtp_check,"Contact page explicitly lists contact@mechanism.capital."

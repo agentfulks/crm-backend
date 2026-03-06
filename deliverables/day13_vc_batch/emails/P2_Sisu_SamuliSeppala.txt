@@ -1,0 +1,19 @@
+Subject: Cloud-native infrastructure - Mainframe Industries' model applied broadly
+
+Hi Samuli,
+
+Congrats on the Fund II close—exciting to see Sisu doubling down on cloud-native gaming.
+
+We're building infrastructure that enables the kind of cloud-native experiences Mainframe is pioneering, but making it accessible to any studio without their engineering resources. Essentially: "infrastructure-as-a-service for cloud-native games."
+
+Having come from Supercell and Remedy, you know the pain of building backend infrastructure from scratch. We're solving that with a platform that handles matchmaking, persistent worlds, and AI-driven content generation out of the box.
+
+Given Sisu's focus on cloud-native infrastructure and your recent Fund II deployment, would you be open to a 20-minute call? We'd love your perspective as operators who've actually shipped at scale.
+
+Best,
+[Name]
+[Title]
+[Company]
+[LinkedIn]
+
+P.S. Big fan of the work Mainframe is doing with cloud-native MMOs—we're trying to make that tech stack accessible to the next 100 studios.

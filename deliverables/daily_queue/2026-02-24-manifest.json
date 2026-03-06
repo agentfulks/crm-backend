@@ -1,0 +1,392 @@
+{
+  "generated_at": "2026-02-24T23:01:47.098004+00:00",
+  "source_csv": "/data/workspace/data/raw/gaming_vc_list.csv",
+  "count": 5,
+  "funds": [
+    {
+      "rank": 1,
+      "name": "BITKRAFT Ventures",
+      "firm_type": "VC",
+      "score": {
+        "total": 84.0,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 15.0,
+          "geo": 6.0,
+          "sector": 24.0,
+          "warmth": 10.0,
+          "contact": 10.0,
+          "penalty": 0.0
+        }
+      },
+      "hq": {
+        "city": "Los Angeles",
+        "region": "California",
+        "country": "United States"
+      },
+      "stage_focus": [
+        "Seed",
+        "Series A",
+        "Series B"
+      ],
+      "check_size": {
+        "min": 500000.0,
+        "max": 10000000.0,
+        "currency": "USD",
+        "formatted": "$500K\u2013$10.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "pitch@bitkraft.vc"
+      },
+      "urls": {
+        "website": "https://bitkraft.vc/",
+        "linkedin": "https://www.linkedin.com/company/bitkraftvc/",
+        "twitter": "https://x.com/BitkraftVC/"
+      },
+      "thesis": {
+        "overview": "Built by founders for founders, BITKRAFT is a global early- and mid-stage investment platform for gaming, esports, and interactive media. We focus on Seed, Series A, and Series B investments in game studios, interactive platforms, and immersive technology.",
+        "requirements": "Vision of Synthetic Reality (https://www.bitkraft.vc/vision/)\u2014the increasing convergence of the physical and digital worlds"
+      },
+      "keywords_hit": [
+        "immersive",
+        "gaming",
+        "esports",
+        "interactive",
+        "game",
+        "synthetic reality"
+      ],
+      "overlap_ratio": 1.0,
+      "notes": [
+        "HQ: Los Angeles California United States",
+        "Check-size overlap 100% of target band",
+        "Sector keywords: immersive, gaming, esports, interactive, game, synthetic reality",
+        "Contact channel: pitch@bitkraft.vc",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 2,
+      "name": "Konvoy Ventures",
+      "firm_type": "VC",
+      "score": {
+        "total": 59.33,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 8.33,
+          "geo": 8.0,
+          "sector": 12.0,
+          "warmth": 8.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": "Denver",
+        "region": "Colorado",
+        "country": "United States"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": 500000.0,
+        "max": 3000000.0,
+        "currency": "USD",
+        "formatted": "$500K\u2013$3.0M USD"
+      },
+      "target_countries": [
+        "Albania",
+        "Andorra",
+        "Argentina",
+        "Armenia",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Bahamas",
+        "USA",
+        "France",
+        "China",
+        "Germany",
+        "Georgia",
+        "Qatar",
+        "Kuwait",
+        "New Zealand",
+        "Norway",
+        "Sweden",
+        "Switzerland",
+        "Taiwan",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Eritrea",
+        "Estonia",
+        "Belarus",
+        "Belgium",
+        "Cabo Verde",
+        "Czech Republic",
+        "Chile",
+        "Denmark",
+        "Israel",
+        "Finland",
+        "Romania",
+        "Russia",
+        "Brazil",
+        "Cyprus",
+        "Croatia",
+        "Thailand",
+        "Turkey",
+        "Italy",
+        "Hungary",
+        "Seychelles",
+        "UAE",
+        "UK",
+        "Ukraine",
+        "Uzbekistan",
+        "Bulgaria",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Ireland",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Saudi Arabia",
+        "Singapore",
+        "Slovakia",
+        "Slovenia",
+        "Serbia",
+        "South Africa",
+        "South Korea",
+        "Spain",
+        "Greece",
+        "Hong Kong",
+        "Japan",
+        "Jordan",
+        "Latvia",
+        "Liechtenstein",
+        "Luxembourg",
+        "Mexico",
+        "Cambodia",
+        "Colombia",
+        "Costa Rica",
+        "Venezuela",
+        "Vietnam",
+        "Maldives",
+        "Bahrain",
+        "Netherlands",
+        "Madagascar",
+        "Malaysia",
+        "Montenegro"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://www.konvoy.vc/",
+        "linkedin": "https://www.linkedin.com/company/konvoy/about/",
+        "twitter": null
+      },
+      "thesis": {
+        "overview": "Konvoy Ventures is a venture capital fund dedicated to esports & video gaming",
+        "requirements": "We invest in the infrastructure technology, tools, and platforms of tomorrow\u2019s video gaming industry"
+      },
+      "keywords_hit": [
+        "infrastructure",
+        "gaming",
+        "esports"
+      ],
+      "overlap_ratio": 0.556,
+      "notes": [
+        "HQ: Denver Colorado United States",
+        "Check-size overlap 56% of target band",
+        "Sector keywords: infrastructure, gaming, esports",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 3,
+      "name": "Mechanism Capital",
+      "firm_type": "VC",
+      "score": {
+        "total": 53.33,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 3.33,
+          "geo": 0.0,
+          "sector": 8.0,
+          "warmth": 8.0,
+          "contact": 10.0,
+          "penalty": 1.0
+        }
+      },
+      "hq": {
+        "city": null,
+        "region": null,
+        "country": null
+      },
+      "stage_focus": [
+        "Pre-seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": 1000000.0,
+        "max": 2000000.0,
+        "currency": "USD",
+        "formatted": "$1.0M\u2013$2.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "contact@mechanism.capital"
+      },
+      "urls": {
+        "website": "https://www.mechanism.capital",
+        "linkedin": "https://www.linkedin.com/company/mechanism-capital/",
+        "twitter": "https://twitter.com/MechanismCap"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Focus on blockchain, decentralized finance (DeFi), and crypto-gaming projects. The firm invests in both equity and liquid tokens (SAFTs)."
+      },
+      "keywords_hit": [
+        "gaming",
+        "ai"
+      ],
+      "overlap_ratio": 0.222,
+      "notes": [
+        "Check-size overlap 22% of target band",
+        "Sector keywords: gaming, ai",
+        "Contact channel: contact@mechanism.capital",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 4,
+      "name": "Collab+Currency",
+      "firm_type": "VC",
+      "score": {
+        "total": 51.33,
+        "breakdown": {
+          "stage": 19.0,
+          "check_size": 8.33,
+          "geo": 6.0,
+          "sector": 0.0,
+          "warmth": 8.0,
+          "contact": 10.0,
+          "penalty": 0.0
+        }
+      },
+      "hq": {
+        "city": "Eugene",
+        "region": "Oregon",
+        "country": "USA"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed"
+      ],
+      "check_size": {
+        "min": 100000.0,
+        "max": 3000000.0,
+        "currency": "USD",
+        "formatted": "$100K\u2013$3.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": "info@collabcurrency.com"
+      },
+      "urls": {
+        "website": "https://collabcurrency.com",
+        "linkedin": "https://www.linkedin.com/company/collab-currency",
+        "twitter": "https://twitter.com/Collab_Currency"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Projects at the intersection of crypto and culture."
+      },
+      "keywords_hit": [],
+      "overlap_ratio": 0.556,
+      "notes": [
+        "HQ: Eugene Oregon USA",
+        "Check-size overlap 56% of target band",
+        "Contact channel: info@collabcurrency.com",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    },
+    {
+      "rank": 5,
+      "name": "Variant",
+      "firm_type": "VC",
+      "score": {
+        "total": 48.33,
+        "breakdown": {
+          "stage": 25.0,
+          "check_size": 13.33,
+          "geo": 0.0,
+          "sector": 0.0,
+          "warmth": 12.0,
+          "contact": 0.0,
+          "penalty": 2.0
+        }
+      },
+      "hq": {
+        "city": "New York",
+        "region": "NY",
+        "country": "USA / Distributed"
+      },
+      "stage_focus": [
+        "Pre-Seed",
+        "Seed",
+        "Series A"
+      ],
+      "check_size": {
+        "min": 1000000.0,
+        "max": 5000000.0,
+        "currency": "USD",
+        "formatted": "$1.0M\u2013$5.0M USD"
+      },
+      "target_countries": [
+        "Global"
+      ],
+      "contact": {
+        "email": null
+      },
+      "urls": {
+        "website": "https://variant.fund",
+        "linkedin": null,
+        "twitter": "https://twitter.com/variantfund"
+      },
+      "thesis": {
+        "overview": "",
+        "requirements": "Focus on user ownership and alignment."
+      },
+      "keywords_hit": [],
+      "overlap_ratio": 0.889,
+      "notes": [
+        "HQ: New York NY USA / Distributed",
+        "Check-size overlap 89% of target band",
+        "Manual strategic boost applied"
+      ],
+      "data_source": "gaming_vc_list.csv",
+      "source_row_id": null
+    }
+  ]
+}

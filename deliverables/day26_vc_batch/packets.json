@@ -1,0 +1,237 @@
+[
+  {
+    "vc_firm": "Bessemer Venture Partners",
+    "fund_metadata": {
+      "aum": "$20B+",
+      "fund_stage": "Seed to Growth",
+      "check_size": "$1M - $100M+",
+      "headquarters": "San Francisco, CA",
+      "primary_sectors": ["AI/ML", "Cloud Infrastructure", "Enterprise SaaS", "Cybersecurity", "Developer Tools"]
+    },
+    "partner": {
+      "name": "Byron Deeter",
+      "title": "Partner",
+      "focus_areas": ["Cloud Computing", "AI/ML", "Enterprise SaaS", "Frontier Technology"],
+      "investment_thesis": "Leading authority on cloud and AI investing; co-authored Bessemer's iconic 10 Laws of Cloud Computing, the annual State of the Cloud Report, and the Forbes Cloud 100",
+      "notable_investments": ["Twilio", "SendGrid", "DocuSign", "Snowflake", "HashiCorp"],
+      "boards": ["Syndio", "Miro", "LaunchDarkly"],
+      "email": "byron.deeter@bvp.com",
+      "email_verification": {
+        "pattern": "first.last@bvp.com",
+        "confidence": "high",
+        "sources": ["BVP website", "Email format databases"]
+      },
+      "linkedin": "https://www.linkedin.com/in/byrondeeter/",
+      "bio_excerpt": "Byron Deeter is a leading investor in Cloud, AI, Frontier Technology, and the Business of Sports. He co-authored Bessemer's iconic 10 Laws of Cloud Computing and the annual State of the Cloud Report."
+    },
+    "signal_score": 95,
+    "strategic_fit": {
+      "thesis_alignment": "Bessemer has declared 2025 as the year enterprises move from AI experimentation to production deployment. They recently published 'The State of AI 2025' report and have deployed $400M+ into AI companies including Anthropic.",
+      "recent_activity": [
+        "Published 'State of AI 2025' report (August 2025)",
+        "Participated in Anthropic's $3.5B funding round (March 2025)",
+        "Launched $1B BVP Forge II and $350M India fund (2025)",
+        "Active investor in enterprise AI adoption thesis"
+      ],
+      "warm_path_potential": "High - Byron's cloud expertise and enterprise SaaS focus make him an ideal target for AI agent automation in enterprise workflows"
+    },
+    "outreach_context": {
+      "recommended_angle": "Enterprise AI agents for workflow automation",
+      "key_talking_points": [
+        "Reference Bessemer's State of AI 2025 report",
+        "Align with their 'enterprise AI at inflection point' thesis",
+        "Highlight production-ready AI agent deployment vs. experimentation",
+        "Connect to their Cloud 100 ecosystem"
+      ],
+      "priority": "Tier 1 - Top Target"
+    }
+  },
+  {
+    "vc_firm": "Insight Partners",
+    "fund_metadata": {
+      "aum": "$80B+ RAU",
+      "fund_stage": "Growth to Late Stage",
+      "check_size": "$10M - $350M",
+      "headquarters": "New York, NY",
+      "primary_sectors": ["Enterprise Software", "AI/ML", "SaaS", "Infrastructure", "Security"]
+    },
+    "partner": {
+      "name": "Jeff Horing",
+      "title": "Co-Founder & Managing Director",
+      "focus_areas": ["Enterprise Software", "AI/ML", "Growth Equity", "ScaleUp Operations"],
+      "investment_thesis": "Founded Insight Partners in 1995; has grown it into a premier global software investment firm with 800+ investments and focus on scaling enterprise technology companies",
+      "notable_investments": ["Databricks", "Wiz", "Figma", "OpenAI", "Anthropic", "Stampli"],
+      "boards": ["Multiple portfolio company boards"],
+      "email": "jeff.horing@insightpartners.com",
+      "email_verification": {
+        "pattern": "first.last@insightpartners.com",
+        "confidence": "high",
+        "sources": ["Insight Partners website", "RocketReach"]
+      },
+      "linkedin": "https://www.linkedin.com/in/jeffhoring2009/",
+      "bio_excerpt": "Jeff Horing is a co-founder and managing director at Insight Partners. Under his leadership Insight has become a premier venture capital and private equity firm with over 800 total investments."
+    },
+    "signal_score": 94,
+    "strategic_fit": {
+      "thesis_alignment": "Insight has made AI a core pillar of their 2025 strategy, with investments in OpenAI, Anthropic, Databricks, and Wiz. Their 'ScaleUp' model is perfect for enterprise AI companies ready to scale.",
+      "recent_activity": [
+        "Invested in OpenAI and Anthropic (2024-2025)",
+        "Portfolio includes Databricks, Wiz, Figma",
+        "Published 2026 investor predictions focused on AI economics",
+        "30 new deals closed in 2024"
+      ],
+      "warm_path_potential": "High - Insight's focus on scaling enterprise software aligns perfectly with AI automation solutions for large enterprises"
+    },
+    "outreach_context": {
+      "recommended_angle": "AI agents for enterprise workflow automation at scale",
+      "key_talking_points": [
+        "Reference Insight's portfolio companies using AI agents",
+        "Align with ScaleUp operational model",
+        "Focus on enterprise deployment metrics",
+        "Highlight operational efficiency gains"
+      ],
+      "priority": "Tier 1 - Top Target"
+    }
+  },
+  {
+    "vc_firm": "Accel",
+    "fund_metadata": {
+      "aum": "$30B+",
+      "fund_stage": "Seed to Growth",
+      "check_size": "$500K - $50M+",
+      "headquarters": "Palo Alto, CA / London",
+      "primary_sectors": ["AI/ML", "Cloud/SaaS", "Security", "Fintech", "Consumer"]
+    },
+    "partner": {
+      "name": "Philippe Botteri",
+      "title": "Partner",
+      "focus_areas": ["Cloud Applications", "AI/ML", "Security", "Enterprise SaaS"],
+      "investment_thesis": "Joined Accel in 2011; focuses on Cloud applications and Security. Led investments in DocuSign (NASDAQ: DOCU) and other enterprise software companies.",
+      "notable_investments": ["DocuSign", "CrowdStrike", "Synthesia", "n8n", "Perplexity"],
+      "boards": ["Multiple portfolio company boards"],
+      "email": "philippe.botteri@accel.com",
+      "email_verification": {
+        "pattern": "first.last@accel.com",
+        "confidence": "high",
+        "sources": ["Accel website", "ContactOut database"]
+      },
+      "linkedin": "https://uk.linkedin.com/in/philippebotteri",
+      "bio_excerpt": "Philippe Botteri joined Accel in 2011 and focuses on Cloud applications and Security. He led Accel's investments in DocuSign (NASDAQ: DOCU) and other enterprise software leaders."
+    },
+    "signal_score": 92,
+    "strategic_fit": {
+      "thesis_alignment": "Accel is heavily focused on AI with their $650M AI-focused fund (raised May 2024) for Europe and Israel. They have invested in Anthropic, H Company, and numerous AI-native applications.",
+      "recent_activity": [
+        "Raised $650M AI-focused fund (May 2024)",
+        "Invested in Anthropic, H Company, Nebius",
+        "Accel Atoms X AI cohort program (2025)",
+        "Published 2025 Globalscape AI report"
+      ],
+      "warm_path_potential": "High - Philippe's cloud/enterprise focus and Accel's AI-first mandate make this a strong strategic fit"
+    },
+    "outreach_context": {
+      "recommended_angle": "AI-native enterprise workflow automation",
+      "key_talking_points": [
+        "Reference Accel's AI-first mandate and Globalscape report",
+        "Align with cloud applications thesis",
+        "Mention European enterprise market expansion",
+        "Highlight API-first architecture"
+      ],
+      "priority": "Tier 1 - High Priority"
+    }
+  },
+  {
+    "vc_firm": "Greylock Partners",
+    "fund_metadata": {
+      "aum": "$3.5B+ under management",
+      "fund_stage": "Pre-Seed to Series A",
+      "check_size": "$500K - $200M",
+      "headquarters": "Menlo Park, CA",
+      "primary_sectors": ["AI/ML", "Enterprise SaaS", "Cybersecurity", "Infrastructure", "Consumer"]
+    },
+    "partner": {
+      "name": "Jerry Chen",
+      "title": "General Partner",
+      "focus_areas": ["Enterprise Software", "AI/ML", "Infrastructure", "SaaS"],
+      "investment_thesis": "Former VMware VP of Cloud; searches for ambitious founders redefining enterprise software. Focus on AI-first companies and next-generation enterprise infrastructure.",
+      "notable_investments": ["Cresta", "Palo Alto Networks", "Okta", "Workday", "Abnormal Security"],
+      "boards": ["Cresta", "Other enterprise AI companies"],
+      "email": "jerry.chen@greylock.com",
+      "email_verification": {
+        "pattern": "first.last@greylock.com",
+        "confidence": "high",
+        "sources": ["Greylock website", "SignalHire"]
+      },
+      "linkedin": "https://www.linkedin.com/in/jerrychenprofile/",
+      "bio_excerpt": "Jerry searches for ambitious founders who are redefining enterprise software. He was formerly VP of Cloud and Application Services at VMware."
+    },
+    "signal_score": 93,
+    "strategic_fit": {
+      "thesis_alignment": "Greylock raised a $1B Fund 17 focused on 'AI-first companies' across Cyber, Infra, SaaS, and Consumer. They are early-stage specialists with a strong enterprise AI portfolio including Cresta.",
+      "recent_activity": [
+        "Raised $1B Fund 17 for AI-first companies (2024)",
+        "Invested in Resolve AI ($35M seed, October 2024)",
+        "Strong enterprise AI portfolio: Cresta, Abnormal Security",
+        "Chronosphere acquisition by Palo Alto Networks ($3.35B, Nov 2025)"
+      ],
+      "warm_path_potential": "Very High - Jerry's enterprise infrastructure background and Greylock's AI-first mandate create ideal conditions for enterprise AI agent investment"
+    },
+    "outreach_context": {
+      "recommended_angle": "AI agents for enterprise workflows - pre-seed/seed stage",
+      "key_talking_points": [
+        "Reference Greylock's AI-first Fund 17 thesis",
+        "Highlight technical founding team background",
+        "Connect to Cresta and enterprise AI portfolio",
+        "Focus on infrastructure and platform approach"
+      ],
+      "priority": "Tier 1 - Top Target"
+    }
+  },
+  {
+    "vc_firm": "IVP (Institutional Venture Partners)",
+    "fund_metadata": {
+      "aum": "$10B+",
+      "fund_stage": "Growth to Late Stage",
+      "check_size": "$10M - $100M+",
+      "headquarters": "Menlo Park, CA",
+      "primary_sectors": ["AI/ML", "Enterprise Infrastructure", "SaaS", "Fintech", "Digital Health"]
+    },
+    "partner": {
+      "name": "Steve Harrick",
+      "title": "General Partner",
+      "focus_areas": ["Enterprise Software", "AI/ML", "Growth Equity", "Technology Services"],
+      "investment_thesis": "Joined IVP in 2001; over 25 years of venture capital experience. Focuses on later-stage technology companies with exceptional growth potential in enterprise software.",
+      "notable_investments": ["Brex", "Perplexity", "Superhuman", "Kittl", "HashiCorp", "Datadog"],
+      "boards": ["Anomali", "Other portfolio companies"],
+      "email": "steve.harrick@ivp.com",
+      "email_verification": {
+        "pattern": "first.last@ivp.com",
+        "confidence": "high",
+        "sources": ["IVP website", "RocketReach"]
+      },
+      "linkedin": "https://www.linkedin.com/in/steve-harrick-1ba0526",
+      "bio_excerpt": "Steve Harrick joined IVP as a General Partner in October 2001 and has over 25 years of experience in venture capital. He focuses on investing in later-stage technology companies with exceptional growth potential."
+    },
+    "signal_score": 90,
+    "strategic_fit": {
+      "thesis_alignment": "IVP published the 'Enterprise AI 55' report in 2024, highlighting their focus on AI-native enterprise companies. They have an 'intense focus on artificial intelligence pioneers' and recently raised a $1.6B 18th fund.",
+      "recent_activity": [
+        "Published IVP Enterprise AI 55 report (2024)",
+        "Raised $1.6B 18th fund (March 2024)",
+        "Invested in Perplexity, Superhuman, Brex AI initiatives",
+        "Focus on AI pioneers in enterprise infrastructure"
+      ],
+      "warm_path_potential": "High - IVP's Enterprise AI 55 demonstrates commitment to the space; growth-stage focus aligns with scaling enterprise AI deployment"
+    },
+    "outreach_context": {
+      "recommended_angle": "Growth-stage enterprise AI automation platform",
+      "key_talking_points": [
+        "Reference IVP Enterprise AI 55 report",
+        "Highlight enterprise traction and scaling metrics",
+        "Align with growth equity thesis",
+        "Focus on AI-native differentiation"
+      ],
+      "priority": "Tier 1 - High Priority"
+    }
+  }
+]

@@ -1,0 +1,187 @@
+{
+  "batch_id": "batch_tomorrow_march_3",
+  "date_created": "2026-03-02",
+  "studios": [
+    {
+      "id": "azur_games",
+      "name": "Azur Games",
+      "website": "https://azurgames.com",
+      "location": "Nicosia, Cyprus (HQ) / Dubai, UAE (Main Office)",
+      "founded": 2017,
+      "employees": "250+",
+      "status": "Independent",
+      "games": ["Stack Ball", "Hit Master 3D", "Clone Ball", "Worms Zone", "Hexa Puzzle"],
+      "notable_games": [
+        {
+          "name": "Stack Ball",
+          "downloads": "500M+",
+          "category": "Arcade Hyper-casual"
+        },
+        {
+          "name": "Worms Zone",
+          "downloads": "300M+",
+          "category": "IO Hyper-casual"
+        }
+      ],
+      "total_downloads": "10B+",
+      "focus": "Hyper-casual & Midcore Publishing",
+      "contact": {
+        "decision_maker": "Dmitry Yaminsky",
+        "title": "Co-Founder & CEO",
+        "linkedin": "https://linkedin.com/in/dmitry-yaminsky",
+        "email": "d.yaminsky@azurgames.com",
+        "email_confidence": "high",
+        "publishing_email": "publishing@azurgames.com"
+      },
+      "outreach_angle": "AI content generation for 10B+ download portfolio - Azur Games is #1 worldwide by downloads. AI-powered dynamic content can help them maintain player engagement across their massive portfolio without scaling live ops teams proportionally.",
+      "priority": "highest",
+      "reason": "#1 mobile publisher by downloads globally, 10B+ installs, 275M MAU, Cyprus/Dubai timezone friendly, strong focus on hyper-casual"
+    },
+    {
+      "id": "rocket_game_studio",
+      "name": "Rocket Game Studio (OneSoft)",
+      "website": "https://rocketstudio.game",
+      "location": "Hanoi, Vietnam",
+      "founded": 2015,
+      "employees": "100-250",
+      "status": "Independent",
+      "games": ["Galaxy Attack", "Unicorn Chef", "Burger Bounty", "Magic Tiles"],
+      "notable_games": [
+        {
+          "name": "Galaxy Attack",
+          "downloads": "100M+",
+          "category": "Shooter Arcade"
+        },
+        {
+          "name": "Burger Bounty",
+          "downloads": "50M+",
+          "category": "Idle Simulation"
+        }
+      ],
+      "total_downloads": "500M+",
+      "focus": "Casual & Arcade Mobile Games",
+      "contact": {
+        "decision_maker": "Publishing Team",
+        "title": "Publishing Partnerships",
+        "linkedin": "https://vn.linkedin.com/company/rocket-games-studio",
+        "email": "publishing@rocketstudio.com.vn",
+        "email_confidence": "high",
+        "phone": "+84 37 577 3847"
+      },
+      "outreach_angle": "AI-powered live ops for arcade games - Rocket Studio's Galaxy Attack and other arcade titles need constant content updates. AI can generate infinite level variations and difficulty curves to maintain player engagement.",
+      "priority": "high",
+      "reason": "Top Vietnamese publisher, 500M+ downloads, Southeast Asia presence, growing rapidly, publishing actively seeking partnerships"
+    },
+    {
+      "id": "joypac",
+      "name": "JoyPac Games",
+      "website": "https://joypacgames.com",
+      "location": "Beijing, China",
+      "founded": 2018,
+      "employees": "50-100",
+      "status": "Independent",
+      "games": ["Hero Rescue", "Pull Him Out", "Love Rescue", "Bridge Race China"],
+      "notable_games": [
+        {
+          "name": "Hero Rescue",
+          "downloads": "100M+",
+          "category": "Puzzle Hyper-casual"
+        },
+        {
+          "name": "Pull Him Out",
+          "downloads": "50M+",
+          "category": "Puzzle Hyper-casual"
+        }
+      ],
+      "total_downloads": "500M+",
+      "focus": "Hyper-casual Publishing (West to East Bridge)",
+      "contact": {
+        "decision_maker": "Alison Bilas",
+        "title": "COO",
+        "linkedin": "https://linkedin.com/in/alison-bilas",
+        "email": "alison.bilas@joypacgames.com",
+        "email_confidence": "medium"
+      },
+      "outreach_angle": "AI localization and content adaptation - JoyPac specializes in bringing Western hyper-casual games to China. AI can help automate localization, cultural adaptation, and content variation for different APAC markets.",
+      "priority": "high",
+      "reason": "Unique West-to-East publisher, deep China market expertise, partnerships with Ketchapp/Voodoo, data-driven evaluation approach"
+    },
+    {
+      "id": "crazylabs_sagi",
+      "name": "CrazyLabs",
+      "website": "https://crazylabs.com",
+      "location": "Tel Aviv, Israel (HQ) + Global Offices",
+      "founded": 2013,
+      "employees": "200-500",
+      "status": "Acquired by Embracer Group (DECA) 2022",
+      "games": ["Acrylic Nails", "Soap Cutting", "Tie Dye", "ASMR Studio 3D"],
+      "notable_games": [
+        {
+          "name": "Acrylic Nails",
+          "downloads": "100M+",
+          "category": "ASMR Simulation"
+        },
+        {
+          "name": "Soap Cutting",
+          "downloads": "100M+",
+          "category": "ASMR Simulation"
+        }
+      ],
+      "total_downloads": "6B+",
+      "focus": "ASMR, Simulation & Hyper-casual",
+      "contact": {
+        "decision_maker": "Sagi Schliesser",
+        "title": "CEO & Founder",
+        "linkedin": "https://linkedin.com/in/sagis",
+        "email": "sagi@crazylabs.com",
+        "email_confidence": "high"
+      },
+      "outreach_angle": "AI-generated ASMR content - CrazyLabs dominates ASMR/satisfying content. AI can generate infinite nail designs, soap patterns, tie-dye variations — keeping their hit games fresh without manual asset creation.",
+      "priority": "high",
+      "reason": "6B+ downloads, leader in ASMR/satisfying niche, founder still CEO, Embracer backing provides resources, strong portfolio in target genre"
+    },
+    {
+      "id": "boombit_marcin",
+      "name": "Boombit",
+      "website": "https://boombit.com",
+      "location": "Gdansk, Poland",
+      "founded": 2014,
+      "employees": "100-250",
+      "status": "Public (Warsaw Stock Exchange)",
+      "games": ["Hunting Clash", "Fishing Clash", "Dino Bash", "Zombie Run"],
+      "notable_games": [
+        {
+          "name": "Hunting Clash",
+          "downloads": "50M+",
+          "category": "Simulation Midcore"
+        },
+        {
+          "name": "Fishing Clash",
+          "downloads": "50M+",
+          "category": "Simulation Midcore"
+        }
+      ],
+      "total_downloads": "500M+",
+      "focus": "Midcore Simulation & Strategy",
+      "contact": {
+        "decision_maker": "Marcin Olejarz",
+        "title": "CEO & Co-Founder",
+        "linkedin": "https://linkedin.com/in/marcin-olejarz-08a32211",
+        "email": "marcin@boombit.com",
+        "email_confidence": "high"
+      },
+      "outreach_angle": "AI for midcore economy balancing - Boombit's simulation games (Hunting Clash, Fishing Clash) have deep economies. AI can optimize event timing, difficulty curves, and monetization offers based on player behavior.",
+      "priority": "medium",
+      "reason": "Public company with transparency, strong midcore portfolio, founder CEO accessible, Poland-based for EU timezone, growing casual division"
+    }
+  ],
+  "summary": {
+    "total_studios": 5,
+    "total_downloads": "22B+",
+    "geographic_coverage": ["Cyprus/Dubai", "Vietnam", "China", "Israel", "Poland"],
+    "verified_contacts": 5,
+    "priority_highest": 1,
+    "priority_high": 3,
+    "priority_medium": 1
+  }
+}

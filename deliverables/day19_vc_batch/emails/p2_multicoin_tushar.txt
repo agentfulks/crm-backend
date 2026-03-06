@@ -1,0 +1,23 @@
+Subject: DePIN for virtual worlds — AI gaming infrastructure
+
+Tushar,
+
+Multicoin pioneered DePIN as a category in 2019, recognizing that distributed physical infrastructure would reshape trillion-dollar markets.
+
+AI gaming infrastructure is the next frontier: distributed compute marketplaces for real-time inference, decentralized player identity rails, and tokenized AI agent economies. The same distributed systems thinking you applied to physical infrastructure maps directly to virtual world infrastructure.
+
+Your thesis on crypto x AI convergence—specifically horizontal compute marketplaces and trust/identity solutions—is exactly what AI-powered gaming requires. Real-time NPCs, procedural content generation, and player-owned AI agents all need distributed compute and cryptographic verification.
+
+Unlike most gaming pitches you see, this isn't a content play. It's infrastructure—the picks-and-shovels for the next generation of AI-native games.
+
+15 minutes to walk through the architecture?
+
+Best,
+Lucas
+
+---
+Sent: Day 19 VC Batch (Feb 28, 2026)
+Fund: Multicoin Capital
+Partner: Tushar Jain
+Email: tushar@multicoin.capital
+Fit Score: 92/100

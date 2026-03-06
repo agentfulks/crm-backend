@@ -1,0 +1,27 @@
+Subject: AI infrastructure for the next industrial revolution
+
+Hi Matt,
+
+Menlo's track record in AI infrastructure speaks for itself — Anthropic, Cleanlab, and your dedicated thesis on the infrastructure layer puts you at the center of where value is accruing in this cycle.
+
+We're building [Company] to solve a critical bottleneck in AI adoption: [one-sentence description of infrastructure/tooling problem]. Our approach differs from existing solutions in three ways:
+
+1. [Specific technical differentiation]
+2. [Performance/cost advantage]
+3. [Go-to-market or distribution insight]
+
+Given your deep experience with infrastructure companies like AppDynamics, Harness, and BitSight, I'd welcome your perspective on how we're approaching the market. We're currently [stage] with [traction metrics if any].
+
+Would you be open to a brief conversation next week? Happy to work around your schedule.
+
+Best,
+[Name]
+[Title]
+[Company]
+[LinkedIn profile]
+
+---
+FOLLOW-UP SCHEDULE:
+- Day 3: Follow-up with additional context (recent customer win, technical milestone)
+- Day 7: Follow-up with industry insight or relevant news
+- Day 14: Final follow-up, offer specific time slots

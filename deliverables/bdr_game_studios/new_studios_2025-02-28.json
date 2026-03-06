@@ -1,0 +1,166 @@
+{
+  "research_date": "2025-02-28",
+  "agent": "BDR-GAME-STUDIOS",
+  "studios": [
+    {
+      "studio_name": "Kwalee",
+      "location": "Leamington Spa, UK (offices in Bangalore, Beijing)",
+      "founded": 2011,
+      "category": "Hyper-Casual / Casual Publisher",
+      "downloads": "500M+ (self-reported)",
+      "revenue_estimate": "$11.4M annual tech spend (per Crunchbase)",
+      "key_decision_maker": {
+        "name": "David Darling",
+        "title": "Founder & CEO",
+        "background": "Co-founder of Codemasters (sold for ~$1B), games industry pioneer, CBE",
+        "linkedin": "https://uk.linkedin.com/in/ddarling",
+        "email": "d.darling@kwalee.com (pattern inferred)"
+      },
+      "secondary_contact": {
+        "name": "Jason Falcus",
+        "title": "COO",
+        "background": "Former programmer of NBA Jam"
+      },
+      "recent_news": [
+        {
+          "date": "2024-07-02",
+          "headline": "Kwalee receives minority equity funding from Devolver Digital",
+          "source": "MarketScreener"
+        }
+      ],
+      "funding_status": "Minority investment from Devolver Digital (July 2024), previously bootstrapped",
+      "why_fit": "Hyper-casual specialist with proven track record, strong leadership from Codemasters legacy, actively publishing external developer games, recent investment signals growth appetite"
+    },
+    {
+      "studio_name": "Lion Studios",
+      "location": "San Francisco, Berlin, Shanghai",
+      "founded": 2018,
+      "category": "Hyper-Casual Publisher",
+      "downloads": "2B+ worldwide",
+      "parent_company": "Miniclip (owned by Tencent)",
+      "key_decision_maker": {
+        "name": "Gilberto Marcal",
+        "title": "CEO",
+        "linkedin": "https://www.linkedin.com/in/gilberto-santos-marcal-303087232/",
+        "background": "Leading Lion Studios under Miniclip ownership"
+      },
+      "secondary_contact": {
+        "name": "Randal York",
+        "title": "General Manager"
+      },
+      "recent_news": [
+        {
+          "date": "Ongoing",
+          "headline": "Lion Studios continues hyper-casual publishing under Miniclip umbrella",
+          "notes": "Strong focus on puzzle and hyper-casual games with global reach"
+        }
+      ],
+      "funding_status": "Owned by Miniclip (Tencent subsidiary)",
+      "why_fit": "2B+ downloads demonstrates massive scale, focused on hyper-casual partnerships with external developers, offices in 3 major gaming hubs, actively seeking new developer partnerships"
+    },
+    {
+      "studio_name": "Scopely",
+      "location": "Los Angeles (HQ), Barcelona, Seoul, Tokyo, Dublin",
+      "category": "Mobile Game Publisher (Mid-Core to Casual)",
+      "valuation": "$4.9B (acquired by Savvy Games Group, 2023)",
+      "parent_company": "Savvy Games Group (PIF Saudi Arabia)",
+      "key_decision_maker": {
+        "name": "Bobby Loya",
+        "title": "SVP, Head of Studios Business Development & Developer Relations",
+        "linkedin": "https://www.linkedin.com/in/bobby-loya-117b209/",
+        "background": "20+ year industry veteran, former Activision Blizzard, joined March 2024",
+        "notes": "Primary contact for developer partnerships and M&A"
+      },
+      "secondary_contact": {
+        "name": "Shlomi Aizenberg",
+        "title": "Chief Business Officer",
+        "notes": "Oversees post-deal integration and operational growth"
+      },
+      "executives": {
+        "co_ceo": "Walter Driver",
+        "cto": "Ankur Bulsara (Co-Founder)",
+        "cro": "Tim O'Brien"
+      },
+      "recent_news": [
+        {
+          "date": "2025-05-29",
+          "headline": "Scopely completes acquisition of Niantic's games business including Pokemon GO for $3.5B",
+          "source": "Savvy Games Group"
+        },
+        {
+          "date": "2024-03-28",
+          "headline": "Scopely appoints Bobby Loya as SVP Head of Studios Business Development",
+          "source": "Scopely Official"
+        }
+      ],
+      "funding_status": "Acquired by Savvy Games Group for $4.9B (July 2023)",
+      "why_fit": "Aggressive M&A strategy with deep Saudi funding, now #1 mobile games company in US, actively building external dev partnerships via new BD leadership, just acquired Pokemon GO - signaling massive live ops appetite"
+    },
+    {
+      "studio_name": "Rollic Games",
+      "location": "Istanbul, Turkey",
+      "founded": 2018,
+      "category": "Hyper-Casual Publisher",
+      "acquisition": "Acquired by Zynga for $220M (2020)",
+      "parent_company": "Zynga (Take-Two Interactive)",
+      "key_decision_maker": {
+        "name": "Burak Vardal",
+        "title": "Co-Founder & CEO",
+        "linkedin": "https://tr.linkedin.com/in/burakvardal",
+        "background": "Former EMEA Growth lead at AdColony, led Rollic to 8 #1/#2 US App Store hits",
+        "notes": "Active speaker at gaming conferences"
+      },
+      "secondary_contact": {
+        "name": "Deniz Basaran",
+        "title": "Co-Founder & Managing Director"
+      },
+      "executives": {
+        "parent_ceo": "Frank Gibeau (Zynga President)"
+      },
+      "recent_news": [
+        {
+          "date": "2020-10-05",
+          "headline": "Zynga completes acquisition of Rollic for $168M initial + earnout",
+          "notes": "Zynga's first hyper-casual entry, brought 250M+ monthly active users"
+        }
+      ],
+      "why_fit": "Rollic is Zynga's dedicated hyper-casual arm, one of fastest-growing publishers pre-acquisition, strong network of external developers, represents Zynga's gateway into hyper-casual partnerships"
+    },
+    {
+      "studio_name": "SayGames",
+      "location": "Limassol, Cyprus / Warsaw, Poland",
+      "founded": "~2016",
+      "category": "Hyper-Casual Publisher",
+      "downloads": "7B+ globally",
+      "games_published": "150+ titles",
+      "team_size": "200+",
+      "key_decision_maker": {
+        "name": "Yegor Vaikhanski",
+        "title": "CEO & Co-Founder",
+        "linkedin": "https://cy.linkedin.com/in/yegor-vaikhanski-9922a526",
+        "email": "y.vaikhanski@saygames.by (pattern inferred)",
+        "background": "Co-founder of IT English, built SayGames from 0 to 7B+ downloads"
+      },
+      "recent_news": [
+        {
+          "date": "2025-11-27",
+          "headline": "SayGames profiled by Invest Cyprus - 150+ games and 7B downloads",
+          "source": "Invest Cyprus",
+          "notes": "Major employer in Cyprus with hubs in Limassol, Paphos, Warsaw"
+        }
+      ],
+      "funding_status": "Privately held, bootstrapped/profitable",
+      "why_fit": "One of the largest hyper-casual publishers globally (7B+ downloads), actively expanding hybrid-casual portfolio, recent high-profile media coverage signals growth phase, massive scale with relatively lean team (200+)"
+    }
+  ],
+  "summary": {
+    "total_studios": 5,
+    "combined_downloads": "12B+",
+    "categories_covered": ["Hyper-Casual", "Hybrid-Casual", "LiveOps"],
+    "priority_targets": [
+      "Scopely (highest value - $4.9B acquisition, active M&A)",
+      "SayGames (highest downloads - 7B+, growing rapidly)",
+      "Kwalee (recent funding, strong leadership, UK presence)"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+To: josh@konvoy.co
+Subject: Infrastructure on infrastructure: AI sourcing engine for gaming VCs
+Priority: P2 | Fund: Konvoy Ventures | Score: 88/100
+Check Size: $250K-$5M | Stage: Pre-seed to Series A
+
+---
+EMAIL BODY
+---
+Hi Josh,
+
+Konvoy's thesis on platforms shaping the future of gaming resonates— you're betting on infrastructure that enables others to build.
+
+We're doing the same for VC sourcing. Our AI engine scores 200+ gaming, AI, and devtools funds daily, assembles five investor packets every morning, and logs partner approvals in Trello. Four partner meetings per week and climbing.
+
+The compounding nature is what matters: more funds ingested = better scoring = higher meeting conversion. It's infrastructure on infrastructure.
+
+Given Konvoy's $150M Fund III and focus on gaming platforms, I'd love to show you how this engine works.
+
+15 minutes?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+[TITLE]
+[COMPANY]
+
+---
+ATTACHMENTS
+---
+1. deliverables/outreach_assets/pitch_deck/latest.pdf
+2. deliverables/outreach_assets/kpi_snapshot/latest.csv
+
+---
+FOLLOW-UP SCHEDULE
+---
+Day 3: February 28, 2026 — Share specific gaming infrastructure deals we've surfaced
+Day 7: March 4, 2026 — Final bump or pass
+
+---
+PERSONALIZATION NOTES
+---
+- Hook: Infrastructure compounding, platform thesis alignment
+- Recent context: Fund III ($150M), active in blockchain gaming (9 Q3 2024 deals)
+- Send window: Tuesday-Thursday, 8-10am MST
+- Backup contacts: Jackson Vaughan, Taylor Hurst

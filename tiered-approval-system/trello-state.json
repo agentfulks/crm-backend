@@ -1,0 +1,102 @@
+[
+  {
+    "id": "card-001",
+    "name": "Quantum Computing Startup",
+    "description": "Developing fault-tolerant quantum processors",
+    "fit_score": 97,
+    "funding_stage": "Series A",
+    "portfolio_match": true,
+    "days_in_queue": 1,
+    "labels": ["Quantum", "Hardware"]
+  },
+  {
+    "id": "card-002",
+    "name": "AI Drug Discovery Platform",
+    "description": "ML-powered molecular simulation for pharma",
+    "fit_score": 96,
+    "funding_stage": "Seed",
+    "portfolio_match": true,
+    "days_in_queue": 2,
+    "labels": ["AI", "Biotech"]
+  },
+  {
+    "id": "card-003",
+    "name": "Vertical Farming Robotics",
+    "description": "Automated indoor agriculture systems",
+    "fit_score": 94,
+    "funding_stage": "Series B",
+    "portfolio_match": false,
+    "days_in_queue": 5,
+    "labels": ["Robotics", "AgTech"]
+  },
+  {
+    "id": "card-004",
+    "name": "Carbon Capture Membranes",
+    "description": "Novel materials for direct air capture",
+    "fit_score": 88,
+    "funding_stage": "Series A",
+    "portfolio_match": true,
+    "days_in_queue": 3,
+    "labels": ["Climate", "Materials"]
+  },
+  {
+    "id": "card-005",
+    "name": "Space Debris Removal",
+    "description": "Satellite-based debris collection network",
+    "fit_score": 85,
+    "funding_stage": "Pre-seed",
+    "portfolio_match": false,
+    "days_in_queue": 7,
+    "labels": ["Space"]
+  },
+  {
+    "id": "card-006",
+    "name": "Neurofeedback Wearable",
+    "description": "EEG headband for focus optimization",
+    "fit_score": 82,
+    "funding_stage": "Seed",
+    "portfolio_match": true,
+    "days_in_queue": 4,
+    "labels": ["Health", "Hardware"]
+  },
+  {
+    "id": "card-007",
+    "name": "High-Fit Stale Startup",
+    "description": "Should be P1 due to being stale",
+    "fit_score": 98,
+    "funding_stage": "Series A",
+    "portfolio_match": true,
+    "days_in_queue": 10,
+    "labels": ["Test"]
+  },
+  {
+    "id": "card-008",
+    "name": "Mediocre Opportunity A",
+    "description": "Below threshold fit score",
+    "fit_score": 75,
+    "funding_stage": "Seed",
+    "portfolio_match": false,
+    "days_in_queue": 12,
+    "labels": ["Low Priority"]
+  },
+  {
+    "id": "card-009",
+    "name": "Mediocre Opportunity B",
+    "description": "Another low fit candidate",
+    "fit_score": 68,
+    "funding_stage": "Pre-seed",
+    "portfolio_match": false,
+    "days_in_queue": 20,
+    "labels": ["Low Priority"]
+  },
+  {
+    "id": "card-010",
+    "name": "Expired P2 Card",
+    "description": "Should be archived - very old P2",
+    "fit_score": 45,
+    "funding_stage": "Angel",
+    "portfolio_match": false,
+    "days_in_queue": 45,
+    "labels": ["Archive"]
+  }
+]

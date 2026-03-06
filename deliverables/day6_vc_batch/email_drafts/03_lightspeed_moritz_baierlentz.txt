@@ -1,0 +1,22 @@
+Subject: AI Foundation Models for Gaming - Seed Round
+
+Hi Moritz,
+
+From pro gamer to building BITKRAFT into the #1 gaming VC to leading Lightspeed's gaming practice - you've seen every layer of the industry. That rare combination of competitive gaming instinct and institutional investing experience is why I'm reaching out.
+
+[Company Name] is building infrastructure for what you called "foundation models for spatiotemporal reasoning" in games. We're developing AI systems that understand game worlds, player behavior, and dynamic content generation at a fundamental level.
+
+Lightspeed's portfolio already shows the thesis: Epic Games for the engine layer, Stability AI for generative assets. We believe the next layer is AI that understands game mechanics and player psychology - not just generating assets, but generating gameplay.
+
+We're raising a $3M seed to scale our platform and partner with 3-5 studios building AI-native games. Given your focus on AI applications for gaming and Lightspeed's $6.5B gaming pool, I thought there might be alignment.
+
+Would you have time to discuss? Happy to share our technical architecture and early studio traction.
+
+Best,
+[Name]
+[Title]
+[Company Name]
+[Phone]
+[LinkedIn]
+
+P.S. - Your track record at BITKRAFT backing the creators of Fortnite, Valorant, and League of Legends shows you understand what separates hit games from the rest. We believe AI infrastructure will be the differentiator for the next generation of those hits.

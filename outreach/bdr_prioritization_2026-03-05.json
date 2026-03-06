@@ -1,0 +1,560 @@
+[
+  {
+    "id": "699f37dc928d17053a4560f6",
+    "name": "Homa Games - Partnerships (Daniel Nathan, CEO)",
+    "priority": "P0",
+    "reason": "P0 - Top 3 Publisher"
+  },
+  {
+    "id": "699f37cbc9905cf7007d1d2e",
+    "name": "SayGames - Partnerships (Egor Vaihanski, CEO)",
+    "priority": "P0",
+    "reason": "P0 - Top 3 Publisher"
+  },
+  {
+    "id": "699f37bce80f4b8e75d49f40",
+    "name": "Voodoo - Partnerships (Alexandre Yazdi, CEO)",
+    "priority": "P0",
+    "reason": "P0 - Hypercasual Leader"
+  },
+  {
+    "id": "69a29dcf259a9a29100a219a",
+    "name": "Azur Games - Partnerships/LiveOps Team",
+    "priority": "P0",
+    "reason": "P0 - Top 10 Publisher"
+  },
+  {
+    "id": "699f37ec4351f29b3289a243",
+    "name": "Lion Studios (AppLovin) - Partnerships (Rafael Vivas, President)",
+    "priority": "P0",
+    "reason": "P0 - AppLovin Publisher"
+  },
+  {
+    "id": "69a77eee17a25ee05a6e9e9b",
+    "name": "CrazyLabs - CEO (Sagi Schliesser)",
+    "priority": "P0",
+    "reason": "P0 - Top 5 Publisher"
+  },
+  {
+    "id": "69a77f251ebece02a29fd03c",
+    "name": "Supersonic Studios - Founder (Arik Czerniak)",
+    "priority": "P0",
+    "reason": "P0 - IronSource/Unity"
+  },
+  {
+    "id": "69a77f2639ecbcd561cbeb66",
+    "name": "Lion Studios - CEO (Alexandre Pelletier-Normand)",
+    "priority": "P0",
+    "reason": "P0 - AppLovin Publisher"
+  },
+  {
+    "id": "69a767827720650695dd09bc",
+    "name": "Lion Studios+ - Publishing Team",
+    "priority": "P0",
+    "reason": "P0 - AppLovin Publisher"
+  },
+  {
+    "id": "69a7ac0ece3cc57e1145c4e8",
+    "name": "Lion Studios - CEO (Nicholas Le)",
+    "priority": "P0",
+    "reason": "P0 - AppLovin Publisher"
+  },
+  {
+    "id": "69a7ac38da7cfb687623aafd",
+    "name": "Crazy Labs - CEO (Sagi Schliesser)",
+    "priority": "P0",
+    "reason": "P0 - Top 5 Publisher"
+  },
+  {
+    "id": "69a7ac3a74c93724fffef477",
+    "name": "Homa Games - CEO (Daniel Nathan)",
+    "priority": "P0",
+    "reason": "P0 - Top 3 Publisher"
+  },
+  {
+    "id": "69a7ad48e04605bfa8f284c1",
+    "name": "SayGames - CEO (Egor Vaihanski)",
+    "priority": "P0",
+    "reason": "P0 - Top 3 Publisher"
+  },
+  {
+    "id": "69a7ad4872e5627e9ad785cc",
+    "name": "Voodoo - CEO (Alexandre Yazdi)",
+    "priority": "P0",
+    "reason": "P0 - Hypercasual Leader"
+  },
+  {
+    "id": "69a7ad49edb726d3ca7eb18e",
+    "name": "Azur Games - CEO (Dmitry Yaminsky)",
+    "priority": "P0",
+    "reason": "P0 - Top 10 Publisher"
+  },
+  {
+    "id": "69a5a52e41bc2e11863b36a0",
+    "name": "A Thinking Ape - CEO (Wilkins Chung)",
+    "priority": "P1",
+    "reason": "Tier-2 publisher/studio"
+  },
+  {
+    "id": "69a5a52c59068d851e28a0ce",
+    "name": "Tilting Point - CEO (Kevin Segalla)",
+    "priority": "P1",
+    "reason": "Tier-2 publisher/studio"
+  },
+  {
+    "id": "69a77eeba9511d50c48bb3c9",
+    "name": "Microfun - CEO (Victor Qi)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a77eeb1fb11f03949607b2",
+    "name": "ABI Game Studio - CEO (TBD)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a77eec3eee5b4ab15fd168",
+    "name": "Magic Tavern - CEO (Founding Team)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a29dd0a6a15b94f7817b3c",
+    "name": "Dual Cat Games - CEO/CPO (TBD)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a77eece98c2b81fea5378e",
+    "name": "Nordcurrent - CEO (Viktorija Trofimova)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a29dd04d05f2fb68ffa275",
+    "name": "Gismart - Partnerships/LiveOps (TBD)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a77eed32ef34e4dae1b4af",
+    "name": "Supercent - CEO (Junsik Kong)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "699f37fdc344a1e9431ce147",
+    "name": "Kwalee - Partnerships (David Darling, CEO)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a29dd1c3ae8cc33f815e72",
+    "name": "Tripledot Studios - CEO/Partnerships (TBD)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a77eed15685f22f5a7aa24",
+    "name": "Hungry Studio - CEO (Ji-hoon Lee)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52d6680b45cfb258df1",
+    "name": "N3TWORK Studios - CEO (Neil Young)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52d40145e11fb14bc41",
+    "name": "Gamejam - CEO (Christian Calderon)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a77eee0a118099fda83de9",
+    "name": "BoomBit - CEO (Marcin Olejarz)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52d15ec0799579adfe5",
+    "name": "Fundamentally Games - CEO (Oscar Clark)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a77eef3901ddd8b2b5a969",
+    "name": "Amanotes - CEO (Bill Vo)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52e52395f0b87672ff5",
+    "name": "Flaregames - CEO (Klaas Kersting)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a77eef73de9200e9b64be9",
+    "name": "Rollic Games - CEO (Burak Vardal)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52f56c656064da54a21",
+    "name": "Gram Games - CEO (Mehmet Ecevit)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a77f25f757e0f9282565d9",
+    "name": "Coda Platform - CEO (Sekip Can Gokalp)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52fb96a67156d84f736",
+    "name": "MAG Interactive - CEO (Daniel Hasselberg)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a530780e1968ce03045d",
+    "name": "Neon Play - CEO (Oli Christie)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53160f9d096091f02c6",
+    "name": "Outfit7 - CEO (Xinyu Qian)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a531c717ae31f8fb9160",
+    "name": "Kokonut Studio - CEO (Gabriel Medina)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5320e248d163488f4b7",
+    "name": "Magma Mobile - CEO (Nicolas Sorel)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a532c561663fad16a822",
+    "name": "GameRefinery - CEO (Markus Ramark)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5330ea1c0837aa83885",
+    "name": "ZPLAY - CEO (Chen Yiran)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5334e86aa58c22cc7f2",
+    "name": "Moonee - CEO (Nir Benyair)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53496d68ff0dd105ef9",
+    "name": "Coda Games - CEO (Raviv Blechner)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a534b99865335800831c",
+    "name": "Aka Games - CEO (Tzu-Yin Cheng)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a535ff1aa9dabc933644",
+    "name": "JoyPac Beijing - COO (Allison Bilas)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5355151de8871c5e0bd",
+    "name": "Yodo1 - Co-CEO (Henry Fong)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a536af51ac609843adc0",
+    "name": "Potato Play - CEO (Vincent Low)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a536d35787abc0db01ce",
+    "name": "Belka Games - CEO (Ivan Gorchakov)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a537acb1dc01cf4a51fc",
+    "name": "Babil Games - CEO (MJ Fahmi)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a537755e068dd9137dc8",
+    "name": "Wixel Studios - CEO (Ziad Feghali)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5389387e7e5bf94bd4f",
+    "name": "Leaf Mobile - CEO (Darcy Taylor)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5386ff1dd36991b8509",
+    "name": "Small Giant Games - CEO (Timo Soininen)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53940b7246d4ade05e3",
+    "name": "Noodlecake Studios - CEO (Ryan Holowaty)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53917c635f3b489bcd4",
+    "name": "Tripledot Studios UK - CEO (Lior Shiff)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53ab9e1f63b598872ef",
+    "name": "Babil Games Jordan - CEO (Mohammed Fahmi)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53ae51b31f29171259c",
+    "name": "Ruby Games Rovio - CEO (Mert Jan Kurum)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53bbb2f21ad882baab7",
+    "name": "N3TWORK COO - COO (Josh Sell)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53b78a47401c4ef2c3c",
+    "name": "Gram Games Co-Founder - Co-Founder (Kaan Karamanci)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53cd1adc274cacab882",
+    "name": "Gram Games President - President (Dennis Woodside)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53c9e1e668b2831b91c",
+    "name": "Kokonut COO - COO/Co-Founder (Benjamin Morales)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53d942cb4861ad24687",
+    "name": "Yodo1 Co-CEO - Co-CEO (James LaLonde)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53e54ae3dcf96b477fe",
+    "name": "Belka Co-Founder - Co-Founder (Yury Mazanik)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53ebd4cce3e58b5aa77",
+    "name": "Belka CMO - CMO (Aleksandr Tarasov)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a53f564697aa886fc6b4",
+    "name": "Wixel Owner - Owner (Reine Abbas)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5407f8f95711bc1cf34",
+    "name": "Noodlecake Co-Founder - Co-Founder (Jordan Schidlowsky)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5402e577854830d21bd",
+    "name": "Tripledot Co-Founder - Co-Founder (Eyal Chameides)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5410cf3bd3386cf25e5",
+    "name": "Josh Sell N3TWORK - COO (Josh Sell)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5419d3c4d40df3a1582",
+    "name": "Tilting Point Marketing - Partnerships (Marketing Team)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a54289cfa1bb6bcb481e",
+    "name": "PeopleFun Business - Partnerships (Business Dev)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a542338d07a6de049862",
+    "name": "Gamejam Publishing - Partnerships (Publishing Team)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a5431615cf5fbc7def89",
+    "name": "Flaregames Business - Partnerships (Business Team)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a543d6d478325d98bb75",
+    "name": "MAG Interactive Publishing - Partnerships (Publishing Team)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a545709c452dc08926e5",
+    "name": "Outfit7 Business - Partnerships (Business Team)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a54682ed00e82ce6abaf",
+    "name": "Small Giant Publishing - Partnerships (Publishing Team)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52a23bd76186f0fea96",
+    "name": "Firefly Games - CEO (Michael Zhang)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52a1cd4541124238a47",
+    "name": "Blue Wizard Digital - CEO (Jason Kapalka)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52bfaf7e26311739ce9",
+    "name": "Redemption Games - CEO (Daniel Lin)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a5a52bba0459b9a8d8dad4",
+    "name": "PeopleFun - CEO (John Lee)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a7671183998d8804b25413",
+    "name": "Fugo Games - Co-Founder (Deniz Mert Edincik)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a76721b4a006a2d9d81bf3",
+    "name": "Kolibri Games - Co-CEO (Daniel Stammler)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a767228fd6fb28f8a71f2e",
+    "name": "SuperPlay - CEO (Gilad Almog)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a767231ab05a356f2a1b57",
+    "name": "Ruby Games - CEO (Mert Can Kurum)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a76780792733092b258cf6",
+    "name": "Popcore - CEO (Jens-Uwe Sauer)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a767803bbf7644c3b2d5cc",
+    "name": "Green Panda Games - CEO (Sagi Schliesser)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a7678116dcab45d7fadeea",
+    "name": "Tastypill - CEO (Eitan Reisel)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a767811b0d223e8821270c",
+    "name": "Suji Games - CEO (Not Disclosed)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a76782cd8fe08f25ee62a3",
+    "name": "TapNation - CEO (Philippe Chen)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a7ac0de75ee2207d8c5812",
+    "name": "Rollic Games - CEO (Burak Vardal)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a7ac39132e846204adedc5",
+    "name": "TapNation - CEO (Herv\u00e9 Montoute)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a7ac399a9ede82cc7678c5",
+    "name": "Boombit - CEO (Marcin Olejarz)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  },
+  {
+    "id": "69a7ad494432da9657bdec24",
+    "name": "Kwalee - CEO (David Darling)",
+    "priority": "P2",
+    "reason": "Standard outreach target"
+  }
+]

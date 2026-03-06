@@ -1,0 +1,16 @@
+Subject: AI Infrastructure for Interactive Entertainment - Following Epic Games' Lead
+
+Hi Michael,
+
+I noticed CloudTree's investment in Arcturus Studios alongside Epic Games and Autodesk - that deal signals serious conviction in the infrastructure layer of interactive entertainment.
+
+We're building AI-native infrastructure that enables dynamic, AI-powered game worlds at scale. Think procedural content generation, intelligent NPCs, and real-time world adaptation - the fundamental tech that makes next-generation interactive experiences possible.
+
+Given CloudTree's focus on edge computing and ML for gaming, I believe there's strong alignment. We're currently raising our seed round and would value the perspective of a team that's backed infrastructure plays with Epic Games.
+
+Would you be open to a brief call next week to explore the fit?
+
+Best,
+[Name]
+[Company]
+[LinkedIn]

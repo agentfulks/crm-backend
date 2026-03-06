@@ -1,0 +1,16 @@
+Subject: Software Beyond the Screen—Now Actually Working in Industrial Environments
+
+Hi Sunil,
+
+Your "software beyond the screen" thesis has played out beautifully in portfolio companies like Rocket Lab and Diligent Robots. The pattern is clear: smart hardware + ML penetrating industries historically untouched by software.
+
+The gap I'm seeing: the infrastructure that lets this hardware actually operate reliably in industrial environments. Most industrial ML projects die in the "pilot purgatory" between demo and production—not because the models fail, but because the infrastructure to deploy, monitor, and iterate doesn't exist.
+
+We're building that infrastructure. The DevOps layer for industrial ML that lets "software beyond the screen" actually stay deployed beyond the pilot.
+
+Given Ubiquity's focus on ML applications for industrial settings, this feels like a natural fit. Interested?
+
+Best,
+[Name]
+[Company]
+[LinkedIn/Twitter]

@@ -1,0 +1,45 @@
+To: steve@mechanism.capital
+Subject: Crypto-gaming meets AI: Daily investor scoring engine
+Priority: P3 | Fund: Mechanism Capital
+Check Size: $1M-$2M | Stage: Seed to Series A
+
+---
+EMAIL BODY
+---
+Hi Steve,
+
+Mechanism's focus on blockchain, DeFi, and crypto-gaming aligns with the intersection we're building at.
+
+We've built an AI-assisted sourcing engine that scores 200+ funds daily (including crypto-native VCs), auto-generates investor packets with verified contacts, and logs the full pipeline in Trello + Slack.
+
+The twist: we're applying AI automation to the analog VC sourcing process while keeping human judgment at the center. Partners approve sends in minutes, not days.
+
+We're raising a Seed round ($1-2M range) and booking 4+ partner meetings per week through this engine.
+
+Given Mechanism's crypto-gaming thesis, I think there's a natural fit here. Worth 15 minutes?
+
+[CALENDLY_LINK]
+
+Best,
+Lucas Fulks
+[TITLE]
+[COMPANY]
+
+---
+ATTACHMENTS
+---
+1. deliverables/outreach_assets/pitch_deck/latest.pdf
+2. deliverables/outreach_assets/kpi_snapshot/2026-02-25-kpis.csv
+
+---
+FOLLOW-UP SCHEDULE
+---
+Day 3: February 28, 2026 — Value-add follow-up
+Day 7: March 4, 2026 — Final bump or pass
+
+---
+NOTES
+---
+Steve is Partner, Head of Mech Play at Mechanism. Primary hook: 
+crypto-gaming, blockchain infrastructure, DeFi. Emphasize AI + crypto 
+intersection and partner approval workflow.

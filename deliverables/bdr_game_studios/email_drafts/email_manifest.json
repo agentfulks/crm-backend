@@ -1,0 +1,164 @@
+{
+  "manifest_version": "1.0",
+  "created_date": "2026-02-26",
+  "total_studios": 10,
+  "selection_criteria": {
+    "publisher_size": "Prioritized 11-50 and 51-200 employee studios",
+    "contact_availability": "Direct LinkedIn profile confirmed",
+    "hyper_casual_focus": "Mobile/hyper-casual game portfolio"
+  },
+  "emails": [
+    {
+      "rank": 1,
+      "studio": "Ketchapp",
+      "contact_name": "Michel Morcos",
+      "role": "CEO & Co-Founder",
+      "location": "Paris, France",
+      "size": "51-200",
+      "linkedin": "linkedin.com/in/michel-morcos",
+      "focus": "Hyper-casual publisher (2048, Stack)",
+      "file": "ketchapp_email.txt",
+      "priority": "High",
+      "rationale": "Leading hyper-casual publisher with proven hits and Ubisoft backing"
+    },
+    {
+      "rank": 2,
+      "studio": "Homa Games",
+      "contact_name": "Daniel Nathan",
+      "role": "CEO & Co-Founder",
+      "location": "Paris, France",
+      "size": "51-200",
+      "linkedin": "linkedin.com/in/daniel-nathan",
+      "focus": "Hyper-casual publisher (Arcade Hole, Attack Hole)",
+      "file": "homa_games_email.txt",
+      "priority": "High",
+      "rationale": "Top hyper-casual publisher with data-driven hit identification"
+    },
+    {
+      "rank": 3,
+      "studio": "SayGames",
+      "contact_name": "Evgeny Ponomarenko",
+      "role": "CEO & Founder",
+      "location": "Minsk, Belarus",
+      "size": "51-200",
+      "linkedin": "linkedin.com/in/evgeny-ponomarenko",
+      "focus": "Hyper-casual portfolio (My Little Universe, Sand Balls)",
+      "file": "saygames_email.txt",
+      "priority": "High",
+      "rationale": "Strong portfolio with proven retention and engagement"
+    },
+    {
+      "rank": 4,
+      "studio": "Rollic Games",
+      "contact_name": "Burak Vardal",
+      "role": "CEO",
+      "location": "Istanbul, Turkey",
+      "size": "51-200",
+      "linkedin": "linkedin.com/in/burak-vardal",
+      "focus": "Zynga's hyper-casual arm (High Heels, Hair Challenge)",
+      "file": "rollic_games_email.txt",
+      "priority": "High",
+      "rationale": "Zynga backing provides resources and credibility"
+    },
+    {
+      "rank": 5,
+      "studio": "Supersonic Studios",
+      "contact_name": "Nadav Ashkenazy",
+      "role": "CEO",
+      "location": "Tel Aviv, Israel",
+      "size": "51-200",
+      "linkedin": "linkedin.com/in/nadavashkenazy",
+      "focus": "Hyper-casual publisher with IronSource integration",
+      "file": "supersonic_studios_email.txt",
+      "priority": "High",
+      "rationale": "IronSource tech + publishing creates unique positioning"
+    },
+    {
+      "rank": 6,
+      "studio": "Ruby Games",
+      "contact_name": "Mert Can Kurum",
+      "role": "CEO & Founder",
+      "location": "Izmir, Turkey",
+      "size": "11-50",
+      "linkedin": "linkedin.com/in/mert-can-kurum",
+      "focus": "Hyper-casual, acquired by Rovio",
+      "file": "ruby_games_email.txt",
+      "priority": "Medium-High",
+      "rationale": "Smaller team with Rovio backing, highly accessible"
+    },
+    {
+      "rank": 7,
+      "studio": "Alictus Games",
+      "contact_name": "Aytek Kurtuluş",
+      "role": "CEO & Co-Founder",
+      "location": "Ankara, Turkey",
+      "size": "51-200",
+      "linkedin": "linkedin.com/in/aytekkurtulus",
+      "focus": "Hyper-casual (Money Buster!, Deep Clean Inc.)",
+      "file": "alictus_games_email.txt",
+      "priority": "Medium-High",
+      "rationale": "Consistent hit-maker with strong Turkish market presence"
+    },
+    {
+      "rank": 8,
+      "studio": "Green Panda Games",
+      "contact_name": "Guillaume Sztejnberg",
+      "role": "CEO & Founder",
+      "location": "Paris, France",
+      "size": "51-200",
+      "linkedin": "linkedin.com/in/guillaume-sztejnberg",
+      "focus": "Casual/idle games (Bee Factory, Prison Empire)",
+      "file": "green_panda_games_email.txt",
+      "priority": "Medium",
+      "rationale": "Casual/idle focus with loyal player base"
+    },
+    {
+      "rank": 9,
+      "studio": "Dual Cat",
+      "contact_name": "Mikael Le Goff",
+      "role": "CEO & Founder",
+      "location": "Paris, France",
+      "size": "11-50",
+      "linkedin": "linkedin.com/in/mikaelle-goff",
+      "focus": "Mobile game studio",
+      "file": "dual_cat_email.txt",
+      "priority": "Medium",
+      "rationale": "Smaller, accessible team in Paris gaming hub"
+    },
+    {
+      "rank": 10,
+      "studio": "Colossi Games",
+      "contact_name": "Manuel Prueter",
+      "role": "CEO & Co-Founder",
+      "location": "Limassol, Cyprus",
+      "size": "11-50",
+      "linkedin": "linkedin.com/in/manuel-prueter",
+      "focus": "Mobile game development",
+      "file": "colossi_games_email.txt",
+      "priority": "Medium",
+      "rationale": "Growing studio with Cyprus base, accessible size"
+    }
+  ],
+  "summary": {
+    "total_emails": 10,
+    "high_priority": 5,
+    "medium_priority": 5,
+    "geographic_breakdown": {
+      "Paris, France": 3,
+      "Turkey": 2,
+      "Tel Aviv, Israel": 1,
+      "Minsk, Belarus": 1,
+      "Limassol, Cyprus": 1
+    },
+    "size_breakdown": {
+      "11-50": 3,
+      "51-200": 7
+    }
+  },
+  "next_steps": [
+    "Review and personalize emails as needed",
+    "Send via LinkedIn direct message or email if available",
+    "Track responses and follow up within 5-7 days",
+    "Move warm leads to CRM pipeline"
+  ]
+}

@@ -213,7 +213,7 @@ export const emailTemplatesApi = {
   },
 
   async getTemplate(id: string): Promise<EmailTemplate> {
-    const response = await api.get(`/email-templates/${id}/`);
+    const response = await api.get(`/email-templates/${id}`);
     return response.data;
   },
 
@@ -223,17 +223,17 @@ export const emailTemplatesApi = {
   },
 
   async updateTemplate(id: string, data: Partial<EmailTemplate>): Promise<EmailTemplate> {
-    const response = await api.patch(`/email-templates/${id}/`, data);
+    const response = await api.patch(`/email-templates/${id}`, data);
     return response.data;
   },
 
   async deleteTemplate(id: string): Promise<void> {
-    await api.delete(`/email-templates/${id}/`);
+    await api.delete(`/email-templates/${id}`);
   },
 
   async applyTemplate(templateId: string, studioName: string, contactName: string): Promise<{ subject: string; body: string }> {
     const response = await api.post(
-      `/email-templates/${templateId}/apply/`,
+      `/email-templates/${templateId}/apply`,
       null,
       { params: { studio_name: studioName, contact_name: contactName } }
     );

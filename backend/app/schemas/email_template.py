@@ -46,6 +46,12 @@ class EmailTemplateRead(EmailTemplateBase):
     
     class Config:
         from_attributes = True
+        
+    @validator('id', pre=True)
+    def convert_uuid_to_str(cls, v):
+        if isinstance(v, UUID):
+            return str(v)
+        return v
 
 
 class EmailTemplateListResponse(BaseModel):

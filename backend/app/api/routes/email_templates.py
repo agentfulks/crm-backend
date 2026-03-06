@@ -1,5 +1,6 @@
 """Email template endpoints."""
 from __future__ import annotations
+from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
@@ -16,7 +17,7 @@ from app.services import email_template_service
 router = APIRouter()
 
 
-@router.get("/", response_model=EmailTemplateListResponse)
+@router.get("/")
 def list_email_templates(
     *,
     db: Session = Depends(get_db),
@@ -24,28 +25,74 @@ def list_email_templates(
     is_active: bool | None = Query(True, description="Filter by active status"),
     limit: int = Query(50, ge=1, le=1000),
     offset: int = Query(0, ge=0),
-) -> EmailTemplateListResponse:
+):
     """Return all email templates."""
     
     templates = email_template_service.list_templates(
         db, category=category, is_active=is_active, limit=limit, offset=offset
     )
-    return EmailTemplateListResponse(
-        total=len(templates),
-        items=[EmailTemplateRead.model_validate(t, from_attributes=True) for t in templates]
-    )
+    return {
+        'total': len(templates),
+        'items': [{
+            'id': str(t.id),
+            'name': t.name,
+            'description': t.description,
+            'category': t.category,
+            'subject': t.subject,
+            'body': t.body,
+            'variables': t.variables,
+            'is_active': t.is_active,
+            'is_default': t.is_default,
+            'created_by': t.created_by,
+            'created_at': t.created_at.isoformat() if t.created_at else None,
+            'updated_at': t.updated_at.isoformat() if t.updated_at else None,
+            'usage_count': t.usage_count,
+        } for t in templates]
+    }
 
 
-@router.post("/", response_model=EmailTemplateRead, status_code=status.HTTP_201_CREATED)
+@router.post("/", status_code=status.HTTP_201_CREATED)
 def create_email_template(
     *,
     db: Session = Depends(get_db),
-    payload: EmailTemplateCreate,
-) -> EmailTemplateRead:
+    name: str,
+    subject: str,
+    body: str,
+    description: str | None = None,
+    category: str | None = "general",
+    variables: str | None = None,
+    is_active: bool = True,
+    is_default: bool = False,
+):
     """Create a new email template."""
     
-    template = email_template_service.create_template(db, payload.model_dump())
-    return EmailTemplateRead.model_validate(template, from_attributes=True)
+    data = {
+        'name': name,
+        'description': description,
+        'category': category,
+        'subject': subject,
+        'body': body,
+        'variables': variables,
+        'is_active': is_active,
+        'is_default': is_default,
+    }
+    template = email_template_service.create_template(db, data)
+    # Return as dict to avoid Pydantic validation issues with UUID
+    return {
+        'id': str(template.id),
+        'name': template.name,
+        'description': template.description,
+        'category': template.category,
+        'subject': template.subject,
+        'body': template.body,
+        'variables': template.variables,
+        'is_active': template.is_active,
+        'is_default': template.is_default,
+        'created_by': template.created_by,
+        'created_at': template.created_at.isoformat() if template.created_at else None,
+        'updated_at': template.updated_at.isoformat() if template.updated_at else None,
+        'usage_count': template.usage_count,
+    }
 
 
 @router.get("/{template_id}", response_model=EmailTemplateRead)

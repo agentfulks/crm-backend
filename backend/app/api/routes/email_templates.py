@@ -55,27 +55,11 @@ def list_email_templates(
 def create_email_template(
     *,
     db: Session = Depends(get_db),
-    name: str,
-    subject: str,
-    body: str,
-    description: str | None = None,
-    category: str | None = "general",
-    variables: str | None = None,
-    is_active: bool = True,
-    is_default: bool = False,
+    payload: EmailTemplateCreate,
 ):
     """Create a new email template."""
     
-    data = {
-        'name': name,
-        'description': description,
-        'category': category,
-        'subject': subject,
-        'body': body,
-        'variables': variables,
-        'is_active': is_active,
-        'is_default': is_default,
-    }
+    data = payload.model_dump()
     template = email_template_service.create_template(db, data)
     # Return as dict to avoid Pydantic validation issues with UUID
     return {

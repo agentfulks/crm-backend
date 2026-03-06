@@ -31,6 +31,7 @@ class ContactUpdate(BaseModel):
     last_contacted_at: Optional[str] = None   # ISO string
     contact_preference: Optional[str] = None  # 'email' | 'linkedin'
     notes: Optional[str] = None
+    reset_last_contacted: bool = False        # if True, clears last_contacted_at + contact_preference
 
 
 class OutreachLogCreate(BaseModel):
@@ -175,12 +176,16 @@ def update_bdr_contact(
         contact.email_verified = body.email_verified
     if body.timezone is not None:
         contact.timezone = body.timezone
-    if body.last_contacted_at is not None:
-        contact.last_contacted_at = datetime.fromisoformat(
-            body.last_contacted_at.replace("Z", "+00:00")
-        )
-    if body.contact_preference is not None:
-        contact.contact_preference = body.contact_preference
+    if body.reset_last_contacted:
+        contact.last_contacted_at = None
+        contact.contact_preference = None
+    else:
+        if body.last_contacted_at is not None:
+            contact.last_contacted_at = datetime.fromisoformat(
+                body.last_contacted_at.replace("Z", "+00:00")
+            )
+        if body.contact_preference is not None:
+            contact.contact_preference = body.contact_preference
     if body.notes is not None:
         contact.notes = body.notes
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
   X, Mail, Linkedin, Phone, Star, CheckCircle, Clock,
-  ChevronDown, ChevronUp, Trash2, Send, Edit3, Save, RotateCcw,
+  ChevronDown, ChevronUp, Trash2, Send, Edit3, Save, RotateCcw, RefreshCcw,
 } from 'lucide-react';
 import type { BDRContact, BDROutreachLog } from '../types';
 import { useUpdateContact, useOutreachLogs, useDeleteOutreachLog } from '../hooks/useContacts';
@@ -286,6 +286,18 @@ export function ContactDetailModal({ contact, studioName = '', onClose }: Props)
                       : <Mail className="w-3 h-3" />}
                     {lastContacted}
                   </span>
+                )}
+                {lastContacted && (
+                  <button
+                    onClick={async () => {
+                      if (!confirm('Reset "last contacted at"? This only clears the date — it does not delete message history.')) return;
+                      await updateContact.mutateAsync({ id: contact.id, data: { reset_last_contacted: true } as any });
+                    }}
+                    title="Reset last contacted date"
+                    className="text-gray-300 hover:text-red-400 transition-colors"
+                  >
+                    <RefreshCcw className="w-3.5 h-3.5" />
+                  </button>
                 )}
               </div>
             </div>

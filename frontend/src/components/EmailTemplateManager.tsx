@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useEmailTemplates, useCreateEmailTemplate, useUpdateEmailTemplate, useDeleteEmailTemplate } from '../hooks/useEmailTemplates';
-import { Plus, Edit, Trash2, X, Save, Copy } from 'lucide-react';
+import { Plus, Edit, Trash2, X, Save } from 'lucide-react';
 import type { EmailTemplate } from '../types';
 
 interface EmailTemplateManagerProps {
@@ -34,16 +34,38 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
   const templates = templatesData?.items || [];
 
   const handleCreate = async () => {
+    // Validate required fields
+    if (!formData.name.trim()) {
+      alert('Template name is required');
+      return;
+    }
+    if (!formData.subject.trim()) {
+      alert('Subject is required');
+      return;
+    }
+    if (!formData.body.trim()) {
+      alert('Body is required');
+      return;
+    }
+    
     try {
-      await createMutation.mutateAsync({
-        ...formData,
+      console.log('Creating template with data:', formData);
+      const result = await createMutation.mutateAsync({
+        name: formData.name,
+        description: formData.description,
+        category: formData.category,
+        subject: formData.subject,
+        body: formData.body,
         variables: defaultVariables,
         is_active: true,
       });
+      console.log('Template created successfully:', result);
       setIsCreating(false);
       setFormData({ name: '', description: '', category: 'introduction', subject: '', body: '' });
-    } catch (error) {
+      alert('Template created successfully!');
+    } catch (error: any) {
       console.error('Failed to create template:', error);
+      alert('Failed to create template: ' + (error?.response?.data?.detail || error?.message || 'Unknown error'));
     }
   };
 

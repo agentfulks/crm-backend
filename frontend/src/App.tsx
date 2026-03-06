@@ -9,7 +9,6 @@ import { QueueStatus } from './components/QueueStatus';
 import { EmailTemplateManager } from './components/EmailTemplateManager';
 import { ContactsView } from './components/ContactsView';
 import { ClipboardCheck, Filter, Inbox, CheckCircle, XCircle, Users, Building2, Mail, UserCircle } from 'lucide-react';
-import type { Packet, EmailTemplate } from './types';
 
 type View = 'vc' | 'studios' | 'contacts';
 
@@ -18,8 +17,7 @@ function App() {
   const [editingPacketId, setEditingPacketId] = useState<string | null>(null);
   const [statusFilter, setStatusFilter] = useState<string>('AWAITING_APPROVAL');
   const [actionNotification, setActionNotification] = useState<{type: 'success' | 'error', message: string} | null>(null);
-  // Consume the setter to avoid unused variable warning while keeping it available for future use
-  setActionNotification;
+  // Action notification is used in handleStatusChange and template application
   const [currentView, setCurrentView] = useState<View>('vc');
   const [showTemplateManager, setShowTemplateManager] = useState(false);
   const [selectedStudioForTemplate, setSelectedStudioForTemplate] = useState<{name: string, contactName: string} | null>(null);
@@ -32,7 +30,8 @@ function App() {
   const { data: studioPacketsData, isLoading: studioLoading } = useStudioPackets(statusFilter);
   const { data: pendingStudioData } = usePendingStudioPackets();
   const updateStatusMutation = useUpdateStudioPacketStatus();
-  
+  const applyTemplateMutation = useApplyTemplate();
+
   const packets = packetsData?.items || [];
   const studioPackets = studioPacketsData?.items || [];
   
@@ -192,7 +191,7 @@ function App() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {packets.map((packet: Packet) => (
+                {packets.map((packet) => (
                   <PacketCard
                     key={packet.id}
                     packet={packet}
@@ -290,7 +289,7 @@ function App() {
           }}
           onSelectTemplate={selectedStudioForTemplate ? async (template) => {
             try {
-              const result = await applyTemplateMutation.mutateAsync({
+              await applyTemplateMutation.mutateAsync({
                 templateId: template.id,
                 studioName: selectedStudioForTemplate.name,
                 contactName: selectedStudioForTemplate.contactName,

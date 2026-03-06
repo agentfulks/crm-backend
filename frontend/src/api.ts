@@ -1,11 +1,10 @@
 import axios from 'axios';
-import type { 
-  Packet, 
-  PacketListResponse, 
-  QueueStatus, 
-  Fund, 
-  StudioPacket, 
-  StudioPacketListResponse,
+import type {
+  Packet,
+  PacketListResponse,
+  QueueStatus,
+  Fund,
+  StudioPacket,
   EmailTemplate,
   EmailTemplateListResponse
 } from './types';
@@ -88,7 +87,7 @@ export const studiosApi = {
 
 // Studio packets - combining company data with contacts
 export const studioPacketsApi = {
-  async listStudioPackets(status?: string): Promise<StudioPacketListResponse> {
+  async listStudioPackets(status?: string): Promise<{ total: number; items: StudioPacket[] }> {
     // Get companies from bdr_companies
     const companiesResponse = await api.get('/bdr/companies/', { 
       params: status ? { status } : {} 
@@ -166,7 +165,7 @@ export const studioPacketsApi = {
     };
   },
 
-  async getPendingStudioPackets(): Promise<StudioPacketListResponse> {
+  async getPendingStudioPackets(): Promise<{ total: number; items: StudioPacket[] }> {
     return this.listStudioPackets('AWAITING_APPROVAL');
   },
 

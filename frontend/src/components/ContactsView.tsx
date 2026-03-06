@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { useContacts, ContactFilters } from '../hooks/useContacts';
+import { useContacts, type ContactFilters } from '../hooks/useContacts';
 import { useStudioPackets } from '../hooks/useStudioPackets';
 import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle } from 'lucide-react';
-import { Link } from 'lucide-react';
 
 export function ContactsView() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,7 +19,7 @@ export function ContactsView() {
   const studios = studiosData?.items || [];
   
   // Create studio lookup map
-  const studioMap = new Map(studios.map(s => [s.studio_id, s.studio]));
+  const studioMap = new Map(studios.map((s) => [s.studio_id, s.studio]));
   
   const handleCompanyFilter = (companyId: string) => {
     setSelectedCompany(companyId);
@@ -63,7 +62,7 @@ export function ContactsView() {
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 min-w-[200px]"
             >
               <option value="">All Studios</option>
-              {studios.map((studio) => (
+              {studios.map((studio: { studio_id: string; studio?: { name?: string } }) => (
                 <option key={studio.studio_id} value={studio.studio_id}>
                   {studio.studio?.name}
                 </option>
@@ -98,12 +97,12 @@ export function ContactsView() {
           </div>
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-yellow-500" />
-            <span className="font-medium">{contacts.filter(c => c.is_decision_maker).length}</span>
+            <span className="font-medium">{contacts.filter((c: { is_decision_maker: boolean }) => c.is_decision_maker).length}</span>
             <span className="text-gray-500">decision makers</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
-            <span className="font-medium">{contacts.filter(c => c.email_verified).length}</span>
+            <span className="font-medium">{contacts.filter((c: { email_verified: boolean }) => c.email_verified).length}</span>
             <span className="text-gray-500">verified emails</span>
           </div>
         </div>
@@ -130,7 +129,7 @@ export function ContactsView() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {contacts.map((contact) => {
+          {contacts.map((contact: { id: string; company_id: string; full_name?: string; job_title?: string; is_decision_maker: boolean; email?: string; email_verified: boolean; linkedin_url?: string; phone?: string; department?: string; last_contacted_at?: string }) => {
             const studio = studioMap.get(contact.company_id);
             
             return (

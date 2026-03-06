@@ -152,6 +152,15 @@ export interface BDRContact {
   updated_at: string;
 }
 
+export interface BDROutreachLog {
+  id: string;
+  contact_id: string;
+  channel: 'email' | 'linkedin';
+  subject?: string;
+  body?: string;
+  sent_at: string;
+}
+
 export interface PacketListResponse {
   total: number;
   items: Packet[];

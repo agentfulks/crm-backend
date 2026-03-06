@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { api } from '../api';
-import type { BDRContact } from '../types';
+import type { BDRContact, BDROutreachLog } from '../types';
 
 export interface ContactFilters {
   company_id?: string;
@@ -43,7 +43,7 @@ export function useContact(id: string) {
   return useQuery({
     queryKey: ['contact', id],
     queryFn: async () => {
-      const response = await api.get(`/bdr/contacts/${id}/`);
+      const response = await api.get(`/bdr/contacts/${id}`);
       return response.data;
     },
     enabled: !!id,
@@ -86,9 +86,52 @@ export function useDeleteContact() {
   
   return useMutation({
     mutationFn: async (id: string) => {
-      await api.delete(`/bdr/contacts/${id}/`);
+      await api.delete(`/bdr/contacts/${id}`);
     },
     onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['contacts'] });
+    },
+  });
+}
+
+// Hook to fetch outreach log history for a contact
+export function useOutreachLogs(contactId: string) {
+  return useQuery({
+    queryKey: ['outreach-logs', contactId],
+    queryFn: async () => {
+      const response = await api.get(`/bdr/contacts/${contactId}/outreach`);
+      return response.data as { total: number; items: BDROutreachLog[] };
+    },
+    enabled: !!contactId,
+  });
+}
+
+// Hook to record an outreach attempt
+export function useCreateOutreachLog() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({
+      contactId,
+      channel,
+      subject,
+      body,
+    }: {
+      contactId: string;
+      channel: 'email' | 'linkedin';
+      subject?: string;
+      body?: string;
+    }) => {
+      const response = await api.post(`/bdr/contacts/${contactId}/outreach`, {
+        channel,
+        subject,
+        body,
+      });
+      return response.data as BDROutreachLog;
+    },
+    onSuccess: (_data, vars) => {
+      // Refresh both the log list and the contacts list (for last_contacted_at)
+      queryClient.invalidateQueries({ queryKey: ['outreach-logs', vars.contactId] });
       queryClient.invalidateQueries({ queryKey: ['contacts'] });
     },
   });

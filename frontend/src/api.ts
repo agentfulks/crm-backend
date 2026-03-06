@@ -24,7 +24,7 @@ const api = axios.create({
 
 export const fundsApi = {
   async listFunds(): Promise<{ items: Fund[] }> {
-    const response = await api.get('/funds');
+    const response = await api.get('/funds/');
     return response.data;
   },
 
@@ -37,12 +37,12 @@ export const fundsApi = {
 export const packetsApi = {
   async listPackets(status?: string): Promise<PacketListResponse> {
     const params = status ? { status } : {};
-    const response = await api.get('/packets', { params });
+    const response = await api.get('/packets/', { params });
     return response.data;
   },
 
   async getPendingPackets(): Promise<PacketListResponse> {
-    const response = await api.get('/packets', { params: { status: 'AWAITING_APPROVAL' } });
+    const response = await api.get('/packets/', { params: { status: 'AWAITING_APPROVAL' } });
     return response.data;
   },
 
@@ -80,7 +80,7 @@ export const studiosApi = {
   },
 
   async getStudio(id: string): Promise<any> {
-    const response = await api.get(`/bdr/companies/${id}/`);
+    const response = await api.get(`/bdr/companies/${id}`);
     return response.data;
   },
 };
@@ -171,24 +171,24 @@ export const studioPacketsApi = {
 
   async approveStudioPacket(id: string): Promise<StudioPacket> {
     const companyId = id.replace('studio-packet-', '');
-    const response = await api.patch(`/bdr/companies/${companyId}/`, { status: 'APPROVED' });
+    const response = await api.patch(`/bdr/companies/${companyId}`, { status: 'APPROVED' });
     return response.data;
   },
 
   async rejectStudioPacket(id: string): Promise<StudioPacket> {
     const companyId = id.replace('studio-packet-', '');
-    const response = await api.patch(`/bdr/companies/${companyId}/`, { status: 'CLOSED' });
+    const response = await api.patch(`/bdr/companies/${companyId}`, { status: 'CLOSED' });
     return response.data;
   },
 
   async updateStudioPacketStatus(id: string, status: string): Promise<StudioPacket> {
     const companyId = id.replace('studio-packet-', '');
-    const response = await api.patch(`/bdr/companies/${companyId}/`, { status });
+    const response = await api.patch(`/bdr/companies/${companyId}`, { status });
     return response.data;
   },
 
   async getStudioQueueStatus(): Promise<QueueStatus> {
-    const response = await api.get('/bdr/companies');
+    const response = await api.get('/bdr/companies/');
     const items = response.data.items || [];
     
     return {

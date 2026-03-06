@@ -15,6 +15,17 @@ app.use('/api', createProxyMiddleware({
   pathRewrite: {
     '^/api': '',  // Remove /api since it's in the target
   },
+  on: {
+    // Rewrite any redirect Location headers so the browser follows them
+    // through the proxy instead of going directly to localhost:8000
+    proxyRes: (proxyRes) => {
+      if (proxyRes.headers['location']) {
+        proxyRes.headers['location'] = proxyRes.headers['location']
+          .replace(/^https?:\/\/localhost:8000\/api/, '/api')
+          .replace(/^https?:\/\/localhost:8000/, '');
+      }
+    },
+  },
 }));
 
 // Serve static files

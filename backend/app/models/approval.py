@@ -51,7 +51,7 @@ class ApprovalAuditLog(Base, TimestampMixin):
     # 'system' for auto-actions, user_id for manual actions
     
     # Additional metadata
-    metadata: Mapped[Optional[Dict[str, Any]]] = mapped_column(JSON_VARIANT, nullable=True)
+    extra_data: Mapped[Optional[Dict[str, Any]]] = mapped_column(JSON_VARIANT, nullable=True)
     
     def __repr__(self) -> str:
         return f"<ApprovalAuditLog {self.action} {self.entity_type}:{self.entity_id}>"

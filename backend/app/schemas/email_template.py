@@ -3,8 +3,9 @@ from __future__ import annotations
 
 from datetime import datetime
 from typing import List
+from uuid import UUID
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class EmailTemplateBase(BaseModel):
@@ -46,8 +47,9 @@ class EmailTemplateRead(EmailTemplateBase):
     
     class Config:
         from_attributes = True
-        
-    @validator('id', pre=True)
+
+    @field_validator('id', mode='before')
+    @classmethod
     def convert_uuid_to_str(cls, v):
         if isinstance(v, UUID):
             return str(v)

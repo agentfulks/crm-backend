@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Copy, Check, Mail, Linkedin, FileText, Send } from 'lucide-react';
+import { X, Copy, Check, Mail, Linkedin, FileText, Send, ExternalLink } from 'lucide-react';
 import type { BDRContact, EmailTemplate } from '../types';
 import { EmailTemplateManager } from './EmailTemplateManager';
 import { useUpdateContact } from '../hooks/useContacts';
@@ -16,6 +16,11 @@ function applyVariables(text: string, contact: BDRContact, studioName: string): 
     .replace(/\{\{contact_name\}\}/g, contact.full_name || '')
     .replace(/\{\{first_name\}\}/g, contact.full_name?.split(' ')[0] || '')
     .replace(/\{\{my_name\}\}/g, 'Lucas Fulks');
+}
+
+function buildGmailUrl(to: string, subject: string, body: string): string {
+  const params = new URLSearchParams({ view: 'cm', to, su: subject, body });
+  return `https://mail.google.com/mail/?${params.toString()}`;
 }
 
 export function OutreachModal({ contact, studioName = '', onClose }: OutreachModalProps) {
@@ -41,6 +46,13 @@ export function OutreachModal({ contact, studioName = '', onClose }: OutreachMod
   };
 
   const handleMarkSent = async (channel: 'email' | 'linkedin') => {
+    // Open the destination first (before async work so popup isn't blocked)
+    if (channel === 'email' && contact.email) {
+      window.open(buildGmailUrl(contact.email, subject, body), '_blank');
+    } else if (channel === 'linkedin' && contact.linkedin_url) {
+      window.open(contact.linkedin_url, '_blank');
+    }
+
     await updateContact.mutateAsync({
       id: contact.id,
       data: {
@@ -186,7 +198,7 @@ export function OutreachModal({ contact, studioName = '', onClose }: OutreachMod
               </button>
             )}
 
-            {/* Mark sent */}
+            {/* Mark sent — opens Gmail or LinkedIn + records outreach */}
             {markedAs ? (
               <div className="w-full bg-green-50 border border-green-200 text-green-700 py-2.5 rounded-lg text-center text-sm font-medium flex items-center justify-center gap-2">
                 <Check className="w-4 h-4" />
@@ -194,22 +206,28 @@ export function OutreachModal({ contact, studioName = '', onClose }: OutreachMod
               </div>
             ) : (
               <div className="flex gap-2">
-                <button
-                  onClick={() => handleMarkSent('email')}
-                  disabled={updateContact.isPending}
-                  className="flex-1 bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2 text-sm font-semibold disabled:opacity-50 transition-colors"
-                >
-                  <Send className="w-4 h-4" />
-                  Sent via Email
-                </button>
-                <button
-                  onClick={() => handleMarkSent('linkedin')}
-                  disabled={updateContact.isPending}
-                  className="flex-1 bg-[#0077b5] text-white py-2.5 rounded-lg hover:bg-[#006097] flex items-center justify-center gap-2 text-sm font-semibold disabled:opacity-50 transition-colors"
-                >
-                  <Linkedin className="w-4 h-4" />
-                  Sent via LinkedIn
-                </button>
+                {contact.email && (
+                  <button
+                    onClick={() => handleMarkSent('email')}
+                    disabled={updateContact.isPending}
+                    className="flex-1 bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2 text-sm font-semibold disabled:opacity-50 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <Send className="w-3.5 h-3.5" />
+                    Open Gmail + Mark Sent
+                  </button>
+                )}
+                {contact.linkedin_url && (
+                  <button
+                    onClick={() => handleMarkSent('linkedin')}
+                    disabled={updateContact.isPending}
+                    className="flex-1 bg-[#0077b5] text-white py-2.5 rounded-lg hover:bg-[#006097] flex items-center justify-center gap-2 text-sm font-semibold disabled:opacity-50 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <Linkedin className="w-3.5 h-3.5" />
+                    Open LinkedIn + Mark Sent
+                  </button>
+                )}
               </div>
             )}
           </div>

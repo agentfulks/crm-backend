@@ -71,7 +71,7 @@ export function useUpdateContact() {
   
   return useMutation({
     mutationFn: async ({ id, data }: { id: string; data: Partial<BDRContact> }) => {
-      const response = await api.patch(`/bdr/contacts/${id}/`, data);
+      const response = await api.patch(`/bdr/contacts/${id}`, data);
       return response.data;
     },
     onSuccess: () => {

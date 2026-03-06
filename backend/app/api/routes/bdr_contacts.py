@@ -70,15 +70,38 @@ def list_bdr_contacts(
     db: Session = Depends(get_db),
     company_id: str | None = Query(None),
     is_decision_maker: bool | None = Query(None),
+    # last_contacted filters
+    never_contacted: bool | None = Query(None, description="If true, only contacts never contacted"),
+    last_contacted_after: str | None = Query(None, description="ISO date – contacts last contacted after this date (inclusive)"),
+    last_contacted_before: str | None = Query(None, description="ISO date – contacts last contacted before this date (inclusive)"),
+    last_contacted_on: str | None = Query(None, description="ISO date – contacts last contacted on this exact day"),
     limit: int = Query(1000, ge=1, le=5000),
     offset: int = Query(0, ge=0),
 ):
-    """List all BDR contacts."""
+    """List all BDR contacts with optional filters."""
     query = db.query(BDRContact)
+
     if company_id:
         query = query.filter(BDRContact.company_id == company_id)
     if is_decision_maker is not None:
         query = query.filter(BDRContact.is_decision_maker == is_decision_maker)
+
+    # last_contacted filters
+    if never_contacted:
+        query = query.filter(BDRContact.last_contacted_at.is_(None))
+    else:
+        if last_contacted_on:
+            # Exact calendar day (midnight → midnight+1)
+            day_start = datetime.fromisoformat(last_contacted_on).replace(hour=0, minute=0, second=0, microsecond=0)
+            day_end = day_start.replace(hour=23, minute=59, second=59, microsecond=999999)
+            query = query.filter(BDRContact.last_contacted_at >= day_start, BDRContact.last_contacted_at <= day_end)
+        else:
+            if last_contacted_after:
+                after_dt = datetime.fromisoformat(last_contacted_after).replace(hour=0, minute=0, second=0, microsecond=0)
+                query = query.filter(BDRContact.last_contacted_at >= after_dt)
+            if last_contacted_before:
+                before_dt = datetime.fromisoformat(last_contacted_before).replace(hour=23, minute=59, second=59, microsecond=999999)
+                query = query.filter(BDRContact.last_contacted_at <= before_dt)
 
     total = query.count()
     items = query.offset(offset).limit(limit).all()

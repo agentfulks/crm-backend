@@ -1,15 +1,77 @@
 import { useState } from 'react';
 import { useContacts, type ContactFilters } from '../hooks/useContacts';
 import { useStudioPackets } from '../hooks/useStudioPackets';
-import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send } from 'lucide-react';
+import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send, Calendar, X as XIcon } from 'lucide-react';
 import { ContactDetailModal } from './ContactDetailModal';
 import type { BDRContact } from '../types';
+
+type ContactedQuick = 'all' | 'never' | 'today' | '7d' | '30d' | 'custom';
+
+function toISODate(d: Date): string {
+  return d.toISOString().split('T')[0];
+}
 
 export function ContactsView() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState<ContactFilters>({});
   const [selectedCompany, setSelectedCompany] = useState<string>('');
   const [detailContact, setDetailContact] = useState<{ contact: BDRContact; studioName: string } | null>(null);
+
+  // Last-contacted filter state
+  const [contactedQuick, setContactedQuick] = useState<ContactedQuick>('all');
+  const [customAfter, setCustomAfter] = useState('');
+  const [customOn, setCustomOn] = useState('');
+
+  const applyContactedFilter = (quick: ContactedQuick, after: string, on: string) => {
+    const today = new Date();
+    let patch: Partial<ContactFilters> = {
+      never_contacted: undefined,
+      last_contacted_after: undefined,
+      last_contacted_before: undefined,
+      last_contacted_on: undefined,
+    };
+    if (quick === 'never') {
+      patch.never_contacted = true;
+    } else if (quick === 'today') {
+      patch.last_contacted_on = toISODate(today);
+    } else if (quick === '7d') {
+      const d = new Date(today); d.setDate(d.getDate() - 7);
+      patch.last_contacted_after = toISODate(d);
+    } else if (quick === '30d') {
+      const d = new Date(today); d.setDate(d.getDate() - 30);
+      patch.last_contacted_after = toISODate(d);
+    } else if (quick === 'custom') {
+      if (on) patch.last_contacted_on = on;
+      else if (after) patch.last_contacted_after = after;
+    }
+    setFilters(prev => ({ ...prev, ...patch }));
+  };
+
+  const handleContactedQuick = (q: ContactedQuick) => {
+    setContactedQuick(q);
+    setCustomAfter('');
+    setCustomOn('');
+    applyContactedFilter(q, '', '');
+  };
+
+  const handleCustomAfterChange = (v: string) => {
+    setCustomAfter(v);
+    setCustomOn('');
+    applyContactedFilter('custom', v, '');
+  };
+
+  const handleCustomOnChange = (v: string) => {
+    setCustomOn(v);
+    setCustomAfter('');
+    applyContactedFilter('custom', '', v);
+  };
+
+  const clearContactedFilter = () => {
+    setContactedQuick('all');
+    setCustomAfter('');
+    setCustomOn('');
+    applyContactedFilter('all', '', '');
+  };
 
   const { data: contactsData, isLoading } = useContacts({
     ...filters,
@@ -109,6 +171,65 @@ export function ContactsView() {
               <option value="dm">Decision Makers Only</option>
               <option value="non-dm">Non-Decision Makers</option>
             </select>
+          </div>
+        </div>
+
+        {/* Last Contacted Filter */}
+        <div className="mt-3 pt-3 border-t border-gray-100">
+          <div className="flex items-center gap-2 flex-wrap">
+            <Calendar className="w-4 h-4 text-gray-400 flex-shrink-0" />
+            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide mr-1">Last Contacted:</span>
+
+            {/* Quick chips */}
+            {(['all', 'never', 'today', '7d', '30d', 'custom'] as ContactedQuick[]).map((q) => (
+              <button
+                key={q}
+                onClick={() => handleContactedQuick(q)}
+                className={`text-xs px-3 py-1.5 rounded-full font-medium border transition-colors ${
+                  contactedQuick === q
+                    ? 'bg-blue-600 text-white border-blue-600'
+                    : 'bg-white text-gray-600 border-gray-300 hover:border-blue-400 hover:text-blue-600'
+                }`}
+              >
+                {{ all: 'Any time', never: 'Never', today: 'Today', '7d': 'Last 7 days', '30d': 'Last 30 days', custom: 'Custom…' }[q]}
+              </button>
+            ))}
+
+            {/* Custom date inputs — shown when "custom" selected */}
+            {contactedQuick === 'custom' && (
+              <div className="flex items-center gap-2 ml-1 flex-wrap">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs text-gray-500">On:</span>
+                  <input
+                    type="date"
+                    value={customOn}
+                    onChange={(e) => handleCustomOnChange(e.target.value)}
+                    className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+                <span className="text-xs text-gray-400">or</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs text-gray-500">After:</span>
+                  <input
+                    type="date"
+                    value={customAfter}
+                    onChange={(e) => handleCustomAfterChange(e.target.value)}
+                    className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Clear button when an active filter is set */}
+            {contactedQuick !== 'all' && (
+              <button
+                onClick={clearContactedFilter}
+                className="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 ml-1"
+                title="Clear filter"
+              >
+                <XIcon className="w-3.5 h-3.5" /> Clear
+              </button>
+            )}
           </div>
         </div>
 

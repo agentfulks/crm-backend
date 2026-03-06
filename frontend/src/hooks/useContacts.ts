@@ -6,6 +6,11 @@ export interface ContactFilters {
   company_id?: string;
   is_decision_maker?: boolean;
   search?: string;
+  // Last-contacted filters (send only one variant at a time)
+  never_contacted?: boolean;
+  last_contacted_after?: string;   // ISO date string YYYY-MM-DD
+  last_contacted_before?: string;  // ISO date string YYYY-MM-DD
+  last_contacted_on?: string;      // ISO date string YYYY-MM-DD
 }
 
 // Hook to fetch contacts with optional filters
@@ -16,9 +21,13 @@ export function useContacts(filters?: ContactFilters) {
       const params: Record<string, any> = {};
       if (filters?.company_id) params.company_id = filters.company_id;
       if (filters?.is_decision_maker !== undefined) params.is_decision_maker = filters.is_decision_maker;
-      
+      if (filters?.never_contacted) params.never_contacted = true;
+      if (filters?.last_contacted_after) params.last_contacted_after = filters.last_contacted_after;
+      if (filters?.last_contacted_before) params.last_contacted_before = filters.last_contacted_before;
+      if (filters?.last_contacted_on) params.last_contacted_on = filters.last_contacted_on;
+
       const response = await api.get('/bdr/contacts/', { params });
-      
+
       // Apply search filter client-side if provided
       let items = response.data?.items || [];
       if (filters?.search) {

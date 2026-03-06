@@ -106,6 +106,21 @@ export function useOutreachLogs(contactId: string) {
   });
 }
 
+// Hook to delete an outreach log entry
+export function useDeleteOutreachLog() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({ contactId, logId }: { contactId: string; logId: string }) => {
+      await api.delete(`/bdr/contacts/${contactId}/outreach/${logId}`);
+    },
+    onSuccess: (_data, vars) => {
+      queryClient.invalidateQueries({ queryKey: ['outreach-logs', vars.contactId] });
+      queryClient.invalidateQueries({ queryKey: ['contacts'] });
+    },
+  });
+}
+
 // Hook to record an outreach attempt
 export function useCreateOutreachLog() {
   const queryClient = useQueryClient();

@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { useContacts, type ContactFilters } from '../hooks/useContacts';
 import { useStudioPackets } from '../hooks/useStudioPackets';
 import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send } from 'lucide-react';
-import { OutreachModal } from './OutreachModal';
+import { ContactDetailModal } from './ContactDetailModal';
 import type { BDRContact } from '../types';
 
 export function ContactsView() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState<ContactFilters>({});
   const [selectedCompany, setSelectedCompany] = useState<string>('');
-  const [outreachContact, setOutreachContact] = useState<{ contact: BDRContact; studioName: string } | null>(null);
+  const [detailContact, setDetailContact] = useState<{ contact: BDRContact; studioName: string } | null>(null);
 
   const { data: contactsData, isLoading } = useContacts({
     ...filters,
@@ -53,12 +53,12 @@ export function ContactsView() {
 
   return (
     <div className="space-y-6">
-      {/* Outreach Modal */}
-      {outreachContact && (
-        <OutreachModal
-          contact={outreachContact.contact}
-          studioName={outreachContact.studioName}
-          onClose={() => setOutreachContact(null)}
+      {/* Contact Detail Modal */}
+      {detailContact && (
+        <ContactDetailModal
+          contact={detailContact.contact}
+          studioName={detailContact.studioName}
+          onClose={() => setDetailContact(null)}
         />
       )}
 
@@ -170,7 +170,8 @@ export function ContactsView() {
             return (
               <div
                 key={contact.id}
-                className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow flex flex-col"
+                onClick={() => setDetailContact({ contact, studioName: studio?.name || '' })}
+                className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all cursor-pointer flex flex-col"
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-3">
@@ -216,6 +217,7 @@ export function ContactsView() {
                   {contact.email && (
                     <a
                       href={`mailto:${contact.email}`}
+                      onClick={(e) => e.stopPropagation()}
                       className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800"
                     >
                       <Mail className="w-4 h-4 flex-shrink-0" />
@@ -231,6 +233,7 @@ export function ContactsView() {
                       href={contact.linkedin_url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800"
                     >
                       <Linkedin className="w-4 h-4 flex-shrink-0" />
@@ -250,10 +253,10 @@ export function ContactsView() {
                 <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
                   <span className="text-xs text-gray-500">{contact.department || 'Unknown Dept'}</span>
                   <button
-                    onClick={() => setOutreachContact({
-                      contact,
-                      studioName: studio?.name || '',
-                    })}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setDetailContact({ contact, studioName: studio?.name || '' });
+                    }}
                     className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
                   >
                     <Send className="w-3 h-3" />

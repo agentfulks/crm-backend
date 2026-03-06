@@ -223,3 +223,23 @@ def create_outreach_log(
     db.commit()
     db.refresh(log)
     return _log_to_dict(log)
+
+
+@router.delete("/{contact_id}/outreach/{log_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_outreach_log(
+    *,
+    db: Session = Depends(get_db),
+    contact_id: str,
+    log_id: str,
+):
+    """Delete a specific outreach log entry."""
+    log = (
+        db.query(BDROutreachLog)
+        .filter(BDROutreachLog.id == log_id, BDROutreachLog.contact_id == contact_id)
+        .first()
+    )
+    if not log:
+        raise HTTPException(status_code=404, detail="Outreach log not found")
+    db.delete(log)
+    db.commit()
+    return

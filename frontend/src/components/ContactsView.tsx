@@ -1,26 +1,29 @@
 import { useState } from 'react';
 import { useContacts, type ContactFilters } from '../hooks/useContacts';
 import { useStudioPackets } from '../hooks/useStudioPackets';
-import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle } from 'lucide-react';
+import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send } from 'lucide-react';
+import { OutreachModal } from './OutreachModal';
+import type { BDRContact } from '../types';
 
 export function ContactsView() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState<ContactFilters>({});
   const [selectedCompany, setSelectedCompany] = useState<string>('');
-  
+  const [outreachContact, setOutreachContact] = useState<{ contact: BDRContact; studioName: string } | null>(null);
+
   const { data: contactsData, isLoading } = useContacts({
     ...filters,
     search: searchTerm,
   });
-  
+
   const { data: studiosData } = useStudioPackets();
-  
+
   const contacts = contactsData?.items || [];
   const studios = studiosData?.items || [];
-  
-  // Create studio lookup map
+
+  // Create studio lookup map (company_id → studio name)
   const studioMap = new Map(studios.map((s) => [s.studio_id, s.studio]));
-  
+
   const handleCompanyFilter = (companyId: string) => {
     setSelectedCompany(companyId);
     setFilters(prev => ({
@@ -28,7 +31,7 @@ export function ContactsView() {
       company_id: companyId || undefined,
     }));
   };
-  
+
   const handleDecisionMakerFilter = (value: boolean | undefined) => {
     setFilters(prev => ({
       ...prev,
@@ -36,8 +39,29 @@ export function ContactsView() {
     }));
   };
 
+  const formatLastContacted = (dateStr?: string) => {
+    if (!dateStr) return null;
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+    if (diffDays === 0) return 'Today';
+    if (diffDays === 1) return 'Yesterday';
+    if (diffDays < 7) return `${diffDays}d ago`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)}w ago`;
+    return date.toLocaleDateString();
+  };
+
   return (
     <div className="space-y-6">
+      {/* Outreach Modal */}
+      {outreachContact && (
+        <OutreachModal
+          contact={outreachContact.contact}
+          studioName={outreachContact.studioName}
+          onClose={() => setOutreachContact(null)}
+        />
+      )}
+
       {/* Header with Search and Filters */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
         <div className="flex flex-col md:flex-row gap-4">
@@ -52,7 +76,7 @@ export function ContactsView() {
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
-          
+
           {/* Company Filter */}
           <div className="flex items-center gap-2">
             <Building2 className="w-5 h-5 text-gray-400" />
@@ -69,7 +93,7 @@ export function ContactsView() {
               ))}
             </select>
           </div>
-          
+
           {/* Decision Maker Filter */}
           <div className="flex items-center gap-2">
             <Filter className="w-5 h-5 text-gray-400" />
@@ -87,7 +111,7 @@ export function ContactsView() {
             </select>
           </div>
         </div>
-        
+
         {/* Stats */}
         <div className="flex gap-6 mt-4 pt-4 border-t border-gray-100 text-sm">
           <div className="flex items-center gap-2">
@@ -97,17 +121,22 @@ export function ContactsView() {
           </div>
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-yellow-500" />
-            <span className="font-medium">{contacts.filter((c: { is_decision_maker: boolean }) => c.is_decision_maker).length}</span>
+            <span className="font-medium">{contacts.filter((c: BDRContact) => c.is_decision_maker).length}</span>
             <span className="text-gray-500">decision makers</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
-            <span className="font-medium">{contacts.filter((c: { email_verified: boolean }) => c.email_verified).length}</span>
+            <span className="font-medium">{contacts.filter((c: BDRContact) => c.email_verified).length}</span>
             <span className="text-gray-500">verified emails</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Send className="w-4 h-4 text-purple-500" />
+            <span className="font-medium">{contacts.filter((c: BDRContact) => c.last_contacted_at).length}</span>
+            <span className="text-gray-500">contacted</span>
           </div>
         </div>
       </div>
-      
+
       {/* Contacts Grid */}
       {isLoading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -129,13 +158,19 @@ export function ContactsView() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {contacts.map((contact: { id: string; company_id: string; full_name?: string; job_title?: string; is_decision_maker: boolean; email?: string; email_verified: boolean; linkedin_url?: string; phone?: string; department?: string; last_contacted_at?: string }) => {
+          {contacts.map((contact: BDRContact) => {
             const studio = studioMap.get(contact.company_id);
-            
+            const lastContacted = formatLastContacted(contact.last_contacted_at);
+            const channelIcon = contact.contact_preference === 'linkedin'
+              ? <Linkedin className="w-3 h-3" />
+              : contact.contact_preference === 'email'
+              ? <Mail className="w-3 h-3" />
+              : null;
+
             return (
               <div
                 key={contact.id}
-                className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow"
+                className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow flex flex-col"
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-3">
@@ -150,14 +185,22 @@ export function ContactsView() {
                       <p className="text-sm text-gray-500">{contact.job_title || 'Unknown Role'}</p>
                     </div>
                   </div>
-                  {contact.is_decision_maker && (
-                    <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full flex items-center gap-1">
-                      <Star className="w-3 h-3" />
-                      DM
-                    </span>
-                  )}
+                  <div className="flex flex-col items-end gap-1">
+                    {contact.is_decision_maker && (
+                      <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
+                        <Star className="w-3 h-3" />
+                        DM
+                      </span>
+                    )}
+                    {lastContacted && (
+                      <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
+                        {channelIcon}
+                        {lastContacted}
+                      </span>
+                    )}
+                  </div>
                 </div>
-                
+
                 {/* Studio */}
                 {studio && (
                   <div className="mb-3 p-2 bg-gray-50 rounded">
@@ -167,22 +210,22 @@ export function ContactsView() {
                     </p>
                   </div>
                 )}
-                
+
                 {/* Contact Info */}
-                <div className="space-y-2">
+                <div className="space-y-2 flex-1">
                   {contact.email && (
                     <a
                       href={`mailto:${contact.email}`}
                       className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800"
                     >
-                      <Mail className="w-4 h-4" />
-                      {contact.email}
+                      <Mail className="w-4 h-4 flex-shrink-0" />
+                      <span className="truncate">{contact.email}</span>
                       {contact.email_verified && (
-                        <CheckCircle className="w-3 h-3 text-green-500" />
+                        <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                       )}
                     </a>
                   )}
-                  
+
                   {contact.linkedin_url && (
                     <a
                       href={contact.linkedin_url}
@@ -190,25 +233,32 @@ export function ContactsView() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800"
                     >
-                      <Linkedin className="w-4 h-4" />
+                      <Linkedin className="w-4 h-4 flex-shrink-0" />
                       LinkedIn Profile
                     </a>
                   )}
-                  
+
                   {contact.phone && (
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Phone className="w-4 h-4" />
+                      <Phone className="w-4 h-4 flex-shrink-0" />
                       {contact.phone}
                     </div>
                   )}
                 </div>
-                
+
                 {/* Footer */}
-                <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
-                  <span>{contact.department || 'Unknown Dept'}</span>
-                  {contact.last_contacted_at && (
-                    <span>Contacted: {new Date(contact.last_contacted_at).toLocaleDateString()}</span>
-                  )}
+                <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                  <span className="text-xs text-gray-500">{contact.department || 'Unknown Dept'}</span>
+                  <button
+                    onClick={() => setOutreachContact({
+                      contact,
+                      studioName: studio?.name || '',
+                    })}
+                    className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
+                  >
+                    <Send className="w-3 h-3" />
+                    Outreach
+                  </button>
                 </div>
               </div>
             );

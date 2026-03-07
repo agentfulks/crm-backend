@@ -26,6 +26,11 @@ function App() {
   // Contact detail modal state (can be opened from studios or contacts view)
   const [selectedContact, setSelectedContact] = useState<{ contact: BDRContact; studioName: string } | null>(null);
 
+  const switchView = (view: View) => {
+    setCurrentView(view);
+    setStatusFilter(''); // reset to "All" whenever switching tabs
+  };
+
   // VC data
   const { data: packetsData, isLoading: vcLoading } = usePackets(statusFilter);
   const { data: pendingData } = usePendingPackets();
@@ -65,7 +70,7 @@ function App() {
               {/* View Toggle */}
               <div className="flex bg-gray-100 rounded-lg p-1">
                 <button
-                  onClick={() => setCurrentView('vc')}
+                  onClick={() => switchView('vc')}
                   className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     currentView === 'vc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'
                   }`}
@@ -74,7 +79,7 @@ function App() {
                   VC Funds
                 </button>
                 <button
-                  onClick={() => setCurrentView('studios')}
+                  onClick={() => switchView('studios')}
                   className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     currentView === 'studios' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'
                   }`}
@@ -83,7 +88,7 @@ function App() {
                   Game Studios
                 </button>
                 <button
-                  onClick={() => setCurrentView('contacts')}
+                  onClick={() => switchView('contacts')}
                   className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     currentView === 'contacts' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'
                   }`}

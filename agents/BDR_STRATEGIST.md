@@ -219,7 +219,39 @@ For EACH contact, verify:
 - If unverifiable, mark Unverified
 - Prefer work domain over Gmail/Outlook
 
-### 4) Qualification
+### 4) LinkedIn URL Verification (MANDATORY)
+
+**CRITICAL:** Every contact MUST have a verified LinkedIn URL before submission.
+
+**Process for Each Contact:**
+1. Search: `"[Full Name]" "[Studio Name]" LinkedIn`
+2. Find the actual LinkedIn profile in search results
+3. Copy the EXACT URL from the profile (do not guess the format)
+4. Verify the profile shows the correct company and role
+5. Check for name variations (e.g., "He Peng" → "Jack Ho")
+
+**Common Mistakes to Avoid:**
+- Assuming `/in/firstname-lastname/` format — ALWAYS VERIFY
+- Missing numeric suffixes (e.g., `-21a9813a`)
+- Wrong person with same name
+- 404 errors from incorrect URLs
+
+**Verification Checklist:**
+- [ ] Google search performed for "[Name] [Studio] LinkedIn"
+- [ ] LinkedIn URL copied exactly from search results
+- [ ] Profile shows correct company affiliation
+- [ ] Profile shows correct role/title
+- [ ] No 404 errors expected
+- [ ] Name variation checked (if applicable)
+
+**Mark in Output:**
+```yaml
+linkedin_profile_url: "https://www.linkedin.com/in/verified-username/"
+linkedin_verified: true
+linkedin_verification_method: "Google search - [date]"
+```
+
+### 5) Qualification
 
 **Score on:**
 - Fit to ICP (size, focus, downloads)
@@ -340,6 +372,8 @@ Subject: [Specific, contextual]
 - [ ] ICP validated
 - [ ] Live ops confirmed
 - [ ] Email verified or pattern-confirmed
+- [ ] **LinkedIn URL verified via Google search**
+- [ ] **LinkedIn profile confirms company/role**
 - [ ] Outreach drafted
 - [ ] Personalization included
 - [ ] Sources logged
@@ -352,7 +386,16 @@ Subject: [Specific, contextual]
 - [ ] All Studio fields populated
 - [ ] At least one qualified contact
 - [ ] Email source specified
+- [ ] LinkedIn URL verified and correct
 - [ ] Tier assigned
+
+### LinkedIn Verification Check (MANDATORY)
+- [ ] Google search performed for each contact
+- [ ] LinkedIn URL copied exactly (not assumed)
+- [ ] Profile confirms correct company
+- [ ] Profile confirms correct role
+- [ ] No 404 errors or broken links
+- [ ] Name variations checked and resolved
 
 ### Outreach Quality Check
 - [ ] Personalization present
@@ -365,6 +408,7 @@ Subject: [Specific, contextual]
 - [ ] No fabricated data
 - [ ] All claims source-backed
 - [ ] Email verification status accurate
+- [ ] LinkedIn URLs verified (not guessed)
 
 **If any standard fails:** Revise before marking complete.
 
@@ -438,10 +482,11 @@ contacts:
     email: alexandre@voodoo.io
     email_source: Press
     email_verification_status: Verified
-    linkedin_profile_url: https://www.linkedin.com/in/alexandreyazdi/
+    linkedin_profile_url: https://www.linkedin.com/in/alexandre-yazdi-21a9813a/
     linkedin_verified: true
+    linkedin_verification_method: "Google search - Mar 2026"
     location: Paris, France
-    notes: "Primary target"
+    notes: "Primary target - URL verified via search"
 
 outreach_context:
   targeting_angle: "Partnership for live ops tooling"

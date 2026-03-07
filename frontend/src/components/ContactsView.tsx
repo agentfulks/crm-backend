@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useContacts, useUpdateContact, type ContactFilters } from '../hooks/useContacts';
 import { useStudioPackets } from '../hooks/useStudioPackets';
 import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send, Calendar, X as XIcon, Flag, Globe } from 'lucide-react';
@@ -11,11 +11,26 @@ function toISODate(d: Date): string {
   return d.toISOString().split('T')[0];
 }
 
-export function ContactsView() {
+interface ContactsViewProps {
+  /** When set, the modal for this contact auto-opens on mount */
+  initialOpenContact?: { contact: BDRContact; studioName: string };
+  onContactModalClosed?: () => void;
+}
+
+export function ContactsView({ initialOpenContact, onContactModalClosed }: ContactsViewProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState<ContactFilters>({});
   const [selectedCompany, setSelectedCompany] = useState<string>('');
-  const [detailContact, setDetailContact] = useState<{ contact: BDRContact; studioName: string } | null>(null);
+  const [detailContact, setDetailContact] = useState<{ contact: BDRContact; studioName: string } | null>(
+    initialOpenContact ?? null
+  );
+
+  // When parent provides a new contact to open, respect it
+  useEffect(() => {
+    if (initialOpenContact) {
+      setDetailContact(initialOpenContact);
+    }
+  }, [initialOpenContact]);
 
   // Last-contacted filter state
   const [contactedQuick, setContactedQuick] = useState<ContactedQuick>('all');
@@ -124,7 +139,7 @@ export function ContactsView() {
         <ContactDetailModal
           contact={detailContact.contact}
           studioName={detailContact.studioName}
-          onClose={() => setDetailContact(null)}
+          onClose={() => { setDetailContact(null); onContactModalClosed?.(); }}
         />
       )}
 

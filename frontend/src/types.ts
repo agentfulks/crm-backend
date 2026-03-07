@@ -90,6 +90,8 @@ export interface GameStudio {
   overview?: string;
   priority: Priority;
   status: FundStatus;
+  icp_score?: number;
+  is_flagged: boolean;
   created_at: string;
   updated_at: string;
 }

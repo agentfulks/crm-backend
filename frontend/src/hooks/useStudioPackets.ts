@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { studioPacketsApi } from '../api';
+import { studioPacketsApi, api } from '../api';
 
 // Hook to fetch studio packets with optional status filter
 export function useStudioPackets(status?: string) {
@@ -48,6 +48,18 @@ export function useUpdateStudioPacketStatus() {
   return useMutation({
     mutationFn: ({ id, status }: { id: string; status: string }) => 
       studioPacketsApi.updateStudioPacketStatus(id, status),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['studio-packets'] });
+    },
+  });
+}
+
+// Hook to update a company (flag, status, etc.)
+export function useUpdateCompany() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ id, data }: { id: string; data: Record<string, unknown> }) =>
+      api.patch(`/bdr/companies/${id}`, data).then((r) => r.data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['studio-packets'] });
     },

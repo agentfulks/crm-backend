@@ -1,7 +1,10 @@
 """BDR Companies endpoints."""
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from typing import Any, Dict, Optional
+
+from fastapi import APIRouter, Depends, HTTPException, Query
+from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
@@ -10,51 +13,78 @@ from app.models.bdr_company import BDRCompany
 router = APIRouter()
 
 
+def _company_to_dict(c: BDRCompany) -> Dict[str, Any]:
+    return {
+        "id": str(c.id),
+        "company_name": c.company_name,
+        "industry": c.industry,
+        "company_size": c.company_size,
+        "headquarters_city": c.headquarters_city,
+        "headquarters_state": c.headquarters_state,
+        "headquarters_country": c.headquarters_country,
+        "website_url": c.website_url,
+        "linkedin_url": c.linkedin_url,
+        "target_department": c.target_department,
+        "ideal_buyer_persona": c.ideal_buyer_persona,
+        "pain_points": c.pain_points,
+        "use_case_fit": c.use_case_fit,
+        "priority": c.priority,
+        "status": c.status,
+        "lead_source": c.lead_source,
+        "icp_score": c.icp_score,
+        "engagement_score": c.engagement_score,
+        "assigned_bdr": c.assigned_bdr,
+        "tags": c.tags,
+        "is_flagged": bool(c.is_flagged),
+        "created_at": c.created_at.isoformat() if c.created_at else None,
+        "updated_at": c.updated_at.isoformat() if c.updated_at else None,
+    }
+
+
+class CompanyUpdate(BaseModel):
+    status: Optional[str] = None
+    priority: Optional[str] = None
+    company_name: Optional[str] = None
+    industry: Optional[str] = None
+    company_size: Optional[str] = None
+    headquarters_city: Optional[str] = None
+    headquarters_state: Optional[str] = None
+    headquarters_country: Optional[str] = None
+    website_url: Optional[str] = None
+    linkedin_url: Optional[str] = None
+    use_case_fit: Optional[str] = None
+    pain_points: Optional[str] = None
+    icp_score: Optional[int] = None
+    is_flagged: Optional[bool] = None
+
+
 @router.get("/")
 def list_bdr_companies(
     *,
     db: Session = Depends(get_db),
     status: str | None = Query(None, description="Filter by status"),
     priority: str | None = Query(None, description="Filter by priority"),
+    is_flagged: bool | None = Query(None, description="Filter by flagged status"),
     limit: int = Query(100, ge=1, le=1000),
     offset: int = Query(0, ge=0),
 ):
     """List all BDR companies."""
-    
+
     query = db.query(BDRCompany)
-    
+
     if status:
         query = query.filter(BDRCompany.status == status)
     if priority:
         query = query.filter(BDRCompany.priority == priority)
-    
+    if is_flagged is not None:
+        query = query.filter(BDRCompany.is_flagged == is_flagged)
+
     total = query.count()
     items = query.offset(offset).limit(limit).all()
-    
+
     return {
         "total": total,
-        "items": [
-            {
-                "id": str(c.id),
-                "company_name": c.company_name,
-                "industry": c.industry,
-                "company_size": c.company_size,
-                "headquarters_city": c.headquarters_city,
-                "headquarters_state": c.headquarters_state,
-                "headquarters_country": c.headquarters_country,
-                "website_url": c.website_url,
-                "target_department": c.target_department,
-                "ideal_buyer_persona": c.ideal_buyer_persona,
-                "priority": c.priority,
-                "status": c.status,
-                "lead_source": c.lead_source,
-                "icp_score": c.icp_score,
-                "use_case_fit": c.use_case_fit,
-                "created_at": c.created_at.isoformat() if c.created_at else None,
-                "updated_at": c.updated_at.isoformat() if c.updated_at else None,
-            }
-            for c in items
-        ]
+        "items": [_company_to_dict(c) for c in items],
     }
 
 
@@ -65,30 +95,12 @@ def get_bdr_company(
     company_id: str,
 ):
     """Get a single BDR company."""
-    
+
     company = db.query(BDRCompany).filter(BDRCompany.id == company_id).first()
     if not company:
         raise HTTPException(status_code=404, detail="Company not found")
-    
-    return {
-        "id": str(company.id),
-        "company_name": company.company_name,
-        "industry": company.industry,
-        "company_size": company.company_size,
-        "headquarters_city": company.headquarters_city,
-        "headquarters_state": company.headquarters_state,
-        "headquarters_country": company.headquarters_country,
-        "website_url": company.website_url,
-        "target_department": company.target_department,
-        "ideal_buyer_persona": company.ideal_buyer_persona,
-        "priority": company.priority,
-        "status": company.status,
-        "lead_source": company.lead_source,
-        "icp_score": company.icp_score,
-        "use_case_fit": company.use_case_fit,
-        "created_at": company.created_at.isoformat() if company.created_at else None,
-        "updated_at": company.updated_at.isoformat() if company.updated_at else None,
-    }
+
+    return _company_to_dict(company)
 
 
 @router.patch("/{company_id}")
@@ -96,26 +108,18 @@ def update_bdr_company(
     *,
     db: Session = Depends(get_db),
     company_id: str,
-    status: str | None = None,
-    priority: str | None = None,
+    body: CompanyUpdate,
 ):
     """Update a BDR company."""
-    
+
     company = db.query(BDRCompany).filter(BDRCompany.id == company_id).first()
     if not company:
         raise HTTPException(status_code=404, detail="Company not found")
-    
-    if status:
-        company.status = status
-    if priority:
-        company.priority = priority
-    
+
+    for field, value in body.model_dump(exclude_unset=True).items():
+        setattr(company, field, value)
+
     db.commit()
     db.refresh(company)
-    
-    return {
-        "id": str(company.id),
-        "company_name": company.company_name,
-        "status": company.status,
-        "priority": company.priority,
-    }
+
+    return _company_to_dict(company)

@@ -139,6 +139,8 @@ export const studioPacketsApi = {
           status: 'READY',
           website_url: company.website_url || `https://${company.company_name?.toLowerCase().replace(/\s+/g, '')}.com`,
           linkedin_url: `https://linkedin.com/company/${company.company_name?.toLowerCase().replace(/\s+/g, '-')}`.substring(0, 100),
+          icp_score: company.icp_score,
+          is_flagged: company.is_flagged || false,
           created_at: company.created_at,
           updated_at: company.updated_at,
         },

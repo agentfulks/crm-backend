@@ -4,7 +4,7 @@ from __future__ import annotations
 import uuid
 from datetime import datetime
 
-from sqlalchemy import Column, String, DateTime, Integer, Text
+from sqlalchemy import Boolean, Column, String, DateTime, Integer, Text
 from sqlalchemy.dialects.postgresql import UUID
 
 from app.db.base import Base
@@ -40,6 +40,7 @@ class BDRCompany(Base):
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
     tags = Column(Text, nullable=True)
     custom_metadata = Column(Text, nullable=True)  # Renamed from 'metadata'
+    is_flagged = Column(Boolean, default=False, nullable=False)
     
     def __repr__(self) -> str:
         return f"<BDRCompany {self.company_name}>"

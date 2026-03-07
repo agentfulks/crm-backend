@@ -122,7 +122,19 @@ Watch for these patterns that indicate WRONG URLs:
 - Hyphens where there shouldn't be: `mika-tammenkoski` → should be `mikatammenkoski`
 - Missing numeric suffixes: `alexandre-yazdi` → should be `alexandre-yazdi-21a9813a`
 - Wrong person entirely: Profile doesn't match the person
-- 404 errors: URL returns "Profile not found"
+- **404 errors: URL returns "Profile not found" — THIS IS INVALID**
+
+**CRITICAL: 404 Errors = Invalid URL**
+- A LinkedIn URL that returns "Profile Not Found" or 404 error is **NOT VALID**
+- Do not include 404 URLs in your output
+- Mark the contact as "unverified" or find the correct URL
+- Example: `https://www.linkedin.com/in/yegor-kozlov-99a46587/` returned 404 — this person is not verifiable
+
+**Valid URLs must:**
+- Return a live profile page (not 404)
+- Match the actual person's name
+- Show the correct company affiliation
+- Be copy-pasted exactly from search results (not assumed)
 
 ### Email Verification — MANDATORY STEPS
 
@@ -147,9 +159,16 @@ For EACH contact, verify:
 - [ ] Google search confirms LinkedIn profile exists
 - [ ] URL username matches actual LinkedIn username (not assumed)
 - [ ] Profile shows correct company and role
-- [ ] No 404 errors expected
+- [ ] **URL returns live profile (not 404 error)**
 - [ ] Email format is valid
 - [ ] Email domain matches company (not personal Gmail, etc.)
+
+**REJECTION CRITERIA:**
+If any of the following are true, the LinkedIn URL is **INVALID**:
+- [ ] URL returns 404 "Profile Not Found"
+- [ ] Profile name doesn't match the contact name
+- [ ] Profile shows different company
+- [ ] Profile is private/unviewable
 
 ### When Data Is Uncertain
 

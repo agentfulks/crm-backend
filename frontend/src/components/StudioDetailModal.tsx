@@ -6,7 +6,6 @@ import {
 import type { StudioPacket, BDRContact, PacketStatus } from '../types';
 import { useContacts } from '../hooks/useContacts';
 import { useUpdateCompany } from '../hooks/useStudioPackets';
-import { formatDistanceToNow, parseISO } from 'date-fns';
 
 interface StudioDetailModalProps {
   packet: StudioPacket;
@@ -74,10 +73,20 @@ export function StudioDetailModal({ packet, onClose, onOpenContact }: StudioDeta
     setEditing(false);
   };
 
-  const formatLastContacted = (dateStr?: string | null) => {
+  const formatLastContacted = (dateStr?: string | null): string | null => {
     if (!dateStr) return null;
     try {
-      return formatDistanceToNow(parseISO(dateStr), { addSuffix: true });
+      const date = new Date(dateStr);
+      const diffMs = Date.now() - date.getTime();
+      const diffMins = Math.floor(diffMs / 60000);
+      if (diffMins < 60) return `${diffMins}m ago`;
+      const diffHours = Math.floor(diffMins / 60);
+      if (diffHours < 24) return `${diffHours}h ago`;
+      const diffDays = Math.floor(diffHours / 24);
+      if (diffDays === 1) return 'Yesterday';
+      if (diffDays < 7) return `${diffDays}d ago`;
+      if (diffDays < 30) return `${Math.floor(diffDays / 7)}w ago`;
+      return date.toLocaleDateString();
     } catch {
       return null;
     }

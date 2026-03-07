@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { useContacts, type ContactFilters } from '../hooks/useContacts';
+import { useContacts, useUpdateContact, type ContactFilters } from '../hooks/useContacts';
 import { useStudioPackets } from '../hooks/useStudioPackets';
-import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send, Calendar, X as XIcon } from 'lucide-react';
+import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send, Calendar, X as XIcon, Flag, Globe } from 'lucide-react';
 import { ContactDetailModal } from './ContactDetailModal';
 import type { BDRContact } from '../types';
 
@@ -73,9 +73,13 @@ export function ContactsView() {
     applyContactedFilter('all', '', '');
   };
 
+  const [showFlaggedOnly, setShowFlaggedOnly] = useState(false);
+  const updateContact = useUpdateContact();
+
   const { data: contactsData, isLoading } = useContacts({
     ...filters,
     search: searchTerm,
+    is_flagged: showFlaggedOnly ? true : undefined,
   });
 
   const { data: studiosData } = useStudioPackets();
@@ -233,6 +237,31 @@ export function ContactsView() {
           </div>
         </div>
 
+        {/* Flagged filter */}
+        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-2">
+          <Flag className="w-4 h-4 text-gray-400 flex-shrink-0" />
+          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide mr-1">Data Quality:</span>
+          <button
+            onClick={() => setShowFlaggedOnly(!showFlaggedOnly)}
+            className={`text-xs px-3 py-1.5 rounded-full font-medium border transition-colors flex items-center gap-1.5 ${
+              showFlaggedOnly
+                ? 'bg-red-500 text-white border-red-500'
+                : 'bg-white text-gray-600 border-gray-300 hover:border-red-400 hover:text-red-600'
+            }`}
+          >
+            <Flag className="w-3 h-3" />
+            {showFlaggedOnly ? 'Showing Flagged Only' : 'Show Flagged Only'}
+          </button>
+          {showFlaggedOnly && (
+            <button
+              onClick={() => setShowFlaggedOnly(false)}
+              className="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600"
+            >
+              <XIcon className="w-3.5 h-3.5" /> Clear
+            </button>
+          )}
+        </div>
+
         {/* Stats */}
         <div className="flex gap-6 mt-4 pt-4 border-t border-gray-100 text-sm">
           <div className="flex items-center gap-2">
@@ -254,6 +283,11 @@ export function ContactsView() {
             <Send className="w-4 h-4 text-purple-500" />
             <span className="font-medium">{contacts.filter((c: BDRContact) => c.last_contacted_at).length}</span>
             <span className="text-gray-500">contacted</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Flag className="w-4 h-4 text-red-400" />
+            <span className="font-medium">{contacts.filter((c: BDRContact) => c.is_flagged).length}</span>
+            <span className="text-gray-500">flagged</span>
           </div>
         </div>
       </div>
@@ -292,13 +326,17 @@ export function ContactsView() {
               <div
                 key={contact.id}
                 onClick={() => setDetailContact({ contact, studioName: studio?.name || '' })}
-                className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all cursor-pointer flex flex-col"
+                className={`rounded-lg shadow-sm border p-4 hover:shadow-md transition-all cursor-pointer flex flex-col ${
+                  contact.is_flagged
+                    ? 'bg-red-50 border-red-300 hover:border-red-400'
+                    : 'bg-white border-gray-200 hover:border-blue-300'
+                }`}
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                      <span className="text-blue-600 font-semibold text-lg">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${contact.is_flagged ? 'bg-red-100' : 'bg-blue-100'}`}>
+                      <span className={`font-semibold text-lg ${contact.is_flagged ? 'text-red-600' : 'text-blue-600'}`}>
                         {contact.full_name?.[0]?.toUpperCase() || '?'}
                       </span>
                     </div>
@@ -308,6 +346,21 @@ export function ContactsView() {
                     </div>
                   </div>
                   <div className="flex flex-col items-end gap-1">
+                    {/* Flag toggle */}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        updateContact.mutate({ id: contact.id, data: { is_flagged: !contact.is_flagged } });
+                      }}
+                      title={contact.is_flagged ? 'Remove flag' : 'Flag as bad data'}
+                      className={`p-1 rounded transition-colors ${
+                        contact.is_flagged
+                          ? 'text-red-500 hover:text-red-700'
+                          : 'text-gray-300 hover:text-red-400'
+                      }`}
+                    >
+                      <Flag className="w-4 h-4" fill={contact.is_flagged ? 'currentColor' : 'none'} />
+                    </button>
                     {contact.is_decision_maker && (
                       <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
                         <Star className="w-3 h-3" />
@@ -330,6 +383,18 @@ export function ContactsView() {
                     <p className="text-xs text-gray-500">
                       {studio.hq_city}{studio.hq_country ? `, ${studio.hq_country}` : ''}
                     </p>
+                    {studio.website_url && (
+                      <a
+                        href={studio.website_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="flex items-center gap-1 text-xs text-blue-500 hover:text-blue-700 mt-1 truncate"
+                      >
+                        <Globe className="w-3 h-3 flex-shrink-0" />
+                        <span className="truncate">{studio.website_url.replace(/^https?:\/\//, '')}</span>
+                      </a>
+                    )}
                   </div>
                 )}
 

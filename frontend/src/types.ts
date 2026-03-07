@@ -148,6 +148,7 @@ export interface BDRContact {
   last_contacted_at?: string;
   contact_preference?: string;
   notes?: string;
+  is_flagged: boolean;
   created_at: string;
   updated_at: string;
 }

@@ -31,6 +31,7 @@ class BDRContact(Base):
     last_contacted_at = Column(DateTime, nullable=True)
     contact_preference = Column(String(50), nullable=True)
     notes = Column(Text, nullable=True)
+    is_flagged = Column(Boolean, default=False, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
     

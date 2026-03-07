@@ -32,6 +32,7 @@ class ContactUpdate(BaseModel):
     contact_preference: Optional[str] = None  # 'email' | 'linkedin'
     notes: Optional[str] = None
     reset_last_contacted: bool = False        # if True, clears last_contacted_at + contact_preference
+    is_flagged: Optional[bool] = None
 
 
 class OutreachLogCreate(BaseModel):
@@ -60,6 +61,7 @@ def _contact_to_dict(c: BDRContact) -> Dict[str, Any]:
         "last_contacted_at": c.last_contacted_at.isoformat() if c.last_contacted_at else None,
         "contact_preference": c.contact_preference,
         "notes": c.notes,
+        "is_flagged": bool(c.is_flagged),
         "created_at": c.created_at.isoformat() if c.created_at else None,
         "updated_at": c.updated_at.isoformat() if c.updated_at else None,
     }
@@ -71,6 +73,7 @@ def list_bdr_contacts(
     db: Session = Depends(get_db),
     company_id: str | None = Query(None),
     is_decision_maker: bool | None = Query(None),
+    is_flagged: bool | None = Query(None, description="If true, only flagged contacts; if false, only non-flagged"),
     # last_contacted filters
     never_contacted: bool | None = Query(None, description="If true, only contacts never contacted"),
     last_contacted_after: str | None = Query(None, description="ISO date – contacts last contacted after this date (inclusive)"),
@@ -86,6 +89,8 @@ def list_bdr_contacts(
         query = query.filter(BDRContact.company_id == company_id)
     if is_decision_maker is not None:
         query = query.filter(BDRContact.is_decision_maker == is_decision_maker)
+    if is_flagged is not None:
+        query = query.filter(BDRContact.is_flagged == is_flagged)
 
     # last_contacted filters
     if never_contacted:
@@ -188,6 +193,8 @@ def update_bdr_contact(
             contact.contact_preference = body.contact_preference
     if body.notes is not None:
         contact.notes = body.notes
+    if body.is_flagged is not None:
+        contact.is_flagged = body.is_flagged
 
     db.commit()
     db.refresh(contact)

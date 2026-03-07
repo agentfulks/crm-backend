@@ -11,6 +11,7 @@ export interface ContactFilters {
   last_contacted_after?: string;   // ISO date string YYYY-MM-DD
   last_contacted_before?: string;  // ISO date string YYYY-MM-DD
   last_contacted_on?: string;      // ISO date string YYYY-MM-DD
+  is_flagged?: boolean;
 }
 
 // Hook to fetch contacts with optional filters
@@ -25,6 +26,7 @@ export function useContacts(filters?: ContactFilters) {
       if (filters?.last_contacted_after) params.last_contacted_after = filters.last_contacted_after;
       if (filters?.last_contacted_before) params.last_contacted_before = filters.last_contacted_before;
       if (filters?.last_contacted_on) params.last_contacted_on = filters.last_contacted_on;
+      if (filters?.is_flagged !== undefined) params.is_flagged = filters.is_flagged;
 
       const response = await api.get('/bdr/contacts/', { params });
 

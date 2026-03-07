@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
   X, Mail, Linkedin, Phone, Star, CheckCircle, Clock,
-  ChevronDown, ChevronUp, Trash2, Send, Edit3, Save, RotateCcw, RefreshCcw,
+  ChevronDown, ChevronUp, Trash2, Send, Edit3, Save, RotateCcw, RefreshCcw, Flag,
 } from 'lucide-react';
 import type { BDRContact, BDROutreachLog } from '../types';
 import { useUpdateContact, useOutreachLogs, useDeleteOutreachLog } from '../hooks/useContacts';
@@ -304,6 +304,20 @@ export function ContactDetailModal({ contact, studioName = '', onClose }: Props)
           </div>
 
           <div className="flex items-center gap-2 flex-shrink-0">
+            {/* Flag toggle */}
+            <button
+              onClick={() => updateContact.mutate({ id: contact.id, data: { is_flagged: !contact.is_flagged } })}
+              title={contact.is_flagged ? 'Remove flag' : 'Flag as bad data'}
+              className={`flex items-center gap-1.5 text-sm px-2.5 py-1.5 rounded-lg border transition-colors ${
+                contact.is_flagged
+                  ? 'bg-red-50 border-red-300 text-red-600 hover:bg-red-100'
+                  : 'border-gray-300 text-gray-400 hover:border-red-400 hover:text-red-500 hover:bg-red-50'
+              }`}
+            >
+              <Flag className="w-3.5 h-3.5" fill={contact.is_flagged ? 'currentColor' : 'none'} />
+              {contact.is_flagged ? 'Flagged' : 'Flag'}
+            </button>
+
             {editing ? (
               <>
                 <button

@@ -441,9 +441,21 @@ export function HunterContactPanel({
 
         {/* Error */}
         {error && (
-          <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-lg px-3 py-2.5">
-            <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-            <p className="text-xs text-red-700">{error}</p>
+          <div className={`flex items-start gap-2 rounded-lg px-3 py-2.5 border ${
+            error.toLowerCase().includes('not exist') || error.toLowerCase().includes('not found')
+              ? 'bg-blue-50 border-blue-200'
+              : 'bg-red-50 border-red-200'
+          }`}>
+            <AlertCircle className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
+              error.toLowerCase().includes('not exist') || error.toLowerCase().includes('not found')
+                ? 'text-blue-400'
+                : 'text-red-500'
+            }`} />
+            <p className={`text-xs ${
+              error.toLowerCase().includes('not exist') || error.toLowerCase().includes('not found')
+                ? 'text-blue-700'
+                : 'text-red-700'
+            }`}>{error}</p>
           </div>
         )}
 

@@ -4,19 +4,29 @@
 
 const PROXY_BASE = '/api/hunter/proxy';
 
+async function _parseHunterResponse(res: Response): Promise<any> {
+  let json: any;
+  try { json = await res.json(); } catch {
+    throw new Error(`Hunter proxy error: HTTP ${res.status}`);
+  }
+  // Always check Hunter's errors array first — it carries the real message
+  // even when the HTTP status is 404 or 422.
+  if (json.errors?.length) {
+    const err = json.errors[0];
+    throw new Error(err.details || err.id || 'Hunter API error');
+  }
+  // Catch any other non-success HTTP status that didn't have an errors array
+  if (!res.ok) {
+    throw new Error(json.detail ?? `Hunter proxy error: HTTP ${res.status}`);
+  }
+  return json.data;
+}
+
 export async function hunterGet(endpoint: string, params: Record<string, string>): Promise<any> {
   const url = new URL(`${PROXY_BASE}${endpoint}`, window.location.origin);
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
   const res = await fetch(url.toString());
-  if (!res.ok) {
-    let detail = `HTTP ${res.status}`;
-    try { detail = (await res.json()).detail ?? detail; } catch { /* ignore */ }
-    throw new Error(`Hunter proxy error: ${detail}`);
-  }
-  const json = await res.json();
-  if (json.errors?.length)
-    throw new Error(json.errors[0]?.details || json.errors[0]?.id || 'Hunter API error');
-  return json.data;
+  return _parseHunterResponse(res);
 }
 
 export async function hunterPost(
@@ -28,15 +38,7 @@ export async function hunterPost(
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
-  if (!res.ok) {
-    let detail = `HTTP ${res.status}`;
-    try { detail = (await res.json()).detail ?? detail; } catch { /* ignore */ }
-    throw new Error(`Hunter proxy error: ${detail}`);
-  }
-  const json = await res.json();
-  if (json.errors?.length)
-    throw new Error(json.errors[0]?.details || json.errors[0]?.id || 'Hunter API error');
-  return json.data;
+  return _parseHunterResponse(res);
 }
 
 export const scoreColor = (score: number) =>

@@ -23,7 +23,7 @@ const api = axios.create({
 // ============================================
 
 export const fundsApi = {
-  async listFunds(status?: string, limit = 200): Promise<{ total: number; items: Fund[] }> {
+  async listFunds(status?: string, limit = 500): Promise<{ total: number; items: Fund[] }> {
     const params: Record<string, any> = { limit };
     if (status) params.status = status;
     const response = await api.get('/funds/', { params });

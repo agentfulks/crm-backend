@@ -25,7 +25,7 @@ def list_funds(
     search: str | None = Query(None, description="Search by fund name or overview"),
     priority: Priority | None = Query(None, description="Filter by priority"),
     status_filter: FundStatus | None = Query(None, alias="status", description="Filter by status"),
-    limit: int = Query(50, ge=1, le=100),
+    limit: int = Query(50, ge=1, le=500),
     offset: int = Query(0, ge=0),
     sort_by: FundSortField = Query(FundSortField.updated_at),
     sort_direction: SortDirection = Query(SortDirection.desc),

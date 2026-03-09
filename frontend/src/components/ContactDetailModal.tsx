@@ -6,10 +6,13 @@ import {
 import type { BDRContact, BDROutreachLog } from '../types';
 import { useUpdateContact, useOutreachLogs, useDeleteOutreachLog } from '../hooks/useContacts';
 import { OutreachModal } from './OutreachModal';
+import { HunterContactPanel } from './HunterContactPanel';
+import { deriveDomain } from '../lib/hunterApi';
 
 interface Props {
   contact: BDRContact;
   studioName?: string;
+  studioWebsite?: string;
   onClose: () => void;
 }
 
@@ -174,7 +177,7 @@ function Field({
 
 // ── Main modal ─────────────────────────────────────────────────────────────────
 
-export function ContactDetailModal({ contact, studioName = '', onClose }: Props) {
+export function ContactDetailModal({ contact, studioName = '', studioWebsite, onClose }: Props) {
   const [editing, setEditing] = useState(false);
   const [showOutreach, setShowOutreach] = useState(false);
 
@@ -243,6 +246,10 @@ export function ContactDetailModal({ contact, studioName = '', onClose }: Props)
   const lastContacted = contact.last_contacted_at
     ? formatTs(contact.last_contacted_at)
     : null;
+
+  const nameParts = fullName.trim().split(/\s+/);
+  const hunterFirstName = nameParts[0] || '';
+  const hunterLastName  = nameParts.slice(1).join(' ') || '';
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-40">
@@ -436,6 +443,30 @@ export function ContactDetailModal({ contact, studioName = '', onClose }: Props)
               )}
             </div>
           )}
+
+          {/* ── Hunter.io Panel ── */}
+          <HunterContactPanel
+            firstName={hunterFirstName}
+            lastName={hunterLastName}
+            currentEmail={email || undefined}
+            defaultDomain={deriveDomain(studioWebsite)}
+            onApplyEmail={async (newEmail) => {
+              await updateContact.mutateAsync({ id: contact.id, data: { email: newEmail } });
+              setEmail(newEmail);
+            }}
+            onApplyFields={async (fields) => {
+              const data: Record<string, string> = {};
+              if (fields.job_title)    data.job_title    = fields.job_title;
+              if (fields.linkedin_url) data.linkedin_url = fields.linkedin_url;
+              if (fields.phone)        data.phone        = fields.phone;
+              if (Object.keys(data).length) {
+                await updateContact.mutateAsync({ id: contact.id, data });
+                if (fields.job_title)    setJobTitle(fields.job_title);
+                if (fields.linkedin_url) setLinkedinUrl(fields.linkedin_url);
+                if (fields.phone)        setPhone(fields.phone);
+              }
+            }}
+          />
 
           {/* ── Outreach History ── */}
           <div>

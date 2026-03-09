@@ -86,6 +86,7 @@ function StudioLoader({ id, onClose }: StudioLoaderProps) {
   const [nestedContact, setNestedContact] = useState<{
     contact: BDRContact;
     studioName: string;
+    studioWebsite?: string;
   } | null>(null);
 
   if (isLoading) return <LoadingModal onClose={onClose} />;
@@ -97,6 +98,7 @@ function StudioLoader({ id, onClose }: StudioLoaderProps) {
       <ContactDetailModal
         contact={nestedContact.contact}
         studioName={nestedContact.studioName}
+        studioWebsite={nestedContact.studioWebsite}
         onClose={() => setNestedContact(null)}
       />
     );
@@ -106,7 +108,9 @@ function StudioLoader({ id, onClose }: StudioLoaderProps) {
     <StudioDetailModal
       packet={packet}
       onClose={onClose}
-      onOpenContact={(contact, studioName) => setNestedContact({ contact, studioName })}
+      onOpenContact={(contact, studioName, studioWebsite) =>
+        setNestedContact({ contact, studioName, studioWebsite })
+      }
     />
   );
 }

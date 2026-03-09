@@ -23,7 +23,7 @@ function App() {
   const [selectedStudio, setSelectedStudio] = useState<StudioPacket | null>(null);
 
   // Contact detail modal state (can be opened from studios or contacts view)
-  const [selectedContact, setSelectedContact] = useState<{ contact: BDRContact; studioName: string } | null>(null);
+  const [selectedContact, setSelectedContact] = useState<{ contact: BDRContact; studioName: string; studioWebsite?: string } | null>(null);
 
   const switchView = (view: View) => {
     setCurrentView(view);
@@ -43,9 +43,9 @@ function App() {
   const pendingCount = pendingStudioData?.total || 0;
 
   /** Open a contact's detail modal, switching to contacts view first */
-  const handleOpenContact = (contact: BDRContact, studioName: string) => {
+  const handleOpenContact = (contact: BDRContact, studioName: string, studioWebsite?: string) => {
     setSelectedStudio(null); // close studio modal
-    setSelectedContact({ contact, studioName });
+    setSelectedContact({ contact, studioName, studioWebsite });
     setCurrentView('contacts');
   };
 
@@ -255,6 +255,7 @@ function App() {
         <ContactDetailModal
           contact={selectedContact.contact}
           studioName={selectedContact.studioName}
+          studioWebsite={selectedContact.studioWebsite}
           onClose={() => setSelectedContact(null)}
         />
       )}

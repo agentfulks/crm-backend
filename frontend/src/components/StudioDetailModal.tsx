@@ -6,12 +6,14 @@ import {
 import type { StudioPacket, BDRContact, PacketStatus } from '../types';
 import { useContacts } from '../hooks/useContacts';
 import { useUpdateCompany } from '../hooks/useStudioPackets';
+import { HunterStudioPanel } from './HunterStudioPanel';
+import { deriveDomain } from '../lib/hunterApi';
 
 interface StudioDetailModalProps {
   packet: StudioPacket;
   onClose: () => void;
   /** Called when the user clicks a contact row — parent should open ContactDetailModal */
-  onOpenContact: (contact: BDRContact, studioName: string) => void;
+  onOpenContact: (contact: BDRContact, studioName: string, studioWebsite?: string) => void;
 }
 
 const statusOptions: PacketStatus[] = ['NEW', 'QUEUED', 'AWAITING_APPROVAL', 'APPROVED', 'SENT', 'FOLLOW_UP', 'CLOSED'];
@@ -319,7 +321,7 @@ export function StudioDetailModal({ packet, onClose, onOpenContact }: StudioDeta
                   return (
                     <button
                       key={contact.id}
-                      onClick={() => onOpenContact(contact, studio?.name || '')}
+                      onClick={() => onOpenContact(contact, studio?.name || '', studio?.website_url || '')}
                       className="w-full flex items-center gap-3 p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition-all text-left group"
                     >
                       {/* Avatar */}
@@ -372,6 +374,12 @@ export function StudioDetailModal({ packet, onClose, onOpenContact }: StudioDeta
               </div>
             )}
           </div>
+
+          {/* ── Hunter.io Studio Panel ── */}
+          <HunterStudioPanel
+            defaultDomain={deriveDomain(studio?.website_url)}
+            companyName={studio?.name}
+          />
 
         </div>
       </div>

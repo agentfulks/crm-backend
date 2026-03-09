@@ -14,7 +14,7 @@ function toISODate(d: Date): string {
 
 interface ContactsViewProps {
   /** When set, the modal for this contact auto-opens on mount */
-  initialOpenContact?: { contact: BDRContact; studioName: string };
+  initialOpenContact?: { contact: BDRContact; studioName: string; studioWebsite?: string };
   onContactModalClosed?: () => void;
 }
 
@@ -22,7 +22,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState<ContactFilters>({});
   const [selectedCompany, setSelectedCompany] = useState<string>('');
-  const [detailContact, setDetailContact] = useState<{ contact: BDRContact; studioName: string } | null>(
+  const [detailContact, setDetailContact] = useState<{ contact: BDRContact; studioName: string; studioWebsite?: string } | null>(
     initialOpenContact ?? null
   );
   const [kanbanSource, setKanbanSource] = useState<AddToKanbanSource | null>(null);
@@ -149,6 +149,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
         <ContactDetailModal
           contact={detailContact.contact}
           studioName={detailContact.studioName}
+          studioWebsite={detailContact.studioWebsite}
           onClose={() => { setDetailContact(null); onContactModalClosed?.(); }}
         />
       )}
@@ -350,7 +351,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
             return (
               <div
                 key={contact.id}
-                onClick={() => setDetailContact({ contact, studioName: studio?.name || '' })}
+                onClick={() => setDetailContact({ contact, studioName: studio?.name || '', studioWebsite: studio?.website_url || '' })}
                 className={`rounded-lg shadow-sm border p-4 hover:shadow-md transition-all cursor-pointer flex flex-col ${
                   contact.is_flagged
                     ? 'bg-red-50 border-red-300 hover:border-red-400'

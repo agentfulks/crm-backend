@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 
-from app.api.routes import bdr_companies, bdr_contacts, contacts, email_templates, funds, interactions, kanban, meetings, notes, outreach, packets
+from app.api.routes import bdr_companies, bdr_contacts, contacts, email_templates, funds, hunter, interactions, kanban, meetings, notes, outreach, packets
 
 api_router = APIRouter()
 api_router.include_router(funds.router, prefix="/funds", tags=["funds"])
@@ -17,3 +17,4 @@ api_router.include_router(email_templates.router, prefix="/email-templates", tag
 api_router.include_router(bdr_companies.router, prefix="/bdr/companies", tags=["bdr-companies"])
 api_router.include_router(bdr_contacts.router, prefix="/bdr/contacts", tags=["bdr-contacts"])
 api_router.include_router(kanban.router, prefix="/kanban", tags=["kanban"])
+api_router.include_router(hunter.router, prefix="/hunter", tags=["hunter"])

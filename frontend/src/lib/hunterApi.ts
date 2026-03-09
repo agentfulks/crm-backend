@@ -1,24 +1,12 @@
 // ── Hunter.io shared helpers ─────────────────────────────────────────────────
+// All requests are proxied through /api/hunter/proxy/* to avoid browser CORS
+// restrictions on Hunter's API (especially the POST /discover endpoint).
 
-export const HUNTER_KEY = '4617bf2c0ec1dc69cf5e6cf02e144212ed6cda71';
-
-/** Extract bare domain from a website URL (strips www. and paths). */
-export function deriveDomain(website?: string): string {
-  if (!website) return '';
-  try {
-    const url = new URL(website.startsWith('http') ? website : `https://${website}`);
-    return url.hostname.replace(/^www\./, '');
-  } catch {
-    return website.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
-  }
-}
-const BASE = 'https://api.hunter.io/v2';
+const PROXY_BASE = '/api/hunter/proxy';
 
 export async function hunterGet(endpoint: string, params: Record<string, string>): Promise<any> {
-  const url = new URL(`${BASE}${endpoint}`);
-  Object.entries({ ...params, api_key: HUNTER_KEY }).forEach(([k, v]) =>
-    url.searchParams.set(k, v)
-  );
+  const url = new URL(`${PROXY_BASE}${endpoint}`, window.location.origin);
+  Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
   const res = await fetch(url.toString());
   const json = await res.json();
   if (json.errors?.length)
@@ -30,7 +18,7 @@ export async function hunterPost(
   endpoint: string,
   body: Record<string, unknown>
 ): Promise<any> {
-  const res = await fetch(`${BASE}${endpoint}?api_key=${HUNTER_KEY}`, {
+  const res = await fetch(`${PROXY_BASE}${endpoint}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
@@ -52,3 +40,14 @@ export const VERIFY_STATUS: Record<string, { label: string; cls: string }> = {
   disposable: { label: 'Disposable',   cls: 'bg-orange-50 text-orange-800 border-orange-200' },
   unknown:    { label: 'Unknown',      cls: 'bg-gray-100 text-gray-500 border-gray-200' },
 };
+
+/** Extract bare domain from a website URL (strips www. and paths). */
+export function deriveDomain(website?: string): string {
+  if (!website) return '';
+  try {
+    const url = new URL(website.startsWith('http') ? website : `https://${website}`);
+    return url.hostname.replace(/^www\./, '');
+  } catch {
+    return website.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+  }
+}

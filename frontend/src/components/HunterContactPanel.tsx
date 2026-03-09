@@ -120,10 +120,23 @@ function PersonResult({
   company?: any;
   onApplyFields: (f: ApplyFields) => void;
 }) {
+  // Hunter returns twitter as either a string handle OR an object {handle, id, …}
+  const twitterHandle: string | undefined =
+    typeof person?.twitter === 'string'
+      ? person.twitter
+      : typeof person?.twitter === 'object' && person.twitter !== null
+      ? person.twitter.handle
+      : undefined;
+
+  // linkedin_url is a direct string; phone_number too
+  const linkedinUrl: string | undefined   = typeof person?.linkedin_url === 'string' ? person.linkedin_url : undefined;
+  const phoneNumber: string | undefined   = typeof person?.phone_number  === 'string' ? person.phone_number  : undefined;
+  const position:    string | undefined   = typeof person?.position      === 'string' ? person.position      : undefined;
+
   const fields: ApplyFields = {
-    job_title:    person?.position    || undefined,
-    linkedin_url: person?.linkedin_url || undefined,
-    phone:        person?.phone_number || undefined,
+    job_title:    position    || undefined,
+    linkedin_url: linkedinUrl || undefined,
+    phone:        phoneNumber || undefined,
   };
   const hasApplyable = Object.values(fields).some(Boolean);
 
@@ -135,36 +148,36 @@ function PersonResult({
           <Section title="Person" />
           {person.first_name && (
             <p className="text-sm font-medium text-gray-900">
-              {person.first_name} {person.last_name}
-              {person.position && (
-                <span className="font-normal text-gray-500"> · {person.position}</span>
+              {String(person.first_name)} {String(person.last_name ?? '')}
+              {position && (
+                <span className="font-normal text-gray-500"> · {position}</span>
               )}
             </p>
           )}
           {person.seniority && (
             <p className="text-xs text-gray-500 capitalize">
-              {person.seniority}
-              {person.department && ` · ${person.department}`}
+              {String(person.seniority)}
+              {person.department && ` · ${String(person.department)}`}
             </p>
           )}
-          {person.phone_number && (
+          {phoneNumber && (
             <p className="text-xs text-gray-600 flex items-center gap-1.5">
-              📞 {person.phone_number}
+              📞 {phoneNumber}
             </p>
           )}
-          {person.twitter && (
+          {twitterHandle && (
             <a
-              href={`https://twitter.com/${person.twitter}`}
+              href={`https://twitter.com/${twitterHandle}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs text-blue-600 hover:underline"
             >
-              <Twitter className="w-3 h-3" /> @{person.twitter}
+              <Twitter className="w-3 h-3" /> @{twitterHandle}
             </a>
           )}
-          {person.linkedin_url && (
+          {linkedinUrl && (
             <a
-              href={person.linkedin_url}
+              href={linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs text-blue-600 hover:underline"
@@ -189,23 +202,23 @@ function PersonResult({
           <Section title="Company" />
           {company.name && (
             <p className="text-sm font-medium text-gray-900">
-              {company.name}
+              {String(company.name)}
               {company.industry && (
-                <span className="font-normal text-gray-500"> · {company.industry}</span>
+                <span className="font-normal text-gray-500"> · {String(company.industry)}</span>
               )}
             </p>
           )}
           {company.description && (
             <p className="text-xs text-gray-600 leading-relaxed line-clamp-3">
-              {company.description}
+              {String(company.description)}
             </p>
           )}
-          {company.employees_count && (
+          {company.employees_count != null && (
             <p className="text-xs text-gray-500">
-              👥 {company.employees_count.toLocaleString()} employees
+              👥 {Number(company.employees_count).toLocaleString()} employees
             </p>
           )}
-          {company.website && (
+          {typeof company.website === 'string' && company.website && (
             <a
               href={
                 company.website.startsWith('http')

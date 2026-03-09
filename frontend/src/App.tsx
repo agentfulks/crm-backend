@@ -136,28 +136,37 @@ function App() {
         {currentView !== 'tasks' && <QueueStatus />}
 
         {/* Status Filters — shown only for VC and Studios views */}
-        {(currentView === 'vc' || currentView === 'studios') && (
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
-            <div className="flex items-center gap-4">
-              <Filter className="w-5 h-5 text-gray-400" />
-              <div className="flex gap-2 flex-wrap">
-                {['ALL', 'NEW', 'QUEUED', 'AWAITING_APPROVAL', 'APPROVED', 'SENT'].map((s) => (
-                  <button
-                    key={s}
-                    onClick={() => setStatusFilter(s === 'ALL' ? '' : s)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                      (s === 'ALL' && !statusFilter) || statusFilter === s
-                        ? currentView === 'vc' ? 'bg-blue-600 text-white' : 'bg-purple-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    {s === 'ALL' ? (currentView === 'vc' ? 'All Packets' : 'All Studios') : s.replace(/_/g, ' ')}
-                  </button>
-                ))}
+        {(currentView === 'vc' || currentView === 'studios') && (() => {
+          // Packets (VC) don't have a NEW status — only studios do
+          const vcStatuses   = ['ALL', 'QUEUED', 'AWAITING_APPROVAL', 'APPROVED', 'SENT', 'FOLLOW_UP', 'CLOSED'];
+          const studioStatuses = ['ALL', 'NEW', 'QUEUED', 'AWAITING_APPROVAL', 'APPROVED', 'SENT', 'FOLLOW_UP', 'CLOSED'];
+          const statuses = currentView === 'vc' ? vcStatuses : studioStatuses;
+          const activeColor = currentView === 'vc' ? 'bg-blue-600 text-white' : 'bg-purple-600 text-white';
+          const allLabel = currentView === 'vc' ? 'All Packets' : 'All Studios';
+
+          return (
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
+              <div className="flex items-center gap-4">
+                <Filter className="w-5 h-5 text-gray-400" />
+                <div className="flex gap-2 flex-wrap">
+                  {statuses.map((s) => (
+                    <button
+                      key={s}
+                      onClick={() => setStatusFilter(s === 'ALL' ? '' : s)}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        (s === 'ALL' && !statusFilter) || statusFilter === s
+                          ? activeColor
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      {s === 'ALL' ? allLabel : s.replace(/_/g, ' ')}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
 
         {/* ── VC View ── */}
         {currentView === 'vc' && (

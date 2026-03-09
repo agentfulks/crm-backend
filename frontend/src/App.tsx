@@ -9,10 +9,11 @@ import { EmailTemplateManager } from './components/EmailTemplateManager';
 import { ContactsView } from './components/ContactsView';
 import { StudioDetailModal } from './components/StudioDetailModal';
 import { ContactDetailModal } from './components/ContactDetailModal';
-import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle } from 'lucide-react';
+import { KanbanBoard } from './components/KanbanBoard';
+import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Plus } from 'lucide-react';
 import type { StudioPacket, BDRContact } from './types';
 
-type View = 'vc' | 'studios' | 'contacts';
+type View = 'vc' | 'studios' | 'contacts' | 'tasks';
 
 function App() {
   const [selectedPacketId, setSelectedPacketId] = useState<string | null>(null);
@@ -57,21 +58,22 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3 flex-shrink-0">
               <ClipboardCheck className="w-8 h-8 text-blue-600" />
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Outreach Dashboard</h1>
                 <p className="text-sm text-gray-500">VC & Game Studio Outreach</p>
               </div>
             </div>
-            <div className="flex items-center gap-4">
+
+            <div className="flex items-center gap-3 flex-wrap justify-end">
               {/* View Toggle */}
               <div className="flex bg-gray-100 rounded-lg p-1">
                 <button
                   onClick={() => switchView('vc')}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     currentView === 'vc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -80,7 +82,7 @@ function App() {
                 </button>
                 <button
                   onClick={() => switchView('studios')}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     currentView === 'studios' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -89,12 +91,21 @@ function App() {
                 </button>
                 <button
                   onClick={() => switchView('contacts')}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     currentView === 'contacts' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
                   <UserCircle className="w-4 h-4" />
                   Contacts
+                </button>
+                <button
+                  onClick={() => switchView('tasks')}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    currentView === 'tasks' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  <LayoutDashboard className="w-4 h-4" />
+                  Tasks
                 </button>
               </div>
 
@@ -107,21 +118,25 @@ function App() {
                 Templates
               </button>
 
-              <div className="text-right">
-                <p className="text-2xl font-bold text-gray-900">{pendingCount}</p>
-                <p className="text-xs text-gray-500">Awaiting Approval</p>
-              </div>
+              {/* Awaiting approval counter (hidden on tasks view) */}
+              {currentView !== 'tasks' && (
+                <div className="text-right">
+                  <p className="text-2xl font-bold text-gray-900">{pendingCount}</p>
+                  <p className="text-xs text-gray-500">Awaiting Approval</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Queue Status */}
-        <QueueStatus />
+      <main className={`${currentView === 'tasks' ? 'max-w-[1600px]' : 'max-w-7xl'} mx-auto px-4 sm:px-6 lg:px-8 py-8`}>
 
-        {/* Status Filters — shown for VC and Studios views */}
-        {currentView !== 'contacts' && (
+        {/* Queue Status — hide on tasks view */}
+        {currentView !== 'tasks' && <QueueStatus />}
+
+        {/* Status Filters — shown only for VC and Studios views */}
+        {(currentView === 'vc' || currentView === 'studios') && (
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
             <div className="flex items-center gap-4">
               <Filter className="w-5 h-5 text-gray-400" />
@@ -222,6 +237,9 @@ function App() {
             )}
           </>
         )}
+
+        {/* ── Tasks (Kanban) View ── */}
+        {currentView === 'tasks' && <KanbanBoard />}
       </main>
 
       {/* ── VC Packet Detail Modal ── */}

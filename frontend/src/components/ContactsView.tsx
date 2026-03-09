@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useContacts, useUpdateContact, type ContactFilters } from '../hooks/useContacts';
 import { useStudioPackets } from '../hooks/useStudioPackets';
-import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send, Calendar, X as XIcon, Flag, Globe } from 'lucide-react';
+import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send, Calendar, X as XIcon, Flag, Globe, ClipboardCheck } from 'lucide-react';
 import { ContactDetailModal } from './ContactDetailModal';
+import { AddToKanbanModal, type AddToKanbanSource } from './AddToKanbanModal';
 import type { BDRContact } from '../types';
 
 type ContactedQuick = 'all' | 'never' | 'today' | '7d' | '30d' | 'custom';
@@ -24,6 +25,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
   const [detailContact, setDetailContact] = useState<{ contact: BDRContact; studioName: string } | null>(
     initialOpenContact ?? null
   );
+  const [kanbanSource, setKanbanSource] = useState<AddToKanbanSource | null>(null);
 
   // When parent provides a new contact to open, respect it
   useEffect(() => {
@@ -134,6 +136,14 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
 
   return (
     <div className="space-y-6">
+      {/* Add to Kanban modal */}
+      {kanbanSource && (
+        <AddToKanbanModal
+          source={kanbanSource}
+          onClose={() => setKanbanSource(null)}
+        />
+      )}
+
       {/* Contact Detail Modal */}
       {detailContact && (
         <ContactDetailModal
@@ -451,18 +461,44 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
                 </div>
 
                 {/* Footer */}
-                <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
-                  <span className="text-xs text-gray-500">{contact.department || 'Unknown Dept'}</span>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setDetailContact({ contact, studioName: studio?.name || '' });
-                    }}
-                    className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
-                  >
-                    <Send className="w-3 h-3" />
-                    Outreach
-                  </button>
+                <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                  <span className="text-xs text-gray-500 truncate">{contact.department || 'Unknown Dept'}</span>
+                  <div className="flex items-center gap-2 flex-shrink-0">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setKanbanSource({
+                          type: 'contact',
+                          id: contact.id,
+                          title: contact.full_name,
+                          data: {
+                            full_name: contact.full_name,
+                            job_title: contact.job_title,
+                            email: contact.email,
+                            linkedin_url: contact.linkedin_url,
+                            company_id: contact.company_id,
+                            studio_name: studio?.name,
+                            is_decision_maker: contact.is_decision_maker,
+                          },
+                        });
+                      }}
+                      className="flex items-center gap-1 text-xs text-indigo-600 hover:text-indigo-800 hover:bg-indigo-50 px-2 py-1.5 rounded-lg transition-colors"
+                      title="Add to Tasks board"
+                    >
+                      <ClipboardCheck className="w-3 h-3" />
+                      Tasks
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setDetailContact({ contact, studioName: studio?.name || '' });
+                      }}
+                      className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
+                    >
+                      <Send className="w-3 h-3" />
+                      Outreach
+                    </button>
+                  </div>
                 </div>
               </div>
             );

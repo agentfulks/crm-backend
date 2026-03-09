@@ -176,3 +176,22 @@ export interface QueueStatus {
   approved_today: number;
   sent_today: number;
 }
+
+export type KanbanColumn = 'backlog' | 'todo' | 'doing' | 'review' | 'complete';
+export type KanbanCardType = 'custom' | 'vc' | 'studio' | 'contact';
+
+export interface KanbanCard {
+  id: string;
+  title: string;
+  description?: string;
+  column: KanbanColumn;
+  position: number;
+  card_type: KanbanCardType;
+  source_id?: string;
+  source_data?: Record<string, any>;
+  priority?: Priority;
+  due_date?: string;
+  tags?: string[];
+  created_at: string;
+  updated_at: string;
+}

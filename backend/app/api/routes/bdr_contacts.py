@@ -1,7 +1,7 @@
 """BDR Contacts endpoints."""
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import date, datetime, time, timezone
 from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -93,21 +93,31 @@ def list_bdr_contacts(
         query = query.filter(BDRContact.is_flagged == is_flagged)
 
     # last_contacted filters
+    # last_contacted_at is TIMESTAMPTZ (tz-aware) in the DB, so we must compare
+    # with tz-aware datetimes. We also use date.fromisoformat() to safely handle
+    # date-only strings like "2026-03-09" (datetime.fromisoformat raises ValueError
+    # for date-only strings on Python < 3.11).
+    def _day_start(s: str) -> datetime:
+        """Parse a date string → UTC midnight (tz-aware)."""
+        return datetime.combine(date.fromisoformat(s), time.min, tzinfo=timezone.utc)
+
+    def _day_end(s: str) -> datetime:
+        """Parse a date string → UTC end-of-day (tz-aware)."""
+        return datetime.combine(date.fromisoformat(s), time.max, tzinfo=timezone.utc)
+
     if never_contacted:
         query = query.filter(BDRContact.last_contacted_at.is_(None))
     else:
         if last_contacted_on:
-            # Exact calendar day (midnight → midnight+1)
-            day_start = datetime.fromisoformat(last_contacted_on).replace(hour=0, minute=0, second=0, microsecond=0)
-            day_end = day_start.replace(hour=23, minute=59, second=59, microsecond=999999)
-            query = query.filter(BDRContact.last_contacted_at >= day_start, BDRContact.last_contacted_at <= day_end)
+            query = query.filter(
+                BDRContact.last_contacted_at >= _day_start(last_contacted_on),
+                BDRContact.last_contacted_at <= _day_end(last_contacted_on),
+            )
         else:
             if last_contacted_after:
-                after_dt = datetime.fromisoformat(last_contacted_after).replace(hour=0, minute=0, second=0, microsecond=0)
-                query = query.filter(BDRContact.last_contacted_at >= after_dt)
+                query = query.filter(BDRContact.last_contacted_at >= _day_start(last_contacted_after))
             if last_contacted_before:
-                before_dt = datetime.fromisoformat(last_contacted_before).replace(hour=23, minute=59, second=59, microsecond=999999)
-                query = query.filter(BDRContact.last_contacted_at <= before_dt)
+                query = query.filter(BDRContact.last_contacted_at <= _day_end(last_contacted_before))
 
     total = query.count()
     items = query.offset(offset).limit(limit).all()

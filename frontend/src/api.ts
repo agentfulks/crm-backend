@@ -23,13 +23,20 @@ const api = axios.create({
 // ============================================
 
 export const fundsApi = {
-  async listFunds(): Promise<{ items: Fund[] }> {
-    const response = await api.get('/funds/');
+  async listFunds(status?: string, limit = 200): Promise<{ total: number; items: Fund[] }> {
+    const params: Record<string, any> = { limit };
+    if (status) params.status = status;
+    const response = await api.get('/funds/', { params });
     return response.data;
   },
 
   async getFund(id: string): Promise<Fund> {
     const response = await api.get(`/funds/${id}`);
+    return response.data;
+  },
+
+  async updateFund(id: string, data: Partial<Fund>): Promise<Fund> {
+    const response = await api.patch(`/funds/${id}`, data);
     return response.data;
   },
 };

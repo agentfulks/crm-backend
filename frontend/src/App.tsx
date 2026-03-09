@@ -1,22 +1,20 @@
 import { useState } from 'react';
-import { usePendingPackets, usePackets } from './hooks/usePackets';
 import { usePendingStudioPackets, useStudioPackets } from './hooks/useStudioPackets';
-import { PacketCard } from './components/PacketCard';
+import { useFunds } from './hooks/useFunds';
+import { FundCard } from './components/FundCard';
 import { StudioCard } from './components/StudioCard';
-import { PacketDetail } from './components/PacketDetail';
 import { QueueStatus } from './components/QueueStatus';
 import { EmailTemplateManager } from './components/EmailTemplateManager';
 import { ContactsView } from './components/ContactsView';
 import { StudioDetailModal } from './components/StudioDetailModal';
 import { ContactDetailModal } from './components/ContactDetailModal';
 import { KanbanBoard } from './components/KanbanBoard';
-import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Plus } from 'lucide-react';
+import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard } from 'lucide-react';
 import type { StudioPacket, BDRContact } from './types';
 
 type View = 'vc' | 'studios' | 'contacts' | 'tasks';
 
 function App() {
-  const [selectedPacketId, setSelectedPacketId] = useState<string | null>(null);
   const [statusFilter, setStatusFilter] = useState<string>('');
   const [currentView, setCurrentView] = useState<View>('studios');
   const [showTemplateManager, setShowTemplateManager] = useState(false);
@@ -32,20 +30,17 @@ function App() {
     setStatusFilter(''); // reset to "All" whenever switching tabs
   };
 
-  // VC data
-  const { data: packetsData, isLoading: vcLoading } = usePackets(statusFilter);
-  const { data: pendingData } = usePendingPackets();
+  // VC / Funds data — query funds table directly
+  const { data: fundsData, isLoading: vcLoading } = useFunds(statusFilter || undefined);
 
   // Studio data
   const { data: studioPacketsData, isLoading: studioLoading } = useStudioPackets(statusFilter);
   const { data: pendingStudioData } = usePendingStudioPackets();
 
-  const packets = packetsData?.items || [];
+  const funds = fundsData?.items || [];
   const studioPackets = studioPacketsData?.items || [];
 
-  const pendingCount = currentView === 'vc'
-    ? (pendingData?.total || 0)
-    : (pendingStudioData?.total || 0);
+  const pendingCount = pendingStudioData?.total || 0;
 
   /** Open a contact's detail modal, switching to contacts view first */
   const handleOpenContact = (contact: BDRContact, studioName: string) => {
@@ -137,12 +132,12 @@ function App() {
 
         {/* Status Filters — shown only for VC and Studios views */}
         {(currentView === 'vc' || currentView === 'studios') && (() => {
-          // Packets (VC) don't have a NEW status — only studios do
-          const vcStatuses   = ['ALL', 'QUEUED', 'AWAITING_APPROVAL', 'APPROVED', 'SENT', 'FOLLOW_UP', 'CLOSED'];
+          // FundStatus: NEW, RESEARCHING, READY, APPROVED, SENT, FOLLOW_UP, CLOSED
+          const vcStatuses     = ['ALL', 'NEW', 'RESEARCHING', 'READY', 'APPROVED', 'SENT', 'FOLLOW_UP', 'CLOSED'];
           const studioStatuses = ['ALL', 'NEW', 'QUEUED', 'AWAITING_APPROVAL', 'APPROVED', 'SENT', 'FOLLOW_UP', 'CLOSED'];
           const statuses = currentView === 'vc' ? vcStatuses : studioStatuses;
           const activeColor = currentView === 'vc' ? 'bg-blue-600 text-white' : 'bg-purple-600 text-white';
-          const allLabel = currentView === 'vc' ? 'All Packets' : 'All Studios';
+          const allLabel = currentView === 'vc' ? 'All Funds' : 'All Studios';
 
           return (
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
@@ -168,7 +163,7 @@ function App() {
           );
         })()}
 
-        {/* ── VC View ── */}
+        {/* ── VC / Funds View ── */}
         {currentView === 'vc' && (
           <>
             {vcLoading ? (
@@ -181,23 +176,18 @@ function App() {
                   </div>
                 ))}
               </div>
-            ) : packets.length === 0 ? (
+            ) : funds.length === 0 ? (
               <div className="text-center py-12">
                 <Inbox className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-medium text-gray-900 mb-1">No packets found</h3>
+                <h3 className="text-lg font-medium text-gray-900 mb-1">No funds found</h3>
                 <p className="text-gray-500">
-                  {statusFilter ? `No packets with status "${statusFilter.replace(/_/g, ' ')}"` : 'No packets yet'}
+                  {statusFilter ? `No funds with status "${statusFilter.replace(/_/g, ' ')}"` : 'No funds yet'}
                 </p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {packets.map((packet) => (
-                  <PacketCard
-                    key={packet.id}
-                    packet={packet}
-                    onClick={() => setSelectedPacketId(packet.id)}
-                    showActions={packet.status === 'AWAITING_APPROVAL'}
-                  />
+                {funds.map((fund) => (
+                  <FundCard key={fund.id} fund={fund} />
                 ))}
               </div>
             )}
@@ -250,14 +240,6 @@ function App() {
         {/* ── Tasks (Kanban) View ── */}
         {currentView === 'tasks' && <KanbanBoard />}
       </main>
-
-      {/* ── VC Packet Detail Modal ── */}
-      {selectedPacketId && currentView === 'vc' && (
-        <PacketDetail
-          packetId={selectedPacketId}
-          onClose={() => setSelectedPacketId(null)}
-        />
-      )}
 
       {/* ── Studio Detail Modal ── */}
       {selectedStudio && (

@@ -1,12 +1,13 @@
 import { useState, useRef } from 'react';
 import {
   Plus, ChevronLeft, ChevronRight, Building2, Users, UserCircle, Pencil,
-  Calendar, Tag, ClipboardCheck, Globe, Linkedin, Twitter, Mail, MapPin,
+  Calendar, Tag, Globe, Linkedin, Twitter, Mail, MapPin,
   DollarSign, Star, GripVertical,
 } from 'lucide-react';
 import type { KanbanCard, KanbanColumn } from '../types';
 import { useKanbanCards, useUpdateKanbanCard } from '../hooks/useKanban';
 import { KanbanCardModal } from './KanbanCardModal';
+import { KanbanSourceModal } from './KanbanSourceModal';
 
 // ── Column config ─────────────────────────────────────────────────────────────
 
@@ -292,12 +293,13 @@ interface CardTileProps {
   card: KanbanCard;
   colIndex: number;
   onEdit: (card: KanbanCard) => void;
+  onOpenSource: (card: KanbanCard) => void;
   isDragging: boolean;
   onDragStart: () => void;
   onDragEnd: () => void;
 }
 
-function CardTile({ card, colIndex, onEdit, isDragging, onDragStart, onDragEnd }: CardTileProps) {
+function CardTile({ card, colIndex, onEdit, onOpenSource, isDragging, onDragStart, onDragEnd }: CardTileProps) {
   const updateCard = useUpdateKanbanCard();
   const due = formatDue(card.due_date);
   const isSourceCard = card.card_type !== 'custom';
@@ -322,8 +324,13 @@ function CardTile({ card, colIndex, onEdit, isDragging, onDragStart, onDragEnd }
         requestAnimationFrame(onDragStart);
       }}
       onDragEnd={onDragEnd}
+      onClick={() => isSourceCard && onOpenSource(card)}
       className={`bg-white rounded-lg border border-gray-200 shadow-sm p-3 transition-all select-none ${
-        isDragging ? 'opacity-40 scale-95' : 'hover:shadow-md cursor-grab active:cursor-grabbing'
+        isDragging
+          ? 'opacity-40 scale-95'
+          : isSourceCard
+          ? 'hover:shadow-md hover:border-blue-300 cursor-pointer'
+          : 'hover:shadow-md cursor-grab active:cursor-grabbing'
       }`}
     >
       {/* Top row: type badge + priority + edit */}
@@ -355,8 +362,8 @@ function CardTile({ card, colIndex, onEdit, isDragging, onDragStart, onDragEnd }
           <GripVertical className="w-3.5 h-3.5 text-gray-300" />
           <button
             onClick={(e) => { e.stopPropagation(); onEdit(card); }}
-            className="p-1 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-lg"
-            title="Edit"
+            className="p-1 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-lg z-10 relative"
+            title="Edit task"
           >
             <Pencil className="w-3.5 h-3.5" />
           </button>
@@ -419,7 +426,7 @@ function CardTile({ card, colIndex, onEdit, isDragging, onDragStart, onDragEnd }
       {/* Move arrows */}
       <div className="flex justify-between mt-2 pt-2 border-t border-gray-100">
         <button
-          onClick={moveLeft}
+          onClick={(e) => { e.stopPropagation(); moveLeft(); }}
           disabled={colIndex === 0 || updateCard.isPending}
           className="p-1 text-gray-400 hover:text-gray-700 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-100 rounded"
           title="Move left"
@@ -427,7 +434,7 @@ function CardTile({ card, colIndex, onEdit, isDragging, onDragStart, onDragEnd }
           <ChevronLeft className="w-4 h-4" />
         </button>
         <button
-          onClick={moveRight}
+          onClick={(e) => { e.stopPropagation(); moveRight(); }}
           disabled={colIndex === COLUMN_IDS.length - 1 || updateCard.isPending}
           className="p-1 text-gray-400 hover:text-gray-700 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-100 rounded"
           title="Move right"
@@ -448,6 +455,7 @@ export function KanbanBoard() {
 
   const [editingCard, setEditingCard] = useState<KanbanCard | null>(null);
   const [creatingInColumn, setCreatingInColumn] = useState<KanbanColumn | null>(null);
+  const [sourceCard, setSourceCard] = useState<KanbanCard | null>(null);
 
   // Drag state
   const [draggingCardId, setDraggingCardId] = useState<string | null>(null);
@@ -559,6 +567,7 @@ export function KanbanBoard() {
                       card={card}
                       colIndex={colIndex}
                       onEdit={setEditingCard}
+                      onOpenSource={setSourceCard}
                       isDragging={draggingCardId === card.id}
                       onDragStart={() => setDraggingCardId(card.id)}
                       onDragEnd={() => {
@@ -588,6 +597,14 @@ export function KanbanBoard() {
         <KanbanCardModal
           card={editingCard}
           onClose={() => setEditingCard(null)}
+        />
+      )}
+
+      {/* Source entity detail modal (Contact / Studio / VC) */}
+      {sourceCard && (
+        <KanbanSourceModal
+          card={sourceCard}
+          onClose={() => setSourceCard(null)}
         />
       )}
     </>

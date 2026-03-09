@@ -9,6 +9,14 @@ export function useFunds(status?: string) {
   });
 }
 
+export function useFund(id: string | undefined) {
+  return useQuery({
+    queryKey: ['fund', id],
+    queryFn: () => fundsApi.getFund(id!),
+    enabled: !!id,
+  });
+}
+
 export function useUpdateFund() {
   const queryClient = useQueryClient();
   return useMutation({

@@ -8,6 +8,11 @@ export async function hunterGet(endpoint: string, params: Record<string, string>
   const url = new URL(`${PROXY_BASE}${endpoint}`, window.location.origin);
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
   const res = await fetch(url.toString());
+  if (!res.ok) {
+    let detail = `HTTP ${res.status}`;
+    try { detail = (await res.json()).detail ?? detail; } catch { /* ignore */ }
+    throw new Error(`Hunter proxy error: ${detail}`);
+  }
   const json = await res.json();
   if (json.errors?.length)
     throw new Error(json.errors[0]?.details || json.errors[0]?.id || 'Hunter API error');
@@ -23,6 +28,11 @@ export async function hunterPost(
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
+  if (!res.ok) {
+    let detail = `HTTP ${res.status}`;
+    try { detail = (await res.json()).detail ?? detail; } catch { /* ignore */ }
+    throw new Error(`Hunter proxy error: ${detail}`);
+  }
   const json = await res.json();
   if (json.errors?.length)
     throw new Error(json.errors[0]?.details || json.errors[0]?.id || 'Hunter API error');

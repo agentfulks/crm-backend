@@ -146,50 +146,65 @@ function CompanyResult({ result }: { result: any }) {
 }
 
 function DiscoverResult({ result }: { result: any }) {
-  // Discover returns an array of leads or a task object
+  // Hunter's Discover endpoint can return results under different keys
+  // depending on account tier and API version.
+  // Priority order: people > leads > emails > top-level array
   const leads: any[] = Array.isArray(result)
     ? result
-    : result.leads ?? result.emails ?? [];
+    : result.people ?? result.leads ?? result.emails ?? result.contacts ?? [];
+
+  const isAsyncTask = leads.length === 0 && result?.id && result?.status;
 
   if (leads.length === 0) {
     return (
       <div className="text-center py-6 border border-dashed border-gray-200 rounded-lg">
         <User className="w-6 h-6 text-gray-300 mx-auto mb-2" />
         <p className="text-xs text-gray-400">
-          {result?.id
-            ? 'Discovery task submitted — results may take a moment to appear.'
+          {isAsyncTask
+            ? `Discovery task queued (status: ${result.status}). Check Hunter.io dashboard for results.`
             : 'No people discovered at this domain yet.'}
         </p>
+        {isAsyncTask && (
+          <p className="text-xs text-gray-300 mt-1">Task ID: {result.id}</p>
+        )}
       </div>
     );
   }
 
   return (
-    <div className="divide-y divide-gray-100 border border-gray-200 rounded-lg overflow-hidden bg-white">
-      {leads.slice(0, 10).map((l: any, i: number) => (
-        <div key={i} className="flex items-center gap-3 px-3 py-2.5">
-          <div className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 text-xs font-semibold text-gray-600">
-            {(l.first_name?.[0] ?? '?').toUpperCase()}
-          </div>
-          <div className="min-w-0 flex-1">
-            <p className="text-sm font-medium text-gray-900 truncate">
-              {[l.first_name, l.last_name].filter(Boolean).join(' ') || '—'}
-            </p>
-            {l.position && (
-              <p className="text-xs text-gray-500 truncate">{l.position}</p>
+    <div className="space-y-2">
+      <p className="text-xs text-gray-400">{leads.length} people found</p>
+      <div className="divide-y divide-gray-100 border border-gray-200 rounded-lg overflow-hidden bg-white">
+        {leads.slice(0, 15).map((l: any, i: number) => (
+          <div key={i} className="flex items-center gap-3 px-3 py-2.5">
+            <div className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 text-xs font-semibold text-gray-600">
+              {(l.first_name?.[0] ?? l.name?.[0] ?? '?').toUpperCase()}
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-medium text-gray-900 truncate">
+                {[l.first_name, l.last_name].filter(Boolean).join(' ') || l.name || '—'}
+              </p>
+              {(l.position || l.title) && (
+                <p className="text-xs text-gray-500 truncate">{l.position ?? l.title}</p>
+              )}
+            </div>
+            {(l.email || l.value) && (
+              <a
+                href={`mailto:${l.email ?? l.value}`}
+                className="flex items-center gap-1 text-xs text-blue-600 hover:underline flex-shrink-0"
+              >
+                <Mail className="w-3 h-3" />
+                {l.email ?? l.value}
+              </a>
             )}
           </div>
-          {l.email && (
-            <a
-              href={`mailto:${l.email}`}
-              className="flex items-center gap-1 text-xs text-blue-600 hover:underline flex-shrink-0"
-            >
-              <Mail className="w-3 h-3" />
-              {l.email}
-            </a>
-          )}
-        </div>
-      ))}
+        ))}
+        {leads.length > 15 && (
+          <div className="px-3 py-2 text-xs text-center text-gray-400">
+            + {leads.length - 15} more — view in Hunter.io dashboard
+          </div>
+        )}
+      </div>
     </div>
   );
 }

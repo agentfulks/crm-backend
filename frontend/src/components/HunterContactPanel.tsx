@@ -120,18 +120,53 @@ function PersonResult({
   company?: any;
   onApplyFields: (f: ApplyFields) => void;
 }) {
-  // Hunter returns twitter as either a string handle OR an object {handle, id, …}
-  const twitterHandle: string | undefined =
-    typeof person?.twitter === 'string'
-      ? person.twitter
-      : typeof person?.twitter === 'object' && person.twitter !== null
-      ? person.twitter.handle
-      : undefined;
+  if (!person) return null;
 
-  // linkedin_url is a direct string; phone_number too
-  const linkedinUrl: string | undefined   = typeof person?.linkedin_url === 'string' ? person.linkedin_url : undefined;
-  const phoneNumber: string | undefined   = typeof person?.phone_number  === 'string' ? person.phone_number  : undefined;
-  const position:    string | undefined   = typeof person?.position      === 'string' ? person.position      : undefined;
+  // ── Hunter.io /people/find and /combined/find return camelCase nested objects ──
+  // e.g. person.name.givenName, person.employment.title, person.linkedin.handle
+
+  // Name — could be nested {givenName, familyName} or flat first_name/last_name
+  const firstName: string =
+    person.name?.givenName ?? person.first_name ?? '';
+  const lastName: string =
+    person.name?.familyName ?? person.last_name ?? '';
+  const fullName: string =
+    person.name?.fullName ?? [firstName, lastName].filter(Boolean).join(' ');
+
+  // Employment — nested under person.employment
+  const position: string =
+    person.employment?.title ?? person.position ?? '';
+  const seniority: string =
+    person.employment?.seniority ?? person.seniority ?? '';
+  const department: string =
+    person.employment?.role ?? person.department ?? '';
+  const companyName: string =
+    person.employment?.name ?? '';
+
+  // Contact details
+  const phoneNumber: string =
+    person.phone ?? person.phone_number ?? '';
+
+  // Location / bio
+  const location: string = typeof person.location === 'string' ? person.location : '';
+  const bio: string      = typeof person.bio      === 'string' ? person.bio      : '';
+
+  // Twitter — can be object {handle} or plain string
+  const twitterHandle: string =
+    typeof person.twitter === 'string'
+      ? person.twitter
+      : person.twitter?.handle ?? '';
+
+  // LinkedIn — can be object {handle} or full URL string
+  const linkedinHandle: string =
+    typeof person.linkedin === 'object'
+      ? person.linkedin?.handle ?? ''
+      : typeof person.linkedin_url === 'string'
+      ? person.linkedin_url.replace(/^https?:\/\/(www\.)?linkedin\.com\/in\//, '')
+      : '';
+  const linkedinUrl: string = linkedinHandle
+    ? `https://www.linkedin.com/in/${linkedinHandle}`
+    : '';
 
   const fields: ApplyFields = {
     job_title:    position    || undefined,
@@ -142,89 +177,109 @@ function PersonResult({
 
   return (
     <div className="border border-gray-200 rounded-lg bg-white divide-y divide-gray-100 overflow-hidden">
-      {/* Person */}
-      {person && (
-        <div className="p-3 space-y-1.5">
-          <Section title="Person" />
-          {person.first_name && (
-            <p className="text-sm font-medium text-gray-900">
-              {String(person.first_name)} {String(person.last_name ?? '')}
-              {position && (
-                <span className="font-normal text-gray-500"> · {position}</span>
-              )}
-            </p>
-          )}
-          {person.seniority && (
-            <p className="text-xs text-gray-500 capitalize">
-              {String(person.seniority)}
-              {person.department && ` · ${String(person.department)}`}
-            </p>
-          )}
-          {phoneNumber && (
-            <p className="text-xs text-gray-600 flex items-center gap-1.5">
-              📞 {phoneNumber}
-            </p>
-          )}
-          {twitterHandle && (
-            <a
-              href={`https://twitter.com/${twitterHandle}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-blue-600 hover:underline"
-            >
-              <Twitter className="w-3 h-3" /> @{twitterHandle}
-            </a>
-          )}
-          {linkedinUrl && (
-            <a
-              href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-blue-600 hover:underline"
-            >
-              <Linkedin className="w-3 h-3" /> LinkedIn Profile
-            </a>
-          )}
-          {hasApplyable && (
-            <button
-              onClick={() => onApplyFields(fields)}
-              className="mt-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors"
-            >
-              Apply to contact
-            </button>
-          )}
-        </div>
-      )}
+      {/* ── Person ── */}
+      <div className="p-3 space-y-1.5">
+        <Section title="Person" />
 
-      {/* Company (combined only) */}
+        {fullName && (
+          <p className="text-sm font-semibold text-gray-900">
+            {fullName}
+            {position && <span className="font-normal text-gray-500"> · {position}</span>}
+          </p>
+        )}
+
+        {(seniority || department) && (
+          <p className="text-xs text-gray-500 capitalize">
+            {[seniority, department].filter(Boolean).join(' · ')}
+          </p>
+        )}
+
+        {companyName && (
+          <p className="text-xs text-gray-500">🏢 {companyName}</p>
+        )}
+
+        {location && (
+          <p className="text-xs text-gray-500">📍 {location}</p>
+        )}
+
+        {bio && (
+          <p className="text-xs text-gray-600 leading-relaxed line-clamp-3">{bio}</p>
+        )}
+
+        {phoneNumber && (
+          <p className="text-xs text-gray-600">📞 {phoneNumber}</p>
+        )}
+
+        {twitterHandle && (
+          <a
+            href={`https://twitter.com/${twitterHandle}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-xs text-blue-600 hover:underline"
+          >
+            <Twitter className="w-3 h-3" /> @{twitterHandle}
+          </a>
+        )}
+
+        {linkedinUrl && (
+          <a
+            href={linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-xs text-blue-600 hover:underline"
+          >
+            <Linkedin className="w-3 h-3" /> LinkedIn Profile
+          </a>
+        )}
+
+        {hasApplyable && (
+          <button
+            onClick={() => onApplyFields(fields)}
+            className="mt-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors"
+          >
+            Apply to contact
+          </button>
+        )}
+      </div>
+
+      {/* ── Company (combined endpoint only) ── */}
       {company && (
         <div className="p-3 space-y-1.5">
           <Section title="Company" />
-          {company.name && (
-            <p className="text-sm font-medium text-gray-900">
-              {String(company.name)}
-              {company.industry && (
+          {(company.name || company.legalName) && (
+            <p className="text-sm font-semibold text-gray-900">
+              {String(company.name ?? company.legalName)}
+              {company.category?.industry && (
+                <span className="font-normal text-gray-500"> · {String(company.category.industry)}</span>
+              )}
+              {!company.category?.industry && company.industry && (
                 <span className="font-normal text-gray-500"> · {String(company.industry)}</span>
               )}
             </p>
           )}
-          {company.description && (
+          {(company.description || company.site?.metaDescription) && (
             <p className="text-xs text-gray-600 leading-relaxed line-clamp-3">
-              {String(company.description)}
+              {String(company.description ?? company.site?.metaDescription)}
             </p>
           )}
-          {company.employees_count != null && (
+          {(company.metrics?.employees ?? company.employees_count) != null && (
             <p className="text-xs text-gray-500">
-              👥 {Number(company.employees_count).toLocaleString()} employees
+              👥 {Number(company.metrics?.employees ?? company.employees_count).toLocaleString()} employees
             </p>
           )}
-          {typeof company.website === 'string' && company.website && (
+          {(company.domain || company.domainAliases?.[0]) && (
             <a
-              href={
-                company.website.startsWith('http')
-                  ? company.website
-                  : `https://${company.website}`
-              }
+              href={`https://${company.domain ?? company.domainAliases?.[0]}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs text-blue-600 hover:underline"
+            >
+              <Globe className="w-3 h-3" /> {company.domain ?? company.domainAliases?.[0]}
+            </a>
+          )}
+          {typeof company.website === 'string' && company.website && !company.domain && (
+            <a
+              href={company.website.startsWith('http') ? company.website : `https://${company.website}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs text-blue-600 hover:underline"

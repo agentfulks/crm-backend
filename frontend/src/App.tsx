@@ -9,9 +9,10 @@ import { ContactsView } from './components/ContactsView';
 import { VCContactsView } from './components/VCContactsView';
 import { StudioDetailModal } from './components/StudioDetailModal';
 import { ContactDetailModal } from './components/ContactDetailModal';
+import { FundDetailModal } from './components/FundDetailModal';
 import { KanbanBoard } from './components/KanbanBoard';
 import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase } from 'lucide-react';
-import type { StudioPacket, BDRContact } from './types';
+import type { StudioPacket, BDRContact, Fund } from './types';
 
 type View = 'vc' | 'studios' | 'contacts' | 'vc-contacts' | 'tasks';
 
@@ -22,6 +23,9 @@ function App() {
 
   // Studio detail modal state
   const [selectedStudio, setSelectedStudio] = useState<StudioPacket | null>(null);
+
+  // Fund detail modal state
+  const [selectedFund, setSelectedFund] = useState<Fund | null>(null);
 
   // Contact detail modal state (can be opened from studios or contacts view)
   const [selectedContact, setSelectedContact] = useState<{ contact: BDRContact; studioName: string; studioWebsite?: string } | null>(null);
@@ -197,7 +201,7 @@ function App() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {funds.map((fund) => (
-                  <FundCard key={fund.id} fund={fund} />
+                  <FundCard key={fund.id} fund={fund} onClick={() => setSelectedFund(fund)} />
                 ))}
               </div>
             )}
@@ -253,6 +257,14 @@ function App() {
         {/* ── Tasks (Kanban) View ── */}
         {currentView === 'tasks' && <KanbanBoard />}
       </main>
+
+      {/* ── Fund Detail Modal ── */}
+      {selectedFund && (
+        <FundDetailModal
+          fund={selectedFund}
+          onClose={() => setSelectedFund(null)}
+        />
+      )}
 
       {/* ── Studio Detail Modal ── */}
       {selectedStudio && (

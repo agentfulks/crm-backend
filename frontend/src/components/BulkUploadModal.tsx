@@ -103,38 +103,63 @@ const TYPE_ENDPOINTS: Record<BulkType, string> = {
 };
 
 // ─── CSV parser ───────────────────────────────────────────────────────────────
-
-function parseCSVLine(line: string): string[] {
-  const result: string[] = [];
-  let current = '';
-  let inQuotes = false;
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
-    if (ch === '"') {
-      if (inQuotes && line[i + 1] === '"') { current += '"'; i++; }
-      else { inQuotes = !inQuotes; }
-    } else if (ch === ',' && !inQuotes) {
-      result.push(current.trim());
-      current = '';
-    } else {
-      current += ch;
-    }
-  }
-  result.push(current.trim());
-  return result;
-}
+// Parses character-by-character so multi-line quoted fields (e.g. addresses
+// that contain real newlines) are handled correctly instead of fragmenting rows.
 
 function parseCSV(text: string): ParsedCSV {
-  const lines = text.split(/\r?\n/).filter(l => l.trim());
-  if (lines.length === 0) return { headers: [], rows: [] };
-  const headers = parseCSVLine(lines[0]).map(h => h.replace(/^"|"$/g, ''));
-  const rows = lines.slice(1).map(line => {
-    const vals = parseCSVLine(line);
-    const row: Record<string, string> = {};
-    headers.forEach((h, i) => { row[h] = (vals[i] ?? '').replace(/^"|"$/g, ''); });
-    return row;
+  const rows: string[][] = [];
+  let row: string[] = [];
+  let cell = '';
+  let inQuotes = false;
+
+  const flushCell = () => {
+    // Collapse internal newlines / extra whitespace inside a cell value
+    row.push(cell.replace(/[\r\n]+/g, ' ').replace(/\s{2,}/g, ' ').trim());
+    cell = '';
+  };
+
+  const flushRow = () => {
+    flushCell();
+    if (row.some(v => v !== '')) rows.push(row);
+    row = [];
+  };
+
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+
+    if (ch === '"') {
+      if (inQuotes && text[i + 1] === '"') {
+        // Escaped double-quote inside a quoted field
+        cell += '"';
+        i++;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (ch === ',' && !inQuotes) {
+      flushCell();
+    } else if (ch === '\r' && !inQuotes) {
+      if (text[i + 1] === '\n') i++; // consume \n in \r\n
+      flushRow();
+    } else if (ch === '\n' && !inQuotes) {
+      flushRow();
+    } else {
+      cell += ch;
+    }
+  }
+
+  // Flush any trailing content
+  if (cell.trim() || row.length > 0) flushRow();
+
+  if (rows.length === 0) return { headers: [], rows: [] };
+
+  const headers = rows[0];
+  const dataRows = rows.slice(1).map(cells => {
+    const record: Record<string, string> = {};
+    headers.forEach((h, idx) => { record[h] = cells[idx] ?? ''; });
+    return record;
   });
-  return { headers, rows };
+
+  return { headers, rows: dataRows };
 }
 
 // ─── Sample CSV download helper ───────────────────────────────────────────────

@@ -1,11 +1,10 @@
 """VC Outreach Log model - message history for contacts in the contacts table."""
 from __future__ import annotations
 
-import uuid
 from datetime import datetime
+from uuid import uuid4
 
 from sqlalchemy import Column, String, Text, DateTime, ForeignKey
-from sqlalchemy.dialects.postgresql import UUID
 
 from app.db.base import Base
 
@@ -15,9 +14,10 @@ class VCOutreachLog(Base):
 
     __tablename__ = "vc_outreach_logs"
 
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    # contacts.id is character varying, so we use String to match
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid4()))
     contact_id = Column(
-        UUID(as_uuid=True),
+        String(36),
         ForeignKey("contacts.id", ondelete="CASCADE"),
         nullable=False,
         index=True,

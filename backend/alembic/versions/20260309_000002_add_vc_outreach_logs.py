@@ -7,7 +7,6 @@ Create Date: 2026-03-09 12:00:00.000000
 """
 from alembic import op
 import sqlalchemy as sa
-from sqlalchemy.dialects import postgresql
 
 # revision identifiers, used by Alembic.
 revision = '20260309_000002'
@@ -17,15 +16,15 @@ depends_on = None
 
 
 def upgrade() -> None:
+    # contacts.id is character varying, so contact_id must also be VARCHAR
     op.create_table(
         'vc_outreach_logs',
-        sa.Column('id', postgresql.UUID(as_uuid=True), primary_key=True),
+        sa.Column('id', sa.String(36), primary_key=True),
         sa.Column(
             'contact_id',
-            postgresql.UUID(as_uuid=True),
+            sa.String(36),
             sa.ForeignKey('contacts.id', ondelete='CASCADE'),
             nullable=False,
-            index=True,
         ),
         sa.Column('channel', sa.String(50), nullable=False),
         sa.Column('subject', sa.Text, nullable=True),

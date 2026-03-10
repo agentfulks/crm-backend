@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
   Search, Plus, User, Mail, Phone, Linkedin, Building2,
-  Star, Flag, CheckCircle, X, Save, RotateCcw, Trash2, ChevronDown, ChevronUp,
+  Star, Flag, CheckCircle, X, Save, Trash2, ChevronDown, ChevronUp,
 } from 'lucide-react';
 import { useVCContacts, useCreateVCContact, useUpdateVCContact, useDeleteVCContact } from '../hooks/useVCContacts';
 import { useFunds } from '../hooks/useFunds';

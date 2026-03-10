@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import {
   X, Globe, Linkedin, Twitter, Mail, DollarSign, MapPin, Users,
-  ExternalLink, Save, RotateCcw, Edit3, Plus, Phone, Star, CheckCircle, ChevronDown, ChevronUp, Trash2,
+  ExternalLink, Save, RotateCcw, Edit3, Plus, Phone, Star, CheckCircle, ChevronDown, ChevronUp, Trash2, Flag,
 } from 'lucide-react';
 import type { Fund, FundStatus, Priority, VCContact } from '../types';
 import { useUpdateFund } from '../hooks/useFunds';
 import { useContactsByFund, useCreateVCContact, useUpdateVCContact, useDeleteVCContact } from '../hooks/useVCContacts';
 import { VCContactDetailModal } from './VCContactDetailModal';
+import { HunterStudioPanel } from './HunterStudioPanel';
+import { deriveDomain } from '../lib/hunterApi';
 
 const STATUS_OPTIONS: FundStatus[] = ['NEW', 'RESEARCHING', 'READY', 'APPROVED', 'SENT', 'FOLLOW_UP', 'CLOSED'];
 
@@ -164,6 +166,7 @@ export function FundDetailModal({ fund, onClose }: Props) {
   const [editing, setEditing] = useState(false);
   const [showAddContact, setShowAddContact] = useState(false);
   const [selectedContact, setSelectedContact] = useState<VCContact | null>(null);
+  const isFlagged = fund.is_flagged ?? false;
 
   const { data: fundContacts = [], refetch: refetchContacts } = useContactsByFund(fund.id);
   const deleteContact = useDeleteVCContact();
@@ -240,10 +243,10 @@ export function FundDetailModal({ fund, onClose }: Props) {
       <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-xl">
 
         {/* ── Header ── */}
-        <div className="flex items-start justify-between p-5 border-b">
+        <div className={`flex items-start justify-between p-5 border-b rounded-t-xl ${isFlagged ? 'bg-red-50' : ''}`}>
           <div className="flex items-center gap-3 min-w-0">
-            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
-              <Users className="w-6 h-6 text-blue-500" />
+            <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${isFlagged ? 'bg-red-100' : 'bg-blue-50'}`}>
+              <Users className={`w-6 h-6 ${isFlagged ? 'text-red-500' : 'text-blue-500'}`} />
             </div>
             <div className="min-w-0 flex-1">
               {editing ? (
@@ -269,6 +272,20 @@ export function FundDetailModal({ fund, onClose }: Props) {
           </div>
 
           <div className="flex items-center gap-2 flex-shrink-0 ml-3">
+            {/* Flag */}
+            <button
+              onClick={() => updateFund.mutate({ id: fund.id, data: { is_flagged: !isFlagged } })}
+              title={isFlagged ? 'Remove flag' : 'Flag as bad data'}
+              className={`flex items-center gap-1.5 text-sm px-2.5 py-1.5 rounded-lg border transition-colors ${
+                isFlagged
+                  ? 'bg-red-50 border-red-300 text-red-600 hover:bg-red-100'
+                  : 'border-gray-300 text-gray-400 hover:border-red-400 hover:text-red-500 hover:bg-red-50'
+              }`}
+            >
+              <Flag className="w-3.5 h-3.5" fill={isFlagged ? 'currentColor' : 'none'} />
+              {isFlagged ? 'Flagged' : 'Flag'}
+            </button>
+
             {editing ? (
               <>
                 <button
@@ -521,6 +538,12 @@ export function FundDetailModal({ fund, onClose }: Props) {
               </div>
             </div>
           )}
+
+          {/* ── Hunter.io Panel ── */}
+          <HunterStudioPanel
+            defaultDomain={deriveDomain(fund.website_url)}
+            companyName={fund.name}
+          />
 
           {/* ── Contacts ── */}
           <div>

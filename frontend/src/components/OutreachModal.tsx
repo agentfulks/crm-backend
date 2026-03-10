@@ -26,6 +26,12 @@ interface OutreachModalProps {
    * - VC contacts:  '/contacts'
    */
   apiBase: string;
+  /**
+   * Which template tab to open by default.
+   * - 'studio' for game studio contacts (default)
+   * - 'vc' for VC fund contacts
+   */
+  templateContext?: 'studio' | 'vc';
   onClose: () => void;
 }
 
@@ -119,7 +125,7 @@ function HistoryEntry({ log }: { log: any }) {
 
 // ── Main modal ────────────────────────────────────────────────────────────────
 
-export function OutreachModal({ contact, orgName = '', apiBase, onClose }: OutreachModalProps) {
+export function OutreachModal({ contact, orgName = '', apiBase, templateContext = 'studio', onClose }: OutreachModalProps) {
   const [showTemplatePicker, setShowTemplatePicker] = useState(false);
   const [subject, setSubject] = useState('');
   const [body, setBody] = useState('');
@@ -196,6 +202,7 @@ export function OutreachModal({ contact, orgName = '', apiBase, onClose }: Outre
           onClose={() => setShowTemplatePicker(false)}
           onSelectTemplate={handleSelectTemplate}
           selectMode
+          defaultTab={templateContext}
         />
       )}
 

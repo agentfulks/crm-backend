@@ -7,6 +7,8 @@ interface EmailTemplateManagerProps {
   onClose: () => void;
   onSelectTemplate?: (template: EmailTemplate) => void;
   selectMode?: boolean;
+  /** Which tab to open by default when used as a picker */
+  defaultTab?: 'studio' | 'vc';
 }
 
 const defaultVariables = `Available variables:
@@ -15,56 +17,55 @@ const defaultVariables = `Available variables:
 {{first_name}} - Contact first name
 {{my_name}} - Your name (Lucas Fulks)`;
 
-export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = false }: EmailTemplateManagerProps) {
+type Tab = 'studio' | 'vc';
+
+const TAB_LABELS: Record<Tab, string> = {
+  studio: '🎮 Studio Templates',
+  vc: '💼 VC Templates',
+};
+
+export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = false, defaultTab = 'studio' }: EmailTemplateManagerProps) {
   const { data: templatesData, isLoading } = useEmailTemplates();
   const createMutation = useCreateEmailTemplate();
   const updateMutation = useUpdateEmailTemplate();
   const deleteMutation = useDeleteEmailTemplate();
-  
+
+  const [activeTab, setActiveTab] = useState<Tab>(defaultTab);
   const [editingTemplate, setEditingTemplate] = useState<EmailTemplate | null>(null);
   const [isCreating, setIsCreating] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     description: '',
     category: 'introduction',
+    template_type: defaultTab as string,
     subject: '',
     body: '',
   });
 
-  const templates = templatesData?.items || [];
+  const allTemplates: EmailTemplate[] = templatesData?.items || [];
+
+  // Filter templates by active tab
+  const templates = allTemplates.filter(t => (t.template_type || 'studio') === activeTab);
 
   const handleCreate = async () => {
-    // Validate required fields
-    if (!formData.name.trim()) {
-      alert('Template name is required');
-      return;
-    }
-    if (!formData.subject.trim()) {
-      alert('Subject is required');
-      return;
-    }
-    if (!formData.body.trim()) {
-      alert('Body is required');
-      return;
-    }
-    
+    if (!formData.name.trim()) { alert('Template name is required'); return; }
+    if (!formData.subject.trim()) { alert('Subject is required'); return; }
+    if (!formData.body.trim()) { alert('Body is required'); return; }
+
     try {
-      console.log('Creating template with data:', formData);
-      const result = await createMutation.mutateAsync({
+      await createMutation.mutateAsync({
         name: formData.name,
         description: formData.description,
         category: formData.category,
+        template_type: activeTab,  // always assign to current tab
         subject: formData.subject,
         body: formData.body,
         variables: defaultVariables,
         is_active: true,
       });
-      console.log('Template created successfully:', result);
       setIsCreating(false);
-      setFormData({ name: '', description: '', category: 'introduction', subject: '', body: '' });
-      alert('Template created successfully!');
+      setFormData({ name: '', description: '', category: 'introduction', template_type: activeTab, subject: '', body: '' });
     } catch (error: any) {
-      console.error('Failed to create template:', error);
       alert('Failed to create template: ' + (error?.response?.data?.detail || error?.message || 'Unknown error'));
     }
   };
@@ -72,10 +73,7 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
   const handleUpdate = async () => {
     if (!editingTemplate) return;
     try {
-      await updateMutation.mutateAsync({
-        id: editingTemplate.id,
-        data: formData,
-      });
+      await updateMutation.mutateAsync({ id: editingTemplate.id, data: formData });
       setEditingTemplate(null);
     } catch (error) {
       console.error('Failed to update template:', error);
@@ -84,11 +82,7 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
 
   const handleDelete = async (id: string) => {
     if (!confirm('Are you sure you want to delete this template?')) return;
-    try {
-      await deleteMutation.mutateAsync(id);
-    } catch (error) {
-      console.error('Failed to delete template:', error);
-    }
+    try { await deleteMutation.mutateAsync(id); } catch (error) { console.error(error); }
   };
 
   const startEdit = (template: EmailTemplate) => {
@@ -97,6 +91,7 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
       name: template.name,
       description: template.description || '',
       category: template.category || 'introduction',
+      template_type: template.template_type || activeTab,
       subject: template.subject,
       body: template.body,
     });
@@ -104,12 +99,17 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
 
   const startCreate = () => {
     setIsCreating(true);
-    setFormData({ name: '', description: '', category: 'introduction', subject: '', body: '' });
+    setFormData({ name: '', description: '', category: 'introduction', template_type: activeTab, subject: '', body: '' });
   };
 
   const cancelEdit = () => {
     setEditingTemplate(null);
     setIsCreating(false);
+  };
+
+  const handleTabChange = (tab: Tab) => {
+    if (isCreating || editingTemplate) cancelEdit();
+    setActiveTab(tab);
   };
 
   return (
@@ -118,11 +118,31 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b">
           <h2 className="text-xl font-semibold">
-            {selectMode ? 'Select Email Template' : 'Email Templates'}
+            {selectMode ? 'Select Template' : 'Email Templates'}
           </h2>
           <button onClick={onClose} className="p-1 hover:bg-gray-100 rounded">
             <X className="w-5 h-5" />
           </button>
+        </div>
+
+        {/* Tab bar */}
+        <div className="flex border-b">
+          {(['studio', 'vc'] as Tab[]).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => handleTabChange(tab)}
+              className={`flex-1 py-2.5 text-sm font-medium transition-colors ${
+                activeTab === tab
+                  ? 'border-b-2 border-blue-600 text-blue-600 bg-blue-50'
+                  : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+              }`}
+            >
+              {TAB_LABELS[tab]}
+              <span className="ml-1.5 text-xs bg-gray-100 text-gray-500 rounded-full px-1.5 py-0.5">
+                {allTemplates.filter(t => (t.template_type || 'studio') === tab).length}
+              </span>
+            </button>
+          ))}
         </div>
 
         {/* Content */}
@@ -135,9 +155,9 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
               {(isCreating || editingTemplate) && (
                 <div className="bg-gray-50 p-4 rounded-lg mb-4">
                   <h3 className="font-medium mb-3">
-                    {isCreating ? 'Create New Template' : 'Edit Template'}
+                    {isCreating ? `New ${TAB_LABELS[activeTab]}` : 'Edit Template'}
                   </h3>
-                  
+
                   <div className="space-y-3">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Name *</label>
@@ -157,11 +177,23 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
                         onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                         className="w-full px-3 py-2 border rounded-lg"
                       >
-                        <option value="introduction">Introduction</option>
-                        <option value="follow_up">Follow Up</option>
-                        <option value="art_product">Art Product</option>
-                        <option value="liveops">LiveOps</option>
-                        <option value="general">General</option>
+                        {activeTab === 'studio' ? (
+                          <>
+                            <option value="introduction">Introduction</option>
+                            <option value="follow_up">Follow Up</option>
+                            <option value="art_product">Art Product</option>
+                            <option value="liveops">LiveOps</option>
+                            <option value="general">General</option>
+                          </>
+                        ) : (
+                          <>
+                            <option value="introduction">Introduction</option>
+                            <option value="follow_up">Follow Up</option>
+                            <option value="pitch">Pitch</option>
+                            <option value="due_diligence">Due Diligence</option>
+                            <option value="general">General</option>
+                          </>
+                        )}
                       </select>
                     </div>
 
@@ -183,7 +215,9 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         className="w-full px-3 py-2 border rounded-lg"
-                        placeholder="e.g., Partnership opportunity - {{studio_name}}"
+                        placeholder={activeTab === 'studio'
+                          ? 'e.g., Partnership opportunity - {{studio_name}}'
+                          : 'e.g., Investment opportunity - {{fund_name}}'}
                       />
                     </div>
 
@@ -199,7 +233,10 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
 
                     <div className="bg-blue-50 p-3 rounded text-sm text-blue-800">
                       <p className="font-medium mb-1">Available variables:</p>
-                      <code className="text-xs">{'{{studio_name}} {{contact_name}} {{first_name}} {{my_name}}'}</code>
+                      <code className="text-xs">
+                        {'{{contact_name}} {{first_name}} {{my_name}} '}
+                        {activeTab === 'studio' ? '{{studio_name}}' : '{{fund_name}} {{org_name}}'}
+                      </code>
                     </div>
 
                     <div className="flex gap-2">
@@ -225,7 +262,9 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
               {!isCreating && !editingTemplate && (
                 <>
                   <div className="flex justify-between items-center mb-4">
-                    <h3 className="font-medium">Your Templates ({templates.length})</h3>
+                    <h3 className="font-medium text-gray-700">
+                      {TAB_LABELS[activeTab]} ({templates.length})
+                    </h3>
                     {!selectMode && (
                       <button
                         onClick={startCreate}
@@ -269,19 +308,13 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
                           {!selectMode && (
                             <div className="flex gap-1 ml-4">
                               <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  startEdit(template);
-                                }}
+                                onClick={(e) => { e.stopPropagation(); startEdit(template); }}
                                 className="p-2 text-gray-600 hover:bg-gray-100 rounded"
                               >
                                 <Edit className="w-4 h-4" />
                               </button>
                               <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  handleDelete(template.id);
-                                }}
+                                onClick={(e) => { e.stopPropagation(); handleDelete(template.id); }}
                                 className="p-2 text-red-600 hover:bg-red-50 rounded"
                               >
                                 <Trash2 className="w-4 h-4" />
@@ -303,7 +336,12 @@ export function EmailTemplateManager({ onClose, onSelectTemplate, selectMode = f
 
                     {templates.length === 0 && (
                       <div className="text-center py-8 text-gray-500">
-                        No templates yet. Create your first one!
+                        No {activeTab === 'vc' ? 'VC' : 'Studio'} templates yet.{' '}
+                        {!selectMode && (
+                          <button onClick={startCreate} className="text-blue-600 hover:underline">
+                            Create the first one!
+                          </button>
+                        )}
                       </div>
                     )}
                   </div>

@@ -243,6 +243,7 @@ export function VCContactDetailModal({ contact, fundName = '', fundWebsite, onCl
         contact={{ id: contact.id, full_name: fullName, email, linkedin_url: linkedinUrl, jobTitle: title }}
         orgName={fundName}
         apiBase="/contacts"
+        templateContext="vc"
         onClose={() => setShowOutreach(false)}
       />
     );

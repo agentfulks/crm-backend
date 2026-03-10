@@ -19,6 +19,7 @@ class EmailTemplate(Base):
     name = Column(String(255), nullable=False, unique=True)
     description = Column(Text, nullable=True)
     category = Column(String(100), nullable=True)  # e.g., "introduction", "follow_up", "art_product"
+    template_type = Column(String(20), nullable=False, server_default='studio')  # 'studio' | 'vc'
     subject = Column(String(500), nullable=False)
     body = Column(Text, nullable=False)
     

@@ -13,6 +13,7 @@ class EmailTemplateBase(BaseModel):
     name: str = Field(..., min_length=1, max_length=255)
     description: str | None = None
     category: str | None = None
+    template_type: str = 'studio'  # 'studio' | 'vc'
     subject: str = Field(..., min_length=1, max_length=500)
     body: str = Field(..., min_length=1)
     variables: str | None = None
@@ -30,6 +31,7 @@ class EmailTemplateUpdate(BaseModel):
     name: str | None = Field(None, min_length=1, max_length=255)
     description: str | None = None
     category: str | None = None
+    template_type: str | None = None
     subject: str | None = Field(None, min_length=1, max_length=500)
     body: str | None = Field(None, min_length=1)
     variables: str | None = None

@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Globe, Linkedin, Twitter, DollarSign, MapPin, ClipboardCheck, Users } from 'lucide-react';
+import { Globe, Linkedin, Twitter, DollarSign, MapPin, ClipboardCheck, Users, Flag } from 'lucide-react';
 import type { Fund } from '../types';
+import { useUpdateFund } from '../hooks/useFunds';
 import { AddToKanbanModal } from './AddToKanbanModal';
 
 interface FundCardProps {
@@ -35,15 +36,26 @@ function formatCheckSize(min?: number, max?: number, currency?: string): string 
 
 export function FundCard({ fund, onClick }: FundCardProps) {
   const [showKanban, setShowKanban] = useState(false);
+  const updateFund = useUpdateFund();
+  const isFlagged = fund.is_flagged ?? false;
   const checkSize = formatCheckSize(fund.check_size_min, fund.check_size_max, fund.check_size_currency);
+
+  const handleFlag = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    updateFund.mutate({ id: fund.id, data: { is_flagged: !isFlagged } });
+  };
 
   return (
     <>
       <div
         onClick={onClick}
-        className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all cursor-pointer flex flex-col"
+        className={`rounded-lg shadow-sm border p-4 hover:shadow-md transition-all cursor-pointer flex flex-col ${
+          isFlagged
+            ? 'bg-red-50 border-red-300 hover:border-red-400'
+            : 'bg-white border-gray-200 hover:border-blue-300'
+        }`}
       >
-        {/* Priority + Status */}
+        {/* Priority + Status + Flag */}
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
             <span className={`text-xs font-bold px-2 py-0.5 rounded ${PRIORITY_COLORS[fund.priority] || PRIORITY_COLORS.B}`}>
@@ -52,16 +64,25 @@ export function FundCard({ fund, onClick }: FundCardProps) {
             <span className={`text-xs font-medium px-2 py-0.5 rounded ${STATUS_COLORS[fund.status] || STATUS_COLORS.NEW}`}>
               {fund.status.replace(/_/g, ' ')}
             </span>
+            {fund.score != null && (
+              <span className="text-xs text-gray-500 font-medium">Score: {fund.score}</span>
+            )}
           </div>
-          {fund.score != null && (
-            <span className="text-xs text-gray-500 font-medium">Score: {fund.score}</span>
-          )}
+          <button
+            onClick={handleFlag}
+            title={isFlagged ? 'Remove flag' : 'Flag as bad data'}
+            className={`p-1 rounded transition-colors ${
+              isFlagged ? 'text-red-500 hover:text-red-700' : 'text-gray-300 hover:text-red-400'
+            }`}
+          >
+            <Flag className="w-4 h-4" fill={isFlagged ? 'currentColor' : 'none'} />
+          </button>
         </div>
 
         {/* Name + firm type */}
         <div className="flex items-start gap-3 mb-2">
-          <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
-            <Users className="w-5 h-5 text-blue-500" />
+          <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${isFlagged ? 'bg-red-100' : 'bg-blue-50'}`}>
+            <Users className={`w-5 h-5 ${isFlagged ? 'text-red-500' : 'text-blue-500'}`} />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-gray-900 truncate">{fund.name}</h3>

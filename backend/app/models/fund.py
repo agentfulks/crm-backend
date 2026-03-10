@@ -5,7 +5,7 @@ from datetime import datetime
 from typing import List, Optional
 from uuid import uuid4
 
-from sqlalchemy import DateTime, Enum, JSON, Numeric, String, Text
+from sqlalchemy import Boolean, DateTime, Enum, JSON, Numeric, String, Text
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.ext.mutable import MutableDict, MutableList
 from sqlalchemy.orm import Mapped, mapped_column, relationship
@@ -67,6 +67,7 @@ class Fund(TimestampMixin, Base):
     first_contacted_at: Mapped[Optional[datetime]] = mapped_column(
         DateTime(timezone=True), nullable=True
     )
+    is_flagged: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
 
     packets: Mapped[list["Packet"]] = relationship(back_populates="fund", cascade="all, delete")
     contacts: Mapped[list["Contact"]] = relationship(back_populates="fund", cascade="all, delete")

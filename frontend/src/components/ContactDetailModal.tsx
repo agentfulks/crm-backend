@@ -239,6 +239,7 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
         contact={{ id: contact.id, full_name: fullName, email, linkedin_url: linkedinUrl, jobTitle: jobTitle }}
         orgName={studioName}
         apiBase="/bdr/contacts"
+        templateContext="studio"
         onClose={() => setShowOutreach(false)}
       />
     );

@@ -11,6 +11,7 @@ def list_templates(
     db: Session,
     *,
     category: str | None = None,
+    template_type: str | None = None,
     is_active: bool | None = True,
     limit: int = 50,
     offset: int = 0,
@@ -21,6 +22,9 @@ def list_templates(
     
     if category:
         query = query.filter(EmailTemplate.category == category)
+    
+    if template_type:
+        query = query.filter(EmailTemplate.template_type == template_type)
     
     if is_active is not None:
         query = query.filter(EmailTemplate.is_active == is_active)

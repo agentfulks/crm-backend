@@ -48,6 +48,7 @@ class FundBase(BaseModel):
     data_source: Optional[str] = None
     source_row_id: Optional[str] = None
     tags: dict = Field(default_factory=dict)
+    is_flagged: bool = False
 
 
 class FundCreate(FundBase):
@@ -81,6 +82,7 @@ class FundUpdate(BaseModel):
     data_source: Optional[str] = None
     source_row_id: Optional[str] = None
     tags: Optional[dict] = None
+    is_flagged: Optional[bool] = None
 
 
 class FundRead(FundBase):

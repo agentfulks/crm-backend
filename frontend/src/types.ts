@@ -44,6 +44,7 @@ export interface Fund {
   data_source?: string;
   source_row_id?: string;
   tags: Record<string, unknown>;
+  is_flagged: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -117,6 +118,7 @@ export interface EmailTemplate {
   name: string;
   description?: string;
   category?: string;
+  template_type: 'studio' | 'vc';
   subject: string;
   body: string;
   variables?: string;

@@ -1,10 +1,11 @@
 """BDR Companies endpoints."""
 from __future__ import annotations
 
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
@@ -123,3 +124,66 @@ def update_bdr_company(
     db.refresh(company)
 
     return _company_to_dict(company)
+
+
+# ── Bulk import ────────────────────────────────────────────────────────────────
+
+class BulkCompanyItem(BaseModel):
+    company_name: str
+    website_url: Optional[str] = None
+    headquarters_city: Optional[str] = None
+    headquarters_state: Optional[str] = None
+    headquarters_country: Optional[str] = None
+    industry: Optional[str] = None
+    company_size: Optional[str] = None
+    linkedin_url: Optional[str] = None
+    status: Optional[str] = None
+    priority: Optional[str] = None
+
+
+class BulkCompanyRequest(BaseModel):
+    items: List[BulkCompanyItem]
+    dry_run: bool = False
+
+
+@router.post("/bulk")
+def bulk_create_companies(
+    *,
+    db: Session = Depends(get_db),
+    payload: BulkCompanyRequest,
+):
+    """Bulk-create BDR companies. Skips duplicates (matched by company_name).
+    Pass dry_run=true to preview counts without writing."""
+    created, skipped = 0, 0
+    errors: List[dict] = []
+
+    # Pre-fetch existing names for fast lookup
+    existing_names = {
+        row[0].lower()
+        for row in db.query(func.lower(BDRCompany.company_name)).all()
+    }
+
+    for item in payload.items:
+        if not item.company_name or not item.company_name.strip():
+            errors.append({"name": "(empty)", "error": "company_name is required"})
+            continue
+        if item.company_name.lower() in existing_names:
+            skipped += 1
+            continue
+        if payload.dry_run:
+            created += 1
+            existing_names.add(item.company_name.lower())
+            continue
+        try:
+            data = item.model_dump(exclude_none=True)
+            company = BDRCompany(**data)
+            db.add(company)
+            db.commit()
+            db.refresh(company)
+            created += 1
+            existing_names.add(item.company_name.lower())
+        except Exception as e:
+            db.rollback()
+            errors.append({"name": item.company_name, "error": str(e)})
+
+    return {"created": created, "skipped": skipped, "errors": errors, "dry_run": payload.dry_run}

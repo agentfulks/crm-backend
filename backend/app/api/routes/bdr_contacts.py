@@ -6,9 +6,11 @@ from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from pydantic import BaseModel
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
+from app.models.bdr_company import BDRCompany
 from app.models.bdr_contact import BDRContact
 from app.models.bdr_outreach_log import BDROutreachLog
 
@@ -312,3 +314,93 @@ def delete_outreach_log(
     db.delete(log)
     db.commit()
     return
+
+
+# ── Bulk import ────────────────────────────────────────────────────────────────
+
+class BulkContactItem(BaseModel):
+    company_name: str          # resolved to company_id server-side
+    full_name: str
+    email: Optional[str] = None
+    job_title: Optional[str] = None
+    phone: Optional[str] = None
+    linkedin_url: Optional[str] = None
+    is_decision_maker: bool = False
+
+
+class BulkContactRequest(BaseModel):
+    items: List[BulkContactItem]
+    dry_run: bool = False
+
+
+@router.post("/bulk")
+def bulk_create_contacts(
+    *,
+    db: Session = Depends(get_db),
+    payload: BulkContactRequest,
+):
+    """Bulk-create BDR contacts. Looks up company by name. Skips email dupes."""
+    created, skipped = 0, 0
+    errors: List[dict] = []
+
+    # Cache: company_name.lower() → company_id
+    company_cache: Dict[str, str] = {}
+
+    # Pre-fetch existing (company_id, email) pairs for dupe check
+    existing_pairs = {
+        (str(r[0]), (r[1] or "").lower())
+        for r in db.query(BDRContact.company_id, BDRContact.email).all()
+    }
+
+    for item in payload.items:
+        label = f"{item.full_name} <{item.email}>"
+        if not item.full_name or not item.full_name.strip():
+            errors.append({"name": label, "error": "full_name is required"})
+            continue
+
+        # Resolve company
+        name_key = item.company_name.strip().lower()
+        if name_key not in company_cache:
+            company = db.query(BDRCompany).filter(
+                func.lower(BDRCompany.company_name) == name_key
+            ).first()
+            if not company:
+                errors.append({"name": label, "error": f"Company '{item.company_name}' not found"})
+                continue
+            company_cache[name_key] = str(company.id)
+        company_id = company_cache[name_key]
+
+        # Dupe check by email within company
+        if item.email:
+            pair = (company_id, item.email.lower())
+            if pair in existing_pairs:
+                skipped += 1
+                continue
+
+        if payload.dry_run:
+            created += 1
+            if item.email:
+                existing_pairs.add((company_id, item.email.lower()))
+            continue
+
+        try:
+            contact = BDRContact(
+                company_id=company_id,
+                full_name=item.full_name,
+                email=item.email,
+                job_title=item.job_title,
+                phone=item.phone,
+                linkedin_url=item.linkedin_url,
+                is_decision_maker=item.is_decision_maker,
+            )
+            db.add(contact)
+            db.commit()
+            db.refresh(contact)
+            created += 1
+            if item.email:
+                existing_pairs.add((company_id, item.email.lower()))
+        except Exception as e:
+            db.rollback()
+            errors.append({"name": label, "error": str(e)})
+
+    return {"created": created, "skipped": skipped, "errors": errors, "dry_run": payload.dry_run}

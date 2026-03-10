@@ -1,11 +1,16 @@
 """Funds endpoints."""
 from __future__ import annotations
 
+from typing import List, Optional
+
 from fastapi import APIRouter, Depends, HTTPException, Query, status
+from pydantic import BaseModel
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
 from app.models.enums import FundStatus, Priority
+from app.models.fund import Fund
 from app.schemas.fund import (
     FundCreate,
     FundListResponse,
@@ -104,3 +109,70 @@ def delete_fund(
         )
 
     fund_service.delete_fund(db, fund)
+
+
+# ── Bulk import ────────────────────────────────────────────────────────────────
+
+class BulkFundItem(BaseModel):
+    name: str
+    website_url: Optional[str] = None
+    hq_city: Optional[str] = None
+    hq_country: Optional[str] = None
+    firm_type: Optional[str] = None
+    stage_focus: Optional[str] = None   # comma-separated → list
+    check_size_min: Optional[float] = None
+    check_size_max: Optional[float] = None
+    overview: Optional[str] = None
+    contact_email: Optional[str] = None
+    linkedin_url: Optional[str] = None
+    status: Optional[str] = None
+    priority: Optional[str] = None
+
+
+class BulkFundRequest(BaseModel):
+    items: List[BulkFundItem]
+    dry_run: bool = False
+
+
+@router.post("/bulk")
+def bulk_create_funds(
+    *,
+    db: Session = Depends(get_db),
+    payload: BulkFundRequest,
+):
+    """Bulk-create VC funds. Skips duplicates matched by fund name."""
+    created, skipped = 0, 0
+    errors: List[dict] = []
+
+    existing_names = {
+        row[0].lower()
+        for row in db.query(func.lower(Fund.name)).all()
+    }
+
+    for item in payload.items:
+        if not item.name or not item.name.strip():
+            errors.append({"name": "(empty)", "error": "name is required"})
+            continue
+        if item.name.lower() in existing_names:
+            skipped += 1
+            continue
+        if payload.dry_run:
+            created += 1
+            existing_names.add(item.name.lower())
+            continue
+        try:
+            data = item.model_dump(exclude_none=True)
+            # Convert comma-separated stage_focus string → list
+            if "stage_focus" in data and isinstance(data["stage_focus"], str):
+                data["stage_focus"] = [s.strip() for s in data["stage_focus"].split(",") if s.strip()]
+            fund = Fund(**data)
+            db.add(fund)
+            db.commit()
+            db.refresh(fund)
+            created += 1
+            existing_names.add(item.name.lower())
+        except Exception as e:
+            db.rollback()
+            errors.append({"name": item.name, "error": str(e)})
+
+    return {"created": created, "skipped": skipped, "errors": errors, "dry_run": payload.dry_run}

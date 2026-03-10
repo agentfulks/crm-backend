@@ -49,8 +49,8 @@
 .dark .text-gray-700 { color: #cbd5e1; }
 .dark .text-gray-600 { color: #94a3b8; }
 .dark .text-gray-500 { color: #64748b; }
-.dark .text-gray-400 { color: #475569; }
-.dark .text-gray-300 { color: #334155; }
+.dark .text-gray-400 { color: #94a3b8; }  /* lighter — was too dark to read */
+.dark .text-gray-300 { color: #64748b; }
 .dark .text-black    { color: #f1f5f9; }
 
 /* Hover text */
@@ -93,8 +93,9 @@
 .dark .bg-indigo-100 { background-color: #1e1b4b; }
 .dark .bg-teal-50    { background-color: #021f1e; }
 .dark .bg-teal-100   { background-color: #042f2e; }
-.dark .bg-orange-50  { background-color: #1c0a00; }
-.dark .bg-orange-100 { background-color: #431407; }
+/* Orange — Hunter.io panel: slightly lighter so text is readable */
+.dark .bg-orange-50  { background-color: #2d1600; }
+.dark .bg-orange-100 { background-color: #3d1a00; }
 
 /* ── Status / accent colour borders ── */
 .dark .border-blue-100   { border-color: #1e3a5f; }
@@ -107,8 +108,8 @@
 .dark .border-yellow-200 { border-color: #92400e; }
 .dark .border-purple-100 { border-color: #6b21a8; }
 .dark .border-purple-200 { border-color: #7e22ce; }
-.dark .border-orange-100 { border-color: #431407; }
-.dark .border-orange-200 { border-color: #7c2d12; }
+.dark .border-orange-100 { border-color: #7c2d12; }
+.dark .border-orange-200 { border-color: #9a3412; }
 .dark .border-teal-100   { border-color: #042f2e; }
 
 /* ── Status / accent text ── */
@@ -134,8 +135,10 @@
 .dark .text-teal-600  { color: #2dd4bf; }
 .dark .text-teal-700  { color: #5eead4; }
 .dark .text-teal-800  { color: #99f6e4; }
+/* Orange text — boost brightness for Hunter panel legibility in dark mode */
+.dark .text-orange-400 { color: #fdba74; }
 .dark .text-orange-500 { color: #fb923c; }
-.dark .text-orange-600 { color: #f97316; }
+.dark .text-orange-600 { color: #fb923c; }  /* brighter than light-mode orange-600 */
 .dark .text-orange-700 { color: #fdba74; }
 .dark .text-orange-800 { color: #fed7aa; }
 

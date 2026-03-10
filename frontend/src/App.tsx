@@ -12,7 +12,8 @@ import { StudioDetailModal } from './components/StudioDetailModal';
 import { ContactDetailModal } from './components/ContactDetailModal';
 import { FundDetailModal } from './components/FundDetailModal';
 import { KanbanBoard } from './components/KanbanBoard';
-import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase, Moon, Sun } from 'lucide-react';
+import { BulkUploadModal } from './components/BulkUploadModal';
+import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase, Moon, Sun, Upload } from 'lucide-react';
 import type { StudioPacket, BDRContact, Fund } from './types';
 
 type View = 'vc' | 'studios' | 'contacts' | 'vc-contacts' | 'tasks';
@@ -22,6 +23,7 @@ function App() {
   const [statusFilter, setStatusFilter] = useState<string>('');
   const [currentView, setCurrentView] = useState<View>('studios');
   const [showTemplateManager, setShowTemplateManager] = useState(false);
+  const [showBulkUpload, setShowBulkUpload] = useState(false);
 
   // Studio detail modal state
   const [selectedStudio, setSelectedStudio] = useState<StudioPacket | null>(null);
@@ -127,6 +129,16 @@ function App() {
                 className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
               >
                 {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </button>
+
+              {/* Bulk Upload Button */}
+              <button
+                onClick={() => setShowBulkUpload(true)}
+                title="Bulk import via CSV"
+                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <Upload className="w-4 h-4" />
+                Import
               </button>
 
               {/* Template Manager Button */}
@@ -301,6 +313,11 @@ function App() {
         <EmailTemplateManager
           onClose={() => setShowTemplateManager(false)}
         />
+      )}
+
+      {/* ── Bulk Upload Modal ── */}
+      {showBulkUpload && (
+        <BulkUploadModal onClose={() => setShowBulkUpload(false)} />
       )}
     </div>
   );

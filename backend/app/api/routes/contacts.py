@@ -61,9 +61,38 @@ def list_contacts_endpoint(
     return ContactListResponse(total=total, items=payload)
 
 
+    # Duplicate-email guard
+    if payload.email and payload.fund_id:
+        from app.models.contact import Contact as _CM
+        existing = (
+            db.query(_CM)
+            .filter(_CM.fund_id == payload.fund_id, _CM.email == payload.email)
+            .first()
+        )
+        if existing:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail=f"A contact with email '{payload.email}' already exists for this fund.",
+            )
+
 @router.post("/", response_model=ContactRead, status_code=status.HTTP_201_CREATED)
 def create_contact_endpoint(*, db: Session = Depends(get_db), payload: ContactCreate) -> ContactRead:
     """Create a contact record."""
+
+    # Duplicate-email guard
+    if payload.email and payload.fund_id:
+        from app.models.contact import Contact as _CM
+        existing = (
+            db.query(_CM)
+            .filter(_CM.fund_id == payload.fund_id, _CM.email == payload.email)
+            .first()
+        )
+        if existing:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail=f"A contact with email '{payload.email}' already exists for this fund.",
+            )
+
     contact = create_contact(db, payload.model_dump())
     return ContactRead.model_validate(contact, from_attributes=True)
 

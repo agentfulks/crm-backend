@@ -544,6 +544,7 @@ export function FundDetailModal({ fund, onClose }: Props) {
           <HunterStudioPanel
             defaultDomain={deriveDomain(fund.website_url)}
             companyName={fund.name}
+            existingEmails={fundContacts.map((c) => c.email).filter(Boolean) as string[]}
             onSaveContacts={async (contacts) => {
               for (const c of contacts) {
                 await createContact.mutateAsync({

@@ -22,6 +22,8 @@ export interface HunterContact {
 interface Props {
   defaultDomain?: string;
   companyName?:   string;
+  /** Emails already saved as contacts — used to detect duplicates */
+  existingEmails?: string[];
   /** Called with the list of selected contacts to import */
   onSaveContacts?: (contacts: HunterContact[]) => Promise<void>;
 }
@@ -108,12 +110,21 @@ function SaveBar({
 function DomainResult({
   result,
   onSaveContacts,
+  existingEmails = [],
 }: {
   result: any;
   onSaveContacts?: (c: HunterContact[]) => Promise<void>;
+  existingEmails?: string[];
 }) {
   const emails: any[] = result.emails ?? [];
   const visible = emails.slice(0, 20);
+
+  // Normalised set for O(1) duplicate lookup
+  const existingSet = new Set(existingEmails.map((e) => e.toLowerCase()));
+  const isDupe = (e: any) => !!e.value && existingSet.has(e.value.toLowerCase());
+
+  // Only non-duplicate indices are selectable
+  const saveable = visible.map((e, i) => ({ e, i })).filter(({ e }) => !isDupe(e));
 
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [saving, setSaving] = useState(false);
@@ -126,8 +137,10 @@ function DomainResult({
       return next;
     });
 
+  const saveableIndices = saveable.map(({ i }) => i);
+  const allSelected = saveableIndices.length > 0 && saveableIndices.every((i) => selected.has(i));
   const toggleAll = () =>
-    setSelected(selected.size === visible.length ? new Set() : new Set(visible.map((_, i) => i)));
+    setSelected(allSelected ? new Set() : new Set(saveableIndices));
 
   const save = async (indices: number[]) => {
     if (!onSaveContacts || indices.length === 0) return;
@@ -156,51 +169,72 @@ function DomainResult({
 
       {emails.length > 0 ? (
         <>
-          {onSaveContacts && (
+          {onSaveContacts && saveableIndices.length > 0 && (
             <SaveBar
-              total={visible.length}
-              selected={selected.size}
+              total={saveableIndices.length}
+              selected={[...selected].filter((i) => saveableIndices.includes(i)).length}
               saving={saving}
               onToggleAll={toggleAll}
-              onSaveSelected={() => save([...selected])}
-              onSaveAll={() => save(visible.map((_, i) => i))}
+              onSaveSelected={() => save([...selected].filter((i) => saveableIndices.includes(i)))}
+              onSaveAll={() => save(saveableIndices)}
             />
+          )}
+          {onSaveContacts && saveableIndices.length === 0 && visible.length > 0 && (
+            <div className="text-xs text-center text-gray-400 bg-gray-50 border border-gray-200 rounded-lg py-2">
+              All contacts already exist in your CRM.
+            </div>
           )}
 
           <div className="divide-y divide-gray-100 border border-gray-200 rounded-lg overflow-hidden bg-white">
-            {visible.map((e: any, i: number) => (
-              <div
-                key={i}
-                className={`flex items-center gap-3 px-3 py-2 ${saved.has(i) ? 'bg-green-50' : ''}`}
-              >
-                {onSaveContacts && (
-                  <button onClick={() => toggle(i)} className="flex-shrink-0">
-                    {selected.has(i) ? (
-                      <CheckSquare className="w-4 h-4 text-orange-500" />
-                    ) : (
-                      <Square className="w-4 h-4 text-gray-300 hover:text-gray-500" />
-                    )}
-                  </button>
-                )}
-                <div className="min-w-0 flex-1">
-                  <p className="text-sm font-medium text-gray-900 truncate">{e.value}</p>
-                  {(e.first_name || e.last_name) && (
-                    <p className="text-xs text-gray-500">
-                      {[e.first_name, e.last_name].filter(Boolean).join(' ')}
-                      {e.position && ` · ${e.position}`}
+            {visible.map((e: any, i: number) => {
+              const dupe = isDupe(e);
+              return (
+                <div
+                  key={i}
+                  className={`flex items-center gap-3 px-3 py-2 ${
+                    saved.has(i) ? 'bg-green-50' : dupe ? 'bg-gray-50 opacity-70' : ''
+                  }`}
+                >
+                  {onSaveContacts && (
+                    <button
+                      onClick={() => !dupe && toggle(i)}
+                      disabled={dupe}
+                      className="flex-shrink-0"
+                    >
+                      {dupe ? (
+                        <CheckSquare className="w-4 h-4 text-gray-300" />
+                      ) : selected.has(i) ? (
+                        <CheckSquare className="w-4 h-4 text-orange-500" />
+                      ) : (
+                        <Square className="w-4 h-4 text-gray-300 hover:text-gray-500" />
+                      )}
+                    </button>
+                  )}
+                  <div className="min-w-0 flex-1">
+                    <p className={`text-sm font-medium truncate ${dupe ? 'text-gray-400' : 'text-gray-900'}`}>
+                      {e.value}
                     </p>
-                  )}
+                    {(e.first_name || e.last_name) && (
+                      <p className="text-xs text-gray-500">
+                        {[e.first_name, e.last_name].filter(Boolean).join(' ')}
+                        {e.position && ` · ${e.position}`}
+                      </p>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-2 flex-shrink-0">
+                    {dupe && (
+                      <span className="text-xs text-gray-400 italic">already in CRM</span>
+                    )}
+                    {saved.has(i) && (
+                      <span className="text-xs text-green-600 font-medium">✓ saved</span>
+                    )}
+                    <span className={`text-xs font-semibold ${scoreColor(e.confidence ?? 0)}`}>
+                      {e.confidence}%
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 flex-shrink-0">
-                  {saved.has(i) && (
-                    <span className="text-xs text-green-600 font-medium">✓ saved</span>
-                  )}
-                  <span className={`text-xs font-semibold ${scoreColor(e.confidence ?? 0)}`}>
-                    {e.confidence}%
-                  </span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
             {emails.length > 20 && (
               <div className="px-3 py-2 text-xs text-center text-gray-400">
                 + {emails.length - 20} more — refine in Hunter.io dashboard
@@ -303,15 +337,26 @@ function CompanyResult({ result }: { result: any }) {
 function DiscoverResult({
   result,
   onSaveContacts,
+  existingEmails = [],
 }: {
   result: any;
   onSaveContacts?: (c: HunterContact[]) => Promise<void>;
+  existingEmails?: string[];
 }) {
   const leads: any[] = Array.isArray(result)
     ? result
     : result.people ?? result.leads ?? result.emails ?? result.contacts ?? [];
 
   const visible = leads.slice(0, 20);
+
+  const existingSet = new Set(existingEmails.map((e) => e.toLowerCase()));
+  const isDupe = (l: any) => {
+    const email = l.email ?? l.value;
+    return !!email && existingSet.has(email.toLowerCase());
+  };
+
+  const saveable = visible.map((l, i) => ({ l, i })).filter(({ l }) => !isDupe(l));
+  const saveableIndices = saveable.map(({ i }) => i);
 
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [saving, setSaving] = useState(false);
@@ -326,8 +371,9 @@ function DiscoverResult({
       return next;
     });
 
+  const allSelected = saveableIndices.length > 0 && saveableIndices.every((i) => selected.has(i));
   const toggleAll = () =>
-    setSelected(selected.size === visible.length ? new Set() : new Set(visible.map((_, i) => i)));
+    setSelected(allSelected ? new Set() : new Set(saveableIndices));
 
   const save = async (indices: number[]) => {
     if (!onSaveContacts || indices.length === 0) return;
@@ -360,51 +406,74 @@ function DiscoverResult({
     <div className="space-y-2">
       <p className="text-xs text-gray-400">{leads.length} people found</p>
 
-      {onSaveContacts && (
+      {onSaveContacts && saveableIndices.length > 0 && (
         <SaveBar
-          total={visible.length}
-          selected={selected.size}
+          total={saveableIndices.length}
+          selected={[...selected].filter((i) => saveableIndices.includes(i)).length}
           saving={saving}
           onToggleAll={toggleAll}
-          onSaveSelected={() => save([...selected])}
-          onSaveAll={() => save(visible.map((_, i) => i))}
+          onSaveSelected={() => save([...selected].filter((i) => saveableIndices.includes(i)))}
+          onSaveAll={() => save(saveableIndices)}
         />
+      )}
+      {onSaveContacts && saveableIndices.length === 0 && visible.length > 0 && (
+        <div className="text-xs text-center text-gray-400 bg-gray-50 border border-gray-200 rounded-lg py-2">
+          All contacts already exist in your CRM.
+        </div>
       )}
 
       <div className="divide-y divide-gray-100 border border-gray-200 rounded-lg overflow-hidden bg-white">
-        {visible.map((l: any, i: number) => (
-          <div
-            key={i}
-            className={`flex items-center gap-3 px-3 py-2.5 ${saved.has(i) ? 'bg-green-50' : ''}`}
-          >
-            {onSaveContacts && (
-              <button onClick={() => toggle(i)} className="flex-shrink-0">
-                {selected.has(i) ? (
-                  <CheckSquare className="w-4 h-4 text-orange-500" />
-                ) : (
-                  <Square className="w-4 h-4 text-gray-300 hover:text-gray-500" />
+        {visible.map((l: any, i: number) => {
+          const dupe = isDupe(l);
+          return (
+            <div
+              key={i}
+              className={`flex items-center gap-3 px-3 py-2.5 ${
+                saved.has(i) ? 'bg-green-50' : dupe ? 'bg-gray-50 opacity-70' : ''
+              }`}
+            >
+              {onSaveContacts && (
+                <button
+                  onClick={() => !dupe && toggle(i)}
+                  disabled={dupe}
+                  className="flex-shrink-0"
+                >
+                  {dupe ? (
+                    <CheckSquare className="w-4 h-4 text-gray-300" />
+                  ) : selected.has(i) ? (
+                    <CheckSquare className="w-4 h-4 text-orange-500" />
+                  ) : (
+                    <Square className="w-4 h-4 text-gray-300 hover:text-gray-500" />
+                  )}
+                </button>
+              )}
+              <div className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 text-xs font-semibold text-gray-600">
+                {(l.first_name?.[0] ?? l.name?.[0] ?? '?').toUpperCase()}
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className={`text-sm font-medium truncate ${dupe ? 'text-gray-400' : 'text-gray-900'}`}>
+                  {[l.first_name, l.last_name].filter(Boolean).join(' ') || l.name || '—'}
+                </p>
+                {(l.position || l.title) && (
+                  <p className="text-xs text-gray-500 truncate">{l.position ?? l.title}</p>
                 )}
-              </button>
-            )}
-            <div className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 text-xs font-semibold text-gray-600">
-              {(l.first_name?.[0] ?? l.name?.[0] ?? '?').toUpperCase()}
+                {(l.email || l.value) && (
+                  <p className={`text-xs truncate ${dupe ? 'text-gray-400' : 'text-blue-600'}`}>
+                    {l.email ?? l.value}
+                  </p>
+                )}
+              </div>
+              <div className="flex items-center gap-2 flex-shrink-0">
+                {dupe && (
+                  <span className="text-xs text-gray-400 italic">already in CRM</span>
+                )}
+                {saved.has(i) && (
+                  <span className="text-xs text-green-600 font-medium">✓ saved</span>
+                )}
+              </div>
             </div>
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-medium text-gray-900 truncate">
-                {[l.first_name, l.last_name].filter(Boolean).join(' ') || l.name || '—'}
-              </p>
-              {(l.position || l.title) && (
-                <p className="text-xs text-gray-500 truncate">{l.position ?? l.title}</p>
-              )}
-              {(l.email || l.value) && (
-                <p className="text-xs text-blue-600 truncate">{l.email ?? l.value}</p>
-              )}
-            </div>
-            {saved.has(i) && (
-              <span className="text-xs text-green-600 font-medium flex-shrink-0">✓ saved</span>
-            )}
-          </div>
-        ))}
+          );
+        })}
         {leads.length > 20 && (
           <div className="px-3 py-2 text-xs text-center text-gray-400">
             + {leads.length - 20} more — view in Hunter.io dashboard
@@ -417,7 +486,7 @@ function DiscoverResult({
 
 // ── Main component ────────────────────────────────────────────────────────────
 
-export function HunterStudioPanel({ defaultDomain, companyName, onSaveContacts }: Props) {
+export function HunterStudioPanel({ defaultDomain, companyName, existingEmails = [], onSaveContacts }: Props) {
   const [tab, setTab]         = useState<Tab>('domain');
   const [domain, setDomain]   = useState(defaultDomain ?? '');
   const [loading, setLoading] = useState(false);
@@ -607,11 +676,11 @@ export function HunterStudioPanel({ defaultDomain, companyName, onSaveContacts }
         )}
 
         {result && tab === 'domain'   && (
-          <DomainResult result={result} onSaveContacts={onSaveContacts} />
+          <DomainResult result={result} onSaveContacts={onSaveContacts} existingEmails={existingEmails} />
         )}
         {result && tab === 'company'  && <CompanyResult result={result} />}
         {result && tab === 'discover' && (
-          <DiscoverResult result={result} onSaveContacts={onSaveContacts} />
+          <DiscoverResult result={result} onSaveContacts={onSaveContacts} existingEmails={existingEmails} />
         )}
       </div>
     </div>

@@ -151,6 +151,22 @@ def create_bdr_contact(
     payload: ContactCreate,
 ):
     """Create a new BDR contact."""
+    # Duplicate-email guard
+    if payload.email:
+        existing = (
+            db.query(BDRContact)
+            .filter(
+                BDRContact.company_id == payload.company_id,
+                BDRContact.email == payload.email,
+            )
+            .first()
+        )
+        if existing:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail=f"A contact with email '{payload.email}' already exists for this company.",
+            )
+
     contact = BDRContact(
         company_id=payload.company_id,
         full_name=payload.full_name,

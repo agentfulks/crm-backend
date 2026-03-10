@@ -380,6 +380,7 @@ export function StudioDetailModal({ packet, onClose, onOpenContact }: StudioDeta
           <HunterStudioPanel
             defaultDomain={deriveDomain(studio?.website_url)}
             companyName={studio?.name}
+            existingEmails={contacts.map((c) => c.email).filter(Boolean) as string[]}
             onSaveContacts={studio?.id ? async (hunterContacts) => {
               for (const c of hunterContacts) {
                 await createContact.mutateAsync({

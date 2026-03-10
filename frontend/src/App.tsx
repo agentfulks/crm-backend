@@ -34,10 +34,16 @@ function App() {
   const [studioSelectMode, setStudioSelectMode] = useState(false);
   const [studioSelected, setStudioSelected] = useState<Set<string>>(new Set());
   const [studioDeleting, setStudioDeleting] = useState(false);
+  const [studioDateFrom, setStudioDateFrom] = useState('');
+  const [studioDateTo, setStudioDateTo] = useState('');
+  const [studioSortOrder, setStudioSortOrder] = useState<'desc' | 'asc'>('desc');
 
   const [vcSelectMode, setVcSelectMode] = useState(false);
   const [vcSelected, setVcSelected] = useState<Set<string>>(new Set());
   const [vcDeleting, setVcDeleting] = useState(false);
+  const [vcDateFrom, setVcDateFrom] = useState('');
+  const [vcDateTo, setVcDateTo] = useState('');
+  const [vcSortOrder, setVcSortOrder] = useState<'desc' | 'asc'>('desc');
 
   // Studio detail modal state
   const [selectedStudio, setSelectedStudio] = useState<StudioPacket | null>(null);
@@ -67,19 +73,36 @@ function App() {
   const rawFunds = fundsData?.items || [];
   const rawStudios = studioPacketsData?.items || [];
 
-  // Sort newest first
-  const funds = useMemo(
-    () => [...rawFunds].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()),
-    [rawFunds]
-  );
-  const studioPackets = useMemo(
-    () => [...rawStudios].sort((a, b) => {
-      const aDate = a.studio?.created_at ?? '';
-      const bDate = b.studio?.created_at ?? '';
-      return new Date(bDate).getTime() - new Date(aDate).getTime();
-    }),
-    [rawStudios]
-  );
+  // Sort + filter by created_at
+  const funds = useMemo(() => {
+    const fromMs = vcDateFrom ? new Date(vcDateFrom).getTime() : 0;
+    const toMs   = vcDateTo   ? new Date(vcDateTo + 'T23:59:59').getTime() : Infinity;
+    return [...rawFunds]
+      .filter(f => {
+        const t = new Date(f.created_at).getTime();
+        return t >= fromMs && t <= toMs;
+      })
+      .sort((a, b) => {
+        const diff = new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+        return vcSortOrder === 'desc' ? diff : -diff;
+      });
+  }, [rawFunds, vcDateFrom, vcDateTo, vcSortOrder]);
+
+  const studioPackets = useMemo(() => {
+    const fromMs = studioDateFrom ? new Date(studioDateFrom).getTime() : 0;
+    const toMs   = studioDateTo   ? new Date(studioDateTo + 'T23:59:59').getTime() : Infinity;
+    return [...rawStudios]
+      .filter(p => {
+        const t = new Date(p.studio?.created_at ?? 0).getTime();
+        return t >= fromMs && t <= toMs;
+      })
+      .sort((a, b) => {
+        const aDate = new Date(a.studio?.created_at ?? 0).getTime();
+        const bDate = new Date(b.studio?.created_at ?? 0).getTime();
+        const diff = bDate - aDate;
+        return studioSortOrder === 'desc' ? diff : -diff;
+      });
+  }, [rawStudios, studioDateFrom, studioDateTo, studioSortOrder]);
 
   // Bulk delete helpers
   const toggleStudio = (id: string) => setStudioSelected(prev => {
@@ -299,6 +322,60 @@ function App() {
                     {vcSelectMode ? 'Exit select' : 'Select'}
                   </button>
                 )}
+              </div>
+
+              {/* ── Date added filter row ── */}
+              <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-3 flex-wrap">
+                <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Date Added:</span>
+                <div className="flex items-center gap-2">
+                  <label className="text-xs text-gray-500">From</label>
+                  <input
+                    type="date"
+                    value={currentView === 'studios' ? studioDateFrom : vcDateFrom}
+                    onChange={e => currentView === 'studios' ? setStudioDateFrom(e.target.value) : setVcDateFrom(e.target.value)}
+                    className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <label className="text-xs text-gray-500">To</label>
+                  <input
+                    type="date"
+                    value={currentView === 'studios' ? studioDateTo : vcDateTo}
+                    onChange={e => currentView === 'studios' ? setStudioDateTo(e.target.value) : setVcDateTo(e.target.value)}
+                    className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                {((currentView === 'studios' && (studioDateFrom || studioDateTo)) ||
+                  (currentView === 'vc' && (vcDateFrom || vcDateTo))) && (
+                  <button
+                    onClick={() => { if (currentView === 'studios') { setStudioDateFrom(''); setStudioDateTo(''); } else { setVcDateFrom(''); setVcDateTo(''); }}}
+                    className="text-xs text-gray-400 hover:text-gray-600 flex items-center gap-1"
+                  >
+                    ✕ Clear dates
+                  </button>
+                )}
+                <div className="ml-auto flex items-center gap-1 bg-gray-100 rounded-lg p-0.5">
+                  <button
+                    onClick={() => currentView === 'studios' ? setStudioSortOrder('desc') : setVcSortOrder('desc')}
+                    className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${
+                      (currentView === 'studios' ? studioSortOrder : vcSortOrder) === 'desc'
+                        ? 'bg-white text-gray-900 shadow-sm'
+                        : 'text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    Newest first
+                  </button>
+                  <button
+                    onClick={() => currentView === 'studios' ? setStudioSortOrder('asc') : setVcSortOrder('asc')}
+                    className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${
+                      (currentView === 'studios' ? studioSortOrder : vcSortOrder) === 'asc'
+                        ? 'bg-white text-gray-900 shadow-sm'
+                        : 'text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    Oldest first
+                  </button>
+                </div>
               </div>
             </div>
           );

@@ -98,6 +98,9 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [deleting, setDeleting] = useState(false);
+  const [dateFrom, setDateFrom] = useState('');
+  const [dateTo, setDateTo] = useState('');
+  const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
   const queryClient = useQueryClient();
   const updateContact = useUpdateContact();
 
@@ -133,8 +136,24 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
   
   const { data: studiosData } = useStudioPackets();
   
-  const contacts = contactsData?.items || [];
+  const rawContacts: BDRContact[] = contactsData?.items || [];
   const studios = studiosData?.items || [];
+
+  // Date filter + sort
+  const contacts = (() => {
+    const fromMs = dateFrom ? new Date(dateFrom).getTime() : 0;
+    const toMs   = dateTo   ? new Date(dateTo + 'T23:59:59').getTime() : Infinity;
+    return [...rawContacts]
+      .filter(c => {
+        if (!c.created_at) return true;
+        const t = new Date(c.created_at).getTime();
+        return t >= fromMs && t <= toMs;
+      })
+      .sort((a, b) => {
+        const diff = new Date(b.created_at ?? 0).getTime() - new Date(a.created_at ?? 0).getTime();
+        return sortOrder === 'desc' ? diff : -diff;
+      });
+  })();
   
   // Create studio lookup map (company_id → studio name)
   const studioMap = new Map(studios.map((s) => [s.studio_id, s.studio]));
@@ -327,6 +346,49 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
             >
               <ListChecks className="w-3.5 h-3.5" />
               {selectMode ? 'Exit select' : 'Select'}
+            </button>
+          </div>
+        </div>
+
+        {/* Date Added filter */}
+        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-3 flex-wrap">
+          <Calendar className="w-4 h-4 text-gray-400 flex-shrink-0" />
+          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Date Added:</span>
+          <div className="flex items-center gap-2">
+            <label className="text-xs text-gray-500">From</label>
+            <input
+              type="date"
+              value={dateFrom}
+              onChange={e => setDateFrom(e.target.value)}
+              className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <label className="text-xs text-gray-500">To</label>
+            <input
+              type="date"
+              value={dateTo}
+              onChange={e => setDateTo(e.target.value)}
+              className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          {(dateFrom || dateTo) && (
+            <button onClick={() => { setDateFrom(''); setDateTo(''); }} className="text-xs text-gray-400 hover:text-gray-600 flex items-center gap-1">
+              <XIcon className="w-3 h-3" /> Clear dates
+            </button>
+          )}
+          <div className="ml-auto flex items-center gap-1 bg-gray-100 rounded-lg p-0.5">
+            <button
+              onClick={() => setSortOrder('desc')}
+              className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${sortOrder === 'desc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+            >
+              Newest first
+            </button>
+            <button
+              onClick={() => setSortOrder('asc')}
+              className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${sortOrder === 'asc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+            >
+              Oldest first
             </button>
           </div>
         </div>

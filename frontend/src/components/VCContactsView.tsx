@@ -361,6 +361,9 @@ export function VCContactsView() {
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [deleting, setDeleting] = useState(false);
+  const [dateFrom, setDateFrom] = useState('');
+  const [dateTo, setDateTo] = useState('');
+  const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
   const queryClient = useQueryClient();
 
   const toggleSelect = (id: string) => setSelectedIds(prev => {
@@ -396,7 +399,21 @@ export function VCContactsView() {
     is_flagged: flaggedOnly ? true : undefined,
     is_primary: primaryOnly ? true : undefined,
   });
-  const contacts = data?.items || [];
+  const rawContacts: VCContact[] = data?.items || [];
+  const contacts = (() => {
+    const fromMs = dateFrom ? new Date(dateFrom).getTime() : 0;
+    const toMs   = dateTo   ? new Date(dateTo + 'T23:59:59').getTime() : Infinity;
+    return [...rawContacts]
+      .filter(c => {
+        if (!c.created_at) return true;
+        const t = new Date(c.created_at).getTime();
+        return t >= fromMs && t <= toMs;
+      })
+      .sort((a, b) => {
+        const diff = new Date(b.created_at ?? 0).getTime() - new Date(a.created_at ?? 0).getTime();
+        return sortOrder === 'desc' ? diff : -diff;
+      });
+  })();
 
   const openCreate = () => { setEditContact(undefined); setShowModal(true); };
   const openEdit = (c: VCContact) => { setEditContact(c); setShowModal(true); };
@@ -469,9 +486,51 @@ export function VCContactsView() {
         </div>
       </div>
 
+      {/* ── Date Added filter ── */}
+      <div className="flex items-center gap-3 flex-wrap mb-4 px-1">
+        <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Date Added:</span>
+        <div className="flex items-center gap-2">
+          <label className="text-xs text-gray-500">From</label>
+          <input
+            type="date"
+            value={dateFrom}
+            onChange={e => setDateFrom(e.target.value)}
+            className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div className="flex items-center gap-2">
+          <label className="text-xs text-gray-500">To</label>
+          <input
+            type="date"
+            value={dateTo}
+            onChange={e => setDateTo(e.target.value)}
+            className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        {(dateFrom || dateTo) && (
+          <button onClick={() => { setDateFrom(''); setDateTo(''); }} className="text-xs text-gray-400 hover:text-gray-600 flex items-center gap-1">
+            <X className="w-3 h-3" /> Clear dates
+          </button>
+        )}
+        <div className="ml-auto flex items-center gap-1 bg-gray-100 rounded-lg p-0.5">
+          <button
+            onClick={() => setSortOrder('desc')}
+            className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${sortOrder === 'desc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+          >
+            Newest first
+          </button>
+          <button
+            onClick={() => setSortOrder('asc')}
+            className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${sortOrder === 'asc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+          >
+            Oldest first
+          </button>
+        </div>
+      </div>
+
       {/* ── Count ── */}
       <p className="text-xs text-gray-500 mb-4">
-        {isLoading ? 'Loading…' : `${data?.total ?? contacts.length} contact${contacts.length !== 1 ? 's' : ''}`}
+        {isLoading ? 'Loading…' : `${contacts.length} contact${contacts.length !== 1 ? 's' : ''}`}
       </p>
 
       {/* ── Grid ── */}

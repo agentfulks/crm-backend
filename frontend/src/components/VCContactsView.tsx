@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import {
   Search, Plus, User, Mail, Phone, Linkedin, Building2,
-  Star, Flag, CheckCircle, X, Save, Trash2, ChevronDown, ChevronUp,
+  Star, Flag, CheckCircle, X, Save, Trash2, ChevronDown, ChevronUp, ListChecks,
 } from 'lucide-react';
+import { useQueryClient } from '@tanstack/react-query';
 import { useVCContacts, useCreateVCContact, useUpdateVCContact, useDeleteVCContact } from '../hooks/useVCContacts';
 import { useFunds } from '../hooks/useFunds';
 import type { VCContact } from '../types';
 import { VCContactDetailModal } from './VCContactDetailModal';
+import { BulkDeleteBar } from './BulkDeleteBar';
+
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -204,19 +208,31 @@ interface CardProps {
   contact: VCContact;
   onEdit: (c: VCContact) => void;
   onOpen: (c: VCContact) => void;
+  selected?: boolean;
+  onToggle?: () => void;
 }
 
-function ContactCard({ contact, onEdit, onOpen }: CardProps) {
+function ContactCard({ contact, onEdit, onOpen, selected, onToggle }: CardProps) {
   const [expanded, setExpanded] = useState(false);
   const deleteContact = useDeleteVCContact();
 
   return (
     <div
-      className={`bg-white border rounded-xl shadow-sm transition-all cursor-pointer hover:shadow-md ${
-        contact.is_flagged ? 'border-red-200' : 'border-gray-200'
+      className={`bg-white border rounded-xl shadow-sm transition-all cursor-pointer hover:shadow-md relative ${
+        selected ? 'ring-2 ring-blue-500 border-blue-400 bg-blue-50'
+        : contact.is_flagged ? 'border-red-200' : 'border-gray-200'
       }`}
-      onClick={() => onOpen(contact)}
+      onClick={onToggle ?? (() => onOpen(contact))}
     >
+      {onToggle && (
+        <div className="absolute top-2 left-2 z-10" onClick={e => e.stopPropagation()}>
+          <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+            selected ? 'bg-blue-600 border-blue-600' : 'bg-white border-gray-400'
+          }`} onClick={onToggle}>
+            {selected && <svg className="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>}
+          </div>
+        </div>
+      )}
       <div className="p-4">
         <div className="flex items-start gap-3">
           {/* Avatar */}
@@ -342,6 +358,34 @@ export function VCContactsView() {
   const [showModal, setShowModal] = useState(false);
   const [editContact, setEditContact] = useState<VCContact | undefined>();
   const [selectedContact, setSelectedContact] = useState<VCContact | null>(null);
+  const [selectMode, setSelectMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [deleting, setDeleting] = useState(false);
+  const queryClient = useQueryClient();
+
+  const toggleSelect = (id: string) => setSelectedIds(prev => {
+    const next = new Set(prev);
+    next.has(id) ? next.delete(id) : next.add(id);
+    return next;
+  });
+
+  const handleBulkDelete = async () => {
+    if (selectedIds.size === 0) return;
+    if (!confirm(`Permanently delete ${selectedIds.size} VC contact(s)? This cannot be undone.`)) return;
+    setDeleting(true);
+    try {
+      await fetch(`${API_BASE}/vc/contacts/bulk-delete`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: [...selectedIds] }),
+      });
+      setSelectedIds(new Set());
+      setSelectMode(false);
+      queryClient.invalidateQueries({ queryKey: ['vcContacts'] });
+    } finally {
+      setDeleting(false);
+    }
+  };
 
   const { data: fundsData } = useFunds();
   const funds = fundsData?.items || [];
@@ -406,7 +450,16 @@ export function VCContactsView() {
           <Flag className="w-3.5 h-3.5" /> Flagged
         </button>
 
-        <div className="ml-auto">
+        <div className="ml-auto flex items-center gap-2">
+          <button
+            onClick={() => { setSelectMode(v => !v); setSelectedIds(new Set()); }}
+            className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg border transition-colors ${
+              selectMode ? 'bg-blue-50 border-blue-400 text-blue-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'
+            }`}
+          >
+            <ListChecks className="w-4 h-4" />
+            {selectMode ? 'Exit select' : 'Select'}
+          </button>
           <button
             onClick={openCreate}
             className="flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-colors"
@@ -440,9 +493,27 @@ export function VCContactsView() {
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {contacts.map((c) => (
-            <ContactCard key={c.id} contact={c} onEdit={openEdit} onOpen={openDetail} />
+            <ContactCard
+              key={c.id}
+              contact={c}
+              onEdit={openEdit}
+              onOpen={openDetail}
+              selected={selectMode ? selectedIds.has(c.id) : undefined}
+              onToggle={selectMode ? () => toggleSelect(c.id) : undefined}
+            />
           ))}
         </div>
+      )}
+
+      {selectMode && selectedIds.size > 0 && (
+        <BulkDeleteBar
+          count={selectedIds.size}
+          total={contacts.length}
+          onSelectAll={() => setSelectedIds(new Set(contacts.map(c => c.id)))}
+          onClearAll={() => { setSelectedIds(new Set()); setSelectMode(false); }}
+          onDelete={handleBulkDelete}
+          deleting={deleting}
+        />
       )}
 
       {/* ── Create/Edit Modal ── */}

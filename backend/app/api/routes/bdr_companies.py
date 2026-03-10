@@ -187,3 +187,16 @@ def bulk_create_companies(
             errors.append({"name": item.company_name, "error": str(e)})
 
     return {"created": created, "skipped": skipped, "errors": errors, "dry_run": payload.dry_run}
+
+
+# ── Bulk delete ────────────────────────────────────────────────────────────────
+
+class BulkDeleteRequest(BaseModel):
+    ids: List[str]
+
+@router.post("/bulk-delete")
+def bulk_delete_bdr_companies(*, db: Session = Depends(get_db), payload: BulkDeleteRequest):
+    """Delete multiple BDR companies by ID."""
+    deleted = db.query(BDRCompany).filter(BDRCompany.id.in_(payload.ids)).delete(synchronize_session='fetch')
+    db.commit()
+    return {"deleted": deleted}

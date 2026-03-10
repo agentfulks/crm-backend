@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useContacts, useUpdateContact, type ContactFilters } from '../hooks/useContacts';
 import { useStudioPackets } from '../hooks/useStudioPackets';
-import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send, Calendar, X as XIcon, Flag, Globe, ClipboardCheck } from 'lucide-react';
+import { useQueryClient } from '@tanstack/react-query';
+import { Search, Filter, Mail, Linkedin, Phone, User, Building2, Star, CheckCircle, Send, Calendar, X as XIcon, Flag, Globe, ClipboardCheck, ListChecks } from 'lucide-react';
 import { ContactDetailModal } from './ContactDetailModal';
 import { AddToKanbanModal, type AddToKanbanSource } from './AddToKanbanModal';
+import { BulkDeleteBar } from './BulkDeleteBar';
 import type { BDRContact } from '../types';
+
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 type ContactedQuick = 'all' | 'never' | 'today' | '7d' | '30d' | 'custom';
 
@@ -91,7 +95,35 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
   };
 
   const [showFlaggedOnly, setShowFlaggedOnly] = useState(false);
+  const [selectMode, setSelectMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [deleting, setDeleting] = useState(false);
+  const queryClient = useQueryClient();
   const updateContact = useUpdateContact();
+
+  const toggleSelect = (id: string) => setSelectedIds(prev => {
+    const next = new Set(prev);
+    next.has(id) ? next.delete(id) : next.add(id);
+    return next;
+  });
+
+  const handleBulkDelete = async () => {
+    if (selectedIds.size === 0) return;
+    if (!confirm(`Permanently delete ${selectedIds.size} contact(s)? This cannot be undone.`)) return;
+    setDeleting(true);
+    try {
+      await fetch(`${API_BASE}/bdr/contacts/bulk-delete`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: [...selectedIds] }),
+      });
+      setSelectedIds(new Set());
+      setSelectMode(false);
+      queryClient.invalidateQueries({ queryKey: ['contacts'] });
+    } finally {
+      setDeleting(false);
+    }
+  };
   
   const { data: contactsData, isLoading } = useContacts({
     ...filters,
@@ -263,8 +295,8 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
           </div>
         </div>
 
-        {/* Flagged filter */}
-        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-2">
+        {/* Flagged filter + select mode */}
+        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-2 flex-wrap">
           <Flag className="w-4 h-4 text-gray-400 flex-shrink-0" />
           <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide mr-1">Data Quality:</span>
           <button
@@ -286,6 +318,17 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
               <XIcon className="w-3.5 h-3.5" /> Clear
             </button>
           )}
+          <div className="ml-auto">
+            <button
+              onClick={() => { setSelectMode(v => !v); setSelectedIds(new Set()); }}
+              className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
+                selectMode ? 'bg-blue-50 border-blue-400 text-blue-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'
+              }`}
+            >
+              <ListChecks className="w-3.5 h-3.5" />
+              {selectMode ? 'Exit select' : 'Select'}
+            </button>
+          </div>
         </div>
         
         {/* Stats */}
@@ -348,16 +391,30 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
               ? <Mail className="w-3 h-3" />
               : null;
             
+            const isSelected = selectedIds.has(contact.id);
             return (
               <div
                 key={contact.id}
-                onClick={() => setDetailContact({ contact, studioName: studio?.name || '', studioWebsite: studio?.website_url || '' })}
-                className={`rounded-lg shadow-sm border p-4 hover:shadow-md transition-all cursor-pointer flex flex-col ${
-                  contact.is_flagged
+                onClick={selectMode
+                  ? () => toggleSelect(contact.id)
+                  : () => setDetailContact({ contact, studioName: studio?.name || '', studioWebsite: studio?.website_url || '' })}
+                className={`rounded-lg shadow-sm border p-4 hover:shadow-md transition-all cursor-pointer flex flex-col relative ${
+                  isSelected
+                    ? 'ring-2 ring-blue-500 border-blue-400 bg-blue-50'
+                    : contact.is_flagged
                     ? 'bg-red-50 border-red-300 hover:border-red-400'
                     : 'bg-white border-gray-200 hover:border-blue-300'
                 }`}
               >
+                {selectMode && (
+                  <div className="absolute top-2 left-2 z-10">
+                    <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                      isSelected ? 'bg-blue-600 border-blue-600' : 'bg-white border-gray-400'
+                    }`}>
+                      {isSelected && <svg className="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>}
+                    </div>
+                  </div>
+                )}
                 {/* Header */}
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">
@@ -505,6 +562,17 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
             );
           })}
         </div>
+      )}
+
+      {selectMode && selectedIds.size > 0 && (
+        <BulkDeleteBar
+          count={selectedIds.size}
+          total={contacts.length}
+          onSelectAll={() => setSelectedIds(new Set(contacts.map((c: BDRContact) => c.id)))}
+          onClearAll={() => { setSelectedIds(new Set()); setSelectMode(false); }}
+          onDelete={handleBulkDelete}
+          deleting={deleting}
+        />
       )}
     </div>
   );

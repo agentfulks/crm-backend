@@ -7,6 +7,8 @@ import { AddToKanbanModal } from './AddToKanbanModal';
 interface StudioCardProps {
   packet: StudioPacket;
   onClick?: () => void;
+  selected?: boolean;
+  onToggle?: (e: React.MouseEvent) => void;
 }
 
 const statusColors: Record<PacketStatus, string> = {
@@ -25,7 +27,7 @@ const priorityColors: Record<string, string> = {
   C: 'bg-gray-400 text-white',
 };
 
-export function StudioCard({ packet, onClick }: StudioCardProps) {
+export function StudioCard({ packet, onClick, selected, onToggle }: StudioCardProps) {
   const studio = packet.studio;
   const updateCompany = useUpdateCompany();
   const isFlagged = studio?.is_flagged ?? false;
@@ -40,13 +42,24 @@ export function StudioCard({ packet, onClick }: StudioCardProps) {
   return (
     <>
       <div
-        onClick={onClick}
-        className={`rounded-lg shadow-sm border p-4 hover:shadow-md transition-all cursor-pointer flex flex-col ${
-          isFlagged
+        onClick={onToggle ?? onClick}
+        className={`rounded-lg shadow-sm border p-4 hover:shadow-md transition-all cursor-pointer flex flex-col relative ${
+          selected
+            ? 'ring-2 ring-blue-500 border-blue-400 bg-blue-50'
+            : isFlagged
             ? 'bg-red-50 border-red-300 hover:border-red-400'
             : 'bg-white border-gray-200 hover:border-blue-300'
         }`}
       >
+        {onToggle && (
+          <div className="absolute top-2 left-2 z-10">
+            <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+              selected ? 'bg-blue-600 border-blue-600' : 'bg-white border-gray-400'
+            }`}>
+              {selected && <svg className="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>}
+            </div>
+          </div>
+        )}
         {/* Top row: priority + status + flag */}
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">

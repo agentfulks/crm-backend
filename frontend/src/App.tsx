@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { usePendingStudioPackets, useStudioPackets } from './hooks/useStudioPackets';
 import { useFunds } from './hooks/useFunds';
 import { useDarkMode } from './hooks/useDarkMode';
+import { useQueryClient } from '@tanstack/react-query';
 import { FundCard } from './components/FundCard';
 import { StudioCard } from './components/StudioCard';
 import { QueueStatus } from './components/QueueStatus';
@@ -13,17 +14,30 @@ import { ContactDetailModal } from './components/ContactDetailModal';
 import { FundDetailModal } from './components/FundDetailModal';
 import { KanbanBoard } from './components/KanbanBoard';
 import { BulkUploadModal } from './components/BulkUploadModal';
-import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase, Moon, Sun, Upload } from 'lucide-react';
+import { BulkDeleteBar } from './components/BulkDeleteBar';
+import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase, Moon, Sun, Upload, ListChecks } from 'lucide-react';
 import type { StudioPacket, BDRContact, Fund } from './types';
+
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 type View = 'vc' | 'studios' | 'contacts' | 'vc-contacts' | 'tasks';
 
 function App() {
   const { isDark, toggle: toggleDark } = useDarkMode();
+  const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<string>('');
   const [currentView, setCurrentView] = useState<View>('studios');
   const [showTemplateManager, setShowTemplateManager] = useState(false);
   const [showBulkUpload, setShowBulkUpload] = useState(false);
+
+  // Bulk-select state
+  const [studioSelectMode, setStudioSelectMode] = useState(false);
+  const [studioSelected, setStudioSelected] = useState<Set<string>>(new Set());
+  const [studioDeleting, setStudioDeleting] = useState(false);
+
+  const [vcSelectMode, setVcSelectMode] = useState(false);
+  const [vcSelected, setVcSelected] = useState<Set<string>>(new Set());
+  const [vcDeleting, setVcDeleting] = useState(false);
 
   // Studio detail modal state
   const [selectedStudio, setSelectedStudio] = useState<StudioPacket | null>(null);
@@ -37,6 +51,10 @@ function App() {
   const switchView = (view: View) => {
     setCurrentView(view);
     setStatusFilter('');
+    setStudioSelectMode(false);
+    setStudioSelected(new Set());
+    setVcSelectMode(false);
+    setVcSelected(new Set());
   };
 
   // VC / Funds data — query funds table directly
@@ -46,8 +64,71 @@ function App() {
   const { data: studioPacketsData, isLoading: studioLoading } = useStudioPackets(statusFilter);
   const { data: pendingStudioData } = usePendingStudioPackets();
 
-  const funds = fundsData?.items || [];
-  const studioPackets = studioPacketsData?.items || [];
+  const rawFunds = fundsData?.items || [];
+  const rawStudios = studioPacketsData?.items || [];
+
+  // Sort newest first
+  const funds = useMemo(
+    () => [...rawFunds].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()),
+    [rawFunds]
+  );
+  const studioPackets = useMemo(
+    () => [...rawStudios].sort((a, b) => {
+      const aDate = a.studio?.created_at ?? '';
+      const bDate = b.studio?.created_at ?? '';
+      return new Date(bDate).getTime() - new Date(aDate).getTime();
+    }),
+    [rawStudios]
+  );
+
+  // Bulk delete helpers
+  const toggleStudio = (id: string) => setStudioSelected(prev => {
+    const next = new Set(prev);
+    next.has(id) ? next.delete(id) : next.add(id);
+    return next;
+  });
+
+  const deleteStudios = async () => {
+    if (studioSelected.size === 0) return;
+    if (!confirm(`Permanently delete ${studioSelected.size} studio(s)? This cannot be undone.`)) return;
+    setStudioDeleting(true);
+    try {
+      await fetch(`${API_BASE}/bdr/companies/bulk-delete`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: [...studioSelected] }),
+      });
+      setStudioSelected(new Set());
+      setStudioSelectMode(false);
+      queryClient.invalidateQueries({ queryKey: ['studioPackets'] });
+    } finally {
+      setStudioDeleting(false);
+    }
+  };
+
+  const toggleFund = (id: string) => setVcSelected(prev => {
+    const next = new Set(prev);
+    next.has(id) ? next.delete(id) : next.add(id);
+    return next;
+  });
+
+  const deleteFunds = async () => {
+    if (vcSelected.size === 0) return;
+    if (!confirm(`Permanently delete ${vcSelected.size} fund(s)? This cannot be undone.`)) return;
+    setVcDeleting(true);
+    try {
+      await fetch(`${API_BASE}/funds/bulk-delete`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: [...vcSelected] }),
+      });
+      setVcSelected(new Set());
+      setVcSelectMode(false);
+      queryClient.invalidateQueries({ queryKey: ['funds'] });
+    } finally {
+      setVcDeleting(false);
+    }
+  };
 
   const pendingCount = pendingStudioData?.total || 0;
 
@@ -180,7 +261,7 @@ function App() {
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
               <div className="flex items-center gap-4">
                 <Filter className="w-5 h-5 text-gray-400" />
-                <div className="flex gap-2 flex-wrap">
+                <div className="flex gap-2 flex-wrap flex-1">
                   {statuses.map((s) => (
                     <button
                       key={s}
@@ -195,6 +276,29 @@ function App() {
                     </button>
                   ))}
                 </div>
+                {/* Select mode toggle for studios and VC */}
+                {currentView === 'studios' && (
+                  <button
+                    onClick={() => { setStudioSelectMode(v => !v); setStudioSelected(new Set()); }}
+                    className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg border transition-colors ${
+                      studioSelectMode ? 'bg-blue-50 border-blue-400 text-blue-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'
+                    }`}
+                  >
+                    <ListChecks className="w-4 h-4" />
+                    {studioSelectMode ? 'Exit select' : 'Select'}
+                  </button>
+                )}
+                {currentView === 'vc' && (
+                  <button
+                    onClick={() => { setVcSelectMode(v => !v); setVcSelected(new Set()); }}
+                    className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg border transition-colors ${
+                      vcSelectMode ? 'bg-blue-50 border-blue-400 text-blue-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'
+                    }`}
+                  >
+                    <ListChecks className="w-4 h-4" />
+                    {vcSelectMode ? 'Exit select' : 'Select'}
+                  </button>
+                )}
               </div>
             </div>
           );
@@ -224,9 +328,25 @@ function App() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {funds.map((fund) => (
-                  <FundCard key={fund.id} fund={fund} onClick={() => setSelectedFund(fund)} />
+                  <FundCard
+                    key={fund.id}
+                    fund={fund}
+                    onClick={vcSelectMode ? undefined : () => setSelectedFund(fund)}
+                    selected={vcSelectMode ? vcSelected.has(fund.id) : undefined}
+                    onToggle={vcSelectMode ? (e) => { e.stopPropagation(); toggleFund(fund.id); } : undefined}
+                  />
                 ))}
               </div>
+            )}
+            {vcSelectMode && vcSelected.size > 0 && (
+              <BulkDeleteBar
+                count={vcSelected.size}
+                total={funds.length}
+                onSelectAll={() => setVcSelected(new Set(funds.map(f => f.id)))}
+                onClearAll={() => { setVcSelected(new Set()); setVcSelectMode(false); }}
+                onDelete={deleteFunds}
+                deleting={vcDeleting}
+              />
             )}
           </>
         )}
@@ -269,10 +389,22 @@ function App() {
                   <StudioCard
                     key={packet.id}
                     packet={packet}
-                    onClick={() => setSelectedStudio(packet)}
+                    onClick={studioSelectMode ? undefined : () => setSelectedStudio(packet)}
+                    selected={studioSelectMode ? studioSelected.has(packet.studio?.id ?? packet.id) : undefined}
+                    onToggle={studioSelectMode ? (e) => { e.stopPropagation(); toggleStudio(packet.studio?.id ?? packet.id); } : undefined}
                   />
                 ))}
               </div>
+            )}
+            {studioSelectMode && studioSelected.size > 0 && (
+              <BulkDeleteBar
+                count={studioSelected.size}
+                total={studioPackets.length}
+                onSelectAll={() => setStudioSelected(new Set(studioPackets.map(p => p.studio?.id ?? p.id)))}
+                onClearAll={() => { setStudioSelected(new Set()); setStudioSelectMode(false); }}
+                onDelete={deleteStudios}
+                deleting={studioDeleting}
+              />
             )}
           </>
         )}

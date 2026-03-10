@@ -275,3 +275,16 @@ def bulk_create_vc_contacts(*, db: Session = Depends(get_db), payload: BulkVCCon
             errors.append({"name": label, "error": str(e)})
 
     return {"created": created, "skipped": skipped, "errors": errors, "dry_run": payload.dry_run}
+
+
+# ── Bulk delete ────────────────────────────────────────────────────────────────
+
+class BulkDeleteContactRequest(BaseModel):
+    ids: List[str]
+
+@router.post("/bulk-delete")
+def bulk_delete_vc_contacts(*, db: Session = Depends(get_db), payload: BulkDeleteContactRequest):
+    """Delete multiple VC contacts by ID."""
+    deleted = db.query(_CM).filter(_CM.id.in_(payload.ids)).delete(synchronize_session='fetch')
+    db.commit()
+    return {"deleted": deleted}

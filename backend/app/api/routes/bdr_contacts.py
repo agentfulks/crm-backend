@@ -404,3 +404,16 @@ def bulk_create_contacts(
             errors.append({"name": label, "error": str(e)})
 
     return {"created": created, "skipped": skipped, "errors": errors, "dry_run": payload.dry_run}
+
+
+# ── Bulk delete ────────────────────────────────────────────────────────────────
+
+class BulkDeleteRequest(BaseModel):
+    ids: List[str]
+
+@router.post("/bulk-delete")
+def bulk_delete_bdr_contacts(*, db: Session = Depends(get_db), payload: BulkDeleteRequest):
+    """Delete multiple BDR contacts by ID."""
+    deleted = db.query(BDRContact).filter(BDRContact.id.in_(payload.ids)).delete(synchronize_session='fetch')
+    db.commit()
+    return {"deleted": deleted}

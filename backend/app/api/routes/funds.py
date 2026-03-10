@@ -176,3 +176,16 @@ def bulk_create_funds(
             errors.append({"name": item.name, "error": str(e)})
 
     return {"created": created, "skipped": skipped, "errors": errors, "dry_run": payload.dry_run}
+
+
+# ── Bulk delete ────────────────────────────────────────────────────────────────
+
+class BulkDeleteRequest(BaseModel):
+    ids: List[str]
+
+@router.post("/bulk-delete")
+def bulk_delete_funds(*, db: Session = Depends(get_db), payload: BulkDeleteRequest):
+    """Delete multiple funds by ID."""
+    deleted = db.query(Fund).filter(Fund.id.in_(payload.ids)).delete(synchronize_session='fetch')
+    db.commit()
+    return {"deleted": deleted}

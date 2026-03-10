@@ -133,30 +133,38 @@ def get_bdr_contact(*, db: Session = Depends(get_db), contact_id: str):
     return _contact_to_dict(contact)
 
 
+class ContactCreate(BaseModel):
+    company_id: str
+    full_name: str
+    job_title: str | None = None
+    email: str | None = None
+    phone: str | None = None
+    linkedin_url: str | None = None
+    is_decision_maker: bool = False
+    email_verified: bool = False
+
+
 @router.post("/", status_code=status.HTTP_201_CREATED)
 def create_bdr_contact(
     *,
     db: Session = Depends(get_db),
-    company_id: str,
-    full_name: str,
-    job_title: str | None = None,
-    email: str | None = None,
-    linkedin_url: str | None = None,
-    is_decision_maker: bool = False,
+    payload: ContactCreate,
 ):
     """Create a new BDR contact."""
     contact = BDRContact(
-        company_id=company_id,
-        full_name=full_name,
-        job_title=job_title,
-        email=email,
-        linkedin_url=linkedin_url,
-        is_decision_maker=is_decision_maker,
+        company_id=payload.company_id,
+        full_name=payload.full_name,
+        job_title=payload.job_title,
+        email=payload.email,
+        phone=payload.phone,
+        linkedin_url=payload.linkedin_url,
+        is_decision_maker=payload.is_decision_maker,
+        email_verified=payload.email_verified,
     )
     db.add(contact)
     db.commit()
     db.refresh(contact)
-    return {"id": str(contact.id), "message": "Contact created successfully"}
+    return _contact_to_dict(contact)
 
 
 @router.patch("/{contact_id}")

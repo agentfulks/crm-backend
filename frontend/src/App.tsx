@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { usePendingStudioPackets, useStudioPackets } from './hooks/useStudioPackets';
 import { useFunds } from './hooks/useFunds';
+import { useDarkMode } from './hooks/useDarkMode';
 import { FundCard } from './components/FundCard';
 import { StudioCard } from './components/StudioCard';
 import { QueueStatus } from './components/QueueStatus';
@@ -11,12 +12,13 @@ import { StudioDetailModal } from './components/StudioDetailModal';
 import { ContactDetailModal } from './components/ContactDetailModal';
 import { FundDetailModal } from './components/FundDetailModal';
 import { KanbanBoard } from './components/KanbanBoard';
-import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase } from 'lucide-react';
+import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase, Moon, Sun } from 'lucide-react';
 import type { StudioPacket, BDRContact, Fund } from './types';
 
 type View = 'vc' | 'studios' | 'contacts' | 'vc-contacts' | 'tasks';
 
 function App() {
+  const { isDark, toggle: toggleDark } = useDarkMode();
   const [statusFilter, setStatusFilter] = useState<string>('');
   const [currentView, setCurrentView] = useState<View>('studios');
   const [showTemplateManager, setShowTemplateManager] = useState(false);
@@ -117,6 +119,15 @@ function App() {
                   Tasks
                 </button>
               </div>
+
+              {/* Dark mode toggle */}
+              <button
+                onClick={toggleDark}
+                title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+              >
+                {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </button>
 
               {/* Template Manager Button */}
               <button

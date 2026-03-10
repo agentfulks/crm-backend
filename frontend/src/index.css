@@ -1,3 +1,175 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Dark Mode — global overrides
+   Strategy: `.dark` class on <html> (set by useDarkMode hook).
+   These rules override Tailwind utility classes for every component at once,
+   so individual component files don't need dark: prefixes added.
+───────────────────────────────────────────────────────────────────────────── */
+
+/* Base */
+.dark {
+  color-scheme: dark;
+}
+.dark body {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* ── Backgrounds ── */
+.dark .bg-white          { background-color: #1e293b; }
+.dark .bg-gray-50        { background-color: #0f172a; }
+.dark .bg-gray-100       { background-color: #1e293b; }
+.dark .bg-gray-200       { background-color: #334155; }
+.dark .bg-gray-800       { background-color: #0f172a; }
+.dark .bg-gray-900       { background-color: #020617; }
+
+/* Hover backgrounds */
+.dark .hover\:bg-white:hover       { background-color: #334155; }
+.dark .hover\:bg-gray-50:hover     { background-color: #1e293b; }
+.dark .hover\:bg-gray-100:hover    { background-color: #334155; }
+.dark .hover\:bg-gray-200:hover    { background-color: #475569; }
+.dark .hover\:bg-gray-800:hover    { background-color: #1e293b; }
+.dark .hover\:bg-gray-900:hover    { background-color: #0f172a; }
+
+/* Focus backgrounds */
+.dark .focus\:bg-white:focus       { background-color: #1e293b; }
+
+/* Active/selected states in the nav tabs — bg-white in the pill */
+.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5); }
+.dark .shadow    { box-shadow: 0 1px 3px 0 rgba(0,0,0,0.5), 0 1px 2px -1px rgba(0,0,0,0.5); }
+.dark .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.6), 0 4px 6px -4px rgba(0,0,0,0.5); }
+.dark .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.7), 0 8px 10px -6px rgba(0,0,0,0.6); }
+
+/* ── Text colours ── */
+.dark .text-gray-900 { color: #f1f5f9; }
+.dark .text-gray-800 { color: #e2e8f0; }
+.dark .text-gray-700 { color: #cbd5e1; }
+.dark .text-gray-600 { color: #94a3b8; }
+.dark .text-gray-500 { color: #64748b; }
+.dark .text-gray-400 { color: #475569; }
+.dark .text-gray-300 { color: #334155; }
+.dark .text-black    { color: #f1f5f9; }
+
+/* Hover text */
+.dark .hover\:text-gray-900:hover { color: #f8fafc; }
+.dark .hover\:text-gray-800:hover { color: #f1f5f9; }
+.dark .hover\:text-gray-700:hover { color: #e2e8f0; }
+.dark .hover\:text-gray-600:hover { color: #cbd5e1; }
+
+/* ── Borders ── */
+.dark .border-gray-50  { border-color: #0f172a; }
+.dark .border-gray-100 { border-color: #334155; }
+.dark .border-gray-200 { border-color: #334155; }
+.dark .border-gray-300 { border-color: #475569; }
+.dark .border-gray-400 { border-color: #64748b; }
+
+.dark .hover\:border-gray-300:hover { border-color: #64748b; }
+.dark .hover\:border-gray-400:hover { border-color: #94a3b8; }
+
+/* ── Dividers ── */
+.dark .divide-gray-50  > :not([hidden]) ~ :not([hidden]) { border-color: #0f172a; }
+.dark .divide-gray-100 > :not([hidden]) ~ :not([hidden]) { border-color: #334155; }
+.dark .divide-gray-200 > :not([hidden]) ~ :not([hidden]) { border-color: #334155; }
+
+/* ── Ring (focus outlines) ── */
+.dark .ring-gray-200 { --tw-ring-color: #334155; }
+.dark .ring-gray-300 { --tw-ring-color: #475569; }
+
+/* ── Status / accent colour backgrounds (badges, pills) ── */
+.dark .bg-blue-50    { background-color: #0c1a2e; }
+.dark .bg-blue-100   { background-color: #1e3a5f; }
+.dark .bg-green-50   { background-color: #0a1f0a; }
+.dark .bg-green-100  { background-color: #14532d; }
+.dark .bg-red-50     { background-color: #1c0505; }
+.dark .bg-red-100    { background-color: #450a0a; }
+.dark .bg-yellow-50  { background-color: #1c1505; }
+.dark .bg-yellow-100 { background-color: #451a03; }
+.dark .bg-purple-50  { background-color: #1a0b2e; }
+.dark .bg-purple-100 { background-color: #3b0764; }
+.dark .bg-indigo-50  { background-color: #0f0e1f; }
+.dark .bg-indigo-100 { background-color: #1e1b4b; }
+.dark .bg-teal-50    { background-color: #021f1e; }
+.dark .bg-teal-100   { background-color: #042f2e; }
+.dark .bg-orange-50  { background-color: #1c0a00; }
+.dark .bg-orange-100 { background-color: #431407; }
+
+/* ── Status / accent colour borders ── */
+.dark .border-blue-100   { border-color: #1e3a5f; }
+.dark .border-blue-200   { border-color: #1e40af; }
+.dark .border-green-100  { border-color: #14532d; }
+.dark .border-green-200  { border-color: #166534; }
+.dark .border-red-100    { border-color: #7f1d1d; }
+.dark .border-red-200    { border-color: #991b1b; }
+.dark .border-yellow-100 { border-color: #713f12; }
+.dark .border-yellow-200 { border-color: #92400e; }
+.dark .border-purple-100 { border-color: #6b21a8; }
+.dark .border-purple-200 { border-color: #7e22ce; }
+.dark .border-orange-100 { border-color: #431407; }
+.dark .border-orange-200 { border-color: #7c2d12; }
+.dark .border-teal-100   { border-color: #042f2e; }
+
+/* ── Status / accent text ── */
+.dark .text-blue-600  { color: #60a5fa; }
+.dark .text-blue-700  { color: #93c5fd; }
+.dark .text-blue-800  { color: #bfdbfe; }
+.dark .text-green-600 { color: #4ade80; }
+.dark .text-green-700 { color: #86efac; }
+.dark .text-green-800 { color: #bbf7d0; }
+.dark .text-red-500   { color: #f87171; }
+.dark .text-red-600   { color: #f87171; }
+.dark .text-red-700   { color: #fca5a5; }
+.dark .text-red-800   { color: #fecaca; }
+.dark .text-yellow-600 { color: #fbbf24; }
+.dark .text-yellow-700 { color: #fcd34d; }
+.dark .text-yellow-800 { color: #fde68a; }
+.dark .text-purple-600 { color: #c084fc; }
+.dark .text-purple-700 { color: #d8b4fe; }
+.dark .text-purple-800 { color: #e9d5ff; }
+.dark .text-indigo-600 { color: #818cf8; }
+.dark .text-indigo-700 { color: #a5b4fc; }
+.dark .text-indigo-800 { color: #c7d2fe; }
+.dark .text-teal-600  { color: #2dd4bf; }
+.dark .text-teal-700  { color: #5eead4; }
+.dark .text-teal-800  { color: #99f6e4; }
+.dark .text-orange-500 { color: #fb923c; }
+.dark .text-orange-600 { color: #f97316; }
+.dark .text-orange-700 { color: #fdba74; }
+.dark .text-orange-800 { color: #fed7aa; }
+
+/* ── Form inputs & textareas ── */
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]),
+.dark textarea,
+.dark select {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"])::placeholder,
+.dark textarea::placeholder {
+  color: #64748b;
+}
+.dark input:disabled,
+.dark textarea:disabled,
+.dark select:disabled {
+  background-color: #1e293b;
+  color: #64748b;
+}
+
+/* Preserve bg-white class on inputs that explicitly set it (more specific) */
+.dark input.bg-white,
+.dark textarea.bg-white,
+.dark select.bg-white {
+  background-color: #0f172a;
+}
+
+/* ── Pulse skeleton animation ── */
+.dark .animate-pulse > * { background-color: #334155 !important; }
+
+/* ── Scrollbars ── */
+.dark ::-webkit-scrollbar { width: 8px; height: 8px; }
+.dark ::-webkit-scrollbar-track { background: #0f172a; }
+.dark ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #475569; }

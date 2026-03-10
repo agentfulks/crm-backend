@@ -191,6 +191,9 @@ export interface BDROutreachLog {
   sent_at: string;
 }
 
+/** Outreach log for VC contacts (contacts table). Same shape as BDROutreachLog. */
+export type VCOutreachLog = BDROutreachLog;
+
 export interface PacketListResponse {
   total: number;
   items: Packet[];

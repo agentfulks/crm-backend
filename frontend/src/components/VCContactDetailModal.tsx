@@ -1,18 +1,22 @@
 import { useState } from 'react';
 import {
   X, Mail, Linkedin, Phone, Star, CheckCircle, Clock,
-  ChevronDown, ChevronUp, Trash2, Send, Edit3, Save, RotateCcw, RefreshCcw, Flag,
+  ChevronDown, ChevronUp, Trash2, Send, Edit3, Save, RotateCcw, Flag,
 } from 'lucide-react';
-import type { BDRContact, BDROutreachLog } from '../types';
-import { useUpdateContact, useOutreachLogs, useDeleteOutreachLog } from '../hooks/useContacts';
+import type { VCContact, VCOutreachLog } from '../types';
+import {
+  useUpdateVCContact,
+  useVCOutreachLogs,
+  useDeleteVCOutreachLog,
+} from '../hooks/useVCContacts';
 import { OutreachModal } from './OutreachModal';
 import { HunterContactPanel } from './HunterContactPanel';
 import { deriveDomain } from '../lib/hunterApi';
 
 interface Props {
-  contact: BDRContact;
-  studioName?: string;
-  studioWebsite?: string;
+  contact: VCContact;
+  fundName?: string;
+  fundWebsite?: string;
   onClose: () => void;
 }
 
@@ -43,12 +47,12 @@ function LogEntry({
   log,
   contactId,
 }: {
-  log: BDROutreachLog;
+  log: VCOutreachLog;
   contactId: string;
 }) {
   const [expanded, setExpanded] = useState(false);
   const [confirming, setConfirming] = useState(false);
-  const deleteLog = useDeleteOutreachLog();
+  const deleteLog = useDeleteVCOutreachLog();
   const hasContent = !!(log.subject || log.body);
 
   const handleDelete = async () => {
@@ -177,38 +181,38 @@ function Field({
 
 // ── Main modal ─────────────────────────────────────────────────────────────────
 
-export function ContactDetailModal({ contact, studioName = '', studioWebsite, onClose }: Props) {
+export function VCContactDetailModal({ contact, fundName = '', fundWebsite, onClose }: Props) {
   const [editing, setEditing] = useState(false);
   const [showOutreach, setShowOutreach] = useState(false);
 
   // Editable fields
   const [fullName, setFullName] = useState(contact.full_name || '');
-  const [jobTitle, setJobTitle] = useState(contact.job_title || '');
+  const [title, setTitle] = useState(contact.title || '');
   const [department, setDepartment] = useState(contact.department || '');
   const [email, setEmail] = useState(contact.email || '');
   const [phone, setPhone] = useState(contact.phone || '');
   const [linkedinUrl, setLinkedinUrl] = useState(contact.linkedin_url || '');
   const [timezone, setTimezone] = useState(contact.timezone || '');
+  const [seniorityLevel, setSeniorityLevel] = useState(contact.seniority_level || '');
   const [notes, setNotes] = useState(contact.notes || '');
-  const [isDecisionMaker, setIsDecisionMaker] = useState(contact.is_decision_maker);
-  const [isChampion, setIsChampion] = useState(contact.is_champion);
+  const [isPrimary, setIsPrimary] = useState(contact.is_primary);
   const [emailVerified, setEmailVerified] = useState(contact.email_verified);
 
-  const updateContact = useUpdateContact();
-  const { data: historyData, isLoading: historyLoading } = useOutreachLogs(contact.id);
+  const updateContact = useUpdateVCContact();
+  const { data: historyData, isLoading: historyLoading } = useVCOutreachLogs(contact.id);
   const history = historyData?.items || [];
 
   const handleDiscard = () => {
     setFullName(contact.full_name || '');
-    setJobTitle(contact.job_title || '');
+    setTitle(contact.title || '');
     setDepartment(contact.department || '');
     setEmail(contact.email || '');
     setPhone(contact.phone || '');
     setLinkedinUrl(contact.linkedin_url || '');
     setTimezone(contact.timezone || '');
+    setSeniorityLevel(contact.seniority_level || '');
     setNotes(contact.notes || '');
-    setIsDecisionMaker(contact.is_decision_maker);
-    setIsChampion(contact.is_champion);
+    setIsPrimary(contact.is_primary);
     setEmailVerified(contact.email_verified);
     setEditing(false);
   };
@@ -218,15 +222,15 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
       id: contact.id,
       data: {
         full_name: fullName,
-        job_title: jobTitle,
+        title,
         department,
         email,
         phone,
         linkedin_url: linkedinUrl,
         timezone,
+        seniority_level: seniorityLevel,
         notes,
-        is_decision_maker: isDecisionMaker,
-        is_champion: isChampion,
+        is_primary: isPrimary,
         email_verified: emailVerified,
       },
     });
@@ -236,9 +240,9 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
   if (showOutreach) {
     return (
       <OutreachModal
-        contact={{ id: contact.id, full_name: fullName, email, linkedin_url: linkedinUrl, jobTitle: jobTitle }}
-        orgName={studioName}
-        apiBase="/bdr/contacts"
+        contact={{ id: contact.id, full_name: fullName, email, linkedin_url: linkedinUrl, jobTitle: title }}
+        orgName={fundName}
+        apiBase="/contacts"
         onClose={() => setShowOutreach(false)}
       />
     );
@@ -250,7 +254,7 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
 
   const nameParts = fullName.trim().split(/\s+/);
   const hunterFirstName = nameParts[0] || '';
-  const hunterLastName  = nameParts.slice(1).join(' ') || '';
+  const hunterLastName = nameParts.slice(1).join(' ') || '';
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-40">
@@ -259,8 +263,8 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
         {/* ── Header ── */}
         <div className="flex items-start justify-between p-5 border-b gap-4">
           <div className="flex items-center gap-3 min-w-0">
-            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-              <span className="text-blue-600 font-bold text-xl">
+            <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+              <span className="text-indigo-600 font-bold text-xl">
                 {(editing ? fullName : contact.full_name)?.[0]?.toUpperCase() || '?'}
               </span>
             </div>
@@ -275,23 +279,17 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
                 <h2 className="text-lg font-semibold text-gray-900 truncate">{contact.full_name}</h2>
               )}
               <div className="flex items-center gap-2 mt-0.5 flex-wrap">
-                {studioName && (
-                  <span className="text-sm text-gray-500">{studioName}</span>
+                {fundName && (
+                  <span className="text-sm text-gray-500">{fundName}</span>
                 )}
-                {isDecisionMaker && (
+                {isPrimary && (
                   <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
-                    <Star className="w-3 h-3" /> DM
+                    <Star className="w-3 h-3" /> Primary
                   </span>
                 )}
                 {lastContacted && (
-                  <span className={`text-xs px-2 py-0.5 rounded-full flex items-center gap-1 ${
-                    contact.contact_preference === 'linkedin'
-                      ? 'bg-[#e8f0fb] text-[#0077b5]'
-                      : 'bg-blue-100 text-blue-700'
-                  }`}>
-                    {contact.contact_preference === 'linkedin'
-                      ? <Linkedin className="w-3 h-3" />
-                      : <Mail className="w-3 h-3" />}
+                  <span className="text-xs px-2 py-0.5 rounded-full flex items-center gap-1 bg-blue-100 text-blue-700">
+                    <Mail className="w-3 h-3" />
                     {lastContacted}
                   </span>
                 )}
@@ -299,12 +297,12 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
                   <button
                     onClick={async () => {
                       if (!confirm('Reset "last contacted at"? This only clears the date — it does not delete message history.')) return;
-                      await updateContact.mutateAsync({ id: contact.id, data: { reset_last_contacted: true } as any });
+                      await updateContact.mutateAsync({ id: contact.id, data: { last_contacted_at: null } as any });
                     }}
                     title="Reset last contacted date"
                     className="text-gray-300 hover:text-red-400 transition-colors"
                   >
-                    <RefreshCcw className="w-3.5 h-3.5" />
+                    <RotateCcw className="w-3.5 h-3.5" />
                   </button>
                 )}
               </div>
@@ -362,7 +360,7 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
 
           {/* Contact fields */}
           <div className="grid grid-cols-2 gap-4">
-            <Field label="Job Title" value={jobTitle} onChange={setJobTitle} editing={editing} />
+            <Field label="Job Title" value={title} onChange={setTitle} editing={editing} />
             <Field label="Department" value={department} onChange={setDepartment} editing={editing} />
             <Field label="Email" value={email} onChange={setEmail} type="email" editing={editing} />
             <Field label="Phone" value={phone} onChange={setPhone} type="tel" editing={editing} />
@@ -370,14 +368,31 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
               <Field label="LinkedIn URL" value={linkedinUrl} onChange={setLinkedinUrl} editing={editing} />
             </div>
             <Field label="Timezone" value={timezone} onChange={setTimezone} editing={editing} />
+            {editing ? (
+              <div>
+                <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Seniority</label>
+                <select
+                  value={seniorityLevel}
+                  onChange={(e) => setSeniorityLevel(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="">—</option>
+                  <option value="executive">Executive</option>
+                  <option value="senior">Senior</option>
+                  <option value="mid">Mid</option>
+                  <option value="junior">Junior</option>
+                </select>
+              </div>
+            ) : seniorityLevel ? (
+              <Field label="Seniority" value={seniorityLevel} onChange={setSeniorityLevel} editing={false} />
+            ) : null}
           </div>
 
           {/* Toggles */}
           <div className="flex gap-4">
             {[
-              { label: 'Decision Maker', icon: <Star className="w-3.5 h-3.5" />, value: isDecisionMaker, set: setIsDecisionMaker },
-              { label: 'Champion', icon: <CheckCircle className="w-3.5 h-3.5" />, value: isChampion, set: setIsChampion },
-              { label: 'Email Verified', icon: <Mail className="w-3.5 h-3.5" />, value: emailVerified, set: setEmailVerified },
+              { label: 'Primary Contact', icon: <Star className="w-3.5 h-3.5" />, value: isPrimary, set: setIsPrimary },
+              { label: 'Email Verified', icon: <CheckCircle className="w-3.5 h-3.5" />, value: emailVerified, set: setEmailVerified },
             ].map(({ label, icon, value, set }) => (
               <button
                 key={label}
@@ -450,19 +465,19 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
             firstName={hunterFirstName}
             lastName={hunterLastName}
             currentEmail={email || undefined}
-            defaultDomain={deriveDomain(studioWebsite)}
+            defaultDomain={deriveDomain(fundWebsite)}
             onApplyEmail={async (newEmail) => {
               await updateContact.mutateAsync({ id: contact.id, data: { email: newEmail } });
               setEmail(newEmail);
             }}
             onApplyFields={async (fields) => {
               const data: Record<string, string> = {};
-              if (fields.job_title)    data.job_title    = fields.job_title;
+              if (fields.job_title)    data.title        = fields.job_title;
               if (fields.linkedin_url) data.linkedin_url = fields.linkedin_url;
               if (fields.phone)        data.phone        = fields.phone;
               if (Object.keys(data).length) {
                 await updateContact.mutateAsync({ id: contact.id, data });
-                if (fields.job_title)    setJobTitle(fields.job_title);
+                if (fields.job_title)    setTitle(fields.job_title);
                 if (fields.linkedin_url) setLinkedinUrl(fields.linkedin_url);
                 if (fields.phone)        setPhone(fields.phone);
               }

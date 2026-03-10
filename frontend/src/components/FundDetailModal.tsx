@@ -6,6 +6,7 @@ import {
 import type { Fund, FundStatus, Priority, VCContact } from '../types';
 import { useUpdateFund } from '../hooks/useFunds';
 import { useContactsByFund, useCreateVCContact, useUpdateVCContact, useDeleteVCContact } from '../hooks/useVCContacts';
+import { VCContactDetailModal } from './VCContactDetailModal';
 
 const STATUS_OPTIONS: FundStatus[] = ['NEW', 'RESEARCHING', 'READY', 'APPROVED', 'SENT', 'FOLLOW_UP', 'CLOSED'];
 
@@ -32,9 +33,10 @@ function formatCheckSize(min?: number, max?: number): string | null {
 interface ContactRowProps {
   contact: VCContact;
   onDelete: (id: string) => void;
+  onOpen: (c: VCContact) => void;
 }
 
-function ContactRow({ contact, onDelete }: ContactRowProps) {
+function ContactRow({ contact, onDelete, onOpen }: ContactRowProps) {
   const [expanded, setExpanded] = useState(false);
   const updateContact = useUpdateVCContact();
 
@@ -77,6 +79,10 @@ function ContactRow({ contact, onDelete }: ContactRowProps) {
           <button onClick={() => toggle('email_verified')} title="Toggle verified"
             className={`p-1.5 rounded ${contact.email_verified ? 'text-green-500' : 'text-gray-300 hover:text-green-400'}`}>
             <CheckCircle className="w-3.5 h-3.5" />
+          </button>
+          <button onClick={() => onOpen(contact)}
+            className="text-xs text-blue-600 hover:text-blue-800 font-medium px-2 py-1 hover:bg-blue-50 rounded transition-colors">
+            Open
           </button>
           <button onClick={() => setExpanded((e) => !e)}
             className="p-1.5 hover:bg-gray-100 rounded text-gray-400">
@@ -157,6 +163,7 @@ export function FundDetailModal({ fund, onClose }: Props) {
   const updateFund = useUpdateFund();
   const [editing, setEditing] = useState(false);
   const [showAddContact, setShowAddContact] = useState(false);
+  const [selectedContact, setSelectedContact] = useState<VCContact | null>(null);
 
   const { data: fundContacts = [], refetch: refetchContacts } = useContactsByFund(fund.id);
   const deleteContact = useDeleteVCContact();
@@ -228,6 +235,7 @@ export function FundDetailModal({ fund, onClose }: Props) {
   const inp = 'text-sm border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:ring-2 focus:ring-blue-500 focus:border-blue-500';
 
   return (
+    <>
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-xl">
 
@@ -547,6 +555,7 @@ export function FundDetailModal({ fund, onClose }: Props) {
                     key={c.id}
                     contact={c}
                     onDelete={(id) => { deleteContact.mutate(id); refetchContacts(); }}
+                    onOpen={(c) => setSelectedContact(c)}
                   />
                 ))}
               </div>
@@ -555,5 +564,15 @@ export function FundDetailModal({ fund, onClose }: Props) {
         </div>
       </div>
     </div>
+
+    {selectedContact && (
+      <VCContactDetailModal
+        contact={selectedContact}
+        fundName={fund.name}
+        fundWebsite={fund.website_url || undefined}
+        onClose={() => setSelectedContact(null)}
+      />
+    )}
+    </>
   );
 }

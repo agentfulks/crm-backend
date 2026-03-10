@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { vcContactsApi } from '../api';
-import type { VCContact } from '../types';
+import { api } from '../api';
+import type { VCContact, VCOutreachLog } from '../types';
 
 const CONTACTS_KEY = 'vc-contacts';
 
@@ -58,5 +59,55 @@ export function useDeleteVCContact() {
   return useMutation({
     mutationFn: (id: string) => vcContactsApi.delete(id),
     onSuccess: () => qc.invalidateQueries({ queryKey: [CONTACTS_KEY] }),
+  });
+}
+
+// ── Outreach log hooks ────────────────────────────────────────────────────────
+
+export function useVCOutreachLogs(contactId: string) {
+  return useQuery({
+    queryKey: ['vc-outreach-logs', contactId],
+    queryFn: async () => {
+      const res = await api.get(`/contacts/${contactId}/outreach`);
+      return res.data as { total: number; items: VCOutreachLog[] };
+    },
+    enabled: !!contactId,
+  });
+}
+
+export function useCreateVCOutreachLog() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async ({
+      contactId,
+      channel,
+      subject,
+      body,
+    }: {
+      contactId: string;
+      channel: 'email' | 'linkedin';
+      subject?: string;
+      body?: string;
+    }) => {
+      const res = await api.post(`/contacts/${contactId}/outreach`, { channel, subject, body });
+      return res.data as VCOutreachLog;
+    },
+    onSuccess: (_data, vars) => {
+      qc.invalidateQueries({ queryKey: ['vc-outreach-logs', vars.contactId] });
+      qc.invalidateQueries({ queryKey: [CONTACTS_KEY] });
+    },
+  });
+}
+
+export function useDeleteVCOutreachLog() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async ({ contactId, logId }: { contactId: string; logId: string }) => {
+      await api.delete(`/contacts/${contactId}/outreach/${logId}`);
+    },
+    onSuccess: (_data, vars) => {
+      qc.invalidateQueries({ queryKey: ['vc-outreach-logs', vars.contactId] });
+      qc.invalidateQueries({ queryKey: [CONTACTS_KEY] });
+    },
   });
 }

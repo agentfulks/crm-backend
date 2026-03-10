@@ -1,18 +1,41 @@
 import { useState } from 'react';
 import { X, Copy, Check, Mail, Linkedin, FileText, Send, ExternalLink, Clock, ChevronDown, ChevronUp } from 'lucide-react';
-import type { BDRContact, BDROutreachLog, EmailTemplate } from '../types';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import type { EmailTemplate } from '../types';
 import { EmailTemplateManager } from './EmailTemplateManager';
-import { useOutreachLogs, useCreateOutreachLog } from '../hooks/useContacts';
+import { api } from '../api';
+
+// ── Generic contact shape that both BDR and VC contacts satisfy ───────────────
+
+export interface OutreachContact {
+  id: string;
+  full_name: string;
+  email?: string;
+  linkedin_url?: string;
+  /** Display-only job title (job_title for BDR, title for VC) */
+  jobTitle?: string;
+}
 
 interface OutreachModalProps {
-  contact: BDRContact;
-  studioName?: string;
+  contact: OutreachContact;
+  /** Fund / studio name shown in the header subtitle */
+  orgName?: string;
+  /**
+   * API base path for outreach logs.
+   * - BDR contacts: '/bdr/contacts'
+   * - VC contacts:  '/contacts'
+   */
+  apiBase: string;
   onClose: () => void;
 }
 
-function applyVariables(text: string, contact: BDRContact, studioName: string): string {
+// ── Variable substitution ─────────────────────────────────────────────────────
+
+function applyVariables(text: string, contact: OutreachContact, orgName: string): string {
   return text
-    .replace(/\{\{studio_name\}\}/g, studioName)
+    .replace(/\{\{studio_name\}\}/g, orgName)
+    .replace(/\{\{fund_name\}\}/g, orgName)
+    .replace(/\{\{org_name\}\}/g, orgName)
     .replace(/\{\{contact_name\}\}/g, contact.full_name || '')
     .replace(/\{\{first_name\}\}/g, contact.full_name?.split(' ')[0] || '')
     .replace(/\{\{my_name\}\}/g, 'Lucas Fulks');
@@ -39,7 +62,9 @@ function formatDate(iso: string): string {
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
-function HistoryEntry({ log }: { log: BDROutreachLog }) {
+// ── History entry ─────────────────────────────────────────────────────────────
+
+function HistoryEntry({ log }: { log: any }) {
   const [expanded, setExpanded] = useState(false);
   const hasContent = log.subject || log.body;
 
@@ -92,21 +117,51 @@ function HistoryEntry({ log }: { log: BDROutreachLog }) {
   );
 }
 
-export function OutreachModal({ contact, studioName = '', onClose }: OutreachModalProps) {
+// ── Main modal ────────────────────────────────────────────────────────────────
+
+export function OutreachModal({ contact, orgName = '', apiBase, onClose }: OutreachModalProps) {
   const [showTemplatePicker, setShowTemplatePicker] = useState(false);
   const [subject, setSubject] = useState('');
   const [body, setBody] = useState('');
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const [markedAs, setMarkedAs] = useState<'email' | 'linkedin' | null>(null);
+  const qc = useQueryClient();
 
-  const { data: historyData } = useOutreachLogs(contact.id);
-  const createLog = useCreateOutreachLog();
+  const { data: historyData } = useQuery({
+    queryKey: ['outreach-logs', apiBase, contact.id],
+    queryFn: async () => {
+      const res = await api.get(`${apiBase}/${contact.id}/outreach`);
+      return res.data as { total: number; items: any[] };
+    },
+    enabled: !!contact.id,
+  });
+
+  const createLog = useMutation({
+    mutationFn: async ({
+      channel,
+      subject,
+      body,
+    }: {
+      channel: 'email' | 'linkedin';
+      subject?: string;
+      body?: string;
+    }) => {
+      const res = await api.post(`${apiBase}/${contact.id}/outreach`, { channel, subject, body });
+      return res.data;
+    },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['outreach-logs', apiBase, contact.id] });
+      // Also refresh contact list so last_contacted_at updates
+      qc.invalidateQueries({ queryKey: ['vc-contacts'] });
+      qc.invalidateQueries({ queryKey: ['contacts'] });
+    },
+  });
 
   const history = historyData?.items || [];
 
   const handleSelectTemplate = (template: EmailTemplate) => {
-    setSubject(applyVariables(template.subject, contact, studioName));
-    setBody(applyVariables(template.body, contact, studioName));
+    setSubject(applyVariables(template.subject, contact, orgName));
+    setBody(applyVariables(template.body, contact, orgName));
     setShowTemplatePicker(false);
   };
 
@@ -118,16 +173,13 @@ export function OutreachModal({ contact, studioName = '', onClose }: OutreachMod
   };
 
   const handleMarkSent = async (channel: 'email' | 'linkedin') => {
-    // Open destination first (avoids popup blockers)
     if (channel === 'email' && contact.email) {
       window.open(buildGmailUrl(contact.email, subject, body), '_blank');
     } else if (channel === 'linkedin' && contact.linkedin_url) {
       window.open(contact.linkedin_url, '_blank');
     }
 
-    // Save to DB — this also updates last_contacted_at + contact_preference
     await createLog.mutateAsync({
-      contactId: contact.id,
       channel,
       subject: subject || undefined,
       body: body || undefined,
@@ -155,8 +207,8 @@ export function OutreachModal({ contact, studioName = '', onClose }: OutreachMod
             <div>
               <h2 className="text-lg font-semibold text-gray-900">{contact.full_name}</h2>
               <p className="text-sm text-gray-500 mt-0.5">
-                {contact.job_title}
-                {studioName ? <span className="text-gray-400"> · {studioName}</span> : null}
+                {contact.jobTitle}
+                {orgName ? <span className="text-gray-400"> · {orgName}</span> : null}
               </p>
             </div>
             <button onClick={onClose} className="p-1.5 hover:bg-gray-100 rounded-lg text-gray-500">
@@ -245,7 +297,7 @@ export function OutreachModal({ contact, studioName = '', onClose }: OutreachMod
               )}
             </div>
 
-            {/* ── Outreach History ── */}
+            {/* Outreach History */}
             {history.length > 0 && (
               <div>
                 <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2 flex items-center gap-1.5">
@@ -253,7 +305,7 @@ export function OutreachModal({ contact, studioName = '', onClose }: OutreachMod
                   Outreach History ({history.length})
                 </p>
                 <div className="space-y-2">
-                  {history.map((log) => (
+                  {history.map((log: any) => (
                     <HistoryEntry key={log.id} log={log} />
                   ))}
                 </div>

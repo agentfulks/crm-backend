@@ -6,6 +6,7 @@ import {
 import { useVCContacts, useCreateVCContact, useUpdateVCContact, useDeleteVCContact } from '../hooks/useVCContacts';
 import { useFunds } from '../hooks/useFunds';
 import type { VCContact } from '../types';
+import { VCContactDetailModal } from './VCContactDetailModal';
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -202,16 +203,20 @@ function ContactModal({ contact, defaultFundId, onClose }: ContactModalProps) {
 interface CardProps {
   contact: VCContact;
   onEdit: (c: VCContact) => void;
+  onOpen: (c: VCContact) => void;
 }
 
-function ContactCard({ contact, onEdit }: CardProps) {
+function ContactCard({ contact, onEdit, onOpen }: CardProps) {
   const [expanded, setExpanded] = useState(false);
   const deleteContact = useDeleteVCContact();
 
   return (
-    <div className={`bg-white border rounded-xl shadow-sm transition-all ${
-      contact.is_flagged ? 'border-red-200' : 'border-gray-200'
-    }`}>
+    <div
+      className={`bg-white border rounded-xl shadow-sm transition-all cursor-pointer hover:shadow-md ${
+        contact.is_flagged ? 'border-red-200' : 'border-gray-200'
+      }`}
+      onClick={() => onOpen(contact)}
+    >
       <div className="p-4">
         <div className="flex items-start gap-3">
           {/* Avatar */}
@@ -250,7 +255,7 @@ function ContactCard({ contact, onEdit }: CardProps) {
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-1 flex-shrink-0">
+          <div className="flex items-center gap-1 flex-shrink-0" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => onEdit(contact)}
               className="p-1.5 hover:bg-gray-100 rounded-lg text-gray-400 hover:text-gray-600 transition-colors text-xs font-medium px-2">
               Edit
@@ -336,6 +341,7 @@ export function VCContactsView() {
   const [primaryOnly, setPrimaryOnly] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [editContact, setEditContact] = useState<VCContact | undefined>();
+  const [selectedContact, setSelectedContact] = useState<VCContact | null>(null);
 
   const { data: fundsData } = useFunds();
   const funds = fundsData?.items || [];
@@ -350,6 +356,7 @@ export function VCContactsView() {
 
   const openCreate = () => { setEditContact(undefined); setShowModal(true); };
   const openEdit = (c: VCContact) => { setEditContact(c); setShowModal(true); };
+  const openDetail = (c: VCContact) => setSelectedContact(c);
 
   return (
     <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -433,17 +440,27 @@ export function VCContactsView() {
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {contacts.map((c) => (
-            <ContactCard key={c.id} contact={c} onEdit={openEdit} />
+            <ContactCard key={c.id} contact={c} onEdit={openEdit} onOpen={openDetail} />
           ))}
         </div>
       )}
 
-      {/* ── Modal ── */}
+      {/* ── Create/Edit Modal ── */}
       {showModal && (
         <ContactModal
           contact={editContact}
           defaultFundId={fundFilter}
           onClose={() => setShowModal(false)}
+        />
+      )}
+
+      {/* ── Detail Modal ── */}
+      {selectedContact && (
+        <VCContactDetailModal
+          contact={selectedContact}
+          fundName={selectedContact.fund_name}
+          fundWebsite={funds.find((f) => f.id === selectedContact.fund_id)?.website_url || undefined}
+          onClose={() => setSelectedContact(null)}
         />
       )}
     </div>

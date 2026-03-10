@@ -452,6 +452,7 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
             lastName={hunterLastName}
             currentEmail={email || undefined}
             defaultDomain={deriveDomain(studioWebsite)}
+            emailVerified={emailVerified}
             onApplyEmail={async (newEmail) => {
               await updateContact.mutateAsync({ id: contact.id, data: { email: newEmail } });
               setEmail(newEmail);
@@ -467,6 +468,10 @@ export function ContactDetailModal({ contact, studioName = '', studioWebsite, on
                 if (fields.linkedin_url) setLinkedinUrl(fields.linkedin_url);
                 if (fields.phone)        setPhone(fields.phone);
               }
+            }}
+            onVerified={async () => {
+              await updateContact.mutateAsync({ id: contact.id, data: { email_verified: true } });
+              setEmailVerified(true);
             }}
           />
 

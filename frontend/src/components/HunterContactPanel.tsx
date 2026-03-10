@@ -22,12 +22,14 @@ export interface ApplyFields {
 }
 
 interface Props {
-  firstName:     string;
-  lastName:      string;
-  currentEmail?: string;
+  firstName:      string;
+  lastName:       string;
+  currentEmail?:  string;
   defaultDomain?: string;
-  onApplyEmail:  (email: string) => Promise<void>;
-  onApplyFields: (fields: ApplyFields) => Promise<void>;
+  emailVerified?: boolean;
+  onApplyEmail:   (email: string) => Promise<void>;
+  onApplyFields:  (fields: ApplyFields) => Promise<void>;
+  onVerified?:    () => Promise<void>;
 }
 
 // ── Shared sub-components ─────────────────────────────────────────────────────
@@ -60,6 +62,7 @@ function FindResult({
   result: any;
   onApply: () => void;
 }) {
+  const isVerified = result.verification?.status === 'valid';
   return (
     <div className="flex items-center justify-between gap-3 bg-white border border-green-200 rounded-lg px-4 py-3">
       <div>
@@ -69,7 +72,7 @@ function FindResult({
           <span className={`font-bold ${scoreColor(result.score ?? 0)}`}>
             {result.score}%
           </span>
-          {result.verification?.status === 'valid' && (
+          {isVerified && (
             <span className="ml-2 text-green-600 font-medium">· verified ✓</span>
           )}
         </p>
@@ -77,25 +80,44 @@ function FindResult({
       <button
         onClick={onApply}
         className="flex-shrink-0 px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-lg transition-colors"
+        title={isVerified ? 'Save email and mark as Hunter-verified' : 'Save email to contact'}
       >
-        Save Email
+        {isVerified ? '✓ Save & Verify' : 'Save Email'}
       </button>
     </div>
   );
 }
 
-function VerifyResult({ result }: { result: any }) {
+function VerifyResult({
+  result,
+  onMarkVerified,
+}: {
+  result: any;
+  onMarkVerified?: () => void;
+}) {
   const s = VERIFY_STATUS[result.status] ?? VERIFY_STATUS.unknown;
+  const isValid = result.status === 'valid';
   return (
     <div className={`border rounded-lg p-4 ${s.cls}`}>
       <div className="flex items-center justify-between mb-3">
         <span className="font-semibold text-sm">{s.label}</span>
-        <span className="text-xs">
-          Score:{' '}
-          <span className={`font-bold ${scoreColor(result.score ?? 0)}`}>
-            {result.score}%
+        <div className="flex items-center gap-3">
+          <span className="text-xs">
+            Score:{' '}
+            <span className={`font-bold ${scoreColor(result.score ?? 0)}`}>
+              {result.score}%
+            </span>
           </span>
-        </span>
+          {isValid && onMarkVerified && (
+            <button
+              onClick={onMarkVerified}
+              className="px-2.5 py-1 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-lg transition-colors"
+              title="Mark this contact's email as Hunter-verified"
+            >
+              ✓ Mark Verified
+            </button>
+          )}
+        </div>
       </div>
       <div className="grid grid-cols-3 gap-y-1.5 gap-x-3">
         <Check label="MX Records"  ok={result.mx_records}  />
@@ -300,8 +322,10 @@ export function HunterContactPanel({
   lastName,
   currentEmail,
   defaultDomain,
+  emailVerified,
   onApplyEmail,
   onApplyFields,
+  onVerified,
 }: Props) {
   // Start on Verify if contact already has an email, else Find
   const [tab, setTab] = useState<Tab>(currentEmail ? 'verify' : 'find');
@@ -384,6 +408,11 @@ export function HunterContactPanel({
         </div>
         <span className="text-sm font-semibold text-gray-800">Hunter.io</span>
         <span className="text-xs text-gray-400 ml-0.5">· Email intelligence</span>
+        {emailVerified && (
+          <span className="ml-auto flex items-center gap-1 text-xs font-semibold text-green-700 bg-green-100 border border-green-200 px-2 py-0.5 rounded-full">
+            <span>✓</span> Verified by Hunter
+          </span>
+        )}
       </div>
 
       {/* ── Tabs ── */}
@@ -465,12 +494,21 @@ export function HunterContactPanel({
             result={result}
             onApply={async () => {
               await onApplyEmail(result.email);
+              // If Hunter also verified the email, mark it verified
+              if (result.verification?.status === 'valid' && onVerified) {
+                await onVerified();
+              }
               setResult(null);
             }}
           />
         )}
 
-        {result && tab === 'verify' && <VerifyResult result={result} />}
+        {result && tab === 'verify' && (
+          <VerifyResult
+            result={result}
+            onMarkVerified={onVerified ? async () => { await onVerified(); setResult(null); } : undefined}
+          />
+        )}
 
         {result && (tab === 'enrich' || tab === 'combined') && (
           <PersonResult

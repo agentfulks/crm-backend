@@ -17,7 +17,8 @@ class ContactFilters:
     fund_id: Optional[str] = None
     search: Optional[str] = None
     is_primary: Optional[bool] = None
-    limit: int = 50
+    is_flagged: Optional[bool] = None
+    limit: int = 100
     offset: int = 0
     sort_by: str = "created_at"
     sort_direction: str = "desc"
@@ -26,11 +27,9 @@ class ContactFilters:
 def list_contacts(session: Session, filters: ContactFilters) -> Tuple[List[Contact], int]:
     """Return filtered contacts and total count."""
 
-    # Build base query with fund relationship
     base_stmt = select(Contact).options(joinedload(Contact.fund))
     count_stmt = select(func.count()).select_from(Contact)
 
-    # Apply filters
     conditions = []
     if filters.fund_id:
         conditions.append(Contact.fund_id == filters.fund_id)
@@ -41,23 +40,23 @@ def list_contacts(session: Session, filters: ContactFilters) -> Tuple[List[Conta
                 func.lower(Contact.full_name).like(pattern),
                 func.lower(func.coalesce(Contact.email, "")).like(pattern),
                 func.lower(func.coalesce(Contact.title, "")).like(pattern),
+                func.lower(func.coalesce(Contact.phone, "")).like(pattern),
+                func.lower(func.coalesce(Contact.department, "")).like(pattern),
             )
         )
     if filters.is_primary is not None:
         conditions.append(Contact.is_primary == filters.is_primary)
+    if filters.is_flagged is not None:
+        conditions.append(Contact.is_flagged == filters.is_flagged)
 
     if conditions:
         base_stmt = base_stmt.where(*conditions)
         count_stmt = count_stmt.where(*conditions)
 
-    # Apply sorting
     order_expression = _ordering_expression(filters.sort_by, filters.sort_direction)
     base_stmt = base_stmt.order_by(order_expression, Contact.id)
-
-    # Apply pagination
     base_stmt = base_stmt.offset(filters.offset).limit(filters.limit)
 
-    # Execute queries
     total = session.execute(count_stmt).scalar_one()
     items = session.scalars(base_stmt).unique().all()
 
@@ -74,7 +73,11 @@ def get_contact(session: Session, contact_id: str) -> Optional[Contact]:
 def get_contacts_by_fund(session: Session, fund_id: str) -> List[Contact]:
     """Fetch all contacts for a specific fund."""
 
-    stmt = select(Contact).where(Contact.fund_id == fund_id).order_by(Contact.is_primary.desc())
+    stmt = (
+        select(Contact)
+        .where(Contact.fund_id == fund_id)
+        .order_by(Contact.is_primary.desc(), Contact.full_name)
+    )
     return session.scalars(stmt).all()
 
 
@@ -92,8 +95,7 @@ def update_contact(session: Session, contact: Contact, payload: dict) -> Contact
     """Update a contact with provided fields."""
 
     for field, value in payload.items():
-        if value is not None:
-            setattr(contact, field, value)
+        setattr(contact, field, value)
 
     session.add(contact)
     session.commit()
@@ -116,6 +118,7 @@ def _ordering_expression(sort_by: str, sort_direction: str):
         "updated_at": Contact.updated_at,
         "full_name": Contact.full_name,
         "is_primary": Contact.is_primary,
+        "last_contacted_at": Contact.last_contacted_at,
     }
 
     column = column_map.get(sort_by, Contact.created_at)

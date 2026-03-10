@@ -92,21 +92,21 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
 
   const [showFlaggedOnly, setShowFlaggedOnly] = useState(false);
   const updateContact = useUpdateContact();
-
+  
   const { data: contactsData, isLoading } = useContacts({
     ...filters,
     search: searchTerm,
     is_flagged: showFlaggedOnly ? true : undefined,
   });
-
+  
   const { data: studiosData } = useStudioPackets();
-
+  
   const contacts = contactsData?.items || [];
   const studios = studiosData?.items || [];
-
+  
   // Create studio lookup map (company_id → studio name)
   const studioMap = new Map(studios.map((s) => [s.studio_id, s.studio]));
-
+  
   const handleCompanyFilter = (companyId: string) => {
     setSelectedCompany(companyId);
     setFilters(prev => ({
@@ -114,7 +114,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
       company_id: companyId || undefined,
     }));
   };
-
+  
   const handleDecisionMakerFilter = (value: boolean | undefined) => {
     setFilters(prev => ({
       ...prev,
@@ -168,7 +168,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
-
+          
           {/* Company Filter */}
           <div className="flex items-center gap-2">
             <Building2 className="w-5 h-5 text-gray-400" />
@@ -185,7 +185,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
               ))}
             </select>
           </div>
-
+          
           {/* Decision Maker Filter */}
           <div className="flex items-center gap-2">
             <Filter className="w-5 h-5 text-gray-400" />
@@ -287,7 +287,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
             </button>
           )}
         </div>
-
+        
         {/* Stats */}
         <div className="flex gap-6 mt-4 pt-4 border-t border-gray-100 text-sm">
           <div className="flex items-center gap-2">
@@ -317,7 +317,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
           </div>
         </div>
       </div>
-
+      
       {/* Contacts Grid */}
       {isLoading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -347,7 +347,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
               : contact.contact_preference === 'email'
               ? <Mail className="w-3 h-3" />
               : null;
-
+            
             return (
               <div
                 key={contact.id}
@@ -387,12 +387,12 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
                     >
                       <Flag className="w-4 h-4" fill={contact.is_flagged ? 'currentColor' : 'none'} />
                     </button>
-                    {contact.is_decision_maker && (
+                  {contact.is_decision_maker && (
                       <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
-                        <Star className="w-3 h-3" />
-                        DM
-                      </span>
-                    )}
+                      <Star className="w-3 h-3" />
+                      DM
+                    </span>
+                  )}
                     {lastContacted && (
                       <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
                         {channelIcon}
@@ -401,7 +401,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
                     )}
                   </div>
                 </div>
-
+                
                 {/* Studio */}
                 {studio && (
                   <div className="mb-3 p-2 bg-gray-50 rounded">
@@ -423,7 +423,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
                     )}
                   </div>
                 )}
-
+                
                 {/* Contact Info */}
                 <div className="space-y-2 flex-1">
                   {contact.email && (
@@ -439,7 +439,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
                       )}
                     </a>
                   )}
-
+                  
                   {contact.linkedin_url && (
                     <a
                       href={contact.linkedin_url}
@@ -452,7 +452,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
                       LinkedIn Profile
                     </a>
                   )}
-
+                  
                   {contact.phone && (
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Phone className="w-4 h-4 flex-shrink-0" />
@@ -460,7 +460,7 @@ export function ContactsView({ initialOpenContact, onContactModalClosed }: Conta
                     </div>
                   )}
                 </div>
-
+                
                 {/* Footer */}
                 <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
                   <span className="text-xs text-gray-500 truncate">{contact.department || 'Unknown Dept'}</span>

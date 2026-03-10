@@ -1,9 +1,10 @@
 """Contact ORM model."""
 from __future__ import annotations
 
+from datetime import datetime
 from uuid import uuid4
 
-from sqlalchemy import Boolean, ForeignKey, String, Text
+from sqlalchemy import Boolean, DateTime, ForeignKey, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base, TimestampMixin
@@ -19,9 +20,15 @@ class Contact(TimestampMixin, Base):
     full_name: Mapped[str] = mapped_column(String(255), nullable=False)
     title: Mapped[str | None] = mapped_column(String(255))
     email: Mapped[str | None] = mapped_column(String(320))
+    phone: Mapped[str | None] = mapped_column(String(50))
     linkedin_url: Mapped[str | None] = mapped_column(Text)
+    department: Mapped[str | None] = mapped_column(String(100))
+    seniority_level: Mapped[str | None] = mapped_column(String(50))
     is_primary: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    email_verified: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    is_flagged: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
     timezone: Mapped[str | None] = mapped_column(String(100))
+    last_contacted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     notes: Mapped[str | None] = mapped_column(Text)
 
     fund: Mapped["Fund"] = relationship(back_populates="contacts")

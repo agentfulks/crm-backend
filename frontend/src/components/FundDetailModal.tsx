@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import {
   X, Globe, Linkedin, Twitter, Mail, DollarSign, MapPin, Users,
-  ExternalLink, Save, RotateCcw, Edit3,
+  ExternalLink, Save, RotateCcw, Edit3, Plus, Phone, Star, CheckCircle, ChevronDown, ChevronUp, Trash2,
 } from 'lucide-react';
-import type { Fund, FundStatus, Priority } from '../types';
+import type { Fund, FundStatus, Priority, VCContact } from '../types';
 import { useUpdateFund } from '../hooks/useFunds';
+import { useContactsByFund, useCreateVCContact, useUpdateVCContact, useDeleteVCContact } from '../hooks/useVCContacts';
 
 const STATUS_OPTIONS: FundStatus[] = ['NEW', 'RESEARCHING', 'READY', 'APPROVED', 'SENT', 'FOLLOW_UP', 'CLOSED'];
 
@@ -26,6 +27,127 @@ function formatCheckSize(min?: number, max?: number): string | null {
   return fmt(min);
 }
 
+// ── Inline contact add/edit form ─────────────────────────────────────────────
+
+interface ContactRowProps {
+  contact: VCContact;
+  onDelete: (id: string) => void;
+}
+
+function ContactRow({ contact, onDelete }: ContactRowProps) {
+  const [expanded, setExpanded] = useState(false);
+  const updateContact = useUpdateVCContact();
+
+  const toggle = (field: 'is_primary' | 'email_verified') =>
+    updateContact.mutate({ id: contact.id, data: { [field]: !contact[field] } });
+
+  return (
+    <div className="border border-gray-200 rounded-lg overflow-hidden">
+      <div className="flex items-center gap-3 px-3 py-2.5">
+        <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-semibold text-xs flex-shrink-0">
+          {contact.full_name.split(' ').map((w) => w[0]).slice(0, 2).join('').toUpperCase()}
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-medium text-gray-900 truncate">{contact.full_name}</p>
+          {contact.title && <p className="text-xs text-gray-500 truncate">{contact.title}</p>}
+        </div>
+        <div className="flex items-center gap-1.5 flex-shrink-0">
+          {contact.email && (
+            <a href={`mailto:${contact.email}`} title={contact.email}
+              className="p-1.5 hover:bg-gray-100 rounded text-gray-400 hover:text-blue-600">
+              <Mail className="w-3.5 h-3.5" />
+            </a>
+          )}
+          {contact.phone && (
+            <a href={`tel:${contact.phone}`} title={contact.phone}
+              className="p-1.5 hover:bg-gray-100 rounded text-gray-400 hover:text-blue-600">
+              <Phone className="w-3.5 h-3.5" />
+            </a>
+          )}
+          {contact.linkedin_url && (
+            <a href={contact.linkedin_url} target="_blank" rel="noopener noreferrer"
+              className="p-1.5 hover:bg-gray-100 rounded text-gray-400 hover:text-blue-600">
+              <Linkedin className="w-3.5 h-3.5" />
+            </a>
+          )}
+          <button onClick={() => toggle('is_primary')} title="Toggle primary"
+            className={`p-1.5 rounded ${contact.is_primary ? 'text-yellow-500' : 'text-gray-300 hover:text-yellow-400'}`}>
+            <Star className="w-3.5 h-3.5" />
+          </button>
+          <button onClick={() => toggle('email_verified')} title="Toggle verified"
+            className={`p-1.5 rounded ${contact.email_verified ? 'text-green-500' : 'text-gray-300 hover:text-green-400'}`}>
+            <CheckCircle className="w-3.5 h-3.5" />
+          </button>
+          <button onClick={() => setExpanded((e) => !e)}
+            className="p-1.5 hover:bg-gray-100 rounded text-gray-400">
+            {expanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+          </button>
+        </div>
+      </div>
+      {expanded && (
+        <div className="border-t border-gray-100 px-3 py-2.5 bg-gray-50 flex items-center justify-between gap-3">
+          <div className="text-xs text-gray-500 space-y-0.5">
+            {contact.email && <p>📧 {contact.email}</p>}
+            {contact.phone && <p>📞 {contact.phone}</p>}
+            {contact.department && <p>🏢 {contact.department}{contact.seniority_level ? ` · ${contact.seniority_level}` : ''}</p>}
+            {contact.notes && <p className="text-gray-600 italic">"{contact.notes}"</p>}
+          </div>
+          <button onClick={() => { if (window.confirm(`Delete ${contact.full_name}?`)) onDelete(contact.id); }}
+            className="flex items-center gap-1 text-xs text-red-400 hover:text-red-600 px-2 py-1 hover:bg-red-50 rounded">
+            <Trash2 className="w-3 h-3" /> Delete
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+interface AddContactFormProps {
+  fundId: string;
+  onDone: () => void;
+}
+
+function AddContactForm({ fundId, onDone }: AddContactFormProps) {
+  const createContact = useCreateVCContact();
+  const [form, setForm] = useState({ full_name: '', title: '', email: '', phone: '', linkedin_url: '' });
+  const [saving, setSaving] = useState(false);
+
+  const set = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }));
+  const inp = 'text-xs border border-gray-300 rounded px-2 py-1.5 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none w-full';
+
+  const handleSave = async () => {
+    if (!form.full_name.trim()) return;
+    setSaving(true);
+    try {
+      await createContact.mutateAsync({ fund_id: fundId, full_name: form.full_name, ...form });
+      onDone();
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <div className="border border-blue-200 rounded-lg p-3 bg-blue-50 space-y-2">
+      <div className="grid grid-cols-2 gap-2">
+        <input placeholder="Full name *" value={form.full_name} onChange={(e) => set('full_name', e.target.value)} className={inp} />
+        <input placeholder="Job title" value={form.title} onChange={(e) => set('title', e.target.value)} className={inp} />
+        <input placeholder="Email" value={form.email} onChange={(e) => set('email', e.target.value)} className={inp} />
+        <input placeholder="Phone" value={form.phone} onChange={(e) => set('phone', e.target.value)} className={inp} />
+      </div>
+      <input placeholder="LinkedIn URL" value={form.linkedin_url} onChange={(e) => set('linkedin_url', e.target.value)} className={inp} />
+      <div className="flex justify-end gap-2">
+        <button onClick={onDone} className="text-xs text-gray-500 hover:text-gray-700 px-3 py-1.5 border border-gray-300 rounded bg-white">Cancel</button>
+        <button onClick={handleSave} disabled={saving || !form.full_name.trim()}
+          className="text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 disabled:opacity-50 px-3 py-1.5 rounded">
+          {saving ? 'Adding…' : 'Add'}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ── Main modal ────────────────────────────────────────────────────────────────
+
 interface Props {
   fund: Fund;
   onClose: () => void;
@@ -34,6 +156,10 @@ interface Props {
 export function FundDetailModal({ fund, onClose }: Props) {
   const updateFund = useUpdateFund();
   const [editing, setEditing] = useState(false);
+  const [showAddContact, setShowAddContact] = useState(false);
+
+  const { data: fundContacts = [], refetch: refetchContacts } = useContactsByFund(fund.id);
+  const deleteContact = useDeleteVCContact();
   const [draft, setDraft] = useState({
     name: fund.name || '',
     firm_type: fund.firm_type || '',
@@ -387,6 +513,45 @@ export function FundDetailModal({ fund, onClose }: Props) {
               </div>
             </div>
           )}
+
+          {/* ── Contacts ── */}
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <p className="text-xs font-medium text-gray-400 uppercase tracking-wide">
+                Contacts ({fundContacts.length})
+              </p>
+              <button
+                onClick={() => setShowAddContact((v) => !v)}
+                className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 font-medium"
+              >
+                <Plus className="w-3.5 h-3.5" />
+                {showAddContact ? 'Cancel' : 'Add contact'}
+              </button>
+            </div>
+
+            {showAddContact && (
+              <div className="mb-3">
+                <AddContactForm
+                  fundId={fund.id}
+                  onDone={() => { setShowAddContact(false); refetchContacts(); }}
+                />
+              </div>
+            )}
+
+            {fundContacts.length === 0 && !showAddContact ? (
+              <p className="text-xs text-gray-400 italic py-2">No contacts yet. Add one above.</p>
+            ) : (
+              <div className="space-y-2">
+                {fundContacts.map((c) => (
+                  <ContactRow
+                    key={c.id}
+                    contact={c}
+                    onDelete={(id) => { deleteContact.mutate(id); refetchContacts(); }}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

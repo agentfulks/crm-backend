@@ -29,9 +29,10 @@ def list_contacts_endpoint(
     *,
     db: Session = Depends(get_db),
     fund_id: str | None = Query(None, description="Filter by fund ID"),
-    search: str | None = Query(None, description="Search by name, email, or title"),
+    search: str | None = Query(None, description="Search by name, email, title, phone, or department"),
     is_primary: bool | None = Query(None, description="Filter by primary status"),
-    limit: int = Query(50, ge=1, le=100),
+    is_flagged: bool | None = Query(None, description="Filter by flagged status"),
+    limit: int = Query(200, ge=1, le=500),
     offset: int = Query(0, ge=0),
     sort_by: str = Query("created_at", description="Field to sort by"),
     sort_direction: str = Query("desc", description="Sort direction: asc or desc"),
@@ -42,6 +43,7 @@ def list_contacts_endpoint(
         fund_id=fund_id,
         search=search,
         is_primary=is_primary,
+        is_flagged=is_flagged,
         limit=limit,
         offset=offset,
         sort_by=sort_by,
@@ -58,6 +60,18 @@ def create_contact_endpoint(*, db: Session = Depends(get_db), payload: ContactCr
 
     contact = create_contact(db, payload.model_dump())
     return ContactRead.model_validate(contact, from_attributes=True)
+
+
+@router.get("/fund/{fund_id}", response_model=list[ContactRead])
+def get_contacts_by_fund_endpoint(
+    *,
+    db: Session = Depends(get_db),
+    fund_id: str,
+) -> list[ContactRead]:
+    """Get all contacts for a specific fund."""
+
+    contacts = get_contacts_by_fund(db, fund_id)
+    return [ContactRead.model_validate(item, from_attributes=True) for item in contacts]
 
 
 @router.get("/{contact_id}", response_model=ContactRead)
@@ -97,15 +111,3 @@ def delete_contact_endpoint(*, db: Session = Depends(get_db), contact_id: str) -
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Contact not found")
 
     delete_contact(db, contact)
-
-
-@router.get("/fund/{fund_id}", response_model=list[ContactRead])
-def get_contacts_by_fund_endpoint(
-    *,
-    db: Session = Depends(get_db),
-    fund_id: str,
-) -> list[ContactRead]:
-    """Get all contacts for a specific fund."""
-
-    contacts = get_contacts_by_fund(db, fund_id)
-    return [ContactRead.model_validate(item, from_attributes=True) for item in contacts]

@@ -6,7 +6,9 @@ import type {
   Fund,
   StudioPacket,
   EmailTemplate,
-  EmailTemplateListResponse
+  EmailTemplateListResponse,
+  VCContact,
+  VCContactListResponse,
 } from './types';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
@@ -247,6 +249,50 @@ export const emailTemplatesApi = {
       { params: { studio_name: studioName, contact_name: contactName } }
     );
     return response.data;
+  },
+};
+
+// ============================================
+// VC CONTACTS API (contacts table, linked to funds)
+// ============================================
+
+export const vcContactsApi = {
+  async list(params: {
+    fund_id?: string;
+    search?: string;
+    is_primary?: boolean;
+    is_flagged?: boolean;
+    limit?: number;
+    offset?: number;
+    sort_by?: string;
+    sort_direction?: string;
+  } = {}): Promise<VCContactListResponse> {
+    const response = await api.get('/contacts/', { params: { limit: 500, ...params } });
+    return response.data;
+  },
+
+  async getByFund(fund_id: string): Promise<VCContact[]> {
+    const response = await api.get(`/contacts/fund/${fund_id}`);
+    return response.data;
+  },
+
+  async get(id: string): Promise<VCContact> {
+    const response = await api.get(`/contacts/${id}`);
+    return response.data;
+  },
+
+  async create(data: Partial<VCContact> & { fund_id: string; full_name: string }): Promise<VCContact> {
+    const response = await api.post('/contacts/', data);
+    return response.data;
+  },
+
+  async update(id: string, data: Partial<VCContact>): Promise<VCContact> {
+    const response = await api.patch(`/contacts/${id}`, data);
+    return response.data;
+  },
+
+  async delete(id: string): Promise<void> {
+    await api.delete(`/contacts/${id}`);
   },
 };
 

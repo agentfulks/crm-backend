@@ -155,6 +155,33 @@ export interface BDRContact {
   updated_at: string;
 }
 
+/** Contact record associated with a VC fund (contacts table). */
+export interface VCContact {
+  id: string;
+  fund_id: string;
+  fund_name?: string;
+  full_name: string;
+  title?: string;       // job title
+  email?: string;
+  phone?: string;
+  linkedin_url?: string;
+  department?: string;
+  seniority_level?: string;
+  is_primary: boolean;
+  email_verified: boolean;
+  is_flagged: boolean;
+  timezone?: string;
+  last_contacted_at?: string;
+  notes?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface VCContactListResponse {
+  total: number;
+  items: VCContact[];
+}
+
 export interface BDROutreachLog {
   id: string;
   contact_id: string;

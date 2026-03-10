@@ -6,13 +6,14 @@ import { StudioCard } from './components/StudioCard';
 import { QueueStatus } from './components/QueueStatus';
 import { EmailTemplateManager } from './components/EmailTemplateManager';
 import { ContactsView } from './components/ContactsView';
+import { VCContactsView } from './components/VCContactsView';
 import { StudioDetailModal } from './components/StudioDetailModal';
 import { ContactDetailModal } from './components/ContactDetailModal';
 import { KanbanBoard } from './components/KanbanBoard';
-import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard } from 'lucide-react';
+import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase } from 'lucide-react';
 import type { StudioPacket, BDRContact } from './types';
 
-type View = 'vc' | 'studios' | 'contacts' | 'tasks';
+type View = 'vc' | 'studios' | 'contacts' | 'vc-contacts' | 'tasks';
 
 function App() {
   const [statusFilter, setStatusFilter] = useState<string>('');
@@ -27,7 +28,7 @@ function App() {
 
   const switchView = (view: View) => {
     setCurrentView(view);
-    setStatusFilter(''); // reset to "All" whenever switching tabs
+    setStatusFilter('');
   };
 
   // VC / Funds data — query funds table directly
@@ -91,7 +92,16 @@ function App() {
                   }`}
                 >
                   <UserCircle className="w-4 h-4" />
-                  Contacts
+                  Studio Contacts
+                </button>
+                <button
+                  onClick={() => switchView('vc-contacts')}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    currentView === 'vc-contacts' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  <Briefcase className="w-4 h-4" />
+                  VC Contacts
                 </button>
                 <button
                   onClick={() => switchView('tasks')}
@@ -194,13 +204,16 @@ function App() {
           </>
         )}
 
-        {/* ── Contacts View ── */}
+        {/* ── Studio Contacts View ── */}
         {currentView === 'contacts' && (
           <ContactsView
             initialOpenContact={selectedContact ?? undefined}
             onContactModalClosed={() => setSelectedContact(null)}
           />
         )}
+
+        {/* ── VC Contacts View ── */}
+        {currentView === 'vc-contacts' && <VCContactsView />}
 
         {/* ── Studios View ── */}
         {currentView === 'studios' && (

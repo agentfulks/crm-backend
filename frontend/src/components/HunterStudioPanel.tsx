@@ -424,6 +424,10 @@ export function HunterStudioPanel({ defaultDomain, companyName, onSaveContacts }
   const [result, setResult]   = useState<any>(null);
   const [error, setError]     = useState<string | null>(null);
 
+  // Domain Search pagination — limit 1–100, offset 0+
+  const [dsLimit,  setDsLimit]  = useState(10);
+  const [dsOffset, setDsOffset] = useState(0);
+
   const switchTab = (t: Tab) => {
     setTab(t);
     setResult(null);
@@ -441,7 +445,11 @@ export function HunterStudioPanel({ defaultDomain, companyName, onSaveContacts }
     try {
       let data: any;
       if (tab === 'domain') {
-        data = await hunterGet('/domain-search', { domain: domain.trim() });
+        data = await hunterGet('/domain-search', {
+          domain: domain.trim(),
+          limit:  String(Math.min(100, Math.max(1, dsLimit))),
+          offset: String(Math.max(0, dsOffset)),
+        });
       } else if (tab === 'company') {
         data = await hunterGet('/companies/find', { domain: domain.trim() });
       } else {
@@ -450,6 +458,27 @@ export function HunterStudioPanel({ defaultDomain, companyName, onSaveContacts }
         data = await hunterPost('/discover', body);
       }
       setResult(data);
+    } catch (e: any) {
+      setError(e.message ?? 'Request failed');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Pagination helpers — run domain search with explicit offset
+  const runDomain = async (offset: number) => {
+    if (!domain.trim()) return;
+    setLoading(true);
+    setResult(null);
+    setError(null);
+    try {
+      const data = await hunterGet('/domain-search', {
+        domain: domain.trim(),
+        limit:  String(Math.min(100, Math.max(1, dsLimit))),
+        offset: String(Math.max(0, offset)),
+      });
+      setResult(data);
+      setDsOffset(offset);
     } catch (e: any) {
       setError(e.message ?? 'Request failed');
     } finally {
@@ -469,6 +498,8 @@ export function HunterStudioPanel({ defaultDomain, companyName, onSaveContacts }
   const btnCls = `flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-white rounded-lg transition-colors whitespace-nowrap ${
     loading ? 'bg-orange-300 cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'
   }`;
+  const numInpCls =
+    'w-20 px-2 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400 bg-white text-center';
 
   return (
     <div className="border border-orange-200 rounded-xl overflow-hidden bg-white">
@@ -500,6 +531,7 @@ export function HunterStudioPanel({ defaultDomain, companyName, onSaveContacts }
 
       {/* ── Body ── */}
       <div className="p-4 space-y-3">
+        {/* Domain input + search button */}
         <div className="flex gap-2">
           <input
             type="text"
@@ -514,6 +546,56 @@ export function HunterStudioPanel({ defaultDomain, companyName, onSaveContacts }
             {loading ? '…' : 'Search'}
           </button>
         </div>
+
+        {/* Domain Search — limit / offset controls */}
+        {tab === 'domain' && (
+          <div className="flex items-center gap-3 flex-wrap">
+            <label className="flex items-center gap-1.5 text-xs text-gray-500">
+              Limit
+              <input
+                type="number"
+                min={1}
+                max={100}
+                value={dsLimit}
+                onChange={(e) => setDsLimit(Math.min(100, Math.max(1, Number(e.target.value))))}
+                className={numInpCls}
+              />
+              <span className="text-gray-400">(1–100)</span>
+            </label>
+            <label className="flex items-center gap-1.5 text-xs text-gray-500">
+              Offset
+              <input
+                type="number"
+                min={0}
+                value={dsOffset}
+                onChange={(e) => setDsOffset(Math.max(0, Number(e.target.value)))}
+                className={numInpCls}
+              />
+            </label>
+            {/* Prev / Next shortcuts */}
+            {result && (
+              <div className="flex items-center gap-1 ml-auto">
+                <button
+                  onClick={() => runDomain(Math.max(0, dsOffset - dsLimit))}
+                  disabled={dsOffset === 0 || loading}
+                  className="px-2 py-1 text-xs border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  ← Prev
+                </button>
+                <span className="text-xs text-gray-400 px-1">
+                  {dsOffset + 1}–{dsOffset + dsLimit}
+                </span>
+                <button
+                  onClick={() => runDomain(dsOffset + dsLimit)}
+                  disabled={loading}
+                  className="px-2 py-1 text-xs border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-40"
+                >
+                  Next →
+                </button>
+              </div>
+            )}
+          </div>
+        )}
 
         <p className="text-xs text-gray-400">{hint}</p>
 

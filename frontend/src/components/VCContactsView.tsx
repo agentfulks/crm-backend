@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import {
   Search, Plus, User, Mail, Phone, Linkedin, Building2,
-  Star, Flag, CheckCircle, X, Save, Trash2, ChevronDown, ChevronUp, ListChecks,
+  Star, Flag, CheckCircle, X, Save, Globe, Calendar,
+  Filter, Send, ListChecks, ClipboardCheck,
 } from 'lucide-react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useVCContacts, useCreateVCContact, useUpdateVCContact, useDeleteVCContact } from '../hooks/useVCContacts';
@@ -9,23 +10,28 @@ import { useFunds } from '../hooks/useFunds';
 import type { VCContact } from '../types';
 import { VCContactDetailModal } from './VCContactDetailModal';
 import { BulkDeleteBar } from './BulkDeleteBar';
+import { AddToKanbanModal, type AddToKanbanSource } from './AddToKanbanModal';
 
 const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
-// ── helpers ──────────────────────────────────────────────────────────────────
+// ── helpers ───────────────────────────────────────────────────────────────────
 
-function initials(name: string) {
-  return name
-    .split(' ')
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w) => w[0].toUpperCase())
-    .join('');
+type ContactedQuick = 'all' | 'never' | 'today' | '7d' | '30d' | 'custom';
+
+function toISODate(d: Date): string {
+  return d.toISOString().split('T')[0];
 }
 
-function formatDate(iso?: string) {
-  if (!iso) return null;
-  return new Date(iso).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+function formatLastContacted(dateStr?: string) {
+  if (!dateStr) return null;
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+  if (diffDays === 0) return 'Today';
+  if (diffDays === 1) return 'Yesterday';
+  if (diffDays < 7) return `${diffDays}d ago`;
+  if (diffDays < 30) return `${Math.floor(diffDays / 7)}w ago`;
+  return date.toLocaleDateString();
 }
 
 // ── Edit / Create modal ───────────────────────────────────────────────────────
@@ -99,7 +105,6 @@ function ContactModal({ contact, defaultFundId, onClose }: ContactModalProps) {
             <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">{error}</p>
           )}
 
-          {/* Fund */}
           <div>
             <label className="block text-xs font-medium text-gray-500 mb-1">Fund *</label>
             <select value={form.fund_id} onChange={(e) => set('fund_id', e.target.value)} className={inp}>
@@ -110,13 +115,11 @@ function ContactModal({ contact, defaultFundId, onClose }: ContactModalProps) {
             </select>
           </div>
 
-          {/* Name */}
           <div>
             <label className="block text-xs font-medium text-gray-500 mb-1">Full Name *</label>
             <input value={form.full_name} onChange={(e) => set('full_name', e.target.value)} className={inp} placeholder="Jane Smith" />
           </div>
 
-          {/* Title + Department */}
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-medium text-gray-500 mb-1">Job Title</label>
@@ -128,7 +131,6 @@ function ContactModal({ contact, defaultFundId, onClose }: ContactModalProps) {
             </div>
           </div>
 
-          {/* Seniority + Timezone */}
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-medium text-gray-500 mb-1">Seniority</label>
@@ -146,7 +148,6 @@ function ContactModal({ contact, defaultFundId, onClose }: ContactModalProps) {
             </div>
           </div>
 
-          {/* Email + Phone */}
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-medium text-gray-500 mb-1">Email</label>
@@ -158,13 +159,11 @@ function ContactModal({ contact, defaultFundId, onClose }: ContactModalProps) {
             </div>
           </div>
 
-          {/* LinkedIn */}
           <div>
             <label className="block text-xs font-medium text-gray-500 mb-1">LinkedIn URL</label>
             <input value={form.linkedin_url} onChange={(e) => set('linkedin_url', e.target.value)} className={inp} placeholder="https://linkedin.com/in/…" />
           </div>
 
-          {/* Notes */}
           <div>
             <label className="block text-xs font-medium text-gray-500 mb-1">Notes</label>
             <textarea value={form.notes} onChange={(e) => set('notes', e.target.value)} rows={3}
@@ -172,7 +171,6 @@ function ContactModal({ contact, defaultFundId, onClose }: ContactModalProps) {
               placeholder="Any notes about this contact…" />
           </div>
 
-          {/* Toggles */}
           <div className="flex gap-6">
             {[
               { key: 'is_primary', label: 'Primary contact' },
@@ -202,148 +200,181 @@ function ContactModal({ contact, defaultFundId, onClose }: ContactModalProps) {
   );
 }
 
-// ── Contact card ──────────────────────────────────────────────────────────────
+// ── Contact card (studio-style) ───────────────────────────────────────────────
 
 interface CardProps {
   contact: VCContact;
-  onEdit: (c: VCContact) => void;
+  fundWebsite?: string;
   onOpen: (c: VCContact) => void;
+  onAddToKanban: (source: AddToKanbanSource) => void;
   selected?: boolean;
   onToggle?: () => void;
 }
 
-function ContactCard({ contact, onEdit, onOpen, selected, onToggle }: CardProps) {
-  const [expanded, setExpanded] = useState(false);
-  const deleteContact = useDeleteVCContact();
+function ContactCard({ contact, fundWebsite, onOpen, onAddToKanban, selected, onToggle }: CardProps) {
+  const updateContact = useUpdateVCContact();
+  const lastContacted = formatLastContacted(contact.last_contacted_at);
+
+  const channelIcon = (contact as any).contact_preference === 'linkedin'
+    ? <Linkedin className="w-3 h-3" />
+    : (contact as any).contact_preference === 'email'
+    ? <Mail className="w-3 h-3" />
+    : null;
 
   return (
     <div
-      className={`bg-white border rounded-xl shadow-sm transition-all cursor-pointer hover:shadow-md relative ${
-        selected ? 'ring-2 ring-blue-500 border-blue-400 bg-blue-50'
-        : contact.is_flagged ? 'border-red-200' : 'border-gray-200'
-      }`}
       onClick={onToggle ?? (() => onOpen(contact))}
+      className={`rounded-lg shadow-sm border p-4 hover:shadow-md transition-all cursor-pointer flex flex-col relative ${
+        selected
+          ? 'ring-2 ring-blue-500 border-blue-400 bg-blue-50'
+          : contact.is_flagged
+          ? 'bg-red-50 border-red-300 hover:border-red-400'
+          : 'bg-white border-gray-200 hover:border-blue-300'
+      }`}
     >
-      {onToggle && (
-        <div className="absolute top-2 left-2 z-10" onClick={e => e.stopPropagation()}>
+      {/* Select checkbox */}
+      {onToggle !== undefined && (
+        <div className="absolute top-2 left-2 z-10">
           <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
             selected ? 'bg-blue-600 border-blue-600' : 'bg-white border-gray-400'
-          }`} onClick={onToggle}>
+          }`}>
             {selected && <svg className="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>}
           </div>
         </div>
       )}
-      <div className="p-4">
-        <div className="flex items-start gap-3">
-          {/* Avatar */}
-          <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 text-indigo-700 font-semibold text-sm">
-            {initials(contact.full_name)}
-          </div>
 
-          {/* Main info */}
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="font-semibold text-gray-900 text-sm">{contact.full_name}</h3>
-              {contact.is_primary && (
-                <span className="inline-flex items-center gap-1 text-xs bg-yellow-50 text-yellow-700 border border-yellow-200 px-2 py-0.5 rounded-full">
-                  <Star className="w-3 h-3" /> Primary
-                </span>
-              )}
-              {contact.email_verified && (
-                <span className="inline-flex items-center gap-1 text-xs bg-green-50 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">
-                  <CheckCircle className="w-3 h-3" /> Verified
-                </span>
-              )}
-              {contact.is_flagged && (
-                <span className="inline-flex items-center gap-1 text-xs bg-red-50 text-red-700 border border-red-200 px-2 py-0.5 rounded-full">
-                  <Flag className="w-3 h-3" /> Flagged
-                </span>
-              )}
-            </div>
-            {contact.title && (
-              <p className="text-xs text-gray-500 mt-0.5">{contact.title}{contact.department ? ` · ${contact.department}` : ''}</p>
-            )}
-            {contact.fund_name && (
-              <p className="text-xs text-blue-600 mt-0.5 flex items-center gap-1">
-                <Building2 className="w-3 h-3" /> {contact.fund_name}
-              </p>
-            )}
+      {/* Header */}
+      <div className="flex items-start justify-between mb-3">
+        <div className="flex items-center gap-3">
+          <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${contact.is_flagged ? 'bg-red-100' : 'bg-blue-100'}`}>
+            <span className={`font-semibold text-lg ${contact.is_flagged ? 'text-red-600' : 'text-blue-600'}`}>
+              {contact.full_name?.[0]?.toUpperCase() || '?'}
+            </span>
           </div>
-
-          {/* Actions */}
-          <div className="flex items-center gap-1 flex-shrink-0" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => onEdit(contact)}
-              className="p-1.5 hover:bg-gray-100 rounded-lg text-gray-400 hover:text-gray-600 transition-colors text-xs font-medium px-2">
-              Edit
-            </button>
-            <button onClick={() => setExpanded((e) => !e)}
-              className="p-1.5 hover:bg-gray-100 rounded-lg text-gray-400">
-              {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-            </button>
+          <div>
+            <h3 className="font-semibold text-gray-900">{contact.full_name}</h3>
+            <p className="text-sm text-gray-500">{contact.title || 'Unknown Role'}</p>
           </div>
         </div>
-
-        {/* Quick links */}
-        <div className="flex flex-wrap gap-2 mt-3">
-          {contact.email && (
-            <a href={`mailto:${contact.email}`}
-              className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-200 px-2.5 py-1 rounded-full transition-colors">
-              <Mail className="w-3 h-3" /> {contact.email}
-            </a>
+        <div className="flex flex-col items-end gap-1">
+          {/* Flag toggle */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              updateContact.mutate({ id: contact.id, data: { is_flagged: !contact.is_flagged } });
+            }}
+            title={contact.is_flagged ? 'Remove flag' : 'Flag as bad data'}
+            className={`p-1 rounded transition-colors ${
+              contact.is_flagged ? 'text-red-500 hover:text-red-700' : 'text-gray-300 hover:text-red-400'
+            }`}
+          >
+            <Flag className="w-4 h-4" fill={contact.is_flagged ? 'currentColor' : 'none'} />
+          </button>
+          {contact.is_primary && (
+            <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
+              <Star className="w-3 h-3" /> Primary
+            </span>
           )}
-          {contact.phone && (
-            <a href={`tel:${contact.phone}`}
-              className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-200 px-2.5 py-1 rounded-full transition-colors">
-              <Phone className="w-3 h-3" /> {contact.phone}
-            </a>
-          )}
-          {contact.linkedin_url && (
-            <a href={contact.linkedin_url} target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-200 px-2.5 py-1 rounded-full transition-colors">
-              <Linkedin className="w-3 h-3" /> LinkedIn
-            </a>
+          {lastContacted && (
+            <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
+              {channelIcon}
+              {lastContacted}
+            </span>
           )}
         </div>
       </div>
 
-      {/* Expanded details */}
-      {expanded && (
-        <div className="border-t border-gray-100 px-4 py-3 space-y-2 bg-gray-50 rounded-b-xl">
-          <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
-            {contact.seniority_level && (
-              <>
-                <span className="text-gray-400 font-medium">Seniority</span>
-                <span className="text-gray-700 capitalize">{contact.seniority_level}</span>
-              </>
-            )}
-            {contact.timezone && (
-              <>
-                <span className="text-gray-400 font-medium">Timezone</span>
-                <span className="text-gray-700">{contact.timezone}</span>
-              </>
-            )}
-            {contact.last_contacted_at && (
-              <>
-                <span className="text-gray-400 font-medium">Last contacted</span>
-                <span className="text-gray-700">{formatDate(contact.last_contacted_at)}</span>
-              </>
-            )}
-          </div>
-          {contact.notes && (
-            <p className="text-xs text-gray-600 leading-relaxed bg-white border border-gray-200 rounded-lg px-3 py-2 whitespace-pre-wrap">
-              {contact.notes}
-            </p>
-          )}
-          <div className="flex justify-end pt-1">
-            <button
-              onClick={() => { if (window.confirm(`Delete ${contact.full_name}?`)) deleteContact.mutate(contact.id); }}
-              className="flex items-center gap-1 text-xs text-red-500 hover:text-red-700 px-2 py-1 hover:bg-red-50 rounded-lg"
+      {/* Fund section */}
+      {contact.fund_name && (
+        <div className="mb-3 p-2 bg-gray-50 rounded">
+          <p className="text-sm font-medium text-gray-700">{contact.fund_name}</p>
+          {fundWebsite && (
+            <a
+              href={fundWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-1 text-xs text-blue-500 hover:text-blue-700 mt-1 truncate"
             >
-              <Trash2 className="w-3 h-3" /> Delete
-            </button>
-          </div>
+              <Globe className="w-3 h-3 flex-shrink-0" />
+              <span className="truncate">{fundWebsite.replace(/^https?:\/\//, '')}</span>
+            </a>
+          )}
         </div>
       )}
+
+      {/* Contact info */}
+      <div className="space-y-2 flex-1">
+        {contact.email && (
+          <a
+            href={`mailto:${contact.email}`}
+            onClick={(e) => e.stopPropagation()}
+            className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800"
+          >
+            <Mail className="w-4 h-4 flex-shrink-0" />
+            <span className="truncate">{contact.email}</span>
+            {contact.email_verified && (
+              <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
+            )}
+          </a>
+        )}
+        {contact.linkedin_url && (
+          <a
+            href={contact.linkedin_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800"
+          >
+            <Linkedin className="w-4 h-4 flex-shrink-0" />
+            LinkedIn Profile
+          </a>
+        )}
+        {contact.phone && (
+          <div className="flex items-center gap-2 text-sm text-gray-600">
+            <Phone className="w-4 h-4 flex-shrink-0" />
+            {contact.phone}
+          </div>
+        )}
+      </div>
+
+      {/* Footer */}
+      <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+        <span className="text-xs text-gray-500 truncate">{contact.department || 'Unknown Dept'}</span>
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onAddToKanban({
+                type: 'contact',
+                id: contact.id,
+                title: contact.full_name,
+                data: {
+                  full_name: contact.full_name,
+                  job_title: contact.title,
+                  email: contact.email,
+                  linkedin_url: contact.linkedin_url,
+                  company_id: contact.fund_id,
+                  studio_name: contact.fund_name,
+                  is_decision_maker: contact.is_primary,
+                },
+              });
+            }}
+            className="flex items-center gap-1 text-xs text-indigo-600 hover:text-indigo-800 hover:bg-indigo-50 px-2 py-1.5 rounded-lg transition-colors"
+            title="Add to Tasks board"
+          >
+            <ClipboardCheck className="w-3 h-3" />
+            Tasks
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); onOpen(contact); }}
+            className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
+          >
+            <Send className="w-3 h-3" />
+            Outreach
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
@@ -351,21 +382,83 @@ function ContactCard({ contact, onEdit, onOpen, selected, onToggle }: CardProps)
 // ── Main view ─────────────────────────────────────────────────────────────────
 
 export function VCContactsView() {
+  // ── filter state ──
   const [search, setSearch] = useState('');
   const [fundFilter, setFundFilter] = useState('');
-  const [flaggedOnly, setFlaggedOnly] = useState(false);
   const [primaryOnly, setPrimaryOnly] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [editContact, setEditContact] = useState<VCContact | undefined>();
-  const [selectedContact, setSelectedContact] = useState<VCContact | null>(null);
-  const [selectMode, setSelectMode] = useState(false);
-  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
-  const [deleting, setDeleting] = useState(false);
+  const [flaggedOnly, setFlaggedOnly] = useState(false);
+
+  // Last-contacted (client-side)
+  const [contactedQuick, setContactedQuick] = useState<ContactedQuick>('all');
+  const [customAfter, setCustomAfter] = useState('');
+  const [customOn, setCustomOn] = useState('');
+
+  // Date added + sort
   const [dateFrom, setDateFrom] = useState('');
   const [dateTo, setDateTo] = useState('');
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
+
+  // ── bulk select state ──
+  const [selectMode, setSelectMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [deleting, setDeleting] = useState(false);
   const queryClient = useQueryClient();
 
+  // ── modal state ──
+  const [showModal, setShowModal] = useState(false);
+  const [editContact, setEditContact] = useState<VCContact | undefined>();
+  const [selectedContact, setSelectedContact] = useState<VCContact | null>(null);
+  const [kanbanSource, setKanbanSource] = useState<AddToKanbanSource | null>(null);
+
+  // ── data ──
+  const { data: fundsData } = useFunds();
+  const funds = fundsData?.items || [];
+  const fundMap = new Map(funds.map(f => [f.id, f]));
+
+  const { data, isLoading } = useVCContacts({
+    search: search || undefined,
+    fund_id: fundFilter || undefined,
+    is_flagged: flaggedOnly ? true : undefined,
+    is_primary: primaryOnly ? true : undefined,
+  });
+
+  const rawContacts: VCContact[] = data?.items || [];
+
+  // Apply last-contacted filter client-side
+  const afterContactedFilter = (() => {
+    if (contactedQuick === 'all') return rawContacts;
+    const today = new Date();
+    return rawContacts.filter(c => {
+      if (contactedQuick === 'never') return !c.last_contacted_at;
+      if (!c.last_contacted_at) return false;
+      if (contactedQuick === 'today') return toISODate(new Date(c.last_contacted_at)) === toISODate(today);
+      if (contactedQuick === '7d') { const d = new Date(today); d.setDate(d.getDate() - 7); return new Date(c.last_contacted_at) >= d; }
+      if (contactedQuick === '30d') { const d = new Date(today); d.setDate(d.getDate() - 30); return new Date(c.last_contacted_at) >= d; }
+      if (contactedQuick === 'custom') {
+        if (customOn) return toISODate(new Date(c.last_contacted_at)) === customOn;
+        if (customAfter) return new Date(c.last_contacted_at) >= new Date(customAfter);
+      }
+      return true;
+    });
+  })();
+
+  // Apply date-added filter + sort
+  const contacts = (() => {
+    const fromMs = dateFrom ? new Date(dateFrom).getTime() : 0;
+    const toMs   = dateTo   ? new Date(dateTo + 'T23:59:59').getTime() : Infinity;
+    return [...afterContactedFilter]
+      .filter(c => {
+        if (!c.created_at) return true;
+        const t = new Date(c.created_at).getTime();
+        return t >= fromMs && t <= toMs;
+      })
+      .sort((a, b) => {
+        const diff = new Date(b.created_at ?? 0).getTime() - new Date(a.created_at ?? 0).getTime();
+        return sortOrder === 'desc' ? diff : -diff;
+      });
+  })();
+
+  // ── helpers ──
   const toggleSelect = (id: string) => setSelectedIds(prev => {
     const next = new Set(prev);
     next.has(id) ? next.delete(id) : next.add(id);
@@ -390,173 +483,263 @@ export function VCContactsView() {
     }
   };
 
-  const { data: fundsData } = useFunds();
-  const funds = fundsData?.items || [];
+  const handleContactedQuick = (q: ContactedQuick) => {
+    setContactedQuick(q);
+    setCustomAfter('');
+    setCustomOn('');
+  };
 
-  const { data, isLoading } = useVCContacts({
-    search: search || undefined,
-    fund_id: fundFilter || undefined,
-    is_flagged: flaggedOnly ? true : undefined,
-    is_primary: primaryOnly ? true : undefined,
-  });
-  const rawContacts: VCContact[] = data?.items || [];
-  const contacts = (() => {
-    const fromMs = dateFrom ? new Date(dateFrom).getTime() : 0;
-    const toMs   = dateTo   ? new Date(dateTo + 'T23:59:59').getTime() : Infinity;
-    return [...rawContacts]
-      .filter(c => {
-        if (!c.created_at) return true;
-        const t = new Date(c.created_at).getTime();
-        return t >= fromMs && t <= toMs;
-      })
-      .sort((a, b) => {
-        const diff = new Date(b.created_at ?? 0).getTime() - new Date(a.created_at ?? 0).getTime();
-        return sortOrder === 'desc' ? diff : -diff;
-      });
-  })();
-
-  const openCreate = () => { setEditContact(undefined); setShowModal(true); };
-  const openEdit = (c: VCContact) => { setEditContact(c); setShowModal(true); };
-  const openDetail = (c: VCContact) => setSelectedContact(c);
+  const clearContactedFilter = () => {
+    setContactedQuick('all');
+    setCustomAfter('');
+    setCustomOn('');
+  };
 
   return (
-    <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      {/* ── Toolbar ── */}
-      <div className="flex flex-wrap gap-3 mb-6 items-center">
-        {/* Search */}
-        <div className="relative flex-1 min-w-[200px] max-w-sm">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search contacts…"
-            className="w-full pl-9 pr-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-          />
-          {search && (
-            <button onClick={() => setSearch('')} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
-              <X className="w-3.5 h-3.5" />
-            </button>
-          )}
+    <div className="space-y-6">
+      {/* ── Add to Kanban modal ── */}
+      {kanbanSource && (
+        <AddToKanbanModal source={kanbanSource} onClose={() => setKanbanSource(null)} />
+      )}
+
+      {/* ── Filter panel ── */}
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+
+        {/* Row 1: Search + Fund + Primary filter */}
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex-1 relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search contacts by name, title, or email…"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Building2 className="w-5 h-5 text-gray-400" />
+            <select
+              value={fundFilter}
+              onChange={(e) => setFundFilter(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 min-w-[200px]"
+            >
+              <option value="">All Funds</option>
+              {funds.map((f) => <option key={f.id} value={f.id}>{f.name}</option>)}
+            </select>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Filter className="w-5 h-5 text-gray-400" />
+            <select
+              value={primaryOnly ? 'primary' : ''}
+              onChange={(e) => setPrimaryOnly(e.target.value === 'primary')}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">All Contacts</option>
+              <option value="primary">Primary Contacts Only</option>
+            </select>
+          </div>
         </div>
 
-        {/* Fund filter */}
-        <select
-          value={fundFilter}
-          onChange={(e) => setFundFilter(e.target.value)}
-          className="text-sm border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none bg-white"
-        >
-          <option value="">All Funds</option>
-          {funds.map((f) => <option key={f.id} value={f.id}>{f.name}</option>)}
-        </select>
+        {/* Row 2: Last contacted filter */}
+        <div className="mt-3 pt-3 border-t border-gray-100">
+          <div className="flex items-center gap-2 flex-wrap">
+            <Calendar className="w-4 h-4 text-gray-400 flex-shrink-0" />
+            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide mr-1">Last Contacted:</span>
 
-        {/* Toggle pills */}
-        <button
-          onClick={() => setPrimaryOnly((v) => !v)}
-          className={`flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border transition-colors ${
-            primaryOnly ? 'bg-yellow-50 border-yellow-300 text-yellow-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'
-          }`}
-        >
-          <Star className="w-3.5 h-3.5" /> Primary only
-        </button>
-        <button
-          onClick={() => setFlaggedOnly((v) => !v)}
-          className={`flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border transition-colors ${
-            flaggedOnly ? 'bg-red-50 border-red-300 text-red-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'
-          }`}
-        >
-          <Flag className="w-3.5 h-3.5" /> Flagged
-        </button>
+            {(['all', 'never', 'today', '7d', '30d', 'custom'] as ContactedQuick[]).map((q) => (
+              <button
+                key={q}
+                onClick={() => handleContactedQuick(q)}
+                className={`text-xs px-3 py-1.5 rounded-full font-medium border transition-colors ${
+                  contactedQuick === q
+                    ? 'bg-blue-600 text-white border-blue-600'
+                    : 'bg-white text-gray-600 border-gray-300 hover:border-blue-400 hover:text-blue-600'
+                }`}
+              >
+                {{ all: 'Any time', never: 'Never', today: 'Today', '7d': 'Last 7 days', '30d': 'Last 30 days', custom: 'Custom…' }[q]}
+              </button>
+            ))}
 
-        <div className="ml-auto flex items-center gap-2">
+            {contactedQuick === 'custom' && (
+              <div className="flex items-center gap-2 ml-1 flex-wrap">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs text-gray-500">On:</span>
+                  <input
+                    type="date"
+                    value={customOn}
+                    onChange={(e) => { setCustomOn(e.target.value); setCustomAfter(''); }}
+                    className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+                <span className="text-xs text-gray-400">or</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs text-gray-500">After:</span>
+                  <input
+                    type="date"
+                    value={customAfter}
+                    onChange={(e) => { setCustomAfter(e.target.value); setCustomOn(''); }}
+                    className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+              </div>
+            )}
+
+            {contactedQuick !== 'all' && (
+              <button
+                onClick={clearContactedFilter}
+                className="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 ml-1"
+              >
+                <X className="w-3.5 h-3.5" /> Clear
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Row 3: Data quality + select + new contact */}
+        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-2 flex-wrap">
+          <Flag className="w-4 h-4 text-gray-400 flex-shrink-0" />
+          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide mr-1">Data Quality:</span>
           <button
-            onClick={() => { setSelectMode(v => !v); setSelectedIds(new Set()); }}
-            className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg border transition-colors ${
-              selectMode ? 'bg-blue-50 border-blue-400 text-blue-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'
+            onClick={() => setFlaggedOnly(!flaggedOnly)}
+            className={`text-xs px-3 py-1.5 rounded-full font-medium border transition-colors flex items-center gap-1.5 ${
+              flaggedOnly
+                ? 'bg-red-500 text-white border-red-500'
+                : 'bg-white text-gray-600 border-gray-300 hover:border-red-400 hover:text-red-600'
             }`}
           >
-            <ListChecks className="w-4 h-4" />
-            {selectMode ? 'Exit select' : 'Select'}
+            <Flag className="w-3 h-3" />
+            {flaggedOnly ? 'Showing Flagged Only' : 'Show Flagged Only'}
           </button>
-          <button
-            onClick={openCreate}
-            className="flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-colors"
-          >
-            <Plus className="w-4 h-4" /> New Contact
-          </button>
+          {flaggedOnly && (
+            <button onClick={() => setFlaggedOnly(false)} className="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600">
+              <X className="w-3.5 h-3.5" /> Clear
+            </button>
+          )}
+          <div className="ml-auto flex items-center gap-2">
+            <button
+              onClick={() => { setSelectMode(v => !v); setSelectedIds(new Set()); }}
+              className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
+                selectMode ? 'bg-blue-50 border-blue-400 text-blue-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'
+              }`}
+            >
+              <ListChecks className="w-3.5 h-3.5" />
+              {selectMode ? 'Exit select' : 'Select'}
+            </button>
+            <button
+              onClick={() => { setEditContact(undefined); setShowModal(true); }}
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors"
+            >
+              <Plus className="w-3.5 h-3.5" /> New Contact
+            </button>
+          </div>
+        </div>
+
+        {/* Row 4: Date Added + sort */}
+        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-3 flex-wrap">
+          <Calendar className="w-4 h-4 text-gray-400 flex-shrink-0" />
+          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Date Added:</span>
+          <div className="flex items-center gap-2">
+            <label className="text-xs text-gray-500">From</label>
+            <input
+              type="date"
+              value={dateFrom}
+              onChange={e => setDateFrom(e.target.value)}
+              className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <label className="text-xs text-gray-500">To</label>
+            <input
+              type="date"
+              value={dateTo}
+              onChange={e => setDateTo(e.target.value)}
+              className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          {(dateFrom || dateTo) && (
+            <button onClick={() => { setDateFrom(''); setDateTo(''); }} className="text-xs text-gray-400 hover:text-gray-600 flex items-center gap-1">
+              <X className="w-3 h-3" /> Clear dates
+            </button>
+          )}
+          <div className="ml-auto flex items-center gap-1 bg-gray-100 rounded-lg p-0.5">
+            <button
+              onClick={() => setSortOrder('desc')}
+              className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${sortOrder === 'desc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+            >
+              Newest first
+            </button>
+            <button
+              onClick={() => setSortOrder('asc')}
+              className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${sortOrder === 'asc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+            >
+              Oldest first
+            </button>
+          </div>
+        </div>
+
+        {/* Row 5: Stats bar */}
+        <div className="flex gap-6 mt-4 pt-4 border-t border-gray-100 text-sm">
+          <div className="flex items-center gap-2">
+            <User className="w-4 h-4 text-blue-500" />
+            <span className="font-medium">{contacts.length}</span>
+            <span className="text-gray-500">contacts</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Star className="w-4 h-4 text-yellow-500" />
+            <span className="font-medium">{contacts.filter(c => c.is_primary).length}</span>
+            <span className="text-gray-500">primary</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-green-500" />
+            <span className="font-medium">{contacts.filter(c => c.email_verified).length}</span>
+            <span className="text-gray-500">verified emails</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <ClipboardCheck className="w-4 h-4 text-purple-500" />
+            <span className="font-medium">{contacts.filter(c => c.last_contacted_at).length}</span>
+            <span className="text-gray-500">contacted</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Flag className="w-4 h-4 text-red-400" />
+            <span className="font-medium">{contacts.filter(c => c.is_flagged).length}</span>
+            <span className="text-gray-500">flagged</span>
+          </div>
         </div>
       </div>
-
-      {/* ── Date Added filter ── */}
-      <div className="flex items-center gap-3 flex-wrap mb-4 px-1">
-        <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Date Added:</span>
-        <div className="flex items-center gap-2">
-          <label className="text-xs text-gray-500">From</label>
-          <input
-            type="date"
-            value={dateFrom}
-            onChange={e => setDateFrom(e.target.value)}
-            className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          />
-        </div>
-        <div className="flex items-center gap-2">
-          <label className="text-xs text-gray-500">To</label>
-          <input
-            type="date"
-            value={dateTo}
-            onChange={e => setDateTo(e.target.value)}
-            className="text-xs px-2 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          />
-        </div>
-        {(dateFrom || dateTo) && (
-          <button onClick={() => { setDateFrom(''); setDateTo(''); }} className="text-xs text-gray-400 hover:text-gray-600 flex items-center gap-1">
-            <X className="w-3 h-3" /> Clear dates
-          </button>
-        )}
-        <div className="ml-auto flex items-center gap-1 bg-gray-100 rounded-lg p-0.5">
-          <button
-            onClick={() => setSortOrder('desc')}
-            className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${sortOrder === 'desc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
-          >
-            Newest first
-          </button>
-          <button
-            onClick={() => setSortOrder('asc')}
-            className={`text-xs px-2.5 py-1 rounded-md transition-colors font-medium ${sortOrder === 'asc' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
-          >
-            Oldest first
-          </button>
-        </div>
-      </div>
-
-      {/* ── Count ── */}
-      <p className="text-xs text-gray-500 mb-4">
-        {isLoading ? 'Loading…' : `${contacts.length} contact${contacts.length !== 1 ? 's' : ''}`}
-      </p>
 
       {/* ── Grid ── */}
       {isLoading ? (
-        <div className="flex items-center justify-center py-24 text-gray-400">
-          <div className="animate-spin w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full mr-3" />
-          Loading contacts…
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 animate-pulse">
+              <div className="h-6 bg-gray-200 rounded mb-2" />
+              <div className="h-4 bg-gray-200 rounded mb-2 w-3/4" />
+              <div className="h-4 bg-gray-200 rounded w-1/2" />
+            </div>
+          ))}
         </div>
       ) : contacts.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-24 text-gray-400">
-          <User className="w-12 h-12 mb-3 opacity-30" />
-          <p className="font-medium text-gray-500">No contacts found</p>
-          <p className="text-sm mt-1">
+        <div className="text-center py-12">
+          <User className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+          <h3 className="text-lg font-medium text-gray-900 mb-1">No contacts found</h3>
+          <p className="text-gray-500">
             {search || fundFilter || flaggedOnly || primaryOnly
               ? 'Try adjusting your filters.'
               : 'Create a contact to get started.'}
           </p>
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {contacts.map((c) => (
             <ContactCard
               key={c.id}
               contact={c}
-              onEdit={openEdit}
-              onOpen={openDetail}
+              fundWebsite={fundMap.get(c.fund_id)?.website_url || undefined}
+              onOpen={(contact) => setSelectedContact(contact)}
+              onAddToKanban={(src) => setKanbanSource(src)}
               selected={selectMode ? selectedIds.has(c.id) : undefined}
               onToggle={selectMode ? () => toggleSelect(c.id) : undefined}
             />
@@ -589,7 +772,7 @@ export function VCContactsView() {
         <VCContactDetailModal
           contact={selectedContact}
           fundName={selectedContact.fund_name}
-          fundWebsite={funds.find((f) => f.id === selectedContact.fund_id)?.website_url || undefined}
+          fundWebsite={fundMap.get(selectedContact.fund_id)?.website_url || undefined}
           onClose={() => setSelectedContact(null)}
         />
       )}

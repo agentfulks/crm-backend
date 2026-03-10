@@ -12,7 +12,8 @@ import {
   X, Upload, ChevronRight, ChevronLeft, FileText, AlertCircle,
   CheckCircle, Info, Loader2, Download,
 } from 'lucide-react';
-import { apiBase } from '../api';
+
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -95,10 +96,10 @@ const TYPE_LABELS: Record<BulkType, string> = {
 };
 
 const TYPE_ENDPOINTS: Record<BulkType, string> = {
-  studio: `${apiBase}/bdr/companies/bulk`,
-  studio_contact: `${apiBase}/bdr/contacts/bulk`,
-  vc_fund: `${apiBase}/funds/bulk`,
-  vc_contact: `${apiBase}/vc/contacts/bulk`,
+  studio: `${API_BASE}/bdr/companies/bulk`,
+  studio_contact: `${API_BASE}/bdr/contacts/bulk`,
+  vc_fund: `${API_BASE}/funds/bulk`,
+  vc_contact: `${API_BASE}/vc/contacts/bulk`,
 };
 
 // ─── CSV parser ───────────────────────────────────────────────────────────────

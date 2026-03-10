@@ -4,7 +4,7 @@ import {
   ExternalLink, Clock, ChevronRight, Save, RotateCcw, Edit3,
 } from 'lucide-react';
 import type { StudioPacket, BDRContact, PacketStatus } from '../types';
-import { useContacts } from '../hooks/useContacts';
+import { useContacts, useCreateContact } from '../hooks/useContacts';
 import { useUpdateCompany } from '../hooks/useStudioPackets';
 import { HunterStudioPanel } from './HunterStudioPanel';
 import { deriveDomain } from '../lib/hunterApi';
@@ -47,10 +47,11 @@ export function StudioDetailModal({ packet, onClose, onOpenContact }: StudioDeta
   });
 
   // Load contacts for this company
-  const { data: contactsData, isLoading: loadingContacts } = useContacts(
+  const { data: contactsData, isLoading: loadingContacts, refetch: refetchContacts } = useContacts(
     studio?.id ? { company_id: studio.id } : undefined
   );
   const contacts: BDRContact[] = contactsData?.items || [];
+  const createContact = useCreateContact();
 
   const handleSave = () => {
     if (!studio?.id) return;
@@ -379,6 +380,18 @@ export function StudioDetailModal({ packet, onClose, onOpenContact }: StudioDeta
           <HunterStudioPanel
             defaultDomain={deriveDomain(studio?.website_url)}
             companyName={studio?.name}
+            onSaveContacts={studio?.id ? async (hunterContacts) => {
+              for (const c of hunterContacts) {
+                await createContact.mutateAsync({
+                  company_id: studio.id,
+                  full_name:  c.full_name,
+                  email:      c.email,
+                  job_title:  c.title,
+                  linkedin_url: c.linkedin_url,
+                } as any);
+              }
+              refetchContacts();
+            } : undefined}
           />
 
         </div>

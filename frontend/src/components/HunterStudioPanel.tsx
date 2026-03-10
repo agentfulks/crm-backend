@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Loader2, AlertCircle, Globe, Mail, User, Building2 } from 'lucide-react';
+import { Search, Loader2, AlertCircle, Globe, Building2, CheckSquare, Square, UserPlus } from 'lucide-react';
 import { hunterGet, hunterPost, scoreColor } from '../lib/hunterApi';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -7,20 +7,140 @@ import { hunterGet, hunterPost, scoreColor } from '../lib/hunterApi';
 type Tab = 'domain' | 'company' | 'discover';
 
 const TABS: { id: Tab; label: string }[] = [
-  { id: 'domain',   label: 'Domain Search'     },
-  { id: 'company',  label: 'Company Info'       },
-  { id: 'discover', label: 'Discover People'    },
+  { id: 'domain',   label: 'Domain Search'  },
+  { id: 'company',  label: 'Company Info'   },
+  { id: 'discover', label: 'Discover People' },
 ];
+
+export interface HunterContact {
+  full_name: string;
+  email?:       string;
+  title?:       string;
+  linkedin_url?: string;
+}
 
 interface Props {
   defaultDomain?: string;
   companyName?:   string;
+  /** Called with the list of selected contacts to import */
+  onSaveContacts?: (contacts: HunterContact[]) => Promise<void>;
 }
 
-// ── Result components ─────────────────────────────────────────────────────────
+// ── helpers ───────────────────────────────────────────────────────────────────
 
-function DomainResult({ result }: { result: any }) {
+function emailToContact(e: any): HunterContact {
+  const first = e.first_name ?? '';
+  const last  = e.last_name  ?? '';
+  return {
+    full_name:   [first, last].filter(Boolean).join(' ') || e.value || 'Unknown',
+    email:       e.value ?? undefined,
+    title:       e.position ?? undefined,
+    linkedin_url: e.linkedin ?? undefined,
+  };
+}
+
+function personToContact(l: any): HunterContact {
+  const first = l.first_name ?? '';
+  const last  = l.last_name  ?? '';
+  return {
+    full_name:   [first, last].filter(Boolean).join(' ') || l.name || 'Unknown',
+    email:       l.email ?? l.value ?? undefined,
+    title:       l.position ?? l.title ?? undefined,
+    linkedin_url: l.linkedin_url ?? l.linkedin ?? undefined,
+  };
+}
+
+// ── SaveBar ───────────────────────────────────────────────────────────────────
+
+function SaveBar({
+  total,
+  selected,
+  saving,
+  onToggleAll,
+  onSaveSelected,
+  onSaveAll,
+}: {
+  total: number;
+  selected: number;
+  saving: boolean;
+  onToggleAll: () => void;
+  onSaveSelected: () => void;
+  onSaveAll: () => void;
+}) {
+  return (
+    <div className="flex items-center gap-2 p-2 bg-orange-50 border border-orange-200 rounded-lg">
+      <button
+        onClick={onToggleAll}
+        className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-gray-900"
+      >
+        {selected === total ? (
+          <CheckSquare className="w-4 h-4 text-orange-500" />
+        ) : (
+          <Square className="w-4 h-4 text-gray-400" />
+        )}
+        {selected === total ? 'Deselect all' : 'Select all'}
+      </button>
+      <span className="text-xs text-gray-400 flex-1">{selected} of {total} selected</span>
+      {selected > 0 && (
+        <button
+          onClick={onSaveSelected}
+          disabled={saving}
+          className="flex items-center gap-1 px-2.5 py-1 bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white text-xs font-semibold rounded-lg transition-colors"
+        >
+          {saving ? <Loader2 className="w-3 h-3 animate-spin" /> : <UserPlus className="w-3 h-3" />}
+          Save {selected}
+        </button>
+      )}
+      <button
+        onClick={onSaveAll}
+        disabled={saving}
+        className="flex items-center gap-1 px-2.5 py-1 bg-gray-700 hover:bg-gray-900 disabled:bg-gray-300 text-white text-xs font-semibold rounded-lg transition-colors"
+      >
+        {saving ? <Loader2 className="w-3 h-3 animate-spin" /> : <UserPlus className="w-3 h-3" />}
+        Save all {total}
+      </button>
+    </div>
+  );
+}
+
+// ── DomainResult ─────────────────────────────────────────────────────────────
+
+function DomainResult({
+  result,
+  onSaveContacts,
+}: {
+  result: any;
+  onSaveContacts?: (c: HunterContact[]) => Promise<void>;
+}) {
   const emails: any[] = result.emails ?? [];
+  const visible = emails.slice(0, 20);
+
+  const [selected, setSelected] = useState<Set<number>>(new Set());
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState<Set<number>>(new Set());
+
+  const toggle = (i: number) =>
+    setSelected((prev) => {
+      const next = new Set(prev);
+      next.has(i) ? next.delete(i) : next.add(i);
+      return next;
+    });
+
+  const toggleAll = () =>
+    setSelected(selected.size === visible.length ? new Set() : new Set(visible.map((_, i) => i)));
+
+  const save = async (indices: number[]) => {
+    if (!onSaveContacts || indices.length === 0) return;
+    setSaving(true);
+    try {
+      await onSaveContacts(indices.map((i) => emailToContact(visible[i])));
+      setSaved((prev) => new Set([...prev, ...indices]));
+      setSelected(new Set());
+    } finally {
+      setSaving(false);
+    }
+  };
+
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between text-xs text-gray-500">
@@ -33,30 +153,61 @@ function DomainResult({ result }: { result: any }) {
           <span className="bg-gray-100 px-2 py-0.5 rounded font-mono">{result.pattern}</span>
         )}
       </div>
+
       {emails.length > 0 ? (
-        <div className="divide-y divide-gray-100 border border-gray-200 rounded-lg overflow-hidden bg-white">
-          {emails.slice(0, 15).map((e: any, i: number) => (
-            <div key={i} className="flex items-center justify-between gap-3 px-3 py-2">
-              <div className="min-w-0">
-                <p className="text-sm font-medium text-gray-900 truncate">{e.value}</p>
-                {(e.first_name || e.last_name) && (
-                  <p className="text-xs text-gray-500">
-                    {[e.first_name, e.last_name].filter(Boolean).join(' ')}
-                    {e.position && ` · ${e.position}`}
-                  </p>
-                )}
-              </div>
-              <span className={`text-xs font-semibold flex-shrink-0 ${scoreColor(e.confidence ?? 0)}`}>
-                {e.confidence}%
-              </span>
-            </div>
-          ))}
-          {emails.length > 15 && (
-            <div className="px-3 py-2 text-xs text-center text-gray-400">
-              + {emails.length - 15} more — refine in Hunter.io dashboard
-            </div>
+        <>
+          {onSaveContacts && (
+            <SaveBar
+              total={visible.length}
+              selected={selected.size}
+              saving={saving}
+              onToggleAll={toggleAll}
+              onSaveSelected={() => save([...selected])}
+              onSaveAll={() => save(visible.map((_, i) => i))}
+            />
           )}
-        </div>
+
+          <div className="divide-y divide-gray-100 border border-gray-200 rounded-lg overflow-hidden bg-white">
+            {visible.map((e: any, i: number) => (
+              <div
+                key={i}
+                className={`flex items-center gap-3 px-3 py-2 ${saved.has(i) ? 'bg-green-50' : ''}`}
+              >
+                {onSaveContacts && (
+                  <button onClick={() => toggle(i)} className="flex-shrink-0">
+                    {selected.has(i) ? (
+                      <CheckSquare className="w-4 h-4 text-orange-500" />
+                    ) : (
+                      <Square className="w-4 h-4 text-gray-300 hover:text-gray-500" />
+                    )}
+                  </button>
+                )}
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-medium text-gray-900 truncate">{e.value}</p>
+                  {(e.first_name || e.last_name) && (
+                    <p className="text-xs text-gray-500">
+                      {[e.first_name, e.last_name].filter(Boolean).join(' ')}
+                      {e.position && ` · ${e.position}`}
+                    </p>
+                  )}
+                </div>
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  {saved.has(i) && (
+                    <span className="text-xs text-green-600 font-medium">✓ saved</span>
+                  )}
+                  <span className={`text-xs font-semibold ${scoreColor(e.confidence ?? 0)}`}>
+                    {e.confidence}%
+                  </span>
+                </div>
+              </div>
+            ))}
+            {emails.length > 20 && (
+              <div className="px-3 py-2 text-xs text-center text-gray-400">
+                + {emails.length - 20} more — refine in Hunter.io dashboard
+              </div>
+            )}
+          </div>
+        </>
       ) : (
         <p className="text-xs text-gray-400 text-center py-4">
           No emails found at this domain yet.
@@ -65,6 +216,8 @@ function DomainResult({ result }: { result: any }) {
     </div>
   );
 }
+
+// ── CompanyResult ─────────────────────────────────────────────────────────────
 
 function CompanyResult({ result }: { result: any }) {
   return (
@@ -145,20 +298,52 @@ function CompanyResult({ result }: { result: any }) {
   );
 }
 
-function DiscoverResult({ result }: { result: any }) {
-  // Hunter's Discover endpoint can return results under different keys
-  // depending on account tier and API version.
-  // Priority order: people > leads > emails > top-level array
+// ── DiscoverResult ────────────────────────────────────────────────────────────
+
+function DiscoverResult({
+  result,
+  onSaveContacts,
+}: {
+  result: any;
+  onSaveContacts?: (c: HunterContact[]) => Promise<void>;
+}) {
   const leads: any[] = Array.isArray(result)
     ? result
     : result.people ?? result.leads ?? result.emails ?? result.contacts ?? [];
 
+  const visible = leads.slice(0, 20);
+
+  const [selected, setSelected] = useState<Set<number>>(new Set());
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState<Set<number>>(new Set());
+
   const isAsyncTask = leads.length === 0 && result?.id && result?.status;
+
+  const toggle = (i: number) =>
+    setSelected((prev) => {
+      const next = new Set(prev);
+      next.has(i) ? next.delete(i) : next.add(i);
+      return next;
+    });
+
+  const toggleAll = () =>
+    setSelected(selected.size === visible.length ? new Set() : new Set(visible.map((_, i) => i)));
+
+  const save = async (indices: number[]) => {
+    if (!onSaveContacts || indices.length === 0) return;
+    setSaving(true);
+    try {
+      await onSaveContacts(indices.map((i) => personToContact(visible[i])));
+      setSaved((prev) => new Set([...prev, ...indices]));
+      setSelected(new Set());
+    } finally {
+      setSaving(false);
+    }
+  };
 
   if (leads.length === 0) {
     return (
       <div className="text-center py-6 border border-dashed border-gray-200 rounded-lg">
-        <User className="w-6 h-6 text-gray-300 mx-auto mb-2" />
         <p className="text-xs text-gray-400">
           {isAsyncTask
             ? `Discovery task queued (status: ${result.status}). Check Hunter.io dashboard for results.`
@@ -174,9 +359,33 @@ function DiscoverResult({ result }: { result: any }) {
   return (
     <div className="space-y-2">
       <p className="text-xs text-gray-400">{leads.length} people found</p>
+
+      {onSaveContacts && (
+        <SaveBar
+          total={visible.length}
+          selected={selected.size}
+          saving={saving}
+          onToggleAll={toggleAll}
+          onSaveSelected={() => save([...selected])}
+          onSaveAll={() => save(visible.map((_, i) => i))}
+        />
+      )}
+
       <div className="divide-y divide-gray-100 border border-gray-200 rounded-lg overflow-hidden bg-white">
-        {leads.slice(0, 15).map((l: any, i: number) => (
-          <div key={i} className="flex items-center gap-3 px-3 py-2.5">
+        {visible.map((l: any, i: number) => (
+          <div
+            key={i}
+            className={`flex items-center gap-3 px-3 py-2.5 ${saved.has(i) ? 'bg-green-50' : ''}`}
+          >
+            {onSaveContacts && (
+              <button onClick={() => toggle(i)} className="flex-shrink-0">
+                {selected.has(i) ? (
+                  <CheckSquare className="w-4 h-4 text-orange-500" />
+                ) : (
+                  <Square className="w-4 h-4 text-gray-300 hover:text-gray-500" />
+                )}
+              </button>
+            )}
             <div className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 text-xs font-semibold text-gray-600">
               {(l.first_name?.[0] ?? l.name?.[0] ?? '?').toUpperCase()}
             </div>
@@ -187,21 +396,18 @@ function DiscoverResult({ result }: { result: any }) {
               {(l.position || l.title) && (
                 <p className="text-xs text-gray-500 truncate">{l.position ?? l.title}</p>
               )}
+              {(l.email || l.value) && (
+                <p className="text-xs text-blue-600 truncate">{l.email ?? l.value}</p>
+              )}
             </div>
-            {(l.email || l.value) && (
-              <a
-                href={`mailto:${l.email ?? l.value}`}
-                className="flex items-center gap-1 text-xs text-blue-600 hover:underline flex-shrink-0"
-              >
-                <Mail className="w-3 h-3" />
-                {l.email ?? l.value}
-              </a>
+            {saved.has(i) && (
+              <span className="text-xs text-green-600 font-medium flex-shrink-0">✓ saved</span>
             )}
           </div>
         ))}
-        {leads.length > 15 && (
+        {leads.length > 20 && (
           <div className="px-3 py-2 text-xs text-center text-gray-400">
-            + {leads.length - 15} more — view in Hunter.io dashboard
+            + {leads.length - 20} more — view in Hunter.io dashboard
           </div>
         )}
       </div>
@@ -211,7 +417,7 @@ function DiscoverResult({ result }: { result: any }) {
 
 // ── Main component ────────────────────────────────────────────────────────────
 
-export function HunterStudioPanel({ defaultDomain, companyName }: Props) {
+export function HunterStudioPanel({ defaultDomain, companyName, onSaveContacts }: Props) {
   const [tab, setTab]         = useState<Tab>('domain');
   const [domain, setDomain]   = useState(defaultDomain ?? '');
   const [loading, setLoading] = useState(false);
@@ -239,7 +445,6 @@ export function HunterStudioPanel({ defaultDomain, companyName }: Props) {
       } else if (tab === 'company') {
         data = await hunterGet('/companies/find', { domain: domain.trim() });
       } else {
-        // Discover — POST
         const body: Record<string, unknown> = { domain: domain.trim() };
         if (companyName) body.company = companyName;
         data = await hunterPost('/discover', body);
@@ -295,7 +500,6 @@ export function HunterStudioPanel({ defaultDomain, companyName }: Props) {
 
       {/* ── Body ── */}
       <div className="p-4 space-y-3">
-        {/* Domain input */}
         <div className="flex gap-2">
           <input
             type="text"
@@ -306,18 +510,13 @@ export function HunterStudioPanel({ defaultDomain, companyName }: Props) {
             className={inpCls}
           />
           <button onClick={run} disabled={loading} className={btnCls}>
-            {loading ? (
-              <Loader2 className="w-4 h-4 animate-spin" />
-            ) : (
-              <Search className="w-4 h-4" />
-            )}
+            {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />}
             {loading ? '…' : 'Search'}
           </button>
         </div>
 
         <p className="text-xs text-gray-400">{hint}</p>
 
-        {/* Error */}
         {error && (
           <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-lg px-3 py-2.5">
             <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
@@ -325,10 +524,13 @@ export function HunterStudioPanel({ defaultDomain, companyName }: Props) {
           </div>
         )}
 
-        {/* Results */}
-        {result && tab === 'domain'   && <DomainResult   result={result} />}
-        {result && tab === 'company'  && <CompanyResult  result={result} />}
-        {result && tab === 'discover' && <DiscoverResult result={result} />}
+        {result && tab === 'domain'   && (
+          <DomainResult result={result} onSaveContacts={onSaveContacts} />
+        )}
+        {result && tab === 'company'  && <CompanyResult result={result} />}
+        {result && tab === 'discover' && (
+          <DiscoverResult result={result} onSaveContacts={onSaveContacts} />
+        )}
       </div>
     </div>
   );

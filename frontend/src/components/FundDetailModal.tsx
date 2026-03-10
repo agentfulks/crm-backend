@@ -170,6 +170,7 @@ export function FundDetailModal({ fund, onClose }: Props) {
 
   const { data: fundContacts = [], refetch: refetchContacts } = useContactsByFund(fund.id);
   const deleteContact = useDeleteVCContact();
+  const createContact = useCreateVCContact();
   const [draft, setDraft] = useState({
     name: fund.name || '',
     firm_type: fund.firm_type || '',
@@ -543,6 +544,18 @@ export function FundDetailModal({ fund, onClose }: Props) {
           <HunterStudioPanel
             defaultDomain={deriveDomain(fund.website_url)}
             companyName={fund.name}
+            onSaveContacts={async (contacts) => {
+              for (const c of contacts) {
+                await createContact.mutateAsync({
+                  fund_id:  fund.id,
+                  full_name: c.full_name,
+                  email:     c.email,
+                  title:     c.title,
+                  linkedin_url: c.linkedin_url,
+                });
+              }
+              refetchContacts();
+            }}
           />
 
           {/* ── Contacts ── */}

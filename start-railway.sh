@@ -12,7 +12,7 @@ echo "🚀 Starting Railway services..."
 # to create its config file, then fixes model IDs and allowedOrigins)
 # ============================================================================
 (
-  CONFIG="/home/openclaw/.openclaw/openclaw.json"
+  CONFIG="/data/.openclaw/openclaw.json"
   echo "⏳ Waiting for openclaw config to be ready..."
   for i in $(seq 1 90); do
     if [ -f "$CONFIG" ]; then

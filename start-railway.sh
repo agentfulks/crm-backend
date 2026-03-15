@@ -30,11 +30,16 @@ config_str = config_str.replace('moonshot-ai/kimi-k2.5', 'moonshotai/kimi-k2.5')
 config_str = config_str.replace('moonshot-ai/kimi-lite', 'moonshotai/kimi-lite')
 config = json.loads(config_str)
 
-# Ensure Railway domain is in allowedOrigins
+# Ensure all required origins are in allowedOrigins
 origins = config.setdefault('gateway', {}).setdefault('controlUi', {}).setdefault('allowedOrigins', [])
-railway_domain = 'https://marvy.up.railway.app'
-if railway_domain not in origins:
-    origins.append(railway_domain)
+required_origins = [
+    'https://marvy.up.railway.app',
+    'http://127.0.0.1:18789',
+    'http://localhost:18789',
+]
+for origin in required_origins:
+    if origin not in origins:
+        origins.append(origin)
 
 with open(path, 'w') as f:
     json.dump(config, f, indent=2)

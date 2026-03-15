@@ -8,6 +8,53 @@ set -e
 echo "🚀 Starting Railway services..."
 
 # ============================================================================
+# Patch openclaw config on every boot (runs in background, waits for openclaw
+# to create its config file, then fixes model IDs and allowedOrigins)
+# ============================================================================
+(
+  CONFIG="/home/openclaw/.openclaw/openclaw.json"
+  echo "⏳ Waiting for openclaw config to be ready..."
+  for i in $(seq 1 90); do
+    if [ -f "$CONFIG" ]; then
+      echo "🔧 Patching openclaw config..."
+      python3 - "$CONFIG" <<'PYEOF'
+import json, sys
+
+path = sys.argv[1]
+with open(path, 'r') as f:
+    config = json.load(f)
+
+# Fix model IDs (moonshot-ai -> moonshotai)
+config_str = json.dumps(config)
+config_str = config_str.replace('moonshot-ai/kimi-k2.5', 'moonshotai/kimi-k2.5')
+config_str = config_str.replace('moonshot-ai/kimi-lite', 'moonshotai/kimi-lite')
+config = json.loads(config_str)
+
+# Ensure Railway domain is in allowedOrigins
+origins = config.setdefault('gateway', {}).setdefault('controlUi', {}).setdefault('allowedOrigins', [])
+railway_domain = 'https://marvy.up.railway.app'
+if railway_domain not in origins:
+    origins.append(railway_domain)
+
+with open(path, 'w') as f:
+    json.dump(config, f, indent=2)
+
+print('✅ openclaw config patched successfully!')
+PYEOF
+      # Restart gateway so it picks up the new config
+      sleep 2
+      pkill -f openclaw-gateway 2>/dev/null || true
+      echo "✅ openclaw-gateway restarted with patched config"
+      break
+    fi
+    sleep 2
+  done
+  if [ ! -f "$CONFIG" ]; then
+    echo "⚠️ openclaw config never appeared — skipping patch"
+  fi
+) &
+
+# ============================================================================
 # Install ClawMetry (if not present)
 # ============================================================================
 if ! command -v clawmetry &> /dev/null; then

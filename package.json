@@ -1,0 +1,13 @@
+{
+  "name": "crm-dashboard",
+  "version": "1.0.0",
+  "description": "CRM Dashboard with ClawMetry monitoring",
+  "scripts": {
+    "start": "bash start-railway.sh",
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

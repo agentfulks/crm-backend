@@ -1,0 +1,64 @@
+{
+  "cards": [
+    {
+      "name": "[P0] VC: Griffin Gaming Partners - Peter Levin",
+      "desc": "**Fund:** Griffin Gaming Partners\n**Partner:** Peter Levin (Partner)\n**Email:** peter@griffingamingpartners.com\n**AUM:** $1B+ (Fund III closed 2023)\n**Location:** Los Angeles, CA\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\nGriffin is the largest gaming-focused VC with $1B+ AUM. They invest across the gaming ecosystem including infrastructure, tools, and platforms. Strong fit for AI-powered live service infrastructure.\n\n**Outreach Angle:**\nReference their investment in Ready Player Me and other infrastructure plays. Position as the AI layer for live service games - content generation, player segmentation, and live ops automation at scale.\n\n**Recent Activity:**\n- Fund III: $1B close (2023)\n- Portfolio: Discord, Immutable, Ready Player Me, Overwolf\n- Focus: Gaming infrastructure, web3, creator economy",
+      "labels": ["P0", "VC", "Gaming-Focused"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "Verify partner email via LinkedIn",
+        "Customize [Company Name] placeholder",
+        "Review thesis alignment notes",
+        "Set calendar reminder for follow-up"
+      ]
+    },
+    {
+      "name": "[P0] VC: Konvoy Ventures - Jason Chapman",
+      "desc": "**Fund:** Konvoy Ventures\n**Partner:** Jason Chapman (Managing Partner)\n**Email:** jason@konvoy.vc\n**AUM:** $150M+ (Fund III deploying)\n**Location:** Denver, CO\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\nKonvoy is exclusively focused on gaming infrastructure and tooling. They deeply understand the live service model and invest in the picks-and-shovels of gaming. Perfect thesis fit.\n\n**Outreach Angle:**\nReference their infrastructure-first approach and investments in gaming backends, analytics, and dev tools. Position as AI infrastructure for the next generation of live service games.\n\n**Recent Activity:**\n- Fund III active deployment\n- Portfolio: Pragma, Raidbase, Carry1st\n- Focus: Gaming infrastructure, backend tools, emerging markets",
+      "labels": ["P0", "VC", "Gaming-Focused"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "Verify partner email via LinkedIn",
+        "Reference infrastructure thesis",
+        "Customize outreach message",
+        "Set follow-up reminder"
+      ]
+    },
+    {
+      "name": "[P0] VC: London Venture Partners - David Gardner",
+      "desc": "**Fund:** London Venture Partners (LVP)\n**Partner:** David Gardner (Partner)\n**Email:** david@lvp.com\n**AUM:** $200M+ (European gaming specialist)\n**Location:** London, UK\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\nLVP is the premier European gaming VC with deep sector expertise. They invest in gaming infrastructure, platforms, and tools across Europe. Strong strategic fit for AI live ops.\n\n**Outreach Angle:**\nReference their European gaming ecosystem focus and investments in backend/infrastructure. Position AI as critical for European studios competing at global scale.\n\n**Recent Activity:**\n- Active deployment across Europe\n- Portfolio: Resolution Games, MAG Interactive, Bidstack\n- Focus: European gaming, infrastructure, adtech",
+      "labels": ["P0", "VC", "Gaming-Focused"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "Verify partner email",
+        "Reference European gaming thesis",
+        "Customize for UK timezone",
+        "Set follow-up reminder"
+      ]
+    },
+    {
+      "name": "[P0] VC: Andreessen Horowitz Games - Andrew Chen",
+      "desc": "**Fund:** Andreessen Horowitz (a16z) Games\n**Partner:** Andrew Chen (General Partner)\n**Email:** andrew@a16z.com\n**AUM:** $600M Games Fund (2022)\n**Location:** Menlo Park, CA\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\na16z Games Fund specifically targets gaming infrastructure, platforms, and creator tools. Andrew Chen leads gaming investments and has written extensively on live service models.\n\n**Outreach Angle:**\nReference Andrew's writing on network effects and live service games. Position AI infrastructure as the next evolution of gaming platforms - enabling infinite content at scale.\n\n**Recent Activity:**\n- Games Fund: $600M (2022)\n- Portfolio: Roblox, Discord, Sandbox VR, Mainframe Industries\n- Focus: Gaming platforms, infrastructure, metaverse",
+      "labels": ["P0", "VC", "Gaming-Focused"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "Verify Andrew Chen email",
+        "Reference his essays/network effects",
+        "Customize for a16z format",
+        "Set follow-up reminder"
+      ]
+    },
+    {
+      "name": "[P0] VC: Lightspeed Venture Partners - Moritz Baier-Lentz",
+      "desc": "**Fund:** Lightspeed Venture Partners\n**Partner:** Moritz Baier-Lentz (Partner - Gaming)\n**Email:** moritz@lsvp.com\n**AUM:** Multi-billion AUM, active gaming practice\n**Location:** New York / Bay Area\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\nLightspeed has a dedicated gaming practice with Moritz leading. They invest across gaming infrastructure, platforms, and content. Strong track record in gaming.\n\n**Outreach Angle:**\nNote: Moritz is also at Bitkraft - need to verify current affiliation or identify correct Lightspeed gaming partner. Alternative: Amy Wu (former FTX, now Lightspeed gaming).\n\nIf Amy Wu: Reference her gaming infrastructure interest. Position AI as enabling the next wave of live service hits.\n\n**Recent Activity:**\n- Gaming practice led by Amy Wu\n- Portfolio: Epic Games, The Sandbox, Faraway\n- Focus: Gaming, infrastructure, consumer",
+      "labels": ["P0", "VC", "Gaming-Focused"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "VERIFY: Confirm correct Lightspeed gaming partner (Amy Wu vs Moritz)",
+        "Update contact details",
+        "Customize outreach",
+        "Set follow-up reminder"
+      ]
+    }
+  ]
+}

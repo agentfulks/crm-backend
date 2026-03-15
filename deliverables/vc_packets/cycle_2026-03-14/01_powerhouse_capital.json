@@ -1,0 +1,22 @@
+{
+  "trello_card": {
+    "name": "[P0] VC: Powerhouse Capital - Salim Mitha",
+    "labels": ["P0", "VC", "Gaming-Focused", "North America"],
+    "due_date": "2026-03-21",
+    "description": "## Powerhouse Capital - VC Outreach Packet\n\n### Fund Overview\n- **Fund Name:** Powerhouse Capital\n- **Location:** Los Angeles, California\n- **AUM:** Early-stage venture fund (exact AUM undisclosed, Fund I active)\n- **Stage Focus:** Seed through Series A, with capacity for growth capital\n- **Check Size:** $500K - $3M typical range\n\n### Investment Thesis\nPowerhouse Capital is exclusively dedicated to global technology investment opportunities in media, entertainment, sports & interactive gaming. They invest in direct-to-consumer platforms powered by data, with particular emphasis on:\n- Visual content & interactive media\n- Audio & music technology\n- Gaming & esports\n- Sports technology\n- The experience economy\n\n**AI/Gaming Infrastructure Alignment:** HIGH\n- Recently invested in Lil Snack (AI-powered gaming company leveraging AI at the edge)\n- Actively seeking intersections of Gaming & AI\n- Focus on data-powered consumer platforms\n\n### Key Partner: Salim Mitha\n- **Title:** Co-Founder & Managing Partner\n- **LinkedIn:** https://www.linkedin.com/company/powerhousecapital\n- **Email:** salim@powerhouse.vc (inferred)\n- **Background:** Deep media & gaming investment experience\n\n**Secondary Contact: Ian Doody**\n- Partner at Powerhouse Capital, also involved in Lil Snack investment\n\n### Notable Portfolio Companies\n- **Lil Snack** - AI-powered interactive entertainment (recent $3.1M round lead)\n- **Meco** - Application software / consumer platform\n- **Toya** - Entertainment software / gaming\n- **Arena** - Hardware / live experiences\n- **MasterClass** - Media platform (exited)\n- **Wondery** - Audio content (acquired by Amazon)\n- **The Athletic** - Sports media (acquired by NY Times)\n- **Epic!** - Children's digital media\n\n### Recent Activity\n- Most recent investment: Lil Snack (AI gaming company)\n- Made 3 investments in 2024\n- ~38 companies in portfolio over last 5 years\n\n### Outreach Angle\n**Primary Hook:** AI infrastructure for gaming - emphasize how our platform enables AI-powered game experiences at scale. Reference Lil Snack investment as proof of their AI+gaming interest.\n\n**Secondary Hooks:**\n1. Data-powered consumer platforms (core thesis match)\n2. Gaming infrastructure that enables next-gen experiences\n3. LA-based (local connection opportunity)\n\n### Outreach Strategy\n1. Warm intro through LA gaming ecosystem (strong LA network)\n2. Reference Lil Snack announcement showing AI+gaming thesis alignment\n3. Lead with AI infrastructure angle - not just gaming but AI-enabled gaming\n4. Demo technical capabilities that align with data-powered platform thesis\n\n### Resources\n- Website: https://powerhouse.vc\n- LinkedIn: https://www.linkedin.com/company/powerhousecapital\n- Portfolio: https://powerhouse.vc/about/",
+    "checklist": [
+      "[ ] Research Salim Mitha background and recent talks/interviews",
+      "[ ] Find warm intro path through LA gaming network",
+      "[ ] Draft personalized outreach email referencing Lil Snack/AI thesis",
+      "[ ] Prepare AI infrastructure demo deck",
+      "[ ] Schedule intro call",
+      "[ ] Follow up within 5 days if no response"
+    ]
+  },
+  "research_metadata": {
+    "research_date": "2026-03-14",
+    "researcher": "Planning Lead",
+    "data_sources": ["Powerhouse.vc", "LinkedIn", "PitchBook", "CB Insights", "Tracxn"],
+    "confidence_score": "High"
+  }
+}

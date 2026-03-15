@@ -1,0 +1,33 @@
+{
+  "packet_id": "LSPDMC27-005",
+  "fund_name": "Lightspeed Venture Partners - Gaming & Interactive Media",
+  "fund_website": "https://gaming.lsvp.com",
+  "partner": {
+    "name": "Moritz Baier-Lentz",
+    "title": "Partner & Head of Gaming",
+    "email": "moritz@lsvp.com",
+    "email_confidence": "high",
+    "linkedin": "https://www.linkedin.com/in/moritzbaierlentz"
+  },
+  "fund_details": {
+    "aum": "$29+ billion (platform-wide)",
+    "fund_stage": "Seed to Growth ($2M - $100M+ checks)",
+    "location": "Los Angeles, California, USA (Gaming HQ)",
+    "primary_focus": ["Interactive Platforms", "AI & 3D Technologies", "Game Studios", "Gaming Infrastructure"]
+  },
+  "investment_thesis": {
+    "summary": "Lightspeed's Gaming & Interactive Media practice invests across interactive platforms, AI/3D technologies, and game studios. Moritz Baier-Lentz leads the practice with a focus on AI infrastructure for gaming, including foundation models for spatiotemporal reasoning and generative media creation. Lightspeed has been investing in gaming since 2006.",
+    "ai_alignment": "Exceptional AI infrastructure alignment. Moritz explicitly leads investments in 'AI & 3D Technologies' including 'foundation models for spatiotemporal reasoning, generative media creation, and agentic simulations in video games.' Portfolio includes Inworld AI, Anthropic, xAI, Mistral AI, Pika, Stability AI, Suno, and Tollbit. Lightspeed is arguably the most active AI + Gaming investor globally.",
+    "recent_investments": ["Inworld AI", "Anthropic", "xAI", "Believer Company", "Methodical Games", "Gardens Interactive", "Klang Games"]
+  },
+  "priority": "P0",
+  "due_date": "2026-03-20",
+  "outreach_angle": "Moritz is THE partner for AI gaming infrastructure at one of the world's largest VC firms. Lead with 'agentic simulations' and 'live service automation' - language directly from his investment thesis. Reference Lightspeed's existing AI portfolio (Inworld AI, Anthropic) and position as the infrastructure that operationalizes AI for live ops. His gaming background (former Diablo II global #1) ensures he understands player behavior and live service dynamics.",
+  "verification_status": {
+    "fund_active": true,
+    "contact_verified": true,
+    "last_fund_close": "Ongoing platform deployment",
+    "deployment_status": "Actively deploying - 90%+ deals led"
+  },
+  "notes": "Moritz Baier-Lentz is a former professional gamer turned VC (Diablo II global #1). Previously built BITKRAFT's gaming practice before joining Lightspeed. Based in LA. Known for leading competitive rounds and building strong syndicates. Deep technical expertise in AI/ML for games. Partner Paul Murphy (ex-Dots founder) also covers gaming investments from London."
+}

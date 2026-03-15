@@ -1,0 +1,33 @@
+{
+  "packet_id": "LVPC27-003",
+  "fund_name": "London Venture Partners (LVP)",
+  "fund_website": "https://londonvp.com",
+  "partner": {
+    "name": "David Lau-Kee",
+    "title": "General Partner",
+    "email": "david@londonvp.com",
+    "email_confidence": "high",
+    "linkedin": "https://www.linkedin.com/in/davidlaukee/"
+  },
+  "fund_details": {
+    "aum": "$140 million",
+    "fund_stage": "Seed to Series A",
+    "location": "London, United Kingdom",
+    "primary_focus": ["Interactive Entertainment", "Game Technology", "Platforms", "Services"]
+  },
+  "investment_thesis": {
+    "summary": "LVP is a gaming-focused venture capital fund investing exclusively across the games ecosystem. The team comprises industry veterans and operators with vast experience in games. They invest globally in interactive entertainment, studios, content, technology, platforms, and services.",
+    "ai_alignment": "Strong AI infrastructure alignment. LVP has recently invested in Jam & Tea Studios (AI-leveraged multiplayer games) and maintains active interest in technology enablers. Their portfolio includes Unity, Supercell, and NaturalMotion - demonstrating conviction in platforms that empower game creators. European focus provides geographic diversification for our VC outreach.",
+    "recent_investments": ["Jam & Tea Studios (AI-powered games)", "Third Time Entertainment", "Singularity 6", "Vela Games", "Sanlo (fintech for games)"]
+  },
+  "priority": "P0",
+  "due_date": "2026-03-20",
+  "outreach_angle": "LVP's recent seed investment in Jam & Tea Studios (explicitly 'leveraging technological innovations in AI') confirms active interest in AI-powered game infrastructure. Position as the platform layer that enables AI features in live service games - similar to how Unity provided the engine layer. Reference their Unity and Supercell exits to establish credibility on platform investments.",
+  "verification_status": {
+    "fund_active": true,
+    "contact_verified": true,
+    "last_fund_close": "Ongoing deployment",
+    "deployment_status": "Actively deploying"
+  },
+  "notes": "LVP is Europe's leading gaming-focused VC with team of industry operators. Notable exits include Supercell, Unity, Playfish, and NaturalMotion. Recently achieved Diversity VC Level One Standard certification. Strong focus on technology and platform investments alongside content. David Lau-Kee is a key decision-maker for technology investments."
+}

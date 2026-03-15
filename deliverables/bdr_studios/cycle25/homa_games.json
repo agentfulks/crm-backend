@@ -1,0 +1,48 @@
+{
+  "studio_name": "Homa Games",
+  "priority": "P0",
+  "tier": "Tier-1",
+  "studio_info": {
+    "website": "https://homagames.com",
+    "headquarters_location": "Paris, France",
+    "employee_count": 200,
+    "total_downloads_estimate": "1B+",
+    "key_titles": [
+      "All in Hole (100M+)",
+      "Attack Hole (50M+)",
+      "Fight for America (30M+)"
+    ],
+    "live_ops_evidence": "Strong publishing platform with live ops services, hybrid-casual focus, dedicated LiveOps team supporting partner studios",
+    "linkedin_company_url": "https://www.linkedin.com/company/homa-games/",
+    "funding": "$165M raised (Series B)"
+  },
+  "contact": {
+    "full_name": "Daniel Nathan",
+    "title": "Founder & CEO",
+    "seniority_level": "C-Level",
+    "department": "Leadership",
+    "email": "daniel@homagames.com",
+    "email_source": "ContactOut + RocketReach pattern confirmation",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/in/danielelinathan/",
+    "linkedin_verified": true,
+    "location": "Paris, France",
+    "notes": "Primary target. Co-founder, former McKinsey. Homa is the #2 hyper-casual publisher behind Voodoo, actively pivoting to hybrid-casual."
+  },
+  "outreach_packet": {
+    "subject_line": "Live ops for your 1B+ downloaded portfolio",
+    "hook": "After raising $165M and publishing games with 1B+ downloads, you've seen the industry's shift from hyper-casual to hybrid-casual firsthand.",
+    "body_paragraphs": [
+      "Homa's platform helps studios scale from prototype to hit—but the studios winning in hybrid-casual now need live ops that adapts in real-time. Static event calendars and one-size-fits-all monetization don't cut it when you're managing multiple games with complex meta-layers and seasonal content.",
+      "We built an AI live ops platform that automates the heavy lifting: predicting which events will drive retention, personalizing IAP offers by player behavior, and flagging churn risks 7 days before they happen. It's like adding a senior live ops analyst to every game team, except it works 24/7 across your entire portfolio.",
+      "One of our partner studios saw 34% LTV growth in 90 days by automating their event cadence. With Homa's publishing volume, even marginal improvements across your partner games would compound into significant revenue."
+    ],
+    "cta": "Open to a brief call to explore how AI could enhance Homa's live ops platform?",
+    "angle_notes": {
+      "primary_angle": "Platform enhancement",
+      "why_this_works": "Homa operates as a publishing platform, not just a studio. They provide services to partner studios including live ops support. Positioning our tool as something that enhances their platform offering (making their partners more successful) is more compelling than selling to them as a studio. Nathan's McKinsey background means he values data-driven solutions.",
+      "personalization_trigger": "$165M funding + platform model + hybrid-casual pivot",
+      "pain_hypothesis": "As Homa scales its publishing platform, they need competitive advantages to attract and retain top studio partners—AI-powered live ops could be a differentiator"
+    }
+  }
+}

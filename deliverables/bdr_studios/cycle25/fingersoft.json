@@ -1,0 +1,48 @@
+{
+  "studio_name": "Fingersoft",
+  "priority": "P1",
+  "tier": "Tier-2",
+  "studio_info": {
+    "website": "https://fingersoft.com",
+    "headquarters_location": "Oulu, Finland",
+    "employee_count": 100,
+    "total_downloads_estimate": "2B+",
+    "key_titles": [
+      "Hill Climb Racing (1B+)",
+      "Hill Climb Racing 2 (500M+)",
+      "LEGO Hill Climb Adventures (New 2024)"
+    ],
+    "live_ops_evidence": "Deep live ops on Hill Climb Racing 2 with events, battle passes, multiplayer; transitioning to hybrid-casual with LEGO partnership",
+    "linkedin_company_url": "https://www.linkedin.com/company/fingersoft/",
+    "recent_news": "Teemu Närhi returned as CEO in February 2025; former CEO Jaakko Kylmäoja moved to board"
+  },
+  "contact": {
+    "full_name": "Teemu Närhi",
+    "title": "CEO",
+    "seniority_level": "C-Level",
+    "department": "Leadership",
+    "email": "teemu.narhi@fingersoft.com",
+    "email_source": "Pattern (first.last@fingersoft.com)",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/in/teemu-narhi/",
+    "linkedin_verified": true,
+    "location": "Oulu, Finland",
+    "notes": "Primary target. Returned as CEO February 2025. Previously CEO 2014-2019, knows company inside and out. Mentioned focusing on company culture and delivering beloved games in recent press."
+  },
+  "outreach_packet": {
+    "subject_line": "Hill Climb Racing's next chapter",
+    "hook": "Congrats on returning as CEO—your focus on company culture and delivering beloved games while building Hill Climb Racing 3 is exactly the right priority.",
+    "body_paragraphs": [
+      "Fingersoft has done something remarkable: kept Hill Climb Racing relevant for over a decade with 2B+ downloads. Now with LEGO Hill Climb Adventures and the upcoming HCR3, you're managing multiple live games with different monetization models and event cadences.",
+      "We built an AI live operations platform specifically for studios managing legacy franchises alongside new releases. It predicts which events will resonate with different player segments, automates IAP bundle optimization, and helps identify when players are at risk of churning—before they disappear.",
+      "One studio with a 10-year-old franchise increased revenue 28% by letting AI optimize their live event timing and difficulty curves. With HCR3 on the horizon, this could help you launch stronger and grow faster."
+    ],
+    "cta": "Worth a 15-min call to explore how AI live ops could support HCR3's launch?",
+    "angle_notes": {
+      "primary_angle": "New CEO + upcoming launch",
+      "why_this_works": "Närhi just returned as CEO in Feb 2025 and is focused on delivering HCR3. New CEOs are looking for wins and open to tools that improve outcomes. The timing (fresh leadership + upcoming launch) creates urgency.",
+      "personalization_trigger": "CEO return announcement Feb 2025 + HCR3 development",
+      "pain_hypothesis": "Managing a legacy franchise while launching HCR3 creates resource strain; AI could optimize existing games while team focuses on new launch"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+- [ ] **Play Ventures** (Singapore & Helsinki)
+  - **Location:** Singapore HQ with a Helsinki presence for sourcing EU founders [[1]](https://investgame.net/investors/play-ventures/)
+  - **Check size:** Typical first checks of $500K-$1M for pre-seed and seed gaming rounds [[1]](https://investgame.net/investors/play-ventures/)
+  - **Gaming thesis / focus:** Backs the earliest global founders building game studios, consumer apps with gaming DNA, and the B2B/AI infrastructure that powers live service content velocity [[2]](https://www.play.vc/)
+  - **Recent gaming deals (2023-2025):**
+    - Re-upped in Social First’s $4.2M seed to accelerate a social sandbox MMO (Aug 2024) [[3]](https://www.pocketgamer.biz/social-first-bag-a-further-42-million-as-they-redefine-social-gaming/)
+    - Participated in Appcharge’s $26M Series A for DTC game payments infrastructure (Nov 2024) [[4]](https://www.appcharge.com/blog/appcharge-raises-26-million)
+  - **Best partner to target:** Henric Suuronen – Founding Partner. Former games studio founder with deep empathy for live service tooling; he champions infra bets like Appcharge that increase content cadence.
+  - **LinkedIn:** https://www.linkedin.com/in/henricsuuronen/
+  - **Warm path angle:** Hyve Labs can reference Play’s Appcharge relationship and position Hyve as the content-side complement to their DTC infrastructure thesis, plus highlight shared focus on multiplayer/live service pipelines tested with Social First.
+  - **Sources:** [[1]](https://investgame.net/investors/play-ventures/) [[2]](https://www.play.vc/) [[3]](https://www.pocketgamer.biz/social-first-bag-a-further-42-million-as-they-redefine-social-gaming/) [[4]](https://www.appcharge.com/blog/appcharge-raises-26-million)
+
+- [ ] **Konvoy Ventures** (Denver, CO)
+  - **Location:** Denver-headquartered thesis-driven gaming fund [[5]](https://nerdstreet.com/news/2024/9/nerd-street-konvoy-ventures-funding-announcement)
+  - **Check size:** Leads $500K-$2.5M rounds at pre-seed, seed, and Series A across global gaming infrastructure [[6]](https://investgame.net/investors/konvoy-ventures/)
+  - **Gaming thesis / focus:** Invests in the platforms, compliance rails, and technologies at the frontier of gaming (payments, esports venues, child safety, Web3 tooling) [[5]](https://nerdstreet.com/news/2024/9/nerd-street-konvoy-ventures-funding-announcement)
+  - **Recent gaming deals (2023-2025):**
+    - Co-invested in k-ID’s $45M Series A to fund a global child-safety compliance engine for games (Jun 2024) [[7]](https://techcrunch.com/2024/06/25/a16z-k-id-game-developers-child-safety-regulations/)
+    - Led $6M for Nerd Street’s collegiate esports venue rollout (Sep 2024) [[5]](https://nerdstreet.com/news/2024/9/nerd-street-konvoy-ventures-funding-announcement)
+    - Joined Carry1st’s $27M pre-Series B to scale African mobile publishing (Jan 2023) [[8]](https://techcrunch.com/2023/01/17/african-gaming-startup-carry1st-raises-27m-from-bitkraft-ventures-and-a16z/)
+  - **Best partner to target:** Josh Chapman – Managing Partner. He leads infra-heavy bets (Nerd Street, k-ID) and is vocal about tooling that unlocks new revenue for live games.
+  - **LinkedIn:** https://www.linkedin.com/in/joshuadchapman/
+  - **Warm path angle:** Reference Hyve’s ability to drive safe, rapid content updates that dovetail with Konvoy portfolio companies (e.g., compliance from k-ID, esports venues via Nerd Street) and highlight how Hyve can pilot with Carry1st-like publishers hungry for LiveOps gains.
+  - **Sources:** [[5]](https://nerdstreet.com/news/2024/9/nerd-street-konvoy-ventures-funding-announcement) [[6]](https://investgame.net/investors/konvoy-ventures/) [[7]](https://techcrunch.com/2024/06/25/a16z-k-id-game-developers-child-safety-regulations/) [[8]](https://techcrunch.com/2023/01/17/african-gaming-startup-carry1st-raises-27m-from-bitkraft-ventures-and-a16z/)
+
+- [ ] **Transcend Fund** (Los Angeles, CA)
+  - **Location:** LA-based early-stage games specialist per recent VC landscape reports [[9]](https://www.rho.co/blog/vcs-in-gaming)
+  - **Check size:** Writes $200K-$2M seed/Series A checks into game studios and enabling tech [[10]](https://www.pocketgamer.biz/transcend-fund-raises-50-million-for-games-companies/)
+  - **Gaming thesis / focus:** Partners with bold founders reimagining interactive entertainment, from core studios to AI production infrastructure [[9]](https://www.rho.co/blog/vcs-in-gaming)
+  - **Recent gaming deals (2023-2025):**
+    - Led Eggscape Entertainment’s $4.25M seed for mixed-reality social gaming (Feb 2024) [[11]](https://www.prnewswire.com/news-releases/eggscape-entertainment-secures-4-25m-investment-to-build-the-future-of-social-gaming-for-mixed-reality-and-beyond-302050851.html)
+    - Led the $4.8M seed into Live Aware Labs’ AI-powered player feedback platform (Oct 2024) [[12]](https://www.pocketgamer.biz/live-aware-labs-lands-48-million-in-seed-round-to-enhance-game-development/)
+    - Participated alongside Krafton/BITKRAFT in Ruckus Games’ $19M Series A for a new multiplayer action IP (Nov 2024) [[13]](https://www.gamesindustry.biz/ruckus-games-raises-19m-in-funding-round-led-by-krafton)
+  - **Best partner to target:** Shanti Bergel – Managing Director. Long-time Zynga/Bandai Namco exec focused on production infrastructure and AI-powered workflows.
+  - **LinkedIn:** https://www.linkedin.com/in/shantibergel/
+  - **Warm path angle:** Connect Hyve’s AI-native content stack to Transcend’s backing of Live Aware Labs and Eggscape—position Hyve as the pipeline layer that turns their portfolio’s insights into shippable content velocity.
+  - **Sources:** [[9]](https://www.rho.co/blog/vcs-in-gaming) [[10]](https://www.pocketgamer.biz/transcend-fund-raises-50-million-for-games-companies/) [[11]](https://www.prnewswire.com/news-releases/eggscape-entertainment-secures-4-25m-investment-to-build-the-future-of-social-gaming-for-mixed-reality-and-beyond-302050851.html) [[12]](https://www.pocketgamer.biz/live-aware-labs-lands-48-million-in-seed-round-to-enhance-game-development/) [[13]](https://www.gamesindustry.biz/ruckus-games-raises-19m-in-funding-round-led-by-krafton)
+
+- [ ] **1Up Ventures** (Kirkland, WA)
+  - **Location:** Kirkland-based fund purpose-built for independent game studios [[14]](https://pipeseed.com/investor/1up-ventures-972006)
+  - **Check size:** Standard first checks between $500K and $2M into pre-seed/seed studios [[14]](https://pipeseed.com/investor/1up-ventures-972006)
+  - **Gaming thesis / focus:** Exclusive focus on indie/AA studios, pairing capital with a curated founder community run by ex-Xbox VP Ed Fries [[14]](https://pipeseed.com/investor/1up-ventures-972006)
+  - **Recent gaming deals (2023-2025):**
+    - Joined the $3.15M seed for Jam & Tea’s AI-driven multiplayer RPG platform (Oct 2023) [[15]](https://aijourn.com/jam-tea-studios-raises-3-15m-seed-round-led-by-lvp-to-pioneer-a-new-generation-of-multiplayer-roleplaying-video-games/)
+    - Participated in Stoke Games’ $5.5M seed for a strategic PvP shooter (Feb 2024) [[16]](https://www.gamesindustry.biz/stoke-games-raises-55m-for-shooter-adjacent-pvp-game)
+    - Co-invested with ForsVC in Galaxy Grove’s $1M growth round to scale management sims (Oct 2025) [[17]](https://www.control-online.nl/2025/10/14/galaxy-grove-haalt-investering-van-1-miljoen-dollar-binnen/)
+  - **Best partner to target:** Ed Fries – Managing Partner. Xbox co-creator who still reads every deck and champions tools that keep small teams shipping ambitious games.
+  - **LinkedIn:** https://www.linkedin.com/in/edfries/
+  - **Warm path angle:** Reference Hyve’s ability to multiply small art teams—the same constraint 1Up’s indie portfolio (Jam & Tea, Galaxy Grove) faces—and offer to run a pilot on narrative/live service content that those studios or their peers can’t staff internally.
+  - **Sources:** [[14]](https://pipeseed.com/investor/1up-ventures-972006) [[15]](https://aijourn.com/jam-tea-studios-raises-3-15m-seed-round-led-by-lvp-to-pioneer-a-new-generation-of-multiplayer-roleplaying-video-games/) [[16]](https://www.gamesindustry.biz/stoke-games-raises-55m-for-shooter-adjacent-pvp-game) [[17]](https://www.control-online.nl/2025/10/14/galaxy-grove-haalt-investering-van-1-miljoen-dollar-binnen/)
+
+- [ ] **London Venture Partners (LVP)** (London, UK)
+  - **Location:** London-headquartered seed fund dedicated solely to the games ecosystem [[18]](https://investgame.net/investors/lvp/)
+  - **Check size:** Typical initial commitments of $1M-$2M at pre-seed/seed [[18]](https://investgame.net/investors/lvp/)
+  - **Gaming thesis / focus:** Veteran team (ex-EA, Playfish) backing online games, tools, and digital distribution plays across Europe and North America [[18]](https://investgame.net/investors/lvp/)
+  - **Recent gaming deals (2023-2025):**
+    - Led Jam & Tea Studios’ $3.15M seed to build AI-enhanced multiplayer RPG tech (Oct 2023) [[15]](https://aijourn.com/jam-tea-studios-raises-3-15m-seed-round-led-by-lvp-to-pioneer-a-new-generation-of-multiplayer-roleplaying-video-games/)
+    - Participated in Steel City Interactive’s £15M raise to launch Undisputed boxing sim (May 2024) [[19]](https://www.gamesindustry.biz/steel-city-interactive-raises-15m-in-funding)
+    - Co-led VaultN’s $3.5M round for automated digital distribution infrastructure (Nov 2025) [[20]](https://www.finsmes.com/2025/11/vaultn-raises-3-5m-in-funding.html)
+  - **Best partner to target:** Are Mack Growen – General Partner. Former Playfish/EA exec focused on live service monetization platforms and distribution tooling.
+  - **LinkedIn:** https://www.linkedin.com/in/aremackgrowen/
+  - **Warm path angle:** Tie Hyve’s production engine to LVP’s portfolio needs (VaultN, Steel City Interactive) and offer EU case studies showing how Hyve can keep premium console/PC pipelines stocked between major beats.
+  - **Sources:** [[15]](https://aijourn.com/jam-tea-studios-raises-3-15m-seed-round-led-by-lvp-to-pioneer-a-new-generation-of-multiplayer-roleplaying-video-games/) [[18]](https://investgame.net/investors/lvp/) [[19]](https://www.gamesindustry.biz/steel-city-interactive-raises-15m-in-funding) [[20]](https://www.finsmes.com/2025/11/vaultn-raises-3-5m-in-funding.html)

@@ -1,0 +1,48 @@
+{
+  "studio_name": "Supersonic Studios",
+  "priority": "P1",
+  "tier": "Tier-2",
+  "studio_info": {
+    "website": "https://supersonic.com",
+    "headquarters_location": "Tel Aviv, Israel",
+    "employee_count": 200,
+    "total_downloads_estimate": "500M+",
+    "key_titles": [
+      "Bridge Race (100M+)",
+      "Going Balls (100M+)",
+      "Tall Man Run (50M+)"
+    ],
+    "live_ops_evidence": "Unity's publishing arm focused on hybrid-casual; explicitly offers LiveOps specialists as part of publishing package; strong emphasis on long-term retention",
+    "linkedin_company_url": "https://www.linkedin.com/company/supersonic/",
+    "parent_company": "Unity (U) via ironSource acquisition"
+  },
+  "contact": {
+    "full_name": "Growth Partnerships Team",
+    "title": "Team Lead, Growth Partnerships",
+    "seniority_level": "Director",
+    "department": "Publishing",
+    "email": "partnerships@supersonic.com",
+    "email_source": "Website contact + pattern inference",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/company/supersonic/",
+    "linkedin_verified": false,
+    "location": "Tel Aviv, Israel",
+    "notes": "Supersonic is Unity's publishing arm. They explicitly have Growth Partnerships and LiveOps teams. Best approach is partnerships-focused rather than CEO-direct."
+  },
+  "outreach_packet": {
+    "subject_line": "Supercharging Supersonic's LiveOps offering",
+    "hook": "Supersonic already offers LiveOps specialists to developer partners—what if you could give those specialists AI superpowers?",
+    "body_paragraphs": [
+      "Your website says it clearly: Supersonic provides 'LiveOps specialists' to help games succeed long-term. That's a competitive advantage in the publishing space. But even the best specialists are limited by manual analysis and reaction time.",
+      "We built an AI platform that augments live ops teams—predicting which events will drive retention 7 days ahead, automatically balancing IAP offers by player segment, and surfacing churn risks before they happen. It's not replacing your specialists; it's giving them superpowers.",
+      "One publishing partner using our AI saw 34% LTV growth in 90 days while reducing manual analysis time by 60%. For Supersonic's portfolio, this could mean better results for partners with the same team size."
+    ],
+    "cta": "Open to a brief demo of how AI could enhance your LiveOps specialist offering?",
+    "angle_notes": {
+      "primary_angle": "Augment existing capability",
+      "why_this_works": "Supersonic already markets LiveOps as a core offering. Positioning AI as augmenting (not replacing) their specialists is key. They're part of Unity now, so they have resources but also pressure to show ROI on the ironSource acquisition.",
+      "personalization_trigger": "Existing LiveOps specialist offering + Unity backing",
+      "pain_hypothesis": "LiveOps specialists are valuable but limited by manual work; AI augmentation could improve partner results and operational efficiency simultaneously"
+    }
+  }
+}

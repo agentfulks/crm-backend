@@ -1,0 +1,48 @@
+{
+  "studio_name": "Mintegral",
+  "priority": "P1",
+  "tier": "Tier-2",
+  "studio_info": {
+    "website": "https://www.mintegral.com",
+    "headquarters_location": "Beijing, China",
+    "employee_count": 300,
+    "total_downloads_estimate": "1B+",
+    "key_titles": [
+      "Ad platform serving 1000+ apps",
+      "Mobile advertising and monetization",
+      "Publishing services for global reach"
+    ],
+    "live_ops_evidence": "Mobile advertising platform with publishing arm; helps developers with user acquisition, monetization, and growth; recently expanding creative and playable ad capabilities",
+    "linkedin_company_url": "https://www.linkedin.com/company/mintegral/",
+    "parent_company": "Mobvista (HKEX: 1860)"
+  },
+  "contact": {
+    "full_name": "Erick Fang",
+    "title": "CEO",
+    "seniority_level": "C-Level",
+    "department": "Leadership",
+    "email": "erick.fang@mintegral.com",
+    "email_source": "Pattern (first.last@mintegral.com per LeadIQ)",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/in/erick-fang/",
+    "linkedin_verified": true,
+    "location": "Beijing, China",
+    "notes": "Primary target. CEO of Mintegral, part of Mobvista group. Focus on ad tech and monetization. May be interested in live ops as extension of monetization capabilities."
+  },
+  "outreach_packet": {
+    "subject_line": "Expanding Mintegral's monetization toolkit",
+    "hook": "Mintegral has become a dominant player in mobile ad tech—helping 1000+ apps with user acquisition and monetization.",
+    "body_paragraphs": [
+      "Your platform already drives installs and revenue for game developers worldwide. But the studios winning in 2025 aren't just optimizing ads—they're optimizing live ops. Event timing, IAP personalization, and churn prediction are becoming as important as CPI and ROAS.",
+      "We built an AI live operations platform that complements ad tech beautifully. While you bring players in, our system maximizes their LTV through intelligent event optimization, personalized offers, and predictive churn alerts. One partner using both approaches saw 40% higher ARPU than ad optimization alone.",
+      "This could be a natural extension of Mintegral's offering—giving your developer partners end-to-end growth support from acquisition through long-term retention. We offer API-first integration and co-marketing opportunities."
+    ],
+    "cta": "Worth exploring how live ops AI could complement Mintegral's platform?",
+    "angle_notes": {
+      "primary_angle": "Platform extension / partnership",
+      "why_this_works": "Mintegral is an ad tech/platform company, not a pure game studio. Positioning as a complementary service that enhances their developer offering is stronger than selling to them as a studio. They're Chinese company with global reach—may value solutions that help their Western partners succeed.",
+      "personalization_trigger": "1000+ app network + ad tech focus",
+      "pain_hypothesis": "Ad tech is commoditizing; Mintegral needs to expand value proposition beyond UA—live ops tools could differentiate their platform and increase partner stickiness"
+    }
+  }
+}

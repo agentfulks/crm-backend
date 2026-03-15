@@ -1,0 +1,22 @@
+### Firm Overview
+- Play Ventures is a $140M+ global gaming fund writing $100K-$1M checks into pre-seed and seed studios, platforms, and infrastructure.
+- Fund III leans into B2B, AI, and payments tooling that help developers ship and monetize faster, with offices in Singapore and Helsinki.
+- Portfolio spans 80+ companies including Appcharge, Scenario, Social First, and Cypher Games.
+
+### Partner Focus
+- Founding Partner Harri Manninen is a former gaming entrepreneur who now champions "playable apps" and infrastructure that compounds retention for F2P teams.
+- He looks for products that give developers leverage without bloating headcount and that can tap Play’s operator-heavy LP base.
+
+### Recent Deals
+- 2024: Invested in Appcharge to give studios direct-to-consumer payments rails.
+- 2024: Backed Scenario for AI-generated art pipelines.
+- 2024: Led Social First’s pre-seed round for multiplayer infrastructure.
+
+### Outreach Email
+Subject: Helping Play portfolio teams double their LiveOps cadence
+
+Harri, the Appcharge and Scenario bets you have been making show how serious Play is about infrastructure. Every studio I speak with echoes the same pain: they want to ship twice as many LiveOps beats without burning out the team or bloating budgets.
+
+Hyve Labs is the AI production stack we built after running Zynga and SciPlay scale. Teams plug us into their content pipeline to auto-generate concepts, production-ready assets, and instrumentation so PMs can test store updates weekly. Early partners are clocking 40% faster art turnaround and 25% lifts in LiveOps-driven revenue.
+
+Worth a quick chat this week to see whether Hyve should sit next to Scenario inside the Play Ventures toolbox?

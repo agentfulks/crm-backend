@@ -1,0 +1,124 @@
+{
+  "cards": [
+    {
+      "name": "[P0] BDR: Voodoo - Alexandre Yazdi (CEO)",
+      "desc": "**Studio:** Voodoo\n**Contact:** Alexandre Yazdi (CEO & Co-Founder)\n**Email:** alexandre.yazdi@voodoo.io\n**Downloads:** 7,000,000,000+\n**Location:** Paris, France\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 16, 2026\n\n**Key Stats:**\n- 7B+ downloads across 150+ games\n- 300M+ monthly active users\n- 300 employees\n\n**Outreach Angle:**\nScale-appropriate AI for the world's largest mobile publisher. Content velocity at massive scale. AI for infinite level variations, UA creative generation, and personalized difficulty curves.\n\n**Recent Focus:** Pivot toward hybrid-casual with deeper gameplay\n**Challenge:** Content requirements multiplying with deeper mechanics\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/01_voodoo_alexandre_yazdi.md",
+      "labels": ["P0", "BDR", "Tier-1", "Europe"],
+      "due": "2026-03-16T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email via LinkedIn",
+        "Review and personalize email draft",
+        "Send during Paris business hours (UTC+1)",
+        "Schedule follow-up in 5 days"
+      ]
+    },
+    {
+      "name": "[P0] BDR: SayGames - Egor Vaihanski (CEO)",
+      "desc": "**Studio:** SayGames\n**Contact:** Egor Vaihanski (CEO & Co-Founder)\n**Email:** egor.vaihanski@saygames.by\n**Downloads:** 5,000,000,000+\n**Location:** Minsk, Belarus\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 16, 2026\n\n**Key Stats:**\n- 5B+ downloads\n- 70+ active games\n- 150-200 employees\n\n**Key Games:** My Little Universe, Sand Balls, Sandscapes\n\n**Outreach Angle:**\nContent scaling for high-velocity publisher. AI to generate level variations 10x faster, A/B test mechanics automatically, create culturally-localized content for global markets.\n\n**Challenge:** Content velocity across massive portfolio of 70+ games\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/02_saygames_egor_vaihanski.md",
+      "labels": ["P0", "BDR", "Tier-1", "Europe"],
+      "due": "2026-03-16T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Review email draft",
+        "Send during Belarus business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Supersonic Studios - Niv Yemini (VP R&D)",
+      "desc": "**Studio:** Supersonic Studios (Unity)\n**Contact:** Niv Yemini (VP R&D)\n**Email:** niv.yemini@supersonic.com\n**Downloads:** 10,000,000,000+\n**Location:** Tel Aviv, Israel\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 16, 2026\n\n**Key Stats:**\n- 10B+ downloads (Unity's publishing arm)\n- Access to Unity engine data\n- Global publishing network\n\n**Outreach Angle:**\nLeveraging Unity data with AI optimization. AI to predict hit potential from prototype metrics, auto-optimize in-game economies, generate personalized content for player segments.\n\n**Unique Advantage:** Data access through Unity most publishers dream of\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/03_supersonic_niv_yemini.md",
+      "labels": ["P0", "BDR", "Tier-1", "EMEA"],
+      "due": "2026-03-16T23:59:00.000Z",
+      "checklist": [
+        "Verify VP R&D email",
+        "Reference Unity data advantage",
+        "Send during Israel business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Homa Games - Daniel Nathan (CEO)",
+      "desc": "**Studio:** Homa Games\n**Contact:** Daniel Nathan (CEO & Co-Founder)\n**Email:** daniel.nathan@homa.games\n**Downloads:** 1,000,000,000+\n**Location:** Paris, France\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 17, 2026\n\n**Key Stats:**\n- 1B+ downloads\n- 80+ games\n- Homa Lab platform for rapid prototyping\n\n**Outreach Angle:**\nCompleting the Homa Lab loop with AI content. AI to generate narrative content extending session length, create meta-layer mechanics automatically, balance progression curves using player modeling.\n\n**Focus:** Hybrid-casual transition with deeper gameplay\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/04_homagames_daniel_nathan.md",
+      "labels": ["P0", "BDR", "Tier-1", "Europe"],
+      "due": "2026-03-17T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Homa Lab platform",
+        "Send during EU business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Lion Studios - Rafael Vivas (Publishing Lead)",
+      "desc": "**Studio:** Lion Studios (AppLovin)\n**Contact:** Rafael Vivas (Publishing Lead)\n**Email:** rafael.vivas@lionstudios.cc\n**Downloads:** 1,000,000,000+\n**Location:** Palo Alto, CA\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 17, 2026\n\n**Key Stats:**\n- 1B+ downloads\n- AppLovin's publishing arm\n- Strong UA and monetization capabilities\n\n**Key Games:** Match 3D, Blend It, Slap Kings\n\n**Outreach Angle:**\nAI content generation + AppLovin distribution = unstoppable combination. AI to auto-generate level variations, create culturally-adapted content, personalize game experiences per user segment.\n\n**Advantage:** AppLovin's distribution power + AI content\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/05_lionstudios_rafael_vivas.md",
+      "labels": ["P0", "BDR", "Tier-1", "US"],
+      "due": "2026-03-17T23:59:00.000Z",
+      "checklist": [
+        "Verify Publishing Lead email",
+        "Reference AppLovin connection",
+        "Send during US business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Crazy Labs - Sagi Schliesser (SVP)",
+      "desc": "**Studio:** Crazy Labs (TabTale)\n**Contact:** Sagi Schliesser (SVP)\n**Email:** sagi.schliesser@crazylabs.com\n**Downloads:** 6,000,000,000+\n**Location:** Tel Aviv, Israel\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 17, 2026\n\n**Key Stats:**\n- 6B+ downloads\n- TabTale parent company\n- Strong simulation/ASMR game portfolio\n\n**Outreach Angle:**\nInfinite simulation content generation. AI to generate simulation scenarios infinitely (for ASMR/toy games), create level variations 100x faster, test mechanics automatically before production.\n\n**Focus:** Simulation games at massive scale\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/06_crazylabs_sagi_schliesser.md",
+      "labels": ["P0", "BDR", "Tier-1", "EMEA"],
+      "due": "2026-03-17T23:59:00.000Z",
+      "checklist": [
+        "Verify SVP email",
+        "Reference TabTale history",
+        "Send during Israel business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Kwalee - David Darling (CEO)",
+      "desc": "**Studio:** Kwalee\n**Contact:** David Darling (CEO & Co-Founder)\n**Email:** david.darling@kwalee.com\n**Downloads:** 1,000,000,000+\n**Location:** Leamington Spa, UK\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 18, 2026\n\n**Key Stats:**\n- 1B+ downloads\n- 100+ employees\n- Founded by Codemasters co-founder\n\n**Legacy:** Deep gaming history, innovation focus\n\n**Outreach Angle:**\nAI for next-gen publishing from industry veteran. AI to generate content variations using proven hit formulas, optimize creative production for UA, balance economies in hybrid-casual mechanics.\n\n**Founder Credibility:** Co-founder of Codemasters, industry legend\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/07_kwalee_david_darling.md",
+      "labels": ["P0", "BDR", "Tier-1", "Europe"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Codemasters legacy",
+        "Send during UK business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Rollic Games - Burak Vardal (CEO)",
+      "desc": "**Studio:** Rollic Games (Zynga)\n**Contact:** Burak Vardal (CEO & Co-Founder)\n**Email:** burak.vardal@rollicgames.com\n**Downloads:** 500,000,000+\n**Location:** Istanbul, Turkey\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 18, 2026\n\n**Key Stats:**\n- 500M+ downloads\n- Acquired by Zynga\n- Strong hyper-casual portfolio\n\n**Key Games:** High Heels, Hair Challenge, Text or Die\n\n**Outreach Angle:**\nAI scaling for Zynga-owned publisher. AI to generate hyper-casual prototypes automatically, optimize live ops content for retention, scale creative production for UA campaigns.\n\n**Advantage:** Zynga's resources + AI output multiplication\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/08_rollic_burak_vardal.md",
+      "labels": ["P0", "BDR", "Tier-1", "EMEA"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Zynga acquisition",
+        "Send during Turkey business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Amanotes - Bill Vo (CEO)",
+      "desc": "**Studio:** Amanotes\n**Contact:** Bill Vo (CEO & Co-Founder)\n**Email:** bill.vo@amanotes.com\n**Downloads:** 2,000,000,000+\n**Location:** Ho Chi Minh City, Vietnam\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 18, 2026\n\n**Key Stats:**\n- 2B+ downloads\n- 300+ employees\n- Leading music game publisher\n\n**Key Games:** Magic Tiles, Tiles Hop, numerous music games\n\n**Outreach Angle:**\nAI for music game content generation. AI to generate beat-mapped levels automatically from any track, create personalized music experiences per player, scale content for expanding genre portfolio.\n\n**Unique:** Music-powered gaming expertise\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/09_amanotes_bill_vo.md",
+      "labels": ["P0", "BDR", "Tier-1", "Asia"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Magic Tiles success",
+        "Send during Vietnam business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Supercent - Junsik Kong (CEO)",
+      "desc": "**Studio:** Supercent\n**Contact:** Junsik Kong (CEO)\n**Email:** junsik.kong@supercent.io\n**Downloads:** 1,000,000,000+\n**Location:** Seoul, South Korea\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 18, 2026\n\n**Key Stats:**\n- 1B+ downloads (in just 3 years)\n- Founded 2019\n- 100-200 employees\n- Hit factory model\n\n**Key Games:** Phone Case DIY, Jelly Run, Race Master 3D\n\n**Outreach Angle:**\nAI acceleration for hit factory model. AI to generate game concepts from trending mechanics, auto-produce level content at scale, optimize creative variations for UA testing.\n\n**Achievement:** 1B+ downloads in 3 years is remarkable growth\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle_2026-03-14/10_supercent_junsik_kong.md",
+      "labels": ["P0", "BDR", "Tier-1", "Asia"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference rapid growth story",
+        "Send during Korea business hours",
+        "Schedule follow-up"
+      ]
+    }
+  ]
+}

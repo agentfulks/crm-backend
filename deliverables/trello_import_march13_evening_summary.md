@@ -1,0 +1,151 @@
+# Trello Import Summary — March 13, 2026 (Evening Batch)
+**Time:** 8:10 PM UTC  
+**Import File:** `trello_import_march13_evening.json`
+
+## Overview
+
+| Metric | Count |
+|--------|-------|
+| **Total Cards** | 15 |
+| **VC Packets** | 5 |
+| **BDR Studios** | 10 |
+| **Combined Portfolio Downloads** | 5.5B+ |
+
+---
+
+## VC Outreach Engine — Daily Queue (5 New Cards)
+
+### 1. Griffin Gaming Partners — Peter Levin
+- **Priority:** P0 | **AUM:** $1.5B | **Location:** Los Angeles
+- **Contact:** peter@griffingp.com
+- **Thesis:** Infrastructure (Discord, Overwolf, AppLovin portfolio)
+- **Angle:** AI as next evolution of game enablement platforms
+- **Due:** March 20, 2026
+
+### 2. Konvoy Ventures — Jason Chapman
+- **Priority:** P0 | **AUM:** $150M+ | **Location:** Denver
+- **Contact:** jason@konvoy.vc
+- **Thesis:** Gaming infrastructure specialist (Pragma, Raidbase)
+- **Angle:** AI as intelligence layer on gaming infrastructure
+- **Due:** March 20, 2026
+
+### 3. London Venture Partners — David Gardner
+- **Priority:** P0 | **AUM:** $200M+ | **Location:** London
+- **Contact:** david@lvp.com
+- **Thesis:** European gaming ecosystem
+- **Angle:** AI for European studios competing globally
+- **Due:** March 20, 2026
+
+### 4. Andreessen Horowitz Games — Andrew Chen
+- **Priority:** P0 | **AUM:** $600M | **Location:** Menlo Park
+- **Contact:** andrew@a16z.com
+- **Thesis:** Gaming platforms & network effects
+- **Angle:** AI solving content cold start for live service
+- **Due:** March 20, 2026
+
+### 5. Lightspeed Gaming — Amy Wu
+- **Priority:** P0 | **AUM:** Multi-billion | **Location:** NYC/Bay Area
+- **Contact:** amy.wu@lsvp.com
+- **Thesis:** Gaming infrastructure (Epic, The Sandbox)
+- **Angle:** AI enabling creator economies at scale
+- **Due:** March 20, 2026
+
+---
+
+## BDR Game Studios — Ready for Review (10 New Cards)
+
+### Tier-1 Priority
+
+| Studio | Contact | Downloads | Location | Angle |
+|--------|---------|-----------|----------|-------|
+| **Bravestars Games** | Le Manh Duc (CEO) | 1B+ | Hanoi, Vietnam | AI simulation content |
+| **Fingersoft** | Teemu Närhi (CEO) | 1B+ | Oulu, Finland | AI racing track generation |
+| **Moonee** | Erez Mishli (Co-CEO) | 500M+ | Tel Aviv, Israel | AI creative optimization |
+| **MAG Interactive** | Daniel Hasselberg (CEO) | 300M+ | Stockholm, Sweden | AI word puzzle generation |
+| **Green Panda Games** | Guillaume Sztejnberg | 300M+ | Paris, France | AI idle economy optimization |
+| **Tactile Games** | Asbjoern Soendergaard | 200M+ | Copenhagen, Denmark | AI narrative match-3 |
+| **Space Ape Games** | John Earner (CEO) | 100M+ | London, UK | AI midcore live ops |
+
+### Tier-2 Priority
+
+| Studio | Contact | Downloads | Location | Angle |
+|--------|---------|-----------|----------|-------|
+| **Innersloth** | Forest Willard (CEO) | 500M+ | Redmond, WA | AI indie live ops (Among Us) |
+| **ZPLAY Games** | He Peng (CEO) | 500M+ | Beijing, China | AI content + localization |
+| **Playgendary** | Dmitriy Shelengovskiy | 500M+ | Limassol, Cyprus | AI action game content |
+
+---
+
+## Geographic Distribution
+
+| Region | Studios | Coverage |
+|--------|---------|----------|
+| **Europe** | 6 | UK, Finland, Sweden, France, Denmark, Cyprus |
+| **Asia** | 2 | Vietnam, China |
+| **Middle East** | 1 | Israel |
+| **North America** | 1 | USA |
+
+---
+
+## Daily Metrics
+
+### Today's Output (March 13, 2026)
+
+| Board | Morning | Evening | **Total** |
+|-------|---------|---------|-----------|
+| VC Daily Queue | 5 | 5 | **10** |
+| BDR Ready for Review | 5 | 10 | **15** |
+
+### Cumulative Week Progress
+
+| Board | Cards Created |
+|-------|---------------|
+| VC Daily Queue | 10 P0 packets |
+| BDR Ready for Review | 15 studios (27B+ downloads) |
+
+---
+
+## Import Instructions
+
+### Option 1: Manual Import
+1. Open Trello board
+2. For each card in the JSON file:
+   - Copy card name and description
+   - Add labels (P0, VC/BDR, region)
+   - Set due date
+   - Add checklist items
+
+### Option 2: JSON Import
+- File: `/data/workspace/deliverables/trello_import_march13_evening.json`
+- Contains all 15 cards with full descriptions
+
+---
+
+## File Locations
+
+```
+/data/workspace/deliverables/
+├── trello_import_march13_evening.json (15 cards)
+├── vc_packets/cycle27/
+│   ├── griffin_gaming_partners.json
+│   ├── konvoy_ventures.json
+│   ├── london_venture_partners.json
+│   ├── andreessen_horowitz_games.json
+│   └── lightspeed_gaming.json
+└── bdr_game_studios/email_drafts/cycle27/
+    ├── 01_bravestars_games_le_manh_duc.md
+    ├── 02_fingersoft_teemu_narhi.md
+    ├── 03_moonee_erez_mishli.md
+    ├── 04_innersloth_forest_willard.md
+    ├── 05_zplay_games_he_peng.md
+    ├── 06_playgendary_dmitriy_shelengovskiy.md
+    ├── 07_mag_interactive_daniel_hasselberg.md
+    ├── 08_green_panda_games_guillaume_sztejnberg.md
+    ├── 09_tactile_games_asbjoern_soendergaard.md
+    ├── 10_space_ape_games_john_earner.md
+    └── README.md
+```
+
+---
+
+*Generated by VANTAGE | March 13, 2026 8:20 PM UTC*

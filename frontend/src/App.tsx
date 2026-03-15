@@ -15,7 +15,7 @@ import { FundDetailModal } from './components/FundDetailModal';
 import { KanbanBoard } from './components/KanbanBoard';
 import { BulkUploadModal } from './components/BulkUploadModal';
 import { BulkDeleteBar } from './components/BulkDeleteBar';
-import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase, Moon, Sun, Upload, ListChecks } from 'lucide-react';
+import { ClipboardCheck, Filter, Inbox, Users, Building2, Mail, UserCircle, LayoutDashboard, Briefcase, Moon, Sun, Upload, ListChecks, Menu, X } from 'lucide-react';
 import type { StudioPacket, BDRContact, Fund } from './types';
 
 const API_BASE = import.meta.env.VITE_API_URL || '/api';
@@ -29,6 +29,7 @@ function App() {
   const [currentView, setCurrentView] = useState<View>('studios');
   const [showTemplateManager, setShowTemplateManager] = useState(false);
   const [showBulkUpload, setShowBulkUpload] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Bulk-select state
   const [studioSelectMode, setStudioSelectMode] = useState(false);
@@ -176,7 +177,8 @@ function App() {
               </div>
             </div>
 
-            <div className="flex items-center gap-3 flex-wrap justify-end">
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center gap-3 flex-wrap justify-end">
               {/* View Toggle */}
               <div className="flex bg-gray-100 rounded-lg p-1">
                 <button
@@ -262,9 +264,107 @@ function App() {
                 </div>
               )}
             </div>
+
+            {/* Mobile Navigation */}
+            <div className="flex lg:hidden items-center gap-2">
+              {/* Awaiting approval counter (mobile) */}
+              {currentView !== 'tasks' && (
+                <div className="text-right mr-2">
+                  <p className="text-lg font-bold text-gray-900">{pendingCount}</p>
+                  <p className="text-xs text-gray-500">Pending</p>
+                </div>
+              )}
+
+              {/* Dark mode toggle (mobile) */}
+              <button
+                onClick={toggleDark}
+                title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+              >
+                {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </button>
+
+              {/* Hamburger Menu Button */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </header>
+
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-white border-b border-gray-200 shadow-lg">
+          <div className="px-4 py-4 space-y-2">
+            <button
+              onClick={() => { switchView('vc'); setMobileMenuOpen(false); }}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                currentView === 'vc' ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <Users className="w-5 h-5" />
+              VC Funds
+            </button>
+            <button
+              onClick={() => { switchView('studios'); setMobileMenuOpen(false); }}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                currentView === 'studios' ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <Building2 className="w-5 h-5" />
+              Game Studios
+            </button>
+            <button
+              onClick={() => { switchView('contacts'); setMobileMenuOpen(false); }}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                currentView === 'contacts' ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <UserCircle className="w-5 h-5" />
+              Studio Contacts
+            </button>
+            <button
+              onClick={() => { switchView('vc-contacts'); setMobileMenuOpen(false); }}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                currentView === 'vc-contacts' ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <Briefcase className="w-5 h-5" />
+              VC Contacts
+            </button>
+            <button
+              onClick={() => { switchView('tasks'); setMobileMenuOpen(false); }}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                currentView === 'tasks' ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <LayoutDashboard className="w-5 h-5" />
+              Tasks
+            </button>
+            <div className="border-t border-gray-200 pt-2 mt-2">
+              <button
+                onClick={() => { setShowBulkUpload(true); setMobileMenuOpen(false); }}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
+              >
+                <Upload className="w-5 h-5" />
+                Import
+              </button>
+              <button
+                onClick={() => { setShowTemplateManager(true); setMobileMenuOpen(false); }}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
+              >
+                <Mail className="w-5 h-5" />
+                Templates
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <main className={`${currentView === 'tasks' ? 'max-w-[1600px]' : 'max-w-7xl'} mx-auto px-4 sm:px-6 lg:px-8 py-8`}>
 

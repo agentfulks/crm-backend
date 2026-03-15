@@ -1,0 +1,70 @@
+{
+  "firm_name": "Transcend Fund",
+  "fund_size": "$60M+ (Fund III launching)",
+  "stage_focus": "Seed, Pre-Seed",
+  "thesis": "Early-stage venture capital for games and digital entertainment. Created by game industry veterans who've built digital entertainment companies for decades.",
+  "key_partners": [
+    {
+      "name": "Shanti Bergel",
+      "title": "Founding General Partner",
+      "background": "Game industry veteran, former executive at major gaming companies",
+      "relevance": "Deep product and operational experience in games"
+    },
+    {
+      "name": "Andrew Sheppard",
+      "title": "Partner",
+      "background": "Former Kabam executive, gaming operations expert",
+      "relevance": "Live services and free-to-play expertise from Kabam"
+    },
+    {
+      "name": "Brett Krause",
+      "title": "Partner",
+      "background": "Gaming industry veteran",
+      "relevance": "Primary decision-maker alongside Bergel and Sheppard"
+    }
+  ],
+  "target_partner": {
+    "name": "Andrew Sheppard",
+    "rationale": "Andrew's experience at Kabam (a pioneer in free-to-play mobile live services) gives him direct operational knowledge of the live ops challenges studios face. He understands the tooling gap from firsthand experience scaling live games."
+  },
+  "recent_investments": [
+    {
+      "company": "Live Aware Labs",
+      "round": "$4.8M Seed",
+      "date": "October 2024",
+      "description": "AI-powered game testing and live ops analytics"
+    },
+    {
+      "company": "Ruckus Games",
+      "round": "Series A participation",
+      "date": "November 2024",
+      "description": "Suburban invasion multiplayer RPG"
+    },
+    {
+      "company": "Adaptive Reader",
+      "round": "Pre-Seed",
+      "date": "January 2025",
+      "description": "AI-powered reading platform"
+    }
+  ],
+  "key_references": [
+    "Live Aware Labs - Game testing/live ops (recent co-investment with a16z and BITKRAFT)",
+    "Stress Level Zero - VR game studio (BONEWORKS, BONELAB - #1 on Steam/Meta)",
+    "Ruckus Games - Live service multiplayer (co-invested with BITKRAFT and Krafton)"
+  ],
+  "outreach_packet": {
+    "subject_line": "Live ops platform for studios—built by devs, for devs",
+    "hook": "Following your investment in Live Aware Labs and your focus on live service tools, I wanted to share how we're solving the operational side of the live services equation.",
+    "body_paragraphs": {
+      "value_prop": "We're building the live operations platform we wish we had when running live games—a unified system that handles content deployment, player segmentation, event orchestration, and real-time balancing without requiring engineering for every update. Transcend's focus on 'craftspeople at the top of their game' resonates with us; we're developers who got tired of rebuilding the same live ops stack at every studio. Our platform lets small teams operate like they have a 50-person live ops department.",
+      "market_insight": "Your portfolio at Transcend includes some of the most innovative live service studios—Stress Level Zero, Ruckus Games, Methodical Games. You know that shipping the game is only 20% of the battle; operating it for years is where the real work (and revenue) happens. Your Live Aware Labs investment shows you understand that testing is critical pre-launch. We're solving the post-launch problem: the $22B+ that studios spend annually on fragmented live ops tools and manual processes. With your Kabam background, Andrew, you've felt this pain directly.",
+      "traction_ask": "We're in closed beta with 3 studios and seeing 40% reduction in content deployment cycles. Given Transcend's thesis on live service tools and your recent Live Aware Labs investment, we'd value your perspective on our roadmap. Would you have 20 minutes to discuss how live ops infrastructure is becoming the critical layer for modern game development?"
+    }
+  },
+  "warm_paths": [
+    "Co-investors in Live Aware Labs (a16z, BITKRAFT)",
+    "Stress Level Zero founders (prominent portfolio company)",
+    "Kabam alumni network (Andrew Sheppard's former colleagues)"
+  ],
+  "notes": "Transcend is the most thesis-aligned for live service tools—they explicitly focus on this category. Their Live Aware Labs investment (co-invested with a16z and BITKRAFT) validates the infrastructure opportunity. The founding team's operational gaming background means they understand the problem intimately."
+}

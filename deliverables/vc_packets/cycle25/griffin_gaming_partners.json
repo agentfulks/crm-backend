@@ -1,0 +1,70 @@
+{
+  "firm_name": "Griffin Gaming Partners",
+  "fund_size": "$1.5B",
+  "stage_focus": "Pre-Seed to Pre-IPO",
+  "thesis": "Investing at the intersection of content, social platforms, and software infrastructure for gaming",
+  "key_partners": [
+    {
+      "name": "Peter Levin",
+      "title": "Managing Director",
+      "background": "Former Lionsgate exec, investor in Rovio (Angry Birds)",
+      "relevance": "Leads gaming investments with strong studio relationships"
+    },
+    {
+      "name": "Phil Sanderson",
+      "title": "Senior Partner",
+      "background": "23+ years venture capital experience",
+      "relevance": "Deep gaming finance expertise"
+    },
+    {
+      "name": "Nick Tuosto",
+      "title": "Managing Director",
+      "background": "Strategic advisor to Tencent/Supercell, Kabam/Netmarble, AppLovin, Roblox, Take-Two/Zynga",
+      "relevance": "Extensive gaming M&A and strategic partnership experience"
+    }
+  ],
+  "target_partner": {
+    "name": "Nick Tuosto",
+    "rationale": "Nick's advisory work with infrastructure giants like AppLovin and platform companies like Roblox makes him the ideal partner for a live operations platform. His M&A experience with Take-Two/Zynga also aligns with the long-term value creation in live services."
+  },
+  "recent_investments": [
+    {
+      "company": "Fuse Games",
+      "round": "$7M Series A",
+      "date": "May 2025",
+      "description": "New IP development studio"
+    },
+    {
+      "company": "Overwolf",
+      "round": "Growth",
+      "date": "Portfolio",
+      "description": "Creator platform and in-game apps infrastructure"
+    },
+    {
+      "company": "Discord",
+      "round": "Growth",
+      "date": "Portfolio",
+      "description": "Community platform for gamers"
+    }
+  ],
+  "key_references": [
+    "Overwolf - Creator platform infrastructure (CEO Uri Marchand praised GGP's commercial relationship activation)",
+    "AppLovin - Mobile game tech platform (IPO success)",
+    "Scopely - Scaled mobile games company (acquired by Savvy Games Group for $4.9B)"
+  ],
+  "outreach_packet": {
+    "subject_line": "Live ops infrastructure + your Overwolf/AppLovin thesis",
+    "hook": "Following your investments in Overwolf and AppLovin, I wanted to share how we're solving the live operations crisis that plagues studios like those in your portfolio.",
+    "body_paragraphs": {
+      "value_prop": "We're building the definitive live operations platform for gaming studios—a unified system that replaces the fragmented tools studios currently duct-tape together. Just as Overwolf empowered creators and AppLovin transformed monetization, we're automating the entire live ops lifecycle: content deployment, player segmentation, event orchestration, and real-time balancing. Studios using our platform reduce live ops overhead by 60% while increasing player retention 25%.",
+      "market_insight": "Your portfolio companies like Scopely and Second Dinner know that live services aren't just a revenue model—they're an operational nightmare. The average mid-size studio now spends $22M annually on third-party live ops infrastructure and headcount. With gaming revenues at $184B globally but development costs rising faster than monetization, studios are desperate for infrastructure that lets small teams operate like industry giants. This is the exact wedge that created AppLovin's $30B+ value.",
+      "traction_ask": "We're currently in closed beta with 3 mid-size studios (NDAs prevent naming, but one has a top-100 mobile title) and seeing 40% reduction in content deployment time. Given Griffin's singular focus on gaming infrastructure and your track record with Overwolf and AppLovin, we'd welcome a conversation about our Seed round. Would you be open to a 20-minute call next week?"
+    }
+  },
+  "warm_paths": [
+    "Uri Marchand (Overwolf CEO) - quoted on GGP website praising their commercial relationship support",
+    "Matt Wyble (Second Dinner COO) - portfolio company, positive testimonial on GGP site",
+    "Former GGP portfolio founders who've exited"
+  ],
+  "notes": "GGP is the largest pure-play gaming VC. They deeply understand infrastructure plays and have a track record of backing platform companies that serve the gaming ecosystem. Their portfolio demonstrates strong conviction in gaming infrastructure (Overwolf, Discord, AppLovin)."
+}

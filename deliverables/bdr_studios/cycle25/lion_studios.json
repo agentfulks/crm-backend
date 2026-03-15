@@ -1,0 +1,48 @@
+{
+  "studio_name": "Lion Studios",
+  "priority": "P1",
+  "tier": "Tier-2",
+  "studio_info": {
+    "website": "https://lionstudios.cc",
+    "headquarters_location": "San Francisco, CA, USA",
+    "employee_count": 71,
+    "total_downloads_estimate": "500M+",
+    "key_titles": [
+      "Love Rescue (50M+)",
+      "Blend It 3D (30M+)",
+      "Slap Kings (20M+)"
+    ],
+    "live_ops_evidence": "Publishing platform supporting partner studios with monetization and user acquisition; Live Games Product Director role indicates live ops focus",
+    "linkedin_company_url": "https://www.linkedin.com/company/lion-studios/",
+    "parent_company": "AppLovin (APP)"
+  },
+  "contact": {
+    "full_name": "Publishing Team",
+    "title": "Senior Publishing Lead",
+    "seniority_level": "Director",
+    "department": "Publishing",
+    "email": "partnerships@lionstudios.cc",
+    "email_source": "Website contact form + pattern inference",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/company/lion-studios/",
+    "linkedin_verified": false,
+    "location": "San Francisco, CA",
+    "notes": "Lion Studios is AppLovin's publishing arm. Contact is partnerships-focused rather than CEO-direct given their structure. Alternative: reach out via website submission form."
+  },
+  "outreach_packet": {
+    "subject_line": "Live ops edge for Lion Studios partners",
+    "hook": "As AppLovin's publishing arm, you're helping partner studios scale from zero to millions—while competition for top games has never been fiercer.",
+    "body_paragraphs": [
+      "Lion Studios has built a strong track record with hit titles, but the studios you want to attract are increasingly asking: what live ops support do you provide? In 2025, a publishing platform without AI-driven live ops is starting at a disadvantage.",
+      "We built an AI live operations platform that plugs into existing publishing infrastructure. It automates event optimization, predicts player churn, and personalizes IAP offers—giving your partner studios better results without adding headcount. One publisher using our system saw partner game LTV increase 34% in 90 days.",
+      "This could be a competitive differentiator for Lion when recruiting top indie studios. The platform integrates in days, not months, and we offer white-label options for publishing partners."
+    ],
+    "cta": "Worth a quick call to explore how AI live ops could strengthen your publishing offering?",
+    "angle_notes": {
+      "primary_angle": "Competitive differentiation for publishing platform",
+      "why_this_works": "Lion Studios competes with Voodoo, Homa, etc. for top indie games. Adding AI live ops to their platform offering makes them more attractive to prospective partners. As part of AppLovin (public company), they're focused on scalable solutions.",
+      "personalization_trigger": "Publishing platform model + AppLovin backing",
+      "pain_hypothesis": "Publishing competition is fierce; studios have options. AI-powered live ops support could be the differentiator that wins Lion Studios better partner games."
+    }
+  }
+}

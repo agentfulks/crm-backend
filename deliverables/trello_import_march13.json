@@ -1,0 +1,89 @@
+{
+  "import_date": "2026-03-13",
+  "batch_name": "March 13 Execution Batch",
+  "boards": {
+    "vc_outreach_engine": {
+      "list": "Daily Queue",
+      "cards": [
+        {
+          "name": "VC Packet: Transcend Fund",
+          "desc": "**Priority:** P0 | **Location:** London/US (Dual HQ) | **AUM:** $60M+\\n\\n**Key Contact:** Shanti Bergel, Founding GP (shanti@transcend.fund)\\n**Angle:** Live service infrastructure thesis alignment\\n**Recent Investment:** Live Aware Labs ($4.8M Seed, Oct 2024)\\n\\n**Why Target:**\\n- 30-year gaming veteran (ex-Disney/EA)\\n- Seed-stage focus aligns with our check size\\n- Fresh capital (~$60M Fund II, 2022)\\n- Dual London/US presence\\n\\n**Outreach Subject:** Seed-stage [Game Analytics/Infra] - [Company Name]\\n\\n**Next Action:** Send personalized cold email to Shanti Bergel emphasizing live service infrastructure.",
+          "labels": ["Outreach", "P0", "Gaming VC", "Seed Stage"],
+          "due": "2026-03-20",
+          "checklist": ["Research Shanti Bergel recent talks", "Draft personalized email", "Send cold email", "Follow up in 7 days"]
+        },
+        {
+          "name": "VC Packet: Makers Fund",
+          "desc": "**Priority:** P0 | **Location:** San Francisco / Singapore | **AUM:** $500M\\n\\n**Key Contact:** Jay Chi, Founding Partner (jay@makersfund.com)\\n**Angle:** Global gaming infrastructure + BIT ODD/Human Computer thesis alignment\\n**Recent Investments:** BIT ODD (€17M, Nov 2024), Human Computer ($5.7M, Mar 2025)\\n\\n**Why Target:**\\n- Ex-McKinsey (11.5 yrs, global video games practice lead), ex-Tencent\\n- $500M Fund III actively deploying\\n- Strong Asia-US bridge\\n\\n**Outreach Subject:** [Game Infrastructure/AI] Seed - Scaling Games Globally\\n\\n**Next Action:** Send cold email to Jay Chi emphasizing global gaming infrastructure thesis.",
+          "labels": ["Outreach", "P0", "Gaming VC", "Seed-Series A"],
+          "due": "2026-03-20",
+          "checklist": ["Check LinkedIn for mutual connections (McKinsey/Tencent)", "Draft personalized outreach", "Send cold email", "Follow up in 5 days"]
+        },
+        {
+          "name": "VC Packet: Hiro Capital",
+          "desc": "**Priority:** P0 | **Location:** London/Luxembourg | **AUM:** ~$600M\\n\\n**Key Contact:** Luke Alvarez, Founding Managing Partner (luke@hiro.capital)\\n**Secondary:** Sir Ian Livingstone (CBE, co-founder Games Workshop & Eidos)\\n**Angle:** Live service infrastructure + Sidero Labs thesis alignment\\n**Recent Investment:** Sidero Labs ($4M, Oct 2024) - K8s for game devs\\n\\n**Why Target:**\\n- 29 years tech/20+ years games experience\\n- Fund II ($326M) actively deploying\\n- Strong European gaming network\\n- Portfolio: Edgegap, Player Data, Keen Games (Enshrouded)\\n\\n**Outreach Subject:** Seed-Stage [Game Infrastructure/Dev Tools] - [Company Name]\\n\\n**Next Action:** Send personalized cold email to Luke Alvarez emphasizing European gaming infrastructure.",
+          "labels": ["Outreach", "P0", "Gaming VC", "Seed Stage", "Europe"],
+          "due": "2026-03-20",
+          "checklist": ["Research Luke Alvarez recent talks", "Check Sidero Labs connections", "Draft personalized email", "Send cold email", "Follow up in 7 days"]
+        },
+        {
+          "name": "VC Packet: Bitkraft Ventures",
+          "desc": "**Priority:** P0 | **Location:** Berlin/Los Angeles (Global) | **AUM:** $275M Fund 3\\n\\n**Key Contact:** Moritz Baier-Lentz, Partner (moritz@bitkraft.vc)\\n**Secondary:** Carlos Pereira, General Partner (crypto/Web3)\\n**Angle:** AI infrastructure + Inworld AI thesis alignment\\n**Recent Investments:** Appcharge ($58M Series B, Aug 2025), Power Protocol ($3M, Feb 2026)\\n\\n**Why Target:**\\n- Ex-Goldman Sachs VP (Gaming/Esports M&A, $300B+ transaction volume)\\n- 3 unicorns in portfolio (Higgsfield, Magic Eden, Immutable)\\n- 130+ portfolio companies including Epic Games\\n- Global presence across 10 cities\\n\\n**Outreach Subject:** [Game Infrastructure/AI Tools] Seed - Powering Live Service Games\\n\\n**Next Action:** Send personalized cold email to Moritz Baier-Lentz emphasizing AI infrastructure.",
+          "labels": ["Outreach", "P0", "Gaming VC", "Seed-Series A", "Global"],
+          "due": "2026-03-20",
+          "checklist": ["Research Moritz recent podcast appearances", "Check Goldman Sachs connections", "Draft personalized outreach", "Send cold email", "Follow up in 5 days"]
+        },
+        {
+          "name": "VC Packet: Galaxy Interactive",
+          "desc": "**Priority:** P0 | **Location:** Santa Monica/New York | **AUM:** $650M+\\n\\n**Key Contact:** Sam Englebardt, Founding GP (sam@galaxyinteractive.io)\\n**Secondary:** Richard Kim, General Partner\\n**Angle:** Metaverse infrastructure + Genvid/Mythical Games thesis\\n**Portfolio:** 7 unicorns (The Sandbox, Immutable, Mythical Games)\\n\\n**Why Target:**\\n- Harvard Law, co-founder Galaxy Digital (TSX: GLXY)\\n- Thesis: 'Physical to digital world' migration\\n- $650M AUM with follow-on capacity\\n- 75+ investments including Sky Mavis (Axie Infinity)\\n\\n**Outreach Subject:** Seed-Stage [Live Service Infrastructure] - Building the Metaverse Stack\\n\\n**Next Action:** Send personalized cold email to Sam Englebardt emphasizing metaverse infrastructure.",
+          "labels": ["Outreach", "P0", "Gaming VC", "Metaverse", "Series A/B"],
+          "due": "2026-03-20",
+          "checklist": ["Research Sam Englebardt recent interviews", "Check Galaxy Digital connections", "Draft personalized outreach", "Send cold email", "Follow up in 7 days"]
+        }
+      ]
+    },
+    "bdr_game_studios": {
+      "list": "Ready for Review",
+      "cards": [
+        {
+          "name": "BDR: Azur Games — Dmitry Yaminsky (CEO)",
+          "desc": "**Priority:** Highest | **Downloads:** 10B+ | **Location:** Cyprus/Dubai\\n\\n**Contact:** d.yaminsky@azurgames.com | LinkedIn: /in/dmitry-yaminsky\\n**Key Titles:** Stack Ball (500M+), Worms Zone (300M+)\\n\\n**Angle:** AI content generation at 10B+ download scale — maintaining engagement without proportional team growth\\n\\n**Outreach Subject:** Scaling live ops for Stack Ball's 500M players\\n\\n**Status:** Email draft complete in cycle26/01_azur_games_dmitry_yaminsky.md\\n\\n**Next Action:** Review email, verify contact, send outreach",
+          "labels": ["BDR", "Highest Priority", "Hyper-Casual"],
+          "due": "2026-03-15"
+        },
+        {
+          "name": "BDR: Rocket Game Studio — Publishing Team",
+          "desc": "**Priority:** High | **Downloads:** 500M+ | **Location:** Vietnam\\n\\n**Contact:** publishing@rocketstudio.com.vn\\n**Key Titles:** Galaxy Attack (100M+), Burger Bounty (50M+)\\n\\n**Angle:** AI-powered live ops for arcade games — infinite level variations and difficulty curves\\n\\n**Status:** Email draft complete in cycle26/02_rocket_game_studio_publishing.md\\n\\n**Next Action:** Review email, send outreach",
+          "labels": ["BDR", "High Priority", "Arcade"],
+          "due": "2026-03-15"
+        },
+        {
+          "name": "BDR: JoyPac Games — Alison Bilas (COO)",
+          "desc": "**Priority:** High | **Downloads:** 500M+ | **Location:** Beijing\\n\\n**Contact:** alison.bilas@joypacgames.com (medium confidence — verify)\\n**Key Titles:** Hero Rescue (100M+), Pull Him Out (50M+)\\n\\n**Angle:** AI localization and content adaptation for West-to-East bridge publishing\\n\\n**Status:** Email draft complete in cycle26/03_joypac_alison_bilas.md\\n\\n**Next Action:** Verify email via LinkedIn, review draft, send outreach",
+          "labels": ["BDR", "High Priority", "China Bridge"],
+          "due": "2026-03-16"
+        },
+        {
+          "name": "BDR: CrazyLabs — Sagi Schliesser (CEO)",
+          "desc": "**Priority:** High | **Downloads:** 6B+ | **Location:** Israel (Embracer/DECA)\\n\\n**Contact:** sagi@crazylabs.com | LinkedIn: /in/sagis\\n**Key Titles:** Acrylic Nails (100M+), Soap Cutting (100M+), Tie Dye\\n\\n**Angle:** AI-generated ASMR content — infinite nail designs, soap patterns, tie-dye variations\\n\\n**Status:** Email draft complete in cycle26/04_crazylabs_sagi_schliesser.md\\n\\n**Next Action:** Review email, send outreach",
+          "labels": ["BDR", "High Priority", "ASMR/Simulation"],
+          "due": "2026-03-15"
+        },
+        {
+          "name": "BDR: Boombit — Marcin Olejarz (CEO)",
+          "desc": "**Priority:** Medium | **Downloads:** 500M+ | **Location:** Poland (Public Company)\\n\\n**Contact:** marcin@boombit.com | LinkedIn: /in/marcin-olejarz-08a32211\\n**Key Titles:** Hunting Clash (50M+), Fishing Clash (50M+)\\n\\n**Angle:** AI for midcore economy balancing — event timing, difficulty curves, monetization\\n\\n**Status:** Email draft complete in cycle26/05_boombit_marcin_olejarz.md\\n\\n**Next Action:** Review email, send outreach (professional tone — public company)",
+          "labels": ["BDR", "Medium Priority", "Midcore", "Public Company"],
+          "due": "2026-03-17"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_vc_cards": 5,
+    "total_bdr_cards": 5,
+    "total_cards": 10,
+    "vc_funds": ["Transcend Fund", "Makers Fund", "Hiro Capital", "Bitkraft Ventures", "Galaxy Interactive"],
+    "bdr_studios": ["Azur Games", "Rocket Game Studio", "JoyPac Games", "CrazyLabs", "Boombit"],
+    "combined_download_reach": "22B+"
+  }
+}

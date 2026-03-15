@@ -1,0 +1,22 @@
+### Firm Overview
+- GFR Fund backs gaming, entertainment, and consumer tech teams from seed through Series A with $100K-$5M checks.
+- Fund III ($53.5M, 2024) is anchored by GREE, giving portfolio companies a ready-made bridge into Asia.
+- Thesis centers on using capital plus Japan/Singapore networks to help studios expand distribution and LiveOps abroad.
+
+### Partner Focus
+- Teppei Tsutsui leads gaming investments and sits on boards like Omeda Studios, guiding founders on Asia go-to-market plans.
+- He looks for teams that pair player communities with operational discipline and can benefit from GFR’s Tokyo and Singapore footholds.
+
+### Recent Deals
+- 2024: Led the $53.5M Fund III raise to keep betting on cross-border gaming infrastructure.
+- 2024: Backed Omeda Studios and multiple creator-economy platforms that need Asia expansion expertise.
+- 2025: Added 10 new gaming investments, including LiveOps-heavy studios leveraging GFR’s GREE network.
+
+### Outreach Email
+Subject: Helping GFR studios localize LiveOps in days
+
+Teppei, congrats on closing Fund III and the work you have done helping Omeda and the rest of the portfolio bridge into Asia. We are hearing the same refrain from teams you back: shipping regional LiveOps updates is still painfully manual.
+
+Hyve Labs built an AI production platform that lets LiveOps groups spin up localized events, art, and monetization assets in hours instead of weeks. Studios running Hyve are cutting art iteration time by 40% and finally running A/B tests tailored to Japan, Korea, and SEA without ballooning headcount.
+
+Would you be open to a quick 20 minute chat next week to dig into how this could plug into the Asia gateway you are building?

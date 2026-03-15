@@ -1,0 +1,49 @@
+{
+  "studio_name": "Outfit7",
+  "priority": "P1",
+  "tier": "Tier-3",
+  "studio_info": {
+    "website": "https://outfit7.com",
+    "headquarters_location": "Limassol, Cyprus (orig. Slovenia)",
+    "employee_count": 300,
+    "total_downloads_estimate": "18B+",
+    "key_titles": [
+      "My Talking Tom (1B+)",
+      "Talking Tom Gold Run (500M+)",
+      "My Talking Angela (500M+)"
+    ],
+    "live_ops_evidence": "Deep live ops across Talking Tom franchise: virtual pets, minigames, events, seasonal content, licensed merchandise integration; 12+ years of continuous operation",
+    "linkedin_company_url": "https://www.linkedin.com/company/outfit7/",
+    "parent_company": "Jinke (China) - acquired for $1B in 2017",
+    "founder": "Samo Login (former CEO, now retired)"
+  },
+  "contact": {
+    "full_name": "Partnerships Team",
+    "title": "Head of Business Development",
+    "seniority_level": "Director",
+    "department": "Business Development",
+    "email": "partnerships@outfit7.com",
+    "email_source": "Website contact page + pattern inference",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/company/outfit7/",
+    "linkedin_verified": false,
+    "location": "Limassol, Cyprus",
+    "notes": "Outfit7 was acquired by Chinese Jinke for $1B in 2017. Original founder Samo Login retired. Now a larger corporate entity; best approach is through partnerships/business development rather than CEO-direct."
+  },
+  "outreach_packet": {
+    "subject_line": "Talking Tom's live ops evolution",
+    "hook": "The Talking Tom franchise has remained relevant for over a decade—18B+ downloads across multiple titles is extraordinary staying power.",
+    "body_paragraphs": [
+      "Outfit7 pioneered the virtual pet genre on mobile and built a true franchise with games, animation, and merchandise. But with 12+ years of history comes complexity: multiple titles, different monetization models, and the challenge of keeping long-running games fresh.",
+      "We built an AI live operations platform that helps legacy franchises optimize event cadence, personalize IAP offers by player tenure, and predict which content updates will drive the highest engagement. One studio with a 10-year-old franchise increased revenue 28% by letting AI optimize their live event strategy.",
+      "With Talking Tom's scale and brand recognition, even marginal improvements in live ops efficiency translate to significant impact. Our platform integrates with existing data infrastructure and starts showing results within 30 days."
+    ],
+    "cta": "Open to a conversation about AI-driven live ops for the Talking Tom portfolio?",
+    "angle_notes": {
+      "primary_angle": "Legacy franchise optimization",
+      "why_this_works": "Outfit7 operates established franchises with long histories. The challenge is keeping them fresh and optimized. They're now owned by Chinese parent company (Jinke), so decision-making may be more corporate/process-driven. Partnerships angle is safer than CEO-direct.",
+      "personalization_trigger": "12+ year franchise + 18B downloads",
+      "pain_hypothesis": "Managing multiple legacy titles with different monetization models creates operational complexity; AI could optimize across the portfolio and surface insights manual analysis misses"
+    }
+  }
+}

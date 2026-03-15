@@ -417,3 +417,156 @@ When a task requires domain depth:
 6. Synthesize final answer.
 
 Never perform deep specialist work directly if a specialist agent exists.
+---
+
+## Cascading Model Execution Protocol
+
+### Three-Tier Intelligence System
+
+I implement a cost-optimized cascading execution system with three tiers:
+
+**TIER 1 - CASCADE-FLASH (Gemini 1.5 Flash)**
+- Cost: $0.075/M tokens (cheapest)
+- Context: 1M tokens
+- Target: 70% of tasks
+- Strengths: Classification, research, simple execution
+- Agent: CASCADE-FLASH
+
+**TIER 2 - CASCADE-KIMI (Kimi k2.5)**
+- Cost: $3/M tokens (40x more than Flash)
+- Context: 128K tokens
+- Target: 25% of tasks
+- Strengths: Deep analysis, architecture, complex coding
+- Agent: CASCADE-KIMI
+
+**TIER 3 - CASCADE-CODEX (OpenAI Codex)**
+- Cost: $15/M tokens (200x more than Flash)
+- Context: 128K tokens
+- Target: 5% of tasks
+- Strengths: Novel algorithms, breakthrough architecture, extreme complexity
+- Agent: CASCADE-CODEX
+
+### Execution Flow
+
+#### Phase 1: Tier 1 Assessment (Always Start Here)
+```
+sessions_spawn({
+  agentId: "CASCADE-FLASH",
+  task: "[request with context]"
+})
+```
+
+**If Tier 1 returns complete solution:**
+- Use result, done
+- Cost: ~$0.01
+
+**If Tier 1 escalates:**
+- Parse handoff package
+- Proceed to Phase 2
+
+#### Phase 2: Tier 2 Deep Work (If Escalated)
+```
+sessions_spawn({
+  agentId: "CASCADE-KIMI",
+  task: "Build on Tier 1 work:\n[handoff package]\n\nOriginal: [request]"
+})
+```
+
+**If Tier 2 returns complete solution:**
+- Use result, done
+- Cost: ~$0.50 (Flash + Kimi)
+
+**If Tier 2 escalates:**
+- Parse handoff package
+- Proceed to Phase 3
+
+#### Phase 3: Tier 3 Breakthrough (If Escalated)
+```
+sessions_spawn({
+  agentId: "CASCADE-CODEX",
+  task: "Synthesize and solve:\nTier 1: [findings]\nTier 2: [analysis]\n\nChallenge: [remaining work]"
+})
+```
+
+**Result:** Complete solution
+**Cost: ~$3.00 (Flash + Kimi + Codex)**
+**vs Codex alone: $8.00+ (62% savings)**
+
+### Context Preservation Rules
+
+1. **Never discard prior tier work**
+   - Flash research → Kimi builds on it
+   - Kimi analysis → Codex synthesizes it
+
+2. **Always pass structured handoff packages**
+   - Completed work summary
+   - Key findings
+   - Remaining work
+   - Success criteria
+
+3. **Progressive enhancement**
+   - Each tier adds unique value
+   - No redundant work
+   - Cumulative intelligence
+
+### Complexity Classification
+
+**Tier 1 Indicators (Flash handles):**
+- Keywords: list, find, search, check, status, simple, quick, show
+- Pattern: Single-step tasks, lookups, navigation
+- Examples: "List files", "Find X", "Check status", "Quick summary"
+
+**Tier 2 Indicators (Kimi handles):**
+- Keywords: analyze, review, design, debug, architecture, optimize
+- Pattern: Multi-step reasoning, analysis, design
+- Examples: "Review code", "Design API", "Debug issue", "Architecture review"
+
+**Tier 3 Indicators (Codex handles):**
+- Keywords: novel, breakthrough, scale, extreme, cutting-edge, prove
+- Pattern: Novel problems, breakthrough required, extreme complexity
+- Examples: "Design novel algorithm", "Optimize for 10M req/s", "Create breakthrough solution"
+
+### Cost Optimization Targets
+
+- **70% completion** at Tier 1 ($0.075/M)
+- **25% completion** at Tier 2 ($3/M)
+- **5% completion** at Tier 3 ($15/M)
+- **Average savings: 85%** vs Codex-only approach
+
+### Quality Preservation
+
+**The Quality Paradox:** Cascading improves quality because:
+1. Flash catches obvious errors early
+2. Structured input helps advanced models focus
+3. Multiple perspectives (Flash + Kimi + Codex)
+4. Iterative refinement beats one-shot generation
+
+### Quick Reference Commands
+
+```bash
+# Spawn specific tier manually
+sessions_spawn({ agentId: "CASCADE-FLASH", task: "..." })
+sessions_spawn({ agentId: "CASCADE-KIMI", task: "..." })
+sessions_spawn({ agentId: "CASCADE-CODEX", task: "..." })
+
+# Model aliases (for manual switching)
+/model flash     # Gemini 1.5 Flash
+/model kimi      # Kimi k2.5
+/model codex     # OpenAI Codex
+```
+
+### Performance Monitoring
+
+Track these metrics in HEARTBEAT.md:
+- Tier 1 completion rate (target: >70%)
+- Tier 2 escalation rate (target: ~25%)
+- Tier 3 escalation rate (target: <5%)
+- Average cost per request
+- False escalation rate
+
+### Anti-Patterns
+
+1. **Don't over-escalate** - Flash can handle more than you think
+2. **Don't skip tiers** - Each tier adds value
+3. **Don't lose context** - Always pass handoff packages
+4. **Don't use Codex for simple tasks** - Respect the cost hierarchy

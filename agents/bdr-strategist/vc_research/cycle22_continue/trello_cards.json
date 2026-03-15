@@ -1,0 +1,49 @@
+{
+  "trello_cards": [
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "LVP — David Gardner — Gaming-Only Seed Fund (ex-EA)",
+      "description": "## VC Research Summary\n\n**Fund:** London Venture Partners (LVP)\n**Focus:** Gaming-only fund — exclusively invests in games ecosystem\n**Fund Size:** $80M Fund III (2019); $12.8B+ value created from prior funds\n**Check Size:** Seed: $500K-$3M\n**Stage:** Pre-seed to Seed\n**Location:** London, UK\n**Website:** https://londonvp.com\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | David Gardner OBE |\n| Title | Co-Founder & General Partner |\n| Background | 30+ years gaming; Former CEO, Atari; EVP/COO EA Worldwide Studios; 25 years at EA — built EA Europe from 0 to $1B+ revenue |\n| LinkedIn | https://uk.linkedin.com/in/david-gardner-7395662 |\n\n## Other Partners\n- Are Mack Growen (General Partner)\n- David Lau-Kee (Co-Founder)\n- Matt Bilbey (Venture Partner, ex-EA, joined 2023)\n- Gavin Harrison (Partner, FCA)\n\n## Recent Triggers\n- 2023: Matt Bilbey (ex-EA) joined as Venture Partner\n- 2025: Active 'Story Mode' podcast with industry insights\n- Fund III actively deploying\n\n## Portfolio Highlights\nSupercell (acquired), Unity (IPO), NaturalMotion ($527M), Playfish ($400M), Peak ($1.8B), 16 total acquisitions + 1 IPO\n\n## Outreach Angle\nLVP created gaming VC category (2005). David Gardner's EA Europe ($1B+) experience brings operational expertise to game studio investments. Perfect fit for live ops-focused studios.\n\n## Warm Path\n- GDC/Gamescom: Partners regularly attend\n- LinkedIn: Engage with 'Story Mode' podcast\n- Portfolio intros: Supercell alumni, Unity network\n- EA alumni: Gardner + Bilbey both ex-EA\n\n## Draft Subject\n"EA Europe → $1B + [Studio name]'s live ops opportunity"\n\n## Priority\nP0 — Fund III actively deploying; ex-EA decision maker; pure gaming focus\n\n## Source Files\n- vc_research/cycle22_continue/01_lvp.md",
+      "labels": ["Gaming", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-17",
+      "checklist": [
+        "ICP validated: Gaming-only fund",
+        "Contact research: David Gardner identified",
+        "Recent trigger: Matt Bilbey joins + active deployment",
+        "Outreach drafted: Yes",
+        "Personalization hook: EA heritage + live ops"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "a16z GAMES — Andrew Chen — $1.2B Gaming Fund",
+      "description": "## VC Research Summary\n\n**Fund:** a16z GAMES\n**Focus:** Games, gaming infrastructure, AI x games, consumer social at game intersection\n**Fund Size:** $600M Fund Two (2025) + $600M Fund One (2022); $1.2B+ total AUM\n**Check Size:** Speedrun: $750K; Seed: $750K-$3M; Series A: $5M-$15M\n**Stage:** Seed to Series B\n**Location:** Menlo Park, CA\n**Website:** https://a16z.com/games\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Andrew Chen |\n| Title | General Partner |\n| Background | Former Uber rider growth; 15+ years tech/gaming; Author 'The Cold Start Problem'; Newsletter: andrewchen.substack.com |\n| LinkedIn | https://www.linkedin.com/in/andrewchen |\n\n## Other Partners\n- Jonathan Lai (GP — Gaming, social platforms)\n- Troy Kirwin (Head of SPEEDRUN)\n- Josh Buckley (GP — Gaming + AI)\n- Sriram Krishnan (GP — Crypto x Games)\n\n## Recent Triggers\n- June 2025: Closed GAMES FUND TWO — $600M\n- April 2025: Andrew Chen committing $30M+ via Speedrun (45-day cycles)\n- 2024-2025: Deployed $180M+ via SPEEDRUN to 150+ startups\n- Ongoing: SR003 applications open\n\n## Portfolio Highlights\nAlta, Bonfire Studios, Crucible, Mainframe Industries, Mythical Games, Overwolf, Singularity 6, Improbable\n\n## Outreach Angle\na16z believes games define how we socialize/work/play. $1.2B gaming-only capital + SPEEDRUN deploying $30M+/quarter. Live ops tooling fits infrastructure thesis perfectly.\n\n## Warm Path\n- SPEEDRUN: Direct pipeline via 150+ alumni\n- Newsletter: andrewchen.substack.com\n- Podcast: a16z Games podcast\n- Portfolio: Overwolf, Mythical Games intros\n- Twitter: @andrewchen active\n\n## Draft Subject\n"SPEEDRUN for [category] — live ops at 100M+ downloads"\n\n## Priority\nP0 — Fund Two just closed; SPEEDRUN actively deploying; highest-profile gaming fund\n\n## Source Files\n- vc_research/cycle22_continue/02_a16z_games.md",
+      "labels": ["Gaming", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-18",
+      "checklist": [
+        "ICP validated: Gaming + AI focus",
+        "Contact research: Andrew Chen identified",
+        "Recent trigger: Fund Two close + SPEEDRUN deployment",
+        "Outreach drafted: Yes",
+        "Personalization hook: Games as social networks thesis"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "Konvoy Ventures — Jason Chapman — Gaming Infrastructure ($150M Fund III)",
+      "description": "## VC Research Summary\n\n**Fund:** Konvoy Ventures\n**Focus:** Gaming platforms, gaming infrastructure, interactive entertainment\n**Fund Size:** $258M AUM; $150M Fund III (active)\n**Check Size:** $250K-$750K (sweet spot: $500K)\n**Stage:** Pre-seed, Seed, Series A\n**Location:** Denver, CO\n**Website:** https://www.konvoy.vc\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Jason Chapman |\n| Title | Co-Founder & Managing Partner |\n| Background | Co-founded Konvoy with brother Josh; Deep gaming expertise\n| LinkedIn | https://www.linkedin.com/in/jasondchapman |\n| Favorite Games | Halo, CS:GO, PUBG, Fortnite (no build), AoE IV |\n\n## Other Partners\n- Josh Chapman (Co-Founder & Managing Partner)\n- Thomas Kaldor (Principal)\n\n## Recent Triggers\n- Q1 2025: Gaming report shows funding stabilized (+35% QoQ to $373M)\n- Oct 2024: Invested in Magic Potion Games\n- Jan 2025: New stealth investment (fan engagement)\n- Dec 2025: Portfolio exit — Ready Player Me acquired\n\n## Portfolio Highlights\nAxie Infinity, Carry1st ($20M raised), Ready Player Me (EXITED Dec 2025), Gamefam, Legends of Learning, Sanlo, OperaEvent, Edgegap, Hiber\n\n## Outreach Angle\nKonvoy's thesis: 'platforms and technologies at the frontier of gaming' = explicitly seeking infrastructure. Live ops tooling fits Fund III focus perfectly. Infrastructure thesis = mission-critical for live service games.\n\n## Warm Path\n- Portfolio intros: Gamefam (Roblox), Carry1st (Africa), Sanlo (fintech)\n- Events: GDC, DevGamm\n- Content: Konvoy quarterly reports (thought leadership)\n- Twitter: @konvoy active\n- Denver: Colorado gaming ecosystem\n\n## Draft Subject\n"Gaming infrastructure thesis + [studio's] live ops stack"\n\n## Priority\nP0 — Fund III actively deploying; infrastructure thesis directly aligned; recent exit validates strategy\n\n## Source Files\n- vc_research/cycle22_continue/03_konvoy_ventures.md",
+      "labels": ["Gaming", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-19",
+      "checklist": [
+        "ICP validated: Gaming infrastructure",
+        "Contact research: Jason Chapman identified",
+        "Recent trigger: Fund III deployment + Ready Player Me exit",
+        "Outreach drafted: Yes",
+        "Personalization hook: Infrastructure thesis alignment"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "firm": "BITKRAFT Ventures",
+    "location": "Denver, CO (Global)",
+    "aum": "$1.05B",
+    "priority": "P0",
+    "thesis": "Deep gaming infrastructure and platform investments; thesis-driven on AI-enabled gaming, spatial computing, and creator economies. Active in esports, game development tools, and monetization platforms.",
+    "portfolio_companies": ["Appcharge ($58M Series B, 2024)", "Liminal Experiences ($5.8M, 2024)"],
+    "key_partners": [
+      {"name": "Jens Hilgers", "title": "General Partner", "note": "ESL founder, esports pioneer"},
+      {"name": "Scott Rupp", "title": "Partner", "note": "Ex-Riot Games"}
+    ],
+    "warm_path": null,
+    "recent_investments": ["Appcharge (2024)", "Liminal Experiences (2024)", "Raid Base (2025)"]
+  },
+  {
+    "firm": "Transcend Fund",
+    "location": "London/US (Dual HQ)",
+    "aum": "$60M+",
+    "priority": "P0",
+    "thesis": "Global seed-stage gaming fund focused on game studios, platforms, and infrastructure. Strong thesis on live service tools and analytics for game developers.",
+    "portfolio_companies": ["Live Aware Labs ($4.8M Seed, Oct 2024)", "Mythical Games"],
+    "key_partners": [
+      {"name": "Shanti Bergel", "title": "Founding Partner", "note": "30-year gaming veteran, ex-Disney/EA"},
+      {"name": "Mika Kuusisto", "title": "Partner", "note": "Ex-Next Games, mobile gaming"}
+    ],
+    "warm_path": null,
+    "recent_investments": ["Live Aware Labs (Oct 2024)", "Gardens (2024)"]
+  },
+  {
+    "firm": "Makers Fund",
+    "location": "San Francisco / Singapore (Global)",
+    "aum": "$500M",
+    "priority": "P0",
+    "thesis": "Gaming and interactive entertainment focused; investments across game studios, infrastructure, and emerging platforms. Strong Asia-US bridge with Singapore HQ.",
+    "portfolio_companies": ["BIT ODD (€17M Seed, Nov 2024)", "Human Computer ($5.7M, Mar 2025)"],
+    "key_partners": [
+      {"name": "Jay Chi", "title": "Founding Partner", "note": "Ex-Tencent, ex-McKinsey"},
+      {"name": "Michael Cheung", "title": "Partner", "note": "Gaming ops background"}
+    ],
+    "warm_path": null,
+    "recent_investments": ["BIT ODD (Nov 2024)", "Human Computer (Mar 2025)", "Second Studio (2024)"]
+  },
+  {
+    "firm": "Hiro Capital",
+    "location": "London, UK",
+    "aum": "$200M+",
+    "priority": "P1",
+    "thesis": "Spatial computing, AI, and gaming convergence. Strong thesis on spatial AI, metaverse infrastructure, and games as platforms. Backed by Yann LeCun advisory.",
+    "portfolio_companies": ["Meeple Corp (£500K, Feb 2025)", "Maintain Altitude ($500K, Oct 2024)"],
+    "key_partners": [
+      {"name": "Sir Ian Livingstone", "title": "Partner", "note": "Games Workshop co-founder, British gaming legend"},
+      {"name": "Sir Nick Clegg", "title": "Advisory", "note": "Meta Global Affairs, political connector"}
+    ],
+    "warm_path": "Ian Livingstone connections via UK gaming ecosystem",
+    "recent_investments": ["Meeple Corp (Feb 2025)", "Maintain Altitude (Oct 2024)", "Moonlander (2024)"]
+  },
+  {
+    "firm": "Konvoy Ventures",
+    "location": "Denver, CO",
+    "aum": "$258M",
+    "priority": "P1",
+    "thesis": "Gaming infrastructure and platform-layer investments. Focus on tools, middleware, and services that power game development and monetization.",
+    "portfolio_companies": ["Nerd Street ($6M, Sept 2024)"],
+    "key_partners": [
+      {"name": "Josh Chapman", "title": "Managing Partner", "note": "Thesis-driven gaming investor, strong operator network"},
+      {"name": "Jason Chapman", "title": "Partner", "note": "Gaming infrastructure focus"}
+    ],
+    "warm_path": null,
+    "recent_investments": ["Nerd Street (Sept 2024)", "Thirdweb (2024)"]
+  }
+]

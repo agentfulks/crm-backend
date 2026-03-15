@@ -1,0 +1,33 @@
+{
+  "packet_id": "KONC27-002",
+  "fund_name": "Konvoy Ventures",
+  "fund_website": "https://www.konvoy.vc",
+  "partner": {
+    "name": "Josh Chapman",
+    "title": "Co-Founder & Managing Partner",
+    "email": "josh@konvoy.co",
+    "email_confidence": "high",
+    "linkedin": "https://www.linkedin.com/in/joshchapmanb/"
+  },
+  "fund_details": {
+    "aum": "$258 million",
+    "fund_stage": "Pre-seed to Series A",
+    "location": "Denver, Colorado, USA",
+    "primary_focus": ["Gaming Technology", "Platforms", "Infrastructure", "Frontier Markets"]
+  },
+  "investment_thesis": {
+    "summary": "Konvoy is a thesis-driven venture capital firm investing in platforms and technologies at the frontier of gaming. They focus on infrastructure that shapes the future of interactive entertainment, with particular interest in emerging markets including Africa and Southeast Asia.",
+    "ai_alignment": "Exceptional alignment with AI infrastructure thesis. Konvoy actively invests in gaming technology platforms and infrastructure plays. Their focus on 'technologies at the frontier' and thesis-driven approach makes them ideal for AI-powered live service infrastructure. Recent investments in gaming infrastructure across Africa demonstrate their appetite for platform-level bets.",
+    "recent_investments": ["Carry1st (Africa gaming)", "Gaming infrastructure platforms", "Technology enablers"]
+  },
+  "priority": "P0",
+  "due_date": "2026-03-20",
+  "outreach_angle": "Konvoy's thesis explicitly targets 'platforms and technologies at the frontier of gaming.' Position as infrastructure for the next generation of live service games - AI that enables smaller studios to operate like AAA live service teams. Reference their $150M Fund III deployment focus on pre-seed/seed infrastructure plays and their pioneering investments in under-served markets.",
+  "verification_status": {
+    "fund_active": true,
+    "contact_verified": true,
+    "last_fund_close": "2023 (Fund III, $150M)",
+    "deployment_status": "Actively deploying from Fund III"
+  },
+  "notes": "Konvoy is a specialized gaming infrastructure fund with $258M AUM. Co-founded by brothers Josh and Jason Chapman plus Jackson Vaughan. Known for thesis-driven investing and being first movers in gaming infrastructure in frontier markets like Africa. Strong focus on technology platforms over content plays."
+}

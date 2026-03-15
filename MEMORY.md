@@ -14,3 +14,6 @@
 ## Key Learnings
 - Cron jobs need auth in agent config (not just env vars) for isolated sessions
 - Maton API gateway used for SaaS integrations (Slack, etc.)
+
+## Configuration Needed
+- Discord channel ID for heartbeat updates (HEARTBEAT.md specifies Discord output but no channel configured)

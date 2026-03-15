@@ -1,0 +1,87 @@
+[
+  {
+    "firm": "BITKRAFT Ventures",
+    "priority": "P0",
+    "packet": {
+      "subject": "Appcharge + Liminal's infrastructure layer—our live ops platform fits the thesis",
+      "hook": "Your recent $58M Series B in Appcharge and the Liminal Experiences round signal something we see every day: the infrastructure layer beneath live games is still massively underinvested. While Appcharge solves the billing problem, the operational layer—what happens between player engagement and monetization—remains fragmented.",
+      "body_paragraphs": [
+        "We're building the live operations platform that sits between your portfolio's monetization tools (Appcharge) and the actual player experience. Think of it as the operational nervous system for live games—unifying telemetry, player segmentation, content deployment, and event orchestration into a single control plane. Teams like Raid Base need this to move fast without breaking things.",
+        "BITKRAFT's thesis on AI-enabled gaming and creator economies is prescient. The next wave of successful games won't just have AI features—they'll be operationally AI-native from day one. Our platform is designed for this shift: predictive player health models, automated cohort optimization, and real-time event personalization. We're already seeing 40%+ lift in D7 retention with early partners.",
+        "We're raising a seed round to expand from our initial studio partners to the broader ecosystem. Given Jens Hilgers' track record with platform-layer bets and Scott Rupp's Riot background on live ops at scale, I'd welcome 15 minutes to share what we're seeing in the market and explore whether this fits BITKRAFT's infrastructure thesis."
+      ],
+      "ask": "Can we grab 15 minutes next week?",
+      "key_references": ["Appcharge ($58M Series B)", "Liminal Experiences ($5.8M)", "Raid Base (2025)"],
+      "target_partner": "Jens Hilgers or Scott Rupp",
+      "warm_path": null
+    }
+  },
+  {
+    "firm": "Transcend Fund",
+    "priority": "P0",
+    "packet": {
+      "subject": "Live Aware Labs told me to reach out—live ops tooling at seed stage",
+      "hook": "Your October investment in Live Aware Labs caught my attention—it's exactly the pain point we solve for. Live Aware helps studios understand what's happening in their games; we're the layer that lets them actually do something about it in real-time.",
+      "body_paragraphs": [
+        "We're building the live operations infrastructure that seed-stage studios desperately need but can't build themselves. While Live Aware gives developers visibility into player behavior, our platform gives them the ability to act on that data—deploy live events, run targeted offers, manage content updates, and orchestrate player journeys without engineering bottlenecks. It's the difference between seeing a problem and being able to fix it before your players churn.",
+        "Transcend's focus on live service tools and analytics aligns perfectly with what we're seeing in the market. Gardens and your other portfolio companies are building ambitious live service games—they'll hit the same wall our early partners did: the live ops infrastructure gap. Studios either duct-tape together a dozen tools or burn precious engineering cycles building internal systems that become technical debt. We're offering a third option: a purpose-built platform that scales from seed to Series B and beyond.",
+        "Shanti Bergel's 30 years in gaming and Mika Kuusisto's mobile expertise give Transcend unique insight into what live games actually need at the operational layer. We've got early traction with 3 studios and a clear path to becoming the default live ops stack for seed-stage game companies. Would Shanti or Mika be open to a 15-minute call to explore if this fits Transcend's infrastructure thesis?"
+      ],
+      "ask": "Can we grab 15 minutes next week?",
+      "key_references": ["Live Aware Labs ($4.8M Seed, Oct 2024)", "Gardens (2024)", "Mythical Games"],
+      "target_partner": "Shanti Bergel or Mika Kuusisto",
+      "warm_path": null
+    }
+  },
+  {
+    "firm": "Makers Fund",
+    "priority": "P0",
+    "packet": {
+      "subject": "BIT ODD + Human Computer's next bottleneck—and how we're solving it",
+      "hook": "Makers Fund's recent bets on BIT ODD (Nov 2024) and Human Computer (Mar 2025) tell me you're backing ambitious studios building for the next generation of players. Those studios are going to hit the same wall every breakout studio hits: live operations infrastructure that wasn't designed for their velocity.",
+      "body_paragraphs": [
+        "We're building the live ops platform purpose-built for studios like BIT ODD and Human Computer—teams that need to move fast, iterate constantly, and deliver personalized experiences without hiring an army of backend engineers. Our platform unifies player data, content management, event orchestration, and monetization tools into a single system that scales from early access to global launch.",
+        "Jay Chi's Tencent background and Michael Cheung's ops experience give Makers Fund unique perspective on what happens when a studio breaks out in Asia-Pacific and needs to scale globally—or vice versa. Our platform's multi-region architecture and real-time synchronization are designed exactly for this: studios that need to operate live games across markets without operational complexity eating their margin. The Singapore/US dual presence in your thesis makes this particularly relevant.",
+        "We're currently working with seed-stage studios seeing 2-3x improvements in key live ops metrics. Given Makers Fund's track record with infrastructure bets and the Jay/Michael team's operating experience, I'd value 15 minutes to share what we're learning about the live ops gap and explore if this aligns with Makers' platform-layer investments."
+      ],
+      "ask": "Can we grab 15 minutes next week?",
+      "key_references": ["BIT ODD (€17M Seed, Nov 2024)", "Human Computer ($5.7M, Mar 2025)", "Second Studio (2024)"],
+      "target_partner": "Jay Chi or Michael Cheung",
+      "warm_path": null
+    }
+  },
+  {
+    "firm": "Hiro Capital",
+    "priority": "P1",
+    "packet": {
+      "subject": "Ian Livingstone's metaverse thesis—our live ops layer makes it operable",
+      "hook": "Hiro Capital's focus on spatial computing and the convergence of AI, games, and metaverse infrastructure is the right bet for the next decade. But there's a gap between building spatial worlds and actually operating them at scale—our platform fills that operational layer.",
+      "body_paragraphs": [
+        "We're building the live operations infrastructure that makes spatial and AI-driven games actually operable. Your portfolio companies like Meeple Corp and Maintain Altitude are pioneering new interaction models—but they'll need more than great tech to succeed. They'll need to orchestrate player experiences, deploy content updates, and optimize monetization in real-time across immersive environments. That's exactly what our platform does.",
+        "The Yann LeCun advisory connection signals Hiro's understanding that AI-native experiences require AI-native operations. Traditional live ops tools were built for flat, 2D games with predictable player flows. Spatial computing breaks those assumptions—player attention is distributed in 3D space, interactions are emergent, and events need to adapt dynamically. Our platform is architected for this shift: real-time behavioral modeling, spatial event triggering, and predictive content delivery.",
+        "I understand there may be a warm path through Ian Livingstone's network in the UK gaming ecosystem—I'd welcome any introduction. Regardless, given Hiro's thesis on spatial AI and games as platforms, I'd appreciate 15 minutes to share how we're enabling the operational layer for the next generation of immersive experiences."
+      ],
+      "ask": "Can we grab 15 minutes next week?",
+      "key_references": ["Meeple Corp (£500K, Feb 2025)", "Maintain Altitude ($500K, Oct 2024)", "Moonlander (2024)"],
+      "target_partner": "Sir Ian Livingstone",
+      "warm_path": "Ian Livingstone connections via UK gaming ecosystem - request warm intro"
+    }
+  },
+  {
+    "firm": "Konvoy Ventures",
+    "priority": "P1",
+    "packet": {
+      "subject": "Nerd Street + Thirdweb's infrastructure play—missing the ops layer",
+      "hook": "Konvoy's investment in Nerd Street and Thirdweb shows a clear thesis: gaming infrastructure and middleware are where the value accrues. But there's a layer most investors miss—the operational infrastructure that sits between the blockchain/Nerd Street community layer and the actual player experience. That's where we operate.",
+      "body_paragraphs": [
+        "We're building the live operations platform that gaming infrastructure companies need but don't build themselves. Thirdweb provides the web3 tooling, Nerd Street provides the community and competitive layer—but studios still need to orchestrate player journeys, deploy live events, manage economies, and optimize retention in real-time. Our platform sits at that intersection: the operational control plane for live games.",
+        "Josh Chapman's thesis-driven approach to gaming infrastructure and Jason Chapman's focus on middleware gives Konvoy unique insight into the platform layer. What we're seeing: even the most infrastructure-savvy studios are duct-taping together live ops solutions that break at scale. They're using analytics tools for visibility, spreadsheets for planning, and custom scripts for execution. We're replacing that fragmentation with a unified platform designed specifically for live service operations.",
+        "We've got early traction with studios seeing measurable retention and revenue improvements. Given Konvoy's focus on tools, middleware, and services that power game development—plus the team's operator network—I'd value 15 minutes to share what we're learning about the live ops gap and explore whether this fits Konvoy's platform-layer thesis."
+      ],
+      "ask": "Can we grab 15 minutes next week?",
+      "key_references": ["Nerd Street ($6M, Sept 2024)", "Thirdweb (2024)"],
+      "target_partner": "Josh Chapman or Jason Chapman",
+      "warm_path": null
+    }
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "firm_name": "a16z Games",
+  "fund_size": "$600M Fund II (part of $7.2B a16z raise)",
+  "stage_focus": "Seed to Series A, Accelerator (Tech x Games)",
+  "thesis": "Investing at the intersection of AI, gaming, infrastructure, and consumer apps. Building the future of games through technology.",
+  "key_partners": [
+    {
+      "name": "Andrew Chen",
+      "title": "General Partner",
+      "background": "Former Uber growth, gaming and consumer tech expert",
+      "relevance": "Leads gaming infrastructure and tech x gaming investments"
+    },
+    {
+      "name": "Jonathan Lai",
+      "title": "General Partner",
+      "background": "Former Riot Games, Tencent, gaming industry veteran",
+      "relevance": "Runs a16z Speedrun (AI x creative accelerator), invests in gaming infrastructure"
+    },
+    {
+      "name": "Josh Buckley",
+      "title": "Partner",
+      "background": "Gaming and technology investments",
+      "relevance": "Active in gaming and AI investments"
+    }
+  ],
+  "target_partner": {
+    "name": "Jonathan Lai",
+    "rationale": "Jonathan's background at Riot Games (League of Legends live operations expertise) and Tencent makes him the ideal partner for a live ops platform. He runs a16z Speedrun (AI x creative accelerator) and has led investments in gaming infrastructure including Kaedim. His firsthand experience with live service games at scale gives him unique appreciation for the operational challenges."
+  },
+  "recent_investments": [
+    {
+      "company": "Kaedim",
+      "round": "$15M Series A",
+      "date": "March 2024",
+      "description": "AI-powered 3D art outsourcing and co-development platform"
+    },
+    {
+      "company": "Series AI",
+      "round": "Seed (led)",
+      "date": "September 2023",
+      "description": "AI-native game studio and technology platform"
+    },
+    {
+      "company": "Live Aware Labs",
+      "round": "$4.8M Seed (co-investor)",
+      "date": "October 2024",
+      "description": "AI-powered game testing platform"
+    }
+  ],
+  "key_references": [
+    "Kaedim - AI-powered art outsourcing platform (Series A led by a16z)",
+    "Series AI - AI-native game development platform (seed led by a16z)",
+    "Speedrun Accelerator - $750K investments in AI x gaming companies"
+  ],
+  "outreach_packet": {
+    "subject_line": "Live ops platform—next layer of gaming infrastructure",
+    "hook": "After backing Kaedim for AI art and Series AI for game development, I wanted to share how we're completing the stack with live operations infrastructure.",
+    "body_paragraphs": {
+      "value_prop": "We're building the live operations infrastructure layer for gaming—a unified platform that automates content deployment, player segmentation, event orchestration, and real-time balancing. Just as Kaedim is transforming art production and Series AI is reinventing development, we're making live ops programmable. Studios reduce deployment time by 40% and can run personalized events for player segments without engineering tickets. It's the infrastructure layer that makes AI-generated content actually deployable at scale.",
+      "market_insight": "Your investments in Kaedim and Series AI show a16z's conviction that gaming infrastructure is being rebuilt with AI. The missing piece is what happens after AI creates assets and generates games—how do studios actually operate these experiences? At Riot, you experienced firsthand how live ops is the difference between a game that launches and one that thrives for a decade. With 60%+ of gaming revenue now from live services, the operational infrastructure gap is a $22B+ opportunity. This is the 'boring but critical' layer that a16z excels at identifying.",
+      "traction_ask": "We're in closed beta with 3 studios including one with a top-100 mobile title, seeing 40% faster content deployment. Given a16z's leadership in gaming infrastructure and your focus on AI x gaming, we'd welcome your perspective on our Seed round. Would you have 20 minutes to discuss how live ops is becoming the platform layer for modern games?"
+    }
+  },
+  "warm_paths": [
+    "Co-investors in Live Aware Labs (Transcend, BITKRAFT)",
+    "Kaedim founders (recent portfolio company)",
+    "a16z Speedrun alumni network",
+    "Former Riot Games colleagues (Jonathan Lai's network)"
+  ],
+  "notes": "a16z Games is the most prestigious gaming investor with the deepest resources. Their investments in Kaedim and Series AI demonstrate strong thesis alignment with gaming infrastructure. Jonathan Lai's Riot Games background gives him unique credibility and understanding of live operations. The Speedrun accelerator creates a natural pipeline of potential customers."
+}

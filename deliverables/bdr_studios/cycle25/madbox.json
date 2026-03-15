@@ -1,0 +1,48 @@
+{
+  "studio_name": "Madbox",
+  "priority": "P1",
+  "tier": "Tier-2",
+  "studio_info": {
+    "website": "https://madbox.io",
+    "headquarters_location": "Paris, France",
+    "employee_count": 150,
+    "total_downloads_estimate": "1B+",
+    "key_titles": [
+      "Paper.io 2 (100M+)",
+      "Stickman Hook (100M+)",
+      "Mad GunZ (50M+)"
+    ],
+    "live_ops_evidence": "300M+ MAU across portfolio; constantly rotating events, seasonal content, battle passes; studio behind hit .io games",
+    "linkedin_company_url": "https://www.linkedin.com/company/madbox/",
+    "founders": "Maxime Demeure, Jean-Nicolas Vernin, Jonathan Hattab"
+  },
+  "contact": {
+    "full_name": "Maxime Demeure",
+    "title": "Co-Founder & CEO",
+    "seniority_level": "C-Level",
+    "department": "Leadership",
+    "email": "maxime@madbox.io",
+    "email_source": "Pattern (founder email typically first@domain)",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/in/maxime-demeure/",
+    "linkedin_verified": true,
+    "location": "Paris, France",
+    "notes": "Primary target. Co-founder CEO. Madbox is a French success story, highly engineering-driven culture. Focus on data and rapid iteration."
+  },
+  "outreach_packet": {
+    "subject_line": "Live ops at 300M MAU scale",
+    "hook": "With 300M monthly active users across your .io portfolio, you're managing live ops complexity that most studios can't imagine.",
+    "body_paragraphs": [
+      "Madbox built hits like Paper.io 2 and Stickman Hook by focusing on pure, addictive gameplay. But at 300M MAU, even small optimization gaps cost millions. The challenge isn't coming up with events—it's knowing which ones to run, when, and for which player segments.",
+      "We built an AI live operations platform that predicts event performance 7 days ahead, personalizes IAP offers by player behavior, and automatically balances difficulty curves to maximize both retention and revenue. It's designed for high-velocity studios like Madbox.",
+      "One hyper-casual studio with similar scale increased event revenue 31% by letting AI optimize their event calendar instead of running the same fixed schedule. With your portfolio breadth, the impact could be substantial."
+    ],
+    "cta": "Open to a quick conversation about AI-driven live ops at Madbox's scale?",
+    "angle_notes": {
+      "primary_angle": "Scale optimization",
+      "why_this_works": "Madbox has massive MAU (300M) but relatively lean team (~150 people). They operate multiple live games simultaneously. At this scale, AI optimization becomes essential, not nice-to-have. Demeure is technical founder who would appreciate data-driven approach.",
+      "personalization_trigger": "300M MAU scale + portfolio complexity",
+      "pain_hypothesis": "Managing live ops across multiple hit games with 300M MAU creates optimization blind spots; AI could systematically improve performance without adding headcount"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "cards": [
+    {
+      "name": "[P0] VC: Powerhouse Capital - Salim Mitha",
+      "desc": "**Fund:** Powerhouse Capital\n**Partner:** Salim Mitha (Co-Founder & Managing Partner)\n**Email:** salim@powerhouse.vc\n**AUM:** Early-stage fund (Fund I active)\n**Location:** Los Angeles, CA\n**Priority:** P0\n**Due:** March 21, 2026\n\n**Thesis Alignment:**\nExclusively dedicated to media, entertainment, sports & interactive gaming. Recently invested in Lil Snack (AI-powered gaming) - HIGH AI alignment.\n\n**Outreach Angle:**\nReference Lil Snack investment showing AI+gaming interest. Position as AI infrastructure that enables next-gen gaming experiences at scale. LA-based for local connection.\n\n**Recent Investments:** Lil Snack (AI gaming lead), Meco, Toya, Arena\n**Notable Exits:** MasterClass, Wondery (Amazon), The Athletic (NYT)\n**Focus:** Visual content, gaming, esports, sports tech, experience economy",
+      "labels": ["P0", "VC", "Gaming-Focused", "US"],
+      "due": "2026-03-21T23:59:00.000Z",
+      "checklist": [
+        "Research Salim Mitha background and recent talks",
+        "Find warm intro through LA gaming network",
+        "Draft email referencing Lil Snack/AI thesis",
+        "Prepare AI infrastructure demo deck",
+        "Set follow-up reminder (5 days)"
+      ]
+    },
+    {
+      "name": "[P0] VC: The Raine Group - John Salter",
+      "desc": "**Fund:** The Raine Group / Raine Ventures\n**Partner:** John Salter (Co-Founder & Partner)\n**Email:** john.salter@raine.com\n**AUM:** $3.1B+ across strategies\n**Location:** New York, NY\n**Priority:** P0\n**Due:** March 21, 2026\n\n**Thesis Alignment:**\nGrowth equity and venture focused on TMT. Led $760M Raine Partners IV for gaming/media. First Fund IV investment: Tripledot Studios. Strong M&A advisory business.\n\n**Outreach Angle:**\nLead with growth metrics and scalability. Reference Tripledot investment. Emphasize enterprise/platform nature (not content). Unique value: M&A relationships with all major buyers.\n\n**Recent Investments:** Tripledot Studios, Within, Scopely\n**Focus:** Interactive entertainment, real money gaming, digital media\n**Unique:** Elite M&A advisory + investing (knows all buyers personally)",
+      "labels": ["P0", "VC", "Gaming-Focused", "US"],
+      "due": "2026-03-21T23:59:00.000Z",
+      "checklist": [
+        "Research John Salter recent gaming commentary",
+        "Analyze Tripledot Studios investment criteria",
+        "Prepare growth metrics deck (they need scale)",
+        "Draft email emphasizing enterprise infrastructure",
+        "Set follow-up with traction metrics (1 week)"
+      ]
+    },
+    {
+      "name": "[P0] VC: Savvy Games Group - Brian Ward",
+      "desc": "**Fund:** Savvy Games Group (SGG)\n**Partner:** Brian Ward (CEO)\n**Email:** brian.ward@savvygames.com\n**AUM:** $37.8B committed from PIF\n**Location:** Riyadh, Saudi Arabia / LA\n**Priority:** P0\n**Due:** March 21, 2026\n\n**Thesis Alignment:**\nNational Champion for Games and Esports in Saudi Arabia. Vision 2030: 250 game companies, 39,000 jobs. Acquired Scopely ($4.9B) and ESL FACEIT.\n\n**Outreach Angle:**\nLead with ecosystem enablement - how we help build Saudi gaming economy. Reference Scopely acquisition. Emphasize technology/infrastructure for ecosystem development. Think 10+ year horizons.\n\n**Major Acquisitions:** Scopely ($4.9B), Embracer ($1B), ESL FACEIT Group\n**Building:** Steer Studios (AAA), Nine66 (ecosystem)\n**Focus:** Transform Saudi Arabia into global gaming hub",
+      "labels": ["P0", "VC", "Gaming-Focused", "EMEA"],
+      "due": "2026-03-21T23:59:00.000Z",
+      "checklist": [
+        "Research Brian Ward on ecosystem building",
+        "Study Scopely platform architecture",
+        "Prepare Saudi ecosystem value proposition",
+        "Draft infrastructure + ecosystem email",
+        "Set follow-up with Saudi market insights"
+      ]
+    },
+    {
+      "name": "[P0] VC: Aonic - Sten Düring",
+      "desc": "**Fund:** Aonic\n**Partner:** Sten Düring (Managing Partner & Co-Founder)\n**Email:** sten@aonic.com\n**AUM:** $100M+ gaming-focused\n**Location:** London / Hamburg\n**Priority:** P0\n**Due:** March 21, 2026\n\n**Thesis Alignment:**\nGaming-focused investment and operational partner. Recently acquired exmox (performance marketing) - infrastructure play. Strong history in gaming adtech (Fyber exit).\n\n**Outreach Angle:**\nReference exmox acquisition showing infrastructure interest. Emphasize AI for monetization and UA optimization. European gaming ecosystem connection.\n\n**Portfolio:** exmox (acquired), Sensortower, GameAnalytics\n**Partners:** Paul Kasek (Co-Founder, Hamburg)\n**Focus:** Mobile gaming, infrastructure, tools, data-driven gaming",
+      "labels": ["P0", "VC", "Gaming-Focused", "Europe"],
+      "due": "2026-03-21T23:59:00.000Z",
+      "checklist": [
+        "Research Sten Düring background",
+        "Study exmox acquisition details",
+        "Prepare AI monetization demo",
+        "Draft email referencing exmox focus",
+        "Find warm intro through European gaming network"
+      ]
+    }
+  ]
+}

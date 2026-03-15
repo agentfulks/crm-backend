@@ -1,0 +1,124 @@
+{
+  "cards": [
+    {
+      "name": "[P0] BDR: Bravestars Games - Le Manh Duc (CEO)",
+      "desc": "**Studio:** Bravestars Games\n**Contact:** Le Manh Duc (CEO)\n**Email:** duc.lm@bravestars.com\n**Downloads:** 1,000,000,000+\n**Location:** Hanoi, Vietnam\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 16, 2026\n\n**Key Games:**\n- Hair Salon (100M+ downloads)\n- Cooking Games series\n- Multiple simulation hits\n\n**Outreach Angle:**\nAI-powered simulation content generation. Bravestars' simulation portfolio requires constant fresh content. AI can generate infinite variations of cooking/hair styling scenarios without artist bottlenecks.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/02_bravestars_le_manh_duc.md\n\n**Notes:**\n- 100-200 employees (sweet spot)\n- Vietnam-based with global reach\n- Strong simulation genre focus\n- High content velocity needs",
+      "labels": ["P0", "BDR", "Tier-1"],
+      "due": "2026-03-16T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email via LinkedIn",
+        "Review email draft",
+        "Send during Vietnam business hours (UTC+7)",
+        "Schedule follow-up in 5 days"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Fingersoft - Teemu Närhi (CEO)",
+      "desc": "**Studio:** Fingersoft\n**Contact:** Teemu Närhi (CEO)\n**Email:** teemu.narhi@fingersoft.com\n**Downloads:** 1,000,000,000+\n**Location:** Oulu, Finland\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 16, 2026\n\n**Key Games:**\n- Hill Climb Racing (1B+ downloads)\n- Hill Climb Racing 2\n- Physics-based racing hits\n\n**Outreach Angle:**\nAI for racing game content generation and physics-based gameplay. Fingersoft's Hill Climb series has massive scale but finite content. AI can generate infinite tracks, vehicles, and physics challenges.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/03_fingersoft_teemu_narhi.md\n\n**Notes:**\n- 51-200 employees\n- Finland-based (European timezone)\n- Physics/racing genre expertise\n- Recently returned to independence",
+      "labels": ["P0", "BDR", "Tier-1"],
+      "due": "2026-03-16T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Hill Climb Racing success",
+        "Send during EU business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Moonee - Erez Mishli (Co-CEO)",
+      "desc": "**Studio:** Moonee\n**Contact:** Erez Mishli (Co-Founder & Co-CEO)\n**Email:** erez@moonee.io\n**Downloads:** 500,000,000+\n**Location:** Tel Aviv, Israel\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 16, 2026\n\n**Key Games:**\n- Multiple published hyper-casual hits\n- Publishing model portfolio\n\n**Outreach Angle:**\nAI-powered creative optimization. Moonee's publishing model relies on rapid creative testing and iteration. AI can generate and optimize ad creatives, level variations, and game concepts at scale.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/04_moonee_erez_mishli.md\n\n**Notes:**\n- 50-200 employees\n- Tel Aviv-based\n- Publishing/UA focused\n- Rapid creative iteration needs",
+      "labels": ["P0", "BDR", "Tier-1"],
+      "due": "2026-03-16T23:59:00.000Z",
+      "checklist": [
+        "Verify Co-CEO email",
+        "Reference publishing model",
+        "Send during Israel business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Innersloth - Forest Willard (CEO)",
+      "desc": "**Studio:** Innersloth\n**Contact:** Forest Willard (CEO & Co-Founder)\n**Email:** forest@innersloth.com\n**Downloads:** 500,000,000+\n**Location:** Redmond, WA, USA\n**Priority:** P0 | **Tier:** Tier-2\n**Due:** March 17, 2026\n\n**Key Games:**\n- Among Us (500M+ downloads, cultural phenomenon)\n\n**Outreach Angle:**\nAI for indie live ops automation. Small team managing massive game (Among Us). AI can automate content updates, community management, and live events without scaling headcount.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/05_innersloth_forest_willard.md\n\n**Notes:**\n- 11-50 employees (lean team)\n- US-based (PST timezone)\n- Indie success story\n- Live ops automation opportunity",
+      "labels": ["P0", "BDR", "Tier-2"],
+      "due": "2026-03-17T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Among Us phenomenon",
+        "Position as indie-friendly solution",
+        "Send during US business hours"
+      ]
+    },
+    {
+      "name": "[P0] BDR: ZPLAY Games - He Peng/Jack Ho (CEO)",
+      "desc": "**Studio:** ZPLAY Games\n**Contact:** He Peng (Jack Ho) (Founder & CEO)\n**Email:** he.peng@zplay.com\n**Downloads:** 500,000,000+\n**Location:** Beijing, China\n**Priority:** P0 | **Tier:** Tier-2\n**Due:** March 17, 2026\n\n**Key Games:**\n- Global publisher portfolio\n- 500M+ downloads across titles\n\n**Outreach Angle:**\nAI for hyper-casual content at scale. Chinese publisher with global reach. AI enables rapid content generation for worldwide markets with cultural localization.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/06_zplay_he_peng.md\n\n**Notes:**\n- 100-200 employees\n- Beijing-based (APAC timezone)\n- Global publishing focus\n- Localization at scale opportunity",
+      "labels": ["P0", "BDR", "Tier-2"],
+      "due": "2026-03-17T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email (medium confidence)",
+        "Reference global publishing",
+        "Send during China business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Playgendary - Dmitriy Shelengovskiy (CEO)",
+      "desc": "**Studio:** Playgendary\n**Contact:** Dmitriy Shelengovskiy (Founder & CEO)\n**Email:** dmitriy@playgendary.com\n**Downloads:** 500,000,000+\n**Location:** Limassol, Cyprus\n**Priority:** P0 | **Tier:** Tier-2\n**Due:** March 17, 2026\n\n**Key Games:**\n- Bowmasters (100M+ downloads)\n- Kick the Buddy series\n- Action/arcade hits\n\n**Outreach Angle:**\nAI for action game content generation. Cyprus-based publisher with global reach. AI can generate characters, weapons, and scenarios for action games.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/07_playgendary_dmitriy_shelengovskiy.md\n\n**Notes:**\n- 51-200 employees\n- Cyprus-based (EU timezone)\n- Action/arcade focus\n- Character/content generation opportunity",
+      "labels": ["P0", "BDR", "Tier-2"],
+      "due": "2026-03-17T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Bowmasters success",
+        "Send during EU business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: MAG Interactive - Daniel Hasselberg (CEO)",
+      "desc": "**Studio:** MAG Interactive\n**Contact:** Daniel Hasselberg (CEO)\n**Email:** daniel.hasselberg@maginteractive.com\n**Downloads:** 300,000,000+\n**Location:** Stockholm, Sweden\n**Priority:** P0\n**Due:** March 18, 2026\n\n**Key Games:**\n- QuizDuel (trivia hit)\n- WordBrain series\n- Word/puzzle portfolio\n\n**Outreach Angle:**\nAI for word puzzle content generation. MAG's word games need infinite puzzle variations. AI can generate unique puzzles daily without writer bottlenecks.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/08_mag_interactive_daniel_hasselberg.md\n\n**Notes:**\n- 50-200 employees\n- Stockholm-based\n- Word/puzzle genre\n- Daily content generation needs",
+      "labels": ["P0", "BDR"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference QuizDuel/WordBrain",
+        "Send during EU hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Green Panda Games - Guillaume Sztejnberg",
+      "desc": "**Studio:** Green Panda Games\n**Contact:** Guillaume Sztejnberg (CEO)\n**Email:** guillaume.sztejnberg@greenpandagames.com\n**Downloads:** 300,000,000+\n**Location:** Paris, France\n**Priority:** P0\n**Due:** March 18, 2026\n\n**Key Games:**\n- Idle/clicker hits\n- Publishing portfolio\n\n**Outreach Angle:**\nAI for idle game economy optimization. Green Panda's idle games require balanced economies and constant content. AI can optimize progression curves and generate new content layers.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/09_green_panda_games_guillaume_sztejnberg.md\n\n**Notes:**\n- 51-200 employees\n- Paris-based\n- Idle/clicker focus\n- Economy optimization opportunity",
+      "labels": ["P0", "BDR"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference idle game expertise",
+        "Send during EU hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Tactile Games - Asbjoern Soendergaard",
+      "desc": "**Studio:** Tactile Games\n**Contact:** Asbjoern Malte Soendergaard (CEO)\n**Email:** asbjoern@tactile.dk\n**Downloads:** 200,000,000+\n**Location:** Copenhagen, Denmark\n**Priority:** P0\n**Due:** March 18, 2026\n\n**Key Games:**\n- Lily's Garden (match-3 + story)\n- narrative-driven mobile games\n\n**Outreach Angle:**\nAI for narrative match-3 content. Tactile's story-driven games need constant narrative updates. AI can generate story branches, dialogue, and match-3 levels aligned with plot.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/10_tactile_games_asbjoern_soendergaard.md\n\n**Notes:**\n- 100-200 employees\n- Copenhagen-based\n- Match-3 + narrative\n- Story content generation opportunity",
+      "labels": ["P0", "BDR"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Lily's Garden",
+        "Send during EU hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Space Ape Games - John Earner (CEO)",
+      "desc": "**Studio:** Space Ape Games\n**Contact:** John Earner (CEO)\n**Email:** john@spaceapegames.com\n**Downloads:** 100,000,000+\n**Location:** London, UK\n**Priority:** P0\n**Due:** March 18, 2026\n\n**Key Games:**\n- Transformers: Earth Wars\n- Fastlane: Road to Revenge\n- Midcore mobile hits\n\n**Outreach Angle:**\nAI for midcore live ops. Space Ape's midcore games require sophisticated live ops. AI can optimize event timing, balance economies, and personalize offers for player segments.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/11_space_ape_john_earner.md\n\n**Notes:**\n- 51-200 employees\n- London-based\n- Midcore focus\n- Supercell alumni team\n- Live ops sophistication opportunity",
+      "labels": ["P0", "BDR"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Transformers/Fastlane",
+        "Send during UK hours",
+        "Schedule follow-up"
+      ]
+    }
+  ]
+}

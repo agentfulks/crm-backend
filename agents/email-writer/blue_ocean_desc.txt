@@ -1,0 +1,22 @@
+### Firm Overview
+- Blue Ocean Games is a Krafton-backed $30M pre-seed/seed fund launched in April 2025 to empower indie studios that fall outside traditional venture criteria.
+- The fund targets $100K-$500K checks and plans to support 100 developers across Korea, India, and other underserved markets with Krafton’s publishing resources.
+- Differentiator: combines capital with the PUBG maker’s production, UA, and distribution muscle for founders who want a long-term partner.
+
+### Partner Focus
+- Damian Lee previously led Krafton’s investment team and now backs non-traditional, globally diverse indie founders.
+- He gravitates toward teams that are scrappy, community-first, and willing to experiment with new monetization loops without AAA budgets.
+
+### Recent Deals
+- 2025: Announced the $30M Fund I launch and began deploying first checks into India-focused studios.
+- 2025: Building the inaugural cohort of ~100 indie developers with Krafton accelerator support.
+- 2025: Prioritized founders coming from Krafton, PUBG, and India indie ecosystems to seed the portfolio quickly.
+
+### Outreach Email
+Subject: Keeping Blue Ocean indies shipping updates without crunch
+
+Damian, congrats on spinning up Blue Ocean with Krafton backing. The indie teams you are scouting are telling us the same thing: once players show up, the LiveOps grind burns out tiny teams long before they reach scale.
+
+Hyve Labs gives three-person crews the same production throughput the PUBG team enjoys. We automate concepting, asset prep, and event scripting so indies can ship seasonal beats twice as fast while keeping creative control. Early studios on Hyve are cutting update costs by 35% and finally running retention experiments without adding headcount.
+
+Would it be crazy to grab 15 minutes next week to see if Hyve can be the LiveOps backbone for the first Blue Ocean cohort?

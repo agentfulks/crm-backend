@@ -1,0 +1,79 @@
+{
+  "trello_cards_new_batch": [
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Awaiting Approval",
+      "card_title": "The Games Fund — Ilya Eremeev — Gaming Veterans Fund",
+      "description": "## VC Research Summary\n\n**Fund:** The Games Fund (TGF)\n**Focus:** Game developers, gaming technologies, gaming services\n**Fund Size:** $300M+ managed\n**Check Size:** Seed-stage, first checks\n**Stage:** Pre-seed to Seed\n**Location:** New York, USA; Limassol, Cyprus\n**Website:** https://www.gamesfund.vc\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Ilya Eremeev |\n| Title | General Partner |\n| Background | Gaming industry veteran; former 3D artist; co-founded fund's thesis |\n| LinkedIn | Active |\n\n## Investment Thesis\nFounded by video game industry veterans. Invest in future leaders: game developers, gaming technologies, and services. Never too early — move fast and support from day one.\n\n## Portfolio Highlights\nLayer.ai (AI content), Järvi Games, KEK Entertainment, Eschatology Entertainment (ex-Valve/Wargaming), Dark Passenger (ex-Witcher 3/CDPR), DRAMA Studios (Unrecord)\n\n## Recent Triggers\n- Active deployment across 20+ portfolio companies\n- Layer.ai investment shows AI tooling appetite\n- Geographic diversity: US, Cyprus, Europe, Georgia\n\n## Outreach Angle\nVeterans backing veterans. Perfect fit for studios with strong technical teams. Layer.ai investment shows AI infrastructure interest.\n\n## Draft Subject\n\"AI-powered live ops — veteran studio seeking veteran backers\"\n\n## Priority\nP1 — Actively deploying; AI infrastructure thesis\n\n## Source Files\n- vc_research/NEW_01_the_games_fund.md",
+      "labels": ["Gaming", "Awaiting Approval", "Tier-1"],
+      "due_date": "2026-03-16",
+      "checklist": [
+        "ICP validated: Gaming veterans fund",
+        "Contact research: Ilya Eremeev identified",
+        "Recent trigger: Layer.ai AI investment",
+        "Outreach drafted: Yes",
+        "Personalization hook: Veterans backing veterans"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Awaiting Approval",
+      "card_title": "Galaxy Interactive — Partners — Immersive Tech/Gaming ($76 portfolio)",
+      "description": "## VC Research Summary\n\n**Fund:** Galaxy Interactive\n**Focus:** Gaming, immersive tech, AI, spatial computing, blockchain\n**Fund Size:** Part of Galaxy Ventures ecosystem\n**Check Size:** Seed to Series A\n**Stage:** Early-stage\n**Location:** Global\n**Website:** https://interactive.galaxy.com\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Galaxy Partners |\n| Title | Team of 4 including 3 partners |\n| Background | Leading VC in interactive space |\n\n## Investment Thesis\nInvest at intersection of content, technology, social commerce. Emphasis on video games and infrastructure powering immersive virtual worlds. 76 portfolio companies, 7 unicorns.\n\n## Portfolio Highlights\n1047 Games, Aglet, Mythical Games, Republic — 76 companies across 17+ countries\n\n## Recent Triggers\n- 76 portfolio companies including 7 unicorns\n- Active investments across gaming + immersive tech\n- Thesis: Tech built for gamers powers new markets\n\n## Outreach Angle\nInfrastructure for immersive worlds. Live ops tooling fits thesis of technologies powering virtual worlds.\n\n## Draft Subject\n\"Gaming infrastructure for immersive worlds — live ops at scale\"\n\n## Priority\nP1 — Large portfolio = ongoing infrastructure needs; 7 unicorns\n\n## Source Files\n- vc_research/NEW_02_galaxy_interactive.md",
+      "labels": ["Gaming", "Awaiting Approval", "Tier-1"],
+      "due_date": "2026-03-17",
+      "checklist": [
+        "ICP validated: Gaming + immersive tech",
+        "Contact research: Partner team identified",
+        "Recent trigger: 76 portfolio, 7 unicorns",
+        "Outreach drafted: Yes",
+        "Personalization hook: Infrastructure for immersive worlds"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Awaiting Approval",
+      "card_title": "Valhalla Ventures — Partners — Deeptech + Gaming ($66M Fund I)",
+      "description": "## VC Research Summary\n\n**Fund:** Valhalla Ventures\n**Focus:** Deeptech and gaming — AI, infrastructure, frontier tech\n**Fund Size:** $66M Fund I\n**Check Size:** Up to $12M (inception to Seed)\n**Stage:** Pre-seed, Seed\n**Location:** Los Angeles, CA\n**Website:** https://www.valhalla.ventures\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Valhalla Partners |\n| Title | Visionary-focused team |\n| Background | Partners with founders building enduring moats |\n\n## Investment Thesis\nPartners with visionaries building enduring moats. Up to $12M from inception to Seed. Focus on deeptech + gaming convergence. Fund I launched July 2023, deploying through early 2025.\n\n## Portfolio Highlights\nApriority (AI debt management), various deeptech and gaming startups\n\n## Recent Triggers\n- July 2023: Launched $66M Fund I\n- Nov 2025: Apriority raises $2.3M (co-invest with Techstars)\n- Active deployment through early 2025\n\n## Outreach Angle\nDeeptech + gaming convergence. Live ops infrastructure = defensible tech at scale. Enduring moats thesis.\n\n## Draft Subject\n\"Building moats in gaming — live ops infrastructure\"\n\n## Priority\nP1 — Actively deploying; deeptech + gaming thesis\n\n## Source Files\n- vc_research/NEW_03_valhalla_ventures.md",
+      "labels": ["Gaming", "Awaiting Approval", "Tier-1"],
+      "due_date": "2026-03-18",
+      "checklist": [
+        "ICP validated: Deeptech + gaming",
+        "Contact research: Partner team identified",
+        "Recent trigger: Fund I active deployment",
+        "Outreach drafted: Yes",
+        "Personalization hook: Building enduring moats"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Awaiting Approval",
+      "card_title": "Transcend Fund — Shanti Bergel/Andrew Sheppard — Gaming ($60M Fund II)",
+      "description": "## VC Research Summary\n\n**Fund:** Transcend Fund\n**Focus:** Gaming, interactive entertainment, AI applications\n**Fund Size:** $60M Fund II (closed Nov 2023)\n**Check Size:** $500K - $5M\n**Stage:** Pre-Seed, Seed, Series A\n**Location:** San Francisco, CA\n**Website:** https://www.transcend.fund\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Shanti Bergel |\n| Title | Managing Director & Founding Partner |\n| Background | 30-year game industry veteran; TechCrunch List |\n\n## Other Partners\n- Andrew Sheppard (MD) — Ex-EA, Kabam, GREE, Rakuten Games\n- Brett Krause (MD) — Ex-CIO FunPlus, ex-JPMorgan China\n- Sikander Chahal (Principal) — Ex-LVP, ex-Newzoo\n- Lirui Ding (Principal) — Ex-Activision Blizzard Strategy\n\n## Investment Thesis\nPartners with craftspersons creating future of interactive entertainment. Deep operational expertise spanning every major platform transition. Cross-platform, next-gen social gaming focus.\n\n## Portfolio Highlights\nThatgamecompany (Journey, Sky), Gardens (ex-Bungie), Live Aware Labs, Ruckus Games, Dotplay\n\n## Recent Triggers\n- Nov 2023: Closed $60M Fund II\n- Thatgamecompany continuing success with Sky\n- Active deployment across portfolio\n\n## Outreach Angle\nOperational expertise — team has run billion-dollar gaming businesses. They understand live ops challenges at scale.\n\n## Draft Subject\n\"Live ops infrastructure from operators who've scaled to billions\"\n\n## Priority\nP0 — Fund II recently closed; operational team\n\n## Source Files\n- vc_research/NEW_04_transcend_fund.md",
+      "labels": ["Gaming", "Awaiting Approval", "Tier-1"],
+      "due_date": "2026-03-19",
+      "checklist": [
+        "ICP validated: Gaming + operational expertise",
+        "Contact research: Shanti Bergel identified",
+        "Recent trigger: Fund II close Nov 2023",
+        "Outreach drafted: Yes",
+        "Personalization hook: Operational expertise"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Awaiting Approval",
+      "card_title": "Griffin Gaming Partners — Peter Levin/Nick Tuosto — Gaming ($1.5B AUM)",
+      "description": "## VC Research Summary\n\n**Fund:** Griffin Gaming Partners\n**Focus:** Gaming content, platforms, software infrastructure\n**Fund Size:** $1.5B AUM (world's largest gaming-focused fund)\n**Check Size:** Seed to Series B+\n**Stage:** Seed to Growth\n**Location:** Santa Monica, CA\n**Website:** https://griffingp.com\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Peter Levin |\n| Title | Managing Director & Co-Founder |\n| Background | Former President Interactive Ventures at Lionsgate; Co-founder/CEO Nerdist Industries; early Rovio investor |\n| LinkedIn | Active |\n\n## Other Partners\n- Nick Tuosto (MD & Co-Founder) — Strategic advisor to Tencent/Supercell, Kabam/Netmarble, AppLovin/MZ, Roblox\n- Phil Sanderson (Senior Partner) — 23 years VC; invested in Discord, Phoenix Labs, Vivox, Funzio\n- Anthony Palma (Principal)\n\n## Investment Thesis\nThe 'dream team' of gaming VC — operational + investment + strategic expertise. Second Dinner COO called them exactly that. Focus on gaming content, platforms, software infrastructure.\n\n## Portfolio Highlights\nScopely, AppLovin, Discord, Skillz, Overwolf, Second Dinner, WinZO\n\n## Recent Triggers\n- May 2025: Invested in Super Banana Studios (casual puzzle)\n- Active deployment through 2025\n- Potential third fund targeting $500M\n\n## Outreach Angle\nDream team validation — portfolio companies call them best in gaming VC. Infrastructure plays fit platform/software thesis.\n\n## Draft Subject\n\"Dream team infrastructure — live ops at Second Dinner scale\"\n\n## Priority\nP0 — Active deployment; potential Fund III; $1.5B AUM\n\n## Source Files\n- vc_research/NEW_05_griffin_gaming_partners.md",
+      "labels": ["Gaming", "Awaiting Approval", "Tier-1"],
+      "due_date": "2026-03-20",
+      "checklist": [
+        "ICP validated: Gaming infrastructure",
+        "Contact research: Peter Levin identified",
+        "Recent trigger: Super Banana investment + Fund III rumors",
+        "Outreach drafted: Yes",
+        "Personalization hook: Dream team validation"
+      ]
+    }
+  ]
+}

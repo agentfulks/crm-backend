@@ -1,0 +1,82 @@
+# VC Outreach Engine - Daily Intake Automation Configuration
+
+# Trello Configuration
+trello:
+  gateway_url: "https://gateway.maton.ai/trello"
+  api_key: "2xeebNVm749KETi48PqXsENA7wAxo4UXcM-MHhcs2DAZ3ASnR-r8eLgB72QwFU0X_tMKOL71XLhIpFSWHiHAHbJ4-wUM3FGW-dICnjhbaA"
+  board_id: "699d2728fd2ae8c35d1f7a24"
+
+# List IDs (to be populated after first run or manual lookup)
+lists:
+  daily_queue: null  # Will be resolved by name if null
+  p0_high_priority: null
+  p1_medium_priority: null
+  p2_low_priority: null
+  needs_review: null
+
+# List names for auto-resolution
+list_names:
+  daily_queue: "Daily Queue"
+  p0_high_priority: "P0 - High Priority"
+  p1_medium_priority: "P1 - Medium Priority"
+  p2_low_priority: "P2 - Low Priority"
+  needs_review: "Needs Review"
+
+# Scoring Configuration
+scoring:
+  # Gaming focus keywords for scoring
+  gaming_keywords:
+    p0:
+      - "games"
+      - "gaming"
+      - "game"
+      - "interactive entertainment"
+      - "esports"
+      - "game studio"
+      - "game developer"
+      - "mobile games"
+      - "pc games"
+      - "console games"
+    p1:
+      - "metaverse"
+      - "vr"
+      - "ar"
+      - "virtual reality"
+      - "augmented reality"
+      - "immersive"
+      - "play"
+      - "entertainment"
+    p2:
+      - "media"
+      - "content"
+      - "consumer"
+      - "digital"
+  
+  # Check size thresholds (in millions USD)
+  check_size:
+    p0_min: 1.0
+    p1_min: 0.5
+
+# Enrichment Configuration
+enrichment:
+  # Fields to extract/parse from card names/descriptions
+  fields:
+    - firm_name
+    - firm_focus
+    - check_size
+    - portfolio_companies
+    - partner_background
+    - contact_info
+
+# Rate Limiting
+rate_limiting:
+  max_requests_per_10s: 300
+  buffer_percent: 10  # Keep 10% buffer for safety
+  retry_after_seconds: 10
+
+# Logging
+logging:
+  audit_log_path: "logs/vc_intake_audit.jsonl"
+  level: "INFO"
+  max_file_size_mb: 100
+  backup_count: 5

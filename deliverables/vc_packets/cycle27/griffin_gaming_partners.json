@@ -1,0 +1,33 @@
+{
+  "packet_id": "GGPC27-001",
+  "fund_name": "Griffin Gaming Partners",
+  "fund_website": "https://griffingp.com",
+  "partner": {
+    "name": "Peter Levin",
+    "title": "Managing Director & Co-Founder",
+    "email": "peter@griffingp.com",
+    "email_confidence": "high",
+    "linkedin": "https://www.linkedin.com/in/peter-y-levin-8109a811/"
+  },
+  "fund_details": {
+    "aum": "$1.5 billion",
+    "fund_stage": "Multi-stage (Pre-Seed to Pre-IPO)",
+    "location": "Los Angeles, California, USA",
+    "primary_focus": ["Game Developers & Publishers", "Software & Infrastructure", "Web3 Gaming", "Platforms"]
+  },
+  "investment_thesis": {
+    "summary": "Griffin invests at the intersection of content, social platforms, and software infrastructure. The firm focuses exclusively on the gaming ecosystem with a mission to be the definitive source of capital for the games industry.",
+    "ai_alignment": "Strong alignment with AI/live service infrastructure. Griffin's portfolio includes Discord, Overwolf, and AppLovin - all infrastructure plays that enable live service games. Peter Levin's background in interactive ventures and digital strategy makes the fund highly receptive to AI-powered game infrastructure.",
+    "recent_investments": ["Discord", "Overwolf", "AppLovin", "Scopely", "Second Dinner", "Spyke Games"]
+  },
+  "priority": "P0",
+  "due_date": "2026-03-20",
+  "outreach_angle": "Griffin's infrastructure thesis and portfolio (Discord, Overwolf, AppLovin) demonstrates deep conviction in game enablement platforms. Position our AI infrastructure as the next evolution of their existing thesis - enabling live service games through intelligent automation, content generation, and player engagement systems. Reference Peter's Lionsgate digital strategy background and emphasize scalable infrastructure for modern game operations.",
+  "verification_status": {
+    "fund_active": true,
+    "contact_verified": true,
+    "last_fund_close": "2022-2023 (Fund II)",
+    "deployment_status": "Actively deploying"
+  },
+  "notes": "Griffin is one of the world's largest gaming-focused VC funds. Co-founded by Peter Levin (ex-Lionsgate, Nerdist), Phil Sanderson (23+ years gaming VC), and Nick Tuosto (M&A advisory). Strong track record with exits including investments in Discord and AppLovin."
+}

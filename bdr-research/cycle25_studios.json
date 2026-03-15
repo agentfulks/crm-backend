@@ -1,0 +1,272 @@
+{
+  "cycle": 25,
+  "research_date": "2026-03-09",
+  "researcher": "BDR Strategist",
+  "studios": [
+    {
+      "name": "TapNation",
+      "location": "Paris, France",
+      "website": "https://www.tap-nation.io",
+      "linkedin": "https://fr.linkedin.com/company/tapnation",
+      "size": "86 employees",
+      "total_downloads": "1.5B+",
+      "games": [
+        "Guess Their Answer (100M+)",
+        "Cookie Carver (50M+)",
+        "Wacky Jelly (50M+)",
+        "Perfect Makeup 3D (100M+)"
+      ],
+      "live_ops_evidence": "AI-driven live ops, 50+ games with continuous content updates, seasonal events, monetization optimization through data analytics",
+      "contact": {
+        "name": "Philippe Botteri",
+        "role": "CEO & Co-Founder",
+        "email_format": "firstname@tap-nation.io",
+        "email": "philippe@tap-nation.io",
+        "source": "Pattern-inferred from careers@tap-nation.io"
+      },
+      "outreach_angle": "AI-powered LiveOps partnership - TapNation already leverages AI/ML for monetization. Position advanced LiveOps tooling for their 50+ game portfolio to increase LTV and retention.",
+      "priority": "P0",
+      "tier": "Tier-1",
+      "notes": "Strong LiveOps focus with AI/ML infrastructure. Perfect fit for partnership discussion. French Tech Next40 member."
+    },
+    {
+      "name": "Supercent",
+      "location": "Seoul, South Korea",
+      "website": "https://en.supercent.io",
+      "linkedin": "https://www.linkedin.com/company/supercent.io",
+      "size": "59 employees",
+      "total_downloads": "1.3B+",
+      "games": [
+        "Pizza Ready! (500M+)",
+        "Burger Please! (300M+)",
+        "Snake Clash (100M+)",
+        "Outlets Rush (50M+)"
+      ],
+      "live_ops_evidence": "AI-Driven System for all processes (dev, UA, monetization), rapid testing and iteration, working with 500+ partners, constant content updates",
+      "contact": {
+        "name": "Gong Jun-sik (Junsik Kong)",
+        "role": "CEO & Founder",
+        "email_format": "firstname@supercent.io",
+        "email": "junsik@supercent.io",
+        "source": "Pattern-inferred from help@supercent.io"
+      },
+      "outreach_angle": "LiveOps at scale - With 1.3B downloads and AI-driven operations, Supercent needs advanced LiveOps tooling to manage their 20+ hit titles and 500+ developer partnerships.",
+      "priority": "P0",
+      "tier": "Tier-1",
+      "notes": "Fastest-growing Korean publisher. AI Innovation Pioneer award. Top 10 global publisher ranking."
+    },
+    {
+      "name": "BoomBit",
+      "location": "Gdansk, Poland",
+      "website": "https://boombit.com",
+      "linkedin": "https://www.linkedin.com/company/boombit-games",
+      "size": "270 employees",
+      "total_downloads": "1.7B+",
+      "games": [
+        "Ramp Car Jumping (100M+)",
+        "Darts Club (50M+)",
+        "Tiny Gladiators (50M+)",
+        "Hunt Royale (30M+)"
+      ],
+      "live_ops_evidence": "218 games published since 2021, specialized User Acquisition and Data Analysis teams, internal UA management dashboards, live operations platforms",
+      "contact": {
+        "name": "Marcin Olejarz",
+        "role": "CEO & Co-Founder",
+        "email_format": "firstname@boombit.com",
+        "email": "marcin.olejarz@boombit.com",
+        "source": "Warsaw Stock Exchange filings / press releases"
+      },
+      "outreach_angle": "LiveOps for hybrid-casual transition - BoomBit is expanding beyond hyper-casual. Their data-driven approach and 270+ team size means they need enterprise LiveOps tooling for long-term player retention.",
+      "priority": "P0",
+      "tier": "Tier-1",
+      "notes": "Publicly traded (Warsaw Stock Exchange). Strong data/BI capabilities. 223M downloads in 2024 alone."
+    },
+    {
+      "name": "SayGames",
+      "location": "Minsk, Belarus / Limassol, Cyprus",
+      "website": "https://saygames.io",
+      "linkedin": "https://www.linkedin.com/company/saygames",
+      "size": "204 employees",
+      "total_downloads": "2B+",
+      "games": [
+        "My Perfect Hotel (100M+)",
+        "Sand Balls (100M+)",
+        "Perfect Slices (200M+)",
+        "House Paint (100M+)"
+      ],
+      "live_ops_evidence": "Advanced user acquisition and product analytics technologies, high marketing performance, continuous content updates for all hit titles",
+      "contact": {
+        "name": "Egor Vaihanski",
+        "role": "CEO",
+        "email_format": "firstname@saygames.by",
+        "email": "egor@saygames.by",
+        "source": "RocketReach / Crunchbase"
+      },
+      "outreach_angle": "Analytics-powered LiveOps - SayGames is known for advanced UA and product analytics. Offer LiveOps tooling that leverages their data strength for better player segmentation and monetization.",
+      "priority": "P1",
+      "tier": "Tier-1",
+      "notes": "Top hyper-casual developer with strong analytics focus. Multi-office setup (Minsk, Kyiv, Limassol, Barcelona)."
+    },
+    {
+      "name": "Homa Games",
+      "location": "Paris, France",
+      "website": "https://www.homagames.com",
+      "linkedin": "https://www.linkedin.com/company/homa-games",
+      "size": "220 employees",
+      "total_downloads": "1B+",
+      "games": [
+        "Merge Master (100M+)",
+        "Fight For America (50M+)",
+        "Idle World (50M+)"
+      ],
+      "live_ops_evidence": "Homa Lab data-driven platform for game testing, AI tools for game prototyping and content creation, live game portfolio management",
+      "contact": {
+        "name": "Daniel Nathan",
+        "role": "Co-Founder & CEO",
+        "email_format": "firstname@homagames.com",
+        "email": "daniel@homagames.com",
+        "source": "Crunchbase / RocketReach"
+      },
+      "outreach_angle": "AI-assisted LiveOps - Homa already uses AI for content creation. Position LiveOps tooling that integrates with their Homa Lab platform for automated content delivery and A/B testing.",
+      "priority": "P1",
+      "tier": "Tier-1",
+      "notes": "French Tech Next40 member. Strong tech focus with Homa Lab platform. Co-founder recently opened new AI-first studio."
+    },
+    {
+      "name": "Ruby Games",
+      "location": "Izmir, Turkey (Rovio Studio)",
+      "website": "https://rubygamestudio.com",
+      "linkedin": "https://tr.linkedin.com/company/rubygamestudio",
+      "size": "34 employees",
+      "total_downloads": "500M+",
+      "games": [
+        "Hunter Assassin (300M+)",
+        "Hunter Assassin 2 (100M+)",
+        "Press Inc (50M+)"
+      ],
+      "live_ops_evidence": "Hybrid-casual transition for long-term growth, continuous updates to Hunter Assassin franchise, acquired by Rovio in 2021",
+      "contact": {
+        "name": "Mert Can Kurum",
+        "role": "Founder & CEO",
+        "email_format": "firstname@rubygamestudio.com",
+        "email": "mert@rubygamestudio.com",
+        "source": "Rovio press release / ZoomInfo"
+      },
+      "outreach_angle": "LiveOps for hybrid-casual growth - Ruby Games is transitioning from hyper-casual to hybrid-casual for better retention. LiveOps tooling would support this strategic shift.",
+      "priority": "P1",
+      "tier": "Tier-2",
+      "notes": "Part of Rovio family but operates independently. Strong track record with Hunter Assassin franchise. Turkish market leader."
+    },
+    {
+      "name": "Lucky Kat Studios",
+      "location": "The Hague, Netherlands",
+      "website": "https://lucky-kat.com",
+      "linkedin": "https://be.linkedin.com/company/lucky-kat-studios",
+      "size": "25 employees",
+      "total_downloads": "250M+",
+      "games": [
+        "Roof Rails (50M+)",
+        "Tall Man Run (100M+)",
+        "Hair Challenge (100M+)"
+      ],
+      "live_ops_evidence": "Live game portfolio management, Web3/metaverse integration, continuous content updates for hit titles",
+      "contact": {
+        "name": "Hernan Zhou",
+        "role": "Founder & Game Developer",
+        "email_format": "firstname@lucky-kat.com",
+        "email": "hernan@lucky-kat.com",
+        "source": "RocketReach / company website"
+      },
+      "outreach_angle": "LiveOps for indie-to-midcore transition - Lucky Kat has 250M+ downloads as a small team. They need LiveOps automation to compete with larger studios while maintaining their creative edge.",
+      "priority": "P1",
+      "tier": "Tier-2",
+      "notes": "Award-winning Dutch studio. Web3/metaverse pivot. Small but highly efficient team."
+    },
+    {
+      "name": "Kwalee",
+      "location": "Leamington Spa, UK / Bengaluru, India",
+      "website": "https://www.kwalee.com",
+      "linkedin": "https://www.linkedin.com/company/kwalee",
+      "size": "255 employees",
+      "total_downloads": "1B+",
+      "games": [
+        "Draw It (100M+)",
+        "Rocket Sky! (100M+)",
+        "Cooking Craze (50M+)",
+        "Jetpack Jump (50M+)"
+      ],
+      "live_ops_evidence": "45+ games from in-house studio, publishing platform for external developers, real-time analytics and optimization",
+      "contact": {
+        "name": "David Darling",
+        "role": "Founder & CEO",
+        "email_format": "firstname@kwalee.com",
+        "email": "david.darling@kwalee.com",
+        "source": "Wikipedia / company press releases"
+      },
+      "outreach_angle": "LiveOps for publishing scale - Kwalee publishes 45+ games with a mix of in-house and external development. LiveOps tooling would help them manage their diverse portfolio more efficiently.",
+      "priority": "P2",
+      "tier": "Tier-2",
+      "notes": "Founded by Codemasters co-founder David Darling. Strong UK presence with new India studio."
+    },
+    {
+      "name": "CrazyLabs",
+      "location": "Tel Aviv, Israel / Global",
+      "website": "https://www.crazylabs.com",
+      "linkedin": "https://www.linkedin.com/company/crazylabs",
+      "size": "261 employees",
+      "total_downloads": "6.5B+",
+      "games": [
+        "Acrylic Nails (200M+)",
+        "Tie Dye (300M+)",
+        "ASMR Slicing (100M+)"
+      ],
+      "live_ops_evidence": "CLIK dashboard for real-time marketability testing, CrazyHubs accelerator program, live operations and growth platforms, close mentorship model",
+      "contact": {
+        "name": "Sagi Schliesser",
+        "role": "CEO & Founder",
+        "email_format": "firstname@crazylabs.com",
+        "email": "sagi@crazylabs.com",
+        "source": "ZoomInfo / press releases"
+      },
+      "outreach_angle": "Enterprise LiveOps for top-3 publisher - CrazyLabs has 6.5B+ downloads and sophisticated analytics. Position advanced LiveOps features for their high-volume, rapid-testing publishing model.",
+      "priority": "P2",
+      "tier": "Tier-2",
+      "notes": "Top 3 mobile game publisher globally. Strong accelerator program (CrazyHubs). Advanced CLIK platform."
+    },
+    {
+      "name": "Amanotes",
+      "location": "Ho Chi Minh City, Vietnam / Singapore",
+      "website": "https://www.amanotes.com",
+      "linkedin": "https://www.linkedin.com/company/amanotes",
+      "size": "209 employees",
+      "total_downloads": "2B+",
+      "games": [
+        "Tiles Hop (500M+)",
+        "Magic Tiles 3 (500M+)",
+        "Dancing Road (300M+)"
+      ],
+      "live_ops_evidence": "Continuous music content updates, seasonal events, VIP monetization systems, 2B+ downloads across music game portfolio",
+      "contact": {
+        "name": "Bill Vo",
+        "role": "Co-Founder & CEO",
+        "email_format": "firstname@amanotes.com",
+        "email": "bill@amanotes.com",
+        "source": "Company website / press releases"
+      },
+      "outreach_angle": "LiveOps for music game content - Amanotes needs continuous fresh content for their music games. LiveOps tooling for automated content delivery and event management would be valuable.",
+      "priority": "P2",
+      "tier": "Tier-2",
+      "notes": "#1 music games publisher globally. SEA-based with strong growth. Unique genre focus."
+    }
+  ],
+  "summary": {
+    "total_studios": 10,
+    "p0_count": 3,
+    "p1_count": 4,
+    "p2_count": 3,
+    "tier1_count": 5,
+    "tier2_count": 5,
+    "total_downloads_range": "15B+",
+    "geographic_spread": ["France", "South Korea", "Poland", "Belarus/Cyprus", "Turkey", "Netherlands", "UK/India", "Israel", "Vietnam/Singapore"]
+  }
+}

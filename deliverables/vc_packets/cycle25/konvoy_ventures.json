@@ -1,0 +1,71 @@
+{
+  "firm_name": "Konvoy Ventures",
+  "fund_size": "$260M across 3 funds",
+  "stage_focus": "Pre-Seed to Series A",
+  "thesis": "Thesis-driven venture capital firm investing in platforms and technologies shaping the future of gaming and digital entertainment.",
+  "key_partners": [
+    {
+      "name": "Jackson Vaughan",
+      "title": "Managing Partner & Co-Founder",
+      "background": "NYU Stern, gaming and platform investments",
+      "relevance": "Leads investments in gaming platforms and frontier tech"
+    },
+    {
+      "name": "Josh Chapman",
+      "title": "Managing Partner & Co-Founder",
+      "background": "Gaming industry veteran",
+      "relevance": "Co-founder, leads firm strategy and investments"
+    },
+    {
+      "name": "Jason Chapman",
+      "title": "Co-Founder",
+      "background": "Venture capital and gaming",
+      "relevance": "Co-founder, investment committee"
+    }
+  ],
+  "target_partner": {
+    "name": "Jackson Vaughan",
+    "rationale": "Jackson leads Konvoy's investments in gaming platforms and frontier technology. His board roles at StageZero Technologies and Carry1st demonstrate active involvement in gaming infrastructure and emerging market platforms. Konvoy's thesis on 'platforms shaping the future' aligns perfectly with live ops infrastructure."
+  },
+  "recent_investments": [
+    {
+      "company": "Root",
+      "round": "$9M",
+      "date": "June 2025",
+      "description": "Social platform for large communities"
+    },
+    {
+      "company": "Magic Potion Games",
+      "round": "Pre-Seed (led)",
+      "date": "October 2024",
+      "description": "Safe and magical online experiences for next generation of gamers"
+    },
+    {
+      "company": "Rare Candy",
+      "round": "Pre-Seed",
+      "date": "2024",
+      "description": "Collector-first marketplace for fandom and digital collecting"
+    }
+  ],
+  "key_references": [
+    "Magic Potion Games - Next-gen social gaming (recent pre-seed lead)",
+    "Root - Social platform for communities ($9M raise)",
+    "Rare Candy - Digital collecting and fandom platform",
+    "Ready Player Me - Avatar platform (exited December 2025)"
+  ],
+  "outreach_packet": {
+    "subject_line": "Live ops infrastructure for next-gen gaming",
+    "hook": "Following your investments in Magic Potion Games and Root, I wanted to share how we're building the infrastructure layer that enables the next generation of live service experiences.",
+    "body_paragraphs": {
+      "value_prop": "We're a live operations platform built for the next era of gaming—a unified system that handles content deployment, player segmentation, event orchestration, and real-time balancing. Konvoy's thesis on 'platforms shaping the future' resonates with our mission; we're the infrastructure that lets small teams create persistent, evolving game worlds. Studios using our platform reduce live ops engineering by 60% while delivering personalized experiences to millions of players.",
+      "market_insight": "Your portfolio shows a clear pattern: Magic Potion Games for safe social experiences, Root for community platforms, Rare Candy for digital collecting. These are all live service businesses that require sophisticated operations infrastructure to scale. The next generation of games isn't just about content—it's about continuous service delivery. With $22B+ spent annually by studios on fragmented live ops tools, there's a massive opportunity for the platform that unifies this stack. Your exit of Ready Player Me validates Konvoy's platform thesis; live ops infrastructure is the next platform opportunity in gaming.",
+      "traction_ask": "We're in closed beta with 3 studios and seeing 40% faster content deployment. Given Konvoy's focus on platforms and your recent investments in next-gen gaming experiences, we'd value your perspective. Would you have 20 minutes to discuss how live operations infrastructure is becoming essential for modern game development?"
+    }
+  },
+  "warm_paths": [
+    "Portfolio company founders (Magic Potion Games, Rare Candy)",
+    "Ready Player Me alumni (recent exit)",
+    "Co-investors in gaming infrastructure deals"
+  ],
+  "notes": "Konvoy is a thesis-driven firm that understands platform opportunities. Their recent Ready Player Me exit (December 2025) demonstrates ability to pick winners in gaming infrastructure. Their focus on 'next generation' gaming experiences aligns with our vision for modern live ops. Denver-based but globally active."
+}

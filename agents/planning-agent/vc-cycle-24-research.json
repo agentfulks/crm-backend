@@ -1,0 +1,203 @@
+{
+  "cycle": 24,
+  "research_date": "2026-03-08",
+  "researcher": "PLANNING LEAD Subagent",
+  "vc_firms": [
+    {
+      "firm_name": "BITKRAFT Ventures",
+      "location": "Denver, CO (Global presence)",
+      "aum_fund_size": "$1.05B AUM across 6 funds (4 equity, 2 crypto); Latest Fund VI: $275M (April 2024)",
+      "gaming_thesis": "Leading global investment platform for gaming and emerging technology. Focuses on gaming content/IP, tech platforms (VR, dev tools, backend services), and applied game mechanics. Deep expertise in esports, web3, and AI-driven gaming experiences. Led by esports pioneer who founded ESL.",
+      "portfolio_companies": [
+        {
+          "name": "Appcharge",
+          "description": "Gaming monetization platform, Series B $58M (August 2025)"
+        },
+        {
+          "name": "Liminal Experiences",
+          "description": "AI-assisted UGC gaming tools, Seed $5.8M with Riot Games (2025)"
+        }
+      ],
+      "key_partners": [
+        {
+          "name": "Jens Hilgers",
+          "title": "Founding General Partner",
+          "background": "Esports pioneer, founded ESL (2000) and G2 Esports; Lifetime Achievement award 2024"
+        },
+        {
+          "name": "Scott Rupp",
+          "title": "General Partner",
+          "background": "Investment leadership across gaming and emerging tech"
+        }
+      ],
+      "warm_path_potential": "Strong presence at GDC, Gamescom, Tokyo Game Show; Active in co-investment circles with a16z, Lightspeed; Portfolio includes 179+ companies for potential founder intros",
+      "priority_score": "P0",
+      "geographic_focus": "Global (US, Europe, Africa, India, East Asia)",
+      "investment_stage": "Seed, Series A, Series B",
+      "recent_activity": "19 investments in 2025; $275M Fund VI deployed 2024-2025"
+    },
+    {
+      "firm_name": "Transcend Fund",
+      "location": "London, UK / US (Bicoastal)",
+      "aum_fund_size": "$60M Fund II (2023); Planning Fund III launch",
+      "gaming_thesis": "Early-stage VC focused exclusively on games and digital entertainment. Created by game industry veterans who have built major franchises. Partners with 'craftspeople at the top of their game' for momentous global audiences. Deep operational support on product strategy and market validation.",
+      "portfolio_companies": [
+        {
+          "name": "Live Aware Labs",
+          "description": "Gaming analytics/QA platform, Seed $4.8M (October 2024)"
+        },
+        {
+          "name": "Roboto Games",
+          "description": "Open-world survival crafting with modding platform; founded by PopCap/EA veterans"
+        },
+        {
+          "name": "Ruckus Games",
+          "description": "Series A participation (November 2024)"
+        }
+      ],
+      "key_partners": [
+        {
+          "name": "Shanti Bergel",
+          "title": "Founding General Partner",
+          "background": "30+ year game industry veteran; deep M&A and buy-side experience"
+        },
+        {
+          "name": "Andrew Sheppard",
+          "title": "Partner",
+          "background": "Former GM at Zynga; game operations and scaling expertise"
+        }
+      ],
+      "warm_path_potential": "Strong founder network from 30+ portfolio companies including Methodical Games, Stress Level Zero, Spatial; Board seats at Big Run Studios and Midsummer Studios",
+      "priority_score": "P0",
+      "geographic_focus": "Global (US, UK, EU)",
+      "investment_stage": "Seed, Series A",
+      "recent_activity": "Active capital deployment through 2024-2025; Live Aware Labs investment (Oct 2024)"
+    },
+    {
+      "firm_name": "Makers Fund",
+      "location": "San Francisco, CA / Singapore (Dual HQ)",
+      "aum_fund_size": "$500M Fund III (2022); Total AUM ~$800M+ across 3 funds",
+      "gaming_thesis": "Global venture fund powering growth and innovation in interactive entertainment. Deep Asia expertise with Singapore presence. Focuses on platforms and technologies shaping gaming's future. Strong network effects between US and Asian gaming markets. Invests in game studios, platforms, and infrastructure.",
+      "portfolio_companies": [
+        {
+          "name": "BIT ODD",
+          "description": "AI-driven game development tools, €17M Seed (November 2024) - co-invested with Index Ventures, Griffin Gaming"
+        },
+        {
+          "name": "Human Computer",
+          "description": "AI gaming startup, $5.7M Seed (March 2025) - co-invested with a16z"
+        },
+        {
+          "name": "Vinci Games",
+          "description": "VR game studio, $5.1M Seed led by Makers"
+        }
+      ],
+      "key_partners": [
+        {
+          "name": "Jay Chi",
+          "title": "Founding Partner",
+          "background": "15+ years industry experience; Co-founder of Kowloon Nights; ex-McKinsey"
+        },
+        {
+          "name": "Michael Cheung",
+          "title": "Founding General Partner",
+          "background": "10+ years industry experience; ex-Tencent Senior Director; ex-McKinsey"
+        }
+      ],
+      "warm_path_potential": "90+ gaming startups in portfolio; Strong Asia connections via Singapore office; Kowloon Nights network for indie studio intros; Co-investment relationships with a16z, Tencent, Index Ventures",
+      "priority_score": "P0",
+      "geographic_focus": "Global (Strong US-Asia bridge)",
+      "investment_stage": "Seed, Series A, Series B",
+      "recent_activity": "BIT ODD €17M Seed (Nov 2024); Human Computer $5.7M (March 2025); Voldex investment (Feb 2025)"
+    },
+    {
+      "firm_name": "Hiro Capital",
+      "location": "London, UK",
+      "aum_fund_size": "~$200M+ AUM across 3 funds; HIRO III European scaleup fund launched Dec 2025",
+      "gaming_thesis": "European VC investing at the intersection of games, digital sports, and frontier technologies. New HIRO III fund targets spatial AI, robotics, longevity, gaming, and space/defense. Founded by gaming industry veterans including Games Workshop co-founder. Strong European gaming ecosystem builder.",
+      "portfolio_companies": [
+        {
+          "name": "Meeple Corp",
+          "description": "Digital tabletop platform, £500K funding (February 2025)"
+        },
+        {
+          "name": "Maintain Altitude",
+          "description": "Game development studio, $500K Pre-seed (October 2024)"
+        },
+        {
+          "name": "Cosmic Lounge",
+          "description": "Mobile game studio, €4M Seed (April 2023)"
+        }
+      ],
+      "key_partners": [
+        {
+          "name": "Luke Alvarez",
+          "title": "Founding Partner",
+          "background": "Gaming and digital media investor; led 31+ company portfolio"
+        },
+        {
+          "name": "Sir Ian Livingstone CBE",
+          "title": "Founding Partner",
+          "background": "Co-founder of Games Workshop; industry legend with 40+ years experience"
+        },
+        {
+          "name": "Sir Nick Clegg",
+          "title": "General Partner (joined Dec 2025)",
+          "background": "Former President of Global Affairs at Meta; former UK Deputy Prime Minister"
+        }
+      ],
+      "warm_path_potential": "Recent high-profile addition of Nick Clegg signals expansion ambitions; Strong UK/EU gaming network; Advisory Board includes Yann LeCun; Co-investment with Garena, Indico Capital",
+      "priority_score": "P1",
+      "geographic_focus": "Europe (UK, EU) with global reach",
+      "investment_stage": "Seed, Series A, Series B (scaleup focus)",
+      "recent_activity": "HIRO III fund launch (Dec 2025); Nick Clegg GP appointment; Meeple Corp investment (Feb 2025)"
+    },
+    {
+      "firm_name": "Konvoy Ventures",
+      "location": "Denver, CO",
+      "aum_fund_size": "$258M AUM; Fund III: $150M (actively deploying)",
+      "gaming_thesis": "Thesis-driven venture firm investing in platforms and technologies at the frontier of gaming. Focus on pre-seed and seed-stage gaming startups. Early mover in African gaming (Carry1st). Deep conviction in web3 gaming infrastructure, interactive entertainment, and gaming-adjacent consumer platforms.",
+      "portfolio_companies": [
+        {
+          "name": "Nerd Street",
+          "description": "Esports and gaming infrastructure, $6M round led by Konvoy (September 2024)"
+        },
+        {
+          "name": "Carry1st",
+          "description": "African gaming publisher; among first VC investments in African gaming"
+        },
+        {
+          "name": "Voldex",
+          "description": "UGC gaming platform, Series A participation (February 2025)"
+        }
+      ],
+      "key_partners": [
+        {
+          "name": "Josh Chapman",
+          "title": "Managing Partner",
+          "background": "Thesis-driven investor; gaming industry strategist"
+        },
+        {
+          "name": "Jackson Vaughan",
+          "title": "General Partner",
+          "background": "Early-stage gaming investment specialist"
+        }
+      ],
+      "warm_path_potential": "Denver-based like BITKRAFT (ecosystem synergy); Quarterly gaming market reports widely cited; Early African gaming access via Carry1st; Active co-investor with a16z, BITKRAFT, Lightspeed",
+      "priority_score": "P1",
+      "geographic_focus": "Global (US primary; Africa, Asia expansion)",
+      "investment_stage": "Pre-seed, Seed, Series A",
+      "recent_activity": "Nerd Street $6M (Sept 2024); Voldex investment (Feb 2025); Q2 2024 gaming market report published"
+    }
+  ],
+  "summary": {
+    "total_firms_researched": 5,
+    "geographic_coverage": ["US", "UK/EU", "Asia (Singapore bridge)"],
+    "p0_firms": 3,
+    "p1_firms": 2,
+    "total_aum_represented": "$2.7B+",
+    "key_themes": ["AI gaming tools", "UGC platforms", "Spatial computing", "Web3 gaming", "African gaming", "VR/AR gaming"],
+    "recent_2024_2025_investments_verified": true
+  },
+  "bottleneck_note": "Cycle 24 research complete. 54 cards from previous cycles still awaiting approval (7+ days). Recommend expediting approval workflow to unblock pipeline before Cycle 25 research."
+}

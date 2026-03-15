@@ -1,0 +1,109 @@
+{
+  "trello_cards": [
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "BITKRAFT Ventures — Jens Hilgers — Gaming/AI Fund III",
+      "description": "## VC Research Summary\n\n**Fund:** BITKRAFT Ventures\n**Focus:** Gaming, Esports, Interactive Media, AI x Gaming\n**Fund Size:** $1.05B AUM; $275M Fund III (2025)\n**Check Size:** Seed ~$3M; Growth up to $30M+\n**Stage:** Seed to Series B\n**Website:** https://www.bitkraft.vc\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Jens Hilgers |\n| Title | Founding General Partner |\n| Focus | Gaming/Esports pioneer; founded ESL (2000), co-founded G2 Esports |\n| LinkedIn | Active |\n\n## Other Partners\n- Malte Barth (Founding GP)\n- Scott Rupp (Founding Partner)\n- Carlos Pereira (Principal)\n- Anuj Tandon (Partner - India/MENA)\n\n## Recent Triggers\n- Feb 2026: $3M investment in Power Protocol\n- 2025: 19 new investments\n- June 2025: Launched $275M Fund III\n- Thesis: 'Synthetic reality' — AI + interactive entertainment convergence\n\n## Outreach Angle\nBITKRAFT's 'synthetic reality' thesis aligns with gaming/AI intersection. Fund III actively deploying into AI-gaming infrastructure.\n\n## Warm Path\n- Gaming events: GDC, Gamescom\n- LinkedIn: Jens Hilgers active\n- Portfolio intros: If connected to any portfolio companies\n\n## Draft Subject\nSynthetic reality thesis + [Specific Lucas angle]\n\n## Priority\nP0 — Fund III actively deploying\n\n## Source Files\n- vc_research/01_bitkraft_ventures.md",
+      "labels": ["Gaming", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-10",
+      "checklist": [
+        "ICP validated: Gaming + AI focus",
+        "Contact research: Jens Hilgers identified",
+        "Recent trigger: Fund III launch captured",
+        "Outreach drafted: Yes",
+        "Personalization hook: Synthetic reality thesis"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "Griffin Gaming Partners — Peter Levin — Gaming Content/Platform",
+      "description": "## VC Research Summary\n\n**Fund:** Griffin Gaming Partners\n**Focus:** Gaming content, social platforms, software infrastructure\n**Fund Size:** $1.5B AUM (world's largest gaming-focused fund)\n**Stage:** Seed to Series B+\n**Location:** Santa Monica, CA\n**Website:** https://griffingp.com\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Peter Levin |\n| Title | Managing Director & Co-Founder |\n| Background | President of Interactive Ventures at Lionsgate; Co-founder/CEO of Nerdist Industries |\n\n## Other Partners\n- Phil Sanderson (Managing Director & Co-Founder)\n- Nick Tuosto (Managing Director & Co-Founder)\n- Anthony Palma (Principal)\n\n## Recent Triggers\n- May 2025: Invested in Super Banana Studios (casual puzzle games)\n- Active deployment through 2025\n- Potential third fund targeting $500M\n\n## Portfolio Highlights\nScopely, AppLovin, Discord, Skillz, Overwolf, Second Dinner, WinZO\n\n## Outreach Angle\n'Dream team' of gaming VC — operational + investment + strategic expertise. Second Dinner COO called them exactly that.\n\n## Warm Path\n- Portfolio intros: Discord, Overwolf, Second Dinner\n- LinkedIn: All partners active\n- Gaming events: GDC, etc.\n\n## Draft Subject\nDream team for [gaming content/platform angle]\n\n## Priority\nP1 — Active deployment\n\n## Source Files\n- vc_research/02_griffin_gaming_partners.md",
+      "labels": ["Gaming", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-11",
+      "checklist": [
+        "ICP validated: Gaming content/platform",
+        "Contact research: Peter Levin identified",
+        "Recent trigger: Super Banana investment",
+        "Outreach drafted: Yes",
+        "Personalization hook: Dream team quote"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "Matrix Partners — David Skok — SaaS/Metrics-Focused",
+      "description": "## VC Research Summary\n\n**Fund:** Matrix Partners\n**Focus:** B2B SaaS, Enterprise Software, AI/ML applications\n**Fund Size:** $450M U.S. fund\n**Stage:** Very early-stage tech (seed to Series A)\n**Location:** San Francisco, CA\n**Website:** https://www.matrixpartners.com\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | David Skok |\n| Title | General Partner |\n| Focus | SaaS metrics guru; author of industry-standard SaaS metrics playbooks |\n\n## Other Partners\n- Stanley Yang (GP)\n- Antonio Rodriguez (GP)\n- Joshua Hannah (GP)\n\n## Recent Triggers\n- Active SaaS investing in 2025\n- David Skok's forEntrepreneurs.com content ongoing\n- Private SaaS Survey (400+ companies)\n\n## Portfolio Highlights\nHubSpot, Zendesk, Carbon Black, Gainsight, Salsify\n\n## Outreach Angle\nMetrics-first SaaS investor. If Lucas has SaaS with strong metrics, this is ideal fit. Skok's frameworks are legendary.\n\n## Warm Path\n- Content engagement: forEntrepreneurs.com\n- SaaS community: Private SaaS Survey participants\n- LinkedIn: David Skok active\n\n## Draft Subject\nSaaS metrics + [Specific Lucas metric]\n\n## Priority\nP1 — Evergreen SaaS focus\n\n## Source Files\n- vc_research/03_matrix_partners.md",
+      "labels": ["SaaS", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-12",
+      "checklist": [
+        "ICP validated: B2B SaaS",
+        "Contact research: David Skok identified",
+        "Recent trigger: Ongoing content/thought leadership",
+        "Outreach drafted: Yes",
+        "Personalization hook: SaaS metrics frameworks"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "Point Nine Capital — Christoph Janz — AI-Native SaaS",
+      "description": "## VC Research Summary\n\n**Fund:** Point Nine Capital\n**Focus:** B2B SaaS, Online Marketplaces, AI-native software\n**Fund Size:** €300M+ under management\n**Check Size:** €500K — €3.5M initial (seed)\n**Stage:** Pre-seed to Series B\n**Location:** Berlin, Germany (investing globally)\n**Website:** https://www.pointnine.com\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Christoph Janz |\n| Title | Managing Partner |\n| Focus | SaaS & marketplaces |\n\n## Other Partners\n- Louis Coppey (Partner - AI-native)\n- Ricardo Sequerra (Partner - Marketplaces)\n- Pawel Chudzinski (Partner - SaaS)\n\n## Recent Triggers\n- Sep 2025: Omnea raises $50M (Point Nine co-investor)\n- Aug 2025: Attio secures $52M Series B (AI-native CRM)\n- Thesis: Small equal partnership investing in 'software built on AI'\n\n## Portfolio Highlights\nAlgolia, Zendesk, Delivery Hero, Revolut, Loom, Contentful\n\n## Outreach Angle\nAI-native software focus. Point Nine explicitly invests in 'software built on AI' — perfect if Lucas has AI-enabled product.\n\n## Warm Path\n- LinkedIn: Partners active\n- AI-native ecosystem: Engage with content\n- European connections\n\n## Draft Subject\nAI-native [category] — Point Nine thesis fit\n\n## Priority\nP1 — Active deployment (recent deals)\n\n## Source Files\n- vc_research/04_point_nine_capital.md",
+      "labels": ["SaaS", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-13",
+      "checklist": [
+        "ICP validated: AI-native SaaS",
+        "Contact research: Christoph Janz identified",
+        "Recent trigger: Omnea & Attio deals",
+        "Outreach drafted: Yes",
+        "Personalization hook: Software built on AI thesis"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "Bonfire Ventures — Mark Mullen — B2B Seed Lead",
+      "description": "## VC Research Summary\n\n**Fund:** Bonfire Ventures\n**Focus:** B2B Software, Vertical SaaS, Developer Tools\n**Fund Size:** $245M Fund IV (Feb 2025)\n**Stage:** First lead investor for B2B software founders\n**Location:** Santa Monica, CA\n**Website:** https://www.bonfirevc.com\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Mark Mullen |\n| Title | Co-Founder |\n| Background | Founded Double M Partners; 20+ years seed investing in B2B |\n\n## Other Partners\n- Jim Andelman (Co-Founder)\n- Tyler Diamond (Principal)\n- Ashley Hartman (Principal)\n\n## Recent Triggers\n- Feb 2025: Raised $245M Fund IV\n- Quote: 'AI at the application layer is no longer a differentiator — it's table stakes'\n- Focus: Most responsive, trusted advisors for B2B founders\n\n## Portfolio Highlights\nPipe, Vercel, Sendoso, Whisper, Andela, Fictiv\n\n## Outreach Angle\nFirst lead investor for B2B software — they specialize in being the first 'yes' for technical founders. Just raised Fund IV.\n\n## Warm Path\n- LA ecosystem connections\n- B2B founder community\n- LinkedIn: Mark Mullen active\n\n## Draft Subject\nFirst lead for [B2B category] — Fund IV\n\n## Priority\nP0 — Just closed Fund IV, actively deploying\n\n## Source Files\n- vc_research/05_bonfire_ventures.md",
+      "labels": ["SaaS", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-14",
+      "checklist": [
+        "ICP validated: B2B Software",
+        "Contact research: Mark Mullen identified",
+        "Recent trigger: Fund IV close (Feb 2025)",
+        "Outreach drafted: Yes",
+        "Personalization hook: First lead investor approach"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "Hiro Capital — Luke Alvarez — Gaming/Spatial AI/Frontier Tech",
+      "description": "## VC Research Summary\n\n**Fund:** Hiro Capital\n**Focus:** Spatial AI, Robotics, Longevity, Games, Space, Defense\n**Fund Size:** Fund III preparing (2025)\n**Stage:** Seed to Series A\n**Location:** London, UK\n**Website:** https://hiro.capital\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Luke Alvarez |\n| Title | Founder, General Partner |\n| Background | 30 years in Technology, 21 years in Digital Games |\n\n## Other Partners\n- Sir Nick Clegg (GP - joined Dec 2025; former UK Deputy PM, Meta President)\n- Ian Livingstone CBE (Partner; co-founded Games Workshop, Eidos)\n- Cherry Freeman (Partner)\n\n## Recent Triggers\n- Dec 2025: Sir Nick Clegg joins as General Partner (major news)\n- Fund III launching: focus on spatial AI, robotics, games\n- March 2025: Portfolio exit — Elvie acquired\n\n## Portfolio Highlights\nElvie, Faculty AI, Kognic, Gyroscope, Legendary Play, FRVR\n\n## Outreach Angle\nGaming + frontier tech intersection. Ian Livingstone's gaming pedigree + new spatial AI focus. Nick Clegg from Meta signals VR/metaverse ambitions.\n\n## Warm Path\n- Gaming: Ian Livingstone network\n- Meta: Nick Clegg connections\n- London gaming ecosystem\n\n## Draft Subject\nGaming + Spatial AI — Hiro's Fund III focus\n\n## Priority\nP0 — Fund III launching, Nick Clegg news (Dec 2025)\n\n## Source Files\n- vc_research/06_hiro_capital.md",
+      "labels": ["Gaming", "Frontier Tech", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-15",
+      "checklist": [
+        "ICP validated: Gaming/Spatial AI",
+        "Contact research: Luke Alvarez identified",
+        "Recent trigger: Nick Clegg joins + Fund III",
+        "Outreach drafted: Yes",
+        "Personalization hook: Gaming + frontier tech intersection"
+      ]
+    },
+    {
+      "board_name": "VC Outreach Engine",
+      "list_name": "Ready for Review",
+      "card_title": "Paradigm — Fred Ehrsam/Matt Huang — AI/Robotics Expansion",
+      "description": "## VC Research Summary\n\n**Fund:** Paradigm\n**Focus:** AI, Robotics, Frontier Technologies, Crypto (expanding)\n**Fund Size:** Raising $1.5B new fund; $12.7B AUM\n**Stage:** Seed to growth\n**Location:** San Francisco, CA\n**Website:** https://paradigm.xyz\n\n## Primary Contact\n| Field | Value |\n|-------|-------|\n| Name | Fred Ehrsam / Matt Huang |\n| Title | Co-Founders |\n| Background | Fred: Co-founder Coinbase; Matt: Former Sequoia partner |\n\n## Other Partners\n- Georgios Konstantopoulos (CTO)\n- Dan Robinson (GP)\n- Arjun Balaji (Investment Partner)\n- Casey Caruso (Investment Partner)\n\n## Recent Triggers\n- Feb 2026: Raising $1.5B fund for AI/robotics expansion\n- Collaboration: EVMbench with OpenAI\n- Context: AI companies raised $258.7B in 2025 (61% of VC)\n\n## Portfolio Highlights\nCoinbase, Uniswap, Chainalysis, StarkWare, Flashbots\n\n## Outreach Angle\nFrontier tech expansion from crypto to AI/robotics. Getting in early in this transition. OpenAI collaboration shows serious AI intent.\n\n## Warm Path\n- Technical research engagement\n- OpenAI network\n- Crypto/AI intersection community\n\n## Draft Subject\nAI/Robotics expansion — $1.5B fund\n\n## Priority\nP0 — Fund raise in progress, expansion mode\n\n## Source Files\n- vc_research/07_paradigm.md",
+      "labels": ["Frontier Tech", "AI", "Ready for Review", "Tier-1"],
+      "due_date": "2026-03-16",
+      "checklist": [
+        "ICP validated: AI/Robotics/Frontier Tech",
+        "Contact research: Fred Ehrsam/Matt Huang identified",
+        "Recent trigger: $1.5B fund raise + AI expansion",
+        "Outreach drafted: Yes",
+        "Personalization hook: Frontier tech expansion"
+      ]
+    }
+  ]
+}

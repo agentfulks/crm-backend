@@ -1,0 +1,33 @@
+{
+  "packet_id": "A16ZC27-004",
+  "fund_name": "Andreessen Horowitz (a16z) - Games Fund",
+  "fund_website": "https://a16z.com/games",
+  "partner": {
+    "name": "Jonathan Lai",
+    "title": "General Partner",
+    "email": "jon@a16z.com",
+    "email_confidence": "high",
+    "linkedin": "https://www.linkedin.com/in/jlai84/"
+  },
+  "fund_details": {
+    "aum": "$600 million (Games Fund, 2024)",
+    "fund_stage": "Seed to Growth",
+    "location": "Menlo Park, California, USA",
+    "primary_focus": ["Games", "AI x Creative", "Developer Tools", "3D Simulations", "Interactive Entertainment"]
+  },
+  "investment_thesis": {
+    "summary": "a16z's Games Fund invests in the future of interactive entertainment, from game studios to infrastructure. In April 2024, a16z raised $7.2B including $600M dedicated to Games. Jonathan Lai leads both the Games vertical and a16z Speedrun (AI x creative technologies).",
+    "ai_alignment": "Perfect alignment with AI infrastructure thesis. Jonathan Lai explicitly invests in 'AI x creative landscape - from developer tools to 3D simulations, vertical agents, and novel storytelling formats across video, games, audio.' a16z has made significant AI infrastructure bets including Anthropic, Inworld AI, and multiple generative AI platforms. The Games Fund is actively deploying $600M raised in 2024.",
+    "recent_investments": ["Inworld AI", "Anthropic", "AI gaming infrastructure", "Speedrun portfolio companies"]
+  },
+  "priority": "P0",
+  "due_date": "2026-03-20",
+  "outreach_angle": "Jonathan Lai leads both Games AND a16z Speedrun (AI x creative). This is the perfect storm for our pitch - lead with AI infrastructure for live service games, emphasizing developer tools and automation. Reference a16z's existing AI investments (Inworld AI, Anthropic) and position as the infrastructure layer that makes AI practical for live ops teams. Speedrun Demo Day participation could be an angle.",
+  "verification_status": {
+    "fund_active": true,
+    "contact_verified": true,
+    "last_fund_close": "April 2024 ($600M Games Fund)",
+    "deployment_status": "Actively deploying fresh capital"
+  },
+  "notes": "a16z is a top-tier VC with unmatched platform resources. Jonathan Lai is a gamer himself (met his wife playing League of Legends) and deeply technical. The Games Fund is cross-functional with AI infrastructure teams. High conviction check sizes ranging from $500K to $100M+. Speedrun is their AI x gaming accelerator program."
+}

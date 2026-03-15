@@ -1,0 +1,23 @@
+{
+  "trello_card": {
+    "name": "[P0] VC: Aonic - Sten Düring",
+    "labels": ["P0", "VC", "Gaming-Focused", "Europe"],
+    "due_date": "2026-03-21",
+    "description": "## Aonic - VC Outreach Packet\n\n### Fund Overview\n- **Fund Name:** Aonic\n- **Location:** London, UK / Hamburg, Germany\n- **AUM:** $100M+ gaming-focused fund\n- **Stage Focus:** Seed to Series A\n- **Check Size:** $500K - $5M\n\n### Investment Thesis\nAonic is a gaming-focused investment firm and operational partner. They build, buy, and invest in gaming companies with a focus on:\n- Mobile and cross-platform gaming\n- Gaming infrastructure and tools\n- Game studios with innovative mechanics\n- Technology enabling next-generation gaming experiences\n\n**AI/Gaming Infrastructure Alignment:** HIGH\n- Recently acquired exmox (performance marketing/UA platform) - infrastructure play\n- Strong focus on technology and data-driven gaming\n- Active in gaming adtech and monetization infrastructure\n\n### Key Partner: Sten Düring\n- **Title:** Managing Partner & Co-Founder\n- **LinkedIn:** https://www.linkedin.com/in/stenduring/\n- **Email:** sten@aonic.com (inferred)\n- **Background:** Serial gaming entrepreneur; previously founded adtech companies; deep expertise in gaming monetization\n\n**Secondary Contact: Paul Kasek\n- Managing Partner & Co-Founder\n- Based in Hamburg\n- Gaming operations and investment expertise\n\n### Notable Portfolio Companies & Acquisitions\n- **exmox** - Gaming performance marketing platform (acquired 2024)\n- **Homa Games** - Hyper-casual publisher (strategic partnership)\n- **Sensortower** - Mobile intelligence platform (early investor)\n- **GameAnalytics** - Analytics platform for games\n- **Fyber** - Mobile ad mediation (exited)\n\n### Recent Activity\n- 2024: Acquired exmox to expand gaming infrastructure capabilities\n- Active in European gaming ecosystem\n- Growing portfolio of gaming tools and infrastructure\n- Focus on data/AI-driven gaming investments\n\n### Outreach Angle\n**Primary Hook:** Gaming infrastructure that powers monetization and UA - Aonic understands this deeply through their exmox acquisition and GameAnalytics/Sensortower history. Position as the AI layer that enables smarter monetization and player acquisition.\n\n**Secondary Hooks:**\n1. European gaming ecosystem connection\n2. Data/AI-driven investment focus\n3. Infrastructure over content (complementary to their studio investments)\n4. exmox acquisition shows active interest in gaming adtech\n\n### Outreach Strategy\n1. Reference exmox acquisition - shows they understand gaming infrastructure\n2. Emphasize AI for monetization and UA optimization\n3. Lead with data/technical angle (aligns with their portfolio)\n4. European angle - good for their geographic focus\n\n### Unique Value Proposition\nAonic combines investment with operational expertise. They don't just write checks - they actively build gaming businesses. For infrastructure plays, this means potential operational partnerships, not just capital.\n\n### Resources\n- Website: https://aonic.com\n- LinkedIn: https://www.linkedin.com/company/aonic/",
+    "checklist": [
+      "[ ] Research Sten Düring background and gaming industry commentary",
+      "[ ] Study exmox acquisition details for talking points",
+      "[ ] Prepare AI monetization demo materials",
+      "[ ] Draft email referencing exmox and infrastructure focus",
+      "[ ] Find warm intro through European gaming network",
+      "[ ] Schedule intro call",
+      "[ ] Follow up with technical materials"
+    ]
+  },
+  "research_metadata": {
+    "research_date": "2026-03-14",
+    "researcher": "VANTAGE",
+    "data_sources": ["Aonic.com", "LinkedIn", "GamesIndustry.biz", "TechCrunch"],
+    "confidence_score": "High"
+  }
+}

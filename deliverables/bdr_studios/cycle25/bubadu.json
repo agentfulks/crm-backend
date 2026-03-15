@@ -1,0 +1,48 @@
+{
+  "studio_name": "Bubadu",
+  "priority": "P2",
+  "tier": "Tier-3",
+  "studio_info": {
+    "website": "https://bubadu.com",
+    "headquarters_location": "Cerknica, Slovenia",
+    "employee_count": 25,
+    "total_downloads_estimate": "100M+",
+    "key_titles": [
+      "Bubbu – My Virtual Pet Cat (50M+)",
+      "Duddu – My Virtual Pet Dog (20M+)",
+      "Bubbu School (10M+)"
+    ],
+    "live_ops_evidence": "Virtual pet games for kids with regular content updates, seasonal events, mini-games; focus on safe, educational content for children",
+    "linkedin_company_url": "https://www.linkedin.com/company/bubadu/",
+    "founder": "Primoz Furlan"
+  },
+  "contact": {
+    "full_name": "Primoz Furlan",
+    "title": "CEO & Founder",
+    "seniority_level": "C-Level",
+    "department": "Leadership",
+    "email": "primoz@bubadu.com",
+    "email_source": "Pattern (founder@domain) + RocketReach confirms p***@bubadu.com",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/in/primoz-furlan/",
+    "linkedin_verified": true,
+    "location": "Cerknica, Slovenia",
+    "notes": "Primary target. Founder CEO of smaller studio. Based in Slovenia. Virtual pet/kids games niche. May be open to tools that help them compete with larger studios."
+  },
+  "outreach_packet": {
+    "subject_line": "Helping Bubdu compete smarter",
+    "hook": "Building beloved virtual pet games for kids is a special niche—Bubbu and Duddu have created safe, engaging experiences that parents trust.",
+    "body_paragraphs": [
+      "Bubadu has carved out a meaningful space in the kids' games market with 100M+ downloads. But competing against bigger studios with larger live ops teams is tough. You need the same optimization capabilities they have, without the same headcount.",
+      "We built an AI live operations platform that levels the playing field for smaller studios. It automates event optimization, personalizes in-app purchase timing, and predicts which content updates will resonate—all without requiring a data science team. One indie studio using our system increased revenue 34% while keeping their team lean.",
+      "For Bubadu's virtual pet games, this could mean better monetization while maintaining the safe, trusted experience parents expect. Our platform is designed to be set up in days, not months."
+    ],
+    "cta": "Worth a quick call to see if AI live ops could help Bubadu grow?",
+    "angle_notes": {
+      "primary_angle": "Level the playing field",
+      "why_this_works": "Bubadu is smaller (25 employees) competing in a niche against bigger players. Positioning AI as a force multiplier that lets them compete with larger studios' live ops capabilities is compelling. Founder CEO means direct decision-making possible.",
+      "personalization_trigger": "Small indie studio + kids games niche",
+      "pain_hypothesis": "Small team managing multiple live games; needs live ops optimization but can't afford large dedicated team; AI could provide enterprise-level capabilities at indie scale"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "studio_name": "Garena",
+  "priority": "P0",
+  "tier": "Tier-1",
+  "studio_info": {
+    "website": "https://garena.com",
+    "headquarters_location": "Singapore",
+    "employee_count": 6000,
+    "total_downloads_estimate": "2B+",
+    "key_titles": [
+      "Free Fire (1B+ downloads)",
+      "Free Fire MAX",
+      "Call of Duty: Mobile (co-publish)"
+    ],
+    "live_ops_evidence": "Free Fire is a live ops powerhouse with constant events, battle passes, seasonal content, esports integration—dominant in emerging markets (LatAm, SEA, India)",
+    "linkedin_company_url": "https://www.linkedin.com/company/garena/",
+    "parent_company": "Sea Group (NYSE: SE)"
+  },
+  "contact": {
+    "full_name": "Forrest Li",
+    "title": "Founder & Group CEO",
+    "seniority_level": "C-Level",
+    "department": "Leadership",
+    "email": "forrest.li@seagroup.com",
+    "email_source": "Datanyze + Sea Group pattern",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/in/forrest-li/",
+    "linkedin_verified": true,
+    "location": "Singapore",
+    "notes": "Primary target. Founder of Sea Group (Garena parent). Board member Singapore Economic Development Board. Based in Singapore."
+  },
+  "outreach_packet": {
+    "subject_line": "Free Fire's live ops at 1B+ players",
+    "hook": "Running live ops for Free Fire with 1B+ downloads across emerging markets means managing complexity at a scale few companies understand.",
+    "body_paragraphs": [
+      "Free Fire's dominance in LatAm, SEA, and India isn't just about gameplay—it's about relentless live ops execution. Battle passes, seasonal events, regional customization, esports integration. But at this scale, manual optimization becomes impossible and missed opportunities cost millions.",
+      "We built an AI live operations platform that predicts player behavior 7 days ahead, automates event balancing across regions, and personalizes monetization by player segment. One Southeast Asian publisher using our system increased event revenue 28% by letting AI optimize their battle pass timing and pricing.",
+      "With Free Fire's scale and regional complexity, even small optimizations compound. Our platform integrates with existing data pipelines and starts showing ROI within 30 days."
+    ],
+    "cta": "Would a 15-min conversation about AI-driven live ops optimization be useful?",
+    "angle_notes": {
+      "primary_angle": "Complexity management at scale",
+      "why_this_works": "Garena/Free Fire operates at massive scale with regional complexity. Li is a founder/CEO who built a public company (Sea Group) from scratch—he values operational excellence and technology leverage. Free Fire is their crown jewel and a live ops machine; improving it matters more than experimental projects.",
+      "personalization_trigger": "Free Fire scale + emerging market complexity",
+      "pain_hypothesis": "Managing live ops for 1B+ player battle royale across diverse markets creates optimization blind spots; AI could uncover hidden revenue opportunities and reduce operational overhead"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "cards": [
+    {
+      "name": "[P0] VC: Griffin Gaming Partners - Peter Levin",
+      "desc": "**Fund:** Griffin Gaming Partners\n**Partner:** Peter Levin (Managing Director & Co-Founder)\n**Email:** peter@griffingp.com\n**AUM:** $1.5B (Multi-stage, Fund II deploying)\n**Location:** Los Angeles, CA\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\nGriffin invests at the intersection of content, social platforms, and software infrastructure. Portfolio includes Discord, Overwolf, AppLovin - all infrastructure plays enabling live service games.\n\n**Outreach Angle:**\nReference Griffin's infrastructure thesis (Discord, Overwolf, AppLovin) as validation of game enablement platforms. Position AI infrastructure as the next evolution - enabling live service games through intelligent automation, content generation, and player engagement systems.\n\n**Recent Investments:** Discord, Overwolf, AppLovin, Scopely, Second Dinner, Spyke Games\n**Last Fund Close:** 2022-2023 (Fund II)\n**Status:** Actively deploying",
+      "labels": ["P0", "VC", "Gaming-Focused", "US"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "Verify partner email via LinkedIn",
+        "Reference Discord/Overwolf investments",
+        "Customize [Company Name] placeholder",
+        "Set calendar reminder for follow-up (5 days)"
+      ]
+    },
+    {
+      "name": "[P0] VC: Konvoy Ventures - Josh Chapman",
+      "desc": "**Fund:** Konvoy Ventures\n**Partner:** Josh Chapman (Co-Founder & Managing Partner)\n**Email:** josh@konvoy.co\n**AUM:** $258M (Fund III deploying)\n**Location:** Denver, CO\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\nKonvoy is a thesis-driven firm investing in platforms and technologies at the frontier of gaming. Focus on infrastructure that shapes the future of interactive entertainment.\n\n**Outreach Angle:**\nKonvoy's thesis explicitly targets 'platforms and technologies at the frontier of gaming.' Position as infrastructure for the next generation of live service games - AI that enables smaller studios to operate like AAA live service teams. Reference their pioneering investments in under-served markets.\n\n**Recent Investments:** Carry1st (Africa gaming), Gaming infrastructure platforms\n**Focus:** Gaming Technology, Platforms, Infrastructure, Frontier Markets\n**Status:** Actively deploying from Fund III ($150M)",
+      "labels": ["P0", "VC", "Gaming-Focused", "US"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "Verify partner email via LinkedIn",
+        "Reference 'frontier of gaming' thesis",
+        "Mention infrastructure focus",
+        "Set follow-up reminder"
+      ]
+    },
+    {
+      "name": "[P0] VC: London Venture Partners - David Lau-Kee",
+      "desc": "**Fund:** London Venture Partners (LVP)\n**Partner:** David Lau-Kee (General Partner)\n**Email:** david@londonvp.com\n**AUM:** $140M (European gaming specialist)\n**Location:** London, UK\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\nLVP is Europe's leading gaming-focused VC. Recent investment in Jam & Tea Studios (AI-leveraged multiplayer games) confirms active interest in AI-powered game infrastructure. Portfolio includes Unity, Supercell, NaturalMotion.\n\n**Outreach Angle:**\nReference LVP's recent Jam & Tea Studios investment (explicitly 'leveraging technological innovations in AI'). Position as the platform layer that enables AI features in live service games - similar to how Unity provided the engine layer. Reference their Unity and Supercell exits.\n\n**Recent Investments:** Jam & Tea Studios (AI-powered), Third Time Entertainment, Singularity 6, Vela Games, Sanlo\n**Focus:** Interactive Entertainment, Game Technology, Platforms\n**Status:** Actively deploying",
+      "labels": ["P0", "VC", "Gaming-Focused", "Europe"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "Verify partner email",
+        "Reference Jam & Tea AI investment",
+        "Mention Unity/Supercell exits",
+        "Customize for UK timezone",
+        "Set follow-up reminder"
+      ]
+    },
+    {
+      "name": "[P0] VC: a16z Games - Jonathan Lai",
+      "desc": "**Fund:** Andreessen Horowitz (a16z) Games Fund\n**Partner:** Jonathan Lai (General Partner)\n**Email:** jon@a16z.com\n**AUM:** $600M (Games Fund, April 2024)\n**Location:** Menlo Park, CA\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\nJonathan Lai leads both the Games vertical AND a16z Speedrun (AI x creative technologies). Perfect dual fit. a16z has made significant AI infrastructure bets including Anthropic, Inworld AI.\n\n**Outreach Angle:**\nJonathan Lai explicitly invests in 'AI x creative landscape - from developer tools to 3D simulations, vertical agents, and novel storytelling formats.' Lead with AI infrastructure for live service games. Reference a16z's existing AI investments and position as the infrastructure layer that makes AI practical for live ops teams. Speedrun Demo Day angle possible.\n\n**Recent Investments:** Inworld AI, Anthropic, AI gaming infrastructure, Speedrun portfolio\n**Focus:** Games, AI x Creative, Developer Tools, 3D Simulations\n**Status:** Actively deploying fresh capital ($600M raised April 2024)",
+      "labels": ["P0", "VC", "Gaming-Focused", "US"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "Verify Jonathan Lai email",
+        "Reference Speedrun (AI x creative)",
+        "Mention Inworld AI investment",
+        "Position as developer tools",
+        "Set follow-up reminder"
+      ]
+    },
+    {
+      "name": "[P0] VC: Lightspeed Gaming - Moritz Baier-Lentz",
+      "desc": "**Fund:** Lightspeed Venture Partners - Gaming & Interactive Media\n**Partner:** Moritz Baier-Lentz (Partner & Head of Gaming)\n**Email:** moritz@lsvp.com\n**AUM:** $29B+ platform-wide\n**Location:** Los Angeles, CA\n**Priority:** P0\n**Due:** March 20, 2026\n\n**Thesis Alignment:**\nMoritz explicitly leads investments in 'AI & 3D Technologies' including 'foundation models for spatiotemporal reasoning, generative media creation, and agentic simulations in video games.' Arguably the most active AI + Gaming investor globally.\n\n**Outreach Angle:**\nMoritz is THE partner for AI gaming infrastructure at Lightspeed. Lead with 'agentic simulations' and 'live service automation' - language directly from his investment thesis. Reference Lightspeed's AI portfolio (Inworld AI, Anthropic, xAI, Pika, Stability AI) and position as infrastructure that operationalizes AI for live ops.\n\n**Recent Investments:** Inworld AI, Anthropic, xAI, Believer Company, Methodical Games, Gardens Interactive\n**Focus:** Interactive Platforms, AI & 3D Technologies, Gaming Infrastructure\n**Status:** Actively deploying - 90%+ deals led",
+      "labels": ["P0", "VC", "Gaming-Focused", "US"],
+      "due": "2026-03-20T23:59:00.000Z",
+      "checklist": [
+        "Verify Moritz email",
+        "Use 'agentic simulations' language",
+        "Reference Inworld AI (also in their portfolio)",
+        "Mention live service automation",
+        "Set follow-up reminder"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Bravestars Games - Le Manh Duc (CEO)",
+      "desc": "**Studio:** Bravestars Games\n**Contact:** Le Manh Duc (CEO)\n**Email:** duc.lm@bravestars.com\n**Downloads:** 1,000,000,000+\n**Location:** Hanoi, Vietnam\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 16, 2026\n\n**Key Games:**\n- Hair Salon (100M+ downloads)\n- Cooking Games series\n- Multiple simulation hits\n\n**Outreach Angle:**\nAI-powered simulation content generation. Bravestars' simulation portfolio requires constant fresh content. AI can generate infinite variations of cooking/hair styling scenarios without artist bottlenecks.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/01_bravestars_games_le_manh_duc.md\n\n**Notes:**\n- 100-200 employees (sweet spot)\n- Vietnam-based with global reach\n- Strong simulation genre focus\n- High content velocity needs",
+      "labels": ["P0", "BDR", "Tier-1", "Asia"],
+      "due": "2026-03-16T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email via LinkedIn",
+        "Review email draft",
+        "Send during Vietnam business hours (UTC+7)",
+        "Schedule follow-up in 5 days"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Fingersoft - Teemu Närhi (CEO)",
+      "desc": "**Studio:** Fingersoft\n**Contact:** Teemu Närhi (CEO)\n**Email:** teemu.narhi@fingersoft.com\n**Downloads:** 1,000,000,000+\n**Location:** Oulu, Finland\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 16, 2026\n\n**Key Games:**\n- Hill Climb Racing (1B+ downloads)\n- Hill Climb Racing 2\n- Physics-based racing hits\n\n**Outreach Angle:**\nAI for racing game content generation and physics-based gameplay. Fingersoft's Hill Climb series has massive scale but finite content. AI can generate infinite tracks, vehicles, and physics challenges.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/02_fingersoft_teemu_narhi.md\n\n**Notes:**\n- 51-200 employees\n- Finland-based (European timezone)\n- Physics/racing genre expertise\n- Recently returned to independence",
+      "labels": ["P0", "BDR", "Tier-1", "Europe"],
+      "due": "2026-03-16T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Hill Climb Racing success",
+        "Send during EU business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Moonee - Erez Mishli (Co-CEO)",
+      "desc": "**Studio:** Moonee\n**Contact:** Erez Mishli (Co-Founder & Co-CEO)\n**Email:** erez@moonee.io\n**Downloads:** 500,000,000+\n**Location:** Tel Aviv, Israel\n**Priority:** P0 | **Tier:** Tier-1\n**Due:** March 16, 2026\n\n**Key Games:**\n- Multiple published hyper-casual hits\n- Publishing model portfolio\n\n**Outreach Angle:**\nAI-powered creative optimization. Moonee's publishing model relies on rapid creative testing and iteration. AI can generate and optimize ad creatives, level variations, and game concepts at scale.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/03_moonee_erez_mishli.md\n\n**Notes:**\n- 50-200 employees\n- Tel Aviv-based\n- Publishing/UA focused\n- Rapid creative iteration needs",
+      "labels": ["P0", "BDR", "Tier-1", "EMEA"],
+      "due": "2026-03-16T23:59:00.000Z",
+      "checklist": [
+        "Verify Co-CEO email",
+        "Reference publishing model",
+        "Send during Israel business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Innersloth - Forest Willard (CEO)",
+      "desc": "**Studio:** Innersloth\n**Contact:** Forest Willard (CEO & Co-Founder)\n**Email:** forest@innersloth.com\n**Downloads:** 500,000,000+\n**Location:** Redmond, WA, USA\n**Priority:** P0 | **Tier:** Tier-2\n**Due:** March 17, 2026\n\n**Key Games:**\n- Among Us (500M+ downloads, cultural phenomenon)\n\n**Outreach Angle:**\nAI for indie live ops automation. Small team managing massive game (Among Us). AI can automate content updates, community management, and live events without scaling headcount.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/04_innersloth_forest_willard.md\n\n**Notes:**\n- 11-50 employees (lean team)\n- US-based (PST timezone)\n- Indie success story\n- Live ops automation opportunity",
+      "labels": ["P0", "BDR", "Tier-2", "US"],
+      "due": "2026-03-17T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Among Us phenomenon",
+        "Position as indie-friendly solution",
+        "Send during US business hours"
+      ]
+    },
+    {
+      "name": "[P0] BDR: ZPLAY Games - He Peng (CEO)",
+      "desc": "**Studio:** ZPLAY Games\n**Contact:** He Peng (Jack Ho) (Founder & CEO)\n**Email:** he.peng@zplay.com\n**Downloads:** 500,000,000+\n**Location:** Beijing, China\n**Priority:** P0 | **Tier:** Tier-2\n**Due:** March 17, 2026\n\n**Key Games:**\n- Global publisher portfolio\n- 500M+ downloads across titles\n\n**Outreach Angle:**\nAI for hyper-casual content at scale. Chinese publisher with global reach. AI enables rapid content generation for worldwide markets with cultural localization.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/05_zplay_games_he_peng.md\n\n**Notes:**\n- 100-200 employees\n- Beijing-based (APAC timezone)\n- Global publishing focus\n- Localization at scale opportunity",
+      "labels": ["P0", "BDR", "Tier-2", "Asia"],
+      "due": "2026-03-17T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email (medium confidence)",
+        "Reference global publishing",
+        "Send during China business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Playgendary - Dmitriy Shelengovskiy (CEO)",
+      "desc": "**Studio:** Playgendary\n**Contact:** Dmitriy Shelengovskiy (Founder & CEO)\n**Email:** dmitriy@playgendary.com\n**Downloads:** 500,000,000+\n**Location:** Limassol, Cyprus\n**Priority:** P0 | **Tier:** Tier-2\n**Due:** March 17, 2026\n\n**Key Games:**\n- Bowmasters (100M+ downloads)\n- Kick the Buddy series\n- Action/arcade hits\n\n**Outreach Angle:**\nAI for action game content generation. Cyprus-based publisher with global reach. AI can generate characters, weapons, and scenarios for action games.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/06_playgendary_dmitriy_shelengovskiy.md\n\n**Notes:**\n- 51-200 employees\n- Cyprus-based (EU timezone)\n- Action/arcade focus\n- Character/content generation opportunity",
+      "labels": ["P0", "BDR", "Tier-2", "Europe"],
+      "due": "2026-03-17T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Bowmasters success",
+        "Send during EU business hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: MAG Interactive - Daniel Hasselberg (CEO)",
+      "desc": "**Studio:** MAG Interactive\n**Contact:** Daniel Hasselberg (CEO)\n**Email:** daniel.hasselberg@maginteractive.com\n**Downloads:** 300,000,000+\n**Location:** Stockholm, Sweden\n**Priority:** P0\n**Due:** March 18, 2026\n\n**Key Games:**\n- QuizDuel (trivia hit)\n- WordBrain series\n- Word/puzzle portfolio\n\n**Outreach Angle:**\nAI for word puzzle content generation. MAG's word games need infinite puzzle variations. AI can generate unique puzzles daily without writer bottlenecks.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/07_mag_interactive_daniel_hasselberg.md\n\n**Notes:**\n- 50-200 employees\n- Stockholm-based\n- Word/puzzle genre\n- Daily content generation needs",
+      "labels": ["P0", "BDR", "Europe"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference QuizDuel/WordBrain",
+        "Send during EU hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Green Panda Games - Guillaume Sztejnberg (CEO)",
+      "desc": "**Studio:** Green Panda Games\n**Contact:** Guillaume Sztejnberg (CEO)\n**Email:** guillaume@greenpandagames.com\n**Downloads:** 300,000,000+\n**Location:** Paris, France\n**Priority:** P0\n**Due:** March 18, 2026\n\n**Key Games:**\n- Idle/clicker hits\n- Publishing portfolio\n\n**Outreach Angle:**\nAI for idle game economy optimization. Green Panda's idle games require balanced economies and constant content. AI can optimize progression curves and generate new content layers.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/08_green_panda_games_guillaume_sztejnberg.md\n\n**Notes:**\n- 51-200 employees\n- Paris-based\n- Idle/clicker focus\n- Economy optimization opportunity",
+      "labels": ["P0", "BDR", "Europe"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference idle game expertise",
+        "Send during EU hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Tactile Games - Asbjoern Soendergaard (CEO)",
+      "desc": "**Studio:** Tactile Games\n**Contact:** Asbjoern Malte Soendergaard (CEO)\n**Email:** asbjoern@tactile.dk\n**Downloads:** 200,000,000+\n**Location:** Copenhagen, Denmark\n**Priority:** P0\n**Due:** March 18, 2026\n\n**Key Games:**\n- Lily's Garden (match-3 + story)\n- narrative-driven mobile games\n\n**Outreach Angle:**\nAI for narrative match-3 content. Tactile's story-driven games need constant narrative updates. AI can generate story branches, dialogue, and match-3 levels aligned with plot.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/09_tactile_games_asbjoern_soendergaard.md\n\n**Notes:**\n- 100-200 employees\n- Copenhagen-based\n- Match-3 + narrative\n- Story content generation opportunity",
+      "labels": ["P0", "BDR", "Europe"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Lily's Garden",
+        "Send during EU hours",
+        "Schedule follow-up"
+      ]
+    },
+    {
+      "name": "[P0] BDR: Space Ape Games - John Earner (CEO)",
+      "desc": "**Studio:** Space Ape Games\n**Contact:** John Earner (CEO)\n**Email:** john@spaceapegames.com\n**Downloads:** 100,000,000+\n**Location:** London, UK\n**Priority:** P0\n**Due:** March 18, 2026\n\n**Key Games:**\n- Transformers: Earth Wars\n- Fastlane: Road to Revenge\n- Midcore mobile hits\n\n**Outreach Angle:**\nAI for midcore live ops. Space Ape's midcore games require sophisticated live ops. AI can optimize event timing, balance economies, and personalize offers for player segments.\n\n**Email Draft:** See /deliverables/bdr_game_studios/email_drafts/cycle27/10_space_ape_games_john_earner.md\n\n**Notes:**\n- 51-200 employees\n- London-based\n- Midcore focus\n- Supercell alumni team\n- Live ops sophistication opportunity",
+      "labels": ["P0", "BDR", "Europe"],
+      "due": "2026-03-18T23:59:00.000Z",
+      "checklist": [
+        "Verify CEO email",
+        "Reference Transformers/Fastlane",
+        "Send during UK hours",
+        "Schedule follow-up"
+      ]
+    }
+  ]
+}

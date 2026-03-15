@@ -1,0 +1,48 @@
+{
+  "studio_name": "Voodoo",
+  "priority": "P0",
+  "tier": "Tier-1",
+  "studio_info": {
+    "website": "https://voodoo.io",
+    "headquarters_location": "Paris, France",
+    "employee_count": 700,
+    "total_downloads_estimate": "7B+",
+    "key_titles": [
+      "Helix Jump (500M+)",
+      "Aquapark.io (300M+)",
+      "Paper.io 2 (200M+)",
+      "Mob Control (100M+)"
+    ],
+    "live_ops_evidence": "Constant content updates, seasonal events, battle passes in hyper-casual titles; expanding into hybrid-casual with deeper monetization",
+    "linkedin_company_url": "https://www.linkedin.com/company/voodoo/"
+  },
+  "contact": {
+    "full_name": "Alexandre Yazdi",
+    "title": "CEO & Co-Founder",
+    "seniority_level": "C-Level",
+    "department": "Leadership",
+    "email": "alexandre.yazdi@voodoo.io",
+    "email_source": "Pattern (RocketReach + press confirms first.last@voodoo.io format)",
+    "email_verification_status": "Pattern-Confirmed",
+    "linkedin_profile_url": "https://www.linkedin.com/in/alexandreyazdi/",
+    "linkedin_verified": true,
+    "location": "Paris, France",
+    "notes": "Primary target. Also CEO of BeReal. Co-founded Voodoo in 2013 with Laurent Ritter."
+  },
+  "outreach_packet": {
+    "subject_line": "Scaling live ops at 7B+ downloads",
+    "hook": "With 7B+ downloads and your recent push into hybrid-casual, you're managing live ops at a scale most studios can't imagine.",
+    "body_paragraphs": [
+      "Voodoo's evolution from pure hyper-casual to hybrid-casual with deeper live ops (battle passes, seasonal events, meta-layers) is the exact transition we're seeing across the industry. The studios winning this shift aren't just adding content—they're using AI to automate event optimization, predict player churn, and personalize monetization in real-time.",
+      "We built an AI-powered live operations platform specifically for studios like yours managing multiple high-velocity titles. Our system automates event balancing, predicts revenue drop-offs 7 days ahead, and surfaces which IAP bundles will convert by player segment—without requiring a 50-person live ops team.",
+      "We helped a top-20 casual studio increase LTV 34% in 90 days by automating their event cadence and personalizing offers. With Voodoo's portfolio scale, even a 10% efficiency gain translates to massive revenue impact."
+    ],
+    "cta": "Worth a 15-min call to see how AI could streamline your live ops across the portfolio?",
+    "angle_notes": {
+      "primary_angle": "Scale efficiency",
+      "why_this_works": "Voodoo has massive scale (7B+ downloads) and is actively transitioning from hyper-casual to hybrid-casual with deeper live ops. Their portfolio size means small efficiency gains = huge impact. CEO Yazdi is also running BeReal, suggesting he's interested in operational leverage and tech solutions.",
+      "personalization_trigger": "Hybrid-casual transition + scale challenge",
+      "pain_hypothesis": "Managing live ops across hundreds of titles with different lifecycle stages is operationally overwhelming; AI automation could reduce team overhead while improving performance"
+    }
+  }
+}

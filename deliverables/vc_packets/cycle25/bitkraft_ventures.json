@@ -1,0 +1,70 @@
+{
+  "firm_name": "BITKRAFT Ventures",
+  "fund_size": "$1.05B (multiple funds)",
+  "stage_focus": "Seed, Series A, Series B",
+  "thesis": "Early- and mid-stage venture capital for gaming, Web3, and immersive technology. Built by gamers for gamers.",
+  "key_partners": [
+    {
+      "name": "Jens Hilgers",
+      "title": "Founding General Partner",
+      "background": "ESL co-founder (2000), G2 Esports co-founder, esports pioneer",
+      "relevance": "Deep operational gaming expertise; founded ESL and led it to acquisition"
+    },
+    {
+      "name": "Scott Rupp",
+      "title": "General Partner",
+      "background": "Gaming and platform investments",
+      "relevance": "Active in gaming infrastructure deals"
+    },
+    {
+      "name": "Moritz Baier-Lentz",
+      "title": "Partner",
+      "background": "Gaming and Web3 investments",
+      "relevance": "Led multiple gaming platform investments"
+    }
+  ],
+  "target_partner": {
+    "name": "Jens Hilgers",
+    "rationale": "As founder of ESL and G2 Esports, Jens understands the operational pain of running live games at scale. His experience building tournament infrastructure from scratch gives him unique appreciation for platform plays that solve real operational problems for gaming companies."
+  },
+  "recent_investments": [
+    {
+      "company": "Ruckus Games",
+      "round": "$19M Series A",
+      "date": "November 2024",
+      "description": "Suburban invasion RPG shooter with disruptive multiplayer"
+    },
+    {
+      "company": "Live Aware Labs",
+      "round": "$4.8M Seed",
+      "date": "October 2024",
+      "description": "AI-powered game testing and live ops platform"
+    },
+    {
+      "company": "StockGro",
+      "round": "$13M Series B1",
+      "date": "2024",
+      "description": "Gaming-meets-finance platform"
+    }
+  ],
+  "key_references": [
+    "Live Aware Labs - Game testing and live ops infrastructure (co-invested with a16z)",
+    "Overwolf - In-game creator platform (portfolio company)",
+    "Ruckus Games - Live service multiplayer game (latest Series A)"
+  ],
+  "outreach_packet": {
+    "subject_line": "Live ops platform + your Live Aware Labs thesis",
+    "hook": "Congrats on the Live Aware Labs investment—I saw you co-invested with a16z on their AI-powered game testing platform. We're building the companion live operations layer that studios need to actually run their games post-launch.",
+    "body_paragraphs": {
+      "value_prop": "We're a live operations platform built specifically for gaming studios, replacing the custom internal tools that every studio rebuilds from scratch. Our platform unifies content deployment, player segmentation, event orchestration, and live balancing in one system. Having seen ESL and G2 operate live competitive games at scale, you know the operational complexity studios face—we're making it possible for any studio to run live services like a top-tier esports operation without the engineering overhead.",
+      "market_insight": "Your Fund 3 ($275M raised 2024) shows continued conviction in gaming infrastructure even during the downturn. The fact that you invested in Live Aware Labs signals you understand the infrastructure gap in modern game development. Here's the thing: testing is critical, but it's only half the battle. Studios then need to operate these games for years. With 60%+ of gaming revenue now coming from live services, the operational tooling gap is costing the industry billions in inefficiency. This is the exact infrastructure layer that enabled esports to scale—and now every studio needs it.",
+      "traction_ask": "We're in closed beta with 3 studios and seeing 40% faster content deployment. Given BITKRAFT's leadership in gaming infrastructure and your recent Live Aware Labs investment, we'd love to share our roadmap. Would you have 20 minutes for a conversation about how live ops infrastructure is the next frontier for gaming platforms?"
+    }
+  },
+  "warm_paths": [
+    "Co-investors in Live Aware Labs (a16z, Transcend Fund)",
+    "Portfolio founders in live service games (Ruckus Games, etc.)",
+    "ESL/G2 Esports alumni network"
+  ],
+  "notes": "BITKRAFT is uniquely positioned as the 'gamer VC' with genuine operational credibility through Jens Hilgers' ESL/G2 background. They understand live operations intimately from running esports tournaments. Their recent Live Aware Labs investment signals active interest in live ops infrastructure."
+}

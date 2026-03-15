@@ -5,6 +5,23 @@ const path = require('path');
 const app = express();
 const PORT = 4173;
 
+// Proxy ClawMetry requests
+app.use('/metrics', createProxyMiddleware({
+  target: 'http://localhost:8900',
+  changeOrigin: true,
+  pathRewrite: {
+    '^/metrics': '',  // Remove /metrics prefix
+  },
+  on: {
+    proxyRes: (proxyRes) => {
+      if (proxyRes.headers['location']) {
+        proxyRes.headers['location'] = proxyRes.headers['location']
+          .replace(/^https?:\/\/localhost:8900/, '/metrics');
+      }
+    },
+  },
+}));
+
 // Proxy API requests to backend
 // When you use app.use('/api', proxy), it strips /api by default
 // So we need to add it back in the target
@@ -39,4 +56,5 @@ app.use((req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`API proxy: http://localhost:${PORT}/api/* → http://localhost:8000/api/*`);
+  console.log(`ClawMetry: http://localhost:${PORT}/metrics/* → http://localhost:8900/*`);
 });

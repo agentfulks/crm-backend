@@ -175,9 +175,9 @@ export OPENCLAW_WORKSPACE="${OPENCLAW_WORKSPACE:-/data/workspace}"
 # Kill any existing clawmetry processes
 pkill -f "clawmetry.*8900" 2>/dev/null || true
 
-# Start ClawMetry in background
-nohup "$CLAW_BIN" --port 8900 --workspace "$OPENCLAW_WORKSPACE" --sessions-dir "/data/.openclaw/agents" --name "VANTAGE (ALL)" > /tmp/clawmetry.log 2>&1 &
-echo "✅ ClawMetry started on port 8900 (Global Mode)"
+# Start ClawMetry in background (Disable reload for stability on Railway)
+nohup "$CLAW_BIN" --port 8900 --host 0.0.0.0 --workspace "$OPENCLAW_WORKSPACE" --sessions-dir "/data/.openclaw/agents" --name "VANTAGE (ALL)" --no-reload > /tmp/clawmetry.log 2>&1 &
+echo "✅ ClawMetry started on port 8900 (Stable Mode)"
 echo "📊 Dashboard: http://localhost:8900 (will be tunneled)"
 
 # Wait for ClawMetry to start

@@ -12,7 +12,7 @@
 # FIX: Run everything as root. No privilege drop. No EACCES. Ever.
 #
 # Railway start command:
-#   exec bash /data/workspace/entrypoint.sh
+#   bash /data/workspace/entrypoint.sh
 # ============================================================================
 
 set -euo pipefail
@@ -33,39 +33,20 @@ echo "  Mode: Direct gateway (root, no wrapper, no UID 1001)"
 echo "═══════════════════════════════════════════════════════════════"
 
 # ──────────────────────────────────────────────────────────────────
-# STEP 1: Instant health check on PORT 8080
-# Railway needs a listening port ASAP or the deploy fails.
-# We start a lightweight responder, then replace it with the gateway.
-# ──────────────────────────────────────────────────────────────────
-python3 -c '
-import http.server, socketserver, threading
-
-class H(http.server.BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header("Content-Type", "text/plain")
-        self.end_headers()
-        self.wfile.write(b"STARTING")
-    def log_message(self, *a): pass
-
-s = socketserver.TCPServer(("", 8080), H)
-t = threading.Thread(target=s.serve_forever, daemon=True)
-t.start()
-
-import time
-# Keep alive until killed
-while True:
-    time.sleep(60)
-' &
-HEALTH_PID=$!
-echo "[entrypoint] Health check on :8080 (PID $HEALTH_PID)"
-
-# ──────────────────────────────────────────────────────────────────
-# STEP 2: Fix permissions (blanket — covers previous deploys)
+# STEP 1: Fix permissions (blanket — covers previous deploys)
 # ──────────────────────────────────────────────────────────────────
 mkdir -p /data/.openclaw /tmp/jiti
 chmod -R a+rwX /data/.openclaw 2>/dev/null || true
 chmod 1777 /tmp/jiti 2>/dev/null || true
+
+# ──────────────────────────────────────────────────────────────────
+# STEP 2: Start background services FIRST (ClawMetry, Rustunnel, Backend)
+# These don't need port 8080 — they run on their own ports.
+# ──────────────────────────────────────────────────────────────────
+if [[ -f /data/workspace/start-railway.sh ]]; then
+    bash /data/workspace/start-railway.sh &
+    echo "[entrypoint] Background services starting (PID $!)"
+fi
 
 # ──────────────────────────────────────────────────────────────────
 # STEP 3: Run doctor --fix (as root — no EACCES possible)
@@ -115,25 +96,12 @@ else:
 PATCH
 
 # ──────────────────────────────────────────────────────────────────
-# STEP 6: Start background services (ClawMetry, Rustunnel, Backend)
+# STEP 6: Start gateway on port 8080 (as root — the whole point)
+# exec replaces this shell with the gateway node process.
 # ──────────────────────────────────────────────────────────────────
-if [[ -f /data/workspace/start-railway.sh ]]; then
-    bash /data/workspace/start-railway.sh &
-    echo "[entrypoint] Background services starting (PID $!)"
-fi
-
-# ──────────────────────────────────────────────────────────────────
-# STEP 7: Kill health check, start REAL gateway on port 8080
-# ──────────────────────────────────────────────────────────────────
-echo "[entrypoint] Stopping temp health check..."
-kill $HEALTH_PID 2>/dev/null || true
-wait $HEALTH_PID 2>/dev/null || true
-sleep 1
-
 echo "[entrypoint] Starting OpenClaw gateway on :8080 (as root)..."
 echo "═══════════════════════════════════════════════════════════════"
 
-# exec replaces this shell with the gateway — proper PID 1 signal handling
 exec node /usr/local/lib/node_modules/openclaw/dist/entry.js gateway run \
     --bind 0.0.0.0 \
     --port 8080 \

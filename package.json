@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "CRM Dashboard with ClawMetry monitoring",
   "scripts": {
-    "start": "bash start-railway.sh",
-    "railway-start": "bash start-railway.sh",
+    "start": "bash entrypoint.sh",
+    "railway-start": "bash entrypoint.sh",
     "dev": "cd frontend && npm run dev",
     "build": "cd frontend && npm run build"
   },

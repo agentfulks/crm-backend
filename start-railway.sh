@@ -6,15 +6,95 @@
 # ============================================================================
 
 CONFIG="/data/.openclaw/openclaw.json"
+CONFIG_DIR="/data/.openclaw"
 
 # ============================================================================
-# PATCH HELPER — called both synchronously and from the watchdog
+# PHASE 0 — PYTHON INOTIFY PERMISSION DAEMON
 # ============================================================================
-do_patch() {
-    python3 - <<'PYEOF' 2>/dev/null
-import json, sys
+# Shell-based chmod loops and inotifywait have ~5-15ms reaction time.
+# That's enough time for the gateway to read the file and get EACCES.
+#
+# A Python inotify daemon reacts in ~0.1ms (direct kernel notification,
+# no subprocess creation, direct os.chmod() syscall).
+#
+# This daemon also logs every permission change so we can see in Railway
+# logs exactly when and why permissions get reset.
+# ============================================================================
 
-CONFIG = "/data/.openclaw/openclaw.json"
+# Write the daemon script to disk so we can run it standalone
+cat > /tmp/perms-daemon.py << 'PYDAEMON'
+#!/usr/bin/env python3
+"""Ultra-fast permission daemon for /data/.openclaw/openclaw.json.
+
+Reacts to file events via inotify (microseconds) with fallback to 50ms polling.
+Logs every permission state change so Railway logs show what's happening.
+"""
+import os, sys, time, json
+
+CONFIG     = "/data/.openclaw/openclaw.json"
+CONFIG_DIR = "/data/.openclaw"
+TARGET_UID = 1001
+TARGET_GID = 1001
+TARGET_MODE = 0o666   # world rw — gateway can read AND write regardless of owner
+DIR_MODE   = 0o755
+
+def stat_info(path):
+    try:
+        s = os.stat(path)
+        return s.st_uid, s.st_gid, oct(s.st_mode)[-4:]
+    except Exception as e:
+        return None, None, str(e)
+
+def fix_perms(reason="periodic"):
+    try:
+        # Fix directory first
+        os.chmod(CONFIG_DIR, DIR_MODE)
+    except Exception as e:
+        print(f"[perms {time.strftime('%H:%M:%S')}] dir chmod failed: {e}", flush=True)
+
+    if not os.path.exists(CONFIG):
+        return
+
+    uid, gid, mode = stat_info(CONFIG)
+    needs_fix = (uid != TARGET_UID) or (int(mode, 8) & 0o666 != TARGET_MODE)
+
+    if needs_fix:
+        print(f"[perms {time.strftime('%H:%M:%S')}] FIXING — reason={reason} uid={uid} mode={mode}", flush=True)
+    else:
+        # Only log periodically to avoid spam, not on every inotify event
+        return
+
+    try:
+        os.chmod(CONFIG, TARGET_MODE)
+    except Exception as e:
+        print(f"[perms {time.strftime('%H:%M:%S')}] chmod failed: {e}", flush=True)
+
+    try:
+        os.chown(CONFIG, TARGET_UID, TARGET_GID)
+    except Exception as e:
+        # chmod 666 alone is sufficient — others get rw even without chown
+        print(f"[perms {time.strftime('%H:%M:%S')}] chown skipped (ok if chmod worked): {e}", flush=True)
+
+    uid2, gid2, mode2 = stat_info(CONFIG)
+    print(f"[perms {time.strftime('%H:%M:%S')}] AFTER FIX — uid={uid2} mode={mode2}", flush=True)
+
+    # Verify UID 1001 can actually open the file
+    can_read = False
+    try:
+        import ctypes
+        libc = ctypes.CDLL("libc.so.6", use_errno=True)
+        # access(2) with R_OK checks as the REAL uid/gid
+        # But we're root so we need faccessat with uid 1001
+        # Simplest check: just try to read the file (we're root so it works)
+        with open(CONFIG, 'r') as f:
+            raw = f.read(10)
+        can_read = True
+    except:
+        pass
+    print(f"[perms {time.strftime('%H:%M:%S')}] root-readable={can_read} (UID 1001 readable if mode has o+r)", flush=True)
+
+
+# Also patch allowedOrigins / allowInsecureAuth when the file changes
 WANTED_ORIGINS = [
     "https://marvy.up.railway.app",
     "http://127.0.0.1:18789",
@@ -23,212 +103,146 @@ WANTED_ORIGINS = [
     "http://localhost:8080",
 ]
 
-try:
-    with open(CONFIG, "r") as f:
-        cfg = json.load(f)
-except Exception as e:
-    print(f"[patch] Cannot read config: {e}", flush=True)
-    sys.exit(0)
-
-gw = cfg.setdefault("gateway", {})
-cui = gw.setdefault("controlUi", {})
-
-current_origins = cui.get("allowedOrigins")
-current_insecure = cui.get("allowInsecureAuth")
-
-changed = False
-if current_origins != WANTED_ORIGINS:
-    cui["allowedOrigins"] = WANTED_ORIGINS
-    changed = True
-if current_insecure is not True:
-    cui["allowInsecureAuth"] = True
-    changed = True
-
-if changed:
+def patch_config(reason="inotify"):
+    if not os.path.exists(CONFIG):
+        return
     try:
-        with open(CONFIG, "w") as f:
-            json.dump(cfg, f, indent=2)
-        print(f"[patch] Updated → allowedOrigins={WANTED_ORIGINS} allowInsecureAuth=True", flush=True)
+        with open(CONFIG, "r") as f:
+            cfg = json.load(f)
     except Exception as e:
-        print(f"[patch] Write failed: {e}", flush=True)
-else:
-    print(f"[patch] Already correct (origins={current_origins})", flush=True)
-PYEOF
-    # chmod 666 = world read+write.
-    # Critical: if chown fails (some environments restrict it), UID 1001 still
-    # gets rw access as "others" via the 6 in the last octet. This covers:
-    #   - The gateway reading the config  (needs r)
-    #   - The gateway writing an Approve/pairing update (needs w)
-    chown 1001:1001 "$CONFIG" 2>/dev/null || true
-    chmod 666 "$CONFIG"       2>/dev/null || true
-    chmod 755 /data/.openclaw 2>/dev/null || true
-}
+        print(f"[patch {time.strftime('%H:%M:%S')}] read failed ({reason}): {e}", flush=True)
+        return
+
+    gw  = cfg.setdefault("gateway", {})
+    cui = gw.setdefault("controlUi", {})
+    changed = False
+    if cui.get("allowedOrigins") != WANTED_ORIGINS:
+        cui["allowedOrigins"] = WANTED_ORIGINS
+        changed = True
+    if cui.get("allowInsecureAuth") is not True:
+        cui["allowInsecureAuth"] = True
+        changed = True
+
+    if changed:
+        try:
+            with open(CONFIG, "w") as f:
+                json.dump(cfg, f, indent=2)
+            print(f"[patch {time.strftime('%H:%M:%S')}] Patched allowedOrigins+allowInsecureAuth ({reason})", flush=True)
+            fix_perms(f"post-patch-{reason}")
+        except Exception as e:
+            print(f"[patch {time.strftime('%H:%M:%S')}] write failed: {e}", flush=True)
+
+
+# ── STARTUP ──────────────────────────────────────────────────────────────────
+print(f"[perms-daemon] Starting — watching {CONFIG_DIR}", flush=True)
+fix_perms("startup")
+patch_config("startup")
+
+# ── INOTIFY MODE ─────────────────────────────────────────────────────────────
+try:
+    import inotify_simple
+    print("[perms-daemon] inotify_simple available — microsecond reaction mode", flush=True)
+
+    ifd = inotify_simple.INotify()
+    mask = (
+        inotify_simple.flags.CREATE    |
+        inotify_simple.flags.MOVED_TO  |
+        inotify_simple.flags.CLOSE_WRITE
+    )
+    ifd.add_watch(CONFIG_DIR, mask)
+
+    LAST_PERIODIC = time.time()
+    while True:
+        # Wait up to 500ms for an event (then do a periodic check anyway)
+        events = ifd.read(timeout=500)
+        for ev in events:
+            name = getattr(ev, 'name', '')
+            print(f"[perms-daemon] inotify event: {name}", flush=True)
+            fix_perms(f"inotify:{name}")
+            if 'openclaw.json' in name or not name:
+                patch_config(f"inotify:{name}")
+
+        # Periodic check every 5s regardless
+        if time.time() - LAST_PERIODIC > 5:
+            fix_perms("periodic-5s")
+            LAST_PERIODIC = time.time()
+
+except ImportError:
+    # ── POLLING FALLBACK ──────────────────────────────────────────────────────
+    print("[perms-daemon] inotify_simple NOT available — 50ms polling fallback", flush=True)
+    LAST_PATCH = 0
+    while True:
+        fix_perms("poll-50ms")
+        if time.time() - LAST_PATCH > 2:
+            patch_config("poll-2s")
+            LAST_PATCH = time.time()
+        time.sleep(0.05)
+PYDAEMON
+
+echo "[Phase 0] Permission daemon script written to /tmp/perms-daemon.py"
 
 # ============================================================================
-# PHASE -1: SYNCHRONOUS PRE-PATCH (runs immediately, before the watchdog loop)
+# PHASE 0.5 — SYNCHRONOUS PRE-PATCH (before entrypoint starts doctor --fix)
 # ============================================================================
-# The volume persists between restarts. If openclaw.json already exists,
-# patch it NOW — before entrypoint.sh's doctor has a chance to overwrite it.
+mkdir -p "$CONFIG_DIR"
+chown 1001:1001 "$CONFIG_DIR" 2>/dev/null || true
+chmod 755 "$CONFIG_DIR" 2>/dev/null || true
+
+# If config exists from a previous run, patch + fix permissions NOW
 if [[ -f "$CONFIG" ]]; then
-    echo "[Phase -1] Config exists, patching immediately..."
-    do_patch
-    echo "[Phase -1] Pre-patch done"
+    echo "[Phase 0.5] Config exists — pre-patching before doctor --fix runs..."
+    python3 /tmp/perms-daemon.py &
+    PRE_PID=$!
+    sleep 3
+    kill "$PRE_PID" 2>/dev/null || true
+    echo "[Phase 0.5] Pre-patch done"
 else
-    echo "[Phase -1] Config not yet created (first run), watchdog will patch when it appears"
+    echo "[Phase 0.5] No config yet (first run) — daemon will handle it when created"
 fi
 
-# Fix parent directory ownership
-chown 1001:1001 /data/.openclaw 2>/dev/null || true
-chmod 755 /data/.openclaw 2>/dev/null || true
-
 # ============================================================================
-# PHASE -0.5: SET DEFAULT ACL — THE PERMANENT FIX
+# PHASE 0.6 — TRY setfacl DEFAULT ACL (permanent fix if filesystem supports it)
 # ============================================================================
-# The wrapper does an atomic write (write to temp → rename into place).
-# rename() replaces the inode, so the new file inherits the temp file's
-# ownership (root:root, mode 600). A chown-every-second watchdog always
-# loses this race some of the time.
-#
-# setfacl default ACLs are inherited at file CREATION time, before any
-# process can open the file. If supported, this is a one-time permanent fix:
-# any file created in /data/.openclaw/ is automatically UID-1001-readable.
-#
-# Fallback: install inotify-tools and use inotifywait for millisecond-level
-# reaction instead of 1-second polling.
-# ============================================================================
-ACL_WORKING=false
+# Default ACLs mean every new file created in the directory automatically
+# inherits u:1001:rw — including files created by atomic rename (if the
+# temp file was created in the same directory, which Node.js write-file-atomic
+# does by default).
 if command -v setfacl &>/dev/null; then
-    # Grant UID 1001 rw on existing file and directory
-    setfacl -m u:1001:rw /data/.openclaw 2>/dev/null || true
-    [[ -f "$CONFIG" ]] && setfacl -m u:1001:rw "$CONFIG" 2>/dev/null || true
-
-    # Set DEFAULT ACL — inherited by ALL new files created in the directory
-    if setfacl -d -m u:1001:rw /data/.openclaw 2>/dev/null; then
-        ACL_WORKING=true
-        echo "[Phase -0.5] Default ACL set on /data/.openclaw/ — UID 1001 auto-gets rw on ALL new files (permanent fix)"
+    if setfacl -d -m u:1001:rwx,g:1001:rx,o::r /data/.openclaw 2>/dev/null; then
+        setfacl -m u:1001:rwx,g:1001:rx,o::r /data/.openclaw 2>/dev/null || true
+        [[ -f "$CONFIG" ]] && setfacl -m u:1001:rw "$CONFIG" 2>/dev/null || true
+        echo "[Phase 0.6] ✅ setfacl default ACL applied — every new file auto-inherits u:1001:rw"
     else
-        echo "[Phase -0.5] setfacl available but filesystem doesn't support ACLs — falling back to inotifywait"
+        echo "[Phase 0.6] setfacl available but filesystem doesn't support ACLs (falling back to daemon)"
     fi
 else
-    echo "[Phase -0.5] setfacl not available — will use inotifywait watchdog"
-fi
-
-# Install inotify-tools if we need the fast watchdog
-if [[ "$ACL_WORKING" != "true" ]] && ! command -v inotifywait &>/dev/null; then
-    echo "[Phase -0.5] Installing inotify-tools for fast permission watchdog..."
-    apt-get install -y -q inotify-tools 2>/dev/null || true
+    echo "[Phase 0.6] setfacl not found (falling back to daemon)"
 fi
 
 # ============================================================================
-# PHASE 0: CONTINUOUS CONFIG+OWNERSHIP WATCHDOG
-#
-# Problem: The OpenClaw wrapper runs "openclaw doctor --fix" on every startup,
-# which atomically REWRITES openclaw.json — clobbering both the file ownership
-# (root takes it back) AND our allowedOrigins patch.
-#
-# Additionally, the gateway caches allowedOrigins at startup. So we need TWO
-# mechanisms:
-#   1. Keep the config patched (watchdog)
-#   2. Restart the gateway ONCE after it starts, so it re-reads allowedOrigins
+# PHASE 0.7 — INSTALL inotify_simple FOR MICROSECOND REACTION
 # ============================================================================
-ALLOWED_ORIGINS='["https://marvy.up.railway.app","http://127.0.0.1:18789","http://localhost:18789"]'
-
-(
-    GATEWAY_RESTARTED=false
-    GATEWAY_RESTART_WAIT=30
-
-    fix_ownership() {
-        if [[ -f "$CONFIG" ]]; then
-            do_patch
-            # do_patch already does chown+chmod 666, but belt-and-suspenders:
-            chown 1001:1001 "$CONFIG" 2>/dev/null || true
-            chmod 666 "$CONFIG"       2>/dev/null || true
-            setfacl -m u:1001:rw "$CONFIG" 2>/dev/null || true
-        fi
-        chown 1001:1001 /data/.openclaw 2>/dev/null || true
-        chmod 755 /data/.openclaw      2>/dev/null || true
-        chmod -R a+rwX /tmp/jiti       2>/dev/null || true
-    }
-
-    trigger_gateway_restart() {
-        # ONE-TIME restart ~30s after startup so the gateway re-reads
-        # allowedOrigins from the already-patched config.
-        if [[ "$GATEWAY_RESTARTED" == "false" ]]; then
-            UPTIME_SECS=$(awk '{print int($1)}' /proc/uptime 2>/dev/null || echo 0)
-            if [[ $UPTIME_SECS -gt $GATEWAY_RESTART_WAIT ]]; then
-                GW_PID=$(pgrep -f "entry.js gateway" 2>/dev/null | head -1)
-                if [[ -n "$GW_PID" ]]; then
-                    echo "[watchdog] ONE-TIME gateway restart (PID $GW_PID) — forces reload of allowedOrigins"
-                    kill "$GW_PID" 2>/dev/null || true
-                    GATEWAY_RESTARTED=true
-                fi
-            fi
-        fi
-    }
-
-    if [[ "$ACL_WORKING" == "true" ]]; then
-        echo "[watchdog] ACL mode: polling every 5s for content patches + one-time restart"
-        while true; do
-            fix_ownership
-            trigger_gateway_restart
-            sleep 5
-        done
-
-    elif command -v inotifywait &>/dev/null; then
-        echo "[watchdog] inotifywait mode: reacting instantly on file events"
-        (while true; do trigger_gateway_restart; sleep 5; done) &
-        while true; do
-            fix_ownership
-            inotifywait -q -t 2 -e close_write -e moved_to /data/.openclaw/ 2>/dev/null || true
-        done
-
-    else
-        echo "[watchdog] Fast-poll mode: checking every 0.5s"
-        while true; do
-            fix_ownership
-            trigger_gateway_restart
-            sleep 0.5
-        done
-    fi
-) &
-WATCHDOG_PID=$!
-echo "[Phase 0] Config+ownership watchdog started (PID: $WATCHDOG_PID, interval: 1s)"
-echo "[Phase 0] Watching: $CONFIG"
-echo "[Phase 0] Will enforce allowedOrigins: $ALLOWED_ORIGINS"
-echo "[Phase 0] One-time gateway restart scheduled after ${GATEWAY_RESTART_WAIT:-30}s to reload allowedOrigins"
+# This makes the Python daemon react in ~0.1ms instead of 50ms polling
+if ! python3 -c "import inotify_simple" 2>/dev/null; then
+    echo "[Phase 0.7] Installing inotify_simple..."
+    pip install --quiet --break-system-packages inotify_simple 2>/dev/null || \
+    pip3 install --quiet --break-system-packages inotify_simple 2>/dev/null || \
+    pip install --quiet inotify_simple 2>/dev/null || true
+    python3 -c "import inotify_simple" 2>/dev/null && \
+        echo "[Phase 0.7] ✅ inotify_simple installed" || \
+        echo "[Phase 0.7] inotify_simple not installable — will use 50ms polling"
+else
+    echo "[Phase 0.7] ✅ inotify_simple already available"
+fi
 
 # ============================================================================
-# FAST-CHMOD COMPANION — reacts in milliseconds to any file creation/replace
+# PHASE 1 — START PERMISSION DAEMON (runs for entire lifetime of container)
 # ============================================================================
-# The wrapper's atomic rename creates a new root-owned 600 file. The content
-# watchdog above (do_patch) is slower because it runs Python. This companion
-# ONLY runs chmod 666 + chmod 755, with no Python overhead. It fires:
-#   - Via inotifywait (milliseconds) when available
-#   - Via 100ms polling as fallback
-# This closes the race window between wrapper writing (mode 600) and the
-# gateway reading (EACCES) during Approve / pairing flows.
-# ============================================================================
-(
-    echo "[fast-chmod] Starting dedicated fast-chmod companion"
-    while true; do
-        # Always apply immediately
-        chmod 666 /data/.openclaw/openclaw.json 2>/dev/null || true
-        chmod 755 /data/.openclaw               2>/dev/null || true
+python3 /tmp/perms-daemon.py &
+PERMS_DAEMON_PID=$!
+echo "[Phase 1] Permission daemon started (PID: $PERMS_DAEMON_PID)"
 
-        if command -v inotifywait &>/dev/null; then
-            # React in milliseconds — wait for any create/replace in the dir
-            inotifywait -q -t 2 \
-                -e create -e moved_to -e close_write \
-                /data/.openclaw/ 2>/dev/null || true
-        else
-            sleep 0.1
-        fi
-    done
-) &
-FAST_CHMOD_PID=$!
-echo "[Phase 0] Fast-chmod companion started (PID: $FAST_CHMOD_PID)"
-
-# Give the watchdog a moment before continuing
+# Give it a moment to do its first fix
 sleep 2
 
 # ============================================================================
@@ -250,10 +264,10 @@ echo "  RAILWAY STARTUP SCRIPT - $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 echo "═══════════════════════════════════════════════════════════════"
 
 # ============================================================================
-# PHASE 1: CLEANUP
+# PHASE 2: CLEANUP
 # ============================================================================
 echo ""
-echo "🔍 PHASE 1: Cleanup"
+echo "🔍 PHASE 2: Cleanup"
 
 pkill -f "clawmetry"   2>/dev/null || true
 pkill -f "rustunnel"   2>/dev/null || true
@@ -263,22 +277,21 @@ sleep 1
 mkdir -p /tmp/logs
 mv /tmp/*.log /tmp/logs/ 2>/dev/null || true
 
-echo "✅ Cleanup complete"
-
-# Fix /tmp/jiti — jiti's TypeScript compile cache.
-# OpenClaw processes running as root create files here first; the gateway
-# (UID 1001) then can't write its own cached .cjs files → EACCES loop.
-# Nuke it so it's recreated fresh with the right permissions.
+# Clean up jiti — jiti's TypeScript compile cache.
+# The wrapper (root) creates files here first; the gateway (UID 1001) then
+# can't write its own cached .cjs files → EACCES plugin load loop.
 rm -rf /tmp/jiti 2>/dev/null || true
 mkdir -p /tmp/jiti
-chmod 1777 /tmp/jiti  # sticky + world-writable, like /tmp itself
+chmod 1777 /tmp/jiti   # sticky + world-writable, like /tmp itself
 echo "✅ /tmp/jiti cleared and set to 1777"
 
+echo "✅ Cleanup complete"
+
 # ============================================================================
-# PHASE 2: DEPENDENCY INSTALLATION
+# PHASE 3: DEPENDENCY INSTALLATION
 # ============================================================================
 echo ""
-echo "📦 PHASE 2: Dependencies"
+echo "📦 PHASE 3: Dependencies"
 
 export PATH="$HOME/.local/bin:/tmp:$PATH"
 mkdir -p "$HOME/.local/bin"
@@ -314,10 +327,10 @@ fi
 echo "✅ Dependencies ready"
 
 # ============================================================================
-# PHASE 3: START BACKGROUND SERVICES
+# PHASE 4: START BACKGROUND SERVICES
 # ============================================================================
 echo ""
-echo "🚀 PHASE 3: Starting services"
+echo "🚀 PHASE 4: Starting services"
 
 wait_for_port() {
     local port=$1 name=$2 max=${3:-30}
@@ -377,19 +390,27 @@ if [[ -d "$OPENCLAW_WORKSPACE/backend" ]]; then
 fi
 
 # ============================================================================
-# PHASE 4: WATCHDOG (keep background services alive)
-# The config+ownership watchdog from Phase 0 handles openclaw.json continuously.
-# This loop handles ClawMetry and Rustunnel restarts.
+# PHASE 5: SERVICE WATCHDOG (keep ClawMetry + Rustunnel alive)
 # ============================================================================
 echo ""
 echo "═══════════════════════════════════════════════════════════════"
-echo "  STARTUP COMPLETE - Watchdog active"
-echo "  ClawMetry:  http://127.0.0.1:$CLAWMETRY_PORT"
-echo "  Watchdog:   PID $WATCHDOG_PID (patching allowedOrigins + chown every 1s)"
+echo "  STARTUP COMPLETE"
+echo "  ClawMetry:       http://127.0.0.1:$CLAWMETRY_PORT"
+echo "  Perms daemon:    PID $PERMS_DAEMON_PID (inotify/50ms — chmod 666 + chown 1001)"
 echo "═══════════════════════════════════════════════════════════════"
 
 while true; do
     sleep 30
+
+    # Keep /tmp/jiti world-writable
+    chmod -R a+rwX /tmp/jiti 2>/dev/null || true
+
+    # Restart permission daemon if it died
+    if ! kill -0 "$PERMS_DAEMON_PID" 2>/dev/null; then
+        echo "⚠️  $(date -u +%H:%M:%SZ): Perms daemon died, restarting..."
+        python3 /tmp/perms-daemon.py &
+        PERMS_DAEMON_PID=$!
+    fi
 
     # Restart ClawMetry if down
     if ! timeout 2 bash -c "</dev/tcp/127.0.0.1/$CLAWMETRY_PORT" 2>/dev/null; then

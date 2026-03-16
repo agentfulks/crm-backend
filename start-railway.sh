@@ -8,72 +8,71 @@
 CONFIG="/data/.openclaw/openclaw.json"
 
 # ============================================================================
-# PHASE 0A: OWNERSHIP WATCHDOG — starts IMMEDIATELY, before anything else
-# The OpenClaw wrapper (root) modifies openclaw.json at startup, making it
-# root-owned. The gateway (UID 1001) then can't read it → EACCES crash loop.
-# This watchdog continuously re-applies chown+chmod every second so the
-# gateway always finds a readable file, no matter what the wrapper does.
+# PHASE 0: CONTINUOUS CONFIG WATCHDOG — starts IMMEDIATELY, before anything else
+#
+# Problem: The OpenClaw wrapper runs "openclaw doctor --fix" on every startup,
+# which atomically REWRITES openclaw.json — clobbering both the file ownership
+# (root takes it back) AND our allowedOrigins patch.
+#
+# A one-shot patch is not enough. We need a tight loop that continuously:
+#   1. Re-applies allowedOrigins (so doctor --fix can't permanently remove it)
+#   2. Re-applies chown+chmod   (so the gateway can always read the file)
+#
+# This loop wins the race because it runs every second. Even if doctor --fix
+# or any other wrapper op rewrites the file, we correct it within 1 second —
+# fast enough for the gateway to succeed on its next read attempt.
 # ============================================================================
+ALLOWED_ORIGINS='["https://marvy.up.railway.app","http://127.0.0.1:18789","http://localhost:18789"]'
+
 (
+    LAST_PATCHED_HASH=""
     while true; do
         if [[ -f "$CONFIG" ]]; then
-            chown 1001:1001 "$CONFIG" 2>/dev/null || true
-            chmod 644 "$CONFIG"      2>/dev/null || true
-        fi
-        # Also fix the parent directory just in case
-        chown 1001:1001 /data/.openclaw 2>/dev/null || true
-        sleep 1
-    done
-) &
-CHOWN_WATCHDOG_PID=$!
-echo "[Phase 0a] Ownership watchdog started (PID: $CHOWN_WATCHDOG_PID, interval: 1s)"
-
-# ============================================================================
-# PHASE 0B: CONFIG PATCH — write allowedOrigins directly into the JSON file
-# The wrapper's own allowedOrigins setter fails (exit=1), so we must patch
-# the file on disk ourselves before the gateway reads it.
-# ============================================================================
-echo "[Phase 0b] Patching $CONFIG ..."
-
-# Give the watchdog a moment to start
-sleep 0.5
-
-if [[ -f "$CONFIG" ]]; then
-    python3 - <<'PYEOF'
+            # Re-apply allowedOrigins patch whenever config changes or is missing it
+            python3 - <<PYEOF 2>/dev/null
 import json, sys
 
 CONFIG = "/data/.openclaw/openclaw.json"
+WANTED_ORIGINS = ["https://marvy.up.railway.app", "http://127.0.0.1:18789", "http://localhost:18789"]
 
 try:
     with open(CONFIG, "r") as f:
         cfg = json.load(f)
-except Exception as e:
-    print(f"[Phase 0b] ERROR reading config: {e}", file=sys.stderr)
-    sys.exit(0)  # Non-fatal — watchdog will fix ownership, gateway will retry
+except Exception:
+    sys.exit(0)  # File unreadable right now; chown below will fix it
 
 cfg.setdefault("gateway", {}).setdefault("controlUi", {})
+current = cfg["gateway"]["controlUi"].get("allowedOrigins")
 
-cfg["gateway"]["controlUi"]["allowedOrigins"] = [
-    "https://marvy.up.railway.app",
-    "http://127.0.0.1:18789",
-    "http://localhost:18789"
-]
-cfg["gateway"]["controlUi"]["allowInsecureAuth"] = True
-
-try:
-    with open(CONFIG, "w") as f:
-        json.dump(cfg, f, indent=2)
-    print(f"[Phase 0b] allowedOrigins patched OK → {cfg['gateway']['controlUi']['allowedOrigins']}")
-except Exception as e:
-    print(f"[Phase 0b] ERROR writing config: {e}", file=sys.stderr)
+if current != WANTED_ORIGINS or not cfg["gateway"]["controlUi"].get("allowInsecureAuth"):
+    cfg["gateway"]["controlUi"]["allowedOrigins"] = WANTED_ORIGINS
+    cfg["gateway"]["controlUi"]["allowInsecureAuth"] = True
+    try:
+        with open(CONFIG, "w") as f:
+            json.dump(cfg, f, indent=2)
+        print(f"[watchdog] allowedOrigins re-patched", flush=True)
+    except Exception as e:
+        print(f"[watchdog] write failed: {e}", flush=True)
 PYEOF
 
-    # Fix ownership immediately after our write (we ran as root → file is root-owned)
-    chown 1001:1001 "$CONFIG" 2>/dev/null && echo "[Phase 0b] chown 1001:1001 applied" || echo "[Phase 0b] chown failed"
-    chmod 644 "$CONFIG" 2>/dev/null || true
-else
-    echo "[Phase 0b] Config not found yet — watchdog will fix ownership once it appears"
-fi
+            # Fix ownership (wrapper runs as root and re-roots the file after rewrites)
+            chown 1001:1001 "$CONFIG" 2>/dev/null || true
+            chmod 644 "$CONFIG"       2>/dev/null || true
+        fi
+
+        # Also keep the parent directory accessible
+        chown 1001:1001 /data/.openclaw 2>/dev/null || true
+
+        sleep 1
+    done
+) &
+WATCHDOG_PID=$!
+echo "[Phase 0] Config+ownership watchdog started (PID: $WATCHDOG_PID, interval: 1s)"
+echo "[Phase 0] Watching: $CONFIG"
+echo "[Phase 0] Will enforce allowedOrigins: $ALLOWED_ORIGINS"
+
+# Give the watchdog a moment to run its first patch before the rest of startup
+sleep 2
 
 # ============================================================================
 # CONFIGURATION
@@ -220,7 +219,7 @@ echo ""
 echo "═══════════════════════════════════════════════════════════════"
 echo "  STARTUP COMPLETE - Watchdog active"
 echo "  ClawMetry:  http://127.0.0.1:$CLAWMETRY_PORT"
-echo "  Chown loop: PID $CHOWN_WATCHDOG_PID (fixing $CONFIG every 1s)"
+echo "  Watchdog:   PID $WATCHDOG_PID (patching allowedOrigins + chown every 1s)"
 echo "═══════════════════════════════════════════════════════════════"
 
 while true; do

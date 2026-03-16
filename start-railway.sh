@@ -176,7 +176,7 @@ export OPENCLAW_WORKSPACE="${OPENCLAW_WORKSPACE:-/data/workspace}"
 pkill -f "clawmetry.*8900" 2>/dev/null || true
 
 # Start ClawMetry in background
-nohup "$CLAW_BIN" --port 8900 --workspace "$OPENCLAW_WORKSPACE" --name "VANTAGE" > /tmp/clawmetry.log 2>&1 &
+nohup "$CLAW_BIN" --port 8900 --workspace "$OPENCLAW_WORKSPACE" --sessions-dir "/data/.openclaw/agents/main/sessions" --name "VANTAGE" > /tmp/clawmetry.log 2>&1 &
 echo "✅ ClawMetry started on port 8900"
 echo "📊 Dashboard: http://localhost:8900 (will be tunneled)"
 

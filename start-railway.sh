@@ -8,61 +8,117 @@
 CONFIG="/data/.openclaw/openclaw.json"
 
 # ============================================================================
-# PHASE 0: CONTINUOUS CONFIG WATCHDOG — starts IMMEDIATELY, before anything else
+# PATCH HELPER — called both synchronously and from the watchdog
+# ============================================================================
+do_patch() {
+    python3 - <<'PYEOF' 2>/dev/null
+import json, sys
+
+CONFIG = "/data/.openclaw/openclaw.json"
+WANTED_ORIGINS = [
+    "https://marvy.up.railway.app",
+    "http://127.0.0.1:18789",
+    "http://localhost:18789",
+    "http://127.0.0.1:8080",
+    "http://localhost:8080",
+]
+
+try:
+    with open(CONFIG, "r") as f:
+        cfg = json.load(f)
+except Exception as e:
+    print(f"[patch] Cannot read config: {e}", flush=True)
+    sys.exit(0)
+
+gw = cfg.setdefault("gateway", {})
+cui = gw.setdefault("controlUi", {})
+
+current_origins = cui.get("allowedOrigins")
+current_insecure = cui.get("allowInsecureAuth")
+
+changed = False
+if current_origins != WANTED_ORIGINS:
+    cui["allowedOrigins"] = WANTED_ORIGINS
+    changed = True
+if current_insecure is not True:
+    cui["allowInsecureAuth"] = True
+    changed = True
+
+if changed:
+    try:
+        with open(CONFIG, "w") as f:
+            json.dump(cfg, f, indent=2)
+        print(f"[patch] Updated → allowedOrigins={WANTED_ORIGINS} allowInsecureAuth=True", flush=True)
+    except Exception as e:
+        print(f"[patch] Write failed: {e}", flush=True)
+else:
+    print(f"[patch] Already correct (origins={current_origins})", flush=True)
+PYEOF
+    chown 1001:1001 "$CONFIG" 2>/dev/null || true
+    chmod 644 "$CONFIG"       2>/dev/null || true
+}
+
+# ============================================================================
+# PHASE -1: SYNCHRONOUS PRE-PATCH (runs immediately, before the watchdog loop)
+# ============================================================================
+# The volume persists between restarts. If openclaw.json already exists,
+# patch it NOW — before entrypoint.sh's doctor has a chance to overwrite it.
+if [[ -f "$CONFIG" ]]; then
+    echo "[Phase -1] Config exists, patching immediately..."
+    do_patch
+    echo "[Phase -1] Pre-patch done"
+else
+    echo "[Phase -1] Config not yet created (first run), watchdog will patch when it appears"
+fi
+
+# Also fix the parent directory
+chown 1001:1001 /data/.openclaw 2>/dev/null || true
+
+# ============================================================================
+# PHASE 0: CONTINUOUS CONFIG+OWNERSHIP WATCHDOG
 #
 # Problem: The OpenClaw wrapper runs "openclaw doctor --fix" on every startup,
 # which atomically REWRITES openclaw.json — clobbering both the file ownership
 # (root takes it back) AND our allowedOrigins patch.
 #
-# A one-shot patch is not enough. We need a tight loop that continuously:
-#   1. Re-applies allowedOrigins (so doctor --fix can't permanently remove it)
-#   2. Re-applies chown+chmod   (so the gateway can always read the file)
-#
-# This loop wins the race because it runs every second. Even if doctor --fix
-# or any other wrapper op rewrites the file, we correct it within 1 second —
-# fast enough for the gateway to succeed on its next read attempt.
+# Additionally, the gateway caches allowedOrigins at startup. So we need TWO
+# mechanisms:
+#   1. Keep the config patched (watchdog)
+#   2. Restart the gateway ONCE after it starts, so it re-reads allowedOrigins
 # ============================================================================
 ALLOWED_ORIGINS='["https://marvy.up.railway.app","http://127.0.0.1:18789","http://localhost:18789"]'
 
 (
-    LAST_PATCHED_HASH=""
+    GATEWAY_RESTARTED=false
+    GATEWAY_RESTART_WAIT=30  # seconds after gateway starts before we trigger restart
+
     while true; do
         if [[ -f "$CONFIG" ]]; then
-            # Re-apply allowedOrigins patch whenever config changes or is missing it
-            python3 - <<PYEOF 2>/dev/null
-import json, sys
+            do_patch
 
-CONFIG = "/data/.openclaw/openclaw.json"
-WANTED_ORIGINS = ["https://marvy.up.railway.app", "http://127.0.0.1:18789", "http://localhost:18789"]
-
-try:
-    with open(CONFIG, "r") as f:
-        cfg = json.load(f)
-except Exception:
-    sys.exit(0)  # File unreadable right now; chown below will fix it
-
-cfg.setdefault("gateway", {}).setdefault("controlUi", {})
-current = cfg["gateway"]["controlUi"].get("allowedOrigins")
-
-if current != WANTED_ORIGINS or not cfg["gateway"]["controlUi"].get("allowInsecureAuth"):
-    cfg["gateway"]["controlUi"]["allowedOrigins"] = WANTED_ORIGINS
-    cfg["gateway"]["controlUi"]["allowInsecureAuth"] = True
-    try:
-        with open(CONFIG, "w") as f:
-            json.dump(cfg, f, indent=2)
-        print(f"[watchdog] allowedOrigins re-patched", flush=True)
-    except Exception as e:
-        print(f"[watchdog] write failed: {e}", flush=True)
-PYEOF
-
-            # Fix ownership (wrapper runs as root and re-roots the file after rewrites)
-            chown 1001:1001 "$CONFIG" 2>/dev/null || true
-            chmod 644 "$CONFIG"       2>/dev/null || true
+            # ----------------------------------------------------------------
+            # ONE-SHOT GATEWAY RESTART
+            # The gateway caches allowedOrigins at startup. After patching,
+            # kill the gateway once so the wrapper restarts it with the patched
+            # config. We do this exactly once, 30 seconds after startup.
+            # ----------------------------------------------------------------
+            if [[ "$GATEWAY_RESTARTED" == "false" ]]; then
+                UPTIME_SECS=$(awk '{print int($1)}' /proc/uptime 2>/dev/null || echo 0)
+                CONTAINER_UPTIME=$((UPTIME_SECS))
+                if [[ $CONTAINER_UPTIME -gt $GATEWAY_RESTART_WAIT ]]; then
+                    GW_PID=$(pgrep -f "entry.js gateway" 2>/dev/null | head -1)
+                    if [[ -n "$GW_PID" ]]; then
+                        echo "[watchdog] Triggering ONE-TIME gateway restart (PID $GW_PID) to reload allowedOrigins..."
+                        kill "$GW_PID" 2>/dev/null || true
+                        GATEWAY_RESTARTED=true
+                        echo "[watchdog] Gateway killed — wrapper should restart it with patched config"
+                    fi
+                fi
+            fi
         fi
 
-        # Also keep the parent directory accessible
+        # Keep parent directory accessible
         chown 1001:1001 /data/.openclaw 2>/dev/null || true
-
         sleep 1
     done
 ) &
@@ -70,8 +126,9 @@ WATCHDOG_PID=$!
 echo "[Phase 0] Config+ownership watchdog started (PID: $WATCHDOG_PID, interval: 1s)"
 echo "[Phase 0] Watching: $CONFIG"
 echo "[Phase 0] Will enforce allowedOrigins: $ALLOWED_ORIGINS"
+echo "[Phase 0] Will trigger one-time gateway restart after ${GATEWAY_RESTART_WAIT:-30}s"
 
-# Give the watchdog a moment to run its first patch before the rest of startup
+# Give the watchdog a moment before continuing
 sleep 2
 
 # ============================================================================
@@ -212,7 +269,7 @@ fi
 
 # ============================================================================
 # PHASE 4: WATCHDOG (keep background services alive)
-# The chown watchdog from Phase 0a handles openclaw.json ownership continuously.
+# The config+ownership watchdog from Phase 0 handles openclaw.json continuously.
 # This loop handles ClawMetry and Rustunnel restarts.
 # ============================================================================
 echo ""

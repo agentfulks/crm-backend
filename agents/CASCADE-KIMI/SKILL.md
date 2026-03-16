@@ -1,7 +1,7 @@
 ---
 name: CASCADE-KIMI
 description: Tier 2 - Deep analysis and complex execution using Kimi k2.5
-model: moonshot/kimi-k2.5
+model: moonshotai/kimi-k2.5
 ---
 
 # CASCADE-KIMI Agent

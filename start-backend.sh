@@ -1,12 +1,19 @@
 #!/bin/bash
-# Install sudo if missing and grant openclaw passwordless superuser on every boot
-if ! command -v sudo &>/dev/null; then
-    apt-get update -qq && apt-get install -y sudo
-fi
-mkdir -p /etc/sudoers.d
-echo "openclaw ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/openclaw
-chmod 440 /etc/sudoers.d/openclaw
-# Fix workspace ownership
-chown -R 1001:1001 /data/workspace
-cd /data/workspace/backend
-exec /data/workspace/backend/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+# Start OpenClaw Gateway and Rustunnel
+
+# Kill existing processes
+pkill -f "openclaw gateway" 2>/dev/null
+killall rustunnel 2>/dev/null
+sleep 2
+
+# Start OpenClaw Gateway
+openclaw gateway > /tmp/gateway.log 2>&1 &
+sleep 5
+
+# Start Rustunnel (update token if needed)
+rustunnel http 18789 --server edge.rustunnel.com:4040 --token 3f61720a-c691-4f22-81a9-889cd31e460c > /tmp/rustunnel.log 2>&1 &
+sleep 3
+
+echo "Gateway PID: $(pgrep -f 'openclaw gateway')"
+echo "Rustunnel PID: $(pgrep -f rustunnel | head -1)"
+echo "Check logs: tail -f /tmp/gateway.log /tmp/rustunnel.log"

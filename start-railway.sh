@@ -8,101 +8,76 @@ set -e
 echo "🚀 Starting Railway services..."
 
 # ============================================================================
-# Helper: patch openclaw config file in-place
+# Grant openclaw user passwordless sudo on every boot
+# Runs as root (Railway wrapper starts us as root in some configs) or is
+# skipped silently if we lack privileges — SSH sessions as root will always
+# have this set regardless.
 # ============================================================================
-_patch_openclaw_config() {
-  local CONFIG="$1"
-  python3 - "$CONFIG" <<'PYEOF'
-import json, sys
-
-path = sys.argv[1]
-try:
-    with open(path, 'r') as f:
-        config = json.load(f)
-except Exception as e:
-    print(f"⚠️  Could not read config: {e}")
-    sys.exit(1)
-
-# Fix model IDs (moonshot-ai -> moonshotai)
-config_str = json.dumps(config)
-config_str = config_str.replace('moonshot-ai/kimi-k2.5', 'moonshotai/kimi-k2.5')
-config_str = config_str.replace('moonshot-ai/kimi-lite', 'moonshotai/kimi-lite')
-config = json.loads(config_str)
-
-# Ensure all required origins are in allowedOrigins
-origins = config.setdefault('gateway', {}).setdefault('controlUi', {}).setdefault('allowedOrigins', [])
-required_origins = [
-    'https://marvy.up.railway.app',
-    'http://127.0.0.1:18789',
-    'http://localhost:18789',
-]
-for origin in required_origins:
-    if origin not in origins:
-        origins.append(origin)
-
-with open(path, 'w') as f:
-    json.dump(config, f, indent=2)
-
-print('✅ openclaw config patched!')
-PYEOF
-}
-
-# Helper: check if config needs patching (missing origins or bad model IDs)
-_config_needs_patch() {
-  local CONFIG="$1"
-  grep -q 'moonshot-ai' "$CONFIG" 2>/dev/null && return 0
-  grep -q 'marvy.up.railway.app' "$CONFIG" 2>/dev/null || return 0
-  return 1
-}
-
-# Helper: kill the openclaw gateway process (the node entry.js process)
-_kill_gateway() {
-  # The gateway runs as: node .../openclaw/dist/entry.js gateway run ...
-  pkill -f "entry.js.*gateway" 2>/dev/null || true
-  pkill -f "dist/entry.js"     2>/dev/null || true
-}
-
-# ============================================================================
-# Patch config NOW (synchronously) if it already exists from a previous deploy
-# This covers the case where the gateway starts before our watcher loop runs
-# ============================================================================
-CONFIG="/data/.openclaw/openclaw.json"
-if [ -f "$CONFIG" ]; then
-  echo "🔧 Patching pre-existing openclaw config synchronously..."
-  _patch_openclaw_config "$CONFIG"
-else
-  echo "ℹ️  No existing openclaw config found — will patch once it appears"
+if command -v apt-get &>/dev/null && ! dpkg -s sudo &>/dev/null 2>&1; then
+    apt-get install -y sudo -qq 2>/dev/null || true
 fi
+mkdir -p /etc/sudoers.d 2>/dev/null || true
+echo "openclaw ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/openclaw 2>/dev/null && \
+    chmod 440 /etc/sudoers.d/openclaw 2>/dev/null && \
+    echo "✅ openclaw granted passwordless sudo" || \
+    echo "ℹ️  Could not write sudoers (not running as root — skipping)"
 
 # ============================================================================
-# Background watcher: re-patch config and restart gateway whenever config
-# is missing our required settings (handles fresh config writes by doctor)
+# Apply openclaw config settings using the official CLI
+# This is more reliable than raw JSON patching
 # ============================================================================
-(
-  CONFIG="/data/.openclaw/openclaw.json"
-  LAST_MTIME=""
+_apply_openclaw_config() {
+  echo "🔧 Applying openclaw config settings..."
 
-  echo "👀 Starting openclaw config watcher..."
-  while true; do
-    sleep 10
-
-    [ -f "$CONFIG" ] || continue
-
-    MTIME=$(stat -c %Y "$CONFIG" 2>/dev/null || stat -f %m "$CONFIG" 2>/dev/null || echo "0")
-
-    # Re-patch whenever the file changes OR is missing our required settings
-    if [ "$MTIME" != "$LAST_MTIME" ] || _config_needs_patch "$CONFIG"; then
-      if _config_needs_patch "$CONFIG"; then
-        echo "🔧 Config needs patching (mtime=$MTIME) — patching and restarting gateway..."
-        _patch_openclaw_config "$CONFIG"
-        sleep 1
-        _kill_gateway
-        echo "🔁 Gateway restarted with patched config"
-      fi
-      LAST_MTIME="$MTIME"
-    fi
+  # Wait for openclaw gateway to be running (it manages the config)
+  local TRIES=0
+  until openclaw config get gateway.controlUi.allowedOrigins >/dev/null 2>&1; do
+    TRIES=$((TRIES + 1))
+    [ $TRIES -ge 30 ] && echo "⚠️  Gave up waiting for openclaw" && return 1
+    sleep 2
   done
-) &
+
+  # Set allowed origins (idempotent — safe to run every boot)
+  openclaw config set gateway.controlUi.allowedOrigins \
+    '["https://marvy.up.railway.app","http://127.0.0.1:18789","http://localhost:18789"]' \
+    2>&1 || echo "⚠️  Could not set allowedOrigins"
+
+  # Fix model IDs if needed (moonshot-ai -> moonshotai)
+  local CONFIG="/data/.openclaw/openclaw.json"
+  if grep -q 'moonshot-ai/kimi' "$CONFIG" 2>/dev/null; then
+    echo "🔧 Fixing model IDs in config..."
+    python3 - "$CONFIG" <<'PYEOF'
+import json, sys
+path = sys.argv[1]
+with open(path, 'r') as f:
+    data = f.read()
+data = data.replace('moonshot-ai/kimi-k2.5', 'moonshotai/kimi-k2.5')
+data = data.replace('moonshot-ai/kimi-lite', 'moonshotai/kimi-lite')
+with open(path, 'w') as f:
+    f.write(data)
+print('✅ Model IDs fixed')
+PYEOF
+  fi
+
+  # Always fix ownership — openclaw config set / python writes may run as root
+  # The gateway (UID 1001 / openclaw user) must be able to read the file
+  chown 1001:1001 "$CONFIG" 2>/dev/null && echo "✅ Config ownership set to openclaw (1001)" || echo "⚠️  Could not chown config"
+
+  # Restart the gateway so the new config takes effect
+  echo "🔁 Restarting openclaw gateway to apply config..."
+  # Find the openclaw-gateway process and send SIGTERM; the wrapper will restart it
+  local GW_PID
+  GW_PID=$(ps aux 2>/dev/null | awk '/openclaw-gateway/ && !/grep/{print $2}' | head -1)
+  if [ -n "$GW_PID" ]; then
+    kill -TERM "$GW_PID" 2>/dev/null && echo "✅ Gateway (PID $GW_PID) restarted" || echo "⚠️  Could not kill gateway"
+  else
+    echo "ℹ️  Gateway process not found, skipping restart"
+  fi
+}
+
+# Run config fix in the background so it doesn't block service startup
+# Runs once after gateway is up, then exits
+( sleep 5 && _apply_openclaw_config && echo "✅ openclaw config applied" ) &
 
 # ============================================================================
 # Install ClawMetry (if not present)

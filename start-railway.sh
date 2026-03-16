@@ -1,23 +1,42 @@
 #!/bin/bash
 # ============================================================================
 # RAILWAY STARTUP SCRIPT
-# Runs alongside /app/entrypoint.sh via:
+# Runs alongside /app/entrypoint.sh via Railway start command:
 #   bash /data/workspace/start-railway.sh & exec /app/entrypoint.sh
-#
-# The entrypoint takes ~5s before starting the gateway (runs doctor --fix first).
-# Phase 0 exploits this window to patch the config before the gateway reads it.
 # ============================================================================
 
-# NOTE: No set -euo pipefail here — we want failures to be non-fatal
-
-# ============================================================================
-# PHASE 0: CONFIG PATCH (synchronous — must finish before gateway starts)
-# The OpenClaw wrapper runs `openclaw doctor --fix` before starting the gateway,
-# giving us ~5 seconds to patch the config file on disk.
-# ============================================================================
 CONFIG="/data/.openclaw/openclaw.json"
 
-echo "[Phase 0] Patching OpenClaw config..."
+# ============================================================================
+# PHASE 0A: OWNERSHIP WATCHDOG — starts IMMEDIATELY, before anything else
+# The OpenClaw wrapper (root) modifies openclaw.json at startup, making it
+# root-owned. The gateway (UID 1001) then can't read it → EACCES crash loop.
+# This watchdog continuously re-applies chown+chmod every second so the
+# gateway always finds a readable file, no matter what the wrapper does.
+# ============================================================================
+(
+    while true; do
+        if [[ -f "$CONFIG" ]]; then
+            chown 1001:1001 "$CONFIG" 2>/dev/null || true
+            chmod 644 "$CONFIG"      2>/dev/null || true
+        fi
+        # Also fix the parent directory just in case
+        chown 1001:1001 /data/.openclaw 2>/dev/null || true
+        sleep 1
+    done
+) &
+CHOWN_WATCHDOG_PID=$!
+echo "[Phase 0a] Ownership watchdog started (PID: $CHOWN_WATCHDOG_PID, interval: 1s)"
+
+# ============================================================================
+# PHASE 0B: CONFIG PATCH — write allowedOrigins directly into the JSON file
+# The wrapper's own allowedOrigins setter fails (exit=1), so we must patch
+# the file on disk ourselves before the gateway reads it.
+# ============================================================================
+echo "[Phase 0b] Patching $CONFIG ..."
+
+# Give the watchdog a moment to start
+sleep 0.5
 
 if [[ -f "$CONFIG" ]]; then
     python3 - <<'PYEOF'
@@ -29,36 +48,31 @@ try:
     with open(CONFIG, "r") as f:
         cfg = json.load(f)
 except Exception as e:
-    print(f"[Phase 0] ERROR reading config: {e}", file=sys.stderr)
-    sys.exit(1)
+    print(f"[Phase 0b] ERROR reading config: {e}", file=sys.stderr)
+    sys.exit(0)  # Non-fatal — watchdog will fix ownership, gateway will retry
 
-# Ensure nested structure exists
 cfg.setdefault("gateway", {}).setdefault("controlUi", {})
 
-# Set allowed origins (all three variants needed)
 cfg["gateway"]["controlUi"]["allowedOrigins"] = [
     "https://marvy.up.railway.app",
     "http://127.0.0.1:18789",
     "http://localhost:18789"
 ]
-
-# Keep insecure auth enabled (required for tunnel access)
 cfg["gateway"]["controlUi"]["allowInsecureAuth"] = True
 
 try:
     with open(CONFIG, "w") as f:
         json.dump(cfg, f, indent=2)
-    print("[Phase 0] Config patched successfully")
-    print(f"[Phase 0] allowedOrigins = {cfg['gateway']['controlUi']['allowedOrigins']}")
+    print(f"[Phase 0b] allowedOrigins patched OK → {cfg['gateway']['controlUi']['allowedOrigins']}")
 except Exception as e:
-    print(f"[Phase 0] ERROR writing config: {e}", file=sys.stderr)
-    sys.exit(1)
+    print(f"[Phase 0b] ERROR writing config: {e}", file=sys.stderr)
 PYEOF
 
-    # Fix ownership immediately — gateway runs as UID 1001 and can't read root-owned files
-    chown 1001:1001 "$CONFIG" 2>/dev/null && echo "[Phase 0] chown 1001:1001 applied" || echo "[Phase 0] chown failed (non-fatal)"
+    # Fix ownership immediately after our write (we ran as root → file is root-owned)
+    chown 1001:1001 "$CONFIG" 2>/dev/null && echo "[Phase 0b] chown 1001:1001 applied" || echo "[Phase 0b] chown failed"
+    chmod 644 "$CONFIG" 2>/dev/null || true
 else
-    echo "[Phase 0] Config file not found at $CONFIG — will apply via openclaw config set after gateway starts"
+    echo "[Phase 0b] Config not found yet — watchdog will fix ownership once it appears"
 fi
 
 # ============================================================================
@@ -85,9 +99,9 @@ echo "════════════════════════�
 echo ""
 echo "🔍 PHASE 1: Cleanup"
 
-pkill -f "clawmetry" 2>/dev/null || true
-pkill -f "rustunnel" 2>/dev/null || true
-pkill -f "uvicorn" 2>/dev/null || true
+pkill -f "clawmetry"   2>/dev/null || true
+pkill -f "rustunnel"   2>/dev/null || true
+pkill -f "uvicorn"     2>/dev/null || true
 sleep 1
 
 mkdir -p /tmp/logs
@@ -135,30 +149,10 @@ fi
 echo "✅ Dependencies ready"
 
 # ============================================================================
-# PHASE 3: POST-GATEWAY CONFIG (fallback for first-boot when config didn't exist)
-# ============================================================================
-(
-    sleep 8  # Wait for gateway to fully start
-    
-    # Only needed if Phase 0 skipped (config didn't exist at startup)
-    if [[ ! -f "$CONFIG" ]]; then
-        echo "[Phase 3] Applying config via openclaw config set (first-boot fallback)..."
-        openclaw config set gateway.controlUi.allowedOrigins \
-            '["https://marvy.up.railway.app","http://127.0.0.1:18789","http://localhost:18789"]' 2>/dev/null || true
-        chown 1001:1001 "$CONFIG" 2>/dev/null || true
-        
-        # Restart gateway so it picks up the new config
-        echo "[Phase 3] Killing gateway to force config reload..."
-        pkill -f "dist/entry.js gateway run" 2>/dev/null || true
-        echo "[Phase 3] Gateway will be restarted by the OpenClaw wrapper"
-    fi
-) &
-
-# ============================================================================
-# PHASE 4: START BACKGROUND SERVICES
+# PHASE 3: START BACKGROUND SERVICES
 # ============================================================================
 echo ""
-echo "🚀 PHASE 4: Starting background services"
+echo "🚀 PHASE 3: Starting services"
 
 wait_for_port() {
     local port=$1 name=$2 max=${3:-30}
@@ -218,14 +212,15 @@ if [[ -d "$OPENCLAW_WORKSPACE/backend" ]]; then
 fi
 
 # ============================================================================
-# PHASE 5: WATCHDOG (keep background services alive)
-# NOTE: The OpenClaw gateway is managed by /app/entrypoint.sh — don't touch it.
+# PHASE 4: WATCHDOG (keep background services alive)
+# The chown watchdog from Phase 0a handles openclaw.json ownership continuously.
+# This loop handles ClawMetry and Rustunnel restarts.
 # ============================================================================
 echo ""
 echo "═══════════════════════════════════════════════════════════════"
 echo "  STARTUP COMPLETE - Watchdog active"
-echo "  ClawMetry: http://127.0.0.1:$CLAWMETRY_PORT"
-echo "  Tunnel:    $TUNNEL_URL"
+echo "  ClawMetry:  http://127.0.0.1:$CLAWMETRY_PORT"
+echo "  Chown loop: PID $CHOWN_WATCHDOG_PID (fixing $CONFIG every 1s)"
 echo "═══════════════════════════════════════════════════════════════"
 
 while true; do

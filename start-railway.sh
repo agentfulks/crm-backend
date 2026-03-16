@@ -54,8 +54,14 @@ if changed:
 else:
     print(f"[patch] Already correct (origins={current_origins})", flush=True)
 PYEOF
+    # chmod 666 = world read+write.
+    # Critical: if chown fails (some environments restrict it), UID 1001 still
+    # gets rw access as "others" via the 6 in the last octet. This covers:
+    #   - The gateway reading the config  (needs r)
+    #   - The gateway writing an Approve/pairing update (needs w)
     chown 1001:1001 "$CONFIG" 2>/dev/null || true
-    chmod 644 "$CONFIG"       2>/dev/null || true
+    chmod 666 "$CONFIG"       2>/dev/null || true
+    chmod 755 /data/.openclaw 2>/dev/null || true
 }
 
 # ============================================================================
@@ -134,13 +140,14 @@ ALLOWED_ORIGINS='["https://marvy.up.railway.app","http://127.0.0.1:18789","http:
     fix_ownership() {
         if [[ -f "$CONFIG" ]]; then
             do_patch
+            # do_patch already does chown+chmod 666, but belt-and-suspenders:
             chown 1001:1001 "$CONFIG" 2>/dev/null || true
-            chmod 644 "$CONFIG"       2>/dev/null || true
-            # Re-apply ACL on the file in case it was recreated without inheriting
+            chmod 666 "$CONFIG"       2>/dev/null || true
             setfacl -m u:1001:rw "$CONFIG" 2>/dev/null || true
         fi
         chown 1001:1001 /data/.openclaw 2>/dev/null || true
-        chmod -R a+rwX /tmp/jiti 2>/dev/null || true
+        chmod 755 /data/.openclaw      2>/dev/null || true
+        chmod -R a+rwX /tmp/jiti       2>/dev/null || true
     }
 
     trigger_gateway_restart() {
@@ -189,6 +196,37 @@ echo "[Phase 0] Config+ownership watchdog started (PID: $WATCHDOG_PID, interval:
 echo "[Phase 0] Watching: $CONFIG"
 echo "[Phase 0] Will enforce allowedOrigins: $ALLOWED_ORIGINS"
 echo "[Phase 0] One-time gateway restart scheduled after ${GATEWAY_RESTART_WAIT:-30}s to reload allowedOrigins"
+
+# ============================================================================
+# FAST-CHMOD COMPANION — reacts in milliseconds to any file creation/replace
+# ============================================================================
+# The wrapper's atomic rename creates a new root-owned 600 file. The content
+# watchdog above (do_patch) is slower because it runs Python. This companion
+# ONLY runs chmod 666 + chmod 755, with no Python overhead. It fires:
+#   - Via inotifywait (milliseconds) when available
+#   - Via 100ms polling as fallback
+# This closes the race window between wrapper writing (mode 600) and the
+# gateway reading (EACCES) during Approve / pairing flows.
+# ============================================================================
+(
+    echo "[fast-chmod] Starting dedicated fast-chmod companion"
+    while true; do
+        # Always apply immediately
+        chmod 666 /data/.openclaw/openclaw.json 2>/dev/null || true
+        chmod 755 /data/.openclaw               2>/dev/null || true
+
+        if command -v inotifywait &>/dev/null; then
+            # React in milliseconds — wait for any create/replace in the dir
+            inotifywait -q -t 2 \
+                -e create -e moved_to -e close_write \
+                /data/.openclaw/ 2>/dev/null || true
+        else
+            sleep 0.1
+        fi
+    done
+) &
+FAST_CHMOD_PID=$!
+echo "[Phase 0] Fast-chmod companion started (PID: $FAST_CHMOD_PID)"
 
 # Give the watchdog a moment before continuing
 sleep 2

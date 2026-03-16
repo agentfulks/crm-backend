@@ -42,21 +42,15 @@ _apply_openclaw_config() {
     '["https://marvy.up.railway.app","http://127.0.0.1:18789","http://localhost:18789"]' \
     2>&1 || echo "⚠️  Could not set allowedOrigins"
 
-  # Fix model IDs if needed (moonshot-ai -> moonshotai)
+  # Fix model IDs if needed
   local CONFIG="/data/.openclaw/openclaw.json"
-  if grep -q 'moonshot-ai/kimi' "$CONFIG" 2>/dev/null; then
+  if grep -qE 'moonshot-ai/kimi|gemini-2\.0-flash' "$CONFIG" 2>/dev/null; then
     echo "🔧 Fixing model IDs in config..."
-    python3 - "$CONFIG" <<'PYEOF'
-import json, sys
-path = sys.argv[1]
-with open(path, 'r') as f:
-    data = f.read()
-data = data.replace('moonshot-ai/kimi-k2.5', 'moonshotai/kimi-k2.5')
-data = data.replace('moonshot-ai/kimi-lite', 'moonshotai/kimi-lite')
-with open(path, 'w') as f:
-    f.write(data)
-print('✅ Model IDs fixed')
-PYEOF
+    sed -i \
+      -e 's|moonshot-ai/kimi-k2\.5|moonshotai/kimi-k2.5|g' \
+      -e 's|moonshot-ai/kimi-lite|moonshotai/kimi-lite|g' \
+      -e 's|google/gemini-2\.0-flash|google/gemini-3-flash-preview|g' \
+      "$CONFIG" 2>/dev/null && echo "✅ Model IDs fixed" || echo "⚠️  sed failed"
   fi
 
   # Always fix ownership — openclaw config set / python writes may run as root

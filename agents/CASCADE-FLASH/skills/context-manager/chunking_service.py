@@ -188,8 +188,7 @@ class OpenClawContextChunker:
         for tier, config in self.TIER_PROFILES.items():
             if config.strategy == "recursive":
                 self._chunkers[tier] = RecursiveChunker(
-                    chunk_size=config.chunk_size,
-                    chunk_overlap=config.chunk_overlap
+                    chunk_size=config.chunk_size
                 )
             elif config.strategy == "semantic":
                 self._chunkers[tier] = SemanticChunker(

@@ -58,6 +58,7 @@ class ContextCompactionHook:
         
         # Create metadata for chunks
         metadata = ContextMetadata(
+            chunk_id="demo-chunk",
             session_id=session_id,
             priority=PriorityLevel.HIGH,
             context_type=ContextType.COMPACTION_SUMMARY,
@@ -101,6 +102,7 @@ class ContextCompactionHook:
         
         # Memory gets warm-tier treatment
         metadata = ContextMetadata(
+            chunk_id="demo-chunk",
             session_id=session_id,
             priority=PriorityLevel.NORMAL,
             context_type=ContextType.MEMORY_REF,

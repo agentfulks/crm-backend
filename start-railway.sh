@@ -243,6 +243,17 @@ fi
 # ============================================================================
 # Start other services (if needed)
 # ============================================================================
+# Start OpenClaw Gateway (Port 18789)
+# ============================================================================
+echo "🦞 Initializing OpenClaw Gateway..."
+ps aux | grep -i "dist/entry.js gateway run" | grep -v grep | awk '{print $2}' | xargs kill -9 2>/dev/null || true
+nohup node /usr/local/lib/node_modules/openclaw/dist/entry.js gateway run --port 18789 --bind loopback > /tmp/gateway.log 2>&1 &
+sleep 5
+
+# Auto-trust local connections for child agents
+echo "🔓 Authorizing local sub-agent spawning..."
+node /usr/local/lib/node_modules/openclaw/dist/entry.js gateway trust-local --all --force || true
+
 echo ""
 echo "🔧 Checking other services..."
 

@@ -71,8 +71,47 @@ else
     echo "[Phase -1] Config not yet created (first run), watchdog will patch when it appears"
 fi
 
-# Also fix the parent directory
+# Fix parent directory ownership
 chown 1001:1001 /data/.openclaw 2>/dev/null || true
+chmod 755 /data/.openclaw 2>/dev/null || true
+
+# ============================================================================
+# PHASE -0.5: SET DEFAULT ACL — THE PERMANENT FIX
+# ============================================================================
+# The wrapper does an atomic write (write to temp → rename into place).
+# rename() replaces the inode, so the new file inherits the temp file's
+# ownership (root:root, mode 600). A chown-every-second watchdog always
+# loses this race some of the time.
+#
+# setfacl default ACLs are inherited at file CREATION time, before any
+# process can open the file. If supported, this is a one-time permanent fix:
+# any file created in /data/.openclaw/ is automatically UID-1001-readable.
+#
+# Fallback: install inotify-tools and use inotifywait for millisecond-level
+# reaction instead of 1-second polling.
+# ============================================================================
+ACL_WORKING=false
+if command -v setfacl &>/dev/null; then
+    # Grant UID 1001 rw on existing file and directory
+    setfacl -m u:1001:rw /data/.openclaw 2>/dev/null || true
+    [[ -f "$CONFIG" ]] && setfacl -m u:1001:rw "$CONFIG" 2>/dev/null || true
+
+    # Set DEFAULT ACL — inherited by ALL new files created in the directory
+    if setfacl -d -m u:1001:rw /data/.openclaw 2>/dev/null; then
+        ACL_WORKING=true
+        echo "[Phase -0.5] Default ACL set on /data/.openclaw/ — UID 1001 auto-gets rw on ALL new files (permanent fix)"
+    else
+        echo "[Phase -0.5] setfacl available but filesystem doesn't support ACLs — falling back to inotifywait"
+    fi
+else
+    echo "[Phase -0.5] setfacl not available — will use inotifywait watchdog"
+fi
+
+# Install inotify-tools if we need the fast watchdog
+if [[ "$ACL_WORKING" != "true" ]] && ! command -v inotifywait &>/dev/null; then
+    echo "[Phase -0.5] Installing inotify-tools for fast permission watchdog..."
+    apt-get install -y -q inotify-tools 2>/dev/null || true
+fi
 
 # ============================================================================
 # PHASE 0: CONTINUOUS CONFIG+OWNERSHIP WATCHDOG
@@ -90,47 +129,66 @@ ALLOWED_ORIGINS='["https://marvy.up.railway.app","http://127.0.0.1:18789","http:
 
 (
     GATEWAY_RESTARTED=false
-    GATEWAY_RESTART_WAIT=30  # seconds after gateway starts before we trigger restart
+    GATEWAY_RESTART_WAIT=30
 
-    while true; do
+    fix_ownership() {
         if [[ -f "$CONFIG" ]]; then
             do_patch
+            chown 1001:1001 "$CONFIG" 2>/dev/null || true
+            chmod 644 "$CONFIG"       2>/dev/null || true
+            # Re-apply ACL on the file in case it was recreated without inheriting
+            setfacl -m u:1001:rw "$CONFIG" 2>/dev/null || true
+        fi
+        chown 1001:1001 /data/.openclaw 2>/dev/null || true
+        chmod -R a+rwX /tmp/jiti 2>/dev/null || true
+    }
 
-            # ----------------------------------------------------------------
-            # ONE-SHOT GATEWAY RESTART
-            # The gateway caches allowedOrigins at startup. After patching,
-            # kill the gateway once so the wrapper restarts it with the patched
-            # config. We do this exactly once, 30 seconds after startup.
-            # ----------------------------------------------------------------
-            if [[ "$GATEWAY_RESTARTED" == "false" ]]; then
-                UPTIME_SECS=$(awk '{print int($1)}' /proc/uptime 2>/dev/null || echo 0)
-                CONTAINER_UPTIME=$((UPTIME_SECS))
-                if [[ $CONTAINER_UPTIME -gt $GATEWAY_RESTART_WAIT ]]; then
-                    GW_PID=$(pgrep -f "entry.js gateway" 2>/dev/null | head -1)
-                    if [[ -n "$GW_PID" ]]; then
-                        echo "[watchdog] Triggering ONE-TIME gateway restart (PID $GW_PID) to reload allowedOrigins..."
-                        kill "$GW_PID" 2>/dev/null || true
-                        GATEWAY_RESTARTED=true
-                        echo "[watchdog] Gateway killed — wrapper should restart it with patched config"
-                    fi
+    trigger_gateway_restart() {
+        # ONE-TIME restart ~30s after startup so the gateway re-reads
+        # allowedOrigins from the already-patched config.
+        if [[ "$GATEWAY_RESTARTED" == "false" ]]; then
+            UPTIME_SECS=$(awk '{print int($1)}' /proc/uptime 2>/dev/null || echo 0)
+            if [[ $UPTIME_SECS -gt $GATEWAY_RESTART_WAIT ]]; then
+                GW_PID=$(pgrep -f "entry.js gateway" 2>/dev/null | head -1)
+                if [[ -n "$GW_PID" ]]; then
+                    echo "[watchdog] ONE-TIME gateway restart (PID $GW_PID) — forces reload of allowedOrigins"
+                    kill "$GW_PID" 2>/dev/null || true
+                    GATEWAY_RESTARTED=true
                 fi
             fi
         fi
+    }
 
-        # Keep parent directory accessible
-        chown 1001:1001 /data/.openclaw 2>/dev/null || true
+    if [[ "$ACL_WORKING" == "true" ]]; then
+        echo "[watchdog] ACL mode: polling every 5s for content patches + one-time restart"
+        while true; do
+            fix_ownership
+            trigger_gateway_restart
+            sleep 5
+        done
 
-        # Keep /tmp/jiti world-writable so jiti cache writes never EACCES
-        chmod -R a+rwX /tmp/jiti 2>/dev/null || true
+    elif command -v inotifywait &>/dev/null; then
+        echo "[watchdog] inotifywait mode: reacting instantly on file events"
+        (while true; do trigger_gateway_restart; sleep 5; done) &
+        while true; do
+            fix_ownership
+            inotifywait -q -t 2 -e close_write -e moved_to /data/.openclaw/ 2>/dev/null || true
+        done
 
-        sleep 1
-    done
+    else
+        echo "[watchdog] Fast-poll mode: checking every 0.5s"
+        while true; do
+            fix_ownership
+            trigger_gateway_restart
+            sleep 0.5
+        done
+    fi
 ) &
 WATCHDOG_PID=$!
 echo "[Phase 0] Config+ownership watchdog started (PID: $WATCHDOG_PID, interval: 1s)"
 echo "[Phase 0] Watching: $CONFIG"
 echo "[Phase 0] Will enforce allowedOrigins: $ALLOWED_ORIGINS"
-echo "[Phase 0] Will trigger one-time gateway restart after ${GATEWAY_RESTART_WAIT:-30}s"
+echo "[Phase 0] One-time gateway restart scheduled after ${GATEWAY_RESTART_WAIT:-30}s to reload allowedOrigins"
 
 # Give the watchdog a moment before continuing
 sleep 2

@@ -8,21 +8,20 @@ set -e
 echo "🚀 Starting Railway services..."
 
 # ============================================================================
-# Patch openclaw config on every boot (runs in background, waits for openclaw
-# to create its config file, then fixes model IDs and allowedOrigins)
+# Helper: patch openclaw config file in-place
 # ============================================================================
-(
-  CONFIG="/data/.openclaw/openclaw.json"
-  echo "⏳ Waiting for openclaw config to be ready..."
-  for i in $(seq 1 90); do
-    if [ -f "$CONFIG" ]; then
-      echo "🔧 Patching openclaw config..."
-      python3 - "$CONFIG" <<'PYEOF'
+_patch_openclaw_config() {
+  local CONFIG="$1"
+  python3 - "$CONFIG" <<'PYEOF'
 import json, sys
 
 path = sys.argv[1]
-with open(path, 'r') as f:
-    config = json.load(f)
+try:
+    with open(path, 'r') as f:
+        config = json.load(f)
+except Exception as e:
+    print(f"⚠️  Could not read config: {e}")
+    sys.exit(1)
 
 # Fix model IDs (moonshot-ai -> moonshotai)
 config_str = json.dumps(config)
@@ -44,19 +43,65 @@ for origin in required_origins:
 with open(path, 'w') as f:
     json.dump(config, f, indent=2)
 
-print('✅ openclaw config patched successfully!')
+print('✅ openclaw config patched!')
 PYEOF
-      # Restart gateway so it picks up the new config
-      sleep 2
-      pkill -f openclaw-gateway 2>/dev/null || true
-      echo "✅ openclaw-gateway restarted with patched config"
-      break
+}
+
+# Helper: check if config needs patching (missing origins or bad model IDs)
+_config_needs_patch() {
+  local CONFIG="$1"
+  grep -q 'moonshot-ai' "$CONFIG" 2>/dev/null && return 0
+  grep -q 'marvy.up.railway.app' "$CONFIG" 2>/dev/null || return 0
+  return 1
+}
+
+# Helper: kill the openclaw gateway process (the node entry.js process)
+_kill_gateway() {
+  # The gateway runs as: node .../openclaw/dist/entry.js gateway run ...
+  pkill -f "entry.js.*gateway" 2>/dev/null || true
+  pkill -f "dist/entry.js"     2>/dev/null || true
+}
+
+# ============================================================================
+# Patch config NOW (synchronously) if it already exists from a previous deploy
+# This covers the case where the gateway starts before our watcher loop runs
+# ============================================================================
+CONFIG="/data/.openclaw/openclaw.json"
+if [ -f "$CONFIG" ]; then
+  echo "🔧 Patching pre-existing openclaw config synchronously..."
+  _patch_openclaw_config "$CONFIG"
+else
+  echo "ℹ️  No existing openclaw config found — will patch once it appears"
+fi
+
+# ============================================================================
+# Background watcher: re-patch config and restart gateway whenever config
+# is missing our required settings (handles fresh config writes by doctor)
+# ============================================================================
+(
+  CONFIG="/data/.openclaw/openclaw.json"
+  LAST_MTIME=""
+
+  echo "👀 Starting openclaw config watcher..."
+  while true; do
+    sleep 10
+
+    [ -f "$CONFIG" ] || continue
+
+    MTIME=$(stat -c %Y "$CONFIG" 2>/dev/null || stat -f %m "$CONFIG" 2>/dev/null || echo "0")
+
+    # Re-patch whenever the file changes OR is missing our required settings
+    if [ "$MTIME" != "$LAST_MTIME" ] || _config_needs_patch "$CONFIG"; then
+      if _config_needs_patch "$CONFIG"; then
+        echo "🔧 Config needs patching (mtime=$MTIME) — patching and restarting gateway..."
+        _patch_openclaw_config "$CONFIG"
+        sleep 1
+        _kill_gateway
+        echo "🔁 Gateway restarted with patched config"
+      fi
+      LAST_MTIME="$MTIME"
     fi
-    sleep 2
   done
-  if [ ! -f "$CONFIG" ]; then
-    echo "⚠️ openclaw config never appeared — skipping patch"
-  fi
 ) &
 
 # ============================================================================

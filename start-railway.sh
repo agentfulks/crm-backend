@@ -76,18 +76,18 @@ _apply_openclaw_config() {
 # ============================================================================
 # Install ClawMetry (if not present)
 # ============================================================================
+export PATH="$HOME/.local/bin:$PATH"
+
 if ! command -v clawmetry &> /dev/null; then
-    echo "📦 Installing ClawMetry..."
-    curl -fsSL https://clawmetry.com/install.sh | bash
+    echo "📦 Installing ClawMetry (portable mode)..."
     
-    # Add to PATH if installed to local bin
-    if [ -f "$HOME/.local/bin/clawmetry" ]; then
-        export PATH="$HOME/.local/bin:$PATH"
+    # Try non-sudo install if sudo fails
+    if ! curl -fsSL https://clawmetry.com/install.sh | bash; then
+        echo "⚠️  Global install failed. Trying local pip install..."
+        python3 -m pip install --user clawmetry || pip3 install --user clawmetry
     fi
     
     echo "✅ ClawMetry installed"
-else
-    echo "✅ ClawMetry already installed"
 fi
 
 # Ensure clawmetry is in PATH

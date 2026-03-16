@@ -221,6 +221,21 @@ else
 fi
 
 # ============================================================================
+# Start Python Backend (Port 8000)
+# ============================================================================
+echo ""
+echo "🐍 Starting Python Backend..."
+
+if [ -d "/data/workspace/backend" ]; then
+    cd /data/workspace/backend
+    # Try to start backend using uvicorn
+    nohup python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000 > /tmp/py-backend.log 2>&1 &
+    echo "✅ Python backend started on port 8000"
+else
+    echo "⚠️  Backend directory not found, skipping..."
+fi
+
+# ============================================================================
 # Start other services (if needed)
 # ============================================================================
 echo ""

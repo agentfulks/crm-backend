@@ -1,0 +1,14 @@
+# Context Manager Skill Requirements
+# Install with: pip install -r requirements.txt
+
+# Core chonkie with semantic chunking
+chonkie[semantic,code,catsu]>=0.5.0
+
+# Vector database support
+sqlite-vec>=0.1.0
+
+# Optional: For async operations
+aiofiles>=23.0.0
+
+# Optional: For local embedding model downloads
+huggingface-hub>=0.20.0

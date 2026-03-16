@@ -1,0 +1,243 @@
+{
+  // ============================================================================
+  // OPENCLAW CONTEXT MANAGEMENT - HIGH PERFORMANCE / 32GB RAM CONFIGURATION
+  // ============================================================================
+  // This configuration maximizes token efficiency while maintaining fast retrieval
+  // using a three-tier context architecture with chonkie semantic chunking.
+  //
+  // TIER ARCHITECTURE:
+  // - HOT: 8K tokens in-RAM (active conversation, 512 token chunks)
+  // - WARM: 32K tokens in vector DB (recent history, 1024 token chunks)
+  // - COLD: Unlimited disk archive (compressed, 2048 token chunks)
+  //
+  // RAM ALLOCATION (32GB):
+  // - OS + Gateway: 4GB (12.5%)
+  // - Model Cache: 8GB (25%)
+  // - Vector Index: 6GB (18.75%)
+  // - Hot Context: 4GB (12.5%)
+  // - Warm Cache: 8GB (25%)
+  // - Overhead: 2GB (6.25%)
+  // ============================================================================
+
+  "agents": {
+    "defaults": {
+      // Workspace configuration
+      "workspace": "~/.openclaw/workspace",
+      
+      // Model for primary conversations
+      "model": "openrouter/anthropic/claude-sonnet-4-5",
+      
+      // ==========================================================================
+      // COMPACTION CONFIGURATION
+      // ==========================================================================
+      "compaction": {
+        // Dedicated model for compaction summaries (more capable than main)
+        "model": "openrouter/anthropic/claude-sonnet-4-5",
+        
+        // Reserve floor: trigger compaction when remaining tokens < this value
+        // INCREASED from default 20,000 to 40,000 for earlier, gentler compaction
+        "reserveTokensFloor": 40000,
+        
+        // Identifier policy for preserving opaque IDs during compaction
+        "identifierPolicy": "strict",
+        
+        // Memory flush: silent turn before compaction to persist durable memories
+        "memoryFlush": {
+          "enabled": true,
+          // Trigger flush when tokens > (contextWindow - reserveTokensFloor - softThreshold)
+          "softThresholdTokens": 8000,
+          "systemPrompt": "Session nearing compaction threshold. Extract and store any decisions, preferences, or facts that should persist beyond this conversation. Write to memory/YYYY-MM-DD.md or MEMORY.md as appropriate.",
+          "prompt": "Review the session context and write any lasting notes to memory files. Reply with NO_REPLY if nothing needs to be stored."
+        }
+      },
+
+      // ==========================================================================
+      // MEMORY SEARCH CONFIGURATION (Vector Indexing)
+      // ==========================================================================
+      "memorySearch": {
+        // Provider priority: local > ollama > openai
+        // For 32GB RAM, local embeddings are recommended
+        "provider": "local",
+        
+        "local": {
+          // Path to local GGUF embedding model
+          // Download: huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+          "modelPath": "~/.openclaw/models/all-MiniLM-L6-v2.gguf",
+          // GPU layers for acceleration (0 = CPU only)
+          "gpuLayers": 0,
+          // Context size for embedding model
+          "contextSize": 512,
+          // Batch size for efficient processing
+          "batchSize": 32
+        },
+        
+        // Alternative: Ollama for local embeddings
+        // "provider": "ollama",
+        // "ollama": {
+        //   "baseUrl": "http://localhost:11434",
+        //   "model": "nomic-embed-text"
+        // },
+        
+        // Maximum results from memory search
+        "maxResults": 10,
+        
+        // Similarity threshold for memory retrieval (0.0 - 1.0)
+        "similarityThreshold": 0.75
+      },
+
+      // ==========================================================================
+      // HEARTBEAT CONFIGURATION
+      // ==========================================================================
+      "heartbeat": {
+        // Check every 30 minutes for background tasks
+        "every": "30m",
+        // Target channel for heartbeat messages
+        "target": "last",
+        // Tasks to perform during heartbeat
+        "tasks": [
+          "review_memory_files",
+          "compact_old_sessions",
+          "cleanup_cold_tier"
+        ]
+      },
+
+      // ==========================================================================
+      // THINKING LEVEL (Token Efficiency)
+      // ==========================================================================
+      "thinking": {
+        // Use "low" for faster responses, "high" for complex reasoning
+        // "low" = ~10% token overhead, "high" = ~30% token overhead
+        "level": "low"
+      },
+
+      // ==========================================================================
+      // CONTEXT PRUNING (Tool Results)
+      // ==========================================================================
+      // Pruning happens per-request, in-memory only
+      // Compaction happens across sessions, persists to JSONL
+      "pruning": {
+        // Maximum tool result size before truncation
+        "maxToolResultTokens": 4000,
+        // Truncation marker for large results
+        "truncationMarker": "[truncated: output exceeded token limit]"
+      }
+    }
+  },
+
+  // ============================================================================
+  // CHANNEL CONFIGURATION
+  // ============================================================================
+  "channels": {
+    "defaults": {
+      "groupPolicy": "allowlist",
+      "heartbeat": {
+        "showOk": false,
+        "showAlerts": true,
+        "useIndicator": true
+      }
+    },
+    
+    "discord": {
+      "enabled": true,
+      // Per-channel model overrides for different context needs
+      "modelByChannel": {
+        // Coding channel: larger context window
+        "123456789012345678": "openrouter/anthropic/claude-opus-4-6",
+        // General chat: standard context
+        "123456789012345679": "openrouter/anthropic/claude-sonnet-4-5"
+      }
+    }
+  },
+
+  // ============================================================================
+  // GATEWAY CONFIGURATION
+  // ============================================================================
+  "gateway": {
+    "bind": "127.0.0.1:8080",
+    "sandbox": {
+      "docker": {
+        "enabled": true,
+        "image": "openclaw/sandbox:latest"
+      }
+    }
+  },
+
+  // ============================================================================
+  // MODEL PROVIDER CONFIGURATION
+  // ============================================================================
+  "models": {
+    "providers": {
+      "openrouter": {
+        // API key from environment or auth profile
+        "apiKey": "${OPENROUTER_API_KEY}",
+        // Default parameters for all OpenRouter models
+        "defaults": {
+          "temperature": 0.7,
+          "maxTokens": 4096
+        }
+      },
+      "ollama": {
+        // Local model fallback for cost-sensitive operations
+        "baseUrl": "http://localhost:11434"
+      }
+    }
+  },
+
+  // ============================================================================
+  // CUSTOM CONTEXT MANAGER PLUGIN (Future Integration)
+  // ============================================================================
+  // "plugins": {
+  //   "slots": {
+  //     "context-manager": "~/.openclaw/skills/context-manager/plugin.js"
+  //   }
+  // },
+
+  // ============================================================================
+  // TIER-SPECIFIC CHUNKING CONFIGURATION (For chonkie integration)
+  // ============================================================================
+  "contextManager": {
+    "enabled": true,
+    "ramGb": 32,
+    "tiers": {
+      "hot": {
+        "chunkSize": 512,
+        "chunkOverlap": 64,
+        "maxContextTokens": 8192,
+        "strategy": "recursive",
+        "ttlSeconds": 3600
+      },
+      "warm": {
+        "chunkSize": 1024,
+        "similarityThreshold": 0.75,
+        "embeddingModel": "sentence-transformers/all-MiniLM-L6-v2",
+        "maxContextTokens": 32768,
+        "strategy": "semantic",
+        "ttlHours": 168,
+        // Vector database configuration
+        "vectorDb": {
+          "type": "sqlite-vec",
+          "path": "~/.openclaw/workspace/context_index.db"
+        }
+      },
+      "cold": {
+        "chunkSize": 2048,
+        "similarityThreshold": 0.65,
+        "compression": "gzip",
+        "strategy": "semantic",
+        "ttlDays": 365,
+        "archivePath": "~/.openclaw/workspace/archive/"
+      }
+    },
+    // Automatic tier migration rules
+    "migration": {
+      // Promote to hot tier after N accesses
+      "promoteThreshold": 5,
+      // Demote from hot after N hours of inactivity
+      "hotDemoteHours": 1,
+      // Demote from warm after N hours of inactivity
+      "warmDemoteHours": 24,
+      // Compress cold tier archives
+      "compressCold": true
+    }
+  }
+}

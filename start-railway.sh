@@ -185,6 +185,8 @@ sleep 3
 
 # ============================================================================
 # Start Rustunnel
+# Start CRM Tunnel (Port 4173)
+nohup "$RUSTUNNEL_BIN" http 4173 --server edge.rustunnel.com:4040 --token "$TOKEN" > /tmp/rustunnel-crm.log 2>&1 &
 # ============================================================================
 echo ""
 echo "🔒 Starting Rustunnel..."

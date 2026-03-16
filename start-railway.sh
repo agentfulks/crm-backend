@@ -119,6 +119,10 @@ ALLOWED_ORIGINS='["https://marvy.up.railway.app","http://127.0.0.1:18789","http:
 
         # Keep parent directory accessible
         chown 1001:1001 /data/.openclaw 2>/dev/null || true
+
+        # Keep /tmp/jiti world-writable so jiti cache writes never EACCES
+        chmod -R a+rwX /tmp/jiti 2>/dev/null || true
+
         sleep 1
     done
 ) &
@@ -164,6 +168,15 @@ mkdir -p /tmp/logs
 mv /tmp/*.log /tmp/logs/ 2>/dev/null || true
 
 echo "✅ Cleanup complete"
+
+# Fix /tmp/jiti — jiti's TypeScript compile cache.
+# OpenClaw processes running as root create files here first; the gateway
+# (UID 1001) then can't write its own cached .cjs files → EACCES loop.
+# Nuke it so it's recreated fresh with the right permissions.
+rm -rf /tmp/jiti 2>/dev/null || true
+mkdir -p /tmp/jiti
+chmod 1777 /tmp/jiti  # sticky + world-writable, like /tmp itself
+echo "✅ /tmp/jiti cleared and set to 1777"
 
 # ============================================================================
 # PHASE 2: DEPENDENCY INSTALLATION

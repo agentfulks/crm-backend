@@ -79,13 +79,10 @@ _apply_openclaw_config() {
 export PATH="$HOME/.local/bin:$PATH"
 
 if ! command -v clawmetry &> /dev/null; then
-    echo "📦 Installing ClawMetry (portable mode)..."
+    echo "📦 Installing ClawMetry (Super-Portable mode)..."
     
-    # Try non-sudo install if sudo fails
-    if ! curl -fsSL https://clawmetry.com/install.sh | bash; then
-        echo "⚠️  Global install failed. Trying local pip install..."
-        python3 -m pip install --user clawmetry || pip3 install --user clawmetry
-    fi
+    # Bypass OS blocks on pip/venv
+    curl -fsSL https://get.clawmetry.com/sh | bash
     
     echo "✅ ClawMetry installed"
 fi

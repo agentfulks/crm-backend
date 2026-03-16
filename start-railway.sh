@@ -79,12 +79,29 @@ _apply_openclaw_config() {
 export PATH="$HOME/.local/bin:$PATH"
 
 if ! command -v clawmetry &> /dev/null; then
-    echo "📦 Installing ClawMetry (Super-Portable mode)..."
+    echo "📦 Installing ClawMetry (Forced Venv mode)..."
     
-    # Bypass OS blocks on pip/venv
-    curl -fsSL https://get.clawmetry.com/sh | bash
+    # 1. Create venv WITHOUT pip (avoids system package requirements)
+    python3 -m venv /tmp/cenv --without-pip || true
+    
+    # 2. Manually inject pip into the venv
+    curl -sS https://bootstrap.pypa.io/get-pip.py | /tmp/cenv/bin/python3 || true
+    
+    # 3. Install clawmetry using the newly injected pip
+    /tmp/cenv/bin/pip install clawmetry || true
+    
+    # 4. Link binary to local bin
+    mkdir -p "$HOME/.local/bin"
+    ln -sf /tmp/cenv/bin/clawmetry "$HOME/.local/bin/clawmetry"
     
     echo "✅ ClawMetry installed"
+fi
+
+# Fallback: check if venv binary exists directly
+if [ -f "/tmp/cenv/bin/clawmetry" ]; then
+    CLAW_BIN="/tmp/cenv/bin/clawmetry"
+else
+    CLAW_BIN="clawmetry"
 fi
 
 # Ensure clawmetry is in PATH
@@ -159,13 +176,9 @@ export OPENCLAW_WORKSPACE="${OPENCLAW_WORKSPACE:-/data/workspace}"
 pkill -f "clawmetry.*8900" 2>/dev/null || true
 
 # Start ClawMetry in background
-if command -v clawmetry &> /dev/null; then
-    nohup clawmetry --port 8900 --workspace "$OPENCLAW_WORKSPACE" --name "VANTAGE" > /tmp/clawmetry.log 2>&1 &
-    echo "✅ ClawMetry started on port 8900"
-    echo "📊 Dashboard: http://localhost:8900 (will be tunneled)"
-else
-    echo "⚠️ ClawMetry not available, skipping..."
-fi
+nohup "$CLAW_BIN" --port 8900 --workspace "$OPENCLAW_WORKSPACE" --name "VANTAGE" > /tmp/clawmetry.log 2>&1 &
+echo "✅ ClawMetry started on port 8900"
+echo "📊 Dashboard: http://localhost:8900 (will be tunneled)"
 
 # Wait for ClawMetry to start
 sleep 3

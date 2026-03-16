@@ -230,7 +230,7 @@ if [ -d "/data/workspace/backend" ]; then
     # Ensure dependencies are available in the venv
     if [ -f "/tmp/cenv/bin/pip" ]; then
         echo "📦 Installing backend dependencies..."
-        /tmp/cenv/bin/pip install uvicorn fastapi httpx pydantic sqlalchemy || true
+        /tmp/cenv/bin/pip install uvicorn fastapi httpx pydantic sqlalchemy python-dotenv fastapi-pagination python-multipart passlib python-jose[cryptography] pydantic-settings psycopg[binary] || true
     fi
 
     # Start using venv python

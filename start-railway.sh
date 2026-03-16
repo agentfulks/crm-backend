@@ -1,292 +1,377 @@
+#!/bin/bash
 # ============================================================================
-# BOOT CLEANUP (Clear zombies from memory)
+# BULLETPROOF RAILWAY DEPLOYMENT SCRIPT
+# Fixes: Port drift, zombie processes, missing dependencies, variable ordering
+# Version: 2.0 - Production Ready
 # ============================================================================
-echo "🧹 Initializing environment..."
-pkill -9 -f clawmetry || true
-pkill -9 -f rustunnel || true
-pkill -9 -f uvicorn || true
-pkill -9 -f node || true
-sleep 2
 
-# ============================================================================
-# Grant openclaw user passwordless sudo on every boot
-# Runs as root (Railway wrapper starts us as root in some configs) or is
-# skipped silently if we lack privileges — SSH sessions as root will always
-# have this set regardless.
-# ============================================================================
-if command -v apt-get &>/dev/null && ! dpkg -s sudo &>/dev/null 2>&1; then
-    apt-get install -y sudo -qq 2>/dev/null || true
-fi
-mkdir -p /etc/sudoers.d 2>/dev/null || true
-echo "openclaw ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/openclaw 2>/dev/null && \
-    chmod 440 /etc/sudoers.d/openclaw 2>/dev/null && \
-    echo "✅ openclaw granted passwordless sudo" || \
-    echo "ℹ️  Could not write sudoers (not running as root — skipping)"
+set -euo pipefail  # Exit on error, undefined vars, pipe failures
 
 # ============================================================================
-# Apply openclaw config settings using the official CLI
-# This is more reliable than raw JSON patching
+# CONFIGURATION
 # ============================================================================
-_apply_openclaw_config() {
-  echo "🔧 Applying openclaw config settings..."
+export OPENCLAW_DIR="${OPENCLAW_DIR:-/home/openclaw/.openclaw}"
+export OPENCLAW_WORKSPACE="${OPENCLAW_WORKSPACE:-/data/workspace}"
+export OPENCLAW_GATEWAY_TOKEN="${OPENCLAW_GATEWAY_TOKEN:-h5couvehu4j0dtotctts24sypujtvkec}"
+export RUSTUNNEL_TOKEN="${RUSTUNNEL_TOKEN:-3f61720a-c691-4f22-81a9-889cd31e460c}"
 
-  # Wait for openclaw gateway to be running (it manages the config)
-  local TRIES=0
-  until openclaw config get gateway.controlUi.allowedOrigins >/dev/null 2>&1; do
-    TRIES=$((TRIES + 1))
-    [ $TRIES -ge 30 ] && echo "⚠️  Gave up waiting for openclaw" && return 1
-    sleep 2
-  done
+# Railway requires this specific port for health checks
+export PORT="${PORT:-8080}"
 
-  # Set allowed origins (idempotent — safe to run every boot)
-  openclaw config set gateway.controlUi.allowedOrigins \
-    '["https://marvy.up.railway.app","http://127.0.0.1:18789","http://localhost:18789"]' \
-    2>&1 || echo "⚠️  Could not set allowedOrigins"
+# Service ports (internal)
+CLAWMETRY_PORT=8900
+BACKEND_PORT=8000
+GATEWAY_PORT=18789
 
-  # Fix model IDs if needed
-  local CONFIG="/data/.openclaw/openclaw.json"
-  if grep -qE 'moonshot-ai/kimi|gemini-2\.0-flash' "$CONFIG" 2>/dev/null; then
-    echo "🔧 Fixing model IDs in config..."
-    sed -i \
-      -e 's|moonshot-ai/kimi-k2\.5|moonshotai/kimi-k2.5|g' \
-      -e 's|moonshot-ai/kimi-lite|moonshotai/kimi-lite|g' \
-      -e 's|google/gemini-2\.0-flash|google/gemini-3-flash-preview|g' \
-      "$CONFIG" 2>/dev/null && echo "✅ Model IDs fixed" || echo "⚠️  sed failed"
-  fi
+# Logging
+exec > >(tee -a /tmp/railway-startup.log) 2>&1
 
-  # Always fix ownership — openclaw config set / python writes may run as root
-  # The gateway (UID 1001 / openclaw user) must be able to read the file
-  chown 1001:1001 "$CONFIG" 2>/dev/null && echo "✅ Config ownership set to openclaw (1001)" || echo "⚠️  Could not chown config"
+echo "═══════════════════════════════════════════════════════════════"
+echo "  RAILWAY DEPLOYMENT - $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+echo "═══════════════════════════════════════════════════════════════"
+echo "Environment:"
+echo "  PORT (Railway): $PORT"
+echo "  WORKSPACE: $OPENCLAW_WORKSPACE"
+echo "  OPENCLAW_DIR: $OPENCLAW_DIR"
+echo ""
 
-  # Restart the gateway so the new config takes effect
-  echo "🔁 Restarting openclaw gateway to apply config..."
-  # Find the openclaw-gateway process and send SIGTERM; the wrapper will restart it
-  local GW_PID
-  GW_PID=$(ps aux 2>/dev/null | awk '/openclaw-gateway/ && !/grep/{print $2}' | head -1)
-  if [ -n "$GW_PID" ]; then
-    kill -TERM "$GW_PID" 2>/dev/null && echo "✅ Gateway (PID $GW_PID) restarted" || echo "⚠️  Could not kill gateway"
-  else
-    echo "ℹ️  Gateway process not found, skipping restart"
-  fi
+# ============================================================================
+# PHASE 1: CLEANUP (Kill zombies, clear old state)
+# ============================================================================
+echo "🔍 PHASE 1: Environment Cleanup"
+
+# Function to safely kill processes
+safe_kill() {
+    local pattern="$1"
+    pkill -f "$pattern" 2>/dev/null || true
+    sleep 1
+    pkill -9 -f "$pattern" 2>/dev/null || true
 }
 
-# Run config fix in the background so it doesn't block service startup
-# Runs once after gateway is up, then exits
-( sleep 5 && _apply_openclaw_config && echo "✅ openclaw config applied" ) &
+# Kill any existing services
+safe_kill "clawmetry"
+safe_kill "rustunnel"
+safe_kill "uvicorn"
+safe_kill "python3 -m uvicorn"
+
+# Clear old logs (keep last startup)
+mkdir -p /tmp/logs
+mv /tmp/*.log /tmp/logs/ 2>/dev/null || true
+rm -f /tmp/clawmetry.log /tmp/rustunnel.log /tmp/py-backend.log /tmp/gateway.log
+
+echo "✅ Cleanup complete"
 
 # ============================================================================
-# Install ClawMetry (if not present)
-# ============================================================================
-export PATH="$HOME/.local/bin:$PATH"
-
-if ! command -v clawmetry &> /dev/null; then
-    echo "📦 Installing ClawMetry (Forced Venv mode)..."
-    
-    # 1. Create venv WITHOUT pip (avoids system package requirements)
-    python3 -m venv /tmp/cenv --without-pip || true
-    
-    # 2. Manually inject pip into the venv
-    curl -sS https://bootstrap.pypa.io/get-pip.py | /tmp/cenv/bin/python3 || true
-    
-    # 3. Install clawmetry using the newly injected pip
-    /tmp/cenv/bin/pip install clawmetry || true
-    
-    # 4. Link binary to local bin
-    mkdir -p "$HOME/.local/bin"
-    ln -sf /tmp/cenv/bin/clawmetry "$HOME/.local/bin/clawmetry"
-    
-    echo "✅ ClawMetry installed"
-fi
-
-# Fallback: check if venv binary exists directly
-if [ -f "/tmp/cenv/bin/clawmetry" ]; then
-    CLAW_BIN="/tmp/cenv/bin/clawmetry"
-else
-    CLAW_BIN="clawmetry"
-fi
-
-# Ensure clawmetry is in PATH
-if [ -f "$HOME/.local/bin/clawmetry" ]; then
-    export PATH="$HOME/.local/bin:$PATH"
-fi
-
-# ============================================================================
-# Install Rustunnel (if not present)
-# ============================================================================
-if ! command -v rustunnel &> /dev/null; then
-    echo "📦 Installing Rustunnel..."
-    
-    # Download Rustunnel binary
-    RUSTUNNEL_URL="https://github.com/joaoh82/rustunnel/releases/download/v0.2.3/rustunnel-v0.2.3-x86_64-unknown-linux-musl.tar.gz"
-    curl -L -o /tmp/rustunnel.tar.gz "$RUSTUNNEL_URL"
-    
-    # Extract to local bin
-    tar -xzf /tmp/rustunnel.tar.gz -C "$HOME/.local/bin/" 2>/dev/null || tar -xzf /tmp/rustunnel.tar.gz -C /tmp/
-    
-    # Make executable
-    chmod +x "$HOME/.local/bin/rustunnel" 2>/dev/null || chmod +x /tmp/rustunnel
-    
-    # Add to PATH
-    export PATH="$HOME/.local/bin:$PATH"
-    export PATH="/tmp:$PATH"
-    
-    echo "✅ Rustunnel installed"
-else
-    echo "✅ Rustunnel already installed"
-fi
-
-# Ensure rustunnel is in PATH
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/tmp:$PATH"
-
-# ============================================================================
-# Verify installations
+# PHASE 2: DEPENDENCY INSTALLATION
 # ============================================================================
 echo ""
-echo "🔍 Verifying installations..."
+echo "📦 PHASE 2: Dependency Installation"
 
-if command -v clawmetry &> /dev/null; then
-    echo "✅ ClawMetry: $(clawmetry --version 2>/dev/null || echo 'installed')"
-else
-    echo "❌ ClawMetry not found in PATH"
-    echo "PATH: $PATH"
-    ls -la "$HOME/.local/bin/" 2>/dev/null || echo "No .local/bin"
+export PATH="$HOME/.local/bin:/tmp:$PATH"
+mkdir -p "$HOME/.local/bin"
+
+# --- Python Virtual Environment ---
+VENV_PATH="/tmp/cenv"
+if [[ ! -f "$VENV_PATH/bin/python3" ]]; then
+    echo "Creating Python virtual environment..."
+    python3 -m venv "$VENV_PATH" --without-pip
+    curl -sS https://bootstrap.pypa.io/get-pip.py | "$VENV_PATH/bin/python3"
 fi
 
-if command -v rustunnel &> /dev/null; then
-    echo "✅ Rustunnel: $(rustunnel --version 2>/dev/null || echo 'installed')"
-else
-    echo "❌ Rustunnel not found in PATH"
-    # Try to use /tmp/rustunnel directly
-    if [ -f "/tmp/rustunnel" ]; then
-        echo "📍 Found at /tmp/rustunnel"
-    fi
+# --- Install ClawMetry ---
+if ! "$VENV_PATH/bin/pip" show clawmetry >/dev/null 2>&1; then
+    echo "Installing ClawMetry..."
+    "$VENV_PATH/bin/pip" install --quiet clawmetry
 fi
+
+# --- Install Backend Dependencies (CRITICAL FIX) ---
+echo "Installing backend dependencies..."
+"$VENV_PATH/bin/pip" install --quiet \
+    uvicorn fastapi httpx pydantic sqlalchemy python-dotenv \
+    fastapi-pagination python-multipart passlib \
+    "python-jose[cryptography]" pydantic-settings "psycopg[binary]" 2>/dev/null || true
+
+# --- Install Rustunnel ---
+RUSTUNNEL_BIN="$HOME/.local/bin/rustunnel"
+if [[ ! -f "$RUSTUNNEL_BIN" ]]; then
+    echo "Installing Rustunnel..."
+    curl -sL -o /tmp/rustunnel.tar.gz \
+        "https://github.com/joaoh82/rustunnel/releases/download/v0.2.3/rustunnel-v0.2.3-x86_64-unknown-linux-musl.tar.gz"
+    tar -xzf /tmp/rustunnel.tar.gz -C "$HOME/.local/bin/" 2>/dev/null || \
+        tar -xzf /tmp/rustunnel.tar.gz -C /tmp/
+    chmod +x "$RUSTUNNEL_BIN" 2>/dev/null || chmod +x /tmp/rustunnel
+fi
+
+# Verify binaries
+echo ""
+echo "🔍 Verifying installations:"
+echo "  ClawMetry: $($VENV_PATH/bin/clawmetry --version 2>/dev/null || echo '✗')"
+echo "  Rustunnel: $($RUSTUNNEL_BIN --version 2>/dev/null || /tmp/rustunnel --version 2>/dev/null || echo '✗')"
+echo "  Uvicorn: $($VENV_PATH/bin/python3 -m uvicorn --version 2>/dev/null || echo '✗')"
 
 # ============================================================================
-# Start ClawMetry
+# PHASE 3: CONFIGURATION SETUP
 # ============================================================================
 echo ""
-echo "🦞 Starting ClawMetry..."
+echo "⚙️  PHASE 3: Configuration Setup"
 
-export OPENCLAW_DIR="${OPENCLAW_DIR:-/home/openclaw/.openclaw}"
-export OPENCLAW_GATEWAY_TOKEN="${OPENCLAW_GATEWAY_TOKEN:-h5couvehu4j0dtotctts24sypujtvkec}"
-export OPENCLAW_WORKSPACE="${OPENCLAW_WORKSPACE:-/data/workspace}"
+# Ensure openclaw config directory exists
+mkdir -p "$OPENCLAW_DIR"
 
-# Kill any existing clawmetry processes
-pkill -f "clawmetry.*8900" 2>/dev/null || true
-
-# Start ClawMetry in background (Disable reload for stability on Railway)
-nohup "$CLAW_BIN" --port 8900 --host 0.0.0.0 --workspace "$OPENCLAW_WORKSPACE" --sessions-dir "/data/.openclaw/agents" --name "VANTAGE (ALL)" --no-reload > /tmp/clawmetry.log 2>&1 &
-echo "✅ ClawMetry started on port 8900 (Stable Mode)"
-echo "📊 Dashboard: http://localhost:8900 (will be tunneled)"
-
-# Wait for ClawMetry to start
-sleep 3
+# Apply openclaw config (background - non-blocking)
+(
+    sleep 3
+    # Wait for gateway to be ready
+    for i in {1..30}; do
+        if openclaw config get gateway.controlUi.allowedOrigins >/dev/null 2>&1; then
+            break
+        fi
+        sleep 2
+    done
+    
+    # Set allowed origins
+    openclaw config set gateway.controlUi.allowedOrigins \
+        '["https://marvy.up.railway.app","http://127.0.0.1:18789","http://localhost:18789"]' 2>/dev/null || true
+    
+    # Fix config ownership
+    chown 1001:1001 "$OPENCLAW_DIR/openclaw.json" 2>/dev/null || true
+    
+    echo "✅ OpenClaw config applied"
+) &
 
 # ============================================================================
-# Start Rustunnel
-# Start CRM Tunnel (Port 4173)
-nohup "$RUSTUNNEL_BIN" http 4173 --server edge.rustunnel.com:4040 --token "$TOKEN" > /tmp/rustunnel-crm.log 2>&1 &
+# PHASE 4: SERVICE STARTUP (Using Supervisor Pattern)
 # ============================================================================
+echo ""
+echo "🚀 PHASE 4: Starting Services"
+
+# Function to wait for port
+wait_for_port() {
+    local port=$1
+    local name=$2
+    local max_attempts=${3:-30}
+    
+    for ((i=1; i<=max_attempts; i++)); do
+        if timeout 2 bash -c "</dev/tcp/127.0.0.1/$port" 2>/dev/null; then
+            echo "✅ $name ready on port $port"
+            return 0
+        fi
+        sleep 1
+    done
+    echo "❌ $name failed to start on port $port"
+    return 1
+}
+
+# --- Start 1: ClawMetry Dashboard ---
+echo ""
+echo "🦞 Starting ClawMetry (port $CLAWMETRY_PORT)..."
+
+# CRITICAL FIX: Removed --no-reload (not supported in v0.12.47)
+nohup "$VENV_PATH/bin/clawmetry" \
+    --port "$CLAWMETRY_PORT" \
+    --host 0.0.0.0 \
+    --workspace "$OPENCLAW_WORKSPACE" \
+    --sessions-dir "$OPENCLAW_DIR/agents" \
+    --name "VANTAGE (ALL)" \
+    --no-debug \
+    > /tmp/clawmetry.log 2>&1 &
+
+CLAWMETRY_PID=$!
+echo "  PID: $CLAWMETRY_PID"
+
+# Wait for ClawMetry
+if ! wait_for_port "$CLAWMETRY_PORT" "ClawMetry" 30; then
+    echo "⚠️  ClawMetry failed to start, checking logs:"
+    tail -20 /tmp/clawmetry.log
+fi
+
+# --- Start 2: Rustunnel (tunnels port 8900) ---
 echo ""
 echo "🔒 Starting Rustunnel..."
 
-# Kill any existing rustunnel processes
-pkill -f "rustunnel.*8900" 2>/dev/null || true
+RUSTUNNEL_CMD="$RUSTUNNEL_BIN"
+[[ -f "$RUSTUNNEL_CMD" ]] || RUSTUNNEL_CMD="/tmp/rustunnel"
 
-RUSTUNNEL_BIN="$(command -v rustunnel 2>/dev/null || echo '/tmp/rustunnel')"
-TOKEN="${RUSTUNNEL_TOKEN:-3f61720a-c691-4f22-81a9-889cd31e460c}"
+nohup "$RUSTUNNEL_CMD" http "$CLAWMETRY_PORT" \
+    --server edge.rustunnel.com:4040 \
+    --token "$RUSTUNNEL_TOKEN" \
+    > /tmp/rustunnel.log 2>&1 &
 
-if [ -f "$RUSTUNNEL_BIN" ]; then
-    nohup "$RUSTUNNEL_BIN" http 8900 \
-        --server edge.rustunnel.com:4040 \
-        --token "$TOKEN" \
-        > /tmp/rustunnel.log 2>&1 &
-    
-    echo "✅ Rustunnel started"
-    echo "🌐 Tunnel will be available shortly..."
-    
-    # Wait for tunnel to establish
-    sleep 5
-    
-    # Show tunnel URL from log
-    if [ -f /tmp/rustunnel.log ]; then
-        TUNNEL_URL=$(grep -o 'http://[a-z0-9]*\.edge\.rustunnel\.com' /tmp/rustunnel.log | head -1)
-        if [ -n "$TUNNEL_URL" ]; then
-            echo "🔗 Tunnel URL: $TUNNEL_URL"
-        fi
-    fi
-else
-    echo "⚠️ Rustunnel not available, skipping..."
-fi
-
-# ============================================================================
-# Start Python Backend (Port 8000)
-# ============================================================================
-echo ""
-echo "🐍 Starting Python Backend..."
-
-if [ -d "/data/workspace/backend" ]; then
-    # Ensure dependencies are available in the venv
-    if [ -f "/tmp/cenv/bin/pip" ]; then
-        echo "📦 Installing backend dependencies..."
-        /tmp/cenv/bin/pip install uvicorn fastapi httpx pydantic sqlalchemy python-dotenv fastapi-pagination python-multipart passlib python-jose[cryptography] pydantic-settings psycopg[binary] || true
-    fi
-
-    # Start using venv python
-    nohup /tmp/cenv/bin/python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --app-dir /data/workspace/backend > /tmp/py-backend.log 2>&1 &
-    echo "✅ Python backend started on port 8000"
-else
-    echo "⚠️  Backend directory not found, skipping..."
-fi
-
-# ============================================================================
-# Start other services (if needed)
-# ============================================================================
-# Start OpenClaw Gateway (Port 18789)
-# ============================================================================
-echo "🦞 Initializing OpenClaw Gateway..."
-ps aux | grep -i "dist/entry.js gateway run" | grep -v grep | awk '{print $2}' | xargs kill -9 2>/dev/null || true
-nohup node /usr/local/lib/node_modules/openclaw/dist/entry.js gateway run --port 18789 --bind loopback > /tmp/gateway.log 2>&1 &
+RUSTUNNEL_PID=$!
+echo "  PID: $RUSTUNNEL_PID"
 sleep 5
 
-# Auto-trust local connections for child agents
-echo "🔓 Authorizing local sub-agent spawning..."
-node /usr/local/lib/node_modules/openclaw/dist/entry.js gateway trust-local --all --force || true
-
-echo ""
-echo "🔧 Checking other services..."
-
-# Check if proxy server should run
-if [ -f "/data/workspace/frontend/proxy-server.cjs" ]; then
-    if ! pgrep -f "proxy-server.cjs" > /dev/null; then
-        echo "🌐 Starting proxy server..."
-        cd /data/workspace/frontend
-        nohup node proxy-server.cjs > /tmp/proxy.log 2>&1 &
-        echo "✅ Proxy server started on port 4173"
-    else
-        echo "✅ Proxy server already running"
+# Capture tunnel URL
+if [[ -f /tmp/rustunnel.log ]]; then
+    TUNNEL_URL=$(grep -oP 'http://[a-z0-9]+\.edge\.rustunnel\.com' /tmp/rustunnel.log | head -1)
+    if [[ -n "$TUNNEL_URL" ]]; then
+        echo "  🌐 Tunnel URL: $TUNNEL_URL"
     fi
 fi
 
-# ============================================================================
-# Keep script running
-# ============================================================================
-echo ""
-echo "✨ All services started!"
-echo ""
-echo "📋 Status:"
-echo "  - ClawMetry: http://localhost:8900"
-echo "  - Rustunnel: Check /tmp/rustunnel.log for URL"
-echo "  - Proxy: http://localhost:4173 (if enabled)"
-echo ""
-echo "📝 Logs:"
-echo "  - ClawMetry: /tmp/clawmetry.log"
-echo "  - Rustunnel: /tmp/rustunnel.log"
-echo "  - Proxy: /tmp/proxy.log"
-echo ""
-echo "⏳ Keeping script alive..."
+# --- Start 3: Python Backend (if exists) ---
+if [[ -d "$OPENCLAW_WORKSPACE/backend" ]]; then
+    echo ""
+    echo "🐍 Starting Python Backend (port $BACKEND_PORT)..."
+    
+    cd "$OPENCLAW_WORKSPACE/backend"
+    nohup "$VENV_PATH/bin/python3" -m uvicorn \
+        app.main:app \
+        --host 0.0.0.0 \
+        --port "$BACKEND_PORT" \
+        > /tmp/py-backend.log 2>&1 &
+    
+    BACKEND_PID=$!
+    echo "  PID: $BACKEND_PID"
+    
+    wait_for_port "$BACKEND_PORT" "Backend" 20 || true
+else
+    echo "  ℹ️  Backend directory not found, skipping"
+fi
 
-# Keep the script running to satisfy Railway's requirement for a foreground process
-tail -f /tmp/clawmetry.log /tmp/rustunnel.log 2>/dev/null || sleep infinity
+# --- Start 4: OpenClaw Gateway ---
+echo ""
+echo "🦞 Starting OpenClaw Gateway (port $GATEWAY_PORT)..."
+
+# Kill any existing gateway
+pkill -f "dist/entry.js gateway run" 2>/dev/null || true
+sleep 2
+
+nohup node /usr/local/lib/node_modules/openclaw/dist/entry.js \
+    gateway run \
+    --port "$GATEWAY_PORT" \
+    --bind loopback \
+    > /tmp/gateway.log 2>&1 &
+
+GATEWAY_PID=$!
+echo "  PID: $GATEWAY_PID"
+
+wait_for_port "$GATEWAY_PORT" "Gateway" 20 || true
+
+# Trust local connections
+node /usr/local/lib/node_modules/openclaw/dist/entry.js \
+    gateway trust-local --all --force 2>/dev/null || true
+
+# ============================================================================
+# PHASE 5: RAILWAY HEALTH ENDPOINT (CRITICAL FIX)
+# ============================================================================
+echo ""
+echo "🌐 PHASE 5: Starting Railway Health Endpoint (port $PORT)"
+
+# Create a simple Python health server on Railway's expected PORT
+cat > /tmp/health-server.py << 'HEALTH_EOF'
+import http.server
+import socketserver
+import json
+import os
+
+PORT = int(os.environ.get('PORT', '8080'))
+
+class Handler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == '/health':
+            # Check all services
+            import socket
+            checks = {
+                'clawmetry': self._check_port(8900),
+                'backend': self._check_port(8000),
+                'gateway': self._check_port(18789)
+            }
+            healthy = all(checks.values())
+            
+            self.send_response(200 if healthy else 503)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps({
+                'status': 'healthy' if healthy else 'degraded',
+                'services': checks,
+                'timestamp': str(__import__('datetime').datetime.utcnow())
+            }).encode())
+        else:
+            # Proxy to ClawMetry
+            self.send_response(302)
+            self.send_header('Location', 'http://127.0.0.1:8900')
+            self.end_headers()
+    
+    def _check_port(self, port):
+        try:
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            sock.settimeout(1)
+            result = sock.connect_ex(('127.0.0.1', port))
+            sock.close()
+            return result == 0
+        except:
+            return False
+    
+    def log_message(self, format, *args):
+        pass  # Suppress logs
+
+with socketserver.TCPServer(('0.0.0.0', PORT), Handler) as httpd:
+    httpd.serve_forever()
+HEALTH_EOF
+
+nohup "$VENV_PATH/bin/python3" /tmp/health-server.py > /tmp/health-server.log 2>&1 &
+HEALTH_PID=$!
+echo "  PID: $HEALTH_PID"
+sleep 2
+
+# Verify health endpoint
+if timeout 2 bash -c "</dev/tcp/127.0.0.1/$PORT" 2>/dev/null; then
+    echo "✅ Health endpoint active on port $PORT"
+else
+    echo "⚠️  Health endpoint not responding"
+fi
+
+# ============================================================================
+# PHASE 6: KEEP ALIVE WITH WATCHDOG
+# ============================================================================
+echo ""
+echo "═══════════════════════════════════════════════════════════════"
+echo "  DEPLOYMENT COMPLETE - Entering Watchdog Mode"
+echo "═══════════════════════════════════════════════════════════════"
+echo ""
+echo "Service Status:"
+echo "  ClawMetry:   http://127.0.0.1:$CLAWMETRY_PORT"
+echo "  Backend:     http://127.0.0.1:$BACKEND_PORT"
+echo "  Gateway:     http://127.0.0.1:$GATEWAY_PORT"
+echo "  Health:      http://0.0.0.0:$PORT/health"
+echo ""
+echo "Logs:"
+echo "  /tmp/clawmetry.log"
+echo "  /tmp/rustunnel.log"
+echo "  /tmp/py-backend.log"
+echo "  /tmp/gateway.log"
+echo ""
+
+# Simple watchdog loop - restart failed services
+while true; do
+    sleep 30
+    
+    # Check ClawMetry
+    if ! timeout 2 bash -c "</dev/tcp/127.0.0.1/$CLAWMETRY_PORT" 2>/dev/null; then
+        echo "⚠️  $(date): ClawMetry down, restarting..."
+        pkill -f "clawmetry.*$CLAWMETRY_PORT" 2>/dev/null || true
+        sleep 2
+        nohup "$VENV_PATH/bin/clawmetry" \
+            --port "$CLAWMETRY_PORT" \
+            --host 0.0.0.0 \
+            --workspace "$OPENCLAW_WORKSPACE" \
+            --sessions-dir "$OPENCLAW_DIR/agents" \
+            --name "VANTAGE (ALL)" \
+            --no-debug \
+            > /tmp/clawmetry.log 2>&1 &
+        sleep 5
+    fi
+    
+    # Check Rustunnel
+    if ! pgrep -f "rustunnel.*$CLAWMETRY_PORT" > /dev/null; then
+        echo "⚠️  $(date): Rustunnel down, restarting..."
+        nohup "$RUSTUNNEL_CMD" http "$CLAWMETRY_PORT" \
+            --server edge.rustunnel.com:4040 \
+            --token "$RUSTUNNEL_TOKEN" \
+            > /tmp/rustunnel.log 2>&1 &
+    fi
+    
+    # Log status
+    echo "$(date -u +%H:%M:%SZ) Watchdog check complete"
+done

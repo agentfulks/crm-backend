@@ -4,6 +4,7 @@
   "description": "CRM Dashboard with ClawMetry monitoring",
   "scripts": {
     "start": "bash start-railway.sh",
+    "railway-start": "bash start-railway.sh",
     "dev": "cd frontend && npm run dev",
     "build": "cd frontend && npm run build"
   },

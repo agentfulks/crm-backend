@@ -133,8 +133,10 @@ mkdir -p "$OPENCLAW_DIR"
     openclaw config set gateway.controlUi.allowedOrigins \
         '["https://marvy.up.railway.app","http://127.0.0.1:18789","http://localhost:18789"]' 2>/dev/null || true
     
-    # Fix config ownership
-    chown 1001:1001 "$OPENCLAW_DIR/openclaw.json" 2>/dev/null || true
+    # Fix config ownership — MUST use /data/.openclaw (not $OPENCLAW_DIR which points elsewhere)
+    # openclaw config set runs as root and changes file ownership, breaking the gateway (UID 1001)
+    chown 1001:1001 /data/.openclaw/openclaw.json 2>/dev/null || true
+    echo "  📁 chown applied to /data/.openclaw/openclaw.json"
     
     echo "✅ OpenClaw config applied"
 ) &

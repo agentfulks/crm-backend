@@ -1,11 +1,12 @@
-#!/bin/bash
-# Railway Startup Script
-# Installs and starts ClawMetry and Rustunnel on every deploy
-# This ensures monitoring is always available
-
-set -e
-
-echo "🚀 Starting Railway services..."
+# ============================================================================
+# BOOT CLEANUP (Clear zombies from memory)
+# ============================================================================
+echo "🧹 Initializing environment..."
+pkill -9 -f clawmetry || true
+pkill -9 -f rustunnel || true
+pkill -9 -f uvicorn || true
+pkill -9 -f node || true
+sleep 2
 
 # ============================================================================
 # Grant openclaw user passwordless sudo on every boot
